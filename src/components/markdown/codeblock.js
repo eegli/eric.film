@@ -6,7 +6,7 @@ const CodeBlock = ({ value, language }) => {
   if (!language) language = 'javascript';
   return (
     <SyntaxHighlighter
-      customStyle={{ 'border-radius': '10px' }}
+      customStyle={{ borderRadius: '10px' }}
       language={language}
       style={tomorrow}>
       {value}
