@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MdContent from '../components/markdown/md-content.component';
 
 import { GraphQLClient } from 'graphql-request';
 import MdPreview from '../components/markdown/md-preview.component';
 
 const IndexPage = ({ data }) => {
+  const [hi, setHi] = useState(false);
+  console.log(hi);
+
+  const sayHi = () => {
+    setHi(!hi);
+  };
   return (
     <div>
+      <button onClick={sayHi}>Click me to say hi</button>
+      {hi ? <h1>Hello, hi</h1> : null}
       <MdPreview
         title={data.title}
         excerpt={data.excerpt}
