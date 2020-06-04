@@ -5,7 +5,8 @@ import { GraphQLClient } from 'graphql-request';
 const IndexPage = ({ blogposts }) => {
   return (
     <div>
-      <BlogOverview posts={blogposts} />
+      <h1>Hello</h1>
+      {/* <BlogOverview posts={blogposts} /> */}
     </div>
   );
 };
