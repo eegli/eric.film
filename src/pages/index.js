@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const gql = new GraphQLClient(
     'https://api-eu-central-1.graphcms.com/v2/ckawpprfa01ja01z62wiy22qi/master'
   );
