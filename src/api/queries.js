@@ -22,3 +22,21 @@ export const SINGLE_BLOGPOST = slug =>
     }
   }
   `;
+
+export const IMGS_HOME = `
+  query IMGS_HOME {
+    imgCollections {
+      id
+    }
+    imgCollectionsConnection {
+      edges {
+        node {
+          collection {
+            url
+          }
+        }
+      }
+    }
+  }
+  
+  `;

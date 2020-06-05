@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { request } from '../api/graphql';
+import { IMGS_HOME } from '../api/queries';
 
-const IndexPage = ({ data }) => {
-  const [hi, setHi] = useState(false);
-  console.log(data);
-
-  const sayHi = () => {
-    setHi(!hi);
-  };
+const IndexPage = ({ images }) => {
   return (
-    <div>
-      <button onClick={sayHi}>Click me to say hi</button>
-      {hi ? <h1>Hello, hi</h1> : null}
+    <div style={{ height: '300px' }}>
       <h1>This is the index page</h1>
+      {images.map(img => (
+        <img key={img.url} src={img.url} />
+      ))}
     </div>
   );
 };
+export async function getStaticProps() {
+  const images = await request(IMGS_HOME);
+
+  return {
+    props: {
+      images: images.imgCollectionsConnection.edges[0].node.collection,
+    },
+  };
+}
 
 export default IndexPage;

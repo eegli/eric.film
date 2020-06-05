@@ -5,7 +5,7 @@ import {
   BlogPostTitle,
   BlogPostExcerpt,
   BlogPostContent,
-} from './md-preview.styles';
+} from './md-content.styles';
 import CodeBlock from './codeblock';
 
 const MdPreview = ({ title, excerpt, content }) => {
