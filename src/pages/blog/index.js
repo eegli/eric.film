@@ -1,8 +1,10 @@
 import React from 'react';
 import BlogOverview from '../../components/blog/blog-overview.component';
-import { GraphQLClient } from 'graphql-request';
+import { request } from '../../api/graphql';
+import { SINGLE_BLOGPOST } from '../../api/queries';
 
-const IndexPage = ({ blogposts }) => {
+const IndexPage = ({ data }) => {
+  console.log(data);
   return (
     <div>
       <h1>Hello</h1>
@@ -12,27 +14,11 @@ const IndexPage = ({ blogposts }) => {
 };
 
 export async function getServerSideProps() {
-  const gql = new GraphQLClient(
-    'https://api-eu-central-1.graphcms.com/v2/ckawpprfa01ja01z62wiy22qi/master'
-  );
-
-  const { blogposts } = await gql.request(
-    `
-    query MyQuery {
-      blogposts {
-        id
-        content
-        excerpt
-        title
-      }
-    }
-    
-    `
-  );
+  const data = await request(SINGLE_BLOGPOST);
 
   return {
     props: {
-      blogposts,
+      data,
     },
   };
 }

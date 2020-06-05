@@ -10,6 +10,11 @@ export const BlogPostContainer = styled.article`
 
 export const BlogPostTitle = styled.h1`
   font-size: 2rem;
+  color: 'black';
+`;
+
+export const BlogPostExcerpt = styled.h3`
+  font-size: 1.2rem;
 `;
 
 export const BlogPostContent = styled.div`

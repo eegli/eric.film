@@ -6,7 +6,7 @@ import MdPreview from '../components/markdown/md-preview.component';
 
 const IndexPage = ({ data }) => {
   const [hi, setHi] = useState(false);
-  console.log(hi);
+  console.log(data);
 
   const sayHi = () => {
     setHi(!hi);
@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
     <div>
       <button onClick={sayHi}>Click me to say hi</button>
       {hi ? <h1>Hello, hi</h1> : null}
-      <MdPreview
+      <MdContent
         title={data.title}
         excerpt={data.excerpt}
         content={data.content}
