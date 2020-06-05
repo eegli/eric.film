@@ -1,7 +1,7 @@
 import React from 'react';
 import BlogOverview from '../../components/blog/blog-overview.component';
 import { request } from '../../api/graphql';
-import { SINGLE_BLOGPOST } from '../../api/queries';
+import { ALL_BLOGPOSTS } from '../../api/queries';
 
 const IndexPage = ({ data }) => {
   console.log(data);
@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
 };
 
 export async function getServerSideProps() {
-  const data = await request(SINGLE_BLOGPOST);
+  const data = await request(ALL_BLOGPOSTS);
 
   return {
     props: {

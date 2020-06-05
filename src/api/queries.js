@@ -1,4 +1,4 @@
-export const SINGLE_BLOGPOST = `
+export const ALL_BLOGPOSTS = `
 query MyQuery {
   blogposts {
     id
