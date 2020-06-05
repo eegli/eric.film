@@ -5,18 +5,20 @@ query ALL_BLOGPOSTS {
     content
     excerpt
     title
+    slug
   }
 }
 
 `;
 
-export const SINGLE_BLOGPOST = id =>
+export const SINGLE_BLOGPOST = slug =>
   `query SINGLE_BLOGPOST {
-    blogpost(where: {id: "${id}"}) {
+    blogpost(where: {slug: "${slug}"}) {
       id
       excerpt
       content
       title
+      slug
     }
   }
   `;

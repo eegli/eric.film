@@ -1,14 +1,23 @@
 import React from 'react';
-import BlogOverview from '../../components/blog/blog-overview.component';
 import { request } from '../../api/graphql';
 import { ALL_BLOGPOSTS } from '../../api/queries';
+import MdPreview from '../../components/markdown/md-preview.component';
 
-const IndexPage = ({ data }) => {
-  console.log(data);
+const IndexPage = ({ posts }) => {
   return (
     <div>
       <h1>Hello</h1>
-      <BlogOverview posts={data.blogposts} />
+      {posts.map(p => {
+        return (
+          <MdPreview
+            key={p.id}
+            id={p.id}
+            title={p.title}
+            excerpt={p.excerpt}
+            slug={p.slug}
+          />
+        );
+      })}
     </div>
   );
 };
@@ -18,7 +27,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      data,
+      posts: data.blogposts,
     },
   };
 }

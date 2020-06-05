@@ -6,10 +6,9 @@ import {
   BlogPostExcerpt,
 } from './md-preview.styles';
 
-const MdPreview = ({ title, excerpt, id }) => {
-  console.log(id);
+const MdPreview = ({ title, excerpt, slug }) => {
   return (
-    <Link href='/blog/[post_id]' as={`/blog/${id}`}>
+    <Link href='/blog/[post_slug]' as={`/blog/${slug}`}>
       <BlogPostContainer>
         <BlogPostTitle>{title}</BlogPostTitle>
         <BlogPostExcerpt>{excerpt}</BlogPostExcerpt>
