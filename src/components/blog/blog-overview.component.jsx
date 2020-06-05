@@ -6,7 +6,9 @@ const BlogOverview = ({ posts }) => {
     <div>
       <title>eric.film Blog Posts</title>
       {posts.map(p => {
-        return <MdPreview key={p.id} title={p.title} excerpt={p.excerpt} />;
+        return (
+          <MdPreview key={p.id} id={p.id} title={p.title} excerpt={p.excerpt} />
+        );
       })}
     </div>
   );

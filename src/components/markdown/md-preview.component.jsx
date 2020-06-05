@@ -1,22 +1,20 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
+import Link from 'next/link';
 import {
   BlogPostContainer,
   BlogPostTitle,
-  BlogPostContent,
+  BlogPostExcerpt,
 } from './md-preview.styles';
-import CodeBlock from './codeblock';
 
-const MdPreview = ({ title, excerpt, content }) => {
+const MdPreview = ({ title, excerpt, id }) => {
+  console.log(id);
   return (
-    <BlogPostContainer>
-      <ReactMarkdown
-        source={content}
-        renderers={{
-          code: CodeBlock,
-        }}
-      />
-    </BlogPostContainer>
+    <Link href='/blog/[post_id]' as={`/blog/${id}`}>
+      <BlogPostContainer>
+        <BlogPostTitle>{title}</BlogPostTitle>
+        <BlogPostExcerpt>{excerpt}</BlogPostExcerpt>
+      </BlogPostContainer>
+    </Link>
   );
 };
 

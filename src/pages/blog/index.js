@@ -8,7 +8,7 @@ const IndexPage = ({ data }) => {
   return (
     <div>
       <h1>Hello</h1>
-      {/* <BlogOverview posts={blogposts} /> */}
+      <BlogOverview posts={data.blogposts} />
     </div>
   );
 };
