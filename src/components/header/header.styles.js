@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const MainHeaderContainer = styled.header`
+export const HeaderMainContainer = styled.header`
   display: flex;
   justify-content: space-between;
   padding: 1rem;

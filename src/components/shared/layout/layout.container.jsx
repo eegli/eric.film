@@ -1,8 +1,8 @@
 import React from 'react';
 import { LayoutContainerStyle } from './layout.styles';
 
-const LayouContainer = ({ children }) => {
+const LayoutContainer = ({ children }) => {
   return <LayoutContainerStyle>{children}</LayoutContainerStyle>;
 };
 
-export default LayouContainer;
+export default LayoutContainer;

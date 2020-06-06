@@ -3,21 +3,22 @@ import { request } from '../api/graphql';
 import { IMGS_HOME } from '../api/queries';
 import LayouContainer from '@/shared/layout/layout.container';
 import {
-  Sh1,
-  Sh3,
-  HeadingContainer,
   DescriptionContainer,
+  Sh1Home,
+  Sh3,
+  Sp,
 } from '@/shared/headings.styles';
 import { Svideo } from '@/shared/elements.styles';
 
 const IndexPage = ({ images }) => {
   return (
     <LayouContainer>
-      <HeadingContainer>
-        <Sh1>| eric.egli |</Sh1>
-      </HeadingContainer>
+      <Sh1Home>| eric.egli |</Sh1Home>
+
       <DescriptionContainer>
-        <Sh3>amateur filmmaker with a passion for frontend development</Sh3>
+        <Sh3>film & photography</Sh3>
+        <Sp>x</Sp>
+        <Sh3>frontend development</Sh3>
       </DescriptionContainer>
       {/* {images.map(img => (
         <img key={img.url} src={img.url} />

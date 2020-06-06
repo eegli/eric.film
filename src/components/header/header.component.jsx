@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {
   HeaderOptionsContainer,
   StyledHamburgerMenu,
-  MainHeaderContainer,
+  HeaderMainContainer,
   StyledLinkText,
   StyledLogo,
 } from './header.styles';
@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <MainHeaderContainer>
+      <HeaderMainContainer>
         <Link href='/'>
           <a>
             <StyledLogo src='/static/logo/Logo_v2.png' />
@@ -28,15 +28,21 @@ const Header = () => {
             <FaBars />
           </StyledHamburgerMenu>
         </a>
-      </MainHeaderContainer>
+      </HeaderMainContainer>
+
       <SmoothCollapse expanded={showHeader}>
         <HeaderOptionsContainer onClick={() => setShowHeader(!showHeader)}>
-          <Link href='/blog'>
-            <StyledLinkText>blog</StyledLinkText>
+          <Link href='/'>
+            <StyledLinkText>home</StyledLinkText>
           </Link>
-
+          <Link href='/portfolio'>
+            <StyledLinkText>portfolio</StyledLinkText>
+          </Link>
           <Link href='/about'>
             <StyledLinkText>about</StyledLinkText>
+          </Link>
+          <Link href='/blog'>
+            <StyledLinkText>blog</StyledLinkText>
           </Link>
         </HeaderOptionsContainer>
       </SmoothCollapse>

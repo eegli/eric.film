@@ -3,10 +3,13 @@ import { request } from '../../api/graphql';
 import { ALL_BLOGPOSTS } from '../../api/queries';
 import MdPreview from '../../components/markdown/md-preview.component';
 
+import { Sh1 } from '@/shared/headings.styles';
+import LayouContainer from '@/shared/layout/layout.container';
+
 const IndexPage = ({ posts }) => {
   return (
-    <div>
-      <h1>Hello</h1>
+    <LayouContainer>
+      <Sh1>blog</Sh1>
       {posts.map(p => {
         return (
           <MdPreview
@@ -18,7 +21,7 @@ const IndexPage = ({ posts }) => {
           />
         );
       })}
-    </div>
+    </LayouContainer>
   );
 };
 
