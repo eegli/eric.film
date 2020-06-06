@@ -2,14 +2,17 @@ import React from 'react';
 import { request } from '../api/graphql';
 import { IMGS_HOME } from '../api/queries';
 
+import { IndexContainer } from './index.styles';
+import LayouContainer from '../components/layout/layout.container';
+
 const IndexPage = ({ images }) => {
   return (
-    <div style={{ height: '300px' }}>
-      <h1>This is the index page</h1>
+    <LayouContainer>
+      <h1 style={{ textAlign: 'center' }}>eric.egli</h1>
       {images.map(img => (
         <img key={img.url} src={img.url} />
       ))}
-    </div>
+    </LayouContainer>
   );
 };
 export async function getStaticProps() {

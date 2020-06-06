@@ -7,16 +7,17 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #373737;
+    background-color: #323639;
    
   }
-  h1 h2 h3 {
-    text-shadow: 2px 2px 0px #feb8ce;
-    letter-spacing: 0.5rem;
-    color: #000;
-  &:hover {
-    text-decoration: line-through;
+  h1, h2, h3 {
+    text-shadow: 1px 1px 0px #feb8ce;
+    letter-spacing: 0.2rem;
+    font-weight: 400;
   }
+
+  h1 {
+    font-size: 2rem;
   }
 
   iframe {
@@ -36,6 +37,8 @@ multiscreen baby pink
 #FEB8CE
 eerie dark grey
 #373737
+chrome dark grey
+#38343c
 
 */
 

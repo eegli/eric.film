@@ -18,8 +18,6 @@ export const StyledLinkText = styled.a`
   padding: 1rem;
   text-align: center;
   font-size: 1.2rem;
-  /* text-decoration-line: overline;
-  text-decoration-color: #feb8ce; */
   text-shadow: 1px 1px 0px #feb8ce;
   letter-spacing: 0.5rem;
   &:hover {
