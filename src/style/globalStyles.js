@@ -12,21 +12,6 @@ export const Global = createGlobalStyle`
     box-sizing: border-box;
     background-color: #323639;
   }
-  h1,
-  h2,
-  h3 {
-    text-shadow: 1px 1px 0px #feb8ce;
-    letter-spacing: 0.2rem;
-    font-weight: 400;
-  }
-
-  iframe {
-    width: 500px;
-  }
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
 
   /* PROGRESS BAR */
   #nprogress {
@@ -50,13 +35,5 @@ export const Global = createGlobalStyle`
     height: 2px;
   }
 
-  /* BG VIDEO */
-  #bg-video{
-  height: 100%;
-  width: 100%;
-  top: 0;
-  padding: none;
 
-
-}
 `;

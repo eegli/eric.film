@@ -1,18 +1,20 @@
 import React from 'react';
 import { request } from '../api/graphql';
 import { IMGS_HOME } from '../api/queries';
-import LayouContainer from '../components/layout/layout.container';
+import LayouContainer from '@/shared/layout/layout.container';
+import { Sh1 } from '@/shared/headings.styles';
+import { Svideo } from '@/shared/elements.styles';
 
 const IndexPage = ({ images }) => {
   return (
     <LayouContainer>
-      <h1 style={{ textAlign: 'center' }}>eric.egli</h1>
+      <Sh1>eric egli</Sh1>
       {/* {images.map(img => (
         <img key={img.url} src={img.url} />
       ))} */}
-      <video id='bg-video' autoPlay loop muted>
+      <Svideo autoPlay loop muted>
         <source src='/static/vid/home_teaser.mp4' type='video/mp4' />
-      </video>
+      </Svideo>
     </LayouContainer>
   );
 };
