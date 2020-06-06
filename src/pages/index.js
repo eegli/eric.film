@@ -1,8 +1,6 @@
 import React from 'react';
 import { request } from '../api/graphql';
 import { IMGS_HOME } from '../api/queries';
-
-import { IndexContainer } from './index.styles';
 import LayouContainer from '../components/layout/layout.container';
 
 const IndexPage = ({ images }) => {
