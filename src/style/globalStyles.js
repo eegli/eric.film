@@ -1,23 +1,23 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const Global = createGlobalStyle`
-body {
+
+
+  /* GLOBALS */
+  body {
     font-family: 'Lato', sans-serif;
-    color: #fff;
+    color: #eef0f2;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #323639;
-   
   }
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     text-shadow: 1px 1px 0px #feb8ce;
     letter-spacing: 0.2rem;
     font-weight: 400;
-  }
-
-  h1 {
-    font-size: 2rem;
   }
 
   iframe {
@@ -27,23 +27,26 @@ body {
     max-width: 100%;
     max-height: 100%;
   }
+
+  /* PROGRESS BAR */
+  #nprogress {
+    pointer-events: none;
+  }
+
+  #nprogress .bar {
+    background: rgb(231, 142, 165);
+    background: linear-gradient(
+      90deg,
+      rgba(231, 142, 165, 1) 0%,
+      rgba(254, 184, 206, 1) 74%
+    );
+
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+  }
 `;
-
-/* 
-
-integrative pig pink
-#E78EA5
-multiscreen baby pink
-#FEB8CE
-eerie dark grey
-#373737
-chrome dark grey
-#38343c
-
-*/
-
-/* 2D4B52
-62B1AF
-F4EEDA
-F4917E
-CE666A */

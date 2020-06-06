@@ -7,7 +7,7 @@ export const MainHeaderContainer = styled.header`
 `;
 
 export const HeaderOptionsContainer = styled.header`
-  background-color: #666666;
+  background-color: #eef0f2ff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +23,7 @@ export const StyledLinkText = styled.a`
   &:hover {
     text-decoration: line-through;
   }
+  color: #38343c;
 `;
 
 export const StyledLogo = styled.img`
@@ -31,5 +32,5 @@ export const StyledLogo = styled.img`
 
 export const StyledHamburgerMenu = styled.div`
   font-size: 2rem;
-  color: white;
+  color: #eef0f2;
 `;

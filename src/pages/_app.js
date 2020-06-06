@@ -19,7 +19,7 @@ const App = ({ Component, pageProps }) => {
       <Head>
         <title>My page title</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-        <link rel='stylesheet' type='text/css' href='/css/nprogress.css' />
+
         <link
           href='https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap'
           rel='stylesheet'
