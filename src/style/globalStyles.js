@@ -49,4 +49,14 @@ export const Global = createGlobalStyle`
     width: 100%;
     height: 2px;
   }
+
+  /* BG VIDEO */
+  #bg-video{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  padding: none;
+
+
+}
 `;

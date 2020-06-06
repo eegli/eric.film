@@ -9,9 +9,12 @@ const IndexPage = ({ images }) => {
   return (
     <LayouContainer>
       <h1 style={{ textAlign: 'center' }}>eric.egli</h1>
-      {images.map(img => (
+      {/* {images.map(img => (
         <img key={img.url} src={img.url} />
-      ))}
+      ))} */}
+      <video id='bg-video' autoPlay loop muted>
+        <source src='/static/vid/home_teaser.mp4' type='video/mp4' />
+      </video>
     </LayouContainer>
   );
 };
