@@ -1,7 +1,16 @@
 export const theme = {
-  jet: '#38343c',
+  // Base bg color
+  baseBgChromeGrey: '#323639',
+
+  // Text shadow color
   nadeshikoPink: '#feb8ce',
+
+  // Light grey, unused
   timberwolf: '#daddd8',
+
+  // Sand, unused
   isabelline: '#ecebe4',
-  cultured: '#eef0f2',
+
+  // Text color on base bg
+  baseTextLightWhite: '#eef0f2',
 };

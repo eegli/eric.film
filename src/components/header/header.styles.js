@@ -23,7 +23,7 @@ export const StyledLinkText = styled.a`
   &:hover {
     text-decoration: line-through;
   }
-  color: #38343c;
+  color: #323639;
 `;
 
 export const StyledLogo = styled.img`

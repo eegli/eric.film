@@ -2,13 +2,23 @@ import React from 'react';
 import { request } from '../api/graphql';
 import { IMGS_HOME } from '../api/queries';
 import LayouContainer from '@/shared/layout/layout.container';
-import { Sh1 } from '@/shared/headings.styles';
+import {
+  Sh1,
+  Sh3,
+  HeadingContainer,
+  DescriptionContainer,
+} from '@/shared/headings.styles';
 import { Svideo } from '@/shared/elements.styles';
 
 const IndexPage = ({ images }) => {
   return (
     <LayouContainer>
-      <Sh1>eric egli</Sh1>
+      <HeadingContainer>
+        <Sh1>| eric.egli |</Sh1>
+      </HeadingContainer>
+      <DescriptionContainer>
+        <Sh3>amateur filmmaker with a passion for frontend development</Sh3>
+      </DescriptionContainer>
       {/* {images.map(img => (
         <img key={img.url} src={img.url} />
       ))} */}

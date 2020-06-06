@@ -6,11 +6,11 @@ export const Global = createGlobalStyle`
   /* GLOBALS */
   body {
     font-family: 'Lato', sans-serif;
-    color: #eef0f2;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #323639;
+    color: #eef0f2;
   }
 
   /* PROGRESS BAR */
