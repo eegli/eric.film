@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## TODOS
 
 - Dynamic imports
+- Styled components prod/env babel config
 
 ## Getting Started
 

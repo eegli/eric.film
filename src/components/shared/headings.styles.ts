@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const Sh1 = styled.h1<{ landing?: boolean }>`
-  text-shadow: 2px 2px 0px ${p => p.theme.textShadowColor};
+  text-shadow: 2px 2px 0px ${({ theme }) => theme.textShadowColor};
   letter-spacing: 0.2rem;
   text-align: center;
   display: inline;
-  font-size: ${p => (p.landing ? '3rem' : '2.2rem')};
-  font-weight: ${p => (p.landing ? 400 : 300)};
+  font-size: ${({ landing }) => (landing ? '3rem' : '2.2rem')};
+  font-weight: ${({ landing }) => (landing ? 400 : 300)};
 `;
 
 export const Sh3 = styled.h3`

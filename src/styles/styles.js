@@ -9,8 +9,8 @@ export const Global = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: ${p => p.theme.baseBgChromeGrey};
-    color: ${p => p.theme.baseTextLightWhite};
+    background-color: ${({ theme }) => theme.baseBgChromeGrey};
+    color: ${({ theme }) => theme.baseTextLightWhite};
   }
 
   /* PROGRESS BAR */
@@ -56,7 +56,7 @@ export const Global = createGlobalStyle`
     background: #000000;
   }
   ::-webkit-scrollbar-track {
-    background: ${p => p.theme.baseBgChromeGrey};
+    background: ${({ theme }) => theme.baseBgChromeGrey};
     border: 0px none #ffffff;
     border-radius: 11px;
   }

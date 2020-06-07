@@ -10,7 +10,7 @@ export const HeaderMainContainer = styled.header`
 `;
 
 export const HeaderOptionsContainer = styled.header`
-  background-color: ${p => p.theme.baseTextLightWhite};
+  background-color: ${({ theme }) => theme.baseTextLightWhite};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,12 +21,12 @@ export const StyledLinkText = styled.a`
   padding: 1rem;
   text-align: center;
   font-size: 1.2rem;
-  text-shadow: 1px 1px 0px ${p => p.theme.textShadowColor};
+  text-shadow: 1px 1px 0px ${({ theme }) => theme.textShadowColor};
   letter-spacing: 0.5rem;
   &:hover {
     text-decoration: line-through;
   }
-  color: ${p => p.theme.baseBgChromeGrey};
+  color: ${({ theme }) => theme.baseBgChromeGrey};
 `;
 
 export const StyledLogo = styled.img`

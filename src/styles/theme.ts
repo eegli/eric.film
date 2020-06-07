@@ -17,3 +17,9 @@ export const darkTheme = {
   // Scrollbar
   scrollbarDark: '#8a8a8a',
 };
+
+type DarkTheme = typeof darkTheme;
+
+declare module 'styled-components' {
+  interface DefaultTheme extends DarkTheme {}
+}
