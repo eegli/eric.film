@@ -1,9 +1,11 @@
 import styled from 'styled-components';
+import { FaBars } from 'react-icons/fa';
 
 export const HeaderMainContainer = styled.header`
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+  height: 2.1rem;
 `;
 
 export const HeaderOptionsContainer = styled.header`
@@ -30,7 +32,7 @@ export const StyledLogo = styled.img`
   height: 2rem;
 `;
 
-export const StyledHamburgerMenu = styled.div`
+export const StyledHamburgerWrapper = styled.div`
   font-size: 1.8rem;
   color: #eef0f2;
 `;

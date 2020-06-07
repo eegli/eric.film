@@ -17,19 +17,18 @@ const IndexPage = ({ images }) => {
           <source src='/static/vid/home_teaser.mp4' type='video/mp4' />
         </Svideo>
       </IndexVideoContainer>
-      <IndexContentContainer>
-        <LayouContainer>
-          <Sh1 landing>| eric.egli |</Sh1>
 
-          <DescriptionContainer>
-            <Sh3>film & photography</Sh3>
-            <Sp>x</Sp>
-            <Sh3>frontend development</Sh3>
-          </DescriptionContainer>
-          {images.map(img => (
+      <IndexContentContainer>
+        <Sh1 landing>| eric.egli |</Sh1>
+
+        <DescriptionContainer>
+          <Sh3>film & photography</Sh3>
+          <Sp>x</Sp>
+          <Sh3>frontend development</Sh3>
+        </DescriptionContainer>
+        {/* {images.map(img => (
             <img key={img.url} src={img.url} />
-          ))}
-        </LayouContainer>
+          ))} */}
       </IndexContentContainer>
     </>
   );

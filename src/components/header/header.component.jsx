@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   HeaderOptionsContainer,
-  StyledHamburgerMenu,
+  StyledHamburgerWrapper,
   HeaderMainContainer,
   StyledLinkText,
   StyledLogo,
@@ -9,13 +9,15 @@ import {
 import Link from 'next/link';
 import { FaBars } from 'react-icons/fa';
 
+import LayouContainer from '@/shared/layout/layout.container';
+
 import SmoothCollapse from 'react-smooth-collapse';
 
 const Header = () => {
   const [showHeader, setShowHeader] = useState(false);
 
   return (
-    <React.Fragment>
+    <LayouContainer>
       <HeaderMainContainer>
         <Link href='/'>
           <a>
@@ -24,9 +26,9 @@ const Header = () => {
         </Link>
 
         <a>
-          <StyledHamburgerMenu onClick={() => setShowHeader(!showHeader)}>
+          <StyledHamburgerWrapper onClick={() => setShowHeader(!showHeader)}>
             <FaBars />
-          </StyledHamburgerMenu>
+          </StyledHamburgerWrapper>
         </a>
       </HeaderMainContainer>
 
@@ -46,7 +48,7 @@ const Header = () => {
           </Link>
         </HeaderOptionsContainer>
       </SmoothCollapse>
-    </React.Fragment>
+    </LayouContainer>
   );
 };
 
