@@ -1,24 +1,5 @@
 import styled from 'styled-components';
 
-export const IndexVideoContainer = styled.div`
-  z-index: -1;
-  position: absolute;
-  top: 4.2rem;
-  left: 0;
-  bottom: 0;
-  /** could be any size **/
-  width: 100%;
-  overflow: hidden;
-`;
-export const IndexContentContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  top: 100%;
-`;
 export const Svideo = styled.video`
   display: block;
   min-height: 100%;

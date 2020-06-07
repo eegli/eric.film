@@ -3,11 +3,13 @@ import { request } from '../api/graphql';
 import { IMGS_HOME } from '../api/queries';
 import LayouContainer from '@/shared/layout/layout.container';
 import { DescriptionContainer, Sh1, Sh3, Sp } from '@/shared/headings.styles';
+import { Svideo } from '@/shared/elements.styles';
+
 import {
-  Svideo,
   IndexVideoContainer,
   IndexContentContainer,
-} from '@/shared/elements.styles';
+  StyledArrowDown,
+} from './index.styles';
 
 const IndexPage = ({ images }) => {
   return (
@@ -16,6 +18,7 @@ const IndexPage = ({ images }) => {
         <Svideo autoPlay loop muted>
           <source src='/static/vid/home_teaser.mp4' type='video/mp4' />
         </Svideo>
+        <StyledArrowDown />
       </IndexVideoContainer>
 
       <IndexContentContainer>
@@ -44,6 +47,3 @@ export async function getStaticProps() {
 }
 
 export default IndexPage;
-
-{
-}
