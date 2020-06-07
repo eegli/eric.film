@@ -4,6 +4,14 @@
     [
       "styled-components",
       { "ssr": true, "displayName": true, "preprocess": false }
+    ],
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@theme": "./src/styles/theme"
+        }
+      }
     ]
   ]
 }
