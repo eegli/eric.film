@@ -3,25 +3,35 @@ import { request } from '../api/graphql';
 import { IMGS_HOME } from '../api/queries';
 import LayouContainer from '@/shared/layout/layout.container';
 import { DescriptionContainer, Sh1, Sh3, Sp } from '@/shared/headings.styles';
-import { Svideo } from '@/shared/elements.styles';
+import {
+  Svideo,
+  IndexVideoContainer,
+  IndexContentContainer,
+} from '@/shared/elements.styles';
 
 const IndexPage = ({ images }) => {
   return (
-    <LayouContainer>
-      <Sh1 landing>| eric.egli |</Sh1>
+    <>
+      <IndexVideoContainer>
+        <Svideo autoPlay loop muted>
+          <source src='/static/vid/home_teaser.mp4' type='video/mp4' />
+        </Svideo>
+      </IndexVideoContainer>
+      <IndexContentContainer>
+        <LayouContainer>
+          <Sh1 landing>| eric.egli |</Sh1>
 
-      <DescriptionContainer>
-        <Sh3>film & photography</Sh3>
-        <Sp>x</Sp>
-        <Sh3>frontend development</Sh3>
-      </DescriptionContainer>
-      {/* {images.map(img => (
-        <img key={img.url} src={img.url} />
-      ))} */}
-      <Svideo autoPlay loop muted>
-        <source src='/static/vid/home_teaser.mp4' type='video/mp4' />
-      </Svideo>
-    </LayouContainer>
+          <DescriptionContainer>
+            <Sh3>film & photography</Sh3>
+            <Sp>x</Sp>
+            <Sh3>frontend development</Sh3>
+          </DescriptionContainer>
+          {images.map(img => (
+            <img key={img.url} src={img.url} />
+          ))}
+        </LayouContainer>
+      </IndexContentContainer>
+    </>
   );
 };
 export async function getStaticProps() {
@@ -35,3 +45,6 @@ export async function getStaticProps() {
 }
 
 export default IndexPage;
+
+{
+}
