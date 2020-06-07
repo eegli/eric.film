@@ -7,7 +7,7 @@ export const HeaderMainContainer = styled.header`
 `;
 
 export const HeaderOptionsContainer = styled.header`
-  background-color: #eef0f2ff;
+  background-color: ${p => p.theme.baseTextLightWhite};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,12 +18,12 @@ export const StyledLinkText = styled.a`
   padding: 1rem;
   text-align: center;
   font-size: 1.2rem;
-  text-shadow: 1px 1px 0px #feb8ce;
+  text-shadow: 1px 1px 0px ${p => p.theme.textShadowColor};
   letter-spacing: 0.5rem;
   &:hover {
     text-decoration: line-through;
   }
-  color: #323639;
+  color: ${p => p.theme.baseBgChromeGrey};
 `;
 
 export const StyledLogo = styled.img`

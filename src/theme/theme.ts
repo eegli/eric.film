@@ -1,12 +1,14 @@
-export const theme = {
+import { DefaultTheme } from 'styled-components';
+
+export const theme: DefaultTheme = {
   // Base bg color
   baseBgChromeGrey: '#323639',
 
   // Text shadow color
-  nadeshikoPink: '#feb8ce',
+  textShadowColor: '#feb8ce',
 
   // Light grey, unused
-  timberwolf: '#daddd8',
+  _timberwolf: '#daddd8',
 
   // Sand, unused
   isabelline: '#ecebe4',

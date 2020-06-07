@@ -14,7 +14,7 @@ export const BlogPostTitle = styled.h1`
 export const BlogPostExcerpt = styled.h3`
   font-size: 1.2rem;
 `;
-
+// TODO get theme from props
 export const BlogPostContent = styled.div`
   & > .wp-block-code {
     background-color: #000;

@@ -1,12 +1,12 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Sh1 = styled.h1`
-  text-shadow: 2px 2px 0px #feb8ce;
+  text-shadow: 2px 2px 0px ${p => p.theme.textShadowColor};
   letter-spacing: 0.2rem;
   text-align: center;
   display: inline;
-  font-size: ${props => (props.landing ? '3rem' : '2.2rem')};
-  font-weight: ${props => (props.landing ? 400 : 300)};
+  font-size: ${p => (p.landing ? '3rem' : '2.2rem')};
+  font-weight: ${p => (p.landing ? 400 : 300)};
 `;
 
 export const Sh3 = styled.h3`
