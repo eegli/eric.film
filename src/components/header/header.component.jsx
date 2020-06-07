@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   HeaderOptionsContainer,
-  StyledHamburgerWrapper,
+  StyledHamburger,
   HeaderMainContainer,
   StyledLinkText,
   StyledLogo,
@@ -25,11 +25,7 @@ const Header = () => {
           </a>
         </Link>
 
-        <a>
-          <StyledHamburgerWrapper onClick={() => setShowHeader(!showHeader)}>
-            <FaBars />
-          </StyledHamburgerWrapper>
-        </a>
+        <StyledHamburger onClick={() => setShowHeader(!showHeader)} />
       </HeaderMainContainer>
 
       <SmoothCollapse expanded={showHeader}>
