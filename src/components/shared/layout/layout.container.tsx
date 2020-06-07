@@ -1,7 +1,7 @@
 import React from 'react';
 import { LayoutContainerStyle } from './layout.styles';
 
-const LayoutContainer = ({ children }) => {
+const LayoutContainer: React.FC = ({ children }) => {
   return <LayoutContainerStyle>{children}</LayoutContainerStyle>;
 };
 

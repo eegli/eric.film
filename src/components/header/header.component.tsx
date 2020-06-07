@@ -12,7 +12,7 @@ import LayouContainer from '@/shared/layout/layout.container';
 
 import SmoothCollapse from 'react-smooth-collapse';
 
-const Header: React.FC<{}> = () => {
+const Header: React.FC = () => {
   const [showHeader, setShowHeader] = useState(false);
 
   return (

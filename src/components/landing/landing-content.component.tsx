@@ -2,12 +2,12 @@ import React, { forwardRef } from 'react';
 import { DescriptionContainer, Sh1, Sh3, Sp } from '@/shared/headings.styles';
 import { LandingContentContainer } from './landing-content.styles';
 
-interface LandingContentProps {
+type Props = {
   images?: string[];
-}
+};
 
 const LandingContent = React.forwardRef(
-  (props: LandingContentProps, ref?: React.RefObject<HTMLDivElement>) => {
+  (props: Props, ref?: React.RefObject<HTMLDivElement>) => {
     return (
       <LandingContentContainer ref={ref}>
         <Sh1 landing>| eric.egli |</Sh1>

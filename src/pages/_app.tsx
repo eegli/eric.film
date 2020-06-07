@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../styles/theme';
+import { darkTheme } from '../styles/theme';
 
 Router.events.on('routeChangeStart', url => {
   console.log(`Loading: ${url}`);
@@ -14,7 +14,13 @@ Router.events.on('routeChangeStart', url => {
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
-export default function App({ Component, pageProps }) {
+// TODO better definitions from Next/app
+type Props = {
+  Component: any;
+  pageProps: any;
+};
+
+const App: React.FC<Props> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
@@ -28,7 +34,7 @@ export default function App({ Component, pageProps }) {
         />
       </Head>
       <main>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={darkTheme}>
           <Global />
           <Header />
           <Component {...pageProps} />
@@ -36,4 +42,6 @@ export default function App({ Component, pageProps }) {
       </main>
     </>
   );
-}
+};
+
+export default App;

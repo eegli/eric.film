@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import { styled } from '../../styles/theme';
 import { FaBars } from 'react-icons/fa';
 
 export const HeaderMainContainer = styled.header`

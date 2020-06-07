@@ -1,4 +1,6 @@
-export const theme = {
+import baseStyled, { ThemedStyledInterface } from 'styled-components';
+
+export const darkTheme = {
   // Base bg color
   baseBgChromeGrey: '#323639',
 
@@ -17,3 +19,6 @@ export const theme = {
   // Scrollbar
   scrollbarDark: '#8a8a8a',
 };
+
+export type DarkTheme = typeof darkTheme;
+export const styled = baseStyled as ThemedStyledInterface<DarkTheme>;

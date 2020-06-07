@@ -6,11 +6,11 @@ import {
 import { Svideo } from '@/shared/elements.styles';
 import { FaAngleDown } from 'react-icons/fa';
 
-interface LandingVideoProps {
+type Props = {
   contentRef: React.RefObject<HTMLDivElement>;
-}
+};
 
-const LandingVideo: React.FC<LandingVideoProps> = ({ contentRef }) => {
+const LandingVideo: React.FC<Props> = ({ contentRef }) => {
   const scrollToRef = (ref: React.RefObject<HTMLDivElement>): void => {
     window.scrollTo(0, ref.current.offsetTop);
   };
