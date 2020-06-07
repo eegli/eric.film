@@ -8,11 +8,14 @@ export const theme: DefaultTheme = {
   textShadowColor: '#feb8ce',
 
   // Light grey, unused
-  _timberwolf: '#daddd8',
+  timberwolf: '#daddd8',
 
   // Sand, unused
   isabelline: '#ecebe4',
 
   // Text color on base bg
   baseTextLightWhite: '#eef0f2',
+
+  // Scrollbar
+  scrollbarDark: '#8a8a8a',
 };

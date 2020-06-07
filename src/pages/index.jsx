@@ -11,7 +11,7 @@ import {
 
 const IndexPage = ({ images }) => {
   return (
-    <>
+    <LayouContainer>
       <IndexVideoContainer>
         <Svideo autoPlay loop muted>
           <source src='/static/vid/home_teaser.mp4' type='video/mp4' />
@@ -30,7 +30,7 @@ const IndexPage = ({ images }) => {
             <img key={img.url} src={img.url} />
           ))} */}
       </IndexContentContainer>
-    </>
+    </LayouContainer>
   );
 };
 export async function getStaticProps() {

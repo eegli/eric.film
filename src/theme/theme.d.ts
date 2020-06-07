@@ -6,7 +6,8 @@ declare module 'styled-components' {
     baseBgChromeGrey: string;
     textShadowColor: string;
     baseTextLightWhite: string;
-    _timberwolf: string;
+    timberwolf: string;
+    scrollbarDark: string;
     _isabelline: string;
   }
 }

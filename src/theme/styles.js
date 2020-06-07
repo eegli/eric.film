@@ -34,6 +34,41 @@ export const Global = createGlobalStyle`
     width: 100%;
     height: 2px;
   }
+ /* SCROLL BAR */
+
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+  ::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #8a8a8a;
+    border: 0px none #ffffff;
+    border-radius: 11px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-track {
+    background: ${p => p.theme.baseBgChromeGrey};
+    border: 0px none #ffffff;
+    border-radius: 11px;
+  }
+  ::-webkit-scrollbar-track:hover {
+    background: #666666;
+  }
+  ::-webkit-scrollbar-track:active {
+    background: #333333;
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+}
 
 
 `;
