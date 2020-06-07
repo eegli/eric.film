@@ -1,11 +1,11 @@
 import React from 'react';
-import { Global } from '../theme/styles';
+import { Global } from '../styles/styles';
 import Header from '../components/header/header.component';
 import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../theme/theme';
+import { theme } from '../styles/theme';
 
 Router.events.on('routeChangeStart', url => {
   console.log(`Loading: ${url}`);

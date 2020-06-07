@@ -10,7 +10,7 @@ import {
   LandingVideoContainer,
   LandingContentContainer,
   ArrowDownContainer,
-} from './index.styles';
+} from '../styles/pages/index.styles';
 
 const IndexPage = ({ images }) => {
   const contentRef = useRef(null);
