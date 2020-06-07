@@ -31,6 +31,6 @@ export const StyledLogo = styled.img`
 `;
 
 export const StyledHamburgerMenu = styled.div`
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #eef0f2;
 `;

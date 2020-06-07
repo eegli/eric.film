@@ -1,9 +1,11 @@
 import React from 'react';
-import { Global } from '../style/globalStyles';
+import { Global } from '../theme/styles';
 import Header from '../components/header/header.component';
 import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress';
+import { ThemeProvider } from 'styled-components';
+import { theme } from '../theme/theme';
 
 Router.events.on('routeChangeStart', url => {
   console.log(`Loading: ${url}`);
@@ -14,8 +16,7 @@ Router.events.on('routeChangeError', () => NProgress.done());
 
 const App = ({ Component, pageProps }) => {
   return (
-    <React.Fragment>
-      <Global />
+    <>
       <Head>
         <title>My page title</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
@@ -27,10 +28,13 @@ const App = ({ Component, pageProps }) => {
         />
       </Head>
       <main>
-        <Header />
-        <Component {...pageProps} />
+        <ThemeProvider theme={theme}>
+          <Global />
+          <Header />
+          <Component {...pageProps} />
+        </ThemeProvider>
       </main>
-    </React.Fragment>
+    </>
   );
 };
 
