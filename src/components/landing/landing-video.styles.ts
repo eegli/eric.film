@@ -1,4 +1,4 @@
-import { styled } from '@theme';
+import styled from 'styled-components';
 
 export const LandingVideoContainer = styled.div`
   position: absolute;
