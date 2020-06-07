@@ -7,13 +7,12 @@ import {
   StyledLogo,
 } from './header.styles';
 import Link from 'next/link';
-import { FaBars } from 'react-icons/fa';
 
 import LayouContainer from '@/shared/layout/layout.container';
 
 import SmoothCollapse from 'react-smooth-collapse';
 
-const Header = () => {
+const Header: React.FC<{}> = () => {
   const [showHeader, setShowHeader] = useState(false);
 
   return (

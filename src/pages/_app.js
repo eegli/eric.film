@@ -14,7 +14,7 @@ Router.events.on('routeChangeStart', url => {
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
-const App = ({ Component, pageProps }) => {
+export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
@@ -36,6 +36,4 @@ const App = ({ Component, pageProps }) => {
       </main>
     </>
   );
-};
-
-export default App;
+}
