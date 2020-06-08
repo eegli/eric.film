@@ -5,10 +5,10 @@ import {
   HeaderMainContainer,
   StyledLinkText,
   StyledLogo,
+  HeaderWrapper,
+  HeaderMainBgContainer,
 } from './header.styles';
 import Link from 'next/link';
-
-import LayouContainer from '@/shared/layout/layout.container';
 
 import SmoothCollapse from 'react-smooth-collapse';
 
@@ -16,16 +16,18 @@ const Header: React.FC = () => {
   const [showHeader, setShowHeader] = useState(false);
 
   return (
-    <LayouContainer>
-      <HeaderMainContainer>
-        <Link href='/'>
-          <a>
-            <StyledLogo src='/static/logo/Logo_v2.png' />
-          </a>
-        </Link>
+    <HeaderWrapper>
+      <HeaderMainBgContainer>
+        <HeaderMainContainer>
+          <Link href='/'>
+            <a>
+              <StyledLogo src='/static/logo/Logo_v2.png' />
+            </a>
+          </Link>
 
-        <StyledHamburger onClick={() => setShowHeader(!showHeader)} />
-      </HeaderMainContainer>
+          <StyledHamburger onClick={() => setShowHeader(!showHeader)} />
+        </HeaderMainContainer>
+      </HeaderMainBgContainer>
 
       <SmoothCollapse expanded={showHeader}>
         <HeaderOptionsContainer onClick={() => setShowHeader(!showHeader)}>
@@ -43,7 +45,7 @@ const Header: React.FC = () => {
           </Link>
         </HeaderOptionsContainer>
       </SmoothCollapse>
-    </LayouContainer>
+    </HeaderWrapper>
   );
 };
 

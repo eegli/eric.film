@@ -11,6 +11,9 @@ export const Global = createGlobalStyle`
     box-sizing: border-box;
     background-color: ${({ theme }) => theme.baseBgChromeGrey};
     color: ${({ theme }) => theme.baseTextLightWhite};
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
   }
 
   /* PROGRESS BAR */

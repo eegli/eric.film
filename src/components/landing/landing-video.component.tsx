@@ -2,8 +2,8 @@ import React from 'react';
 import {
   LandingVideoContainer,
   ArrowDownContainer,
+  StyledVideo,
 } from './landing-video.styles';
-import { Svideo } from '@/shared/elements.styles';
 import { FaAngleDown } from 'react-icons/fa';
 
 type Props = {
@@ -17,9 +17,9 @@ const LandingVideo: React.FC<Props> = ({ contentRef }) => {
 
   return (
     <LandingVideoContainer>
-      <Svideo autoPlay loop muted>
+      <StyledVideo autoPlay loop muted>
         <source src='/static/vid/home_teaser.mp4' type='video/mp4' />
-      </Svideo>
+      </StyledVideo>
       <ArrowDownContainer onClick={() => scrollToRef(contentRef)}>
         <FaAngleDown />
       </ArrowDownContainer>

@@ -2,18 +2,24 @@ import styled from 'styled-components';
 
 export const LandingVideoContainer = styled.div`
   position: absolute;
-  top: 4.2rem;
   bottom: 0;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+`;
+export const StyledVideo = styled.video`
   width: 100%;
-  overflow: hidden;
-  z-index: -1;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
 `;
 
 export const ArrowDownContainer = styled.div`
   opacity: 0.3;
   position: absolute;
   bottom: 2rem;
-  z-index: 999;
   left: 50%;
   width: 2rem;
   height: 2rem;

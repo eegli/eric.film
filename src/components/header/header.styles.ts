@@ -1,12 +1,24 @@
 import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa';
 
+export const HeaderWrapper = styled.div`
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+`;
+
+export const HeaderMainBgContainer = styled.div`
+  background-color: ${({ theme }) => theme.baseBgChromeGrey};
+  display: flex;
+  justify-content: center;
+`;
+
 export const HeaderMainContainer = styled.header`
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  height: 2.1rem;
   align-items: center;
+  width: 100%;
 `;
 
 export const HeaderOptionsContainer = styled.header`
