@@ -1,6 +1,7 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import { DescriptionContainer, Sh1, Sh3, Sp } from '@/shared/headings.styles';
 import { LandingContentContainer } from './landing-content.styles';
+import Gallery from '@/components/gallery/gallery.component';
 
 type Props = {
   images?: string[];
@@ -17,9 +18,7 @@ const LandingContent = React.forwardRef(
           <Sp>x</Sp>
           <Sh3>frontend development</Sh3>
         </DescriptionContainer>
-        {/* {images.map(img => (
-            <img key={img.url} src={img.url} />
-          ))} */}
+        <Gallery />
       </LandingContentContainer>
     );
   }

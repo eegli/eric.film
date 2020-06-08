@@ -19,10 +19,10 @@ const IndexPage: React.FC<IndexProps> = ({ images }) => {
   const contentRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <LayouContainer>
+    <React.Fragment>
       <LandingVideo contentRef={contentRef} />
       <LandingContent ref={contentRef} images={images} />
-    </LayouContainer>
+    </React.Fragment>
   );
 };
 export const getStaticProps: GetStaticProps = async context => {

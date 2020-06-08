@@ -5,6 +5,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Dynamic imports
 - Styled components prod/env babel config
 
+## Learnings
+
+- Dynamic imports are shit and increase first load size
+
 ## Getting Started
 
 First, run the development server:

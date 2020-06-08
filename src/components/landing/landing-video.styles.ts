@@ -8,15 +8,6 @@ export const LandingVideoContainer = styled.div`
   overflow: hidden;
   z-index: -1;
 `;
-export const LandingContentContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  top: 100%;
-`;
 
 export const ArrowDownContainer = styled.div`
   opacity: 0.3;
