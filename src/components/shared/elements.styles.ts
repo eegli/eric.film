@@ -19,3 +19,7 @@ export const Simg = styled.img`
 export const Siframe = styled.iframe`
   width: 500px;
 `;
+
+export const Sicon = styled.div`
+  font-size: 1rem;
+`;
