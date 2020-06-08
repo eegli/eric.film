@@ -16,7 +16,7 @@ interface IndexProps {
 
 const IndexPage: React.FC<IndexProps> = ({ images }) => {
   // Create ref to link from video to content
-  const contentRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement | null>(null);
 
   return (
     <LayouContainer>

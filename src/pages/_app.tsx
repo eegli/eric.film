@@ -6,6 +6,7 @@ import Router from 'next/router';
 import NProgress from 'nprogress';
 import { ThemeProvider } from 'styled-components';
 import { darkTheme } from '../styles/theme';
+import { AppProps } from 'next/app';
 
 Router.events.on('routeChangeStart', url => {
   console.log(`Loading: ${url}`);
@@ -14,13 +15,7 @@ Router.events.on('routeChangeStart', url => {
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
-// TODO better definitions from Next/app
-type Props = {
-  Component: any;
-  pageProps: any;
-};
-
-const App: React.FC<Props> = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>

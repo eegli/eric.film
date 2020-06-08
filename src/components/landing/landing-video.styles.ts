@@ -19,7 +19,7 @@ export const LandingContentContainer = styled.div`
 `;
 
 export const ArrowDownContainer = styled.div`
-  opacity: 0.6;
+  opacity: 0.3;
   position: absolute;
   bottom: 2rem;
   z-index: 999;
@@ -30,4 +30,9 @@ export const ArrowDownContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 1rem;
+  background-color: ${({ theme }) => theme.baseTextLightWhite};
+  & svg {
+    color: ${({ theme }) => theme.baseBgChromeGrey};
+  }
 `;
