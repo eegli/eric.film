@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   HeaderOptionsContainer,
   StyledLinkText,
 } from './header-options.styles';
 import Link from 'next/link';
 
-import SmoothCollapse from 'react-smooth-collapse';
-
-const HeaderOptions: React.FC = () => {
+const HeaderOptions: React.FC<{}> = () => {
   return (
     <HeaderOptionsContainer>
       <Link href='/'>

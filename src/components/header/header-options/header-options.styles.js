@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { FaBars } from 'react-icons/fa';
 
 export const HeaderOptionsContainer = styled.header`
   background-color: ${({ theme }) => theme.baseTextLightWhite};

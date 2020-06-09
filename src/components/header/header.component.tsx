@@ -15,6 +15,10 @@ import HeaderOptions from './header-options/header-options.components';
 const Header: React.FC = () => {
   const [showHeader, setShowHeader] = useState(false);
 
+  const handleClick = (): void => {
+    setShowHeader(!showHeader);
+  };
+
   return (
     <HeaderWrapper>
       <HeaderMainBgContainer>
@@ -25,11 +29,11 @@ const Header: React.FC = () => {
             </a>
           </Link>
 
-          <StyledHamburger onClick={() => setShowHeader(!showHeader)} />
+          <StyledHamburger onClick={handleClick} />
         </HeaderMainContainer>
       </HeaderMainBgContainer>
 
-      <SmoothCollapse expanded={showHeader}>
+      <SmoothCollapse expanded={showHeader} onClick={handleClick}>
         <HeaderOptions />
       </SmoothCollapse>
     </HeaderWrapper>
