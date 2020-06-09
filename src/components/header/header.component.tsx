@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import {
-  HeaderOptionsContainer,
   StyledHamburger,
   HeaderMainContainer,
-  StyledLinkText,
   StyledLogo,
   HeaderWrapper,
   HeaderMainBgContainer,
@@ -11,6 +9,8 @@ import {
 import Link from 'next/link';
 
 import SmoothCollapse from 'react-smooth-collapse';
+
+import HeaderOptions from './header-options/header-options.components';
 
 const Header: React.FC = () => {
   const [showHeader, setShowHeader] = useState(false);
@@ -30,20 +30,7 @@ const Header: React.FC = () => {
       </HeaderMainBgContainer>
 
       <SmoothCollapse expanded={showHeader}>
-        <HeaderOptionsContainer onClick={() => setShowHeader(!showHeader)}>
-          <Link href='/'>
-            <StyledLinkText>home</StyledLinkText>
-          </Link>
-          <Link href='/portfolio'>
-            <StyledLinkText>portfolio</StyledLinkText>
-          </Link>
-          <Link href='/about'>
-            <StyledLinkText>about</StyledLinkText>
-          </Link>
-          <Link href='/blog'>
-            <StyledLinkText>blog</StyledLinkText>
-          </Link>
-        </HeaderOptionsContainer>
+        <HeaderOptions />
       </SmoothCollapse>
     </HeaderWrapper>
   );
