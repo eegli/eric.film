@@ -25,14 +25,14 @@ const IndexPage: React.FC<IndexProps> = ({ images }) => {
     </React.Fragment>
   );
 };
-export const getStaticProps: GetStaticProps = async context => {
-  const images = await request(IMGS_HOME);
+// export const getStaticProps: GetStaticProps = async context => {
+//   const images = await request(IMGS_HOME);
 
-  return {
-    props: {
-      images: images.imgCollectionsConnection.edges[0].node.collection,
-    },
-  };
-};
+//   return {
+//     props: {
+//       images: images.imgCollectionsConnection.edges[0].node.collection,
+//     },
+//   };
+// };
 
 export default IndexPage;
