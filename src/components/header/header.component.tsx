@@ -5,6 +5,8 @@ import {
   StyledLogo,
   HeaderWrapper,
   HeaderMainBgContainer,
+  HeaderOptionsMobileContainer,
+  HeaderOptionsDesktopContainer,
 } from './header.styles';
 import Link from 'next/link';
 
@@ -28,15 +30,17 @@ const Header: React.FC = () => {
               <StyledLogo src='/static/logo/Logo_v2.png' />
             </a>
           </Link>
-
+          <HeaderOptionsDesktopContainer>
+            <HeaderOptions />
+          </HeaderOptionsDesktopContainer>
           <StyledHamburger onClick={handleClick} />
-          {/* {TODO ADD BACK HEADER OPTIONS} */}
-          {/* <HeaderOptions /> */}
         </HeaderMainContainer>
       </HeaderMainBgContainer>
 
       <SmoothCollapse expanded={showHeader} onClick={handleClick}>
-        <HeaderOptions />
+        <HeaderOptionsMobileContainer>
+          <HeaderOptions />
+        </HeaderOptionsMobileContainer>
       </SmoothCollapse>
     </HeaderWrapper>
   );

@@ -1,12 +1,5 @@
 import styled from 'styled-components';
 
-export const HeaderOptionsContainer = styled.header`
-  background-color: ${({ theme }) => theme.baseTextLightWhite};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
 export const StyledLinkText = styled.a`
   width: 100%;
   padding: 1rem;

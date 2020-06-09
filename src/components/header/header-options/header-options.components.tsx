@@ -1,13 +1,10 @@
 import React from 'react';
-import {
-  HeaderOptionsContainer,
-  StyledLinkText,
-} from './header-options.styles';
+import { StyledLinkText } from './header-options.styles';
 import Link from 'next/link';
 
 const HeaderOptions: React.FC<{}> = () => {
   return (
-    <HeaderOptionsContainer>
+    <>
       <Link href='/'>
         <StyledLinkText>home</StyledLinkText>
       </Link>
@@ -20,7 +17,7 @@ const HeaderOptions: React.FC<{}> = () => {
       <Link href='/blog'>
         <StyledLinkText>blog</StyledLinkText>
       </Link>
-    </HeaderOptionsContainer>
+    </>
   );
 };
 
