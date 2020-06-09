@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
 export const LayoutContainerStyle = styled.div`
-  width: 100%;
+  position: relative;
+  top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
