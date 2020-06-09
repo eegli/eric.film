@@ -9,6 +9,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - Dynamic imports are shit and increase first load size
 
+## To know
+
+-Note that generally, all content is wrapped in the layoutcontainer. This is not true for the index page as well as for the header!
+
 ## Getting Started
 
 First, run the development server:

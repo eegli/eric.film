@@ -17,7 +17,7 @@ const LandingVideo: React.FC<Props> = ({ contentRef }) => {
 
   return (
     <LandingVideoContainer>
-      <StyledVideo autoPlay loop muted>
+      <StyledVideo autoPlay loop muted playsInline>
         <source src='/static/vid/home_teaser.mp4' type='video/mp4' />
       </StyledVideo>
       <ArrowDownContainer onClick={() => scrollToRef(contentRef)}>
