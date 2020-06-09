@@ -28,4 +28,7 @@ export const StyledLogo = styled.img`
 export const StyledHamburger = styled(FaBars)`
   font-size: 1.8rem;
   color: #eef0f2;
+  /* @media screen and (min-width: 500px) {
+    display: none;
+  } */
 `;

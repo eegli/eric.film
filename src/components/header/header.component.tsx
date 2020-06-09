@@ -30,6 +30,8 @@ const Header: React.FC = () => {
           </Link>
 
           <StyledHamburger onClick={handleClick} />
+          {/* {TODO ADD BACK HEADER OPTIONS} */}
+          {/* <HeaderOptions /> */}
         </HeaderMainContainer>
       </HeaderMainBgContainer>
 
