@@ -31,7 +31,7 @@ const Header: React.FC = () => {
             </a>
           </Link>
           <HeaderOptionsDesktopContainer>
-            <HeaderOptions />
+            <HeaderOptions position='desktop' />
           </HeaderOptionsDesktopContainer>
           <StyledHamburger onClick={handleClick} />
         </HeaderMainContainer>
@@ -39,7 +39,7 @@ const Header: React.FC = () => {
 
       <SmoothCollapse expanded={showHeader} onClick={handleClick}>
         <HeaderOptionsMobileContainer>
-          <HeaderOptions />
+          <HeaderOptions position='mobile' />
         </HeaderOptionsMobileContainer>
       </SmoothCollapse>
     </HeaderWrapper>
