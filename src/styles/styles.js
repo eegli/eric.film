@@ -9,8 +9,8 @@ export const Global = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: ${({ theme }) => theme.baseBgChromeGrey};
-    color: ${({ theme }) => theme.baseTextLightWhite};
+    background-color: ${({ theme }) => theme.baseBg};
+    color: ${({ theme }) => theme.textColor};
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
@@ -59,7 +59,7 @@ export const Global = createGlobalStyle`
     background: #000000;
   }
   ::-webkit-scrollbar-track {
-    background: ${({ theme }) => theme.baseBgChromeGrey};
+    background: ${({ theme }) => theme.baseBg};
     border: 0px none #ffffff;
     border-radius: 11px;
   }
