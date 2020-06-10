@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
 import {
-  HeaderOptionsContainer,
   StyledHamburger,
   HeaderMainContainer,
-  StyledLinkText,
   StyledLogo,
   HeaderWrapper,
   HeaderMainBgContainer,
+  HeaderOptionsMobileContainer,
+  HeaderOptionsDesktopContainer,
 } from './header.styles';
 import Link from 'next/link';
 
 import SmoothCollapse from 'react-smooth-collapse';
 
+import HeaderOptions from './header-options/header-options.components';
+
 const Header: React.FC = () => {
   const [showHeader, setShowHeader] = useState(false);
+
+  const handleClick = (): void => {
+    setShowHeader(!showHeader);
+  };
 
   return (
     <HeaderWrapper>
@@ -24,26 +30,17 @@ const Header: React.FC = () => {
               <StyledLogo src='/static/logo/Logo_v2.png' />
             </a>
           </Link>
-
-          <StyledHamburger onClick={() => setShowHeader(!showHeader)} />
+          <HeaderOptionsDesktopContainer>
+            <HeaderOptions position='desktop' />
+          </HeaderOptionsDesktopContainer>
+          <StyledHamburger onClick={handleClick} />
         </HeaderMainContainer>
       </HeaderMainBgContainer>
 
-      <SmoothCollapse expanded={showHeader}>
-        <HeaderOptionsContainer onClick={() => setShowHeader(!showHeader)}>
-          <Link href='/'>
-            <StyledLinkText>home</StyledLinkText>
-          </Link>
-          <Link href='/portfolio'>
-            <StyledLinkText>portfolio</StyledLinkText>
-          </Link>
-          <Link href='/about'>
-            <StyledLinkText>about</StyledLinkText>
-          </Link>
-          <Link href='/blog'>
-            <StyledLinkText>blog</StyledLinkText>
-          </Link>
-        </HeaderOptionsContainer>
+      <SmoothCollapse expanded={showHeader} onClick={handleClick}>
+        <HeaderOptionsMobileContainer>
+          <HeaderOptions position='mobile' />
+        </HeaderOptionsMobileContainer>
       </SmoothCollapse>
     </HeaderWrapper>
   );

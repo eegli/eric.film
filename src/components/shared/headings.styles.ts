@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Sh1 = styled.h1<{ landing?: boolean }>`
+type Props = {
+  landing?: boolean;
+};
+
+export const Sh1 = styled.h1<Props>`
   text-shadow: 2px 2px 0px ${({ theme }) => theme.textShadowColor};
   letter-spacing: 0.2rem;
   text-align: center;

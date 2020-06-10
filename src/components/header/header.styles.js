@@ -21,24 +21,19 @@ export const HeaderMainContainer = styled.header`
   width: 100%;
 `;
 
-export const HeaderOptionsContainer = styled.header`
+export const HeaderOptionsMobileContainer = styled.header`
   background-color: ${({ theme }) => theme.baseTextLightWhite};
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-export const StyledLinkText = styled.a`
-  width: 100%;
-  padding: 1rem;
-  text-align: center;
-  font-size: 1.2rem;
-  text-shadow: 1px 1px 0px ${({ theme }) => theme.textShadowColor};
-  letter-spacing: 0.5rem;
-  &:hover {
-    text-decoration: line-through;
+export const HeaderOptionsDesktopContainer = styled.header`
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 700px) {
+    display: none;
   }
-  color: ${({ theme }) => theme.baseBgChromeGrey};
 `;
 
 export const StyledLogo = styled.img`
@@ -48,4 +43,7 @@ export const StyledLogo = styled.img`
 export const StyledHamburger = styled(FaBars)`
   font-size: 1.8rem;
   color: #eef0f2;
+  @media screen and (min-width: 700px) {
+    display: none;
+  }
 `;
