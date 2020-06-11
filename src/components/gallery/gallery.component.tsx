@@ -1,6 +1,7 @@
 import React from 'react';
 import { GalleryContainer, Img, ImageRow, ImageCol } from './gallery.styles';
 import { IndexProps } from '../../pages/index';
+import ProgressiveImage from 'react-progressive-graceful-image';
 
 const Gallery: React.FC<IndexProps> = ({ images }) => {
   if (!images) {
@@ -27,7 +28,13 @@ const Gallery: React.FC<IndexProps> = ({ images }) => {
         {collArrays.map(imgCol => (
           <ImageCol key={Math.random()}>
             {imgCol.map(img => (
-              <Img key={img.url} src={img.url} />
+              <div key={img.url}>
+                <ProgressiveImage
+                  src={img.url}
+                  placeholder='/static/placeholder.png'>
+                  {(src: string) => <Img src={src} alt='portfolio-image' />}
+                </ProgressiveImage>
+              </div>
             ))}
           </ImageCol>
         ))}
