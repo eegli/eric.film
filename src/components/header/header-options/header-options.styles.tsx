@@ -17,6 +17,7 @@ export const StyledLinkText = styled.a<Props>`
   letter-spacing: 0.5rem;
   &:hover {
     text-decoration: line-through;
+    cursor: pointer;
   }
   color: ${({ isMobile }) => (isMobile ? mobileColor : desktopColor)};
 `;

@@ -7,6 +7,7 @@ import ProgressiveImage from 'react-progressive-graceful-image';
 import { Spinner } from '@/components/custom-spinner/custom-spinner.styles';
 
 const Gallery: React.FC<IndexProps> = ({ images }) => {
+  // TODO better error handling
   if (!images) {
     return <h1>Oh no! There was an error displaying images</h1>;
   }
