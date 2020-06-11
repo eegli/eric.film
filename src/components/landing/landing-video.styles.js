@@ -20,7 +20,7 @@ export const ArrowDownContainer = styled.div`
   opacity: 0.3;
   position: absolute;
   bottom: 2rem;
-  left: 47%;
+  left: 50%;
   width: 2rem;
   height: 2rem;
   display: flex;
