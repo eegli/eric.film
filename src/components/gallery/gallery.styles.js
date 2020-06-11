@@ -1,20 +1,24 @@
 import styled from 'styled-components';
 
-export const GalleryContainer = styled.div``;
+export const GalleryContainer = styled.div`
+  padding: 0 0.2px;
+`;
 
 export const ImageRow = styled.ul`
   display: -ms-flexbox; /* IE10 */
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 0;
+  justify-content: center;
 `;
 
 export const ImageCol = styled.li`
   -ms-flex: 25%; /* IE10 */
   flex: 25%;
+  list-style-type: none;
   max-width: 25%;
-  padding: 0 4px;
+  padding: 0 0.2rem;
   @media screen and (max-width: 800px) {
     & {
       -ms-flex: 50%;
@@ -32,7 +36,7 @@ export const ImageCol = styled.li`
 `;
 
 export const Img = styled.img`
-  margin-top: 8px;
+  margin-top: 0.4rem;
   vertical-align: middle;
   width: 100%;
 `;

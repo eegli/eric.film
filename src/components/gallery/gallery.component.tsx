@@ -4,14 +4,14 @@ import { IndexProps } from '../../pages/index';
 
 const Gallery: React.FC<IndexProps> = ({ images }) => {
   // How many colums
-  const columsAmount = 3;
+  const columsAmount = 4;
   // How many images
   const imgLen = images.length;
   // Images per colum
   const imgPerColum = Math.ceil(imgLen / columsAmount);
   console.log(imgPerColum);
 
-  let collArrays: any[] = [];
+  let collArrays = [];
   // Create an array for each column
   for (let col = 0; col < imgPerColum + 1; col++) {
     collArrays.push(
