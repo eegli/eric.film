@@ -20,7 +20,7 @@ export const ArrowDownContainer = styled.div`
   opacity: 0.3;
   position: absolute;
   bottom: 2rem;
-  left: 47%;
+  left: 50%;
   width: 2rem;
   height: 2rem;
   display: flex;
@@ -28,8 +28,8 @@ export const ArrowDownContainer = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 1rem;
-  background-color: ${({ theme }) => theme.baseTextLightWhite};
+  background-color: ${({ theme }) => theme.textColor};
   & svg {
-    color: ${({ theme }) => theme.baseBgChromeGrey};
+    color: ${({ theme }) => theme.baseBg};
   }
 `;

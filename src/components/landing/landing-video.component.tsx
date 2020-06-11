@@ -6,13 +6,14 @@ import {
 } from './landing-video.styles';
 import { FaAngleDown } from 'react-icons/fa';
 
-type Props = {
-  contentRef: React.RefObject<HTMLDivElement>;
-};
-
-const LandingVideo: React.FC<Props> = ({ contentRef }) => {
-  const scrollToRef = (ref: React.RefObject<HTMLDivElement>): void => {
-    window.scrollTo(0, ref.current.offsetTop);
+const LandingVideo: React.FC<{}> = () => {
+  // This works because the landing video page is 100vh
+  const scrollToContent = (): void => {
+    window.scrollBy({
+      top: window.innerHeight,
+      left: 0,
+      behavior: 'smooth',
+    });
   };
 
   return (
@@ -20,7 +21,7 @@ const LandingVideo: React.FC<Props> = ({ contentRef }) => {
       <StyledVideo autoPlay loop muted playsInline>
         <source src='/static/vid/home_teaser.mp4' type='video/mp4' />
       </StyledVideo>
-      <ArrowDownContainer onClick={() => scrollToRef(contentRef)}>
+      <ArrowDownContainer onClick={scrollToContent}>
         <FaAngleDown />
       </ArrowDownContainer>
     </LandingVideoContainer>

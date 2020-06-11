@@ -1,24 +1,26 @@
-export const darkTheme = {
-  // Base bg color
-  baseBgChromeGrey: '#323639',
+export const theme = {
+  // Base bg color, chrome grey
+  baseBg_: '#323639',
+  baseBg: '#262626',
+  baseBgraised: '#313131',
 
-  // Text shadow color
+  // Text shadow color, pink
   textShadowColor: '#feb8ce',
 
   // Light grey, unused
-  timberwolf: '#daddd8',
+  textLinkColor: '#daddd8',
 
-  // Sand, unused
-  isabelline: '#ecebe4',
+  // // Sand, unused
+  // isabelline: '#ecebe4',
 
   // Text color on base bg
-  baseTextLightWhite: '#eef0f2',
+  textColor: '#eef0f2',
 
   // Scrollbar
   scrollbarDark: '#8a8a8a',
 };
 
-type DarkTheme = typeof darkTheme;
+export type DarkTheme = typeof theme;
 
 declare module 'styled-components' {
   interface DefaultTheme extends DarkTheme {}

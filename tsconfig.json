@@ -6,10 +6,11 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": ["src/components/*"],
-      "@/shared/*": ["src/components/shared/*"]
+      "@/shared/*": ["src/components/shared/*"],
+      "@/styles/*": ["src/styles/*"]
     },
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,

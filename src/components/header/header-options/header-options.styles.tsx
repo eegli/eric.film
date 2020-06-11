@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { DarkTheme } from '@/styles/theme';
 
 type Props = {
   isMobile: boolean;
 };
 
-const mobileColor = ({ theme }) => theme.baseBgChromeGrey;
-const desktopColor = ({ theme }) => theme.baseTextLightWhite;
+const mobileColor = ({ theme }: { theme: DarkTheme }) => theme.baseBg;
+const desktopColor = ({ theme }: { theme: DarkTheme }) => theme.textColor;
 
 export const StyledLinkText = styled.a<Props>`
   width: 100%;
