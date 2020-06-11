@@ -1,6 +1,8 @@
 export const darkTheme = {
   // Base bg color, chrome grey
-  baseBg: '#323639',
+  baseBg_: '#323639',
+  baseBg: '#262626',
+  baseBgraised: '#313131',
 
   // Text shadow color, pink
   textShadowColor: '#feb8ce',
