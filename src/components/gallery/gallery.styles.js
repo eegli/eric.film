@@ -17,13 +17,11 @@ export const ImageCol = styled.li`
   -ms-flex: 25%; /* IE10 */
   flex: 25%;
   list-style-type: none;
-  max-width: 25%;
   padding: 0 0.2rem;
   @media screen and (max-width: 800px) {
     & {
       -ms-flex: 50%;
       flex: 50%;
-      max-width: 50%;
     }
   }
   @media screen and (max-width: 600px) {

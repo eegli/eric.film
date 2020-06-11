@@ -15,7 +15,7 @@ const Gallery: React.FC<IndexProps> = ({ images }) => {
 
   let collArrays = [];
   // Create an array for each column
-  for (let col = 0; col < imgPerColum + 1; col++) {
+  for (let col = 0; col < imgPerColum; col++) {
     collArrays.push(
       images.slice(imgPerColum * col, imgPerColum * col + imgPerColum)
     );
