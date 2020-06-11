@@ -3,6 +3,9 @@ import { GalleryContainer, Img, ImageRow, ImageCol } from './gallery.styles';
 import { IndexProps } from '../../pages/index';
 import ProgressiveImage from 'react-progressive-graceful-image';
 
+// The progressive image library needs a html element
+import { Spinner } from '@/components/custom-spinner/custom-spinner.styles';
+
 const Gallery: React.FC<IndexProps> = ({ images }) => {
   if (!images) {
     return <h1>Oh no! There was an error displaying images</h1>;
@@ -23,23 +26,29 @@ const Gallery: React.FC<IndexProps> = ({ images }) => {
   }
 
   return (
-    <GalleryContainer>
-      <ImageRow>
-        {collArrays.map(imgCol => (
-          <ImageCol key={Math.random()}>
-            {imgCol.map(img => (
-              <div key={img.url}>
-                <ProgressiveImage
-                  src={img.url}
-                  placeholder='/static/placeholder.png'>
-                  {(src: string) => <Img src={src} alt='portfolio-image' />}
-                </ProgressiveImage>
-              </div>
-            ))}
-          </ImageCol>
-        ))}
-      </ImageRow>
-    </GalleryContainer>
+    <>
+      <GalleryContainer>
+        <ImageRow>
+          {collArrays.map(imgCol => (
+            <ImageCol key={Math.random()}>
+              {imgCol.map(img => (
+                <div key={img.url}>
+                  <ProgressiveImage src={img.url} placeholder=''>
+                    {(src: string, loading: boolean) => {
+                      return loading ? (
+                        <Spinner />
+                      ) : (
+                        <Img src={src} alt='portfolio-image' />
+                      );
+                    }}
+                  </ProgressiveImage>
+                </div>
+              ))}
+            </ImageCol>
+          ))}
+        </ImageRow>
+      </GalleryContainer>
+    </>
   );
 };
 
