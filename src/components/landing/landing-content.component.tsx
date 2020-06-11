@@ -3,13 +3,10 @@ import { DescriptionContainer, Sh1, Sh2, Sp } from '@/shared/headings.styles';
 import { LandingContentContainer } from './landing-content.styles';
 import Gallery from '@/components/gallery/gallery.component';
 import CustomLink from '@/components/custom-link/custom-link.component';
-
-type Props = {
-  images?: string[];
-};
+import { IndexProps } from '../../pages/index';
 
 const LandingContent = React.forwardRef(
-  (props: Props, ref?: React.RefObject<HTMLDivElement>) => {
+  (props: IndexProps, ref?: React.RefObject<HTMLDivElement>) => {
     return (
       <LandingContentContainer ref={ref}>
         <Sh1 landing>| eric.egli |</Sh1>
@@ -20,6 +17,7 @@ const LandingContent = React.forwardRef(
           <Sh2>frontend development</Sh2>
         </DescriptionContainer>
         <CustomLink href='/about'>more</CustomLink>
+        <Gallery images={props.images} />
       </LandingContentContainer>
     );
   }

@@ -7,9 +7,9 @@ import LandingVideo from '../components/landing/landing-video.component';
 
 import LandingContent from '../components/landing/landing-content.component';
 
-interface IndexProps {
-  images: string[];
-}
+export type IndexProps = {
+  images: [{ url: string }];
+};
 
 /* 
 
@@ -19,6 +19,7 @@ interface IndexProps {
 const IndexPage: React.FC<IndexProps> = ({ images }) => {
   // Create ref to link from video to content
   const contentRef = useRef<HTMLDivElement | null>(null);
+  console.log(images);
 
   return (
     <React.Fragment>
