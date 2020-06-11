@@ -3,13 +3,15 @@ import { GalleryContainer, Img, ImageRow, ImageCol } from './gallery.styles';
 import { IndexProps } from '../../pages/index';
 
 const Gallery: React.FC<IndexProps> = ({ images }) => {
+  if (!images) {
+    return <h1>Oh no! There was an error displaying images</h1>;
+  }
   // How many colums
   const columsAmount = 4;
   // How many images
   const imgLen = images.length;
   // Images per colum
   const imgPerColum = Math.ceil(imgLen / columsAmount);
-  console.log(imgPerColum);
 
   let collArrays = [];
   // Create an array for each column
@@ -18,8 +20,6 @@ const Gallery: React.FC<IndexProps> = ({ images }) => {
       images.slice(imgPerColum * col, imgPerColum * col + imgPerColum)
     );
   }
-
-  console.log(collArrays);
 
   return (
     <GalleryContainer>

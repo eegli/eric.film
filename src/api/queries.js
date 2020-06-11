@@ -24,19 +24,20 @@ export const SINGLE_BLOGPOST = slug =>
   `;
 
 export const IMGS_HOME = `
-  query IMGS_HOME {
-    imgCollections {
-      id
-    }
-    imgCollectionsConnection {
-      edges {
-        node {
-          collection {
-            url
-          }
+query IMGS_HOME {
+  imgCollections(where: {id: "ckb2drirc0jly015897lllh3j"}) {
+    id
+  }
+  imgCollectionsConnection {
+    edges {
+      node {
+        collection {
+          url
         }
       }
     }
   }
+}
+
   
   `;

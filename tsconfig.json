@@ -9,7 +9,7 @@
       "@/shared/*": ["src/components/shared/*"]
     },
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,

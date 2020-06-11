@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { GetStaticProps } from 'next';
 import { request } from '../api/graphql';
 import { IMGS_HOME } from '../api/queries';
@@ -7,8 +7,12 @@ import LandingVideo from '../components/landing/landing-video.component';
 
 import LandingContent from '../components/landing/landing-content.component';
 
+type ImageLink = {
+  url: string;
+};
+
 export type IndexProps = {
-  images: [{ url: string }];
+  images: ImageLink[] | undefined;
 };
 
 /* 
@@ -18,23 +22,25 @@ export type IndexProps = {
 */
 const IndexPage: React.FC<IndexProps> = ({ images }) => {
   // Create ref to link from video to content
-  const contentRef = useRef<HTMLDivElement | null>(null);
+
   console.log(images);
 
   return (
     <React.Fragment>
-      <LandingVideo contentRef={contentRef} />
-      <LandingContent ref={contentRef} images={images} />
+      <LandingVideo />
+      <LandingContent images={images} />
     </React.Fragment>
   );
 };
 
 export const getStaticProps: GetStaticProps = async context => {
-  const images = await request(IMGS_HOME);
+  const imagesRaw = await request(IMGS_HOME);
+  // Stripe off actual info
+  const images = imagesRaw.imgCollectionsConnection.edges[0].node.collection;
 
   return {
     props: {
-      images: images.imgCollectionsConnection.edges[0].node.collection,
+      images,
     },
   };
 };
