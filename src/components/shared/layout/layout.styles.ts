@@ -6,4 +6,5 @@ export const LayoutContainerStyle = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 1rem;
 `;
