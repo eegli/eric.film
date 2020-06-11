@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import { ThemeProvider } from 'styled-components';
-import { darkTheme } from '../styles/theme';
+import { theme } from '../styles/theme';
 import { AppProps } from 'next/app';
 
 import { browserTest } from '../utils/browser';
@@ -47,7 +47,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           />
         </Head>
         <main>
-          <ThemeProvider theme={darkTheme}>
+          <ThemeProvider theme={theme}>
             <Global />
             <Header />
             <Component {...pageProps} />

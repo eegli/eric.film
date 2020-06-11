@@ -1,4 +1,4 @@
-export const darkTheme = {
+export const theme = {
   // Base bg color, chrome grey
   baseBg_: '#323639',
   baseBg: '#262626',
@@ -20,7 +20,7 @@ export const darkTheme = {
   scrollbarDark: '#8a8a8a',
 };
 
-type DarkTheme = typeof darkTheme;
+export type DarkTheme = typeof theme;
 
 declare module 'styled-components' {
   interface DefaultTheme extends DarkTheme {}
