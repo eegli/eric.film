@@ -47,8 +47,8 @@ const SelectionCards: React.FC<Props> = ({ blogOrPortfolio }) => {
           <CardContainer onClick={() => setBlogCat(Categories.BLOG_ALL)}>
             {Categories.BLOG_ALL}
           </CardContainer>
-          <CardContainer onClick={() => setBlogCat(Categories.BLOG_DEV)}>
-            {Categories.BLOG_DEV}
+          <CardContainer onClick={() => setBlogCat(Categories.BLOG_TECH)}>
+            {Categories.BLOG_TECH}
           </CardContainer>
           <CardContainer onClick={() => setBlogCat(Categories.BLOG_VOTW)}>
             {Categories.BLOG_VOTW}

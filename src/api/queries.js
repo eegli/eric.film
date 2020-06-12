@@ -1,11 +1,11 @@
 export const ALL_BLOGPOSTS = `
-query ALL_BLOGPOSTS {
-  blogposts {
-    id
-    content
-    excerpt
-    title
-    slug
+  query ALL_BLOGPOSTS {
+    blogposts {
+      id
+      excerpt
+      slug
+      title
+      type
   }
 }
 

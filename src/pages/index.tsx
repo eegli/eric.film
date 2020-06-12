@@ -1,5 +1,5 @@
 import React from 'react';
-import { GetStaticProps } from 'next';
+import { GetStaticProps, GetServerSideProps } from 'next';
 import { request } from '../api/graphql';
 import { IMGS_HOME } from '../api/queries';
 
@@ -21,10 +21,6 @@ export type IndexProps = {
 
 */
 const IndexPage: React.FC<IndexProps> = ({ images }) => {
-  // Create ref to link from video to content
-
-  console.log(images);
-
   return (
     <React.Fragment>
       <LandingVideo />
@@ -33,7 +29,8 @@ const IndexPage: React.FC<IndexProps> = ({ images }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async context => {
+// TODO Fix getStaticProps for Safari
+export const getServerSideProps: GetServerSideProps = async context => {
   const imagesRaw = await request(IMGS_HOME);
   // Stripe off actual info
   const images = imagesRaw.imgCollectionsConnection.edges[0].node.collection;

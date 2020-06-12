@@ -1,5 +1,7 @@
 import React from 'react';
+import BlogCategory from './card-categories/blog-category.component';
 
+// Same enums as in GraphCMS
 export enum Categories {
   PORTFOLIO_STILL = 'still',
   PORTFOLIO_MOVING = 'moving',
@@ -7,7 +9,7 @@ export enum Categories {
   PORTFOLIO_DEV = 'dev',
   // blog categories including "DEV"
   BLOG_ALL = 'all',
-  BLOG_DEV = 'dev',
+  BLOG_TECH = 'tech',
   BLOG_VOTW = 'votw',
   BLOG_VARIA = 'varia',
 }
@@ -28,15 +30,13 @@ const IndividualCard: React.FC<Props> = ({ category }) => {
       return <div>dev only</div>;
 
     case Categories.BLOG_ALL:
-      return <div>all</div>;
-    case Categories.BLOG_DEV:
-      return <div>still only</div>;
+      return <BlogCategory filter={Categories.BLOG_ALL} />;
+    case Categories.BLOG_TECH:
+      return <BlogCategory filter={Categories.BLOG_TECH} />;
     case Categories.BLOG_VOTW:
-      return <div>moving only</div>;
-    case Categories.BLOG_PHOTO:
-      return <div>dev only</div>;
+      return <BlogCategory filter={Categories.BLOG_VOTW} />;
     case Categories.BLOG_VARIA:
-      return <div>client only</div>;
+      return <BlogCategory filter={Categories.BLOG_VARIA} />;
     default:
       return <div>hi</div>;
   }

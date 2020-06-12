@@ -12,17 +12,18 @@ const IndexPage = ({ posts }) => {
     <LayouContainer>
       <Sh1>blog</Sh1>
       <SelectionCards blogOrPortfolio='blog' />
-      {posts.map(p => {
+      {/* {posts.map(p => {
         return (
           <MdPreview
             key={p.id}
             id={p.id}
             title={p.title}
+            type={p.type}
             excerpt={p.excerpt}
             slug={p.slug}
           />
         );
-      })}
+      })} */}
     </LayouContainer>
   );
 };
