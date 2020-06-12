@@ -1,5 +1,5 @@
 import React from 'react';
-import MdContent from '../../components/markdown/md-content.component';
+import BlogContent from '../../components/blog/blog-content.component';
 
 import { SINGLE_BLOGPOST } from '../../api/queries';
 import { request } from '../../api/graphql';
@@ -10,7 +10,7 @@ const IndexPage = ({ post }) => {
   }
   return (
     <div>
-      <MdContent
+      <BlogContent
         title={post.title}
         excerpt={post.excerpt}
         content={post.content}

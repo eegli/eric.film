@@ -14,6 +14,7 @@ export const Global = createGlobalStyle`
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
+    min-width: 320px;
   }
 
   /* PROGRESS BAR */

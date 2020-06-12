@@ -1,7 +1,6 @@
 import React from 'react';
 import { request } from '../../api/graphql';
 import { ALL_BLOGPOSTS } from '../../api/queries';
-import MdPreview from '../../components/markdown/md-preview.component';
 import CategorySwitch from '@/components/categories/category-switch.component';
 
 import { Sh1 } from '@/shared/headings.styles';
@@ -12,18 +11,6 @@ const IndexPage = ({ posts }) => {
     <LayouContainer>
       <Sh1>blog</Sh1>
       <CategorySwitch blogOrPortfolio='blog' />
-      {/* {posts.map(p => {
-        return (
-          <MdPreview
-            key={p.id}
-            id={p.id}
-            title={p.title}
-            type={p.type}
-            excerpt={p.excerpt}
-            slug={p.slug}
-          />
-        );
-      })} */}
     </LayouContainer>
   );
 };

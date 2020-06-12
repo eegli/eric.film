@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const BlogPostContainer = styled.article`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0 3rem;
+  max-width: 360px;
+  padding: 1rem;
 `;
 
 export const BlogPostTitle = styled.h1`

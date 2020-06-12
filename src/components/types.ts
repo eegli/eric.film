@@ -34,5 +34,3 @@ export interface BlogPost {
   title: string;
   type: BlogCategories;
 }
-
-export type BlogPosts = BlogPost[] | undefined;
