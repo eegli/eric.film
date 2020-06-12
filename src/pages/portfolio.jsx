@@ -7,7 +7,7 @@ const PortfolioPage = () => {
   return (
     <LayoutContainer>
       <Sh1>portfolio</Sh1>
-      <SelectionCards />
+      <SelectionCards blogOrPortfolio='portfolio' />
     </LayoutContainer>
   );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import { request } from '../../api/graphql';
 import { ALL_BLOGPOSTS } from '../../api/queries';
 import MdPreview from '../../components/markdown/md-preview.component';
+import SelectionCards from '@/components/selection-cards/selection-cards.component';
 
 import { Sh1 } from '@/shared/headings.styles';
 import LayouContainer from '@/shared/layout/layout.container';
@@ -10,6 +11,7 @@ const IndexPage = ({ posts }) => {
   return (
     <LayouContainer>
       <Sh1>blog</Sh1>
+      <SelectionCards blogOrPortfolio='blog' />
       {posts.map(p => {
         return (
           <MdPreview
