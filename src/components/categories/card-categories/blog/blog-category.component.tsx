@@ -8,7 +8,7 @@ import CustomSpinner from '@/components/custom-spinner/custom-spinner.component'
 
 import { BlogCategoryContainer } from './blog-category.styles';
 
-import { BlogPost, Category } from '@/components/types';
+import { BlogPost, Category, BlogPosts } from '@/components/types';
 
 type Props = {
   filter?: Category;
@@ -16,6 +16,7 @@ type Props = {
 
 const BlogCategory: React.FC<Props> = ({ filter }) => {
   const { data, error } = useSWR(ALL_BLOGPOSTS, query => request(api, query));
+
   // Loading case
   if (!data && !error) {
     return (
@@ -25,29 +26,17 @@ const BlogCategory: React.FC<Props> = ({ filter }) => {
         </BlogCategoryContainer>
       </>
     );
-    // Normal case with filter
-  } else if (filter && data && !error) {
-    const filteredBlogPosts = data.blogposts.filter(
-      (post: BlogPost) => post.type === filter
-    );
+    // Normal case with valid data
+  } else if (data && !error) {
+    let posts: BlogPosts;
+    !filter
+      ? (posts = data.blogposts)
+      : (posts = data.blogposts.filter(
+          (post: BlogPost) => post.type === filter
+        ));
     return (
       <BlogCategoryContainer>
-        {filteredBlogPosts.map((blog: BlogPost) => (
-          <BlogPreview
-            key={blog.id}
-            title={blog.title}
-            excerpt={blog.excerpt}
-            slug={blog.excerpt}
-            type={blog.type}
-          />
-        ))}
-      </BlogCategoryContainer>
-    );
-    // // Normal case without filter
-  } else if (!filter && data && !error) {
-    return (
-      <BlogCategoryContainer>
-        {data.blogposts.map((blog: BlogPost) => (
+        {posts.map((blog: BlogPost) => (
           <BlogPreview
             key={blog.id}
             title={blog.title}
@@ -58,8 +47,10 @@ const BlogCategory: React.FC<Props> = ({ filter }) => {
         ))}
       </BlogCategoryContainer>
     );
-    // General error
-  } else {
+  }
+
+  // General error
+  else {
     return <div>Whops, failed to load posts :(</div>;
   }
 };

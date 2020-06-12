@@ -5,4 +5,5 @@ export const BlogCategoryContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-content: stretch;
 `;
