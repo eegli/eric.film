@@ -4,7 +4,7 @@ import {
   SelectionCardContainer,
 } from './category-switch.styles';
 
-import IndividualCard from './category-column.component';
+import CategoryColumn from './category-column.component';
 
 import {
   BlogCategories,
@@ -44,7 +44,7 @@ const CategorySwitch: React.FC<Props> = ({ blogOrPortfolio }) => {
             {PortfolioCategories.PORTFOLIO_DEV}
           </CardContainer>
         </SelectionCardContainer>
-        <IndividualCard category={portfCat} />
+        <CategoryColumn category={portfCat} />
       </>
     );
   } else if (blogOrPortfolio === 'blog') {
@@ -64,7 +64,7 @@ const CategorySwitch: React.FC<Props> = ({ blogOrPortfolio }) => {
             {BlogCategories.BLOG_VARIA}
           </CardContainer>
         </SelectionCardContainer>
-        <IndividualCard category={blogCat} />
+        <CategoryColumn category={blogCat} />
       </>
     );
   } else {

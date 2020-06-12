@@ -1,5 +1,11 @@
 import React from 'react';
-import BlogCategory from './card-categories/blog-category.component';
+import {
+  DevCategory,
+  BlogCategory,
+  MovingCategory,
+  StillCategory,
+  ClientCategory,
+} from './card-categories/index';
 
 import {
   BlogCategories,
@@ -14,13 +20,13 @@ type Props = {
 const CategoryColumn: React.FC<Props> = ({ category }) => {
   switch (category) {
     case PortfolioCategories.PORTFOLIO_STILL:
-      return <div>still only</div>;
+      return <StillCategory />;
     case PortfolioCategories.PORTFOLIO_MOVING:
-      return <div>moving only</div>;
+      return <MovingCategory />;
     case PortfolioCategories.PORTFOLIO_CLIENTS:
-      return <div>client only</div>;
+      return <ClientCategory />;
     case PortfolioCategories.PORTFOLIO_DEV:
-      return <div>dev only</div>;
+      return <DevCategory />;
 
     case BlogCategories.BLOG_ALL:
       return <BlogCategory />;

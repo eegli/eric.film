@@ -1,8 +1,8 @@
 import React from 'react';
 import useSWR from 'swr';
 import { request } from 'graphql-request';
-import { api } from '../../../api/graphql';
-import { ALL_BLOGPOSTS } from '../../../api/queries';
+import { api } from '../../../../api/graphql';
+import { ALL_BLOGPOSTS } from '../../../../api/queries';
 import BlogPreview from '@/components/blog/blog-preview.component';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 
