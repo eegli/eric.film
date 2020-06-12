@@ -52,7 +52,7 @@ const BlogCategory: React.FC<Props> = ({ filter }) => {
             key={blog.id}
             title={blog.title}
             excerpt={blog.excerpt}
-            slug={blog.excerpt}
+            slug={blog.slug}
             type={blog.type}
           />
         ))}

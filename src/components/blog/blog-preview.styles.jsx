@@ -5,6 +5,9 @@ export const BlogPostContainer = styled.article`
   flex-direction: column;
   max-width: 360px;
   padding: 1rem;
+  margin: 1rem;
+  background-color: ${({ theme }) => theme.baseBgraised};
+  border-radius: 0.5rem;
 `;
 
 export const BlogPostTitle = styled.h1`

@@ -7,6 +7,7 @@ import {
 } from './blog-preview.styles';
 
 const BlogPreview = ({ title, excerpt, slug, type }) => {
+  console.log(slug);
   let trimmedExc =
     excerpt.length > 120 ? excerpt.substring(0, 120).concat('...') : excerpt;
   return (
