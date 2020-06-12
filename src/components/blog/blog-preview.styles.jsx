@@ -8,12 +8,16 @@ export const BlogPostContainer = styled.article`
   margin: 1rem;
   background-color: ${({ theme }) => theme.baseBgraised};
   border-radius: 0.5rem;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const BlogPostTitle = styled.h1`
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
 `;
 
 export const BlogPostExcerpt = styled.h3`
-  font-size: 1.2rem;
+  font-size: 1rem;
 `;
