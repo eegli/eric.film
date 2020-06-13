@@ -6,5 +6,10 @@ export const Simg = styled.img`
 `;
 
 export const Siframe = styled.iframe`
-  width: 500px;
+  max-width: 760px;
+  max-height: 400px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  margin: 1rem;
 `;

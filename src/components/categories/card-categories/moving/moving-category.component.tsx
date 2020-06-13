@@ -1,18 +1,29 @@
 import React from 'react';
+import { MovingCategoryContainer } from './moving-category.styles';
+import { Siframe } from '@/shared/elements.styles';
 
 const MovingCategory: React.FC<{}> = () => {
   return (
-    <>
-      <iframe
+    <MovingCategoryContainer>
+      <Siframe
         src='https://www.youtube.com/embed/HWhZJu5RT7Q'
-        frameBorder='0'
-        height='100%'
-        width='100%'
         allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
         allowFullScreen
         name='portfolio youtube video'
       />
-    </>
+      <Siframe
+        src='https://youtube.com/embed/I7OFtjBexjc'
+        allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+        allowFullScreen
+        name='portfolio youtube video'
+      />
+      <Siframe
+        src='https://www.youtube.com/embed/HWhZJu5RT7Q'
+        allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+        allowFullScreen
+        name='portfolio youtube video'
+      />
+    </MovingCategoryContainer>
   );
 };
 
