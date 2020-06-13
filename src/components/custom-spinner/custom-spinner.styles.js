@@ -6,6 +6,7 @@ export const Spinner = styled.svg`
   width: 50px;
   height: 50px;
   align-self: center;
+  z-index: 1;
 
   & .path {
     stroke: ${({ theme }) => theme.textShadowColor};
