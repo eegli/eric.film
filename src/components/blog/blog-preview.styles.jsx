@@ -6,7 +6,7 @@ export const BlogPostContainer = styled.article`
   justify-content: space-between;
   max-width: 360px;
   padding: 1rem;
-  margin: 1rem;
+  margin: 0.5rem 1rem;
   background-color: ${({ theme }) => theme.baseBgraised};
   border-radius: 0.5rem;
   &:hover {

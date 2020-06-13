@@ -2,7 +2,12 @@ import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
-const CodeBlock = ({ value, language }) => {
+type Props = {
+  value: string;
+  language: string;
+};
+
+const CodeBlock: React.FC<Props> = ({ value, language }) => {
   if (!language) language = 'javascript';
   return (
     <SyntaxHighlighter

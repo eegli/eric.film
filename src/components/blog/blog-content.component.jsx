@@ -6,7 +6,7 @@ import {
   BlogPostExcerpt,
   BlogPostContent,
 } from './blog-content.styles';
-import CodeBlock from './blog-codeblock.component';
+import { CodeBlock } from './custom-renders/index';
 
 const BlogContent = ({ title, excerpt, content }) => {
   return (
