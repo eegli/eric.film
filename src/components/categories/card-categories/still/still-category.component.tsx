@@ -10,7 +10,6 @@ import { ImageUrl } from '@/components/types';
 
 const StillCategory = () => {
   const { data, error } = useSWR(IMGS_HOME, query => request(api, query));
-  console.log(data);
   // General error
   if (error) {
     return <div>Whops, failed to load images :(</div>;
