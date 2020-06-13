@@ -3,9 +3,9 @@ import { DescriptionContainer, Sh1, Sh2, Sp } from '@/shared/headings.styles';
 import { LandingContentContainer } from './landing-content.styles';
 import Gallery from '@/components/gallery/gallery.component';
 import CustomLink from '@/components/custom-link/custom-link.component';
-import { IndexProps } from '../../pages/index';
+import { ImageProps } from '@/components/types';
 
-const LandingContent: React.FC<IndexProps> = props => {
+const LandingContent: React.FC<ImageProps> = props => {
   return (
     <LandingContentContainer>
       {props.children}

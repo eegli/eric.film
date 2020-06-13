@@ -1,9 +1,6 @@
 /* 
-
 BLOG CATEGORIES
-
 */
-
 // Same enums as in Graphcms
 export enum BlogCategories {
   BLOG_ALL = 'all',
@@ -21,10 +18,8 @@ export enum PortfolioCategories {
 
 export type Category = BlogCategories | PortfolioCategories;
 
-/* 
- 
+/*
  BLOGPOST SCHEMA
- 
  */
 
 export interface BlogPost {
@@ -36,3 +31,15 @@ export interface BlogPost {
 }
 
 export type BlogPosts = BlogPost[];
+
+/* 
+IMAGES
+*/
+
+export type ImageUrl = {
+  url: string;
+};
+
+export type ImageProps = {
+  images: ImageUrl[];
+};

@@ -2,25 +2,11 @@ import React from 'react';
 import { GetStaticProps, GetServerSideProps } from 'next';
 import { request } from '../api/graphql';
 import { IMGS_HOME } from '../api/queries';
-
 import LandingVideo from '../components/landing/landing-video.component';
-
 import LandingContent from '../components/landing/landing-content.component';
+import { ImageProps } from '@/components/types';
 
-type ImageLink = {
-  url: string;
-};
-
-export type IndexProps = {
-  images: ImageLink[] | undefined;
-};
-
-/* 
-
-// Note that generally, all content is wrapped in the layoutcontainer. This is not true for the index page as well as for the header!
-
-*/
-const IndexPage: React.FC<IndexProps> = ({ images }) => {
+const IndexPage: React.FC<ImageProps> = ({ images }) => {
   return (
     <React.Fragment>
       <LandingVideo />
