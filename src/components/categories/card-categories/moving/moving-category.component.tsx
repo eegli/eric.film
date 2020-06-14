@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { MovingCategoryContainer } from './moving-category.styles';
-import { Siframe } from '@/shared/elements.styles';
+import {
+  MovingCategoryContainer,
+  StyledIframe,
+  IframeWrapper,
+} from './moving-category.styles';
 import Spinner from '@/components/custom-spinner/custom-spinner.component';
 
 const MovingCategory: React.FC = () => {
@@ -12,48 +15,14 @@ const MovingCategory: React.FC = () => {
   return (
     <MovingCategoryContainer>
       {isLoading ? <Spinner /> : null}
-      <Siframe
-        src='https://www.youtube.com/embed/HWhZJu5RT7Q'
-        allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-        allowFullScreen
-        name='portfolio youtube video'
-        onLoad={handleSpinner}
-      />
-      <Siframe
-        src='https://www.youtube.com/embed/HWhZJu5RT7Q'
-        allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-        allowFullScreen
-        name='portfolio youtube video'
-        onLoad={handleSpinner}
-      />
-      <Siframe
-        src='https://www.youtube.com/embed/HWhZJu5RT7Q'
-        allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-        allowFullScreen
-        name='portfolio youtube video'
-        onLoad={handleSpinner}
-      />
-      <Siframe
-        src='https://www.youtube.com/embed/HWhZJu5RT7Q'
-        allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-        allowFullScreen
-        name='portfolio youtube video'
-        onLoad={handleSpinner}
-      />
-      <Siframe
-        src='https://www.youtube.com/embed/HWhZJu5RT7Q'
-        allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-        allowFullScreen
-        name='portfolio youtube video'
-        onLoad={handleSpinner}
-      />
-      <Siframe
-        src='https://www.youtube.com/embed/HWhZJu5RT7Q'
-        allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-        allowFullScreen
-        name='portfolio youtube video'
-        onLoad={handleSpinner}
-      />
+      <IframeWrapper>
+        <StyledIframe
+          src='https://www.youtube.com/embed/HWhZJu5RT7Q'
+          allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+          allowFullScreen
+          onLoad={handleSpinner}
+        />
+      </IframeWrapper>
     </MovingCategoryContainer>
   );
 };
