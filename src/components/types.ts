@@ -12,7 +12,7 @@ export enum BlogCategories {
 export enum PortfolioCategories {
   PORTFOLIO_STILL = 'still',
   PORTFOLIO_MOVING = 'moving',
-  PORTFOLIO_CLIENTS = 'client',
+  PORTFOLIO_CLIENTS = 'clients',
   PORTFOLIO_DEV = 'dev',
 }
 

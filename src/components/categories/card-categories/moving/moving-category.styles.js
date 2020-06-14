@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const MovingCategoryContainer = styled.div`
   width: 80%;
+  margin: 0 auto;
   text-align: center;
 `;
 
@@ -9,7 +10,10 @@ export const IframeWrapper = styled.div`
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
-  max-width: 560px;
+  margin-bottom: 1rem;
+  &:first-child {
+    margin-top: 1rem;
+  }
 `;
 
 export const StyledIframe = styled.iframe`

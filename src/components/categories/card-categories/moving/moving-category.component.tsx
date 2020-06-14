@@ -23,6 +23,34 @@ const MovingCategory: React.FC = () => {
           onLoad={handleSpinner}
         />
       </IframeWrapper>
+      <IframeWrapper>
+        <StyledIframe
+          src='https://www.youtube.com/embed/HWhZJu5RT7Q'
+          allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+          allowFullScreen
+        />
+      </IframeWrapper>
+      <IframeWrapper>
+        <StyledIframe
+          src='https://www.youtube.com/embed/HWhZJu5RT7Q'
+          allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+          allowFullScreen
+        />
+      </IframeWrapper>
+      <IframeWrapper>
+        <StyledIframe
+          src='https://www.youtube.com/embed/HWhZJu5RT7Q'
+          allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+          allowFullScreen
+        />
+      </IframeWrapper>
+      <IframeWrapper>
+        <StyledIframe
+          src='https://www.youtube.com/embed/HWhZJu5RT7Q'
+          allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+          allowFullScreen
+        />
+      </IframeWrapper>
     </MovingCategoryContainer>
   );
 };
