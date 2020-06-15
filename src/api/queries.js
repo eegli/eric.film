@@ -1,3 +1,5 @@
+import gql from 'graphql-tag';
+
 export const ALL_BLOGPOSTS = `
   query ALL_BLOGPOSTS {
     blogposts {
@@ -8,8 +10,29 @@ export const ALL_BLOGPOSTS = `
       type
   }
 }
-
 `;
+
+export const ALL_POSTS_PREVIEW = gql`
+  query MyQuery($first: Int!, $skip: Int!) {
+    blogposts(first: $first, skip: $skip) {
+      id
+      excerpt
+      slug
+      title
+      type
+    }
+    blogpostsConnection {
+      aggregate {
+        count
+      }
+    }
+  }
+`;
+
+export const allPostsPreviewQueryVars = {
+  skip: 0,
+  first: 3,
+};
 
 export const SINGLE_BLOGPOST = slug =>
   `query SINGLE_BLOGPOST {
