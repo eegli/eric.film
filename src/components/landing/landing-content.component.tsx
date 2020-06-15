@@ -22,7 +22,7 @@ const LandingContent: React.FC = ({ children }) => {
 
   if (data) {
     const images = data.imgCollectionsConnection.edges[0].node.collection;
-    console.log(images);
+
     return (
       <LandingContentContainer>
         {children}
