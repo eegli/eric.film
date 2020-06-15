@@ -1,6 +1,6 @@
 import React from 'react';
 import { request } from '../../api/graphql';
-import { ALL_POSTS_PREVIEW, allPostsPreviewQueryVars } from '../../api/queries';
+import { ALL_POSTS_PREVIEW, allPostsPreviewVars } from '../../api/queries';
 import CategorySwitch from '@/components/categories/category-switch.component';
 import { initializeApollo } from '../../lib/apolloClient';
 
@@ -21,7 +21,7 @@ export async function getServerSideProps() {
 
   await apolloClient.query({
     query: ALL_POSTS_PREVIEW,
-    variables: allPostsPreviewQueryVars,
+    variables: allPostsPreviewVars,
   });
 
   return {

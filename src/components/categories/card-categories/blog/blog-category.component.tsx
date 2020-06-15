@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   ALL_POSTS_PREVIEW,
-  allPostsPreviewQueryVars,
+  allPostsPreviewVars,
 } from '../../../../api/queries';
 import BlogPreview from '@/components/blog/blog-preview.component';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
@@ -10,19 +10,24 @@ import { NetworkStatus } from 'apollo-client';
 
 import { BlogCategoryContainer, LoadMoreButton } from './blog-category.styles';
 
-import { BlogPost, Category, BlogPosts } from '@/components/types';
+import {
+  BlogPost,
+  BlogCategories,
+  BlogPostData,
+  BlogQueryVars,
+} from '@/components/types';
 
-const BlogCategory = ({ filter }) => {
-  const { loading, error, data, fetchMore, networkStatus } = useQuery(
-    ALL_POSTS_PREVIEW,
-    {
-      variables: allPostsPreviewQueryVars,
-      // Setting this value to true will make the component rerender when
-      // the "networkStatus" changes, so we are able to know if it is fetching
-      // more data
-      notifyOnNetworkStatusChange: true,
-    }
-  );
+const BlogCategory: React.FC<BlogCategories> = ({ filter }) => {
+  const { loading, error, data, fetchMore, networkStatus } = useQuery<
+    BlogPostData,
+    BlogQueryVars
+  >(ALL_POSTS_PREVIEW, {
+    variables: allPostsPreviewVars,
+    // Setting this value to true will make the component rerender when
+    // the "networkStatus" changes, so we are able to know if it is fetching
+    // more data
+    notifyOnNetworkStatusChange: true,
+  });
 
   const loadingMorePosts = networkStatus === NetworkStatus.fetchMore;
 
@@ -52,17 +57,16 @@ const BlogCategory = ({ filter }) => {
         <CustomSpinner />
       </div>
     );
-  const { blogposts, blogpostsConnection } = data;
-  const areMorePosts = blogposts.length < blogpostsConnection.aggregate.count;
 
   let posts;
   !filter
     ? (posts = blogposts)
-    : (posts = blogposts.filter(post => post.type === filter));
+    : (posts = blogposts.filter((post: BlogPost) => post.type === filter));
+  console.log(data);
   return (
     <>
       <BlogCategoryContainer>
-        {posts.map(blog => (
+        {posts.map((blog: BlogPost) => (
           <BlogPreview
             key={blog.id}
             id={blog.id}

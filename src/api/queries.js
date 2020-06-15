@@ -19,7 +19,7 @@ export const ALL_POSTS_PREVIEW = gql`
     }
   }
 `;
-export const allPostsPreviewQueryVars = {
+export const allPostsPreviewVars = {
   skip: 0,
   first: 3,
 };

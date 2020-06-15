@@ -31,7 +31,22 @@ export interface BlogPost {
   previewImage: { url: string };
 }
 
-export type BlogPosts = BlogPost[];
+export interface BlogPostPagination {
+  aggregate: {
+    count: number;
+    __typename?: string;
+  };
+}
+
+export interface BlogPostData {
+  blogposts: BlogPost[];
+  blogpostsConnection: BlogPostPagination;
+}
+
+export interface BlogQueryVars {
+  first: number;
+  skip: number;
+}
 
 /* 
 IMAGES
