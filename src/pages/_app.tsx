@@ -10,9 +10,6 @@ import { AppProps } from 'next/app';
 
 import { browserTest } from '../utils/browser';
 
-import { useApollo } from '../lib/apolloClient';
-import { ApolloProvider } from '@apollo/react-hooks';
-
 // Pretty loading state on top
 Router.events.on('routeChangeStart', url => {
   NProgress.start();
@@ -33,7 +30,6 @@ const App = ({ Component, pageProps }: AppProps) => {
   // }, []);
 
   if (canView) {
-    const apolloClient = useApollo(pageProps.initialApolloState);
     return (
       <>
         <Head>
@@ -50,13 +46,11 @@ const App = ({ Component, pageProps }: AppProps) => {
           />
         </Head>
         <main>
-          <ApolloProvider client={apolloClient}>
-            <ThemeProvider theme={theme}>
-              <Global />
-              <Header />
-              <Component {...pageProps} />
-            </ThemeProvider>
-          </ApolloProvider>
+          <ThemeProvider theme={theme}>
+            <Global />
+            <Header />
+            <Component {...pageProps} />
+          </ThemeProvider>
         </main>
       </>
     );
