@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   CardContainer,
   SelectionCardContainer,
@@ -6,65 +6,105 @@ import {
 
 import CategoryColumn from './category-column.component';
 
-import {
-  BlogCategories,
-  PortfolioCategories,
-  Category,
-} from '@/components/types';
+import { useRouter } from 'next/router';
 
-type Props = {
+import { BlogCategories, PortfolioCategories } from '@/components/types';
+
+export type Props = {
   blogOrPortfolio: 'blog' | 'portfolio';
 };
 
 const CategorySwitch: React.FC<Props> = ({ blogOrPortfolio }) => {
-  // Set the default categories to be shown
-  const [portfCat, setPortfCat] = useState<Category>(
-    PortfolioCategories.PORTFOLIO_STILL
-  );
-  const [blogCat, setBlogCat] = useState<Category>(BlogCategories.BLOG_ALL);
+  const router = useRouter();
 
   if (blogOrPortfolio === 'portfolio') {
     return (
       <>
         <SelectionCardContainer>
           <CardContainer
-            onClick={() => setPortfCat(PortfolioCategories.PORTFOLIO_STILL)}>
+            onClick={() =>
+              router.push(
+                `/portfolio?cat=${PortfolioCategories.PORTFOLIO_STILL}`,
+                undefined,
+                { shallow: true }
+              )
+            }>
             {PortfolioCategories.PORTFOLIO_STILL}
           </CardContainer>
           <CardContainer
-            onClick={() => setPortfCat(PortfolioCategories.PORTFOLIO_MOVING)}>
+            onClick={() =>
+              router.push(
+                `/portfolio?cat=${PortfolioCategories.PORTFOLIO_MOVING}`,
+                undefined,
+                { shallow: true }
+              )
+            }>
             {PortfolioCategories.PORTFOLIO_MOVING}
           </CardContainer>
           <CardContainer
-            onClick={() => setPortfCat(PortfolioCategories.PORTFOLIO_CLIENTS)}>
+            onClick={() =>
+              router.push(
+                `/portfolio?cat=${PortfolioCategories.PORTFOLIO_CLIENTS}`,
+                undefined,
+                { shallow: true }
+              )
+            }>
             {PortfolioCategories.PORTFOLIO_CLIENTS}
           </CardContainer>
           <CardContainer
-            onClick={() => setPortfCat(PortfolioCategories.PORTFOLIO_DEV)}>
+            onClick={() =>
+              router.push(
+                `/portfolio?cat=${PortfolioCategories.PORTFOLIO_DEV}`,
+                undefined,
+                {
+                  shallow: true,
+                }
+              )
+            }>
             {PortfolioCategories.PORTFOLIO_DEV}
           </CardContainer>
         </SelectionCardContainer>
-        <CategoryColumn category={portfCat} />
+        <CategoryColumn />
       </>
     );
   } else if (blogOrPortfolio === 'blog') {
     return (
       <>
         <SelectionCardContainer>
-          <CardContainer onClick={() => setBlogCat(BlogCategories.BLOG_ALL)}>
+          <CardContainer
+            onClick={() =>
+              router.push(`/blog?cat=${BlogCategories.BLOG_ALL}`, undefined, {
+                shallow: true,
+              })
+            }>
             {BlogCategories.BLOG_ALL}
           </CardContainer>
-          <CardContainer onClick={() => setBlogCat(BlogCategories.BLOG_TECH)}>
+          <CardContainer
+            onClick={() =>
+              router.push(`/blog?cat=${BlogCategories.BLOG_TECH}`, undefined, {
+                shallow: true,
+              })
+            }>
             {BlogCategories.BLOG_TECH}
           </CardContainer>
-          <CardContainer onClick={() => setBlogCat(BlogCategories.BLOG_VOTW)}>
+          <CardContainer
+            onClick={() =>
+              router.push(`/blog?cat=${BlogCategories.BLOG_VOTW}`, undefined, {
+                shallow: true,
+              })
+            }>
             {BlogCategories.BLOG_VOTW}
           </CardContainer>
-          <CardContainer onClick={() => setBlogCat(BlogCategories.BLOG_VARIA)}>
+          <CardContainer
+            onClick={() =>
+              router.push(`/blog?cat=${BlogCategories.BLOG_VARIA}`, undefined, {
+                shallow: true,
+              })
+            }>
             {BlogCategories.BLOG_VARIA}
           </CardContainer>
         </SelectionCardContainer>
-        <CategoryColumn category={blogCat} />
+        <CategoryColumn />
       </>
     );
   } else {

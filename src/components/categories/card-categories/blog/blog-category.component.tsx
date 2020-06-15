@@ -1,5 +1,6 @@
 import React from 'react';
 import useSWR from 'swr';
+import { useRouter } from 'next/router';
 import { request } from 'graphql-request';
 import { api } from '../../../../api/graphql';
 import { ALL_BLOGPOSTS_PREVIEW } from '../../../../api/queries';
@@ -18,7 +19,8 @@ const BlogCategory: React.FC<Props> = ({ filter }) => {
   const { data, error } = useSWR<BlogPostData>(ALL_BLOGPOSTS_PREVIEW, query =>
     request(api, query)
   );
-  console.log(data);
+  const router = useRouter();
+  console.log(router);
 
   // Loading case
   if (!data && !error) {
