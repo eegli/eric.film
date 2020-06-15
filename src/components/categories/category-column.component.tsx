@@ -29,7 +29,7 @@ const CategoryColumn: React.FC<Props> = ({ category }) => {
       return <DevCategory />;
 
     case BlogCategories.BLOG_ALL:
-      return <BlogCategory />;
+      return <BlogCategory filter={null} />;
     case BlogCategories.BLOG_TECH:
       return <BlogCategory filter={BlogCategories.BLOG_TECH} />;
     case BlogCategories.BLOG_VOTW:
