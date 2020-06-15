@@ -1,4 +1,3 @@
-import React from 'react';
 import { GetStaticProps, GetServerSideProps } from 'next';
 import { request } from '../api/graphql';
 import { IMGS_HOME } from '../api/queries';
@@ -8,10 +7,10 @@ import { ImageProps } from '@/components/types';
 
 const IndexPage: React.FC<ImageProps> = ({ images }) => {
   return (
-    <React.Fragment>
+    <>
       <LandingVideo />
       <LandingContent images={images} />
-    </React.Fragment>
+    </>
   );
 };
 

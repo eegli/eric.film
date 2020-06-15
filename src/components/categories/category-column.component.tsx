@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import {
   DevCategory,
   BlogCategory,
@@ -13,7 +12,6 @@ import { BlogCategories, PortfolioCategories } from '@/components/types';
 
 const CategoryColumn: React.FC = () => {
   const router = useRouter();
-  console.log(router);
   switch (router.query.cat) {
     case PortfolioCategories.PORTFOLIO_STILL:
       return <StillCategory />;
@@ -33,7 +31,12 @@ const CategoryColumn: React.FC = () => {
     case BlogCategories.BLOG_VARIA:
       return <BlogCategory filter={BlogCategories.BLOG_VARIA} />;
     default:
-      return <div></div>;
+      return (
+        <div style={{ textAlign: 'center', padding: '1rem' }}>
+          what are you trying to do, there is no such category... 🤨
+          <br /> click on a category above to show some content! 🤩
+        </div>
+      );
   }
 };
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import useSWR from 'swr';
 import { useRouter } from 'next/router';
 import { request } from 'graphql-request';

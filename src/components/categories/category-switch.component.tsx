@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   CardContainer,
   SelectionCardContainer,
@@ -13,6 +12,12 @@ import { BlogCategories, PortfolioCategories } from '@/components/types';
 export type Props = {
   blogOrPortfolio: 'blog' | 'portfolio';
 };
+
+/* 
+
+This page handles the routing for all the blog and portfolio categories
+
+*/
 
 const CategorySwitch: React.FC<Props> = ({ blogOrPortfolio }) => {
   const router = useRouter();
