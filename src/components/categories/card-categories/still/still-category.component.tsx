@@ -5,11 +5,11 @@ import { request } from 'graphql-request';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 // TODO correct imgs
 import { IMGS_HOME } from '../../../../api/queries';
-import { api } from '../../../../api/graphql';
+import { fetcher } from '@/api/graphql';
 import { ImageUrl } from '@/components/types';
 
 const StillCategory = () => {
-  const { data, error } = useSWR(IMGS_HOME, query => request(api, query));
+  const { data, error } = useSWR(IMGS_HOME, fetcher);
   // General error
   if (error) {
     return <div>Whops, failed to load images :(</div>;

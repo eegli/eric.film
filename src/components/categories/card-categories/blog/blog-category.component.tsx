@@ -1,7 +1,5 @@
 import useSWR, { useSWRPages } from 'swr';
-import { useRouter } from 'next/router';
-import { request } from 'graphql-request';
-import { api } from '../../../../api/graphql';
+import { fetcher } from '@/api/graphql';
 import { ALL_BLOGPOSTS_PREVIEW } from '../../../../api/queries';
 import BlogPreview from '@/components/blog/blog-preview.component';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
@@ -17,9 +15,9 @@ type Props = {
 const BlogCategory: React.FC<Props> = ({ filter }) => {
   const { data, error, isValidating } = useSWR<BlogPostData>(
     ALL_BLOGPOSTS_PREVIEW,
-    query => request(api, query)
+    query => fetcher(query)
   );
-  const router = useRouter();
+  console.log(data);
   console.log(isValidating);
   // Loading case
   if (!data && !error) {
