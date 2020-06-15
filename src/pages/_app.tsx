@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Global } from '../styles/styles';
 import Header from '../components/header/header.component';
 import Head from 'next/head';
