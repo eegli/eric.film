@@ -19,7 +19,6 @@ const BlogCategory: React.FC<Props> = ({ filter }) => {
     request(api, query)
   );
   const router = useRouter();
-  console.log(router);
 
   // Loading case
   if (!data && !error) {
