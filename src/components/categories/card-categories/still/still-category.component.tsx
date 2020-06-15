@@ -1,34 +1,29 @@
 import React from 'react';
 import Gallery from '@/components/gallery/gallery.component';
-import useSWR from 'swr';
-import { request } from 'graphql-request';
+import { ALL_IMGS_HOME } from '@/api/queries';
+import { useQuery } from '@apollo/react-hooks';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 // TODO correct imgs
-import { IMGS_HOME } from '../../../../api/queries';
-import { fetcher } from '@/api/graphql';
-import { ImageUrl } from '@/components/types';
 
 const StillCategory = () => {
-  const { data, error } = useSWR(IMGS_HOME, fetcher);
-  // General error
-  if (error) {
-    return <div>Whops, failed to load images :(</div>;
+  const { loading, error, data } = useQuery(ALL_IMGS_HOME, {
+    notifyOnNetworkStatusChange: true,
+  });
+
+  if (error) return <div>'Error loading images :('</div>;
+  if (loading) {
+    return (
+      <div style={{ textAlign: 'center' }}>
+        <CustomSpinner />
+      </div>
+    );
   }
-  // Loading case
-  if (!data) {
+  if (data) {
+    const images = data.imgCollectionsConnection.edges[0].node.collection;
     return (
       <>
-        <CustomSpinner />
+        <Gallery images={images} />
       </>
-    );
-    // Normal case with valid data
-  } else {
-    const imgs: ImageUrl[] =
-      data.imgCollectionsConnection.edges[0].node.collection;
-    return (
-      <div>
-        <Gallery images={imgs} />
-      </div>
     );
   }
 };

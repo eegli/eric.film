@@ -33,6 +33,11 @@ export interface BlogPost {
 
 export interface BlogPostData {
   blogposts: BlogPost[];
+  blogpostsConnection: {
+    aggregate: {
+      count: number;
+    };
+  };
 }
 
 /* 
