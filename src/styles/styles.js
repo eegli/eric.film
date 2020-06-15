@@ -1,7 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const Global = createGlobalStyle`
-
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 
   /* GLOBALS */
   body {
@@ -13,7 +16,7 @@ export const Global = createGlobalStyle`
     color: ${({ theme }) => theme.textColor};
     height: 100vh;
     width: 100vw;
-    overflow-x: hidden;
+
     min-width: 320px;
   }
 
