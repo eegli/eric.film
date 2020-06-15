@@ -7,3 +7,7 @@ export const BlogCategoryContainer = styled.div`
   flex-wrap: wrap;
   align-content: stretch;
 `;
+
+export const LoadMoreButton = styled.button`
+  align-self: center;
+`;

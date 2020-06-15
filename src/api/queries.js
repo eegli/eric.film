@@ -1,18 +1,28 @@
-export const ALL_BLOGPOSTS_PREVIEW = `
-query ALL_BLOGPOSTS {
-  blogposts {
-    id
-    excerpt
-    slug
-    title
-    type
-    previewImage {
-      url
+import gql from 'graphql-tag';
+
+export const ALL_POSTS_PREVIEW = gql`
+  query ALL_BLOGPOSTS($first: Int!, $skip: Int!) {
+    blogposts(first: $first, skip: $skip) {
+      id
+      excerpt
+      slug
+      title
+      type
+      previewImage {
+        url
+      }
+    }
+    blogpostsConnection {
+      aggregate {
+        count
+      }
     }
   }
-}
-
 `;
+export const allPostsPreviewQueryVars = {
+  skip: 0,
+  first: 3,
+};
 
 export const SINGLE_BLOGPOST = slug =>
   `query SINGLE_BLOGPOST {

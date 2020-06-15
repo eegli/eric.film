@@ -7,6 +7,8 @@ import NProgress from 'nprogress';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../styles/theme';
 import { AppProps } from 'next/app';
+import { ApolloProvider } from '@apollo/react-hooks';
+import { useApollo } from '../lib/apolloClient';
 
 import { browserTest } from '../utils/browser';
 
@@ -30,10 +32,11 @@ const App = ({ Component, pageProps }: AppProps) => {
   // }, []);
 
   if (canView) {
+    const apolloClient = useApollo(pageProps.initialApolloState);
     return (
       <>
         <Head>
-          <title>My page title</title>
+          <title>eric.film - home</title>
           <meta
             name='viewport'
             content='initial-scale=1.0, width=device-width'
@@ -46,11 +49,13 @@ const App = ({ Component, pageProps }: AppProps) => {
           />
         </Head>
         <main>
-          <ThemeProvider theme={theme}>
-            <Global />
-            <Header />
-            <Component {...pageProps} />
-          </ThemeProvider>
+          <ApolloProvider client={apolloClient}>
+            <ThemeProvider theme={theme}>
+              <Global />
+              <Header />
+              <Component {...pageProps} />
+            </ThemeProvider>
+          </ApolloProvider>
         </main>
       </>
     );
