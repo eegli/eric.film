@@ -1,6 +1,6 @@
 import React from 'react';
 import { request } from '../../api/graphql';
-import { ALL_BLOGPOSTS } from '../../api/queries';
+import { ALL_BLOGPOSTS_PREVIEW } from '../../api/queries';
 import CategorySwitch from '@/components/categories/category-switch.component';
 
 import { Sh1 } from '@/shared/headings.styles';
@@ -16,7 +16,7 @@ const IndexPage = ({ posts }) => {
 };
 
 export async function getServerSideProps() {
-  const data = await request(ALL_BLOGPOSTS);
+  const data = await request(ALL_BLOGPOSTS_PREVIEW);
 
   return {
     props: {

@@ -28,6 +28,7 @@ export interface BlogPost {
   slug: string;
   title: string;
   type: BlogCategories;
+  previewImage: { url: string };
 }
 
 export type BlogPosts = BlogPost[];
