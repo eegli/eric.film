@@ -25,6 +25,8 @@ const StillCategory = () => {
         <Gallery images={images} />
       </>
     );
+  } else {
+    return <div></div>;
   }
 };
 
