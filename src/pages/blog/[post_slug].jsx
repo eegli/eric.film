@@ -2,7 +2,7 @@ import React from 'react';
 import BlogContent from '../../components/blog/blog-content.component';
 
 import { SINGLE_BLOGPOST } from '../../api/queries';
-import { request } from '../../api/graphql';
+import { fetcher } from '../../api/graphql';
 
 const IndexPage = ({ post }) => {
   if (!post) {
@@ -20,7 +20,7 @@ const IndexPage = ({ post }) => {
 };
 export async function getServerSideProps({ params }) {
   console.log(params);
-  const post = await request(SINGLE_BLOGPOST(params.post_slug));
+  const post = await fetcher(SINGLE_BLOGPOST(params.post_slug));
 
   return {
     props: {

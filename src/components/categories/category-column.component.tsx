@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   DevCategory,
   BlogCategory,
@@ -7,18 +6,13 @@ import {
   ClientCategory,
 } from './card-categories/index';
 
-import {
-  BlogCategories,
-  PortfolioCategories,
-  Category,
-} from '@/components/types';
+import { useRouter } from 'next/router';
 
-type Props = {
-  category: Category;
-};
+import { BlogCategories, PortfolioCategories } from '@/components/types';
 
-const CategoryColumn: React.FC<Props> = ({ category }) => {
-  switch (category) {
+const CategoryColumn: React.FC = () => {
+  const router = useRouter();
+  switch (router.query.cat) {
     case PortfolioCategories.PORTFOLIO_STILL:
       return <StillCategory />;
     case PortfolioCategories.PORTFOLIO_MOVING:
@@ -27,7 +21,7 @@ const CategoryColumn: React.FC<Props> = ({ category }) => {
       return <ClientCategory />;
     case PortfolioCategories.PORTFOLIO_DEV:
       return <DevCategory />;
-
+    // Blog categories need a filter since they use the same <BlogCategory /> component
     case BlogCategories.BLOG_ALL:
       return <BlogCategory />;
     case BlogCategories.BLOG_TECH:
@@ -37,7 +31,12 @@ const CategoryColumn: React.FC<Props> = ({ category }) => {
     case BlogCategories.BLOG_VARIA:
       return <BlogCategory filter={BlogCategories.BLOG_VARIA} />;
     default:
-      return <div>hi</div>;
+      return (
+        <div style={{ textAlign: 'center', padding: '1rem' }}>
+          what are you trying to do, there is no such category... 🤨
+          <br /> click on a category above to show some content! 🤩
+        </div>
+      );
   }
 };
 
