@@ -1,12 +1,11 @@
 import React from 'react';
 import { GalleryContainer, Img, ImageRow, ImageCol } from './gallery.styles';
-import { IndexProps } from '../../pages/index';
 import ProgressiveImage from 'react-progressive-graceful-image';
-
 // The progressive image library needs a html element
 import { Spinner } from '@/components/custom-spinner/custom-spinner.styles';
+import { ImageProps, ImageUrl } from '@/components/types';
 
-const Gallery: React.FC<IndexProps> = ({ images }) => {
+const Gallery: React.FC<ImageProps> = ({ images }) => {
   // TODO better error handling
   if (!images) {
     return <h1>Oh no! There was an error displaying images</h1>;
@@ -32,7 +31,7 @@ const Gallery: React.FC<IndexProps> = ({ images }) => {
         <ImageRow>
           {collArrays.map(imgCol => (
             <ImageCol key={Math.random()}>
-              {imgCol.map(img => (
+              {imgCol.map((img: ImageUrl) => (
                 <div key={img.url}>
                   <ProgressiveImage src={img.url} placeholder=''>
                     {(src: string, loading: boolean) => {

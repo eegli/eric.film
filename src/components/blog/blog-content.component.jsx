@@ -5,10 +5,10 @@ import {
   BlogPostTitle,
   BlogPostExcerpt,
   BlogPostContent,
-} from './md-content.styles';
-import CodeBlock from './codeblock';
+} from './blog-content.styles';
+import { CodeBlock } from './custom-renders/index';
 
-const MdPreview = ({ title, excerpt, content }) => {
+const BlogContent = ({ title, excerpt, content }) => {
   return (
     <BlogPostContainer>
       <BlogPostTitle>{title}</BlogPostTitle>
@@ -25,4 +25,4 @@ const MdPreview = ({ title, excerpt, content }) => {
   );
 };
 
-export default MdPreview;
+export default BlogContent;

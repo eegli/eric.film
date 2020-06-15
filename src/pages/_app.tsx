@@ -12,7 +12,6 @@ import { browserTest } from '../utils/browser';
 
 // Pretty loading state on top
 Router.events.on('routeChangeStart', url => {
-  console.log(`Loading: ${url}`);
   NProgress.start();
 });
 Router.events.on('routeChangeComplete', () => NProgress.done());

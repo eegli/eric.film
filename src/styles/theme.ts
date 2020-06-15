@@ -18,6 +18,8 @@ export const theme = {
 
   // Scrollbar
   scrollbarDark: '#8a8a8a',
+
+  baseFontSize: '1rem',
 };
 
 export type DarkTheme = typeof theme;

@@ -1,11 +1,14 @@
-export const ALL_BLOGPOSTS = `
+export const ALL_BLOGPOSTS_PREVIEW = `
 query ALL_BLOGPOSTS {
   blogposts {
     id
-    content
     excerpt
-    title
     slug
+    title
+    type
+    previewImage {
+      url
+    }
   }
 }
 

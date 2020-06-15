@@ -5,6 +5,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Dynamic imports
 - Styled components prod/env babel config
 - Add browser check
+- Error boundry
+- Clean up breakpoints
+- Add Apollo Client
 
 ## Learnings
 
