@@ -7,6 +7,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Add browser check
 - Error boundry
 - Clean up breakpoints
+- Add Apollo Client
 
 ## Learnings
 

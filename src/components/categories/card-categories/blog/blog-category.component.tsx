@@ -8,16 +8,17 @@ import CustomSpinner from '@/components/custom-spinner/custom-spinner.component'
 
 import { BlogCategoryContainer } from './blog-category.styles';
 
-import { BlogPost, Category, BlogPosts } from '@/components/types';
+import { BlogPost, Category, BlogPostData } from '@/components/types';
 
 type Props = {
   filter?: Category;
 };
 
 const BlogCategory: React.FC<Props> = ({ filter }) => {
-  const { data, error } = useSWR(ALL_BLOGPOSTS_PREVIEW, query =>
+  const { data, error } = useSWR<BlogPostData>(ALL_BLOGPOSTS_PREVIEW, query =>
     request(api, query)
   );
+  console.log(data);
 
   // Loading case
   if (!data && !error) {
@@ -30,7 +31,7 @@ const BlogCategory: React.FC<Props> = ({ filter }) => {
     );
     // Normal case with valid data
   } else if (data && !error) {
-    let posts: BlogPosts;
+    let posts = [];
     !filter
       ? (posts = data.blogposts)
       : (posts = data.blogposts.filter(

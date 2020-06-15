@@ -31,7 +31,9 @@ export interface BlogPost {
   previewImage: { url: string };
 }
 
-export type BlogPosts = BlogPost[];
+export interface BlogPostData {
+  blogposts: BlogPost[];
+}
 
 /* 
 IMAGES
