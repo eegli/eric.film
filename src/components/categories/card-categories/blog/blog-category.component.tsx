@@ -1,4 +1,4 @@
-import useSWR from 'swr';
+import useSWR, { useSWRPages } from 'swr';
 import { useRouter } from 'next/router';
 import { request } from 'graphql-request';
 import { api } from '../../../../api/graphql';
@@ -15,11 +15,12 @@ type Props = {
 };
 
 const BlogCategory: React.FC<Props> = ({ filter }) => {
-  const { data, error } = useSWR<BlogPostData>(ALL_BLOGPOSTS_PREVIEW, query =>
-    request(api, query)
+  const { data, error, isValidating } = useSWR<BlogPostData>(
+    ALL_BLOGPOSTS_PREVIEW,
+    query => request(api, query)
   );
   const router = useRouter();
-
+  console.log(isValidating);
   // Loading case
   if (!data && !error) {
     return (
@@ -31,6 +32,7 @@ const BlogCategory: React.FC<Props> = ({ filter }) => {
     );
     // Normal case with valid data
   } else if (data && !error) {
+    console.log(data);
     let posts = [];
     !filter
       ? (posts = data.blogposts)
