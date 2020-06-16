@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const Global = createGlobalStyle`
+
 html {
   overflow-y: scroll;
   overflow-x: hidden;

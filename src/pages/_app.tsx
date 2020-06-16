@@ -18,7 +18,6 @@ Router.events.on('routeChangeStart', url => {
   NProgress.start();
 });
 Router.events.on('routeChangeComplete', () => NProgress.done());
-Router.events.on('routeChangeError', () => NProgress.done());
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [canView, setCanView] = useState(true);
@@ -43,22 +42,12 @@ const App = ({ Component, pageProps }: AppProps) => {
             content='initial-scale=1.0, width=device-width'
           />
           <meta name='robots' content='noindex'></meta>
+          <link
+            href='https://fonts.googleapis.com/css2?family=Lato&display=swap'
+            rel='stylesheet'
+          />
 
           {/* https://github.com/vercel/next.js/issues/160, https://www.denisbouquet.com/google-fonts-render-blocking/ */}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `  WebFontConfig = {
-                google: { families: [ 'Lato:400,400i,700|Roboto+Slab:400,700' ] }
-              };
-              (function() {
-                var wf = document.createElement('script');
-                wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-                wf.type = 'text/javascript';
-                wf.async = 'true';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(wf, s);
-              })();`,
-            }}></script>
         </Head>
         <main>
           <ApolloProvider client={apolloClient}>
