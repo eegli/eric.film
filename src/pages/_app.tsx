@@ -48,6 +48,9 @@ const App = ({ Component, pageProps }: AppProps) => {
           <link
             href='https://fonts.googleapis.com/css2?family=Lato&display=swap'
             rel='stylesheet'></link>
+          <link
+            href='https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap'
+            rel='stylesheet'></link>
         </Head>
         <main>
           <ApolloProvider client={apolloClient}>
