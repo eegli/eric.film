@@ -10,7 +10,6 @@ import { AppProps } from 'next/app';
 
 import { ApolloProvider } from '@apollo/react-hooks';
 import { useApollo } from '../lib/apolloClient';
-import '../styles/fonts.css';
 
 import { browserTest } from '../utils/browser';
 
@@ -46,7 +45,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           <meta name='robots' content='noindex'></meta>
 
           {/* https://github.com/vercel/next.js/issues/160, https://www.denisbouquet.com/google-fonts-render-blocking/ */}
-          {/* <script
+          <script
             dangerouslySetInnerHTML={{
               __html: `WebFontConfig = {
     google: { families: [ 'Lato:400,700' ] }
@@ -58,7 +57,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     wf.async = 'true';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);`,
-            }}></script> */}
+            }}></script>
         </Head>
         <main>
           <ApolloProvider client={apolloClient}>
