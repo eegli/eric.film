@@ -48,6 +48,11 @@ export type ImageUrl = {
   url: string;
 };
 
-export type ImageProps = {
-  images: ImageUrl[];
-};
+export interface ImageCollection {
+  collection: ImageUrl[];
+  id: string;
+  imageType: 'home' | 'portfolio';
+}
+export interface ImageData {
+  imgCollections: ImageCollection[];
+}

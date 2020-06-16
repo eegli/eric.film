@@ -1,4 +1,4 @@
-import { ALL_IMGS_HOME } from '@/api/queries';
+import { ALL_IMGS } from '@/api/queries';
 import LandingVideo from '../components/landing/landing-video.component';
 import LandingContent from '../components/landing/landing-content.component';
 import { initializeApollo } from '../lib/apolloClient';
@@ -17,7 +17,7 @@ export async function getStaticProps() {
   const apolloClient = initializeApollo();
 
   await apolloClient.query({
-    query: ALL_IMGS_HOME,
+    query: ALL_IMGS,
   });
 
   return {

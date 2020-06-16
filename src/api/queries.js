@@ -37,18 +37,13 @@ export const SINGLE_BLOGPOST = slug =>
   }
   `;
 
-export const ALL_IMGS_HOME = gql`
-  query IMGS_HOME {
-    imgCollections(where: { id: "ckb2drirc0jly015897lllh3j" }) {
+export const ALL_IMGS = gql`
+  query ALL_IMGS {
+    imgCollections {
       id
-    }
-    imgCollectionsConnection {
-      edges {
-        node {
-          collection {
-            url
-          }
-        }
+      imageType
+      collection {
+        url
       }
     }
   }

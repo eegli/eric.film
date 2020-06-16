@@ -1,14 +1,13 @@
 import React from 'react';
 import Gallery from '@/components/gallery/gallery.component';
-import { ALL_IMGS_HOME } from '@/api/queries';
+import { ALL_IMGS } from '@/api/queries';
 import { useQuery } from '@apollo/react-hooks';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
+import { ImageData } from '@/components/types';
 // TODO correct imgs
 
 const StillCategory = () => {
-  const { loading, error, data } = useQuery(ALL_IMGS_HOME, {
-    notifyOnNetworkStatusChange: true,
-  });
+  const { loading, error, data } = useQuery<ImageData>(ALL_IMGS);
 
   if (error) return <div>'Error loading images :('</div>;
   if (loading) {
@@ -19,12 +18,10 @@ const StillCategory = () => {
     );
   }
   if (data) {
-    const images = data.imgCollectionsConnection.edges[0].node.collection;
-    return (
-      <>
-        <Gallery images={images} />
-      </>
+    const images = data.imgCollections.find(
+      collection => collection.imageType === 'portfolio'
     );
+    return <>{images ? <Gallery images={images.collection} /> : null}</>;
   } else {
     return <div></div>;
   }
