@@ -15,7 +15,7 @@ const Gallery: React.FC<ImageProps> = ({ images }) => {
     return <h1>Oh no! There was an error displaying images</h1>;
   }
   // How many colums
-  const columsAmount = 5;
+  const columsAmount = 3;
   // How many images
   const imgLen = images.length;
   // Images per colum
