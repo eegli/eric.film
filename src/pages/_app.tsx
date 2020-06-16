@@ -11,8 +11,6 @@ import { AppProps } from 'next/app';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { useApollo } from '../lib/apolloClient';
 
-import GoogleFonts from 'next-google-fonts';
-
 import { browserTest } from '../utils/browser';
 
 // Pretty loading state on top
@@ -47,8 +45,10 @@ const App = ({ Component, pageProps }: AppProps) => {
           <meta name='robots' content='noindex'></meta>
 
           {/* https://github.com/vercel/next.js/issues/160, https://www.denisbouquet.com/google-fonts-render-blocking/ */}
+          <link
+            href='https://fonts.googleapis.com/css2?family=Lato&display=swap'
+            rel='stylesheet'></link>
         </Head>
-        <GoogleFonts href='https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap' />
         <main>
           <ApolloProvider client={apolloClient}>
             <ThemeProvider theme={theme}>
