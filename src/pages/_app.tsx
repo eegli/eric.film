@@ -43,8 +43,13 @@ const App = ({ Component, pageProps }: AppProps) => {
             content='initial-scale=1.0, width=device-width'
           />
           <meta name='robots' content='noindex'></meta>
-          {/* https://github.com/vercel/next.js/issues/160 */}
-          <script
+          <link
+            href='https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap'
+            rel='stylesheet'
+          />
+
+          {/* https://github.com/vercel/next.js/issues/160, https://www.denisbouquet.com/google-fonts-render-blocking/ */}
+          {/* <script
             dangerouslySetInnerHTML={{
               __html: `WebFontConfig = {
     google: { families: [ 'Lato:400,700' ] }
@@ -56,7 +61,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     wf.async = 'true';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);`,
-            }}></script>
+            }}></script> */}
         </Head>
         <main>
           <ApolloProvider client={apolloClient}>

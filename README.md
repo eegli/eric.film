@@ -8,6 +8,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Error boundry
 - Clean up breakpoints
 - Add Apollo Client
+- Async Google Fonts Speed Blog
 
 ## Learnings
 
