@@ -8,7 +8,7 @@
       "@/components/*": ["src/components/*"],
       "@/shared/*": ["src/components/shared/*"],
       "@/styles/*": ["src/styles/*"],
-      "@/api*": ["src/api/*"]
+      "@/api/*": ["src/api/*"]
     },
     "skipLibCheck": true,
     "strict": true,

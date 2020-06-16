@@ -1,10 +1,10 @@
-import useSWR, { useSWRPages } from 'swr';
-import { fetcher } from '@/api/graphql';
-import { ALL_BLOGPOSTS_PREVIEW } from '../../../../api/queries';
+import { useQuery } from '@apollo/react-hooks';
+import { NetworkStatus } from 'apollo-client';
+import { ALL_BLOGPOSTS_PREVIEW, allBlogPostsVars } from '@/api/queries';
 import BlogPreview from '@/components/blog/blog-preview.component';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 
-import { BlogCategoryContainer } from './blog-category.styles';
+import { BlogCategoryContainer, FetchButton } from './blog-category.styles';
 
 import { BlogPost, Category, BlogPostData } from '@/components/types';
 
@@ -13,50 +13,82 @@ type Props = {
 };
 
 const BlogCategory: React.FC<Props> = ({ filter }) => {
-  const { data, error, isValidating } = useSWR<BlogPostData>(
-    ALL_BLOGPOSTS_PREVIEW,
-    query => fetcher(query)
-  );
-  console.log(data);
-  console.log(isValidating);
-  // Loading case
-  if (!data && !error) {
+  const { loading, error, data, fetchMore, networkStatus } = useQuery<
+    BlogPostData
+  >(ALL_BLOGPOSTS_PREVIEW, {
+    variables: allBlogPostsVars,
+    // Setting this value to true will make the component rerender when
+    // the "networkStatus" changes, so we are able to know if it is fetching
+    // more data
+    notifyOnNetworkStatusChange: true,
+  });
+
+  const loadingMorePosts = networkStatus === NetworkStatus.fetchMore;
+
+  if (error) return <div>'Error loading posts :('</div>;
+  if (loading && !loadingMorePosts)
     return (
-      <>
-        <BlogCategoryContainer>
-          <CustomSpinner />
-        </BlogCategoryContainer>
-      </>
+      <BlogCategoryContainer>
+        <CustomSpinner />
+      </BlogCategoryContainer>
     );
-    // Normal case with valid data
-  } else if (data && !error) {
-    console.log(data);
+
+  if (data) {
+    const loadMorePosts = () => {
+      fetchMore({
+        variables: {
+          skip: data.blogposts.length,
+        },
+        updateQuery: (previousResult, { fetchMoreResult }) => {
+          if (!fetchMoreResult) {
+            return previousResult;
+          }
+          return Object.assign({}, previousResult, {
+            // Append the new posts results to the old one
+            blogposts: [
+              ...previousResult.blogposts,
+              ...fetchMoreResult.blogposts,
+            ],
+          });
+        },
+      });
+    };
+    const { blogposts, blogpostsConnection } = data;
+    const areMorePosts = blogposts.length < blogpostsConnection.aggregate.count;
+
     let posts = [];
     !filter
       ? (posts = data.blogposts)
       : (posts = data.blogposts.filter(
           (post: BlogPost) => post.type === filter
         ));
-    return (
-      <BlogCategoryContainer>
-        {posts.map((blog: BlogPost) => (
-          <BlogPreview
-            key={blog.id}
-            id={blog.id}
-            title={blog.title}
-            previewImage={blog.previewImage}
-            excerpt={blog.excerpt}
-            slug={blog.slug}
-            type={blog.type}
-          />
-        ))}
-      </BlogCategoryContainer>
-    );
-  }
 
-  // General error
-  else {
-    return <div>Whops, failed to load posts :(</div>;
+    return (
+      <>
+        <BlogCategoryContainer>
+          {posts.map((post: BlogPost) => (
+            <BlogPreview
+              key={post.id}
+              id={post.id}
+              title={post.title}
+              previewImage={post.previewImage}
+              excerpt={post.excerpt}
+              slug={post.slug}
+              type={post.type}
+            />
+          ))}
+        </BlogCategoryContainer>
+        {areMorePosts && (
+          <FetchButton
+            onClick={() => loadMorePosts()}
+            disabled={loadingMorePosts}>
+            {loadingMorePosts ? 'loading...' : 'load more'}
+          </FetchButton>
+        )}
+      </>
+    );
+  } else {
+    return <div></div>;
   }
 };
 

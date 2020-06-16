@@ -1,30 +1,31 @@
-import { GetStaticProps, GetServerSideProps } from 'next';
-import { fetcher } from '../api/graphql';
-import { IMGS_HOME } from '../api/queries';
+import { ALL_IMGS } from '@/api/queries';
 import LandingVideo from '../components/landing/landing-video.component';
 import LandingContent from '../components/landing/landing-content.component';
-import { ImageProps } from '@/components/types';
+import { initializeApollo } from '../lib/apolloClient';
 
-const IndexPage: React.FC<ImageProps> = ({ images }) => {
+const IndexPage: React.FC = () => {
   return (
     <>
       <LandingVideo />
-      <LandingContent images={images} />
+      <LandingContent />
     </>
   );
 };
 
 // TODO Fix getStaticProps for Safari
-export const getServerSideProps: GetServerSideProps = async context => {
-  const imagesRaw = await fetcher(IMGS_HOME);
-  // Stripe off actual info
-  const images = imagesRaw.imgCollectionsConnection.edges[0].node.collection;
+export async function getStaticProps() {
+  const apolloClient = initializeApollo();
+
+  await apolloClient.query({
+    query: ALL_IMGS,
+  });
 
   return {
     props: {
-      images,
+      initialApolloState: apolloClient.cache.extract(),
     },
+    unstable_revalidate: 1,
   };
-};
+}
 
 export default IndexPage;

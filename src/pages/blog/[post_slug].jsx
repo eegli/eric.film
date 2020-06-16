@@ -19,7 +19,6 @@ const IndexPage = ({ post }) => {
   );
 };
 export async function getServerSideProps({ params }) {
-  console.log(params);
   const post = await fetcher(SINGLE_BLOGPOST(params.post_slug));
 
   return {
