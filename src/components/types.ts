@@ -27,6 +27,7 @@ export interface BlogPost {
   id: number;
   slug: string;
   title: string;
+  content: any;
   type: BlogCategories;
   previewImage: { url: string };
 }

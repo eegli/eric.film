@@ -1,4 +1,5 @@
 import { ALL_IMGS } from '@/api/queries';
+import { GetStaticProps } from 'next';
 import LandingVideo from '../components/landing/landing-video.component';
 import LandingContent from '../components/landing/landing-content.component';
 import { initializeApollo } from '../lib/apolloClient';
@@ -13,7 +14,7 @@ const IndexPage: React.FC = () => {
 };
 
 // TODO Fix getStaticProps for Safari
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const apolloClient = initializeApollo();
 
   await apolloClient.query({
@@ -26,6 +27,6 @@ export async function getStaticProps() {
     },
     unstable_revalidate: 1,
   };
-}
+};
 
 export default IndexPage;

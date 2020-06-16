@@ -22,7 +22,7 @@ export const ALL_BLOGPOSTS_PREVIEW = gql`
 
 export const allBlogPostsVars = {
   skip: 0,
-  first: 3,
+  first: 6,
 };
 
 export const SINGLE_BLOGPOST = slug =>
