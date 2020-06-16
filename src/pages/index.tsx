@@ -14,19 +14,19 @@ const IndexPage: React.FC = () => {
 };
 
 // TODO Fix getStaticProps for Safari
-// export const getStaticProps: GetStaticProps = async () => {
-//   const apolloClient = initializeApollo();
+export const getStaticProps: GetStaticProps = async () => {
+  const apolloClient = initializeApollo();
 
-//   await apolloClient.query({
-//     query: ALL_IMGS,
-//   });
+  await apolloClient.query({
+    query: ALL_IMGS,
+  });
 
-//   return {
-//     props: {
-//       initialApolloState: apolloClient.cache.extract(),
-//     },
-//     unstable_revalidate: 1,
-//   };
-// };
+  return {
+    props: {
+      initialApolloState: apolloClient.cache.extract(),
+    },
+    unstable_revalidate: 1,
+  };
+};
 
 export default IndexPage;

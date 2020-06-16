@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Global } from '../styles/styles';
 import Header from '../components/header/header.component';
 import Head from 'next/head';
@@ -10,6 +10,8 @@ import { AppProps } from 'next/app';
 
 import { ApolloProvider } from '@apollo/react-hooks';
 import { useApollo } from '../lib/apolloClient';
+
+import GoogleFonts from 'next-google-fonts';
 
 import { browserTest } from '../utils/browser';
 
@@ -33,22 +35,20 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   if (canView) {
     const apolloClient = useApollo(pageProps.initialApolloState);
+
     return (
       <>
         <Head>
-          <title>My page title</title>
+          <title>eric.film - home</title>
           <meta
             name='viewport'
             content='initial-scale=1.0, width=device-width'
           />
           <meta name='robots' content='noindex'></meta>
-          <link
-            href='https://fonts.googleapis.com/css2?family=Lato&display=swap'
-            rel='stylesheet'
-          />
 
           {/* https://github.com/vercel/next.js/issues/160, https://www.denisbouquet.com/google-fonts-render-blocking/ */}
         </Head>
+        <GoogleFonts href='https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap' />
         <main>
           <ApolloProvider client={apolloClient}>
             <ThemeProvider theme={theme}>
