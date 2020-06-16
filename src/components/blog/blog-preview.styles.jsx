@@ -36,7 +36,6 @@ export const BlogPostLabel = styled.p`
   font-size: 1rem;
   padding: 0.5rem;
   margin: 0 0.5rem 0 0;
-  font-weight: 400;
 `;
 
 export const BlogPostIcon = styled(MdLabel)`

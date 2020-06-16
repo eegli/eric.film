@@ -43,11 +43,10 @@ const App = ({ Component, pageProps }: AppProps) => {
             content='initial-scale=1.0, width=device-width'
           />
           <meta name='robots' content='noindex'></meta>
-
+          {/* TODO Check if preloading is possible */}
           <link
-            href='https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap'
-            rel='preload'
-            as='style'
+            href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'
+            rel='stylesheet'
           />
         </Head>
         <main>
