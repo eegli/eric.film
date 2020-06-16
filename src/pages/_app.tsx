@@ -44,13 +44,11 @@ const App = ({ Component, pageProps }: AppProps) => {
           />
           <meta name='robots' content='noindex'></meta>
 
-          {/* https://github.com/vercel/next.js/issues/160, https://www.denisbouquet.com/google-fonts-render-blocking/ */}
           <link
-            href='https://fonts.googleapis.com/css2?family=Lato&display=swap'
-            rel='stylesheet'></link>
-          <link
-            href='https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap'
-            rel='stylesheet'></link>
+            href='https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap'
+            rel='preload'
+            as='style'
+          />
         </Head>
         <main>
           <ApolloProvider client={apolloClient}>
