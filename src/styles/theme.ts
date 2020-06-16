@@ -10,8 +10,7 @@ export const theme = {
   // Light grey, unused
   textLinkColor: '#daddd8',
 
-  // // Sand, unused
-  // isabelline: '#ecebe4',
+  textSecondaryColor: '#c2c2c2',
 
   // Text color on base bg
   textColor: '#eef0f2',

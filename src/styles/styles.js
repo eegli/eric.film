@@ -18,9 +18,9 @@ html {
     color: ${({ theme }) => theme.textColor};
     height: 100vh;
     width: 100vw;
-
     min-width: 320px;
   }
+
 
   /* PROGRESS BAR */
   #nprogress {

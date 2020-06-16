@@ -13,11 +13,12 @@ export const Sh1 = styled.h1<Props>`
   font-weight: ${({ landing }) => (landing ? 400 : 300)};
 `;
 
-export const Sh2 = styled.h3`
+export const Sh2 = styled.h2`
   letter-spacing: 0.1rem;
   font-weight: 200;
   line-height: 1rem;
   text-align: center;
+  font-size: 1.2rem;
   margin: 1rem 0;
 `;
 

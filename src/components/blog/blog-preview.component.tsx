@@ -5,6 +5,9 @@ import {
   BlogPostTitle,
   BlogPostExcerpt,
   BlogPreviewImage,
+  BlogPostLabel,
+  BlogLabelContainer,
+  BlogPostIcon,
 } from './blog-preview.styles';
 import ProgressiveImage from 'react-progressive-graceful-image';
 import { Spinner } from '@/components/custom-spinner/custom-spinner.styles';
@@ -34,7 +37,10 @@ const BlogPreview: React.FC<BlogPost> = ({
           }}
         </ProgressiveImage>
         <BlogPostExcerpt>{trimmedExc}</BlogPostExcerpt>
-        <BlogPostExcerpt>{type}</BlogPostExcerpt>
+        <BlogLabelContainer>
+          <BlogPostLabel>{type}</BlogPostLabel>
+          <BlogPostIcon />
+        </BlogLabelContainer>
       </BlogPostContainer>
     </Link>
   );
