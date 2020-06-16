@@ -5,6 +5,6 @@ export const LayoutContainerStyle = styled.div`
   top: 4rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1024px;
 `;

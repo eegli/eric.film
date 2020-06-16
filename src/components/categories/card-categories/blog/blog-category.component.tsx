@@ -4,7 +4,11 @@ import { ALL_BLOGPOSTS_PREVIEW, allBlogPostsVars } from '@/api/queries';
 import BlogPreview from '@/components/blog/blog-preview.component';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 
-import { BlogCategoryContainer, FetchButton } from './blog-category.styles';
+import {
+  BlogCategoryContainer,
+  FetchButton,
+  FetchIcon,
+} from './blog-category.styles';
 
 import { BlogPost, Category, BlogPostData } from '@/components/types';
 
@@ -84,6 +88,7 @@ const BlogCategory: React.FC<Props> = ({ filter }) => {
           <FetchButton
             onClick={() => loadMorePosts()}
             disabled={loadingMorePosts}>
+            <FetchIcon />
             {loadingMorePosts ? 'loading...' : 'load more'}
           </FetchButton>
         )}

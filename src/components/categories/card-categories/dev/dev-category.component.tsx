@@ -1,7 +1,8 @@
 import React from 'react';
+import { BgContainer } from '@/components/categories/card-categories/shared.styles';
 
 const DevCategory: React.FC<{}> = () => {
-  return <div>dev COMP</div>;
+  return <BgContainer>dev COMP</BgContainer>;
 };
 
 export default DevCategory;

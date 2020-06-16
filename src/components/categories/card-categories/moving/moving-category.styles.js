@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const MovingCategoryContainer = styled.div`
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   text-align: center;
 `;
 

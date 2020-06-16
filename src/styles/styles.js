@@ -3,10 +3,10 @@ import { createGlobalStyle } from 'styled-components';
 export const Global = createGlobalStyle`
 
 
-html {
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
+  html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
 
   /* GLOBALS */
   body {
@@ -21,6 +21,13 @@ html {
     min-width: 320px;
   }
 
+  p {
+    font-size: ${({ theme }) => theme.fontsizes.baseFontSize}
+  }
+
+  h1 {
+    font-size: ${({ theme }) => theme.fontsizes.h1FontSize}
+  }
 
   /* PROGRESS BAR */
   #nprogress {

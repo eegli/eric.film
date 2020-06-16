@@ -6,14 +6,14 @@ import { ALL_BLOGPOSTS_PREVIEW, allBlogPostsVars } from '../../api/queries';
 import { initializeApollo } from '../../lib/apolloClient';
 
 import { Sh1 } from '@/shared/headings.styles';
-import LayouContainer from '@/shared/layout/layout.container';
+import LayoutContainer from '@/shared/layout/layout.container';
 
 const IndexPage: React.FC = () => {
   return (
-    <LayouContainer>
+    <LayoutContainer>
       <Sh1>blog</Sh1>
       <CategorySwitch blogOrPortfolio='blog' />
-    </LayouContainer>
+    </LayoutContainer>
   );
 };
 

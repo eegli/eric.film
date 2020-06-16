@@ -18,7 +18,13 @@ export const theme = {
   // Scrollbar
   scrollbarDark: '#8a8a8a',
 
-  baseFontSize: '1rem',
+  fontsizes: {
+    baseFontSize: '16px',
+    secondaryFontSize: '14px',
+    baseIconFontSize: '18px',
+    h1FontSize: '20px',
+    h2FontSize: '18px',
+  },
 };
 
 export type DarkTheme = typeof theme;

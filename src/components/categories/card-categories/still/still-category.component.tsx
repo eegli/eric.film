@@ -4,6 +4,7 @@ import { ALL_IMGS } from '@/api/queries';
 import { useQuery } from '@apollo/react-hooks';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import { ImageData } from '@/components/types';
+
 // TODO correct imgs
 
 const StillCategory = () => {

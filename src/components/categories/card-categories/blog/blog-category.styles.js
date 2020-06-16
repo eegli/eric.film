@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FaPlus } from 'react-icons/fa';
 
 export const BlogCategoryContainer = styled.div`
   width: 100%;
@@ -10,10 +11,11 @@ export const BlogCategoryContainer = styled.div`
 
 export const FetchButton = styled.button`
   margin: 1rem 0;
-  padding: 1rem;
+  padding: 0.8rem;
+  font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   background-color: ${({ theme }) => theme.baseBgraised};
-  width: 100px;
   border: none;
+  display: flex;
   align-self: center;
   border-radius: 0.5rem;
   color: ${({ theme }) => theme.textColor};
@@ -22,4 +24,9 @@ export const FetchButton = styled.button`
     color: ${({ theme }) => theme.baseBgraised};
     background-color: ${({ theme }) => theme.textColor};
   }
+`;
+
+export const FetchIcon = styled(FaPlus)`
+  font-size: ${({ theme }) => theme.fontsizes.baseIconFontSize};
+  margin-right: 0.5rem;
 `;

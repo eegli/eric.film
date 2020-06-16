@@ -7,7 +7,7 @@ export const BlogPostContainer = styled.article`
   justify-content: space-between;
   max-width: 360px;
   padding: 1rem;
-  margin: 0.5rem 1rem;
+  margin: 0.5rem;
   background-color: ${({ theme }) => theme.baseBgraised};
   border-radius: 0.5rem;
   &:hover {
@@ -22,27 +22,26 @@ export const BlogPreviewImage = styled.img`
 `;
 
 export const BlogPostTitle = styled.h1`
-  font-size: 1.5rem;
+  font-size: ${({ theme }) => theme.fontsizes.h1FontSize};
   margin: 0.5rem 0 1rem 0;
 `;
 
 export const BlogPostExcerpt = styled.h2`
-  font-size: 16px;
-  line-height: 20px;
+  font-size: ${({ theme }) => theme.fontsizes.h2FontSize};
+  font-weight: normal;
   color: ${({ theme }) => theme.textSecondaryColor};
 `;
 
 export const BlogPostLabel = styled.p`
-  font-size: 1rem;
-  padding: 0.5rem;
+  font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   margin: 0 0.5rem 0 0;
 `;
 
 export const BlogPostIcon = styled(MdLabel)`
-  margin-right: 0.5rem;
+  font-size: ${({ theme }) => theme.fontsizes.baseIconFontSize};
 `;
 export const BlogLabelContainer = styled.div`
-  width: 80px;
+  padding: 0.5rem;
   align-self: flex-end;
   display: flex;
   align-items: center;
