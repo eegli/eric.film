@@ -4,7 +4,7 @@ import {
   MovingCategory,
   StillCategory,
   ClientCategory,
-} from './card-categories/index';
+} from '../card-categories/index';
 
 import { useRouter } from 'next/router';
 

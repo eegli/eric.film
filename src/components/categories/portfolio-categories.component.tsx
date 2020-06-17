@@ -1,6 +1,6 @@
-import { CardContainer, SelectionCardContainer } from './categories.styles';
+import { CardContainer, SelectionCardContainer } from './_categories.styles';
 
-import CategorySwitch from './category-switch.component';
+import CategorySwitch from './switch-categories/category-switch.component';
 
 import { useRouter } from 'next/router';
 import { PortfolioCategories as Portfolio } from '@/components/types';
