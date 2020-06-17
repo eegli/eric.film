@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   CardContainer,
   SelectionCardContainer,
@@ -6,66 +7,42 @@ import {
 import CategoryColumn from './category-column.component';
 
 import { useRouter } from 'next/router';
-
 import { BlogCategories, PortfolioCategories } from '@/components/types';
-
 export type Props = {
   blogOrPortfolio: 'blog' | 'portfolio';
 };
 
 /* 
-
 This page handles the routing for all the blog and portfolio categories
-
 */
 
 const CategorySwitch: React.FC<Props> = ({ blogOrPortfolio }) => {
   const router = useRouter();
+
+  const handleClick = (
+    location: PortfolioCategories | BlogCategories
+  ): void => {
+    router.push(`/portfolio?cat=${location}`, undefined, { shallow: true });
+  };
 
   if (blogOrPortfolio === 'portfolio') {
     return (
       <>
         <SelectionCardContainer>
           <CardContainer
-            onClick={() =>
-              router.push(
-                `/portfolio?cat=${PortfolioCategories.PORTFOLIO_STILL}`,
-                undefined,
-                { shallow: true }
-              )
-            }>
+            onClick={() => handleClick(PortfolioCategories.PORTFOLIO_STILL)}>
             {PortfolioCategories.PORTFOLIO_STILL}
           </CardContainer>
           <CardContainer
-            onClick={() =>
-              router.push(
-                `/portfolio?cat=${PortfolioCategories.PORTFOLIO_MOVING}`,
-                undefined,
-                { shallow: true }
-              )
-            }>
+            onClick={() => handleClick(PortfolioCategories.PORTFOLIO_MOVING)}>
             {PortfolioCategories.PORTFOLIO_MOVING}
           </CardContainer>
           <CardContainer
-            onClick={() =>
-              router.push(
-                `/portfolio?cat=${PortfolioCategories.PORTFOLIO_CLIENTS}`,
-                undefined,
-                { shallow: true }
-              )
-            }>
+            onClick={() => handleClick(PortfolioCategories.PORTFOLIO_CLIENTS)}>
             {PortfolioCategories.PORTFOLIO_CLIENTS}
           </CardContainer>
           <CardContainer
-            onClick={() =>
-              router.push(
-                `/portfolio?cat=${PortfolioCategories.PORTFOLIO_DEV}`,
-                undefined,
-                {
-                  shallow: true,
-                }
-              )
-            }>
+            onClick={() => handleClick(PortfolioCategories.PORTFOLIO_DEV)}>
             {PortfolioCategories.PORTFOLIO_DEV}
           </CardContainer>
         </SelectionCardContainer>
@@ -76,36 +53,16 @@ const CategorySwitch: React.FC<Props> = ({ blogOrPortfolio }) => {
     return (
       <>
         <SelectionCardContainer>
-          <CardContainer
-            onClick={() =>
-              router.push(`/blog?cat=${BlogCategories.BLOG_ALL}`, undefined, {
-                shallow: true,
-              })
-            }>
+          <CardContainer onClick={() => handleClick(BlogCategories.BLOG_ALL)}>
             {BlogCategories.BLOG_ALL}
           </CardContainer>
-          <CardContainer
-            onClick={() =>
-              router.push(`/blog?cat=${BlogCategories.BLOG_TECH}`, undefined, {
-                shallow: true,
-              })
-            }>
+          <CardContainer onClick={() => handleClick(BlogCategories.BLOG_TECH)}>
             {BlogCategories.BLOG_TECH}
           </CardContainer>
-          <CardContainer
-            onClick={() =>
-              router.push(`/blog?cat=${BlogCategories.BLOG_VOTW}`, undefined, {
-                shallow: true,
-              })
-            }>
+          <CardContainer onClick={() => handleClick(BlogCategories.BLOG_VOTW)}>
             {BlogCategories.BLOG_VOTW}
           </CardContainer>
-          <CardContainer
-            onClick={() =>
-              router.push(`/blog?cat=${BlogCategories.BLOG_VARIA}`, undefined, {
-                shallow: true,
-              })
-            }>
+          <CardContainer onClick={() => handleClick(BlogCategories.BLOG_VARIA)}>
             {BlogCategories.BLOG_VARIA}
           </CardContainer>
         </SelectionCardContainer>
