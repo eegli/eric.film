@@ -1,18 +1,16 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
-import CategorySwitch from '@/components/categories/category-switch.component';
-
 import { ALL_BLOGPOSTS_PREVIEW, allBlogPostsVars } from '../../api/queries';
 import { initializeApollo } from '../../lib/apolloClient';
-
 import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';
+import BlogCategories from '@/components/categories/_blog-categories.component';
 
 const IndexPage: React.FC = () => {
   return (
     <LayoutContainer>
       <Sh1>blog</Sh1>
-      <CategorySwitch blogOrPortfolio='blog' />
+      <BlogCategories />
     </LayoutContainer>
   );
 };
