@@ -7,9 +7,8 @@ import { ImageData } from '@/components/types';
 
 // TODO correct imgs
 
-const StillCategory = () => {
+const StillCategory: React.FC = () => {
   const { loading, error, data } = useQuery<ImageData>(ALL_IMGS);
-
   if (error) return <div>'Error loading images :('</div>;
   if (loading) {
     return (
