@@ -10,15 +10,21 @@ export const SelectionCardContainer = styled.div`
   }
 `;
 
-export const CardContainer = styled.div`
-  background-color: ${({ theme }) => theme.baseBgraised};
+type CardContainerProps = {
+  active: boolean;
+};
+
+export const CardContainer = styled.div<CardContainerProps>`
+  background-color: ${({ theme, active }) =>
+    active ? theme.textLinkColor : theme.baseBgraised};
   padding: 0.7rem 1rem;
   margin: 0.5rem;
   border-radius: 0.6rem;
-  &:active,
+  color: ${({ theme, active }) => (active ? theme.baseBg : theme.textColor)};
   &:hover {
     background-color: ${({ theme }) => theme.textColor};
-    color: ${({ theme }) => theme.baseBgraised};
+    color: ${({ theme, active }) =>
+      active ? theme.baseBg : theme.baseBgraised};
     cursor: pointer;
   }
 `;

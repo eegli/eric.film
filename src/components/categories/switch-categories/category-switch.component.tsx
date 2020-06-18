@@ -4,13 +4,13 @@ import {
   MovingCategory,
   StillCategory,
   ClientCategory,
-} from './card-categories/index';
+} from '../card-categories/index';
 
 import { useRouter } from 'next/router';
 
 import { BlogCategories, PortfolioCategories } from '@/components/types';
 
-const CategoryColumn: React.FC = () => {
+const CategorySwitch: React.FC = () => {
   const router = useRouter();
   switch (router.query.cat) {
     case PortfolioCategories.PORTFOLIO_STILL:
@@ -40,4 +40,4 @@ const CategoryColumn: React.FC = () => {
   }
 };
 
-export default CategoryColumn;
+export default CategorySwitch;
