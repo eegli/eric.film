@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/react-hooks';
 import { NetworkStatus } from 'apollo-client';
 import { ALL_BLOGPOSTS_PREVIEW, allBlogPostsVars } from '@/api/queries';
-import BlogPreview from '@/components/blog/blog-preview.component';
+import BlogPreview from '@/components/blog/preview/blog-preview.component';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 
 import {
