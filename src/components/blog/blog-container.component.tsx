@@ -24,8 +24,8 @@ const BlogContainer: React.FC<Props> = ({ post }) => {
           shortname='eric-film'
           config={{
             url: `${url}${post.slug}`,
-            identifier: 'title',
-            title: 'blogpost',
+            identifier: String(post.id),
+            title: post.title,
           }}
         />
       </Container>
