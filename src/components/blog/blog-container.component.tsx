@@ -20,14 +20,16 @@ const BlogContainer: React.FC<Props> = ({ post }) => {
       </Head>
       <Container>
         <BlogContent {...post} />
-        <DiscussionEmbed
-          shortname='eric-film'
-          config={{
-            url: `${url}${post.slug}`,
-            identifier: String(post.id),
-            title: post.title,
-          }}
-        />
+        <div style={{ padding: '1rem' }}>
+          <DiscussionEmbed
+            shortname='eric-film'
+            config={{
+              url: `${url}${post.slug}`,
+              identifier: String(post.id),
+              title: post.title,
+            }}
+          />
+        </div>
       </Container>
     </div>
   );

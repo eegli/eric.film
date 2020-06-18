@@ -4,24 +4,23 @@ import {
   BlogPostContainer,
   BlogPostTitle,
   BlogPostExcerpt,
-  BlogPostContent,
 } from './blog-content.styles';
-import { CodeBlock } from '../custom-renders/index';
-import { BlogPost } from '@/components/types';
+import { CodeBlock, Text } from '../custom-renders/index';
 
 const BlogContent = ({ title, excerpt, content }) => {
   return (
     <BlogPostContainer>
       <BlogPostTitle>{title}</BlogPostTitle>
       <BlogPostExcerpt>{excerpt}</BlogPostExcerpt>
-      <BlogPostContent>
+      <div>
         <ReactMarkdown
           source={content}
           renderers={{
             code: CodeBlock,
+            text: Text,
           }}
         />
-      </BlogPostContent>
+      </div>
     </BlogPostContainer>
   );
 };
