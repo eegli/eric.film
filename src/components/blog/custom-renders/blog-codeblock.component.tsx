@@ -11,7 +11,7 @@ const CodeBlock: React.FC<Props> = ({ value, language }) => {
   if (!language) language = 'javascript';
   return (
     <SyntaxHighlighter
-      customStyle={{ borderRadius: '10px' }}
+      // customStyle={{ borderRadius: '10px' }}
       language={language}
       style={tomorrow}>
       {value}

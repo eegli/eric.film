@@ -1,26 +1,23 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
 import {
   BlogPostContainer,
   BlogPostTitle,
   BlogPostExcerpt,
+  StyledMD,
 } from './blog-content.styles';
-import { CodeBlock, Text } from '../custom-renders/index';
+import CodeBlock from '../custom-renders/blog-codeblock.component';
 
 const BlogContent = ({ title, excerpt, content }) => {
   return (
     <BlogPostContainer>
       <BlogPostTitle>{title}</BlogPostTitle>
       <BlogPostExcerpt>{excerpt}</BlogPostExcerpt>
-      <div>
-        <ReactMarkdown
-          source={content}
-          renderers={{
-            code: CodeBlock,
-            text: Text,
-          }}
-        />
-      </div>
+      <StyledMD
+        renderers={{
+          code: CodeBlock,
+        }}
+        source={content}
+      />
     </BlogPostContainer>
   );
 };

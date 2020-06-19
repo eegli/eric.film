@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 
 export const ALL_BLOGPOSTS_PREVIEW = gql`
   query ALL_BLOGPOSTS_PREVIEW($first: Int!, $skip: Int!) {
-    blogposts(first: $first, skip: $skip) {
+    blogposts(first: $first, skip: $skip, orderBy: createdAt_DESC) {
       id
       excerpt
       slug

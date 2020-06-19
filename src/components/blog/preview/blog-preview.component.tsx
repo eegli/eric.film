@@ -37,7 +37,7 @@ const BlogPreview: React.FC<BlogPost> = ({
           }}
         </ProgressiveImage>
         <BlogPostExcerpt>{trimmedExc}</BlogPostExcerpt>
-        <BlogLabelContainer>
+        <BlogLabelContainer type={type}>
           <BlogPostLabel>{type}</BlogPostLabel>
           <BlogPostIcon />
         </BlogLabelContainer>

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { MdLabel } from 'react-icons/md';
+import { BlogCategories } from '@/components/types';
 
 export const BlogPostContainer = styled.article`
   display: flex;
@@ -40,12 +41,24 @@ export const BlogPostLabel = styled.p`
 export const BlogPostIcon = styled(MdLabel)`
   font-size: ${({ theme }) => theme.fontsizes.baseIconFontSize};
 `;
-export const BlogLabelContainer = styled.div`
+
+type LabelProps = {
+  type: BlogCategories;
+};
+export const BlogLabelContainer = styled.div<LabelProps>`
   padding: 0.5rem;
   align-self: flex-end;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.baseBg};
+  color: ${({ theme }) => theme.textSecondaryColor};
+  background-color: ${({ theme, type }) =>
+    type === BlogCategories.BLOG_TECH
+      ? theme.colors.accents.brightBlue
+      : type === BlogCategories.BLOG_VARIA
+      ? theme.colors.accents.eggshell
+      : type === BlogCategories.BLOG_VOTW
+      ? theme.colors.accents.melon
+      : null};
   border-radius: 0.5rem;
 `;
