@@ -41,6 +41,7 @@ export const BlogPostExcerpt = styled.h2`
 `;
 
 export const BlogPostFooter = styled.div`
+  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

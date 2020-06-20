@@ -1,7 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const Global = createGlobalStyle`
-
+ @font-face {
+  font-family: 'JetBrains Mono';
+    src: url('static/fonts/JetBrainsMono-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('static/fonts/JetBrainsMono-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('static/fonts/JetBrainsMono-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+ }
 
   html {
     overflow-y: scroll;
@@ -31,6 +36,10 @@ export const Global = createGlobalStyle`
 
   select {
     font-family: 'Roboto', sans-serif;
+  }
+
+  code {
+    font-family: 'JetBrains Mono', Fallback, sans-serif !important;
   }
 
   /* PROGRESS BAR */

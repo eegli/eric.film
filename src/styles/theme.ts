@@ -21,9 +21,9 @@ export const theme = {
   // Accents, taken from https://coolors.co/ffa69e-faf3dd-b8f2e6-aed9e0-5e6472
   colors: {
     accents: {
-      melon: '#55828b',
-      eggshell: '#3b6064',
-      brightBlue: '#364958',
+      melon: '#034363',
+      eggshell: '#53272D',
+      brightBlue: '#365952',
     },
   },
 

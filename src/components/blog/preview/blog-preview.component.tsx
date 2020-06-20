@@ -26,8 +26,8 @@ const BlogPreview: React.FC<BlogPost> = ({
   previewImage,
   createdAt,
 }) => {
-  let trimmedExc =
-    excerpt.length > 120 ? excerpt.substring(0, 120).concat('...') : excerpt;
+  // let trimmedExc =
+  //   excerpt.length > 120 ? excerpt.substring(0, 120).concat('...') : excerpt;
 
   return (
     <Link href='/blog/[post_slug]' as={`/blog/${slug}`}>
@@ -42,7 +42,7 @@ const BlogPreview: React.FC<BlogPost> = ({
             );
           }}
         </ProgressiveImage>
-        <BlogPostExcerpt>{trimmedExc}</BlogPostExcerpt>
+        <BlogPostExcerpt>{excerpt}</BlogPostExcerpt>
 
         <BlogPostFooter>
           <BlogCreatedContainer>
