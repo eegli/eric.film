@@ -1,8 +1,13 @@
 import gql from 'graphql-tag';
+import { SortBy } from '@/components/types';
 
 export const ALL_BLOGPOSTS_PREVIEW = gql`
-  query ALL_BLOGPOSTS_PREVIEW($first: Int!, $skip: Int!) {
-    blogposts(first: $first, skip: $skip, orderBy: createdAt_DESC) {
+  query ALL_BLOGPOSTS_PREVIEW(
+    $first: Int!
+    $skip: Int!
+    $orderBy: BlogpostOrderByInput!
+  ) {
+    blogposts(first: $first, skip: $skip, orderBy: $orderBy) {
       id
       excerpt
       slug
@@ -21,12 +26,14 @@ export const ALL_BLOGPOSTS_PREVIEW = gql`
   }
 `;
 
-export const allBlogPostsVars = {
+// Setting default sort
+export const allBlogPostsVars = (orderBy: SortBy = SortBy.createdAt_DESC) => ({
   skip: 0,
   first: 6,
-};
+  orderBy: orderBy,
+});
 
-export const SINGLE_BLOGPOST = slug =>
+export const SINGLE_BLOGPOST = (slug: string) =>
   `query SINGLE_BLOGPOST {
     blogpost(where: {slug: "${slug}"}) {
       id

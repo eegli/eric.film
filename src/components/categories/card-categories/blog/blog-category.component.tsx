@@ -1,4 +1,5 @@
 import { useQuery } from '@apollo/react-hooks';
+import { useState } from 'react';
 import { NetworkStatus } from 'apollo-client';
 import { ALL_BLOGPOSTS_PREVIEW, allBlogPostsVars } from '@/api/queries';
 import BlogPreview from '@/components/blog/preview/blog-preview.component';
@@ -10,17 +11,18 @@ import {
   FetchIcon,
 } from './blog-category.styles';
 
-import { BlogPost, Category, BlogPostData, Sort } from '@/components/types';
+import { BlogPost, Category, BlogPostData, SortBy } from '@/components/types';
 
 type Props = {
   filter?: Category;
 };
 
 const BlogCategory: React.FC<Props> = ({ filter }) => {
+  const [sort, setSort] = useState(SortBy.createdAt_DESC);
   const { loading, error, data, fetchMore, networkStatus } = useQuery<
     BlogPostData
   >(ALL_BLOGPOSTS_PREVIEW, {
-    variables: allBlogPostsVars,
+    variables: allBlogPostsVars(sort),
     // Setting this value to true will make the component rerender when
     // the "networkStatus" changes, so we are able to know if it is fetching
     // more data
@@ -69,6 +71,9 @@ const BlogCategory: React.FC<Props> = ({ filter }) => {
 
     return (
       <>
+        <button onClick={() => setSort(SortBy.createdAt_ASC)}>
+          Sort by ASC
+        </button>
         <BlogCategoryContainer>
           {posts.map((post: BlogPost) => (
             <BlogPreview key={post.id} {...post} />

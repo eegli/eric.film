@@ -20,7 +20,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   await apolloClient.query({
     query: ALL_BLOGPOSTS_PREVIEW,
-    variables: allBlogPostsVars,
+    variables: allBlogPostsVars(),
   });
 
   return {

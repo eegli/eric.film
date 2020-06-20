@@ -48,6 +48,11 @@ export interface BlogPostData {
   };
 }
 
+export enum SortBy {
+  createdAt_DESC = 'createdAt_DESC',
+  createdAt_ASC = 'createdAt_ASC',
+}
+
 /* 
 IMAGES
 */
