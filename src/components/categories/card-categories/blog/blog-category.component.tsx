@@ -10,7 +10,7 @@ import {
   FetchIcon,
 } from './blog-category.styles';
 
-import { BlogPost, Category, BlogPostData } from '@/components/types';
+import { BlogPost, Category, BlogPostData, Sort } from '@/components/types';
 
 type Props = {
   filter?: Category;
@@ -80,6 +80,7 @@ const BlogCategory: React.FC<Props> = ({ filter }) => {
               excerpt={post.excerpt}
               slug={post.slug}
               type={post.type}
+              createdAt={post.createdAt}
               content={post.content}
             />
           ))}

@@ -9,6 +9,12 @@ export enum BlogCategories {
   BLOG_VARIA = 'varia',
 }
 
+export enum Sort {
+  LATEST = 'latest',
+  OLDEST = 'oldest',
+  UPDATED = 'updated',
+}
+
 export enum PortfolioCategories {
   PORTFOLIO_STILL = 'still',
   PORTFOLIO_MOVING = 'moving',
@@ -29,6 +35,7 @@ export interface BlogPost {
   title: string;
   content: any;
   type: BlogCategories;
+  createdAt: string;
   previewImage: { url: string };
 }
 

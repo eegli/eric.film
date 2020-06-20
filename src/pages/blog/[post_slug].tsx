@@ -5,15 +5,21 @@ import { SINGLE_BLOGPOST } from '../../api/queries';
 import { fetcher } from '../../api/graphql';
 import { BlogPost } from '@/components/types';
 import LayoutContainer from '@/components/shared/layout/layout.container';
+import Head from 'next/head';
 
 type Props = {
   post: BlogPost;
 };
 
 const IndexPage: React.FC<Props> = ({ post }) => (
-  <LayoutContainer>
-    <BlogContainer post={post} />
-  </LayoutContainer>
+  <>
+    <Head>
+      <title>{post.title} - eric.film</title>
+    </Head>
+    <LayoutContainer>
+      <BlogContainer post={post} />
+    </LayoutContainer>
+  </>
 );
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   if (params) {

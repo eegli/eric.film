@@ -1,6 +1,7 @@
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+// or {tomorrow}
+import { xonokai } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 type Props = {
   value: string;
@@ -8,12 +9,12 @@ type Props = {
 };
 
 const CodeBlock: React.FC<Props> = ({ value, language }) => {
-  if (!language) language = 'javascript';
+  if (!language) language = 'jsx';
   return (
     <SyntaxHighlighter
       // customStyle={{ borderRadius: '10px' }}
       language={language}
-      style={tomorrow}>
+      style={xonokai}>
       {value}
     </SyntaxHighlighter>
   );

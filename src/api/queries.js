@@ -8,6 +8,7 @@ export const ALL_BLOGPOSTS_PREVIEW = gql`
       slug
       title
       type
+      createdAt
       previewImage {
         url
       }
