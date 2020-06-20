@@ -3,43 +3,40 @@ import { createGlobalStyle } from 'styled-components';
 export const Global = createGlobalStyle`
  @font-face {
   font-family: 'JetBrains Mono';
-    src: url('static/fonts/JetBrainsMono-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('static/fonts/JetBrainsMono-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-       url('static/fonts/JetBrainsMono-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+    src: local('static/fonts/JetBrainsMono-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       local('static/fonts/JetBrainsMono-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       local('static/fonts/JetBrainsMono-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
  }
 
  @font-face {
   font-family: 'Roboto', sans-serif;
-    src: url('static/fonts/Roboto-Black.ttf')  format('truetype'),
-    url('static/fonts/Roboto-BlackItalic.ttf')  format('truetype'),
-    url('static/fonts/Roboto-Bold.ttf')  format('truetype'),
-    url('static/fonts/Roboto-BoldItalic.ttf')  format('truetype'),
-    url('static/fonts/Roboto-Italic.ttf')  format('truetype'),
-    url('static/fonts/Roboto-Light.ttf')  format('truetype'),
-    url('static/fonts/Roboto-LightItalic.ttf')  format('truetype'),
-    url('static/fonts/Roboto-Medium.ttf')  format('truetype'),
-    url('static/fonts/Roboto-MediumItalic.ttf')  format('truetype'),
-    url('static/fonts/Roboto-Regular.ttf')  format('truetype'),
-    url('static/fonts/Roboto-Thin.ttf')  format('truetype'),
-    url('static/fonts/Roboto-ThinItalic.ttf')  format('truetype'),
+    src: local('static/fonts/Roboto-Black.ttf')  format('truetype'),
+    local('static/fonts/Roboto-BlackItalic.ttf')  format('truetype'),
+    local('static/fonts/Roboto-Bold.ttf')  format('truetype'),
+    local('static/fonts/Roboto-BoldItalic.ttf')  format('truetype'),
+    local('static/fonts/Roboto-Italic.ttf')  format('truetype'),
+    local('static/fonts/Roboto-Light.ttf')  format('truetype'),
+    local('static/fonts/Roboto-LightItalic.ttf')  format('truetype'),
+    local('static/fonts/Roboto-Medium.ttf')  format('truetype'),
+    local('static/fonts/Roboto-MediumItalic.ttf')  format('truetype'),
+    local('static/fonts/Roboto-Regular.ttf')  format('truetype'),
+    local('static/fonts/Roboto-Thin.ttf')  format('truetype'),
+    local('static/fonts/Roboto-ThinItalic.ttf')  format('truetype'),
     /* WOFF */
-    url('static/fonts/Roboto-Black.woff')  format('woff'),
-    url('static/fonts/Roboto-BlackItalic.woff')  format('woff'),
-    url('static/fonts/Roboto-Bold.woff')  format('woff'),
-    url('static/fonts/Roboto-BoldItalic.woff')  format('woff'),
-    url('static/fonts/Roboto-Italic.woff')  format('woff'),
-    url('static/fonts/Roboto-Light.woff')  format('woff'),
-    url('static/fonts/Roboto-LightItalic.woff')  format('woff'),
-    url('static/fonts/Roboto-Medium.woff')  format('woff'),
-    url('static/fonts/Roboto-MediumItalic.woff')  format('woff'),
-    url('static/fonts/Roboto-Regular.woff')  format('woff'),
-    url('static/fonts/Roboto-Thin.woff')  format('woff'),
-    url('static/fonts/Roboto-ThinItalic.woff')  format('woff'),
+    local('static/fonts/Roboto-Black.woff')  format('woff'),
+    local('static/fonts/Roboto-BlackItalic.woff')  format('woff'),
+    local('static/fonts/Roboto-Bold.woff')  format('woff'),
+    local('static/fonts/Roboto-BoldItalic.woff')  format('woff'),
+    local('static/fonts/Roboto-Italic.woff')  format('woff'),
+    local('static/fonts/Roboto-Light.woff')  format('woff'),
+    local('static/fonts/Roboto-LightItalic.woff')  format('woff'),
+    local('static/fonts/Roboto-Medium.woff')  format('woff'),
+    local('static/fonts/Roboto-MediumItalic.woff')  format('woff'),
+    local('static/fonts/Roboto-Regular.woff')  format('woff'),
+    local('static/fonts/Roboto-Thin.woff')  format('woff'),
+    local('static/fonts/Roboto-ThinItalic.woff')  format('woff'),
   }
 
-  * {
-    font-family: 'Roboto', sans-serif;
-  }
  
 
   html {
@@ -49,6 +46,7 @@ export const Global = createGlobalStyle`
 
   /* GLOBALS */
   body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
