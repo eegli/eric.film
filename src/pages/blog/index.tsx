@@ -1,5 +1,5 @@
 import React from 'react';
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { ALL_BLOGPOSTS_PREVIEW, allBlogPostsVars } from '../../api/queries';
 import { initializeApollo } from '../../lib/apolloClient';
 import { Sh1 } from '@/shared/headings.styles';
@@ -15,20 +15,20 @@ const IndexPage: React.FC = () => {
   );
 };
 
-// export const getStaticProps: GetStaticProps = async () => {
-//   const apolloClient = initializeApollo();
+export const getServerSideProps: GetServerSideProps = async () => {
+  const apolloClient = initializeApollo();
 
-//   await apolloClient.query({
-//     query: ALL_BLOGPOSTS_PREVIEW,
-//     variables: allBlogPostsVars(),
-//   });
+  await apolloClient.query({
+    query: ALL_BLOGPOSTS_PREVIEW,
+    variables: allBlogPostsVars(),
+  });
 
-//   return {
-//     props: {
-//       initialApolloState: apolloClient.cache.extract(),
-//     },
-//     // unstable_revalidate: 1,
-//   };
-// };
+  return {
+    props: {
+      initialApolloState: apolloClient.cache.extract(),
+    },
+    unstable_revalidate: 1,
+  };
+};
 
 export default IndexPage;
