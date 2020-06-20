@@ -1,43 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const Global = createGlobalStyle`
- @font-face {
-  font-family: 'JetBrains Mono';
-    src: local('static/fonts/JetBrainsMono-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-       local('static/fonts/JetBrainsMono-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-       local('static/fonts/JetBrainsMono-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
- }
-
- @font-face {
-  font-family: 'Roboto', sans-serif;
-    src: local('static/fonts/Roboto-Black.ttf')  format('truetype'),
-    local('static/fonts/Roboto-BlackItalic.ttf')  format('truetype'),
-    local('static/fonts/Roboto-Bold.ttf')  format('truetype'),
-    local('static/fonts/Roboto-BoldItalic.ttf')  format('truetype'),
-    local('static/fonts/Roboto-Italic.ttf')  format('truetype'),
-    local('static/fonts/Roboto-Light.ttf')  format('truetype'),
-    local('static/fonts/Roboto-LightItalic.ttf')  format('truetype'),
-    local('static/fonts/Roboto-Medium.ttf')  format('truetype'),
-    local('static/fonts/Roboto-MediumItalic.ttf')  format('truetype'),
-    local('static/fonts/Roboto-Regular.ttf')  format('truetype'),
-    local('static/fonts/Roboto-Thin.ttf')  format('truetype'),
-    local('static/fonts/Roboto-ThinItalic.ttf')  format('truetype'),
-    /* WOFF */
-    local('static/fonts/Roboto-Black.woff')  format('woff'),
-    local('static/fonts/Roboto-BlackItalic.woff')  format('woff'),
-    local('static/fonts/Roboto-Bold.woff')  format('woff'),
-    local('static/fonts/Roboto-BoldItalic.woff')  format('woff'),
-    local('static/fonts/Roboto-Italic.woff')  format('woff'),
-    local('static/fonts/Roboto-Light.woff')  format('woff'),
-    local('static/fonts/Roboto-LightItalic.woff')  format('woff'),
-    local('static/fonts/Roboto-Medium.woff')  format('woff'),
-    local('static/fonts/Roboto-MediumItalic.woff')  format('woff'),
-    local('static/fonts/Roboto-Regular.woff')  format('woff'),
-    local('static/fonts/Roboto-Thin.woff')  format('woff'),
-    local('static/fonts/Roboto-ThinItalic.woff')  format('woff'),
-  }
-
- 
 
   html {
     overflow-y: scroll;

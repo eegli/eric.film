@@ -10,6 +10,7 @@ import { AppProps } from 'next/app';
 
 import { ApolloProvider } from '@apollo/react-hooks';
 import { useApollo } from '../lib/apolloClient';
+import '@/styles/fonts.css';
 
 import { browserTest } from '../utils/browser';
 
