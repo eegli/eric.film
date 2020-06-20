@@ -10,13 +10,14 @@ import { AppProps } from 'next/app';
 
 import { ApolloProvider } from '@apollo/react-hooks';
 import { useApollo } from '../lib/apolloClient';
-import '@/styles/fonts.css';
+import Fonts from '@/styles/fonts';
 
 import { browserTest } from '../utils/browser';
 
 const App = ({ Component, pageProps }: AppProps) => {
   // Pretty loading state on top
   useEffect(() => {
+    Fonts();
     Router.events.on('routeChangeStart', () => NProgress.start());
     Router.events.on('routeChangeComplete', () => NProgress.done());
     return () => {
