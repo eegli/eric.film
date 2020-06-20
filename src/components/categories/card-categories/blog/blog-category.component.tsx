@@ -15,7 +15,7 @@ import { BlogPost, Category, BlogPostData, SortBy } from '@/components/types';
 
 type Props = {
   filter?: Category;
-  sortBy: SortBy;
+  sortBy?: SortBy;
 };
 
 const BlogCategory: React.FC<Props> = ({ filter, sortBy }) => {

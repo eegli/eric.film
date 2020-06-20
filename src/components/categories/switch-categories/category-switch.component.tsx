@@ -15,7 +15,7 @@ import {
 } from '@/components/types';
 
 type Props = {
-  sortBy: SortBy;
+  sortBy?: SortBy;
 };
 
 const CategorySwitch: React.FC<Props> = ({ sortBy }) => {
