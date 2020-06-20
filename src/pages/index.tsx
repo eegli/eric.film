@@ -25,7 +25,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
     props: {
       initialApolloState: apolloClient.cache.extract(),
     },
-    unstable_revalidate: 1,
   };
 };
 

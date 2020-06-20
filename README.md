@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## TODOS
 
 - Dynamic imports
+- Safari getStaticProps
 - Add browser check
 - Error boundry
 - Clean up breakpoints
