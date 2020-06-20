@@ -13,7 +13,7 @@ export const SortSelectContainer = styled.div`
   margin-left: 2rem;
   @media screen and (max-width: 700px) {
     flex: 0 1 100%;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
   }
 `;
 
