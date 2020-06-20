@@ -31,9 +31,14 @@ export const SINGLE_BLOGPOST = slug =>
     blogpost(where: {slug: "${slug}"}) {
       id
       excerpt
-      content
-      title
       slug
+      title
+      type
+      content
+      createdAt
+      previewImage {
+        url
+      }
     }
   }
   `;

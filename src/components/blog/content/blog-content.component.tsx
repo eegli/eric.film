@@ -7,19 +7,19 @@ import {
 } from './blog-content.styles';
 import CodeBlock from '../custom-renders/blog-codeblock.component';
 import Link from '../custom-renders/blog-link.component';
+import { BlogPost } from '@/components/types';
 
-const BlogContent = props => {
-  console.log(props);
+const BlogContent: React.FC<BlogPost> = ({ title, excerpt, content }) => {
   return (
     <BlogPostContainer>
-      <BlogPostTitle>{props.title}</BlogPostTitle>
-      <BlogPostExcerpt>{props.excerpt}</BlogPostExcerpt>
+      <BlogPostTitle>{title}</BlogPostTitle>
+      <BlogPostExcerpt>{excerpt}</BlogPostExcerpt>
       <StyledMD
         renderers={{
           code: CodeBlock,
           link: Link,
         }}
-        source={props.content}
+        source={content}
       />
     </BlogPostContainer>
   );

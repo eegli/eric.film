@@ -71,18 +71,7 @@ const BlogCategory: React.FC<Props> = ({ filter }) => {
       <>
         <BlogCategoryContainer>
           {posts.map((post: BlogPost) => (
-            // Todo fix
-            <BlogPreview
-              key={post.id}
-              id={post.id}
-              title={post.title}
-              previewImage={post.previewImage}
-              excerpt={post.excerpt}
-              slug={post.slug}
-              type={post.type}
-              createdAt={post.createdAt}
-              content={post.content}
-            />
+            <BlogPreview key={post.id} {...post} />
           ))}
         </BlogCategoryContainer>
         {areMorePosts && (
