@@ -13,23 +13,20 @@ import { useApollo } from '../lib/apolloClient';
 
 import { browserTest } from '../utils/browser';
 
-// Pretty loading state on top
-Router.events.on('routeChangeStart', url => {
-  NProgress.start();
-});
-Router.events.on('routeChangeComplete', () => NProgress.done());
-
 const App = ({ Component, pageProps }: AppProps) => {
+  // Pretty loading state on top
+  useEffect(() => {
+    Router.events.on('routeChangeStart', () => NProgress.start());
+    Router.events.on('routeChangeComplete', () => NProgress.done());
+    return () => {
+      Router.events.off('routeChangeStart', () => {});
+      Router.events.off('routeChangeComplete', () => {});
+    };
+  });
+
   const [canView, setCanView] = useState(true);
 
   // TODO Add browser check
-  // useEffect(() => {
-  //   const result = browserTest();
-  //   console.log(result);
-  //   if (result !== undefined) {
-  //     setCanView(result);
-  //   }
-  // }, []);
 
   if (canView) {
     const apolloClient = useApollo(pageProps.initialApolloState);
