@@ -16,17 +16,17 @@ import { browserTest } from '../utils/browser';
 
 const App = ({ Component, pageProps }: AppProps) => {
   // Pretty loading state on top
-  // useEffect(() => {
-  //   Fonts();
-  //   Router.events.on('routeChangeStart', (u) => NProgress.start());
-  //   Router.events.on('routeChangeComplete', (u) => NProgress.done());
-  //   Router.events.on('routeChangeError', (e, u) => NProgress.done());
-  //   return () => {
-  //     Router.events.off('routeChangeStart', () => {});
-  //     Router.events.off('routeChangeComplete', () => {});
-  //     Router.events.off('routeChangeError', () => {});
-  //   };
-  // }, []);
+  useEffect(() => {
+    Fonts();
+    Router.events.on('routeChangeStart', u => NProgress.start());
+    Router.events.on('routeChangeComplete', u => NProgress.done());
+    Router.events.on('routeChangeError', (e, u) => NProgress.done());
+    return () => {
+      Router.events.off('routeChangeStart', () => {});
+      Router.events.off('routeChangeComplete', () => {});
+      Router.events.off('routeChangeError', () => {});
+    };
+  }, []);
 
   const [canView, setCanView] = useState(true);
 
