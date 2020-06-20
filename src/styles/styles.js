@@ -9,7 +9,7 @@ export const Global = createGlobalStyle`
  }
 
  @font-face {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
     src: url('static/fonts/Roboto-Black.ttf')  format('truetype'),
     url('static/fonts/Roboto-BlackItalic.ttf')  format('truetype'),
     url('static/fonts/Roboto-Bold.ttf')  format('truetype'),
@@ -22,6 +22,23 @@ export const Global = createGlobalStyle`
     url('static/fonts/Roboto-Regular.ttf')  format('truetype'),
     url('static/fonts/Roboto-Thin.ttf')  format('truetype'),
     url('static/fonts/Roboto-ThinItalic.ttf')  format('truetype'),
+    /* WOFF */
+    url('static/fonts/Roboto-Black.woff')  format('woff'),
+    url('static/fonts/Roboto-BlackItalic.woff')  format('woff'),
+    url('static/fonts/Roboto-Bold.woff')  format('woff'),
+    url('static/fonts/Roboto-BoldItalic.woff')  format('woff'),
+    url('static/fonts/Roboto-Italic.woff')  format('woff'),
+    url('static/fonts/Roboto-Light.woff')  format('woff'),
+    url('static/fonts/Roboto-LightItalic.woff')  format('woff'),
+    url('static/fonts/Roboto-Medium.woff')  format('woff'),
+    url('static/fonts/Roboto-MediumItalic.woff')  format('woff'),
+    url('static/fonts/Roboto-Regular.woff')  format('woff'),
+    url('static/fonts/Roboto-Thin.woff')  format('woff'),
+    url('static/fonts/Roboto-ThinItalic.woff')  format('woff'),
+  }
+
+  * {
+    font-family: 'Roboto', sans-serif;
   }
  
 
@@ -32,7 +49,6 @@ export const Global = createGlobalStyle`
 
   /* GLOBALS */
   body {
-    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;

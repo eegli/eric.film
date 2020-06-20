@@ -39,12 +39,8 @@ const App = ({ Component, pageProps }: AppProps) => {
             name='viewport'
             content='initial-scale=1.0, width=device-width'
           />
+          {/* TODO Remove noindex */}
           <meta name='robots' content='noindex'></meta>
-          {/* TODO Check if preloading is possible */}
-          {/* <link
-            href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'
-            rel='stylesheet'
-          /> */}
         </Head>
         <main>
           <ApolloProvider client={apolloClient}>
