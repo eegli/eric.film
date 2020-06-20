@@ -10,19 +10,17 @@ type Props = {
 const BlogContainer: React.FC<Props> = ({ post }) => {
   let url = 'https://eric.film/blog/';
   return (
-    <>
-      <Container>
-        <BlogContent {...post} />
-        <DiscussionEmbed
-          shortname='eric-film'
-          config={{
-            url: `${url}${post.slug}`,
-            identifier: String(post.id),
-            title: post.title,
-          }}
-        />
-      </Container>
-    </>
+    <Container>
+      <BlogContent {...post} />
+      <DiscussionEmbed
+        shortname='eric-film'
+        config={{
+          url: `${url}${post.slug}`,
+          identifier: String(post.id),
+          title: post.title,
+        }}
+      />
+    </Container>
   );
 };
 

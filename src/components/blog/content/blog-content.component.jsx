@@ -8,17 +8,18 @@ import {
 import CodeBlock from '../custom-renders/blog-codeblock.component';
 import Link from '../custom-renders/blog-link.component';
 
-const BlogContent = ({ title, excerpt, content }) => {
+const BlogContent = props => {
+  console.log(props);
   return (
     <BlogPostContainer>
-      <BlogPostTitle>{title}</BlogPostTitle>
-      <BlogPostExcerpt>{excerpt}</BlogPostExcerpt>
+      <BlogPostTitle>{props.title}</BlogPostTitle>
+      <BlogPostExcerpt>{props.excerpt}</BlogPostExcerpt>
       <StyledMD
         renderers={{
           code: CodeBlock,
           link: Link,
         }}
-        source={content}
+        source={props.content}
       />
     </BlogPostContainer>
   );

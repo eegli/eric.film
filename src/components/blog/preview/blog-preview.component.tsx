@@ -30,23 +30,20 @@ const BlogPreview: React.FC<BlogPost> = ({
     excerpt.length > 120 ? excerpt.substring(0, 120).concat('...') : excerpt;
 
   return (
-    <>
+    <Link href='/blog/[post_slug]' as={`/blog/${slug}`}>
       <BlogPostContainer>
-        <Link href='/blog/[post_slug]' as={`/blog/${slug}`}>
-          <>
-            <BlogPostTitle>{title}</BlogPostTitle>
-            <ProgressiveImage src={previewImage.url} placeholder=''>
-              {(src: string, loading: boolean) => {
-                return loading ? (
-                  <Spinner />
-                ) : (
-                  <BlogPreviewImage src={src} alt='portfolio-image' />
-                );
-              }}
-            </ProgressiveImage>
-            <BlogPostExcerpt>{trimmedExc}</BlogPostExcerpt>
-          </>
-        </Link>
+        <BlogPostTitle>{title}</BlogPostTitle>
+        <ProgressiveImage src={previewImage.url} placeholder=''>
+          {(src: string, loading: boolean) => {
+            return loading ? (
+              <Spinner />
+            ) : (
+              <BlogPreviewImage src={src} alt='blog-image' />
+            );
+          }}
+        </ProgressiveImage>
+        <BlogPostExcerpt>{trimmedExc}</BlogPostExcerpt>
+
         <BlogPostFooter>
           <BlogCreatedContainer>
             <BlogCreatedIcon />
@@ -59,7 +56,7 @@ const BlogPreview: React.FC<BlogPost> = ({
           </BlogLabelContainer>
         </BlogPostFooter>
       </BlogPostContainer>
-    </>
+    </Link>
   );
 };
 
