@@ -22,7 +22,7 @@ const IndexPage: React.FC<Props> = ({ post }) => (
   </>
 );
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-  if (params) {
+  if (params && params.post_slug) {
     var post = await fetcher(SINGLE_BLOGPOST(params.post_slug));
   }
 

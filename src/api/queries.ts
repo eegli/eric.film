@@ -33,7 +33,7 @@ export const allBlogPostsVars = (orderBy: SortBy = SortBy.createdAt_DESC) => ({
   orderBy: orderBy,
 });
 
-export const SINGLE_BLOGPOST = (slug: string) =>
+export const SINGLE_BLOGPOST = (slug: string | string[]) =>
   `query SINGLE_BLOGPOST {
     blogpost(where: {slug: "${slug}"}) {
       id
