@@ -29,6 +29,10 @@ export const Global = createGlobalStyle`
     font-size: ${({ theme }) => theme.fontsizes.h1FontSize}
   }
 
+  select {
+    font-family: 'Roboto', sans-serif;
+  }
+
   /* PROGRESS BAR */
   #nprogress {
     pointer-events: none;

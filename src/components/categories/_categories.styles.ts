@@ -2,11 +2,38 @@ import styled from 'styled-components';
 
 export const SelectionCardContainer = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   overflow-x: scroll;
-  max-width: 100%;
-  @media screen and (min-width: 375px) {
-    justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+`;
+
+export const SortSelectContainer = styled.div`
+  align-self: center;
+  margin-left: 2rem;
+  @media screen and (max-width: 700px) {
+    flex: 0 1 100%;
+    margin: 1rem 0;
+  }
+`;
+
+export const SortSelect = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > div {
+    width: 80px;
+    background-color: ${({ theme }) => theme.baseBgraised};
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  & > div > select {
+    background-color: ${({ theme }) => theme.baseBgraised};
+    margin: 0 auto;
+    color: ${({ theme }) => theme.textColor};
+    border: none;
+    font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   }
 `;
 

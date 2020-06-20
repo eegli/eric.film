@@ -8,9 +8,17 @@ import {
 
 import { useRouter } from 'next/router';
 
-import { BlogCategories, PortfolioCategories } from '@/components/types';
+import {
+  BlogCategories,
+  PortfolioCategories,
+  SortBy,
+} from '@/components/types';
 
-const CategorySwitch: React.FC = () => {
+type Props = {
+  sortBy: SortBy;
+};
+
+const CategorySwitch: React.FC<Props> = ({ sortBy }) => {
   const router = useRouter();
   switch (router.query.cat) {
     case PortfolioCategories.PORTFOLIO_STILL:
@@ -23,13 +31,15 @@ const CategorySwitch: React.FC = () => {
       return <DevCategory />;
     // Blog categories need a filter since they use the same <BlogCategory /> component
     case BlogCategories.BLOG_ALL:
-      return <BlogCategory />;
+      return <BlogCategory sortBy={sortBy} />;
     case BlogCategories.BLOG_TECH:
-      return <BlogCategory filter={BlogCategories.BLOG_TECH} />;
+      return <BlogCategory filter={BlogCategories.BLOG_TECH} sortBy={sortBy} />;
     case BlogCategories.BLOG_VOTW:
-      return <BlogCategory filter={BlogCategories.BLOG_VOTW} />;
+      return <BlogCategory filter={BlogCategories.BLOG_VOTW} sortBy={sortBy} />;
     case BlogCategories.BLOG_VARIA:
-      return <BlogCategory filter={BlogCategories.BLOG_VARIA} />;
+      return (
+        <BlogCategory filter={BlogCategories.BLOG_VARIA} sortBy={sortBy} />
+      );
     default:
       return (
         <div style={{ textAlign: 'center', padding: '1rem' }}>

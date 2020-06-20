@@ -15,14 +15,14 @@ import { BlogPost, Category, BlogPostData, SortBy } from '@/components/types';
 
 type Props = {
   filter?: Category;
+  sortBy: SortBy;
 };
 
-const BlogCategory: React.FC<Props> = ({ filter }) => {
-  const [sort, setSort] = useState(SortBy.createdAt_DESC);
+const BlogCategory: React.FC<Props> = ({ filter, sortBy }) => {
   const { loading, error, data, fetchMore, networkStatus } = useQuery<
     BlogPostData
   >(ALL_BLOGPOSTS_PREVIEW, {
-    variables: allBlogPostsVars(sort),
+    variables: allBlogPostsVars(sortBy),
     // Setting this value to true will make the component rerender when
     // the "networkStatus" changes, so we are able to know if it is fetching
     // more data
@@ -71,9 +71,6 @@ const BlogCategory: React.FC<Props> = ({ filter }) => {
 
     return (
       <>
-        <button onClick={() => setSort(SortBy.createdAt_ASC)}>
-          Sort by ASC
-        </button>
         <BlogCategoryContainer>
           {posts.map((post: BlogPost) => (
             <BlogPreview key={post.id} {...post} />
