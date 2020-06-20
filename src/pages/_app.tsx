@@ -41,10 +41,10 @@ const App = ({ Component, pageProps }: AppProps) => {
           />
           <meta name='robots' content='noindex'></meta>
           {/* TODO Check if preloading is possible */}
-          <link
+          {/* <link
             href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'
             rel='stylesheet'
-          />
+          /> */}
         </Head>
         <main>
           <ApolloProvider client={apolloClient}>

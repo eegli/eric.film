@@ -8,6 +8,23 @@ export const Global = createGlobalStyle`
        url('static/fonts/JetBrainsMono-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
  }
 
+ @font-face {
+  font-family: 'Roboto';
+    src: url('static/fonts/Roboto-Black.ttf')  format('truetype'),
+    url('static/fonts/Roboto-BlackItalic.ttf')  format('truetype'),
+    url('static/fonts/Roboto-Bold.ttf')  format('truetype'),
+    url('static/fonts/Roboto-BoldItalic.ttf')  format('truetype'),
+    url('static/fonts/Roboto-Italic.ttf')  format('truetype'),
+    url('static/fonts/Roboto-Light.ttf')  format('truetype'),
+    url('static/fonts/Roboto-LightItalic.ttf')  format('truetype'),
+    url('static/fonts/Roboto-Medium.ttf')  format('truetype'),
+    url('static/fonts/Roboto-MediumItalic.ttf')  format('truetype'),
+    url('static/fonts/Roboto-Regular.ttf')  format('truetype'),
+    url('static/fonts/Roboto-Thin.ttf')  format('truetype'),
+    url('static/fonts/Roboto-ThinItalic.ttf')  format('truetype'),
+  }
+ 
+
   html {
     overflow-y: scroll;
     overflow-x: hidden;
