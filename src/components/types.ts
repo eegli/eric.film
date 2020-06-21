@@ -28,14 +28,17 @@ export type Category = BlogCategories | PortfolioCategories;
  BLOGPOST SCHEMA
  */
 
-export interface BlogPostPreview {
+export interface BlogPostCore {
   excerpt: string;
   id: number;
   slug: string;
   title: string;
+  previewImage: { url: string };
+}
+
+export interface BlogPostPreview extends BlogPostCore {
   type: BlogCategories;
   createdAt: string;
-  previewImage: { url: string };
 }
 
 export interface BlogPostContent extends BlogPostPreview {
@@ -50,6 +53,9 @@ export interface BlogPostPreviewData {
       count: number;
     };
   };
+}
+export interface BlogPostHomeData {
+  blogposts: BlogPostCore[];
 }
 
 export enum SortBy {

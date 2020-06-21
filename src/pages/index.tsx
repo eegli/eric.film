@@ -1,4 +1,4 @@
-import { ALL_IMGS } from '@/api/queries';
+import { ALL_IMGS, LATEST_BLOGPOST } from '@/api/queries';
 import { GetServerSideProps } from 'next';
 import LandingVideo from '../components/landing/landing-video.component';
 import LandingContent from '../components/landing/landing-content.component';
@@ -18,7 +18,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const apolloClient = initializeApollo();
 
   await apolloClient.query({
-    query: ALL_IMGS,
+    query: LATEST_BLOGPOST,
   });
 
   return {

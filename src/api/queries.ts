@@ -52,6 +52,20 @@ export const SINGLE_BLOGPOST = (slug: string | string[]) =>
   }
   `;
 
+export const LATEST_BLOGPOST = gql`
+  query LATEST_BLOGPOST {
+    blogposts(first: 1) {
+      id
+      slug
+      title
+      previewImage {
+        url
+      }
+      excerpt
+    }
+  }
+`;
+
 export const ALL_IMGS = gql`
   query ALL_IMGS {
     imgCollections {
