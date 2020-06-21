@@ -28,19 +28,23 @@ export type Category = BlogCategories | PortfolioCategories;
  BLOGPOST SCHEMA
  */
 
-export interface BlogPost {
+export interface BlogPostPreview {
   excerpt: string;
   id: number;
   slug: string;
   title: string;
-  content: any;
   type: BlogCategories;
   createdAt: string;
   previewImage: { url: string };
 }
 
-export interface BlogPostData {
-  blogposts: BlogPost[];
+export interface BlogPostContent extends BlogPostPreview {
+  content: any;
+  ytvideo?: string;
+}
+
+export interface BlogPostPreviewData {
+  blogposts: BlogPostPreview[];
   blogpostsConnection: {
     aggregate: {
       count: number;

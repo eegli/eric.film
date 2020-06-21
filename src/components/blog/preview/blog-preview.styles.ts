@@ -14,6 +14,7 @@ export const BlogPostContainer = styled.article`
   flex-direction: column;
   justify-content: space-between;
   max-width: 360px;
+  width: 360px;
   padding: 1rem;
   margin: 0.5rem;
   background-color: ${({ theme }) => theme.baseBgraised};

@@ -11,7 +11,12 @@ import {
   FetchIcon,
 } from './blog-category.styles';
 
-import { BlogPost, Category, BlogPostData, SortBy } from '@/components/types';
+import {
+  BlogPostPreview,
+  Category,
+  BlogPostPreviewData,
+  SortBy,
+} from '@/components/types';
 
 type Props = {
   filter?: Category;
@@ -20,7 +25,7 @@ type Props = {
 
 const BlogCategory: React.FC<Props> = ({ filter, sortBy }) => {
   const { loading, error, data, fetchMore, networkStatus } = useQuery<
-    BlogPostData
+    BlogPostPreviewData
   >(ALL_BLOGPOSTS_PREVIEW, {
     variables: allBlogPostsVars(sortBy),
     // Setting this value to true will make the component rerender when
@@ -66,13 +71,13 @@ const BlogCategory: React.FC<Props> = ({ filter, sortBy }) => {
     !filter
       ? (posts = data.blogposts)
       : (posts = data.blogposts.filter(
-          (post: BlogPost) => post.type === filter
+          (post: BlogPostPreview) => post.type === filter
         ));
 
     return (
       <>
         <BlogCategoryContainer>
-          {posts.map((post: BlogPost) => (
+          {posts.map((post: BlogPostPreview) => (
             <BlogPreview key={post.id} {...post} />
           ))}
         </BlogCategoryContainer>

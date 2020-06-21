@@ -4,16 +4,23 @@ import {
   BlogPostTitle,
   BlogPostExcerpt,
   StyledMD,
+  StyledIframe,
+  IFrameWrapper,
 } from './blog-content.styles';
 import CodeBlock from '../custom-renders/blog-codeblock.component';
 import Link from '../custom-renders/blog-link.component';
-import { BlogPost } from '@/components/types';
+import { BlogPostContent } from '@/components/types';
 
-const BlogContent: React.FC<BlogPost> = ({ title, excerpt, content }) => {
+const BlogContent: React.FC<BlogPostContent> = ({
+  title,
+  content,
+  ytvideo,
+}) => {
+  console.log(ytvideo);
   return (
     <BlogPostContainer>
       <BlogPostTitle>{title}</BlogPostTitle>
-      <BlogPostExcerpt>{excerpt}</BlogPostExcerpt>
+      {/* <BlogPostExcerpt>{excerpt}</BlogPostExcerpt> */}
       <StyledMD
         renderers={{
           code: CodeBlock,
@@ -21,6 +28,15 @@ const BlogContent: React.FC<BlogPost> = ({ title, excerpt, content }) => {
         }}
         source={content}
       />
+      {ytvideo ? (
+        <IFrameWrapper>
+          <StyledIframe
+            src={`https://www.youtube.com/embed/${ytvideo}`}
+            allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+            allowFullScreen
+          />
+        </IFrameWrapper>
+      ) : null}
     </BlogPostContainer>
   );
 };
