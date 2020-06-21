@@ -21,7 +21,11 @@ const StillCategory: React.FC = () => {
     const images = data.imgCollections.find(
       collection => collection.imageType === 'portfolio'
     );
-    return <>{images ? <Gallery images={images.collection} /> : null}</>;
+    return (
+      <>
+        {images ? <Gallery index={false} images={images.collection} /> : null}
+      </>
+    );
   } else {
     return <div></div>;
   }
