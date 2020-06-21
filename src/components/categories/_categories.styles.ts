@@ -34,13 +34,14 @@ export const SortButtonContainer = styled.div`
 
 export const SortButton = styled.button`
   cursor: pointer;
-  padding: 0.8rem;
   margin: 0 0.5rem;
   border-radius: 0.5rem;
-  background-color: ${({ theme }) => theme.baseBgraised};
+  text-decoration: underline;
   border: none;
+  letter-spacing: 1px;
   border-color: none;
-  font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
+  background-color: ${({ theme }) => theme.baseBg};
+  font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   color: ${({ theme }) => theme.textSecondaryColor};
   &:last-child {
     margin: 0;
