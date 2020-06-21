@@ -1,39 +1,38 @@
 import styled from 'styled-components';
+import { FaAngleDown } from 'react-icons/fa';
+import Select from 'react-select';
+
+export const CategoryContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+
+  @media screen and (max-width: 850px) {
+    justify-content: center;
+    padding: 0;
+  }
+`;
 
 export const SelectionCardContainer = styled.div`
   display: flex;
   justify-content: center;
   overflow-x: scroll;
-  width: 100%;
   flex-wrap: wrap;
 `;
 
-export const SortSelectContainer = styled.div`
-  align-self: center;
-  margin-left: 2rem;
-  @media screen and (max-width: 700px) {
-    flex: 0 1 100%;
-    margin: 0.5rem 0;
-  }
-`;
+export const SelectContainer = styled(Select)`
+  max-width: 120px;
+  width: 120px;
 
-export const SortSelect = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  & > div {
-    width: 80px;
-    background-color: ${({ theme }) => theme.baseBgraised};
-    border-radius: 0.5rem;
-    padding: 0.5rem;
+  @media screen and (max-width: 850px) {
+    margin: 0.5rem;
   }
-
-  & > div > select {
-    background-color: ${({ theme }) => theme.baseBgraised};
-    margin: 0 auto;
-    color: ${({ theme }) => theme.textColor};
-    border: none;
-    font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
+  & > * {
+    background-color: ${({ theme }) => theme.baseBgraised} !important;
+    color: ${({ theme }) => theme.textColor} !important;
+    border: none !important;
   }
 `;
 
