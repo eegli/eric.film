@@ -1,40 +1,47 @@
 import styled from 'styled-components';
 
+import Select from 'react-select';
+
+export const CategoryContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+
+  @media screen and (max-width: 850px) {
+    justify-content: center;
+    padding: 0;
+  }
+`;
+
 export const SelectionCardContainer = styled.div`
   display: flex;
   justify-content: center;
   overflow-x: scroll;
-  width: 100%;
   flex-wrap: wrap;
 `;
 
-export const SortSelectContainer = styled.div`
-  align-self: center;
-  margin-left: 2rem;
-  @media screen and (max-width: 700px) {
-    flex: 0 1 100%;
+export const SortButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 850px) {
+    flex: 1 1 100%;
+    justify-content: center;
     margin: 0.5rem 0;
   }
 `;
 
-export const SortSelect = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  & > div {
-    width: 80px;
-    background-color: ${({ theme }) => theme.baseBgraised};
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-  }
-
-  & > div > select {
-    background-color: ${({ theme }) => theme.baseBgraised};
-    margin: 0 auto;
-    color: ${({ theme }) => theme.textColor};
-    border: none;
-    font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
-  }
+export const SortButton = styled.button`
+  cursor: pointer;
+  margin-left: 0.5rem;
+  text-decoration: underline;
+  border: none;
+  letter-spacing: 1px;
+  border-color: none;
+  background-color: ${({ theme }) => theme.baseBg};
+  font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
+  color: ${({ theme }) => theme.textSecondaryColor};
 `;
 
 type CardContainerProps = {
