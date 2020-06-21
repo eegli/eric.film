@@ -37,7 +37,7 @@ export const BlogPostTitle = styled.h1`
 export const BlogPostExcerpt = styled.h2`
   font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   font-weight: normal;
-  color: ${({ theme }) => theme.textSecondaryColor};
+  color: ${({ theme }) => theme.textColor};
   ${hover}
 `;
 
