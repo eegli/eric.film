@@ -1,10 +1,10 @@
 import BlogContent from './content/blog-content.component';
 import { DiscussionEmbed } from 'disqus-react';
-import { BlogPost } from '@/components/types';
+import { BlogPostContent } from '@/components/types';
 import { Container } from './blog-container.styles';
 
 type Props = {
-  post: BlogPost;
+  post: BlogPostContent;
 };
 
 const BlogContainer: React.FC<Props> = ({ post }) => {

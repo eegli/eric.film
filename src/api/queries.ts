@@ -30,7 +30,7 @@ export const ALL_BLOGPOSTS_PREVIEW = gql`
 // Setting default sort
 export const allBlogPostsVars = (orderBy: SortBy = SortBy.createdAt_DESC) => ({
   skip: 0,
-  first: 6,
+  first: 12,
   orderBy: orderBy,
 });
 
