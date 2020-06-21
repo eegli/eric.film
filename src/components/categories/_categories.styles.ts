@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FaAngleDown } from 'react-icons/fa';
+
 import Select from 'react-select';
 
 export const CategoryContainer = styled.div`
@@ -22,17 +22,28 @@ export const SelectionCardContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-export const SelectContainer = styled(Select)`
-  max-width: 120px;
-  width: 120px;
-
+export const SortButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
   @media screen and (max-width: 850px) {
-    margin: 0.5rem;
+    flex: 1 1 100%;
+    justify-content: center;
+    margin: 0.5rem 0;
   }
-  & > * {
-    background-color: ${({ theme }) => theme.baseBgraised} !important;
-    color: ${({ theme }) => theme.textColor} !important;
-    border: none !important;
+`;
+
+export const SortButton = styled.button`
+  cursor: pointer;
+  padding: 0.8rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  background-color: ${({ theme }) => theme.baseBgraised};
+  border: none;
+  border-color: none;
+  font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
+  color: ${({ theme }) => theme.textSecondaryColor};
+  &:last-child {
+    margin: 0;
   }
 `;
 
