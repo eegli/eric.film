@@ -34,8 +34,7 @@ export const SortButtonContainer = styled.div`
 
 export const SortButton = styled.button`
   cursor: pointer;
-  margin: 0 0.5rem;
-  border-radius: 0.5rem;
+  margin-left: 0.5rem;
   text-decoration: underline;
   border: none;
   letter-spacing: 1px;
@@ -43,9 +42,6 @@ export const SortButton = styled.button`
   background-color: ${({ theme }) => theme.baseBg};
   font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   color: ${({ theme }) => theme.textSecondaryColor};
-  &:last-child {
-    margin: 0;
-  }
 `;
 
 type CardContainerProps = {

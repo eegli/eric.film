@@ -51,13 +51,21 @@ const BlogCategories: React.FC = () => {
           </CardContainer>
         </SelectionCardContainer>
         <SortButtonContainer>
-          <FaSort />
-          <SortButton onClick={() => setSort(SortBy.createdAt_DESC)}>
-            latest
-          </SortButton>
-          <SortButton onClick={() => setSort(SortBy.createdAt_ASC)}>
-            oldest
-          </SortButton>
+          {sort === SortBy.createdAt_DESC ? (
+            <>
+              <FaSort />
+              <SortButton onClick={() => setSort(SortBy.createdAt_ASC)}>
+                show oldest
+              </SortButton>
+            </>
+          ) : (
+            <>
+              <FaSort />
+              <SortButton onClick={() => setSort(SortBy.createdAt_DESC)}>
+                show latest
+              </SortButton>
+            </>
+          )}
         </SortButtonContainer>
       </CategoryContainer>
       <CategorySwitch sortBy={sort} />
