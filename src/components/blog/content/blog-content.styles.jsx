@@ -39,3 +39,18 @@ export const StyledMD = styled(ReactMarkdown)`
     max-height: 100%;
   }
 `;
+
+export const IFrameWrapper = styled.div`
+  margin: 1rem 0;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+`;
+export const StyledIframe = styled.iframe`
+  position: absolute;
+  border: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`;

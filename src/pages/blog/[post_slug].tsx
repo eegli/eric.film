@@ -3,12 +3,12 @@ import { GetServerSideProps } from 'next';
 import BlogContainer from '@/components/blog/blog-container.component';
 import { SINGLE_BLOGPOST } from '../../api/queries';
 import { fetcher } from '../../api/graphql';
-import { BlogPost } from '@/components/types';
+import { BlogPostContent } from '@/components/types';
 import LayoutContainer from '@/components/shared/layout/layout.container';
 import Head from 'next/head';
 
 type Props = {
-  post: BlogPost;
+  post: BlogPostContent;
 };
 
 const IndexPage: React.FC<Props> = ({ post }) => (

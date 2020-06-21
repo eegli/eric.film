@@ -28,6 +28,13 @@ export const Global = createGlobalStyle`
     font-size: ${({ theme }) => theme.fontsizes.h1FontSize}
   }
 
+  p, h2 {
+    line-height: 1.6rem;
+  }
+
+  p, h1, h2 {
+    letter-spacing: 1px;
+  }
   select {
     font-family: 'Roboto', sans-serif;
   }

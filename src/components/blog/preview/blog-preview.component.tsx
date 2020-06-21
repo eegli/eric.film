@@ -16,9 +16,9 @@ import {
 import ProgressiveImage from 'react-progressive-graceful-image';
 import { Spinner } from '@/components/custom-spinner/custom-spinner.styles';
 import { dateFormat } from '@/shared/util/dates';
-import { BlogPost } from '@/components/types';
+import { BlogPostPreview } from '@/components/types';
 
-const BlogPreview: React.FC<BlogPost> = ({
+const BlogPreview: React.FC<BlogPostPreview> = ({
   title,
   excerpt,
   slug,
