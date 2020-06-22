@@ -13,6 +13,6 @@ export function useActiveUrl(defaultCat: string): string {
     return () => {
       Router.events.off('routeChangeComplete', handleRouteChange);
     };
-  }, []);
+  }, [Router]);
   return activeUrl;
 }

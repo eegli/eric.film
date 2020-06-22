@@ -29,12 +29,9 @@ export const Global = createGlobalStyle`
   }
 
   p, h2 {
-    line-height: 1.6rem;
+    line-height: 1.7rem;
   }
 
-  p, h1, h2 {
-    letter-spacing: 1px;
-  }
   select {
     font-family: 'Roboto', sans-serif;
   }
