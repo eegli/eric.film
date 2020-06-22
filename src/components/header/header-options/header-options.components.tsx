@@ -5,7 +5,6 @@ import Link from 'next/link';
 export interface Props {
   position: 'mobile' | 'desktop';
 }
-import { BlogCategories } from '@/components/types';
 
 const HeaderOptions: React.FC<Props> = ({ position }) => {
   let isMobile: boolean;

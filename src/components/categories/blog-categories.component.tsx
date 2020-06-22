@@ -9,7 +9,7 @@ import {
 import CategorySwitch from './switch-categories/category-switch.component';
 import { useRouter } from 'next/router';
 import { BlogCategories as B, SortBy } from '@/components/types';
-import { useActiveUrl } from './hook/useActiveCat';
+import { useActiveUrl } from './hooks/useActiveCat';
 import { FaSort } from 'react-icons/fa';
 
 /* 
@@ -21,7 +21,8 @@ const BlogCategories: React.FC = () => {
   const slug = '/blog?cat=';
   const router = useRouter();
   const activeUrl = useActiveUrl(B.BLOG_ALL);
-  const handleBlogClick = (location: B): void => {
+
+  const handleClick = (location: B): void => {
     router.push(`${slug}${location}`, undefined, { shallow: true });
   };
 
@@ -30,22 +31,22 @@ const BlogCategories: React.FC = () => {
       <CategoryContainer>
         <SelectionCardContainer>
           <CardContainer
-            onClick={() => handleBlogClick(B.BLOG_ALL)}
+            onClick={() => handleClick(B.BLOG_ALL)}
             active={activeUrl === `${slug}${B.BLOG_ALL}`}>
             {B.BLOG_ALL}
           </CardContainer>
           <CardContainer
-            onClick={() => handleBlogClick(B.BLOG_TECH)}
+            onClick={() => handleClick(B.BLOG_TECH)}
             active={activeUrl === `${slug}${B.BLOG_TECH}`}>
             {B.BLOG_TECH}
           </CardContainer>
           <CardContainer
-            onClick={() => handleBlogClick(B.BLOG_VOTW)}
+            onClick={() => handleClick(B.BLOG_VOTW)}
             active={activeUrl === `${slug}${B.BLOG_VOTW}`}>
             {B.BLOG_VOTW}
           </CardContainer>
           <CardContainer
-            onClick={() => handleBlogClick(B.BLOG_VARIA)}
+            onClick={() => handleClick(B.BLOG_VARIA)}
             active={activeUrl === `${slug}${B.BLOG_VARIA}`}>
             {B.BLOG_VARIA}
           </CardContainer>
