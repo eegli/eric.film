@@ -6,7 +6,7 @@ type GalleryProps = {
 
 export const GalleryContainer = styled.div<GalleryProps>`
   /* Prevent vertical gaps */
-  margin-top: 1rem;
+  margin-top: ${({ index }) => (index ? '2.5rem' : '1rem')};
   line-height: 0;
 
   -webkit-column-count: ${({ index }) => (index ? '3' : '1')};

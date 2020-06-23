@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-type Props = {
+type H1Props = {
   landing?: boolean;
 };
 
-export const Sh1 = styled.h1<Props>`
+export const Sh1 = styled.h1<H1Props>`
   text-shadow: 2px 2px 0px ${({ theme }) => theme.textShadowColor};
   letter-spacing: 0.2rem;
   text-align: center;
@@ -16,7 +16,6 @@ export const Sh1 = styled.h1<Props>`
 export const Sh2 = styled.h2`
   letter-spacing: 0.1rem;
   font-weight: 400;
-  line-height: 1rem;
   text-align: center;
   font-size: 1.2rem;
   margin: 1rem 0;
