@@ -20,7 +20,7 @@ export const Card = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  max-width: 280px;
+  max-width: 350px;
   padding: 0.5rem;
 `;
 
@@ -30,7 +30,7 @@ export const CardTitle = styled.h2`
   text-align: center;
   margin: 1rem 0 0 0;
   font-size: 2rem;
-  text-shadow: 3px 3px 0px ${({ theme }) => theme.textShadowColor};
+  text-shadow: 2px 2px 0px ${({ theme }) => theme.textShadowColor};
   color: ${({ theme }) => theme.textColor};
 `;
 export const CardDescription = styled.p`

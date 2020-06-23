@@ -8,5 +8,6 @@ export const LayoutContainerStyle = styled.div<Props>`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: ${({ blog }) => (blog ? '860px' : '1024px;')};
+  max-width: ${({ page }) =>
+    page === 'blog' ? '860px' : page === 'about' ? '1200px' : '1024px'};
 `;

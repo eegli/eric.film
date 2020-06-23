@@ -8,7 +8,7 @@ import BlogCategories from '@/components/categories/blog-categories.component';
 
 const IndexPage: React.FC = () => {
   return (
-    <LayoutContainer blog>
+    <LayoutContainer page='blog'>
       <Sh1>blog</Sh1>
       <BlogCategories />
     </LayoutContainer>
