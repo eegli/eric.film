@@ -7,7 +7,7 @@ const About: React.FC = () => {
     <AboutContainer>
       <CardComponent />
       <hr style={{ width: '80%' }} />
-      {/* <ResumeComponent /> */}
+      <ResumeComponent />
     </AboutContainer>
   );
 };
