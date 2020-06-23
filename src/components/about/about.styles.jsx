@@ -24,7 +24,7 @@ export const Card = styled.div`
   padding: 0.5rem;
 `;
 
-export const CardTitle = styled.h2`
+export const CardTitle = styled.h1`
   letter-spacing: 0.1rem;
   font-weight: 400;
   text-align: center;

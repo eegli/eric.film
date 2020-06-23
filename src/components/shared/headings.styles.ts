@@ -21,11 +21,6 @@ export const Sh2 = styled.h2`
   margin: 1rem 0;
 `;
 
-export const Sp = styled.p`
-  margin: 0;
-  text-align: center;
-`;
-
 export const DescriptionContainer = styled.div`
   display: flex;
   justify-content: center;
