@@ -1,8 +1,6 @@
 import { GraphQLClient } from 'graphql-request';
 
-const api =
-  'https://api-eu-central-1.graphcms.com/v2/ckawpprfa01ja01z62wiy22qi/master';
-
+const api = process.env.graphql_url;
 export const fetcher = async query => {
   const gql = new GraphQLClient(api);
 
