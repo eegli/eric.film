@@ -1,5 +1,5 @@
 import React from 'react';
-import { DescriptionContainer, Sh1, Sh2, Sp } from '@/shared/headings.styles';
+import { DescriptionContainer, Sh1, Sh2 } from '@/shared/headings.styles';
 import { LandingContentContainer } from './landing-content.styles';
 import Gallery from '@/components/gallery/gallery.component';
 import CustomLink from '@/components/custom-link/custom-link.component';
