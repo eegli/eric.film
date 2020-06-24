@@ -1,5 +1,6 @@
 import React from 'react';
 import { GetServerSideProps } from 'next';
+
 import BlogContainer from '@/components/blog/blog-container.component';
 import { SINGLE_BLOGPOST } from '../../api/queries';
 import { fetcher } from '../../api/graphql';
@@ -25,8 +26,12 @@ const IndexPage: React.FC<Props> = ({ post }) => {
         <meta name='description' content={trimmedExc} />
         <meta property='og:title' content={post.title} />
         <meta property='og:image' content={post.previewImage.url} />
-        <meta property='og:site_name' content='eric.film' />
+        <meta property='og:site_name' content='Eric Egli' />
         <meta property='og:description' content={trimmedExc} />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content={post.title} />
+        <meta name='twitter:description' content={trimmedExc} />
+        <meta name='twitter:image' content={post.previewImage.url} />
       </Head>
 
       <LayoutContainer page='blog'>
