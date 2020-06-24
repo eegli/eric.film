@@ -45,7 +45,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             content='initial-scale=1.0, width=device-width'
           />
           {/* TODO Remove noindex */}
-          <meta name='robots' content='noindex'></meta>
+          <meta name='robots' content='noindex, nofollow' />
         </Head>
         <main>
           <ApolloProvider client={apolloClient}>

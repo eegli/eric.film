@@ -1,6 +1,6 @@
 import { ALL_IMGS } from '@/api/queries';
 import Head from 'next/head';
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import LandingVideo from '../components/landing/landing-video.component';
 import LandingContent from '../components/landing/landing-content.component';
 import { initializeApollo } from '../lib/apolloClient';
@@ -22,7 +22,7 @@ const IndexPage: React.FC = () => {
 };
 
 //TODO Fix getStaticProps for Safari
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const apolloClient = initializeApollo();
 
   await apolloClient.query({
