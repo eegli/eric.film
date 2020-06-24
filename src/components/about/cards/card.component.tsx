@@ -18,12 +18,12 @@ const CardComponent: React.FC = () => {
           <CardImage src='/static/img/about-2.jpg' alt='about-image' />
           <CardTitle>eric</CardTitle>
           <CardDescription>
-            <span>FOUNDER</span> <br />
-            eric has been with us from the start. he is the founding father of
-            eric.film and oversees all business activities as well as HR-related
-            topics.
-            <br />
-            Main responsibilities:
+            <span>FOUNDER</span>
+            <p>
+              eric has been with us from the start. he is the founding father of
+              eric.film and oversees all business activities as well as
+              HR-related topics. Main responsibilities:
+            </p>
             <ul>
               <li>project management</li>
               <li>photography</li>
@@ -35,11 +35,12 @@ const CardComponent: React.FC = () => {
           <CardImage src='/static/img/about-1.jpg' alt='about-image' />
           <CardTitle>eric</CardTitle>
           <CardDescription>
-            <span>LEAD DEVELOPER</span> <br />
-            eric is our self-taught javascript engineer. he mostly talks about
-            "react" but as long as our website looks good, we don't really care.
-            <br />
-            Main responsibilities:
+            <span>LEAD DEVELOPER</span>
+            <p>
+              eric is our self-taught javascript engineer. he mostly talks about
+              "react" but as long as our website looks good, we don't really
+              care. Main responsibilities:
+            </p>
             <ul>
               <li>eric.film development</li>
               <li>blogging</li>
@@ -51,12 +52,15 @@ const CardComponent: React.FC = () => {
           <CardImage src='/static/img/about-3.jpg' alt='about-image' />
           <CardTitle>eric</CardTitle>
           <CardDescription>
-            <span>INTERN</span> <br /> eric has bachelor of arts in
-            communication science so we let him do all the client talking. other
-            than that, we only really see him at after-work drinks. <br />
-            Main responsibilities:
+            <span>INTERN</span>
+            <p>
+              eric has bachelor of arts in communication science so we let him
+              do all the client talking. other than that, we only really see him
+              at after-work drinks. Main responsibilities:
+            </p>
             <ul>
               <li>none</li>
+              <br />
             </ul>
             <SocialBar />
           </CardDescription>
