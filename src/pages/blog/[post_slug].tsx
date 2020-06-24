@@ -1,6 +1,5 @@
 import React from 'react';
 import { GetServerSideProps } from 'next';
-
 import BlogContainer from '@/components/blog/blog-container.component';
 import { SINGLE_BLOGPOST } from '../../api/queries';
 import { fetcher } from '../../api/graphql';

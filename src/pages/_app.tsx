@@ -44,7 +44,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             name='viewport'
             content='initial-scale=1.0, width=device-width'
           />
-          <link rel='canonical' href='https://beta.eric.film/' />
+
           {/* TODO Remove noindex */}
           <meta name='robots' content='noindex, nofollow' />
         </Head>
