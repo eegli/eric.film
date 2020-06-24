@@ -8,7 +8,6 @@ export function useActiveUrl(defaultCat: string): string {
   useIsomorphicLayoutEffect(() => {
     const handleRouteChange = (url: string) => {
       setActiveUrl(url);
-      console.log(url);
     };
 
     Router.events.on('routeChangeComplete', handleRouteChange);

@@ -16,7 +16,6 @@ const BlogContent: React.FC<BlogPostContent> = ({
   content,
   ytvideo,
 }) => {
-  console.log(ytvideo);
   return (
     <BlogPostContainer>
       <BlogPostTitle>{title}</BlogPostTitle>

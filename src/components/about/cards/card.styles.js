@@ -33,7 +33,7 @@ export const CardTitle = styled.h1`
   font-size: 2rem;
   color: ${({ theme }) => theme.textColor};
 `;
-export const CardDescription = styled.p`
+export const CardDescription = styled.div`
   background-color: ${({ theme }) => theme.baseBgraised};
   padding: 2rem;
   & > span {
@@ -45,6 +45,6 @@ export const CardDescription = styled.p`
   }
 `;
 export const CardImage = styled.img`
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
 `;
