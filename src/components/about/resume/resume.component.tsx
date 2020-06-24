@@ -19,55 +19,69 @@ const ResumeComponent: React.FC = () => {
     <Container>
       <Section>
         <ToggleContainer onClick={() => setWorkEdOpen(!workEdOpen)}>
-          <ToggleTitle>education and work</ToggleTitle>
+          <ToggleTitle>education & work</ToggleTitle>
           {workEdOpen ? <FaAngleUp /> : <FaAngleDown />}
         </ToggleContainer>
         <SmoothCollapse expanded={workEdOpen}>
           <ResumeContent>
             <span>EDUCATION</span>
-            <ul>
-              <li>
-                2020 - 2024: Master of Science, Data Science. University of
+            <div>
+              <span>2020 - 2024</span>
+              <p>Master of Science, Data Science. University of Zurich</p>
+              <span>2015 - 2019</span>
+              <p>
+                Bachelor of Arts, Media and Communication Science. University of
                 Zurich
-              </li>
-              <br />
-              <li>
-                2015 - 2019: Bachelor of Arts, Media and Communication Science.
-                University of Zurich
-              </li>
-              <br />
-              <li>
+              </p>
+              <span>since 2018</span>
+              <p>
                 Various courses on Udemy: Javascript, Typescript, React.js,
-                HTML, CSS
-              </li>
-            </ul>
+                React native, HTML, CSS
+              </p>
+            </div>
             <span>WORK</span>
-            <ul>
-              <li>05.2018 - present: Digital Project Manager. Ringier AG</li>
-              <br />
-              <li>
-                01.2013 - present: Freelance photographer & videographer.
-                Self-employed
-              </li>
-              <br />
-              <li>01.2017 - 04.2018: Project Management Support. Ringier AG</li>
-              <br />
-              <li>
-                05.2016 - 04.2019: Video Journalist. Zürcher Oberländer Medien
-                AG
-              </li>
-            </ul>
+            <div>
+              <span>05.2018 - present</span>
+              <p>Digital Project Manager. Ringier AG</p>
+              <span>01.2013 - present</span>
+              <p>Freelance photographer & videographer. Self-employed</p>
+              <span>01.2017 - 04.2018</span>
+              <p>Project Management Support. Ringier AG</p>
+              <span>05.2016 - 04.2019</span>
+              <p>Video Journalist. Zürcher Oberländer Medien AG</p>
+            </div>
           </ResumeContent>
         </SmoothCollapse>
       </Section>
       <Section>
         <ToggleContainer onClick={() => setToolsTechOpen(!toolsTechOpen)}>
-          <ToggleTitle>tools and technology</ToggleTitle>
+          <ToggleTitle>tools & technology</ToggleTitle>
           {toolsTechOpen ? <FaAngleUp /> : <FaAngleDown />}
         </ToggleContainer>
         <SmoothCollapse expanded={toolsTechOpen}>
           <ResumeContent>
-            <p>Eric</p>
+            <span>DEVELOPMENT</span>
+            <div>
+              <ul>
+                <li>Javascript (ES5, ES6)</li>
+                <li>Typescript</li>
+                <li>React.js, React native, Next.js</li>
+                <li>Redux, React Redux</li>
+                <li>CSS in JS</li>
+                <li>HTML5, CSS3</li>
+                <li>GraphQL, REST</li>
+                <li>Google Firebase</li>
+                <li>Git</li>
+                <li>Node.js (currently learning)</li>
+              </ul>
+            </div>
+            <span>MISC</span>
+            <div>
+              <ul>
+                <li>Agile (kanban & scrum)</li>
+                <li>Adobe Creative Suite</li>
+              </ul>
+            </div>
           </ResumeContent>
         </SmoothCollapse>
       </Section>

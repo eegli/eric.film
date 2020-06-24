@@ -26,12 +26,11 @@ export const Card = styled.div`
 `;
 
 export const CardTitle = styled.h1`
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.5rem;
   font-weight: 400;
   text-align: center;
   margin: 1rem 0 0 0;
   font-size: 2rem;
-  text-shadow: 2px 2px 0px ${({ theme }) => theme.textShadowColor};
   color: ${({ theme }) => theme.textColor};
 `;
 export const CardDescription = styled.p`
@@ -40,6 +39,9 @@ export const CardDescription = styled.p`
   & > span {
     color: ${({ theme }) => theme.textSecondaryColor};
     font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
+  }
+  @media screen and (max-width: 1000px) {
+    padding: 1rem;
   }
 `;
 export const CardImage = styled.img`
