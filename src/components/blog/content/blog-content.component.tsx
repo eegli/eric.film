@@ -9,6 +9,7 @@ import {
 } from './blog-content.styles';
 import CodeBlock from '../custom-renders/blog-codeblock.component';
 import Link from '../custom-renders/blog-link.component';
+import Image from '../custom-renders/blog-image.component';
 import { BlogPostContent } from '@/components/types';
 
 const BlogContent: React.FC<BlogPostContent> = ({
@@ -24,6 +25,7 @@ const BlogContent: React.FC<BlogPostContent> = ({
         renderers={{
           code: CodeBlock,
           link: Link,
+          image: Image,
         }}
         source={content}
       />
