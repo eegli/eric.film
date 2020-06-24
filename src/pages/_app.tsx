@@ -39,7 +39,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     return (
       <>
         <Head>
-          <title>eric.film - home</title>
+          <title>eric.film</title>
           <meta
             name='viewport'
             content='initial-scale=1.0, width=device-width'
