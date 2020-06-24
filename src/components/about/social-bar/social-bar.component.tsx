@@ -4,15 +4,22 @@ import { Container, IconContainer } from './social-bar.styles';
 const SocialBar: React.FC = () => {
   return (
     <Container>
-      <IconContainer href='https://github.com/eegli' target='_blank'>
+      <IconContainer
+        href='https://github.com/eegli'
+        rel='noopener'
+        target='_blank'>
         <FaGithub />
       </IconContainer>
       <IconContainer
         href='https://www.linkedin.com/in/ericegli/'
+        rel='noopener'
         target='_blank'>
         <FaLinkedinIn />
       </IconContainer>
-      <IconContainer href='http://instagram.com/eric.film' target='_blank'>
+      <IconContainer
+        href='http://instagram.com/eric.film'
+        rel='noopener'
+        target='_blank'>
         <FaInstagram />
       </IconContainer>
     </Container>

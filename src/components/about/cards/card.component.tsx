@@ -15,7 +15,7 @@ const CardComponent: React.FC = () => {
       <CardHeader>- meet the amazing team -</CardHeader>
       <CardContainer>
         <Card>
-          <CardImage src='/static/img/about-2.jpg' />
+          <CardImage src='/static/img/about-2.jpg' alt='about-image' />
           <CardTitle>eric</CardTitle>
           <CardDescription>
             <span>FOUNDER</span> <br />
@@ -32,7 +32,7 @@ const CardComponent: React.FC = () => {
           </CardDescription>
         </Card>
         <Card>
-          <CardImage src='/static/img/about-1.jpg' />
+          <CardImage src='/static/img/about-1.jpg' alt='about-image' />
           <CardTitle>eric</CardTitle>
           <CardDescription>
             <span>LEAD DEVELOPER</span> <br />
@@ -48,7 +48,7 @@ const CardComponent: React.FC = () => {
           </CardDescription>
         </Card>
         <Card>
-          <CardImage src='/static/img/about-3.jpg' />
+          <CardImage src='/static/img/about-3.jpg' alt='about-image' />
           <CardTitle>eric</CardTitle>
           <CardDescription>
             <span>INTERN</span> <br /> eric has bachelor of arts in

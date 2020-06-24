@@ -13,6 +13,7 @@ import { useApollo } from '../lib/apolloClient';
 import Fonts from '@/styles/fonts';
 
 import { browserTest } from '../utils/browser';
+import language from 'react-syntax-highlighter/dist/esm/languages/hljs/1c';
 
 const App = ({ Component, pageProps }: AppProps) => {
   // Pretty loading state on top
@@ -39,6 +40,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <>
         <Head>
           <title>eric.film - home</title>
+          <html lang='en' />
           <meta
             name='viewport'
             content='initial-scale=1.0, width=device-width'
