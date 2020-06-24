@@ -21,7 +21,6 @@ const IndexPage: React.FC = () => {
   );
 };
 
-//TODO Fix getStaticProps for Safari
 export const getServerSideProps: GetServerSideProps = async () => {
   const apolloClient = initializeApollo();
 

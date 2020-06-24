@@ -10,6 +10,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Gallery
 - Reading time
 - Sentry integration
+- Google Analytics
 
 ## Learnings
 
