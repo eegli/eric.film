@@ -27,7 +27,7 @@ const Header: React.FC = () => {
         <HeaderMainContainer>
           <Link href='/'>
             <a>
-              <StyledLogo src='/static/logo/Logo_v2.png' />
+              <StyledLogo src='/static/logo/Logo_v2.png' alt='eric.film logo' />
             </a>
           </Link>
           <HeaderOptionsDesktopContainer>

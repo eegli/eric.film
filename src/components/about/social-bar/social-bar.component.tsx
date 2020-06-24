@@ -7,18 +7,21 @@ const SocialBar: React.FC = () => {
       <IconContainer
         href='https://github.com/eegli'
         rel='noopener'
+        aria-label='Link to Github'
         target='_blank'>
         <FaGithub />
       </IconContainer>
       <IconContainer
         href='https://www.linkedin.com/in/ericegli/'
         rel='noopener'
+        aria-label='Link to Linkedin'
         target='_blank'>
         <FaLinkedinIn />
       </IconContainer>
       <IconContainer
         href='http://instagram.com/eric.film'
         rel='noopener'
+        aria-label='Link to Instagram'
         target='_blank'>
         <FaInstagram />
       </IconContainer>
