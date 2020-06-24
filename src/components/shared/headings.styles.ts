@@ -10,7 +10,7 @@ export const Sh1 = styled.h1<H1Props>`
   text-align: center;
   display: inline;
   font-size: ${({ landing }) => (landing ? '3rem' : '2.2rem')};
-  font-weight: 300;
+  font-weight: 400;
 `;
 
 export const Sh2 = styled.h2`
