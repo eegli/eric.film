@@ -19,7 +19,7 @@ const ResumeComponent: React.FC = () => {
     <Container>
       <Section>
         <ToggleContainer onClick={() => setWorkEdOpen(!workEdOpen)}>
-          <ToggleTitle>education & work</ToggleTitle>
+          <ToggleTitle>education - work</ToggleTitle>
           {workEdOpen ? <FaAngleUp /> : <FaAngleDown />}
         </ToggleContainer>
         <SmoothCollapse expanded={workEdOpen}>
@@ -55,7 +55,7 @@ const ResumeComponent: React.FC = () => {
       </Section>
       <Section>
         <ToggleContainer onClick={() => setToolsTechOpen(!toolsTechOpen)}>
-          <ToggleTitle>tools & technology</ToggleTitle>
+          <ToggleTitle>tools - technology</ToggleTitle>
           {toolsTechOpen ? <FaAngleUp /> : <FaAngleDown />}
         </ToggleContainer>
         <SmoothCollapse expanded={toolsTechOpen}>
@@ -65,7 +65,8 @@ const ResumeComponent: React.FC = () => {
               <ul>
                 <li>Javascript (ES5, ES6)</li>
                 <li>Typescript</li>
-                <li>React.js, React native, Next.js</li>
+                <li>Next.js</li>
+                <li>React.js, React native</li>
                 <li>Redux, React Redux</li>
                 <li>CSS in JS</li>
                 <li>HTML5, CSS3</li>
@@ -78,7 +79,7 @@ const ResumeComponent: React.FC = () => {
             <span>MISC</span>
             <div>
               <ul>
-                <li>Agile (kanban & scrum)</li>
+                <li>Agile (Scrum & Kanban)</li>
                 <li>Adobe Creative Suite</li>
               </ul>
             </div>
