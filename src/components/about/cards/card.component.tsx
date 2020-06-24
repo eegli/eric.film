@@ -1,7 +1,7 @@
 import {
   CardContainer,
   Card,
-  CardImage,
+  CardPicture,
   CardTitle,
   CardDescription,
   CardHeader,
@@ -15,7 +15,11 @@ const CardComponent: React.FC = () => {
       <CardHeader>- meet the amazing team -</CardHeader>
       <CardContainer>
         <Card>
-          <CardImage src='/static/img/about-2.jpg' alt='about-image' />
+          <CardPicture>
+            <source srcSet='/static/img/about-2.webp' type='image/webp' />
+            <img src='/static/img/about-2.jpg' alt='logo' />
+          </CardPicture>
+
           <CardTitle>eric</CardTitle>
           <CardDescription>
             <span>FOUNDER</span>
@@ -32,7 +36,10 @@ const CardComponent: React.FC = () => {
           </CardDescription>
         </Card>
         <Card>
-          <CardImage src='/static/img/about-1.jpg' alt='about-image' />
+          <CardPicture>
+            <source srcSet='/static/img/about-1.webp' type='image/webp' />
+            <img src='/static/img/about-1.jpg' alt='logo' />
+          </CardPicture>
           <CardTitle>eric</CardTitle>
           <CardDescription>
             <span>LEAD DEVELOPER</span>
@@ -49,7 +56,10 @@ const CardComponent: React.FC = () => {
           </CardDescription>
         </Card>
         <Card>
-          <CardImage src='/static/img/about-3.jpg' alt='about-image' />
+          <CardPicture>
+            <source srcSet='/static/img/about-3.webp' type='image/webp' />
+            <img src='/static/img/about-3.jpg' alt='logo' />
+          </CardPicture>
           <CardTitle>eric</CardTitle>
           <CardDescription>
             <span>INTERN</span>

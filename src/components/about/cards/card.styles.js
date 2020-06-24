@@ -51,7 +51,7 @@ export const CardDescription = styled.div`
     padding: 1rem;
   }
 `;
-export const CardImage = styled.img`
+export const CardPicture = styled.picture`
   max-width: 100%;
   max-height: 100%;
 `;
