@@ -39,13 +39,14 @@ const App = ({ Component, pageProps }: AppProps) => {
     return (
       <>
         <Head>
-          <title>eric.film - home</title>
+          <title>eric.film</title>
           <meta
             name='viewport'
             content='initial-scale=1.0, width=device-width'
           />
+          <link rel='canonical' href='https://beta.eric.film/' />
           {/* TODO Remove noindex */}
-          <meta name='robots' content='noindex'></meta>
+          <meta name='robots' content='noindex, nofollow' />
         </Head>
         <main>
           <ApolloProvider client={apolloClient}>

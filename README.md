@@ -8,6 +8,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Error boundry
 - Clean up breakpoints
 - Gallery
+- Reading time
+- Sentry integration
+- Google Analytics
 
 ## Learnings
 
