@@ -1,8 +1,12 @@
 import React from 'react';
 import { LayoutContainerStyle } from './layout.styles';
 
-const LayoutContainer: React.FC = ({ children }) => {
-  return <LayoutContainerStyle>{children}</LayoutContainerStyle>;
+export type Props = {
+  page?: 'blog' | 'about';
+};
+
+const LayoutContainer: React.FC<Props> = ({ page, children }) => {
+  return <LayoutContainerStyle page={page}>{children}</LayoutContainerStyle>;
 };
 
 export default LayoutContainer;

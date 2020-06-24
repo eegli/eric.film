@@ -16,7 +16,7 @@ const IndexPage: React.FC<Props> = ({ post }) => (
     <Head>
       <title>{post.title} - eric.film</title>
     </Head>
-    <LayoutContainer>
+    <LayoutContainer page='blog'>
       <BlogContainer post={post} />
     </LayoutContainer>
   </>

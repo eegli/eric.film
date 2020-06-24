@@ -18,6 +18,7 @@ type Props = {
   sortBy?: SortBy;
 };
 
+// TODO separate logic dev/portfolio
 const CategorySwitch: React.FC<Props> = ({ sortBy }) => {
   const router = useRouter();
   switch (router.query.cat) {

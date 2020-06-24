@@ -4,6 +4,6 @@ import styled from 'styled-components';
 export const BgContainer = styled.div`
   background-color: ${({ theme }) => theme.baseBgraised};
   border-radius: 0.5rem;
-  margin: 0.5rem;
+  margin: 0.5rem 0;
   padding: 1rem;
 `;

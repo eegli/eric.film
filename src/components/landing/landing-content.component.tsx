@@ -1,5 +1,5 @@
 import React from 'react';
-import { DescriptionContainer, Sh1, Sh2, Sp } from '@/shared/headings.styles';
+import { DescriptionContainer, Sh1, Sh2 } from '@/shared/headings.styles';
 import { LandingContentContainer } from './landing-content.styles';
 import Gallery from '@/components/gallery/gallery.component';
 import CustomLink from '@/components/custom-link/custom-link.component';
@@ -26,12 +26,13 @@ const LandingContent: React.FC = ({ children }) => {
     return (
       <LandingContentContainer>
         {children}
-        <Sh1 landing>| eric.egli |</Sh1>
+        <Sh1 landing>eric.egli</Sh1>
 
         <DescriptionContainer>
-          <Sh2>film & photography</Sh2>
-          <Sh2>x</Sh2>
-          <Sh2>frontend development</Sh2>
+          <Sh2>
+            film & photography <br />x <br />
+            frontend development
+          </Sh2>
         </DescriptionContainer>
         <CustomLink href='/about'>more</CustomLink>
         {images ? <Gallery index images={images.collection} /> : null}
