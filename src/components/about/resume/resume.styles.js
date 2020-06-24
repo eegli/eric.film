@@ -61,6 +61,9 @@ export const ToggleContainer = styled.div`
   align-items: center;
   background-color: ${({ theme }) => theme.textSecondaryColor};
   padding: 1rem;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const ToggleTitle = styled.p`
