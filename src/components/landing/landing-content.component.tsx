@@ -34,7 +34,7 @@ const LandingContent: React.FC = ({ children }) => {
             frontend development
           </Sh2>
         </DescriptionContainer>
-        <CustomLink href='/about'>more</CustomLink>
+        <CustomLink href='/about'>say hi to the team</CustomLink>
         {images ? <Gallery index images={images.collection} /> : null}
       </LandingContentContainer>
     );
