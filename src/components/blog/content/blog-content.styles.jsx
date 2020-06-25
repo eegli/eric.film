@@ -16,7 +16,25 @@ export const BlogPostExcerpt = styled.h2`
   line-height: 1.5rem;
 `;
 
+export const BlogPostTimes = styled.div`
+  display: flex;
+  color: ${({ theme }) => theme.textShadowColor};
+  & div {
+    display: flex;
+    align-items: center;
+    &:first-child {
+      margin-right: 1rem;
+    }
+    & p {
+      font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
+      margin: 0 0 0 0.3rem;
+      color: ${({ theme }) => theme.textSecondaryColor};
+    }
+  }
+`;
+
 export const StyledMD = styled(ReactMarkdown)`
+  margin-top: 1rem;
   background-color: ${({ theme }) => theme.baseBgraised};
   padding: 0 1.2rem;
   line-height: 1.5rem;

@@ -2,16 +2,17 @@ import React from 'react';
 import {
   BlogPostContainer,
   BlogPostTitle,
-  BlogPostExcerpt,
   StyledMD,
   StyledIframe,
   IFrameWrapper,
+  BlogPostTimes,
 } from './blog-content.styles';
 import CodeBlock from '../custom-renders/blog-codeblock.component';
 import Link from '../custom-renders/blog-link.component';
 import Image from '../custom-renders/blog-image.component';
 import { BlogPostContent } from '@/components/types';
 import { dateFormat } from 'src/utils/dates';
+import { MdAccessTime, MdUpdate } from 'react-icons/md';
 
 const BlogContent: React.FC<BlogPostContent> = ({
   title,
@@ -25,9 +26,19 @@ const BlogContent: React.FC<BlogPostContent> = ({
   return (
     <BlogPostContainer>
       <BlogPostTitle>{title}</BlogPostTitle>
-      <p>Posted: {dateFormat(createdAt)}</p>
-      <p>Updated: {dateFormat(updatedAt)}</p>
-      {/* <BlogPostExcerpt>{excerpt}</BlogPostExcerpt> */}
+      <BlogPostTimes>
+        <div>
+          <MdAccessTime />
+          <p>Posted: {dateFormat(createdAt)}</p>
+        </div>
+        {createdAt !== updatedAt ? (
+          <div>
+            <MdUpdate />
+            <p>Updated: {dateFormat(updatedAt)}</p>
+          </div>
+        ) : null}
+      </BlogPostTimes>
+
       <StyledMD
         renderers={{
           code: CodeBlock,
