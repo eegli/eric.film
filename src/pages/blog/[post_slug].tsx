@@ -6,6 +6,7 @@ import { fetcher } from '../../api/graphql';
 import { BlogPostContent } from '@/components/types';
 import LayoutContainer from '@/components/shared/layout/layout.container';
 import Head from 'next/head';
+import { dateFormat } from 'src/utils/dates';
 
 type Props = {
   post: BlogPostContent;
@@ -16,14 +17,15 @@ const IndexPage: React.FC<Props> = ({ post }) => {
     post.excerpt.length > 120
       ? post.excerpt.substring(0, 120).concat('...')
       : post.excerpt;
-
-  console.log(post.excerpt);
   return (
     <>
       <Head>
         <title>{post.title}</title>
         <meta name='description' content={trimmedExc} />
-        <meta property='og:title' content={post.title} />
+        <meta
+          property='og:title'
+          content={`${dateFormat(post.createdAt)} - ${post.title}`}
+        />
         <meta property='og:image' content={post.previewImage.url} />
         <meta property='og:site_name' content='Eric Egli' />
         <meta property='og:description' content={trimmedExc} />
