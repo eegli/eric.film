@@ -2,15 +2,23 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## TODOS
 
-- Dynamic imports
-- Safari getStaticProps
-- Add browser check
 - Error boundry
-- Clean up breakpoints
-- Gallery
+- Add browser check
 - Reading time
-- Sentry integration
 - Google Analytics
+
+## TODO BEFORE RELEASE
+
+- Safari getStaticProps
+- Clean up breakpoints
+- Sentry integration
+- Update Portfolio Images
+
+## ROADMAP
+
+- SEO Improvements
+- Browser Push
+- Dynamic imports
 
 ## Learnings
 

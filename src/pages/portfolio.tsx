@@ -3,30 +3,25 @@ import Head from 'next/head';
 import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';
 import PortfolioCategories from '@/components/categories/portfolio-categories.component';
+import { INDEX_META } from '../../seo.config';
 
 const PortfolioPage: React.FC<{}> = () => {
   return (
     <>
       <Head>
         <title>portfolio | eric.film</title>
-        <meta
-          name='description'
-          content='Portfolio Eric Egli | Images, Videos, Web Projects'
-        />
-        <meta property='og:title' content='Eric Egli | Portfolio' />
-        <meta property='og:image' content='/static/img/about-1.jpg' />
-        <meta property='og:site_name' content='Eric Egli' />
-        <meta
-          property='og:description'
-          content='Portfolio Eric Egli | Images, Videos, Web Projects'
-        />
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='Eric Egli | Portfolio' />
+        <meta name='description' content={INDEX_META.description} />
+        <meta property='og:title' content={INDEX_META.og_title} />
+        <meta property='og:image' content={INDEX_META.og_image} />
+        <meta property='og:site_name' content={INDEX_META.og_site_name} />
+        <meta property='og:description' content={INDEX_META.og_description} />
+        <meta name='twitter:card' content={INDEX_META.twitter_card} />
+        <meta name='twitter:title' content={INDEX_META.twitter_title} />
         <meta
           name='twitter:description'
-          content='Portfolio Eric Egli | Images, Videos, Web Projects'
+          content={INDEX_META.twitter_description}
         />
-        <meta name='twitter:image' content='/static/img/about-1.jpg' />
+        <meta name='twitter:image' content={INDEX_META.twitter_image} />
       </Head>
       <LayoutContainer>
         <Sh1>portfolio</Sh1>
