@@ -5,10 +5,6 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
-  @media screen and (max-width: 500px) {
-    flex-direction: column;
-  }
 `;
 
 export const Client = styled.a`
@@ -18,6 +14,6 @@ export const Client = styled.a`
   text-decoration: none;
   align-items: center;
   & > img {
-    max-width: 250px;
+    max-width: 150px;
   }
 `;

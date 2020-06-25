@@ -19,11 +19,20 @@ const ClientCategory: React.FC = () => {
       </IntroContainer>
       <BgContainer>
         <Container>
-          <Client href='http://www.absolute.ch/de/' target='blank'>
-            <img src='/static/img/clients/absolute.png' />
+          <Client href='https://www.frederikmaarsen.com/' target='blank'>
+            <img src='/static/img/clients/frederikmaarsen.png' />
+          </Client>
+          <Client href='https://mx3.ch/tawnee' target='blank'>
+            <img src='/static/img/clients/tawnee.png' />
           </Client>
           <Client href='http://www.cinezerbato.com/' target='blank'>
             <img src='/static/img/clients/cinezerbato.png' />
+          </Client>
+          <Client href='https://track13.ch' target='blank'>
+            <img src='/static/img/clients/track13.png' />
+          </Client>
+          <Client href='https://www.claudegabriel.ch/' target='blank'>
+            <img src='/static/img/clients/claudegabriel.png' />
           </Client>
           <Client href='https://kommunikationsplan.ch/en/' target='blank'>
             <img src='/static/img/clients/komplan.png' />
@@ -31,17 +40,20 @@ const ClientCategory: React.FC = () => {
           <Client href='https://www.pfizer.ch/' target='blank'>
             <img src='/static/img/clients/pfizer.png' />
           </Client>
+          <Client href='https://www.milcomp.ch/' target='blank'>
+            <img src='/static/img/clients/milcomp.png' />
+          </Client>
+          <Client href='http://www.placeb.ch/' target='blank'>
+            <img src='/static/img/clients/placeB.png' />
+          </Client>
           <Client href='http://www.absolute.ch/de/' target='blank'>
             <img src='/static/img/clients/absolute.png' />
           </Client>
-          <Client href='http://www.cinezerbato.com/' target='blank'>
-            <img src='/static/img/clients/cinezerbato.png' />
+          <Client href='https://www.youmo.ch/' target='blank'>
+            <img src='/static/img/clients/yumo.png' />
           </Client>
-          <Client href='https://kommunikationsplan.ch/en/' target='blank'>
-            <img src='/static/img/clients/komplan.png' />
-          </Client>
-          <Client href='https://www.pfizer.ch/' target='blank'>
-            <img src='/static/img/clients/pfizer.png' />
+          <Client href='https://zueriost.ch/' target='blank'>
+            <img src='/static/img/clients/zuriost.png' />
           </Client>
         </Container>
       </BgContainer>
