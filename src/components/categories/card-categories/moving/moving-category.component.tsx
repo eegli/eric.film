@@ -17,7 +17,28 @@ const MovingCategory: React.FC = () => {
       {isLoading ? <Spinner /> : null}
       <IframeWrapper>
         <StyledIframe
-          src='https://www.youtube.com/embed/HWhZJu5RT7Q'
+          src='https://www.youtube.com/embed/0szkaYq_PgQ'
+          allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+          allowFullScreen
+        />
+      </IframeWrapper>
+      <IframeWrapper>
+        <StyledIframe
+          src='https://www.youtube.com/embed/u7b6SDAe5lg'
+          allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+          allowFullScreen
+        />
+      </IframeWrapper>
+      <IframeWrapper>
+        <StyledIframe
+          src='https://www.youtube.com/embed/LH6Nhugxs5k'
+          allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+          allowFullScreen
+        />
+      </IframeWrapper>
+      <IframeWrapper>
+        <StyledIframe
+          src='https://www.youtube.com/embed/qcAmUicup8c'
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
           allowFullScreen
           onLoad={handleSpinner}
@@ -25,28 +46,28 @@ const MovingCategory: React.FC = () => {
       </IframeWrapper>
       <IframeWrapper>
         <StyledIframe
-          src='https://www.youtube.com/embed/HWhZJu5RT7Q'
+          src='https://www.youtube.com/embed//I7OFtjBexjc'
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
           allowFullScreen
         />
       </IframeWrapper>
       <IframeWrapper>
         <StyledIframe
-          src='https://www.youtube.com/embed/HWhZJu5RT7Q'
+          src='https://www.youtube.com/embed/HH_IKM4C8Pw'
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
           allowFullScreen
         />
       </IframeWrapper>
       <IframeWrapper>
         <StyledIframe
-          src='https://www.youtube.com/embed/HWhZJu5RT7Q'
+          src='https://www.youtube.com/embed/efOcxCH1NEA'
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
           allowFullScreen
         />
       </IframeWrapper>
       <IframeWrapper>
         <StyledIframe
-          src='https://www.youtube.com/embed/HWhZJu5RT7Q'
+          src='https://www.youtube.com/embed/oVTPbVlnum0'
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
           allowFullScreen
         />

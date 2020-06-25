@@ -13,6 +13,7 @@ import Image from '../custom-renders/blog-image.component';
 import { BlogPostContent } from '@/components/types';
 import { dateFormat } from 'src/utils/dates';
 import { MdAccessTime, MdUpdate } from 'react-icons/md';
+import MD from '../__mocks__/content.md';
 
 const BlogContent: React.FC<BlogPostContent> = ({
   title,
@@ -21,8 +22,9 @@ const BlogContent: React.FC<BlogPostContent> = ({
   createdAt,
   updatedAt,
 }) => {
-  const temp = 'December 10, 1995 03:24:00';
-  console.log(dateFormat(temp));
+  const source = process.env.NODE_ENV === 'production' ? content : MD;
+  const video =
+    process.env.NODE_ENV === 'production' ? ytvideo : '/VjSE0--1KNA';
   return (
     <BlogPostContainer>
       <BlogPostTitle>{title}</BlogPostTitle>
@@ -45,12 +47,12 @@ const BlogContent: React.FC<BlogPostContent> = ({
           link: Link,
           image: Image,
         }}
-        source={content}
+        source={source}
       />
-      {ytvideo ? (
+      {video ? (
         <IFrameWrapper>
           <StyledIframe
-            src={`https://www.youtube.com/embed/${ytvideo}`}
+            src={`https://www.youtube.com/embed/${video}`}
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
             allowFullScreen
           />
