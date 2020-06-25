@@ -1,5 +1,45 @@
 module.exports = {
   INDEX_META: {
+    title: 'Eric Egli - Freelance Photographer & Filmer',
+    description:
+      'Freelance photography & filmmaking. Based in Zurich, Switzerland. Blogging about web development, video editing and more.',
+    og_title = title,
+    og_image: '/static/img/og/home.jpg',
+    og_site_name: 'Eric Egli',
+    og_description = description,
+    twitter_card: 'summary_large_image',
+    twitter_title = title,
+    twitter_description = description,
+    twitter_image: '/static/img/og/home.jpg',
+  },
+  ABOUT_META: {
+    title: 'Portfolio - Eric.film',
+    description:
+      'Freelance photographer and filmer with a passion for web development.',
+    og_title: 'Eric Egli | Portfolio',
+    og_image: '/static/img/og/home.jpg',
+    og_site_name: 'Eric Egli',
+    og_description: 'Portfolio Eric Egli | Images, Videos, Web Projects',
+    twitter_card: 'summary_large_image',
+    twitter_title: 'Eric Egli | Portfolio',
+    twitter_description: 'Portfolio Eric Egli | Images, Videos, Web Projects',
+    twitter_image: '/static/img/og/home.jpg',
+  },
+  PORTFOLIO_META: {
+    title: 'Portfolio - Eric.film',
+    description: 'Portfolio Eric Egli | Images, Videos, Web Projects',
+    og_title: 'Eric Egli | Portfolio',
+    og_image: '/static/img/og/home.jpg',
+    og_site_name: 'Eric Egli',
+    og_description: 'Portfolio Eric Egli | Images, Videos, Web Projects',
+    twitter_card: 'summary_large_image',
+    twitter_title: 'Eric Egli | Portfolio',
+    twitter_description: 'Portfolio Eric Egli | Images, Videos, Web Projects',
+    twitter_image: '/static/img/og/home.jpg',
+  },
+
+  BLOG_INDEX_META: {
+    title: 'Portfolio - Eric.film',
     description: 'Portfolio Eric Egli | Images, Videos, Web Projects',
     og_title: 'Eric Egli | Portfolio',
     og_image: '/static/img/og/home.jpg',

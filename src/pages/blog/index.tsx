@@ -6,26 +6,22 @@ import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';
 import BlogCategories from '@/components/categories/blog-categories.component';
 import Head from 'next/head';
+import { BLOG_INDEX_META as meta } from '../../../seo.config';
 
 const IndexPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Blogposts | eric.film</title>
-        <meta
-          name='description'
-          content="See what's new or choose your category: Dev, Video Of the Week, Varia"
-        />
-        <meta property='og:title' content='Blogposts on eric.film' />
-        <meta
-          property='og:image'
-          content='/static/img/blog_og_image_callumshaw.jpg'
-        />
-        <meta property='og:site_name' content='eric.film' />
-        <meta
-          property='og:description'
-          content="See what's new or choose your category: Dev, Video Of the Week, Varia"
-        />
+        <title>{meta.title}</title>
+        <meta name='description' content={meta.description} />
+        <meta property='og:title' content={meta.og_title} />
+        <meta property='og:image' content={meta.og_image} />
+        <meta property='og:site_name' content={meta.og_site_name} />
+        <meta property='og:description' content={meta.og_description} />
+        <meta name='twitter:card' content={meta.twitter_card} />
+        <meta name='twitter:title' content={meta.twitter_title} />
+        <meta name='twitter:description' content={meta.twitter_description} />
+        <meta name='twitter:image' content={meta.twitter_image} />
       </Head>
       <LayoutContainer page='blog'>
         <Sh1>blog</Sh1>

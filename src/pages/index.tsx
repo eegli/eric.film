@@ -4,30 +4,22 @@ import { GetServerSideProps } from 'next';
 import LandingVideo from '../components/landing/landing-video.component';
 import LandingContent from '../components/landing/landing-content.component';
 import { initializeApollo } from '../lib/apolloClient';
+import { INDEX_META as meta } from '../../seo.config';
 
 const IndexPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>eric.film - photography & web development</title>
-        <meta
-          name='description'
-          content='Freelance photographer and filmer with a passion for web development.'
-        />
-        <meta property='og:title' content='Eric Egli | Home' />
-        <meta property='og:image' content='/static/img/home_og_image.jpg' />
-        <meta property='og:site_name' content='Eric Egli' />
-        <meta
-          property='og:description'
-          content='Freelance photographer and filmer with a passion for web development.'
-        />
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='Eric Egli | Home' />
-        <meta
-          name='twitter:description'
-          content='Freelance photographer and filmer with a passion for web development.'
-        />
-        <meta name='twitter:image' content='/static/img/home_og_image.jpg' />
+        <title>{meta.title}</title>
+        <meta name='description' content={meta.description} />
+        <meta property='og:title' content={meta.og_title} />
+        <meta property='og:image' content={meta.og_image} />
+        <meta property='og:site_name' content={meta.og_site_name} />
+        <meta property='og:description' content={meta.og_description} />
+        <meta name='twitter:card' content={meta.twitter_card} />
+        <meta name='twitter:title' content={meta.twitter_title} />
+        <meta name='twitter:description' content={meta.twitter_description} />
+        <meta name='twitter:image' content={meta.twitter_image} />
       </Head>
       <LandingVideo />
       <LandingContent />
