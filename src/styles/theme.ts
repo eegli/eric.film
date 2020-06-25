@@ -1,6 +1,5 @@
 export const theme = {
   // Base bg color, chrome grey
-  baseBg_old: '#323639',
   baseBg: '#262626',
   baseBgraised: '#313131',
 
