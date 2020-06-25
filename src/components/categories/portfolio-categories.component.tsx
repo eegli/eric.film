@@ -14,7 +14,9 @@ const PortfolioCategories: React.FC = () => {
   const activeUrl = useActiveUrl(P.PORTFOLIO_STILL);
 
   const handleClick = (location: P): void => {
-    router.push(`${slug}${location}`, undefined, { shallow: true });
+    router
+      .push(`${slug}${location}`, undefined, { shallow: true })
+      .then(() => window.scrollTo(0, 0));
   };
 
   return (

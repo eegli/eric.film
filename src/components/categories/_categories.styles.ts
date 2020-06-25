@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 
-import Select from 'react-select';
-
 export const CategoryContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding: 0 2rem;
-
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: ${({ theme }) => theme.baseBg};
   @media screen and (max-width: 850px) {
     justify-content: center;
     padding: 0;
@@ -20,6 +22,11 @@ export const SelectionCardContainer = styled.div`
   justify-content: center;
   overflow-x: scroll;
   flex-wrap: wrap;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: ${({ theme }) => theme.baseBg};
 `;
 
 export const SortButtonContainer = styled.div`

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa';
 
 export const HeaderWrapper = styled.div`
-  z-index: 1;
+  z-index: 10;
   position: absolute;
   width: 100%;
 `;

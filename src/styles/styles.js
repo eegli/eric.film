@@ -40,6 +40,7 @@ export const Global = createGlobalStyle`
     font-family: 'JetBrains Mono', Fallback, sans-serif !important;
   }
 
+
   /* PROGRESS BAR */
   #nprogress {
     pointer-events: none;
