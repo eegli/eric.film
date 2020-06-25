@@ -7,6 +7,7 @@ import { BlogPostContent } from '@/components/types';
 import LayoutContainer from '@/components/shared/layout/layout.container';
 import Head from 'next/head';
 import { dateFormat } from 'src/utils/dates';
+import { makeBlogSchema } from 'src/utils/schema';
 
 type Props = {
   post: BlogPostContent;
@@ -31,6 +32,13 @@ const IndexPage: React.FC<Props> = ({ post }) => {
         <meta name='twitter:title' content={post.title} />
         <meta name='twitter:description' content={trimmedExc} />
         <meta name='twitter:image' content={post.previewImage.url} />
+        <script
+          key={`blogJSON-${post.id}`}
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(makeBlogSchema(post)),
+          }}
+        />
       </Head>
 
       <LayoutContainer page='blog'>
