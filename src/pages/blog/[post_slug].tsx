@@ -18,12 +18,14 @@ const IndexPage: React.FC<Props> = ({ post }) => {
     post.excerpt.length > 120
       ? post.excerpt.substring(0, 120).concat('...')
       : post.excerpt;
-  const date = dateFormat(post.createdAt);
   return (
     <>
       <Head>
         <title>{post.title}</title>
-        <meta name='description' content={`${date} - ${trimmedExc}`} />
+        <meta
+          name='description'
+          content={`${dateFormat(post.createdAt)} - ${trimmedExc}`}
+        />
         <meta property='og:title' content={post.title} />
         <meta property='og:image' content={post.previewImage.url} />
         <meta property='og:site_name' content='Eric Egli' />
