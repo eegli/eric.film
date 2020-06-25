@@ -13,6 +13,8 @@ type Props = {
   post: BlogPostContent;
 };
 
+// ${dateFormat(post.createdAt)} -
+
 const IndexPage: React.FC<Props> = ({ post }) => {
   let trimmedExc =
     post.excerpt.length > 120
@@ -22,10 +24,7 @@ const IndexPage: React.FC<Props> = ({ post }) => {
     <>
       <Head>
         <title>{post.title}</title>
-        <meta
-          name='description'
-          content={`${dateFormat(post.createdAt)} - ${trimmedExc}`}
-        />
+        <meta name='description' content={`${trimmedExc}`} />
         <meta property='og:title' content={post.title} />
         <meta property='og:image' content={post.previewImage.url} />
         <meta property='og:site_name' content='Eric Egli' />

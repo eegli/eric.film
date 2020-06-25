@@ -22,7 +22,7 @@ const BlogContent: React.FC<BlogPostContent> = ({
   return (
     <BlogPostContainer>
       <BlogPostTitle>{title}</BlogPostTitle>
-      <p>{dateFormat(createdAt)}</p>
+      <p>Posted {dateFormat(createdAt)}</p>
       {/* <BlogPostExcerpt>{excerpt}</BlogPostExcerpt> */}
       <StyledMD
         renderers={{
