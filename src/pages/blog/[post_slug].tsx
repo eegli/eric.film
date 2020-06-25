@@ -6,16 +6,14 @@ import { fetcher } from '../../api/graphql';
 import { BlogPostContent } from '@/components/types';
 import LayoutContainer from '@/components/shared/layout/layout.container';
 import Head from 'next/head';
-import { dateFormat } from 'src/utils/dates';
 import { makeBlogSchema } from 'src/utils/schema';
 
 type Props = {
   post: BlogPostContent;
 };
 
-// ${dateFormat(post.createdAt)} -
-
 const IndexPage: React.FC<Props> = ({ post }) => {
+  console.log(makeBlogSchema(post));
   let trimmedExc =
     post.excerpt.length > 120
       ? post.excerpt.substring(0, 120).concat('...')
@@ -37,7 +35,7 @@ const IndexPage: React.FC<Props> = ({ post }) => {
           key={`blogJSON-${post.id}`}
           type='application/ld+json'
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(makeBlogSchema(post)),
+            __html: makeBlogSchema(post),
           }}
         />
       </Head>

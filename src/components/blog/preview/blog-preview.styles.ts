@@ -49,8 +49,8 @@ export const BlogPostFooter = styled.div`
   color: ${({ theme }) => theme.textSecondaryColor};
 `;
 export const BlogCreatedContainer = styled.div`
-  background-color: ${({ theme }) => theme.baseBg};
-  padding: 0.3rem 0.5rem;
+  /* background-color: ${({ theme }) => theme.baseBg}; */
+  /* padding: 0.3rem 0.5rem; */
   border-radius: 0.5rem;
   display: flex;
   align-items: center;

@@ -18,11 +18,15 @@ const BlogContent: React.FC<BlogPostContent> = ({
   content,
   ytvideo,
   createdAt,
+  updatedAt,
 }) => {
+  const temp = 'December 10, 1995 03:24:00';
+  console.log(dateFormat(temp));
   return (
     <BlogPostContainer>
       <BlogPostTitle>{title}</BlogPostTitle>
-      <p>Posted {dateFormat(createdAt)}</p>
+      <p>Posted: {dateFormat(createdAt)}</p>
+      <p>Updated: {dateFormat(updatedAt)}</p>
       {/* <BlogPostExcerpt>{excerpt}</BlogPostExcerpt> */}
       <StyledMD
         renderers={{

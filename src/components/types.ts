@@ -34,6 +34,7 @@ export interface BlogPostPreview {
   slug: string;
   title: string;
   type: BlogCategories;
+  updatedAt: string;
   createdAt: string;
   previewImage: { url: string };
 }

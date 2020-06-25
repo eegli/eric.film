@@ -14,6 +14,7 @@ export const ALL_BLOGPOSTS_PREVIEW = gql`
       title
       type
       ytvideo
+      updatedAt
       createdAt
       previewImage {
         url
@@ -44,6 +45,7 @@ export const SINGLE_BLOGPOST = (slug: string | string[]) =>
       type
       content
       ytvideo
+      updatedAt
       createdAt
       previewImage {
         url

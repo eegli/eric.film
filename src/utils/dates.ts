@@ -18,5 +18,6 @@ export const dateFormat = (_date: string): string => {
   const year = date.getFullYear();
   const month = months[date.getMonth()];
   const day = date.getDate();
-  return `${day} ${month} ${year}`;
+  // const day = _day < 10 ? `0${_day}` : _day;
+  return `${month} ${day}, ${year}`;
 };
