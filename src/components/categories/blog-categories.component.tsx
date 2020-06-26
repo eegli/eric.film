@@ -23,7 +23,6 @@ const BlogCategories: React.FC = () => {
   const activeUrl = useActiveUrl(B.BLOG_ALL);
 
   const handleClick = (location: B): void => {
-    console.log(router);
     router
       .push(`${slug}${location}`, undefined, { shallow: true })
       .then(() => window.scrollTo(0, 0));

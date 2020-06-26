@@ -19,7 +19,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     Fonts();
     const handleRouteChangeStart = (url: string) => {
-      gtag.pageview(url);
+      gtag.pageview(url, document.title);
       NProgress.start();
     };
     const handleRouteChangeComplete = (url: string) => {

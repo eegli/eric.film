@@ -13,7 +13,7 @@ type Props = {
 };
 
 const IndexPage: React.FC<Props> = ({ post }) => {
-  console.log(makeBlogSchema(post));
+  // console.log(makeBlogSchema(post));
   let trimmedExc =
     post.excerpt.length > 120
       ? post.excerpt.substring(0, 120).concat('...')
