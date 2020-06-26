@@ -23,13 +23,13 @@ const ClientCategory: React.FC = () => {
             <img src='/static/img/clients/frederikmaarsen.png' />
           </Client>
           <Client href='https://mx3.ch/tawnee' target='blank'>
-            <img src='/static/img/clients/tawnee.png' />
+            <img src='/static/img/clients/tawnee_.png' />
           </Client>
           <Client href='http://www.cinezerbato.com/' target='blank'>
             <img src='/static/img/clients/cinezerbato.png' />
           </Client>
           <Client href='https://track13.ch' target='blank'>
-            <img src='/static/img/clients/track13.png' />
+            <img src='/static/img/clients/track13_.png' />
           </Client>
           <Client href='https://www.claudegabriel.ch/' target='blank'>
             <img src='/static/img/clients/claudegabriel.png' />
@@ -44,7 +44,7 @@ const ClientCategory: React.FC = () => {
             <img src='/static/img/clients/milcomp.png' />
           </Client>
           <Client href='http://www.placeb.ch/' target='blank'>
-            <img src='/static/img/clients/placeB.png' />
+            <img src='/static/img/clients/placeB_.png' />
           </Client>
           <Client href='http://www.absolute.ch/de/' target='blank'>
             <img src='/static/img/clients/absolute.png' />
