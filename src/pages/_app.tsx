@@ -13,19 +13,23 @@ import { useApollo } from '../lib/apolloClient';
 import Fonts from '@/styles/fonts';
 
 import { browserTest } from '../utils/browser';
-import language from 'react-syntax-highlighter/dist/esm/languages/hljs/1c';
+import * as gtag from '../lib/gtag';
 
 const App = ({ Component, pageProps }: AppProps) => {
   // Pretty loading state on top
   useEffect(() => {
     Fonts();
-    Router.events.on('routeChangeStart', u => NProgress.start());
+    const handleRouteChange = (url: string) => {
+      gtag.pageview(url);
+      NProgress.start();
+    };
+
+    Router.events.on('routeChangeStart', handleRouteChange);
     Router.events.on('routeChangeComplete', u => NProgress.done());
-    Router.events.on('routeChangeError', (e, u) => NProgress.done());
+
     return () => {
       Router.events.off('routeChangeStart', () => {});
       Router.events.off('routeChangeComplete', () => {});
-      Router.events.off('routeChangeError', () => {});
     };
   }, []);
 
