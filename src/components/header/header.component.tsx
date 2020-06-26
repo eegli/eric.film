@@ -9,9 +9,8 @@ import {
   HeaderOptionsDesktopContainer,
 } from './header.styles';
 import Link from 'next/link';
-
+import * as gtag from '../../lib/gtag';
 import SmoothCollapse from 'react-smooth-collapse';
-
 import HeaderOptions from './header-options/header-options.components';
 
 const Header: React.FC = () => {
@@ -19,6 +18,12 @@ const Header: React.FC = () => {
 
   const handleClick = (): void => {
     setShowHeader(!showHeader);
+    // gtag.event({
+    //   action: 'toggle_header',
+    //   category: 'header',
+    //   label: 'logo',
+    //   value: 'open_logo',
+    // });
   };
 
   return (

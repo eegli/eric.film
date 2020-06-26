@@ -16,20 +16,22 @@ import { browserTest } from '../utils/browser';
 import * as gtag from '../lib/gtag';
 
 const App = ({ Component, pageProps }: AppProps) => {
-  // Pretty loading state on top
   useEffect(() => {
     Fonts();
-    const handleRouteChange = (url: string) => {
+    const handleRouteChangeStart = (url: string) => {
       gtag.pageview(url);
       NProgress.start();
     };
+    const handleRouteChangeComplete = (url: string) => {
+      NProgress.done();
+    };
 
-    Router.events.on('routeChangeStart', handleRouteChange);
-    Router.events.on('routeChangeComplete', u => NProgress.done());
+    Router.events.on('routeChangeStart', handleRouteChangeStart);
+    Router.events.on('routeChangeComplete', handleRouteChangeComplete);
 
     return () => {
-      Router.events.off('routeChangeStart', () => {});
-      Router.events.off('routeChangeComplete', () => {});
+      Router.events.off('routeChangeStart', handleRouteChangeStart);
+      Router.events.off('routeChangeComplete', handleRouteChangeComplete);
     };
   }, []);
 
