@@ -5,11 +5,6 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /* https://forums.tumult.com/t/some-png-files-not-displaying-in-chrome/12783/15 */
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
 `;
 
 export const Client = styled.a`
