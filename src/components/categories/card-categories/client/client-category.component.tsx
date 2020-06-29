@@ -3,7 +3,6 @@ import {
   BgContainer,
   IntroContainer,
 } from '@/components/categories/card-categories/shared.styles';
-import { Sh2 } from '@/shared/headings.styles';
 import { Container, Client } from './client-category.styles';
 
 const ClientCategory: React.FC = () => {
