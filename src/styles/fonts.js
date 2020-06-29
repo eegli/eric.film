@@ -9,10 +9,13 @@ const Fonts = () => {
   document.head.appendChild(link);
 
   const roboto = new FontFaceObserver('Roboto');
-
-  roboto.load().then(() => {
-    document.documentElement.classList.add('roboto');
-  });
+  try {
+    roboto.load().then(() => {
+      document.documentElement.classList.add('roboto');
+    });
+  } catch (e) {
+    console.log(e);
+  }
 };
 
 export default Fonts;

@@ -1,8 +1,5 @@
 module.exports = {
   target: 'serverless',
-  devIndicators: {
-    autoPrerender: true,
-  },
   distDir: 'build',
   devIndicators: {
     autoPrerender: false,

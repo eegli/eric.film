@@ -9,7 +9,6 @@ export interface Props {
 
 const HeaderOptions: React.FC<Props> = ({ position }) => {
   const router = useRouter();
-  console.log(router.pathname);
   let isMobile: boolean;
 
   if (position === 'mobile') {
