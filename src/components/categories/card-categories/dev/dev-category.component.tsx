@@ -8,8 +8,12 @@ import { Table } from './dev-category.styles';
 const DevCategory: React.FC<{}> = () => {
   return (
     <>
-      <BgContainer>
-        <Sh2>eric.film</Sh2>
+      <IntroContainer dev>
+        <p>
+          <span>eric.film</span>
+        </p>
+      </IntroContainer>
+      <BgContainer dev>
         <Table>
           <tbody>
             <tr>
