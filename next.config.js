@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   target: 'serverless',
   distDir: 'build',
@@ -5,8 +7,7 @@ module.exports = {
     autoPrerender: false,
   },
   env: {
-    graphql_url:
-      'https://api-eu-central-1.graphcms.com/v2/ckawpprfa01ja01z62wiy22qi/master',
+    graphql_url: process.env.GRAPHQL_BACKEND,
   },
   webpack: function (config) {
     config.module.rules.push({
