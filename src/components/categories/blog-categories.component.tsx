@@ -40,7 +40,6 @@ const BlogCategories: React.FC = () => {
               {B.BLOG_VOTW}
             </CardContainer>
           </Link>
-
           <Link href={`${slug}${B.BLOG_VARIA}`} shallow passHref>
             <CardContainer active={activeUrl === `${slug}${B.BLOG_VARIA}`}>
               {B.BLOG_VARIA}
