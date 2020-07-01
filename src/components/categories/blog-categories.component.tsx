@@ -30,7 +30,7 @@ const BlogCategories: React.FC = () => {
 
   return (
     <>
-      <CategoryContainer>
+      <CategoryContainer blog>
         <SelectionCardContainer>
           <CardContainer
             onClick={() => handleClick(B.BLOG_ALL)}

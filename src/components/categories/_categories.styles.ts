@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 
-export const CategoryContainer = styled.div`
+type Props = {
+  blog?: boolean;
+};
+
+export const CategoryContainer = styled.div<Props>`
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding: 0 2rem;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
+  position: ${({ blog }) => (blog ? 'static' : '-webkit-sticky') /* Safari */};
+  position: ${({ blog }) => (blog ? 'static' : 'sticky')};
   top: 0;
   z-index: 1;
   background-color: ${({ theme }) => theme.baseBg};
