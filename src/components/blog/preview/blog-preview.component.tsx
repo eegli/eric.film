@@ -30,7 +30,7 @@ const BlogPreview: React.FC<BlogPostPreview> = ({
   //   excerpt.length > 120 ? excerpt.substring(0, 120).concat('...') : excerpt;
 
   return (
-    <Link href='/blog/[post_slug]' as={`/blog/${slug}`}>
+    <Link href='/blog/[post_slug]' as={`/blog/${slug}`} passHref>
       <BlogPostContainer>
         <BlogPostTitle>{title}</BlogPostTitle>
         <ProgressiveImage src={previewImage.url} placeholder=''>

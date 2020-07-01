@@ -9,7 +9,7 @@ const hover = css`
   }
 `;
 
-export const BlogPostContainer = styled.article`
+export const BlogPostContainer = styled.a`
   display: flex;
   flex-direction: column;
   justify-content: space-between;

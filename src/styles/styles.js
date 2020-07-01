@@ -18,6 +18,11 @@ export const Global = createGlobalStyle`
     height: 100vh;
     width: 100vw;
     min-width: 320px;
+    text-decoration: none;
+  }
+  a {
+    color: inherit;
+    text-decoration: inherit;
   }
 
   p {

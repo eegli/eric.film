@@ -59,7 +59,7 @@ type CardContainerProps = {
   active: boolean;
 };
 
-export const CardContainer = styled.div<CardContainerProps>`
+export const CardContainer = styled.a<CardContainerProps>`
   background-color: ${({ theme, active }) =>
     active ? theme.textLinkColor : theme.baseBgraised};
   padding: 0.7rem 1rem;
