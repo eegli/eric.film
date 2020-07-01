@@ -17,6 +17,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - SEO Improvements
 - Search Posts
 - Browser Push
+- Measuring performance
 - Dynamic imports
 
 ## Learnings
