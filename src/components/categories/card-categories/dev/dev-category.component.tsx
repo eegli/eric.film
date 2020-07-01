@@ -38,7 +38,9 @@ const DevCategory: React.FC<{}> = () => {
             </tr>
             <tr>
               <th>frontend</th>
-              <td>Next.js, Apollo Client, React Markdown, Styled Components</td>
+              <td>
+                React.js, Apollo Client, React Markdown, Styled Components
+              </td>
             </tr>
             <tr>
               <th>test coverage</th>
