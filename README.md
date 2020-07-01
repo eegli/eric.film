@@ -4,19 +4,18 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - Error boundry
 - Add browser check
-- Reading time
 - Google Analytics
 
 ## TODO BEFORE RELEASE
 
 - Safari getStaticProps
-- Clean up breakpoints
 - Sentry integration
 - Update Portfolio Images
 
 ## ROADMAP
 
 - SEO Improvements
+- Search Posts
 - Browser Push
 - Dynamic imports
 

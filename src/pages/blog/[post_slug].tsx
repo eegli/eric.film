@@ -1,5 +1,5 @@
 import React from 'react';
-import { GetServerSideProps } from 'next';
+import { GetServerSideProps, GetStaticProps } from 'next';
 import BlogContainer from '@/components/blog/blog-container.component';
 import { SINGLE_BLOGPOST } from '../../api/queries';
 import { fetcher } from '../../api/graphql';
@@ -55,7 +55,7 @@ const IndexPage: React.FC<Props> = ({ post }) => {
     );
   }
 };
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (params && params.post_slug) {
     var post = await fetcher(SINGLE_BLOGPOST(params.post_slug));
   }

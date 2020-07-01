@@ -14,7 +14,7 @@ const Fonts = () => {
       document.documentElement.classList.add('roboto');
     });
   } catch (e) {
-    console.log(e);
+    console.error('Could not load Roboto font, ' + e);
   }
 };
 
