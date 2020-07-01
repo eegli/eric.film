@@ -1,6 +1,6 @@
 import { ALL_IMGS } from '@/api/queries';
 import Head from 'next/head';
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import LandingVideo from '../components/landing/landing-video.component';
 import LandingContent from '../components/landing/landing-content.component';
 import { initializeApollo } from '../lib/apolloClient';
@@ -27,7 +27,7 @@ const IndexPage: React.FC = () => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const apolloClient = initializeApollo();
 
   await apolloClient.query({

@@ -44,8 +44,8 @@ const CategorySwitch: React.FC<Props> = ({ sortBy }) => {
     default:
       return (
         <div style={{ textAlign: 'center', padding: '1rem' }}>
-          what are you trying to do, there is no such category... 🤨
-          <br /> click on a category above to show some content! 🤩
+          {/* what are you trying to do, there is no such category... 🤨
+          <br /> click on a category above to show some content! 🤩 */}
         </div>
       );
   }
