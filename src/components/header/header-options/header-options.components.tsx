@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyledLinkText } from './header-options.styles';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 export interface Props {
@@ -7,6 +8,7 @@ export interface Props {
 }
 
 const HeaderOptions: React.FC<Props> = ({ position }) => {
+  const router = useRouter();
   let isMobile: boolean;
 
   if (position === 'mobile') {
@@ -17,16 +19,30 @@ const HeaderOptions: React.FC<Props> = ({ position }) => {
   return (
     <>
       <Link href='/'>
-        <StyledLinkText isMobile={isMobile}>home</StyledLinkText>
+        <StyledLinkText href='/' path={router.pathname} isMobile={isMobile}>
+          home
+        </StyledLinkText>
       </Link>
       <Link href='/about'>
-        <StyledLinkText isMobile={isMobile}>about</StyledLinkText>
+        <StyledLinkText
+          href='/about'
+          path={router.pathname}
+          isMobile={isMobile}>
+          about
+        </StyledLinkText>
       </Link>
       <Link href='/portfolio?cat=still'>
-        <StyledLinkText isMobile={isMobile}>portfolio</StyledLinkText>
+        <StyledLinkText
+          href='/portfolio'
+          path={router.pathname}
+          isMobile={isMobile}>
+          portfolio
+        </StyledLinkText>
       </Link>
       <Link href='/blog?cat=all'>
-        <StyledLinkText isMobile={isMobile}>blog</StyledLinkText>
+        <StyledLinkText href='/blog' path={router.pathname} isMobile={isMobile}>
+          blog
+        </StyledLinkText>
       </Link>
     </>
   );

@@ -13,38 +13,47 @@ type Props = {
 };
 
 const IndexPage: React.FC<Props> = ({ post }) => {
-  // console.log(makeBlogSchema(post));
-  let trimmedExc =
-    post.excerpt.length > 120
-      ? post.excerpt.substring(0, 120).concat('...')
-      : post.excerpt;
-  return (
-    <>
-      <Head>
-        <title>{post.title}</title>
-        <meta name='description' content={`${trimmedExc}`} />
-        <meta property='og:title' content={post.title} />
-        <meta property='og:image' content={post.previewImage.url} />
-        <meta property='og:site_name' content='Eric Egli' />
-        <meta property='og:description' content={trimmedExc} />
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content={post.title} />
-        <meta name='twitter:description' content={trimmedExc} />
-        <meta name='twitter:image' content={post.previewImage.url} />
-        <script
-          key={`blogJSON-${post.id}`}
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{
-            __html: makeBlogSchema(post),
-          }}
-        />
-      </Head>
+  if (post) {
+    // console.log(makeBlogSchema(post));
+    let trimmedExc =
+      post.excerpt.length > 120
+        ? post.excerpt.substring(0, 120).concat('...')
+        : post.excerpt;
+    return (
+      <>
+        <Head>
+          <title>{post.title}</title>
+          <meta name='description' content={`${trimmedExc}`} />
+          <meta property='og:title' content={post.title} />
+          <meta property='og:image' content={post.previewImage.url} />
+          <meta property='og:site_name' content='Eric Egli' />
+          <meta property='og:description' content={trimmedExc} />
+          <meta name='twitter:card' content='summary_large_image' />
+          <meta name='twitter:title' content={post.title} />
+          <meta name='twitter:description' content={trimmedExc} />
+          <meta name='twitter:image' content={post.previewImage.url} />
+          <script
+            key={`blogJSON-${post.id}`}
+            type='application/ld+json'
+            dangerouslySetInnerHTML={{
+              __html: makeBlogSchema(post),
+            }}
+          />
+        </Head>
 
+        <LayoutContainer page='blog'>
+          <BlogContainer post={post} />
+        </LayoutContainer>
+      </>
+    );
+  } else {
+    return (
+      // TODO
       <LayoutContainer page='blog'>
-        <BlogContainer post={post} />
+        <div>uuups, something can't be found...</div>
       </LayoutContainer>
-    </>
-  );
+    );
+  }
 };
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   if (params && params.post_slug) {

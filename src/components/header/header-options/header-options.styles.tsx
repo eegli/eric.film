@@ -3,6 +3,8 @@ import { DarkTheme } from '@/styles/theme';
 
 type Props = {
   isMobile: boolean;
+  href: string;
+  path: string;
 };
 
 const mobileColor = ({ theme }: { theme: DarkTheme }) => theme.baseBg;
@@ -20,4 +22,6 @@ export const StyledLinkText = styled.a<Props>`
     cursor: pointer;
   }
   color: ${({ isMobile }) => (isMobile ? mobileColor : desktopColor)};
+  text-decoration: ${({ href, path }) =>
+    href === path ? 'line-through' : 'none'};
 `;

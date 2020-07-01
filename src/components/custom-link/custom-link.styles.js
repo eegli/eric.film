@@ -10,7 +10,7 @@ export const CustomLinkText = styled.a`
   border-color: ${({ theme }) => theme.textShadowColor};
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   border-radius: 0.3rem;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.2rem;
   &:hover {
     text-decoration: line-through;
     text-decoration-color: ${({ theme }) => theme.textShadowColor};

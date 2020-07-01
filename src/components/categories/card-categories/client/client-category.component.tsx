@@ -3,7 +3,6 @@ import {
   BgContainer,
   IntroContainer,
 } from '@/components/categories/card-categories/shared.styles';
-import { Sh2 } from '@/shared/headings.styles';
 import { Container, Client } from './client-category.styles';
 
 const ClientCategory: React.FC = () => {
@@ -34,11 +33,11 @@ const ClientCategory: React.FC = () => {
           <Client href='https://www.claudegabriel.ch/' target='blank'>
             <img src='/static/img/clients/claudegabriel.png' />
           </Client>
-          <Client href='https://kommunikationsplan.ch/en/' target='blank'>
-            <img src='/static/img/clients/komplan.png' />
-          </Client>
           <Client href='https://www.pfizer.ch/' target='blank'>
             <img src='/static/img/clients/pfizer.png' />
+          </Client>
+          <Client href='https://kommunikationsplan.ch/en/' target='blank'>
+            <img src='/static/img/clients/komplan.png' />
           </Client>
           <Client href='https://www.milcomp.ch/' target='blank'>
             <img src='/static/img/clients/milcomp.png' />
