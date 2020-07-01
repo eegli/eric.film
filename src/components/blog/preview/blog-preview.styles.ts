@@ -3,7 +3,7 @@ import { MdLabel } from 'react-icons/md';
 import { BlogCategories } from '@/components/types';
 import { MdAccessTime } from 'react-icons/md';
 
-export const hover = css`
+const hover = css`
   &:hover {
     cursor: pointer;
   }
@@ -19,26 +19,24 @@ export const BlogPostContainer = styled.article`
   margin: 0.5rem;
   background-color: ${({ theme }) => theme.baseBgraised};
   border-radius: 0.5rem;
+  ${hover}
 `;
 
 export const BlogPreviewImage = styled.img`
   max-width: 100%;
   height: 180px;
   object-fit: cover;
-  ${hover}
 `;
 
 export const BlogPostTitle = styled.h1`
   font-size: ${({ theme }) => theme.fontsizes.h1FontSize};
   margin: 0.5rem 0 1rem 0;
-  ${hover}
 `;
 
 export const BlogPostExcerpt = styled.h2`
   font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   font-weight: normal;
   color: ${({ theme }) => theme.textColor};
-  ${hover}
 `;
 
 export const BlogPostFooter = styled.div`

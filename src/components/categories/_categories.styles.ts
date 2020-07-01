@@ -21,13 +21,13 @@ export const CategoryContainer = styled.div<Props>`
   }
 `;
 
-export const SelectionCardContainer = styled.div`
+export const SelectionCardContainer = styled.div<Props>`
   display: flex;
   justify-content: center;
   overflow-x: scroll;
   flex-wrap: wrap;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
+  position: ${({ blog }) => (blog ? 'static' : '-webkit-sticky') /* Safari */};
+  position: ${({ blog }) => (blog ? 'static' : 'sticky')};
   top: 0;
   z-index: 1;
   background-color: ${({ theme }) => theme.baseBg};
