@@ -1,4 +1,4 @@
-const basePath = 'https://img-og.eric.film/public/';
+const basePath = 'https://img-og.eric.film/public';
 
 module.exports = {
   SEO_INDEX_META: {
@@ -60,6 +60,9 @@ module.exports = {
     twitter_image: `${basePath}/og_blog.jpg`,
   },
   SEO_OG_FALLBACK: {
+    url: `${basePath}/fallback.jpg`,
+  },
+  BLOG_PREVIEW_IMG_FALLBACK: {
     url: `${basePath}/fallback.jpg`,
   },
 };
