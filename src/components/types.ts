@@ -53,6 +53,10 @@ export interface BlogPostPreviewData {
   };
 }
 
+export interface BlogPostData {
+  blogpost: BlogPostContent;
+}
+
 export enum SortBy {
   createdAt_DESC = 'createdAt_DESC',
   createdAt_ASC = 'createdAt_ASC',

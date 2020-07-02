@@ -1,6 +1,9 @@
 import React from 'react';
 import { GetServerSideProps } from 'next';
-import { ALL_BLOGPOSTS_PREVIEW, allBlogPostsVars } from '../../api/queries';
+import {
+  ALL_BLOGPOSTS_PREVIEW,
+  allBlogPostsPreviewVars,
+} from '../../api/queries';
 import { initializeApollo } from '../../lib/apolloClient';
 import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';
@@ -36,7 +39,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
   await apolloClient.query({
     query: ALL_BLOGPOSTS_PREVIEW,
-    variables: allBlogPostsVars(),
+    variables: allBlogPostsPreviewVars(),
   });
 
   return {

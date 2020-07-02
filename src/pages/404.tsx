@@ -43,11 +43,11 @@ const Custom404: React.FC = () => {
         <p>lol idk what you've been looking for?</p>
         <a href='/blog?cat=all'>take me anywhere. go</a>
       </ErrorContainer>
-      <VideoWrapper>
+      {/* <VideoWrapper>
         <Video autoPlay loop muted playsInline>
           <source src='/static/404/404.mp4' type='video/mp4' />
         </Video>
-      </VideoWrapper>
+      </VideoWrapper> */}
     </Wrapper>
   );
 };
