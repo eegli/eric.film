@@ -45,6 +45,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     return (
       <>
         <Head>
+          <html prefix='og: http://ogp.me/ns#' />
           <title>eric.film</title>
           <meta
             name='viewport'
