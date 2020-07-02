@@ -4,7 +4,7 @@ import { GetServerSideProps } from 'next';
 import LandingVideo from '../components/landing/landing-video.component';
 import LandingContent from '../components/landing/landing-content.component';
 import { initializeApollo } from '../lib/apolloClient';
-import { INDEX_META as meta } from '../../seo.config';
+import { SEO_INDEX_META as meta } from '../../config';
 
 const IndexPage: React.FC = () => {
   return (

@@ -9,7 +9,7 @@ import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';
 import BlogCategories from '@/components/categories/blog-categories.component';
 import Head from 'next/head';
-import { BLOG_INDEX_META as meta } from '../../../seo.config';
+import { SEO_BLOG_INDEX_META as meta } from '../../../config';
 
 const IndexPage: React.FC = () => {
   return (

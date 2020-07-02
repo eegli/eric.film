@@ -36,7 +36,7 @@ export interface BlogPostPreview {
   type: BlogCategories;
   updatedAt: string;
   createdAt: string;
-  previewImage: { url: string };
+  previewImage?: { url: string };
 }
 
 export interface BlogPostContent extends BlogPostPreview {

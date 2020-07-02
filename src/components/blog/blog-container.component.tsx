@@ -9,6 +9,7 @@ import CustomSpinner from '@/components/custom-spinner/custom-spinner.component'
 import Head from 'next/head';
 import { makeBlogSchema } from 'src/utils/schema';
 import { trimExcerptForMeta } from 'src/utils/metaExcerpt';
+import { SEO_OG_FALLBACK } from '../../../config';
 
 const BlogContainer: React.FC = () => {
   const router = useRouter();
@@ -39,19 +40,22 @@ const BlogContainer: React.FC = () => {
   if (data && data.blogpost) {
     const post = data.blogpost;
     const metaExcerpt = trimExcerptForMeta(post.excerpt);
+    const image = post.previewImage
+      ? post.previewImage.url
+      : SEO_OG_FALLBACK.url;
     return (
       <>
         <Head>
           <title>{post.title}</title>
           <meta name='description' content={metaExcerpt} />
           <meta property='og:title' content={post.title} />
-          <meta property='og:image' content={post.previewImage.url} />
+          <meta property='og:image' content={image} />
           <meta property='og:site_name' content='Eric Egli' />
           <meta property='og:description' content={metaExcerpt} />
           <meta name='twitter:card' content='summary_large_image' />
           <meta name='twitter:title' content={post.title} />
           <meta name='twitter:description' content={metaExcerpt} />
-          <meta name='twitter:image' content={post.previewImage.url} />
+          <meta name='twitter:image' content={image} />
           <script
             key={`blogJSON-${post.id}`}
             type='application/ld+json'

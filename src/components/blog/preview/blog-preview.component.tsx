@@ -28,12 +28,14 @@ const BlogPreview: React.FC<BlogPostPreview> = ({
 }) => {
   // let trimmedExc =
   //   excerpt.length > 120 ? excerpt.substring(0, 120).concat('...') : excerpt;
-
+  const image = previewImage
+    ? previewImage.url
+    : 'https://img-og.eric.film/public/fallback.jpg';
   return (
     <Link href='/blog/[post_slug]' as={`/blog/${slug}`} passHref>
       <BlogPostContainer>
         <BlogPostTitle>{title}</BlogPostTitle>
-        <ProgressiveImage src={previewImage.url} placeholder=''>
+        <ProgressiveImage src={image} placeholder=''>
           {(src: string, loading: boolean) => {
             return loading ? (
               <Spinner />
