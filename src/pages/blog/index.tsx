@@ -1,12 +1,15 @@
 import React from 'react';
 import { GetServerSideProps } from 'next';
-import { ALL_BLOGPOSTS_PREVIEW, allBlogPostsVars } from '../../api/queries';
+import {
+  ALL_BLOGPOSTS_PREVIEW,
+  allBlogPostsPreviewVars,
+} from '../../api/queries';
 import { initializeApollo } from '../../lib/apolloClient';
 import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';
 import BlogCategories from '@/components/categories/blog-categories.component';
 import Head from 'next/head';
-import { BLOG_INDEX_META as meta } from '../../../seo.config';
+import { SEO_BLOG_INDEX_META as meta } from '../../../config';
 
 const IndexPage: React.FC = () => {
   return (
@@ -36,7 +39,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
   await apolloClient.query({
     query: ALL_BLOGPOSTS_PREVIEW,
-    variables: allBlogPostsVars(),
+    variables: allBlogPostsPreviewVars(),
   });
 
   return {

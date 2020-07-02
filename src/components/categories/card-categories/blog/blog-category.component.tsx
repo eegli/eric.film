@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/react-hooks';
 import { useState } from 'react';
 import { NetworkStatus } from 'apollo-client';
-import { ALL_BLOGPOSTS_PREVIEW, allBlogPostsVars } from '@/api/queries';
+import { ALL_BLOGPOSTS_PREVIEW, allBlogPostsPreviewVars } from '@/api/queries';
 import BlogPreview from '@/components/blog/preview/blog-preview.component';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 
@@ -27,7 +27,7 @@ const BlogCategory: React.FC<Props> = ({ filter, sortBy }) => {
   const { loading, error, data, fetchMore, networkStatus } = useQuery<
     BlogPostPreviewData
   >(ALL_BLOGPOSTS_PREVIEW, {
-    variables: allBlogPostsVars(sortBy),
+    variables: allBlogPostsPreviewVars(sortBy),
     // Setting this value to true will make the component rerender when
     // the "networkStatus" changes, so we are able to know if it is fetching
     // more data

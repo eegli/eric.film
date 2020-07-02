@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';
 import PortfolioCategories from '@/components/categories/portfolio-categories.component';
-import { PORTFOLIO_META as meta } from '../../seo.config';
+import { SEO_PORTFOLIO_META as meta } from '../../config';
 
 const PortfolioPage: React.FC<{}> = () => {
   return (

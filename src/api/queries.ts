@@ -29,15 +29,17 @@ export const ALL_BLOGPOSTS_PREVIEW = gql`
 `;
 
 // Setting default sort
-export const allBlogPostsVars = (orderBy: SortBy = SortBy.createdAt_DESC) => ({
+export const allBlogPostsPreviewVars = (
+  orderBy: SortBy = SortBy.createdAt_DESC
+) => ({
   skip: 0,
   first: 12,
   orderBy: orderBy,
 });
 
-export const SINGLE_BLOGPOST = (slug: string | string[]) =>
-  `query SINGLE_BLOGPOST {
-    blogpost(where: {slug: "${slug}"}) {
+export const SINGLE_BLOGPOST = gql`
+  query SINGLE_BLOGPOST($slug: String!) {
+    blogpost(where: { slug: $slug }) {
       id
       excerpt
       slug
@@ -52,7 +54,19 @@ export const SINGLE_BLOGPOST = (slug: string | string[]) =>
       }
     }
   }
-  `;
+`;
+
+export const singleBlogPostVars = (slug: string | string[]) => {
+  if (Array.isArray(slug))
+    return {
+      slug: slug[0],
+    };
+  else {
+    return {
+      slug: slug,
+    };
+  }
+};
 
 export const ALL_IMGS = gql`
   query ALL_IMGS {

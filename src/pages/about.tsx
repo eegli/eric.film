@@ -1,7 +1,7 @@
 import { Sh1 } from '@/shared/headings.styles';
 import LayouContainer from '@/shared/layout/layout.container';
 import About from '@/components/about/about.component';
-import { ABOUT_META as meta } from '../../seo.config';
+import { SEO_ABOUT_META as meta } from '../../config';
 import Head from 'next/head';
 
 const AboutPage: React.FC = () => {

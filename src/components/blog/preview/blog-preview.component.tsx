@@ -17,6 +17,7 @@ import ProgressiveImage from 'react-progressive-graceful-image';
 import { Spinner } from '@/components/custom-spinner/custom-spinner.styles';
 import { dateFormat } from 'src/utils/dates';
 import { BlogPostPreview } from '@/components/types';
+import { BLOG_PREVIEW_IMG_FALLBACK } from '../../../../config';
 
 const BlogPreview: React.FC<BlogPostPreview> = ({
   title,
@@ -28,12 +29,12 @@ const BlogPreview: React.FC<BlogPostPreview> = ({
 }) => {
   // let trimmedExc =
   //   excerpt.length > 120 ? excerpt.substring(0, 120).concat('...') : excerpt;
-
+  const image = previewImage ? previewImage.url : BLOG_PREVIEW_IMG_FALLBACK.url;
   return (
     <Link href='/blog/[post_slug]' as={`/blog/${slug}`} passHref>
       <BlogPostContainer>
         <BlogPostTitle>{title}</BlogPostTitle>
-        <ProgressiveImage src={previewImage.url} placeholder=''>
+        <ProgressiveImage src={image} placeholder=''>
           {(src: string, loading: boolean) => {
             return loading ? (
               <Spinner />

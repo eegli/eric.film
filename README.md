@@ -2,9 +2,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## TODOS
 
-- Error boundry
+- Error boundry, 404
 - Add browser check
-- Google Analytics
+- Google Analytics bypass
 
 ## TODO BEFORE RELEASE
 
@@ -19,10 +19,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Browser Push
 - Measuring performance
 - Dynamic imports
-
-## Learnings
-
-- Dynamic imports are shit and increase first load size
 
 ## To know
 

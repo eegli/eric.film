@@ -36,7 +36,7 @@ export interface BlogPostPreview {
   type: BlogCategories;
   updatedAt: string;
   createdAt: string;
-  previewImage: { url: string };
+  previewImage?: { url: string };
 }
 
 export interface BlogPostContent extends BlogPostPreview {
@@ -51,6 +51,10 @@ export interface BlogPostPreviewData {
       count: number;
     };
   };
+}
+
+export interface BlogPostData {
+  blogpost: BlogPostContent;
 }
 
 export enum SortBy {
