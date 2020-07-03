@@ -3,6 +3,7 @@ import LayouContainer from '@/shared/layout/layout.container';
 import About from '@/components/about/about.component';
 import { SEO_ABOUT_META as meta } from '../../config';
 import Head from 'next/head';
+import Footer from '@/components/footer/footer.component';
 
 const AboutPage: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const AboutPage: React.FC = () => {
       <LayouContainer page='about'>
         <Sh1>about</Sh1>
         <About />
+        <Footer />
       </LayouContainer>
     </>
   );

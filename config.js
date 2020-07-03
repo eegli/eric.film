@@ -4,31 +4,31 @@ module.exports = {
   SEO_INDEX_META: {
     title: 'Eric Egli - Freelance Photographer & Filmer',
     description:
-      'Freelance photography & filmmaking. Based in Zurich, Switzerland. Blogging about web development, video editing and more',
+      'Freelance photography & filmmaking. Based in Zurich, Switzerland. Blogging about web development, video editing and more.',
     og_title: 'Eric Egli - Freelance Photographer & Filmer',
     og_image: `${basePath}/og_home.jpg`,
     og_site_name: 'Eric Egli',
     og_description:
-      'Freelance photography & filmmaking. Based in Zurich, Switzerland. Blogging about web development, video editing and more',
+      'Freelance photography & filmmaking. Based in Zurich, Switzerland. Blogging about web development, video editing and more.',
     twitter_card: 'summary_large_image',
     twitter_title: 'Eric Egli - Freelance Photographer & Filmer',
     twitter_description:
-      'Freelance photography & filmmaking. Based in Zurich, Switzerland. Blogging about web development, video editing and more',
+      'Freelance photography & filmmaking. Based in Zurich, Switzerland. Blogging about web development, video editing and more.',
     twitter_image: `${basePath}/og_home.jpg`,
   },
   SEO_ABOUT_META: {
     title: 'Eric Egli - About | Photograper & Filmmaker',
     description:
-      "I'm a freelance photographer & filmer with a passion for web development. Say Hello to the team behind eric.film",
+      "I'm a freelance photographer & filmer with a passion for web development. Say Hello to the team behind eric.film.",
     og_title: 'Eric Egli - About | Photograper & Filmmaker',
     og_image: `${basePath}/og_about.jpg`,
     og_site_name: 'Eric Egli',
     og_description:
-      "I'm a freelance photographer & filmer with a passion for web development. Say Hello to the team behind eric.film",
+      "I'm a freelance photographer & filmer with a passion for web development. Say Hello to the team behind eric.film.",
     twitter_card: 'summary_large_image',
     twitter_title: 'Eric Egli - About | Photograper & Filmmaker',
     twitter_description:
-      "I'm a freelance photographer & filmer with a passion for web development. Say Hello to the team behind eric.film",
+      "I'm a freelance photographer & filmer with a passion for web development. Say Hello to the team behind eric.film.",
     twitter_image: `${basePath}/og_about.jpg`,
   },
   SEO_PORTFOLIO_META: {

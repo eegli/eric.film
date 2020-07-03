@@ -9,14 +9,15 @@ export const Global = createGlobalStyle`
 
   /* GLOBALS */
   body {
+    position: relative;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: ${({ theme }) => theme.baseBg};
     color: ${({ theme }) => theme.textColor};
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     min-width: 320px;
     text-decoration: none;
   }

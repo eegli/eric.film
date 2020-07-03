@@ -13,7 +13,7 @@ export const CategoryContainer = styled.div<Props>`
   position: ${({ blog }) => (blog ? 'static' : '-webkit-sticky') /* Safari */};
   position: ${({ blog }) => (blog ? 'static' : 'sticky')};
   top: 0;
-  z-index: 1;
+
   background-color: ${({ theme }) => theme.baseBg};
   @media screen and (max-width: 850px) {
     justify-content: center;
@@ -29,7 +29,7 @@ export const SelectionCardContainer = styled.div<Props>`
   position: ${({ blog }) => (blog ? 'static' : '-webkit-sticky') /* Safari */};
   position: ${({ blog }) => (blog ? 'static' : 'sticky')};
   top: 0;
-  z-index: 1;
+
   background-color: ${({ theme }) => theme.baseBg};
 `;
 
