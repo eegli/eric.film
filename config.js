@@ -19,28 +19,31 @@ module.exports = {
   SEO_ABOUT_META: {
     title: 'Eric Egli - About | Photograper & Filmmaker',
     description:
-      "I'm a freelance photographer & filmer with a passion for web development. ",
+      "I'm a freelance photographer & filmer with a passion for web development. Say Hello to the team behind eric.film",
     og_title: 'Eric Egli - About | Photograper & Filmmaker',
     og_image: `${basePath}/og_about.jpg`,
     og_site_name: 'Eric Egli',
     og_description:
-      "I'm a freelance photographer & filmer with a passion for web development. ",
+      "I'm a freelance photographer & filmer with a passion for web development. Say Hello to the team behind eric.film",
     twitter_card: 'summary_large_image',
     twitter_title: 'Eric Egli - About | Photograper & Filmmaker',
     twitter_description:
-      "I'm a freelance photographer & filmer with a passion for web development. ",
+      "I'm a freelance photographer & filmer with a passion for web development. Say Hello to the team behind eric.film",
     twitter_image: `${basePath}/og_about.jpg`,
   },
   SEO_PORTFOLIO_META: {
     title: 'Eric Egli - Portfolio | Photograper & Filmmaker',
-    description: 'Images and videos',
+    description:
+      'Moving and still portfolio - A selection of my work in the past years. Shots from all over the world.',
     og_title: 'Eric Egli - Portfolio | Photograper & Filmmaker',
     og_image: `${basePath}/og_portfolio.jpg`,
     og_site_name: 'Eric Egli',
-    og_description: 'Images and videos',
+    og_description:
+      'Moving and still portfolio - A selection of my work in the past years. Shots from all over the world.',
     twitter_card: 'summary_large_image',
     twitter_title: 'Eric Egli - Portfolio | Photograper & Filmmaker',
-    twitter_description: 'Images and videos',
+    twitter_description:
+      'Moving and still portfolio - A selection of my work in the past years. Shots from all over the world.',
     twitter_image: `${basePath}/og_portfolio.jpg`,
   },
 
