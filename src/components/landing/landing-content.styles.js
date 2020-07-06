@@ -8,5 +8,4 @@ export const LandingContentContainer = styled.div`
   position: absolute;
   width: 100%;
   top: 100vh;
-  margin-bottom: 3rem;
 `;
