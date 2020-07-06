@@ -8,7 +8,7 @@ import {
 } from './_categories.styles';
 import CategorySwitch from './switch-categories/category-switch.component';
 import { BlogCategories as B, SortBy } from '@/components/types';
-import { useActiveUrl } from './hooks/useActiveCat';
+import { useActiveUrl } from '../hooks/useActiveCat';
 import { FaSort } from 'react-icons/fa';
 import Link from 'next/link';
 

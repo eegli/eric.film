@@ -2,14 +2,11 @@ import React from 'react';
 import {
   BlogPostContainer,
   BlogPostTitle,
-  StyledMD,
   StyledIframe,
   IFrameWrapper,
   BlogPostTimes,
 } from './blog-content.styles';
-import CodeBlock from '../custom-renders/blog-codeblock.component';
-import Link from '../custom-renders/blog-link.component';
-import Image from '../custom-renders/blog-image.component';
+import BlogMarkdown from '../markdown/blog-markdown.component';
 import { BlogPostContent } from '@/components/types';
 import { dateFormat } from 'src/utils/dates';
 import { MdAccessTime, MdUpdate } from 'react-icons/md';
@@ -40,15 +37,8 @@ const BlogContent: React.FC<BlogPostContent> = ({
           </div>
         ) : null}
       </BlogPostTimes>
+      <BlogMarkdown source={source} />
 
-      <StyledMD
-        renderers={{
-          code: CodeBlock,
-          link: Link,
-          image: Image,
-        }}
-        source={source}
-      />
       {video ? (
         <IFrameWrapper>
           <StyledIframe

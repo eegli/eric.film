@@ -7,6 +7,5 @@ export const LandingContentContainer = styled.div`
   justify-content: center;
   position: absolute;
   width: 100%;
-  top: 100%;
-  margin-bottom: 3rem;
+  top: 100vh;
 `;

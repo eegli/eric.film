@@ -4,6 +4,7 @@ import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';
 import PortfolioCategories from '@/components/categories/portfolio-categories.component';
 import { SEO_PORTFOLIO_META as meta } from '../../config';
+import Footer from '@/components/footer/footer.component';
 
 const PortfolioPage: React.FC<{}> = () => {
   return (
@@ -23,6 +24,7 @@ const PortfolioPage: React.FC<{}> = () => {
       <LayoutContainer>
         <Sh1>portfolio</Sh1>
         <PortfolioCategories />
+        <Footer />
       </LayoutContainer>
     </>
   );

@@ -10,6 +10,7 @@ import LayoutContainer from '@/shared/layout/layout.container';
 import BlogCategories from '@/components/categories/blog-categories.component';
 import Head from 'next/head';
 import { SEO_BLOG_INDEX_META as meta } from '../../../config';
+import Footer from '@/components/footer/footer.component';
 
 const IndexPage: React.FC = () => {
   return (
@@ -29,6 +30,7 @@ const IndexPage: React.FC = () => {
       <LayoutContainer page='blog'>
         <Sh1>blog</Sh1>
         <BlogCategories />
+        <Footer />
       </LayoutContainer>
     </>
   );

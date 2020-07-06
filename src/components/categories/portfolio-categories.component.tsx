@@ -1,7 +1,7 @@
 import { CardContainer, SelectionCardContainer } from './_categories.styles';
 import CategorySwitch from './switch-categories/category-switch.component';
 import { PortfolioCategories as P } from '@/components/types';
-import { useActiveUrl } from './hooks/useActiveCat';
+import { useActiveUrl } from '../hooks/useActiveCat';
 import Link from 'next/link';
 
 /* 

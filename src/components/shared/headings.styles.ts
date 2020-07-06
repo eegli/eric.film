@@ -11,6 +11,7 @@ export const Sh1 = styled.h1<H1Props>`
   display: inline;
   font-size: ${({ landing }) => (landing ? '3rem' : '2.2rem')};
   font-weight: 400;
+  margin: 1rem 0 0.5rem 0;
 `;
 
 export const Sh2 = styled.h2`

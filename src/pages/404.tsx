@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 const Wrapper = styled.div`
   position: relative;
   height: 100vh;
@@ -37,18 +38,20 @@ const Video = styled.video`
 
 const Custom404: React.FC = () => {
   return (
-    <Wrapper>
-      <ErrorContainer>
-        <h1>404 - Page Not Found</h1>
-        <p>lol idk what you've been looking for?</p>
-        <a href='/blog?cat=all'>take me anywhere. go</a>
-      </ErrorContainer>
-      {/* <VideoWrapper>
+    <>
+      <Wrapper>
+        <ErrorContainer>
+          <h1>404 - Page Not Found</h1>
+          <p>lol idk what you've been looking for?</p>
+          <a href='/blog?cat=all'>take me anywhere. go</a>
+        </ErrorContainer>
+        {/* <VideoWrapper>
         <Video autoPlay loop muted playsInline>
           <source src='/static/404/404.mp4' type='video/mp4' />
         </Video>
       </VideoWrapper> */}
-    </Wrapper>
+      </Wrapper>
+    </>
   );
 };
 

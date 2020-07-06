@@ -24,19 +24,21 @@ const LandingContent: React.FC = ({ children }) => {
       collection => collection.imageType === 'home'
     );
     return (
-      <LandingContentContainer>
-        {children}
-        <Sh1 landing>eric.egli</Sh1>
+      <>
+        <LandingContentContainer>
+          {children}
+          <Sh1 landing>eric.egli</Sh1>
 
-        <DescriptionContainer>
-          <Sh2>
-            film & photography <br />x <br />
-            frontend development
-          </Sh2>
-        </DescriptionContainer>
-        <CustomLink href='/about'>say hi to the team</CustomLink>
-        {images ? <Gallery index images={images.collection} /> : null}
-      </LandingContentContainer>
+          <DescriptionContainer>
+            <Sh2>
+              film & photography <br />x <br />
+              frontend development
+            </Sh2>
+          </DescriptionContainer>
+          <CustomLink href='/about'>say hi to the team</CustomLink>
+          {images ? <Gallery index images={images.collection} /> : null}
+        </LandingContentContainer>
+      </>
     );
   }
 
