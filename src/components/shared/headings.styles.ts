@@ -4,6 +4,10 @@ type H1Props = {
   landing?: boolean;
 };
 
+type H2Props = {
+  settings?: boolean;
+};
+
 export const Sh1 = styled.h1<H1Props>`
   text-shadow: 2px 2px 0px ${({ theme }) => theme.textShadowColor};
   letter-spacing: 0.2rem;
@@ -14,10 +18,10 @@ export const Sh1 = styled.h1<H1Props>`
   margin: 1rem 0 0.5rem 0;
 `;
 
-export const Sh2 = styled.h2`
+export const Sh2 = styled.h2<H2Props>`
   letter-spacing: 0.1rem;
   font-weight: 400;
-  text-align: center;
+  text-align: ${({ settings }) => (settings ? 'left' : 'center')};
   font-size: 1.2rem;
   margin: 1rem 0;
 `;

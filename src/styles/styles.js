@@ -23,7 +23,7 @@ export const Global = createGlobalStyle`
   }
   a {
     color: inherit;
-    text-decoration: inherit;
+    color: ${({ theme }) => theme.textSecondaryColor};
   }
 
   p {

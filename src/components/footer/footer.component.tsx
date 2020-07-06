@@ -6,14 +6,14 @@ const Footer: React.FC = () => {
     <>
       <Hr />
       <Container>
-        <Link href='settings#imprint' passHref>
-          <SLink>imprint</SLink>
-        </Link>
         <Link href='/settings#privacy' passHref>
           <SLink>privacy</SLink>
         </Link>
-        <Link href='/settings#magic' passHref>
-          <SLink>magic</SLink>
+        <Link href='settings#imprint' passHref>
+          <SLink>imprint</SLink>
+        </Link>
+        <Link href='/settings#acknowledgements' passHref>
+          <SLink>acknowledgements</SLink>
         </Link>
       </Container>
     </>

@@ -16,8 +16,8 @@ export const Container = styled.div`
 `;
 
 export const SLink = styled.a`
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   &:last-child {
-    margin: 0 0 0 1rem;
+    margin: 0 0 0 0.5rem;
   }
 `;
