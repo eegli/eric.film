@@ -1,9 +1,23 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  margin-top: 2rem;
-  height: 200px;
-  display: block;
+export const Hr = styled.hr`
   width: 100%;
-  background-color: white;
+  border: none;
+  background-color: ${({ theme }) => theme.baseBgraised};
+  height: 3px;
+`;
+
+export const Container = styled.div`
+  display: flex;
+  width: 100%;
+  color: ${({ theme }) => theme.textSecondaryColor};
+  font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
+  margin-bottom: 1rem;
+`;
+
+export const SLink = styled.a`
+  margin: 0 1rem;
+  &:last-child {
+    margin: 0 0 0 1rem;
+  }
 `;

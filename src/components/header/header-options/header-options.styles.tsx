@@ -16,12 +16,12 @@ export const StyledLinkText = styled.a<Props>`
   text-align: center;
   font-size: 1.2rem;
   text-shadow: 1px 1px 0px ${({ theme }) => theme.textShadowColor};
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.4rem;
   &:hover {
     text-decoration: line-through;
     cursor: pointer;
   }
   color: ${({ isMobile }) => (isMobile ? mobileColor : desktopColor)};
   text-decoration: ${({ href, path }) =>
-    href === path ? 'line-through' : 'none'};
+    href === path ? 'underline' : 'none'};
 `;
