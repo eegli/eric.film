@@ -2,6 +2,14 @@
 
 Der Bundesrat plant eine weitere Lockerung der Corona-Massnahmen. 👀 So sollen Veranstaltungen bis 1000 Personen zugelassen werden. Auch die Polizeistunde soll fallen.
 
+# H1 Header
+
+## H2 Header
+
+### H3 Header
+
+#### H4 Header
+
 # First, let me show you how I write code
 
 This is the Blog Content and it's a code block

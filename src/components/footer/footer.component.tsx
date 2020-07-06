@@ -9,11 +9,11 @@ const Footer: React.FC = () => {
         <Link href='/settings#privacy' passHref>
           <SLink>privacy</SLink>
         </Link>
-        <Link href='settings#imprint' passHref>
-          <SLink>imprint</SLink>
-        </Link>
         <Link href='/settings#acknowledgements' passHref>
           <SLink>acknowledgements</SLink>
+        </Link>
+        <Link href='settings#imprint' passHref>
+          <SLink>imprint</SLink>
         </Link>
       </Container>
     </>
