@@ -23,5 +23,7 @@ export const StyledMD = styled(ReactMarkdown)`
   & img {
     max-width: 100%;
     max-height: 100%;
+    display: block;
+    margin: 0.5rem auto;
   }
 `;
