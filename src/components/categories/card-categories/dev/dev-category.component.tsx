@@ -20,7 +20,7 @@ const DevCategory: React.FC<{}> = () => {
               <td>My personal website and blog</td>
             </tr>
             <tr>
-              <th>supported platforms</th>
+              <th>supported browsers</th>
               <td>Chrome, Safari, Firefox</td>
             </tr>
             <tr>

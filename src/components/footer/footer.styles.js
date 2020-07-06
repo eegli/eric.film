@@ -9,6 +9,7 @@ export const Hr = styled.hr`
 
 export const Container = styled.div`
   display: flex;
+  justify-content: center;
   width: 100%;
   color: ${({ theme }) => theme.textSecondaryColor};
   font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
