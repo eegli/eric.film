@@ -55,7 +55,7 @@ const DevCategory: React.FC<{}> = () => {
             </tr>
             <tr>
               <th>monitoring</th>
-              <td>Sentry (tbd)</td>
+              <td>Sentry</td>
             </tr>
             <tr>
               <th>repository</th>

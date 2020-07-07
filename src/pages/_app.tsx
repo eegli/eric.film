@@ -9,10 +9,19 @@ import { AppProps } from 'next/app';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { useApollo } from '../lib/apolloClient';
 import Fonts from '@/styles/fonts';
-
+import * as Sentry from '@sentry/node';
 import * as gtag from '../lib/gtag';
 
-const App = ({ Component, pageProps }: AppProps) => {
+Sentry.init({
+  enabled: process.env.NODE_ENV === 'production',
+  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
+});
+
+interface Props extends AppProps {
+  err: any;
+}
+
+const App = ({ Component, pageProps, err }: Props) => {
   useEffect(() => {
     Fonts();
     const handleRouteChangeStart = (url: string) => {
@@ -41,7 +50,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           <ThemeProvider theme={theme}>
             <Global />
             <Header />
-            <Component {...pageProps} />
+            <Component {...pageProps} err={err} />
           </ThemeProvider>
         </ApolloProvider>
       </div>
