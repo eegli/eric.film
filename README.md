@@ -2,8 +2,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## TODOS
 
-- Google Analytics bypass
-
 ## TODO BEFORE RELEASE
 
 - Safari getStaticProps
@@ -18,6 +16,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Measuring performance
 - Dynamic imports
 - Add browser check
+- Google Analytics bypass
 
 ## To know
 
