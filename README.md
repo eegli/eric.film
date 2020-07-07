@@ -3,8 +3,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## TODOS
 
 - Google Analytics bypass
-- Footer
-- Credits page, OG unsplash photos in Markdown
 
 ## TODO BEFORE RELEASE
 
