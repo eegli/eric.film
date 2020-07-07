@@ -10,7 +10,6 @@ import BlogMarkdown from '../markdown/blog-markdown.component';
 import { BlogPostContent } from '@/components/types';
 import { dateFormat } from 'src/utils/dates';
 import { MdAccessTime, MdUpdate } from 'react-icons/md';
-import MD from '../__mocks__/content.md';
 
 const BlogContent: React.FC<BlogPostContent> = ({
   title,

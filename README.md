@@ -2,9 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## TODOS
 
-- Google Analytics bypass
-- Footer
-- Credits page, OG unsplash photos in Markdown
+- Replace front image sizes
 
 ## TODO BEFORE RELEASE
 
@@ -20,6 +18,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Measuring performance
 - Dynamic imports
 - Add browser check
+- Google Analytics bypass
 
 ## To know
 
