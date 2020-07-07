@@ -11,7 +11,7 @@ export const GalleryContainer = styled.div<GalleryProps>`
   column-count: ${({ index }) => (index ? '3' : '1')};
   column-gap: 0px;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 960px) {
     column-count: ${({ index }) => (index ? '2' : '1')};
   }
   @media (max-width: 700px) {
@@ -22,6 +22,7 @@ export const GalleryContainer = styled.div<GalleryProps>`
 export const Image = styled.img`
   /* Just in case there are inline attributes */
   width: 100% !important;
+  max-width: 1024px;
   max-height: 100%;
   object-fit: cover;
 `;

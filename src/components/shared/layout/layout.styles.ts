@@ -9,5 +9,5 @@ export const LayoutContainerStyle = styled.div<Props>`
   flex-direction: column;
   margin: 0 auto;
   max-width: ${({ page }) =>
-    page === 'blog' ? '860px' : page === 'about' ? '1200px' : '1024px'};
+    page === 'blog' ? '860px' : page === 'about' ? '1200px' : '960px'};
 `;

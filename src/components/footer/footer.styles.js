@@ -14,6 +14,9 @@ export const Container = styled.div`
   color: ${({ theme }) => theme.textSecondaryColor};
   font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
   margin-bottom: 1rem;
+  @media screen and (min-width: 769px) {
+    justify-content: flex-start;
+  }
 `;
 
 export const SLink = styled.a`
