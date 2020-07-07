@@ -21,14 +21,12 @@ const Gallery: React.FC<ImageProps> = ({ images, index }) => {
       <GalleryContainer index={index}>
         {images.map((img: ImageUrl) => (
           <div key={img.url}>
-            <ProgressiveImage src={img.url} placeholder=''>
-              {(src: string, loading: boolean) => {
-                return loading ? (
-                  <Spinner />
-                ) : (
-                  <Image src={src} alt='portfolio-image' />
-                );
-              }}
+            <ProgressiveImage
+              src={img.url}
+              placeholder='/static/img/placeholder.jpg'>
+              {(src: string, loading: boolean) => (
+                <Image src={src} alt='portfolio-image' />
+              )}
             </ProgressiveImage>
           </div>
         ))}

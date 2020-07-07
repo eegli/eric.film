@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## TODOS
 
+- Replace front image sizes
+
 ## TODO BEFORE RELEASE
 
 - Safari getStaticProps
