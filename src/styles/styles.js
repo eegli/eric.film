@@ -14,8 +14,8 @@ export const Global = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: ${({ theme }) => theme.baseBg};
-    color: ${({ theme }) => theme.textColor};
+    background-color: ${({ theme }) => theme.colors.baseBg};
+    color: ${({ theme }) => theme.colors.textPrimaryColor};
     height: 100%;
     width: 100%;
     min-width: 320px;
@@ -32,6 +32,10 @@ export const Global = createGlobalStyle`
 
   h1 {
     font-size: ${({ theme }) => theme.fontsizes.h1FontSize}
+  }
+
+  h2 {
+    font-size: ${({ theme }) => theme.fontsizes.h2FontSize}
   }
 
   p, h2 {
@@ -90,7 +94,7 @@ export const Global = createGlobalStyle`
     background: #000000;
   }
   ::-webkit-scrollbar-track {
-    background: ${({ theme }) => theme.baseBg};
+    background: ${({ theme }) => theme.colors.baseBg};
     border: 0px none #ffffff;
     border-radius: 11px;
   }

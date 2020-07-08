@@ -17,7 +17,7 @@ export const BlogPostContainer = styled.a`
   width: 360px;
   padding: 1rem;
   margin: 0.5rem;
-  background-color: ${({ theme }) => theme.baseBgraised};
+  background-color: ${({ theme }) => theme.colors.baseBgraised};
   border-radius: 0.5rem;
   ${hover}
 `;
@@ -36,7 +36,7 @@ export const BlogPostTitle = styled.h1`
 export const BlogPostExcerpt = styled.h2`
   font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   font-weight: normal;
-  color: ${({ theme }) => theme.textColor};
+  color: ${({ theme }) => theme.colors.textPrimaryColor};
 `;
 
 export const BlogPostFooter = styled.div`
@@ -44,10 +44,10 @@ export const BlogPostFooter = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: ${({ theme }) => theme.textSecondaryColor};
+  color: ${({ theme }) => theme.colors.textSecondaryColor};
 `;
 export const BlogCreatedContainer = styled.div`
-  /* background-color: ${({ theme }) => theme.baseBg}; */
+  /* background-color: ${({ theme }) => theme.colors.baseBg}; */
   /* padding: 0.3rem 0.5rem; */
   border-radius: 0.5rem;
   display: flex;

@@ -1,22 +1,4 @@
 export const theme = {
-  // Base bg color, chrome grey
-  baseBg: '#262626',
-  baseBgraised: '#313131',
-
-  // Text shadow color, pink
-  textShadowColor: '#feb8ce',
-
-  // Light grey, unused
-  textLinkColor: '#daddd8',
-
-  textSecondaryColor: '#c2c2c2',
-
-  // Text color on base bg
-  textColor: '#eef0f2',
-
-  // Scrollbar
-  scrollbarDark: '#8a8a8a',
-
   // Accents, taken from https://coolors.co/ffa69e-faf3dd-b8f2e6-aed9e0-5e6472
   colors: {
     accents: {
@@ -24,14 +6,29 @@ export const theme = {
       eggshell: '#53272D',
       brightBlue: '#365952',
     },
+
+    // Base bg color, chrome grey
+    baseBg: '#262626',
+    baseBgraised: '#313131',
+
+    // Text shadow color, pink
+    textShadowColor: '#feb8ce',
+
+    // Light grey, unused
+    textLinkColor: '#daddd8',
+
+    textSecondaryColor: '#c2c2c2',
+
+    // Text color on base bg
+    textPrimaryColor: '#eef0f2',
   },
 
   fontsizes: {
     baseFontSize: '16px',
     secondaryFontSize: '14px',
     baseIconFontSize: '18px',
-    h1FontSize: '20px',
-    h2FontSize: '18px',
+    h1FontSize: '22px',
+    h2FontSize: '20px',
   },
 };
 

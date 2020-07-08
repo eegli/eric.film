@@ -10,7 +10,7 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const HeaderMainBgContainer = styled.div`
-  background-color: ${({ theme }) => theme.baseBg};
+  background-color: ${({ theme }) => theme.colors.baseBg};
   display: flex;
   justify-content: center;
 `;
@@ -24,7 +24,7 @@ export const HeaderMainContainer = styled.header`
 `;
 
 export const HeaderOptionsMobileContainer = styled.header`
-  background-color: ${({ theme }) => theme.textColor};
+  background-color: ${({ theme }) => theme.colors.textPrimaryColor};
   display: flex;
   flex-direction: column;
   align-items: center;

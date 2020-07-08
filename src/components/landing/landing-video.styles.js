@@ -23,8 +23,8 @@ export const ArrowDownContainer = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 1rem;
-  background-color: ${({ theme }) => theme.textColor};
+  background-color: ${({ theme }) => theme.colors.textPrimaryColor};
   & svg {
-    color: ${({ theme }) => theme.baseBg};
+    color: ${({ theme }) => theme.colors.baseBg};
   }
 `;

@@ -17,7 +17,7 @@ export const BlogPostExcerpt = styled.h2`
 
 export const BlogPostTimes = styled.div`
   display: flex;
-  color: ${({ theme }) => theme.textShadowColor};
+  color: ${({ theme }) => theme.colors.textShadowColor};
   & div {
     display: flex;
     align-items: center;
@@ -27,7 +27,7 @@ export const BlogPostTimes = styled.div`
     & p {
       font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
       margin: 0 0 0 0.3rem;
-      color: ${({ theme }) => theme.textSecondaryColor};
+      color: ${({ theme }) => theme.colors.textSecondaryColor};
     }
   }
 `;

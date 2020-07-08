@@ -14,7 +14,7 @@ export const CategoryContainer = styled.div<Props>`
   position: ${({ blog }) => (blog ? 'static' : 'sticky')};
   top: 0;
 
-  background-color: ${({ theme }) => theme.baseBg};
+  background-color: ${({ theme }) => theme.colors.baseBg};
   @media screen and (max-width: 850px) {
     justify-content: center;
     padding: 0;
@@ -30,7 +30,7 @@ export const SelectionCardContainer = styled.div<Props>`
   position: ${({ blog }) => (blog ? 'static' : 'sticky')};
   top: 0;
 
-  background-color: ${({ theme }) => theme.baseBg};
+  background-color: ${({ theme }) => theme.colors.baseBg};
 `;
 
 export const SortButtonContainer = styled.div`
@@ -50,9 +50,9 @@ export const SortButton = styled.button`
   border: none;
   letter-spacing: 1px;
   border-color: none;
-  background-color: ${({ theme }) => theme.baseBg};
+  background-color: ${({ theme }) => theme.colors.baseBg};
   font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
-  color: ${({ theme }) => theme.textSecondaryColor};
+  color: ${({ theme }) => theme.colors.textSecondaryColor};
 `;
 
 type CardContainerProps = {
@@ -61,15 +61,16 @@ type CardContainerProps = {
 
 export const CardContainer = styled.a<CardContainerProps>`
   background-color: ${({ theme, active }) =>
-    active ? theme.textLinkColor : theme.baseBgraised};
+    active ? theme.colors.textLinkColor : theme.colors.baseBgraised};
   padding: 0.7rem 1rem;
   margin: 0.5rem;
   border-radius: 0.6rem;
-  color: ${({ theme, active }) => (active ? theme.baseBg : theme.textColor)};
+  color: ${({ theme, active }) =>
+    active ? theme.colors.baseBg : theme.colors.textPrimaryColor};
   &:hover {
-    background-color: ${({ theme }) => theme.textColor};
+    background-color: ${({ theme }) => theme.colors.textPrimaryColor};
     color: ${({ theme, active }) =>
-      active ? theme.baseBg : theme.baseBgraised};
+      active ? theme.colors.baseBg : theme.colors.baseBgraised};
     cursor: pointer;
   }
 `;

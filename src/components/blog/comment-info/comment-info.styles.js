@@ -3,6 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
   & > p {
     font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
-    color: ${({ theme }) => theme.textSecondaryColor};
+    color: ${({ theme }) => theme.colors.textSecondaryColor};
   }
 `;

@@ -16,10 +16,10 @@ const ErrorContainer = styled.div`
   align-items: center;
   flex-direction: column;
   & > h1 {
-    color: ${({ theme }) => theme.textShadowColor};
+    color: ${({ theme }) => theme.colors.textShadowColor};
   }
   & > a {
-    color: ${({ theme }) => theme.textSecondaryColor};
+    color: ${({ theme }) => theme.colors.textSecondaryColor};
   }
 `;
 const VideoWrapper = styled.div`

@@ -8,7 +8,7 @@ export const Spinner = styled.svg`
   align-self: center;
 
   & .path {
-    stroke: ${({ theme }) => theme.textShadowColor};
+    stroke: ${({ theme }) => theme.colors.textShadowColor};
     stroke-linecap: round;
     animation: dash 1.5s ease-in-out infinite;
   }

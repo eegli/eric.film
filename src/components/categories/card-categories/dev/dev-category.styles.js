@@ -9,12 +9,12 @@ export const Table = styled.table`
     height: 50px;
 
     &:nth-child(odd) {
-      background-color: ${({ theme }) => theme.textSecondaryColor};
-      color: ${({ theme }) => theme.baseBgraised};
+      background-color: ${({ theme }) => theme.colors.textSecondaryColor};
+      color: ${({ theme }) => theme.colors.baseBgraised};
     }
     &:nth-child(even) {
-      background-color: ${({ theme }) => theme.baseBgraised};
-      color: ${({ theme }) => theme.textSecondaryColor};
+      background-color: ${({ theme }) => theme.colors.baseBgraised};
+      color: ${({ theme }) => theme.colors.textSecondaryColor};
     }
   }
   & th {

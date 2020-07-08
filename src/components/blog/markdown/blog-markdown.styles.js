@@ -3,20 +3,20 @@ import styled from 'styled-components';
 
 export const StyledMD = styled(ReactMarkdown)`
   margin-top: 1rem;
-  background-color: ${({ theme }) => theme.baseBgraised};
+  background-color: ${({ theme }) => theme.colors.baseBgraised};
   padding: 0 1.2rem;
   line-height: 1.5rem;
   & p {
     font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   }
   & h1 {
-    color: ${({ theme }) => theme.textShadowColor};
+    color: ${({ theme }) => theme.colors.textShadowColor};
   }
   & code {
-    color: ${({ theme }) => theme.textShadowColor};
+    color: ${({ theme }) => theme.colors.textShadowColor};
   }
   & a {
-    color: ${({ theme }) => theme.textSecondaryColor};
+    color: ${({ theme }) => theme.colors.textSecondaryColor};
     text-decoration: underline;
     cursor: pointer;
   }
@@ -27,13 +27,13 @@ export const StyledMD = styled(ReactMarkdown)`
     margin: 0.5rem auto;
   }
   & blockquote {
-    background: ${({ theme }) => theme.baseBg};
-    border-left: 4px solid ${({ theme }) => theme.textSecondaryColor};
+    background: ${({ theme }) => theme.colors.baseBg};
+    border-left: 4px solid ${({ theme }) => theme.colors.textSecondaryColor};
     margin: 1.5rem 2rem;
     padding: 0.5em 10px;
     & > p {
       display: inline;
-      color: ${({ theme }) => theme.textColor};
+      color: ${({ theme }) => theme.colors.textPrimaryColor};
       font-style: italic;
     }
     &:before {

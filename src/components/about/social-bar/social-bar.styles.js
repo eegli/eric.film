@@ -7,5 +7,5 @@ export const Container = styled.div`
 
 export const IconContainer = styled.a`
   padding: 0 0.3rem;
-  color: ${({ theme }) => theme.textSecondaryColor};
+  color: ${({ theme }) => theme.colors.textSecondaryColor};
 `;
