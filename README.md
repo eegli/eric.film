@@ -20,6 +20,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Dynamic imports
 - Add browser check
 - Google Analytics bypass
+- Sentry fix
 
 ## To know
 
