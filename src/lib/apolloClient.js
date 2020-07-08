@@ -9,8 +9,7 @@ function createApolloClient() {
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({
-      uri:
-        'https://api-eu-central-1.graphcms.com/v2/ckawpprfa01ja01z62wiy22qi/master', // Server URL (must be absolute)
+      uri: process.env.GRAPHQL_URL, // Server URL (must be absolute)
       credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
     }),
     cache: new InMemoryCache(),

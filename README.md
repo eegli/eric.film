@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## TODOS
 
 - Replace front image sizes
+- In order to comment
 
 ## TODO BEFORE RELEASE
 
