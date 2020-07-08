@@ -19,8 +19,8 @@ const BlogContent: React.FC<BlogPostContent> = ({
   updatedAt,
 }) => {
   // const source = process.env.NODE_ENV === 'production' ? content : MD;
-  const video =
-    process.env.NODE_ENV === 'production' ? ytvideo : '/VjSE0--1KNA';
+  // const video =
+  //   process.env.NODE_ENV === 'production' ? ytvideo : '/VjSE0--1KNA';
   return (
     <BlogPostContainer>
       <BlogPostTitle>{title}</BlogPostTitle>
@@ -38,10 +38,10 @@ const BlogContent: React.FC<BlogPostContent> = ({
       </BlogPostTimes>
       <BlogMarkdown source={content} />
 
-      {video ? (
+      {ytvideo ? (
         <IFrameWrapper>
           <StyledIframe
-            src={`https://www.youtube.com/embed/${video}`}
+            src={`https://www.youtube.com/embed/${ytvideo}`}
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
             allowFullScreen
           />

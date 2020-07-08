@@ -2,7 +2,6 @@ import React from 'react';
 import { GalleryContainer, Image } from './gallery.styles';
 import ProgressiveImage from 'react-progressive-graceful-image';
 // The progressive image library needs a html element
-import { Spinner } from '@/components/custom-spinner/custom-spinner.styles';
 import { ImageUrl } from '@/components/types';
 
 type ImageProps = {
