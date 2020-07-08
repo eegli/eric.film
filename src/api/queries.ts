@@ -8,7 +8,7 @@ export const ALL_BLOGPOSTS_PREVIEW = gql`
     $orderBy: BlogpostOrderByInput!
   ) {
     blogposts(first: $first, skip: $skip, orderBy: $orderBy) {
-      idss
+      id
       excerpt
       slug
       title
