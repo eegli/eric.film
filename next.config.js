@@ -8,6 +8,9 @@ const {
   NODE_ENV,
 } = process.env;
 
+process.env.SENTRY_DSN =
+  'https://f8391a116d3d4ad79bcb86ef11356476@o412028.ingest.sentry.io/5288196';
+
 module.exports = withSourceMaps({
   webpack: (config, options) => {
     config.module.rules.push({
@@ -46,8 +49,7 @@ module.exports = withSourceMaps({
   env: {
     GRAPHQL_URL:
       'https://api-eu-central-1.graphcms.com/v2/ckawpprfa01ja01z62wiy22qi/master',
-    SENTRY_DSN:
-      'https://f8391a116d3d4ad79bcb86ef11356476@o412028.ingest.sentry.io/5288196',
+
     GA_TRACKING_ID: 'UA-106609763-2',
   },
 });
