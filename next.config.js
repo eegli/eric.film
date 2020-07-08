@@ -48,6 +48,6 @@ module.exports = withSourceMaps({
       'https://api-eu-central-1.graphcms.com/v2/ckawpprfa01ja01z62wiy22qi/master',
     SENTRY_DSN:
       'https://f8391a116d3d4ad79bcb86ef11356476@o412028.ingest.sentry.io/5288196',
+    GA_TRACKING_ID: 'UA-106609763-2',
   },
-  GA_TRACKING_ID: 'UA-106609763-2',
 });
