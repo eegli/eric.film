@@ -12,11 +12,11 @@ const Settings: React.FC = () => {
         <Markdown source={Privacy} />
       </InfoContainer>
       <InfoContainer>
-        <a id='imprint' />
+        <a id='acknowledgements' />
         <Markdown source={Acknowledgements} />
       </InfoContainer>
       <InfoContainer>
-        <a id='acknowledgements' />
+        <a id='imprint' />
         <Markdown source={Imprint} />
       </InfoContainer>
     </>

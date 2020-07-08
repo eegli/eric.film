@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <Link href='/settings#acknowledgements' passHref>
           <SLink>acknowledgements</SLink>
         </Link>
-        <Link href='settings#imprint' passHref>
+        <Link href='/settings#imprint' passHref>
           <SLink>imprint</SLink>
         </Link>
       </Container>
