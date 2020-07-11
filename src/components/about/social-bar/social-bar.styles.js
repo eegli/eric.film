@@ -6,7 +6,7 @@ export const Container = styled.div`
 `;
 
 export const IconContainer = styled.a`
-  padding: 0 0.4rem;
+  margin: 0 0.5rem;
   font-size: ${({ theme }) => theme.fontsizes.baseIconFontSize};
   color: ${({ theme }) => theme.colors.textSecondaryColor};
 `;
