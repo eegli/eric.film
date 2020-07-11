@@ -62,6 +62,8 @@ This list has content. Das hat der Bundesrat beschlossen:
 
 Überall habe ein **Lernprozess** stattgefunden, auch bei den _Kantonen_, sagt Bundespräsidentin Sommaruga auf die Frage, ob sie keine Angst hat, dass die Kantone überfordert sein werden. «_Dieser Lernprozess hilft jetzt, Entscheidungen zu fällen.» Sie gibt sich zuversichtlich._ «Jetzt mit 10 bis 35 Ansteckungen pro Tag macht es Sinn, gezielt einzugreifen.» Der Bund ~~verschwinde aber nicht einfach~~, man habe ein Monitoring und sei in einer «viel besseren Ausgangslage».
 
+Jedes Mal habe ein **Lernprozess** stattgefunden, auch bei den _Kantonen_, sagt Bundespräsidentin Sommaruga auf die Frage, ob sie keine Angst hat, dass die Kantone überfordert sein werden. «_Dieser Lernprozess hilft jetzt, Entscheidungen zu fällen.» Sie gibt sich zuversichtlich._ «Jetzt mit 10 bis 35 Ansteckungen pro Tag macht es Sinn, gezielt einzugreifen.» Der Bund ~~verschwinde aber nicht einfach~~, man habe ein Monitoring und sei in einer «viel besseren Ausgangslage».
+
 # This section will be a citation and is a h1
 
 Gleichzeitig mit den Lockerungen wird auch die Homeoffice-Empfehlung gelockert, auch für die besonders gefährdeten Gruppen. Die seien nicht weniger gut geschützt, sagt Bundespräsidentin Sommaruga. Die Arbeitgeber hätten unverändert eine Fürsorge.

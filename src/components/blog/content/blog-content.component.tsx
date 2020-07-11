@@ -11,6 +11,7 @@ import { BlogPostContent } from '@/components/types';
 import { dateFormat } from 'src/utils/dates';
 import { MdAccessTime, MdUpdate } from 'react-icons/md';
 import CommentInfo from '../comment-info/comment-info.component';
+import MD from '../__mocks__/content.md';
 
 const BlogContent: React.FC<BlogPostContent> = ({
   title,
@@ -19,7 +20,7 @@ const BlogContent: React.FC<BlogPostContent> = ({
   createdAt,
   updatedAt,
 }) => {
-  // const source = process.env.NODE_ENV === 'production' ? content : MD;
+  const source = process.env.NODE_ENV === 'production' ? content : MD;
   // const video =
   //   process.env.NODE_ENV === 'production' ? ytvideo : '/VjSE0--1KNA';
   return (
@@ -37,7 +38,7 @@ const BlogContent: React.FC<BlogPostContent> = ({
           </div>
         ) : null}
       </BlogPostTimes>
-      <BlogMarkdown source={content} />
+      <BlogMarkdown source={source} />
 
       {ytvideo ? (
         <IFrameWrapper>

@@ -1,5 +1,4 @@
 import { useQuery } from '@apollo/react-hooks';
-import { useState } from 'react';
 import { NetworkStatus } from 'apollo-client';
 import { ALL_BLOGPOSTS_PREVIEW, allBlogPostsPreviewVars } from '@/api/queries';
 import BlogPreview from '@/components/blog/preview/blog-preview.component';

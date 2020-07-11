@@ -22,7 +22,7 @@
     "graphql": "^15.1.0",
     "graphql-request": "^2.0.0",
     "graphql-tag": "^2.10.3",
-    "next": "^9.4.5-canary.13",
+    "next": "^v9.4.5-canary.31",
     "nprogress": "^0.2.0",
     "raw-loader": "^4.0.1",
     "react": "16.13.1",

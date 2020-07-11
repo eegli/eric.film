@@ -1,18 +1,13 @@
 /* 
-BLOG CATEGORIES
+  BLOG CATEGORIES
 */
+
 // Same enums as in Graphcms
 export enum BlogCategories {
   BLOG_ALL = 'all',
   BLOG_TECH = 'tech',
   BLOG_VOTW = 'votw',
   BLOG_VARIA = 'varia',
-}
-
-export enum Sort {
-  LATEST = 'latest',
-  OLDEST = 'oldest',
-  UPDATED = 'updated',
 }
 
 export enum PortfolioCategories {
@@ -25,8 +20,8 @@ export enum PortfolioCategories {
 export type Category = BlogCategories | PortfolioCategories;
 
 /*
- BLOGPOST SCHEMA
- */
+  BLOGPOST SCHEMA
+*/
 
 export interface BlogPostPreview {
   excerpt: string;
@@ -63,7 +58,7 @@ export enum SortBy {
 }
 
 /* 
-IMAGES
+  IMAGES
 */
 
 export type ImageUrl = {
