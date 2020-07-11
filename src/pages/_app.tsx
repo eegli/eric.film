@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Global } from '../styles/styles';
 import Header from '@/components/header/header.component';
+import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import { ThemeProvider } from 'styled-components';
@@ -45,6 +46,11 @@ const App = ({ Component, pageProps, err }: Props) => {
 
   return (
     <>
+      <Head>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        {/* TODO Remove */}
+        <meta name='robots' content='noindex, nofollow' />
+      </Head>
       <div>
         <ApolloProvider client={apolloClient}>
           <ThemeProvider theme={theme}>

@@ -38,14 +38,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang='en' prefix='og: https://ogp.me/ns#'>
         <Head>
-          <meta
-            name='viewport'
-            content='initial-scale=1.0, width=device-width'
-          />
-          {/* TODO Remove */}
-          <meta name='robots' content='noindex, nofollow' />
-        </Head>
-        <Head>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
