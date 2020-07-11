@@ -1,5 +1,5 @@
 import React from 'react';
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import {
   ALL_BLOGPOSTS_PREVIEW,
   allBlogPostsPreviewVars,
@@ -36,7 +36,7 @@ const IndexPage: React.FC = () => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const apolloClient = initializeApollo();
 
   await apolloClient.query({
