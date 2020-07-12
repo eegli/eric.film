@@ -5,7 +5,7 @@ import { HttpLink } from 'apollo-link-http';
 
 let apolloClient;
 
-function createApolloClient() {
+const createApolloClient = () => {
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({
@@ -14,9 +14,9 @@ function createApolloClient() {
     }),
     cache: new InMemoryCache(),
   });
-}
+};
 
-export function initializeApollo(initialState = null) {
+export const initializeApollo = (initialState = null) => {
   const _apolloClient = apolloClient ?? createApolloClient();
 
   // If a page has Next.js data fetching methods that use Apollo Client, the initial state
@@ -30,9 +30,9 @@ export function initializeApollo(initialState = null) {
   if (!apolloClient) apolloClient = _apolloClient;
 
   return _apolloClient;
-}
+};
 
-export function useApollo(initialState) {
+export const useApollo = initialState => {
   const store = useMemo(() => initializeApollo(initialState), [initialState]);
   return store;
-}
+};

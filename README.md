@@ -1,15 +1,49 @@
+
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="logo.png" alt="Logo" height="80">
+  </a>
+  <h2 align="center">portfolio | blog | @eegli</h2>
+   <p align="center">
+    My personal website and blog, created with Next.js
+    <br />
+    <a href="https:beta.eric.film"><strong>Live website »</strong></a>
+    <br />
+  </p>
+</p>
+
+
+
+
+# eric.film
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## TODOS
+## Getting started
+Feel free to get a copy of this repo and use it for your own project!
 
-- Replace front image sizes
-- Blog Slug
+> Either fork this repo or clone it.
+
+```bash
+git clone git@github.com:eegli/eric.film.git
+```
+
+> Then start in development mode
+```bash
+yarn dev
+```
+> Open [http://localhost:3000](http://localhost:3000) with your browser to see the result
+
+---
+
 
 ## TODO BEFORE RELEASE
 
 - Safari getStaticProps
-- Sentry integration
-- Update Portfolio Images
+- Blog Slug
+
+---
 
 ## ROADMAP
 
@@ -22,23 +56,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Google Analytics bypass
 - Sentry fix
 
-## To know
-
--Note that generally, all content is wrapped in the layoutcontainer. This is not true for the index page as well as for the header!
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+---
 
 ## Learn More
 
@@ -48,9 +66,17 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+ ___
 
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+ ___
+
+## License
+The MIT License (MIT)
+
+Copyright (c) 2020 Eric Egli
+
