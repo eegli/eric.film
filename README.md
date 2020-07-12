@@ -9,7 +9,7 @@
    <p align="center">
     My personal website and blog, created with Next.js
     <br />
-    <a href="https:beta.eric.film"><strong>Live website »</strong></a>
+    <a href="https://beta.eric.film"><strong>Live website »</strong></a>
     <br />
   </p>
 </p>
@@ -20,7 +20,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting started
-Feel free to get a copy of this repo and use it for your own project!
+Feel free to get a copy of this repo and use it for your own projects!
 
 > Either fork this repo or clone it
 
