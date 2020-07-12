@@ -5,7 +5,7 @@
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="logo.png" alt="Logo" height="80">
   </a>
-  <h2 align="center">portfolio | blog | @eegli</h2>
+  <h3 align="center">portfolio | blog | @eegli</h3>
    <p align="center">
     My personal website and blog, created with Next.js
     <br />
@@ -16,14 +16,13 @@
 
 
 
-
 # eric.film
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting started
 Feel free to get a copy of this repo and use it for your own project!
 
-> Either fork this repo or clone it.
+> Either fork this repo or clone it
 
 ```bash
 git clone git@github.com:eegli/eric.film.git
@@ -38,14 +37,14 @@ yarn dev
 ---
 
 
-## TODO BEFORE RELEASE
+## Todos before release
 
 - Safari getStaticProps
 - Blog Slug
 
 ---
 
-## ROADMAP
+## Roadmap
 
 - SEO Improvements
 - Search Posts
