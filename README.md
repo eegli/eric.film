@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/eegli/eric.film">
     <img src="logo.png" alt="Logo" height="80">
   </a>
   <h3 align="center">portfolio | blog | @eegli</h3>
