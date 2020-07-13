@@ -13,9 +13,9 @@
 
   </p>
 </p>
-<p align="center">
+
 ![coverage](https://img.shields.io/github/languages/top/eegli/eric.film) ![David](https://img.shields.io/david/eegli/eric.film) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/eegli/eric.film) ![GitHub last commit](https://img.shields.io/github/last-commit/eegli/eric.film) ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/eegli/eric.film) ![Website](https://img.shields.io/website?down_color=lightgrey&down_message=offline&up_color=blue&up_message=online&url=https%3A%2F%2Fbeta.eric.film)
-  </p>
+
 
 
 # eric.film
