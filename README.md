@@ -21,6 +21,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - Safari getStaticProps
 - Blog Slug
+- Husky
 
 ---
 
