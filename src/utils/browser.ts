@@ -1,10 +1,15 @@
 // Taken from https://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
 
-export const browserTest = () => {
+type BrowserTest = {
+  browser: string;
+  hasPassed: boolean;
+};
+
+export const browserTest = (): BrowserTest => {
   if (process.browser) {
-    var sBrowser,
-      sUsrAg = navigator.userAgent;
-    var pass = true;
+    let sBrowser: string;
+    const sUsrAg = navigator.userAgent;
+    let pass = true;
 
     // The order matters here, and this may report false positives for unlisted browsers.
 

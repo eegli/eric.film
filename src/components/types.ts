@@ -1,6 +1,4 @@
-/* 
-  BLOG CATEGORIES
-*/
+// BLOG CATEGORIES
 
 // Same enums as in Graphcms
 export enum BlogCategories {
@@ -19,9 +17,7 @@ export enum PortfolioCategories {
 
 export type Category = BlogCategories | PortfolioCategories;
 
-/*
-  BLOGPOST SCHEMA
-*/
+// BLOGPOST SCHEMA
 
 export interface BlogPostPreview {
   excerpt: string;
@@ -57,9 +53,7 @@ export enum SortBy {
   createdAt_ASC = 'createdAt_ASC',
 }
 
-/* 
-  IMAGES
-*/
+// IMAGES
 
 export type ImageUrl = {
   url: string;
@@ -72,4 +66,16 @@ export interface ImageCollection {
 }
 export interface ImageData {
   imgCollections: ImageCollection[];
+}
+
+// QUERIES
+
+export interface PreviewVars {
+  skip: number;
+  first: number;
+  orderBy: SortBy;
+}
+
+export interface PostVars {
+  slug: string;
 }

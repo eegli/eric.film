@@ -1,6 +1,6 @@
 const FontFaceObserver = require('fontfaceobserver');
 
-const Fonts = () => {
+const Fonts = (): void => {
   const link = document.createElement('link');
   link.href =
     'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900';

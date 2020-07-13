@@ -22,7 +22,7 @@ interface Props extends AppProps {
   err: any;
 }
 
-const App = ({ Component, pageProps, err }: Props) => {
+const App: React.FC<Props> = ({ Component, pageProps, err }) => {
   useEffect(() => {
     Fonts();
     const handleRouteChangeStart = () => {

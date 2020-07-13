@@ -1,4 +1,4 @@
-import { SortBy } from '@/components/types';
+import { PostVars, PreviewVars, SortBy } from '@/components/types';
 import gql from 'graphql-tag';
 
 export const ALL_BLOGPOSTS_PREVIEW = gql`
@@ -31,7 +31,7 @@ export const ALL_BLOGPOSTS_PREVIEW = gql`
 // Setting default sort
 export const allBlogPostsPreviewVars = (
   orderBy: SortBy = SortBy.createdAt_DESC,
-) => ({
+): PreviewVars => ({
   skip: 0,
   first: 12,
   orderBy: orderBy,
@@ -56,7 +56,7 @@ export const SINGLE_BLOGPOST = gql`
   }
 `;
 
-export const singleBlogPostVars = (slug: string | string[]) => {
+export const singleBlogPostVars = (slug: string | string[]): PostVars => {
   if (Array.isArray(slug))
     return {
       slug: slug[0],
