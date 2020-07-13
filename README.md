@@ -1,4 +1,3 @@
-<!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/eegli/eric.film">
@@ -18,26 +17,25 @@
 
 # eric.film
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Todos before release
-
-- Safari getStaticProps
-- Blog Slug
-- Husky
-
----
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Feel free to copy/paste stuff from this repository and use it in your own project! Also, feedback is greatly appreciated.
 
 ## Roadmap
 
-- SEO Improvements
-- Search Posts
-- Browser Push
-- Measuring performance
-- Dynamic imports
+- SEO improvements
+- Search posts
+- Browser push
 - Add browser check
-- Google Analytics bypass
-- Sentry fix
+- Nginx proxy to bypass adblockers for Google Analytics
+
+---
+
+## Known Bugs
+
+- Safari iOS
+
+Crashes on pages with `next/link` and `getStaticProps`. It's kinda hard to debug since it only happens when deployed to production with Vercel. Turns out this error is an open bug in `Next.js`. [Link to issue](https://github.com/vercel/next.js/issues/11608).
+
+> Workaround: Pages depending on external data use `getServerSideProps` instead of `getStaticProps`.
 
 ---
 
@@ -59,7 +57,7 @@ With Sentury - or more specifically `@sentry/browser` - it is the same. It canno
 
 This is why it is good practice to filter requests by hostname / allowed domains - something that is possible for both Sentury and Google Analytics.
 
-My GraphQL endpoint needs to be public since the frontend has the possibility to fetch more blog posts directly from my backend. Thus, requests to GraphCMS can also be inspected any browser's dev tools.
+My GraphQL endpoint needs to be public since the frontend has the possibility to fetch more blog posts directly from my backend. Thus, requests to GraphCMS can also be inspected in any browser's dev tools.
 
 ---
 

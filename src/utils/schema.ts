@@ -1,3 +1,5 @@
+// https://developers.google.com/search/docs/data-types/article
+
 import { BlogPostContent } from '@/components/types';
 import { BLOG_PREVIEW_IMG_FALLBACK } from 'src/config';
 
