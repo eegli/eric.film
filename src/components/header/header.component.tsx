@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import {
   StyledHamburger,
   HeaderMainContainer,
@@ -7,36 +7,35 @@ import {
   HeaderMainBgContainer,
   HeaderOptionsMobileContainer,
   HeaderOptionsDesktopContainer,
-} from './header.styles';
-import Link from 'next/link';
-import * as gtag from '../../lib/gtag';
-import SmoothCollapse from 'react-smooth-collapse';
-import HeaderOptions from './header-options/header-options.components';
+} from './header.styles'
+import Link from 'next/link'
+import SmoothCollapse from 'react-smooth-collapse'
+import HeaderOptions from './header-options/header-options.components'
 
 const Header: React.FC = () => {
-  const [showHeader, setShowHeader] = useState(false);
+  const [showHeader, setShowHeader] = useState(false)
 
   const handleClick = (): void => {
-    setShowHeader(!showHeader);
+    setShowHeader(!showHeader)
     // gtag.event({
     //   action: 'toggle_header',
     //   category: 'header',
     //   label: 'logo',
     //   value: 'open_logo',
     // });
-  };
+  }
 
   return (
     <HeaderWrapper>
       <HeaderMainBgContainer>
         <HeaderMainContainer>
-          <Link href='/'>
+          <Link href="/">
             <a>
-              <StyledLogo src='/static/logo/Logo_v2.png' alt='eric.film logo' />
+              <StyledLogo src="/static/logo/Logo_v2.png" alt="eric.film logo" />
             </a>
           </Link>
           <HeaderOptionsDesktopContainer>
-            <HeaderOptions position='desktop' />
+            <HeaderOptions position="desktop" />
           </HeaderOptionsDesktopContainer>
           <StyledHamburger onClick={handleClick} />
         </HeaderMainContainer>
@@ -44,11 +43,11 @@ const Header: React.FC = () => {
 
       <SmoothCollapse expanded={showHeader} onClick={handleClick}>
         <HeaderOptionsMobileContainer>
-          <HeaderOptions position='mobile' />
+          <HeaderOptions position="mobile" />
         </HeaderOptionsMobileContainer>
       </SmoothCollapse>
     </HeaderWrapper>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

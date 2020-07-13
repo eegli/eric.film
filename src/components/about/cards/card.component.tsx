@@ -5,19 +5,19 @@ import {
   CardTitle,
   CardDescription,
   CardHeader,
-} from './card.styles';
+} from './card.styles'
 
-import SocialBar from '../social-bar/social-bar.component';
+import SocialBar from '../social-bar/social-bar.component'
 
 const CardComponent: React.FC = () => {
   return (
     <>
-      <CardHeader>- meet the amazing team -</CardHeader>
+      <CardHeader>{'- meet the amazing team -'}</CardHeader>
       <CardContainer>
         <Card>
           <CardPicture>
-            <source srcSet='/static/img/about/about-2.webp' type='image/webp' />
-            <img src='/static/img/about/about-2.jpg' alt='logo' />
+            <source srcSet="/static/img/about/about-2.webp" type="image/webp" />
+            <img src="/static/img/about/about-2.jpg" alt="logo" />
           </CardPicture>
 
           <CardTitle>eric</CardTitle>
@@ -37,15 +37,15 @@ const CardComponent: React.FC = () => {
         </Card>
         <Card>
           <CardPicture>
-            <source srcSet='/static/img/about/about-1.webp' type='image/webp' />
-            <img src='/static/img/about/about-1.jpg' alt='logo' />
+            <source srcSet="/static/img/about/about-1.webp" type="image/webp" />
+            <img src="/static/img/about/about-1.jpg" alt="logo" />
           </CardPicture>
           <CardTitle>eric</CardTitle>
           <CardDescription>
             <span>LEAD DEVELOPER</span>
             <p>
               eric is our self-taught javascript engineer. he mostly talks about
-              "react" but as long as our website looks good, we don't really
+              'react', but as long as our website looks good, we don't really
               care. Main responsibilities:
             </p>
             <ul>
@@ -57,8 +57,8 @@ const CardComponent: React.FC = () => {
         </Card>
         <Card>
           <CardPicture>
-            <source srcSet='/static/img/about/about-3.webp' type='image/webp' />
-            <img src='/static/img/about/about-3.jpg' alt='logo' />
+            <source srcSet="/static/img/about/about-3.webp" type="image/webp" />
+            <img src="/static/img/about/about-3.jpg" alt="logo" />
           </CardPicture>
           <CardTitle>eric</CardTitle>
           <CardDescription>
@@ -77,7 +77,7 @@ const CardComponent: React.FC = () => {
         </Card>
       </CardContainer>
     </>
-  );
-};
+  )
+}
 
-export default CardComponent;
+export default CardComponent
