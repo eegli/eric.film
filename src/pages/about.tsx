@@ -3,7 +3,7 @@ import Footer from '@/components/footer/footer.component';
 import { Sh1 } from '@/shared/headings.styles';
 import LayouContainer from '@/shared/layout/layout.container';
 import Head from 'next/head';
-import { SEO_ABOUT_META as meta } from '../../config';
+import { SEO_ABOUT_META as meta } from 'src/config';
 
 const AboutPage: React.FC = () => {
   return (

@@ -2,8 +2,8 @@ import { Spinner } from '@/components/custom-spinner/custom-spinner.styles';
 import { BlogPostPreview } from '@/components/types';
 import Link from 'next/link';
 import ProgressiveImage from 'react-progressive-graceful-image';
+import { BLOG_PREVIEW_IMG_FALLBACK } from 'src/config';
 import { dateFormat } from 'src/utils/dates';
-import { BLOG_PREVIEW_IMG_FALLBACK } from '../../../../config';
 import {
   BlogCreatedContainer,
   BlogCreatedIcon,
