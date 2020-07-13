@@ -19,7 +19,7 @@ const StillCategory: React.FC = () => {
   }
   if (data) {
     const images = data.imgCollections.find(
-      collection => collection.imageType === 'portfolio'
+      collection => collection.imageType === 'portfolio',
     );
     return (
       <>

@@ -30,9 +30,9 @@ export const theme = {
     h1FontSize: '22px',
     h2FontSize: '20px',
   },
-}
+};
 
-export type DarkTheme = typeof theme
+export type DarkTheme = typeof theme;
 
 declare module 'styled-components' {
   interface DefaultTheme extends DarkTheme {}

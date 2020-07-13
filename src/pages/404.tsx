@@ -1,11 +1,11 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
   position: relative;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-`
+`;
 
 const ErrorContainer = styled.div`
   position: absolute;
@@ -21,7 +21,7 @@ const ErrorContainer = styled.div`
   & > a {
     color: ${({ theme }) => theme.colors.textSecondaryColor};
   }
-`
+`;
 
 const Custom404: React.FC = () => {
   return (
@@ -30,11 +30,11 @@ const Custom404: React.FC = () => {
         <ErrorContainer>
           <h1>404 - Page Not Found</h1>
           <p>lol idk what you've been looking for?</p>
-          <a href="/blog?cat=all">take me anywhere. go</a>
+          <a href='/blog?cat=all'>take me anywhere. go</a>
         </ErrorContainer>
       </Wrapper>
     </>
-  )
-}
+  );
+};
 
-export default Custom404
+export default Custom404;

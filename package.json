@@ -1,13 +1,29 @@
 {
-  "name": "eric.film-tmp",
-  "version": "0.1.0",
+  "name": "eric.film",
+  "author": "Eric Egli (https://github.com/eegli)",
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://eric.film",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "prod": "next build && next start",
+    "format": "prettier --write **/*.{js,jsx,ts,tsx}",
     "lint": "eslint src --ext .js --ext .jsx --ext .ts --ext .tsx"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run type-check"
+    }
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.5",
@@ -49,6 +65,8 @@
     "babel-plugin-styled-components": "^1.10.7",
     "eslint": "^7.4.0",
     "eslint-plugin-react": "^7.20.3",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "typescript": "^3.9.6"
   }

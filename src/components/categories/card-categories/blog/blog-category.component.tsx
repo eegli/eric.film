@@ -70,7 +70,7 @@ const BlogCategory: React.FC<Props> = ({ filter, sortBy }) => {
     !filter
       ? (posts = data.blogposts)
       : (posts = data.blogposts.filter(
-          (post: BlogPostPreview) => post.type === filter
+          (post: BlogPostPreview) => post.type === filter,
         ));
 
     return (

@@ -21,7 +21,7 @@ const LandingContent: React.FC = ({ children }) => {
 
   if (data) {
     const images = data.imgCollections.find(
-      collection => collection.imageType === 'home'
+      collection => collection.imageType === 'home',
     );
     return (
       <>
