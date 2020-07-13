@@ -14,7 +14,7 @@
   </p>
 </p>
 
-  ![coverage](https://img.shields.io/github/languages/top/eegli/eric.film)
+  ![coverage](https://img.shields.io/github/languages/top/eegli/eric.film) ![David](https://img.shields.io/david/eegli/eric.film)
 
 
 
