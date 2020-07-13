@@ -8,6 +8,7 @@ export const BlogPostContainer = styled.article`
 
 export const BlogPostTitle = styled.h1`
   font-size: 2rem;
+  padding: 0 1rem;
 `;
 
 export const BlogPostExcerpt = styled.h2`
@@ -16,6 +17,7 @@ export const BlogPostExcerpt = styled.h2`
 `;
 
 export const BlogPostTimes = styled.div`
+  padding: 0 1rem;
   display: flex;
   color: ${({ theme }) => theme.colors.textShadowColor};
   & div {

@@ -10,7 +10,7 @@ import BlogMarkdown from '../markdown/blog-markdown.component';
 import { BlogPostContent } from '@/components/types';
 import { dateFormat } from 'src/utils/dates';
 import { MdAccessTime, MdUpdate } from 'react-icons/md';
-import CommentInfo from '../comment-info/comment-info.component';
+
 import MD from '../__mocks__/content.md';
 
 const BlogContent: React.FC<BlogPostContent> = ({
@@ -49,7 +49,6 @@ const BlogContent: React.FC<BlogPostContent> = ({
           />
         </IFrameWrapper>
       ) : null}
-      <CommentInfo />
     </BlogPostContainer>
   );
 };

@@ -10,6 +10,7 @@ import Head from 'next/head';
 import { makeBlogSchema } from 'src/utils/schema';
 import { trimExcerptForMeta } from 'src/utils/metaExcerpt';
 import { SEO_OG_FALLBACK } from '../../../config';
+import CommentInfo from './comment-info/comment-info.component';
 
 const BlogContainer: React.FC = () => {
   const router = useRouter();
@@ -66,14 +67,17 @@ const BlogContainer: React.FC = () => {
         </Head>
         <Container>
           <BlogContent {...post} />
-          <DiscussionEmbed
-            shortname='eric-film'
-            config={{
-              url: `${url}${post.slug}`,
-              identifier: String(post.id),
-              title: post.title,
-            }}
-          />
+          <div style={{ padding: '0 1rem' }}>
+            <CommentInfo />
+            <DiscussionEmbed
+              shortname='eric-film'
+              config={{
+                url: `${url}${post.slug}`,
+                identifier: String(post.id),
+                title: post.title,
+              }}
+            />
+          </div>
         </Container>
       </>
     );
