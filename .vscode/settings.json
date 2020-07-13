@@ -1,5 +1,6 @@
 {
-    "typescript.tsdk": "node_modules\\typescript\\lib",
-    "editor.fontSize": 15,
-    "editor.wordWrap": "on"
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true
 }

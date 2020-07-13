@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 import {
   BgContainer,
   IntroContainer,
-} from '@/components/categories/card-categories/shared.styles';
-import { Table } from './dev-category.styles';
-const DevCategory: React.FC<{}> = () => {
+} from '@/components/categories/card-categories/shared.styles'
+import { Table } from './dev-category.styles'
+const DevCategory: React.FC = () => {
   return (
     <>
       <IntroContainer dev>
@@ -65,7 +65,7 @@ const DevCategory: React.FC<{}> = () => {
         </Table>
       </BgContainer>
     </>
-  );
-};
+  )
+}
 
-export default DevCategory;
+export default DevCategory
