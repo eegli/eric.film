@@ -10,9 +10,11 @@
     <br />
     <a href="https://beta.eric.film"><strong>Live website »</strong></a>
     <br />
-  ![coverage](https://img.shields.io/github/languages/top/eegli/eric.film)
+
   </p>
 </p>
+
+  ![coverage](https://img.shields.io/github/languages/top/eegli/eric.film)
 
 
 
