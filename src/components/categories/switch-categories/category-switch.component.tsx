@@ -1,18 +1,16 @@
 import {
-  DevCategory,
-  BlogCategory,
-  MovingCategory,
-  StillCategory,
-  ClientCategory,
-} from '../card-categories/index';
-
-import { useRouter } from 'next/router';
-
-import {
   BlogCategories,
   PortfolioCategories,
   SortBy,
 } from '@/components/types';
+import { useRouter } from 'next/router';
+import {
+  BlogCategory,
+  ClientCategory,
+  DevCategory,
+  MovingCategory,
+  StillCategory,
+} from '../card-categories/index';
 
 type Props = {
   sortBy?: SortBy;

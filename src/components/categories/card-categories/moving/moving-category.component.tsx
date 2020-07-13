@@ -1,10 +1,10 @@
+import Spinner from '@/components/custom-spinner/custom-spinner.component';
 import React, { useState } from 'react';
 import {
+  IframeWrapper,
   MovingCategoryContainer,
   StyledIframe,
-  IframeWrapper,
 } from './moving-category.styles';
-import Spinner from '@/components/custom-spinner/custom-spinner.component';
 
 const MovingCategory: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);

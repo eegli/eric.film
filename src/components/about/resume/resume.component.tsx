@@ -1,15 +1,13 @@
 import { useState } from 'react';
+import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
+import SmoothCollapse from 'react-smooth-collapse';
 import {
   Container,
-  Section,
   ResumeContent,
+  Section,
   ToggleContainer,
   ToggleTitle,
 } from './resume.styles';
-
-import { FaAngleUp, FaAngleDown } from 'react-icons/fa';
-
-import SmoothCollapse from 'react-smooth-collapse';
 
 const ResumeComponent: React.FC = () => {
   const [workEdOpen, setWorkEdOpen] = useState(false);

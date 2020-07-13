@@ -1,12 +1,11 @@
-import React from 'react';
-import { DescriptionContainer, Sh1, Sh2 } from '@/shared/headings.styles';
-import { LandingContentContainer } from './landing-content.styles';
-import Gallery from '@/components/gallery/gallery.component';
-import CustomLink from '@/components/custom-link/custom-link.component';
 import { ALL_IMGS } from '@/api/queries';
-import { useQuery } from '@apollo/react-hooks';
+import CustomLink from '@/components/custom-link/custom-link.component';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
+import Gallery from '@/components/gallery/gallery.component';
 import { ImageData } from '@/components/types';
+import { DescriptionContainer, Sh1, Sh2 } from '@/shared/headings.styles';
+import { useQuery } from '@apollo/react-hooks';
+import { LandingContentContainer } from './landing-content.styles';
 
 const LandingContent: React.FC = ({ children }) => {
   const { loading, error, data } = useQuery<ImageData>(ALL_IMGS);

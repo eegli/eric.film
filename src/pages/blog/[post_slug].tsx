@@ -1,10 +1,9 @@
-import React from 'react';
-import { GetServerSideProps } from 'next';
 import BlogContainer from '@/components/blog/blog-container.component';
-import { SINGLE_BLOGPOST, singleBlogPostVars } from '../../api/queries';
-import LayoutContainer from '@/components/shared/layout/layout.container';
-import { initializeApollo } from '../../lib/apolloClient';
 import Footer from '@/components/footer/footer.component';
+import LayoutContainer from '@/components/shared/layout/layout.container';
+import { GetServerSideProps } from 'next';
+import { singleBlogPostVars, SINGLE_BLOGPOST } from '../../api/queries';
+import { initializeApollo } from '../../lib/apolloClient';
 
 const IndexPage: React.FC = () => {
   return (

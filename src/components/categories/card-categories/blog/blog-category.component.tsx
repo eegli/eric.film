@@ -1,21 +1,19 @@
-import { useQuery } from '@apollo/react-hooks';
-import { NetworkStatus } from 'apollo-client';
-import { ALL_BLOGPOSTS_PREVIEW, allBlogPostsPreviewVars } from '@/api/queries';
+import { allBlogPostsPreviewVars, ALL_BLOGPOSTS_PREVIEW } from '@/api/queries';
 import BlogPreview from '@/components/blog/preview/blog-preview.component';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
-
+import {
+  BlogPostPreview,
+  BlogPostPreviewData,
+  Category,
+  SortBy,
+} from '@/components/types';
+import { useQuery } from '@apollo/react-hooks';
+import { NetworkStatus } from 'apollo-client';
 import {
   BlogCategoryContainer,
   FetchButton,
   FetchIcon,
 } from './blog-category.styles';
-
-import {
-  BlogPostPreview,
-  Category,
-  BlogPostPreviewData,
-  SortBy,
-} from '@/components/types';
 
 type Props = {
   filter?: Category;

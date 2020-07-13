@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 import { Props } from './layout.container';
 
 export const LayoutContainerStyle = styled.div<Props>`

@@ -1,10 +1,9 @@
-import React from 'react';
+import { FaAngleDown } from 'react-icons/fa';
 import {
-  LandingVideoContainer,
   ArrowDownContainer,
+  LandingVideoContainer,
   StyledVideo,
 } from './landing-video.styles';
-import { FaAngleDown } from 'react-icons/fa';
 
 const LandingVideo: React.FC = () => {
   // This works because the landing video page is 100vh

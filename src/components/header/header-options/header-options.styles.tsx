@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { DarkTheme } from '@/styles/theme';
+import styled from 'styled-components';
 
 type Props = {
   isMobile: boolean;

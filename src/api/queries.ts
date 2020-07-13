@@ -1,5 +1,5 @@
-import gql from 'graphql-tag';
 import { SortBy } from '@/components/types';
+import gql from 'graphql-tag';
 
 export const ALL_BLOGPOSTS_PREVIEW = gql`
   query ALL_BLOGPOSTS_PREVIEW(

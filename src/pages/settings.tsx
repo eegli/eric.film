@@ -1,5 +1,5 @@
-import LayoutContainer from '@/shared/layout/layout.container';
 import Settings from '@/components/settings/settings.component';
+import LayoutContainer from '@/shared/layout/layout.container';
 
 const SettingsPage: React.FC = () => {
   return (

@@ -1,4 +1,3 @@
-import React from 'react';
 import { LayoutContainerStyle } from './layout.styles';
 
 export type Props = {

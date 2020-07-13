@@ -1,10 +1,10 @@
 import { ALL_IMGS } from '@/api/queries';
-import Head from 'next/head';
 import { GetServerSideProps } from 'next';
-import LandingVideo from '../components/landing/landing-video.component';
-import LandingContent from '../components/landing/landing-content.component';
-import { initializeApollo } from '../lib/apolloClient';
+import Head from 'next/head';
 import { SEO_INDEX_META as meta } from '../../config';
+import LandingContent from '../components/landing/landing-content.component';
+import LandingVideo from '../components/landing/landing-video.component';
+import { initializeApollo } from '../lib/apolloClient';
 
 const IndexPage: React.FC = () => {
   return (

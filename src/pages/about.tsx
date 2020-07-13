@@ -1,9 +1,9 @@
+import About from '@/components/about/about.component';
+import Footer from '@/components/footer/footer.component';
 import { Sh1 } from '@/shared/headings.styles';
 import LayouContainer from '@/shared/layout/layout.container';
-import About from '@/components/about/about.component';
-import { SEO_ABOUT_META as meta } from '../../config';
 import Head from 'next/head';
-import Footer from '@/components/footer/footer.component';
+import { SEO_ABOUT_META as meta } from '../../config';
 
 const AboutPage: React.FC = () => {
   return (

@@ -1,6 +1,6 @@
 import { AboutContainer } from './about.styles';
-import ResumeComponent from './resume/resume.component';
 import CardComponent from './cards/card.component';
+import ResumeComponent from './resume/resume.component';
 
 const About: React.FC = () => {
   return (

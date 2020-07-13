@@ -1,16 +1,16 @@
-import BlogContent from './content/blog-content.component';
-import { DiscussionEmbed } from 'disqus-react';
-import { BlogPostData } from '@/components/types';
-import { Container } from './blog-container.styles';
-import { useQuery } from '@apollo/react-hooks';
-import { useRouter } from 'next/router';
-import { SINGLE_BLOGPOST, singleBlogPostVars } from '../../api/queries';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
+import { BlogPostData } from '@/components/types';
+import { useQuery } from '@apollo/react-hooks';
+import { DiscussionEmbed } from 'disqus-react';
 import Head from 'next/head';
-import { makeBlogSchema } from 'src/utils/schema';
+import { useRouter } from 'next/router';
 import { trimExcerptForMeta } from 'src/utils/metaExcerpt';
+import { makeBlogSchema } from 'src/utils/schema';
 import { SEO_OG_FALLBACK } from '../../../config';
+import { singleBlogPostVars, SINGLE_BLOGPOST } from '../../api/queries';
+import { Container } from './blog-container.styles';
 import CommentInfo from './comment-info/comment-info.component';
+import BlogContent from './content/blog-content.component';
 
 const BlogContainer: React.FC = () => {
   const router = useRouter();

@@ -1,7 +1,5 @@
-import React from 'react';
-import { CustomLinkText } from './custom-link.styles';
-
 import Link from 'next/link';
+import { CustomLinkText } from './custom-link.styles';
 
 type Props = {
   children: string;

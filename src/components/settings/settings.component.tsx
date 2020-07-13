@@ -1,8 +1,8 @@
-import { InfoContainer } from './settings.styles';
 import Markdown from '@/components/blog/markdown/blog-markdown.component';
+import { InfoContainer } from './settings.styles';
 import Acknowledgements from './__content__/acknowledgements.md';
-import Privacy from './__content__/privacy.md';
 import Imprint from './__content__/imprint.md';
+import Privacy from './__content__/privacy.md';
 
 const Settings: React.FC = () => {
   return (

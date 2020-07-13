@@ -1,7 +1,6 @@
-import React from 'react';
-import { StyledLinkText } from './header-options.styles';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { StyledLinkText } from './header-options.styles';
 
 export interface Props {
   position: 'mobile' | 'desktop';

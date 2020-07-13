@@ -1,5 +1,5 @@
-import { Container, Hr, SLink } from './footer.styles';
 import Link from 'next/link';
+import { Container, Hr, SLink } from './footer.styles';
 
 const Footer: React.FC = () => {
   return (

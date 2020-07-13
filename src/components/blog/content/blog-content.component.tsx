@@ -1,17 +1,15 @@
-import React from 'react';
+import { BlogPostContent } from '@/components/types';
+import { MdAccessTime, MdUpdate } from 'react-icons/md';
+import { dateFormat } from 'src/utils/dates';
+import BlogMarkdown from '../markdown/blog-markdown.component';
+import MD from '../__mocks__/content.md';
 import {
   BlogPostContainer,
-  BlogPostTitle,
-  StyledIframe,
-  IFrameWrapper,
   BlogPostTimes,
+  BlogPostTitle,
+  IFrameWrapper,
+  StyledIframe,
 } from './blog-content.styles';
-import BlogMarkdown from '../markdown/blog-markdown.component';
-import { BlogPostContent } from '@/components/types';
-import { dateFormat } from 'src/utils/dates';
-import { MdAccessTime, MdUpdate } from 'react-icons/md';
-
-import MD from '../__mocks__/content.md';
 
 const BlogContent: React.FC<BlogPostContent> = ({
   title,

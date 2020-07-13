@@ -1,4 +1,3 @@
-import React from 'react';
 import { Spinner } from './custom-spinner.styles';
 
 const CustomSpinner: React.FC = () => (

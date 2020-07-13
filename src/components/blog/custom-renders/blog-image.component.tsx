@@ -1,4 +1,3 @@
-import React from 'react';
 import ProgressiveImage from 'react-progressive-graceful-image';
 
 const Image: React.FC<HTMLImageElement> = props => {

@@ -1,6 +1,6 @@
+import Router from 'next/router';
 import { useState } from 'react';
 import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect';
-import Router from 'next/router';
 
 export function useActiveUrl(defaultCat: string): string {
   const [activeUrl, setActiveUrl] = useState(defaultCat);

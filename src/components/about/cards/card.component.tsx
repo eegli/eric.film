@@ -1,13 +1,12 @@
+import SocialBar from '../social-bar/social-bar.component';
 import {
-  CardContainer,
   Card,
-  CardPicture,
-  CardTitle,
+  CardContainer,
   CardDescription,
   CardHeader,
+  CardPicture,
+  CardTitle,
 } from './card.styles';
-
-import SocialBar from '../social-bar/social-bar.component';
 
 const CardComponent: React.FC = () => {
   return (

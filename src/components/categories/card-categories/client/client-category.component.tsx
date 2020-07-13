@@ -1,9 +1,8 @@
-import React from 'react';
 import {
   BgContainer,
   IntroContainer,
 } from '@/components/categories/card-categories/shared.styles';
-import { Container, Client } from './client-category.styles';
+import { Client, Container } from './client-category.styles';
 
 const ClientCategory: React.FC = () => {
   return (

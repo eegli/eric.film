@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
-import { Global } from '../styles/styles';
 import Header from '@/components/header/header.component';
+import Fonts from '@/styles/fonts';
+import { ApolloProvider } from '@apollo/react-hooks';
+import * as Sentry from '@sentry/node';
+import { AppProps } from 'next/app';
 import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress';
+import React, { useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../styles/theme';
-import { AppProps } from 'next/app';
-import { ApolloProvider } from '@apollo/react-hooks';
 import { useApollo } from '../lib/apolloClient';
-import Fonts from '@/styles/fonts';
-import * as Sentry from '@sentry/node';
 import * as gtag from '../lib/gtag';
+import { Global } from '../styles/styles';
+import { theme } from '../styles/theme';
 
 Sentry.init({
   enabled: process.env.NODE_ENV === 'production',

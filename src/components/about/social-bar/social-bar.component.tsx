@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { Container, IconContainer } from './social-bar.styles';
 
 const SocialBar: React.FC = () => {

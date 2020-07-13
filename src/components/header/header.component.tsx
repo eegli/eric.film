@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import {
-  StyledHamburger,
-  HeaderMainContainer,
-  StyledLogo,
-  HeaderWrapper,
-  HeaderMainBgContainer,
-  HeaderOptionsMobileContainer,
-  HeaderOptionsDesktopContainer,
-} from './header.styles';
 import Link from 'next/link';
+import React, { useState } from 'react';
 import SmoothCollapse from 'react-smooth-collapse';
 import HeaderOptions from './header-options/header-options.components';
+import {
+  HeaderMainBgContainer,
+  HeaderMainContainer,
+  HeaderOptionsDesktopContainer,
+  HeaderOptionsMobileContainer,
+  HeaderWrapper,
+  StyledHamburger,
+  StyledLogo,
+} from './header.styles';
 
 const Header: React.FC = () => {
   const [showHeader, setShowHeader] = useState(false);

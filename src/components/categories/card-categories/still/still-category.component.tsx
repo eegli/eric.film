@@ -1,9 +1,8 @@
-import React from 'react';
-import Gallery from '@/components/gallery/gallery.component';
 import { ALL_IMGS } from '@/api/queries';
-import { useQuery } from '@apollo/react-hooks';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
+import Gallery from '@/components/gallery/gallery.component';
 import { ImageData } from '@/components/types';
+import { useQuery } from '@apollo/react-hooks';
 
 // TODO correct imgs
 

@@ -1,16 +1,16 @@
+import { BlogCategories as B, SortBy } from '@/components/types';
+import Link from 'next/link';
 import { useState } from 'react';
+import { FaSort } from 'react-icons/fa';
+import { useActiveUrl } from '../hooks/useActiveCat';
+import CategorySwitch from './switch-categories/category-switch.component';
 import {
   CardContainer,
   CategoryContainer,
-  SortButtonContainer,
   SelectionCardContainer,
   SortButton,
+  SortButtonContainer,
 } from './_categories.styles';
-import CategorySwitch from './switch-categories/category-switch.component';
-import { BlogCategories as B, SortBy } from '@/components/types';
-import { useActiveUrl } from '../hooks/useActiveCat';
-import { FaSort } from 'react-icons/fa';
-import Link from 'next/link';
 
 /* 
 This page handles the routing for all the blog and portfolio categories

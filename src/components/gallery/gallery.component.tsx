@@ -1,8 +1,7 @@
-import React from 'react';
-import { GalleryContainer, Image } from './gallery.styles';
-import ProgressiveImage from 'react-progressive-graceful-image';
 // The progressive image library needs a html element
 import { ImageUrl } from '@/components/types';
+import ProgressiveImage from 'react-progressive-graceful-image';
+import { GalleryContainer, Image } from './gallery.styles';
 
 type ImageProps = {
   images: ImageUrl[];

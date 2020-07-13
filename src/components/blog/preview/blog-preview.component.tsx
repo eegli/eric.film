@@ -1,23 +1,22 @@
-import React from 'react';
+import { Spinner } from '@/components/custom-spinner/custom-spinner.styles';
+import { BlogPostPreview } from '@/components/types';
 import Link from 'next/link';
+import ProgressiveImage from 'react-progressive-graceful-image';
+import { dateFormat } from 'src/utils/dates';
+import { BLOG_PREVIEW_IMG_FALLBACK } from '../../../../config';
 import {
-  BlogPostContainer,
-  BlogPostFooter,
-  BlogCreatedTime,
-  BlogPostTitle,
-  BlogPostExcerpt,
-  BlogPreviewImage,
-  BlogPostLabel,
-  BlogLabelContainer,
-  BlogPostIcon,
   BlogCreatedContainer,
   BlogCreatedIcon,
+  BlogCreatedTime,
+  BlogLabelContainer,
+  BlogPostContainer,
+  BlogPostExcerpt,
+  BlogPostFooter,
+  BlogPostIcon,
+  BlogPostLabel,
+  BlogPostTitle,
+  BlogPreviewImage,
 } from './blog-preview.styles';
-import ProgressiveImage from 'react-progressive-graceful-image';
-import { Spinner } from '@/components/custom-spinner/custom-spinner.styles';
-import { dateFormat } from 'src/utils/dates';
-import { BlogPostPreview } from '@/components/types';
-import { BLOG_PREVIEW_IMG_FALLBACK } from '../../../../config';
 
 const BlogPreview: React.FC<BlogPostPreview> = ({
   title,

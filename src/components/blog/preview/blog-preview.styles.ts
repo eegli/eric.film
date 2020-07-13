@@ -1,7 +1,6 @@
-import styled, { css } from 'styled-components';
-import { MdLabel } from 'react-icons/md';
 import { BlogCategories } from '@/components/types';
-import { MdAccessTime } from 'react-icons/md';
+import { MdAccessTime, MdLabel } from 'react-icons/md';
+import styled, { css } from 'styled-components';
 
 const hover = css`
   &:hover {
