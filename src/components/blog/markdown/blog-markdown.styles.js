@@ -1,11 +1,22 @@
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 
+const contentPadding = '1rem';
+
 export const StyledMD = styled(ReactMarkdown)`
   margin-top: 1rem;
   background-color: ${({ theme }) => theme.colors.baseBgraised};
-  padding: 0 1.2rem;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
+  & > * {
+    padding: 0 ${contentPadding};
+  }
+  & img,
+  code {
+    padding: 0;
+  }
+  & li {
+    margin: 0 ${contentPadding};
+  }
   & p {
     font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   }
@@ -26,6 +37,7 @@ export const StyledMD = styled(ReactMarkdown)`
     display: block;
     margin: 0.5rem auto;
   }
+
   & blockquote {
     background: ${({ theme }) => theme.colors.baseBg};
     border-left: 4px solid ${({ theme }) => theme.colors.textSecondaryColor};
