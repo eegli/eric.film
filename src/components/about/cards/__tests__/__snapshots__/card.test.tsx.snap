@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Card /> Card components 1`] = `ShallowWrapper {}`;
+
 exports[`<Card /> renders three <Foo /> components 1`] = `ShallowWrapper {}`;

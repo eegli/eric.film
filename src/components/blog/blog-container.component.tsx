@@ -1,12 +1,12 @@
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import { BlogPostData } from '@/components/types';
+import { SEO_OG_FALLBACK } from '@/src/config';
+import { trimExcerptForMeta } from '@/src/utils/metaExcerpt';
+import { makeBlogSchema } from '@/src/utils/schema';
 import { useQuery } from '@apollo/react-hooks';
 import { DiscussionEmbed } from 'disqus-react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { SEO_OG_FALLBACK } from 'src/config';
-import { trimExcerptForMeta } from 'src/utils/metaExcerpt';
-import { makeBlogSchema } from 'src/utils/schema';
 import { singleBlogPostVars, SINGLE_BLOGPOST } from '../../api/queries';
 import { Container } from './blog-container.styles';
 import CommentInfo from './comment-info/comment-info.component';

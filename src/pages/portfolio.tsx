@@ -2,8 +2,8 @@ import PortfolioCategories from '@/components/categories/portfolio-categories.co
 import Footer from '@/components/footer/footer.component';
 import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';
+import { SEO_PORTFOLIO_META as meta } from '@/src/config';
 import Head from 'next/head';
-import { SEO_PORTFOLIO_META as meta } from 'src/config';
 
 const PortfolioPage: React.FC = () => {
   return (
