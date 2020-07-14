@@ -1,9 +1,9 @@
 import { shallow } from 'enzyme';
-import SocialBar from '../social-bar.component';
+import Card from '../card.component';
 
-describe('About - social bar', () => {
+describe('About - card', () => {
   it('renders component', () => {
-    const wrapper = shallow(<SocialBar />);
+    const wrapper = shallow(<Card />);
     expect(wrapper).toMatchSnapshot();
     // console.log(wrapper.debug());
   });

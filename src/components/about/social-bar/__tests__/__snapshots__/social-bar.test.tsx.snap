@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`About Renders social bar component 1`] = `
+exports[`About - social bar renders component 1`] = `
 <social-barstyles__Container>
   <social-barstyles__IconContainer
     aria-label="Link to Github"
