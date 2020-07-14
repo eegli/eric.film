@@ -1,6 +1,5 @@
 module.exports = {
   preset: 'ts-jest',
-  testEnvironment: 'node',
   roots: ['<rootDir>/src/'],
   // coveragePathIgnorePatterns: ['<rootDir>/build/', '<rootDir>/node_modules/'],
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.js'],
@@ -15,4 +14,6 @@ module.exports = {
     '@/api/(.*)': ['<rootDir>/src/api/$1'],
     '@/src/(.*)': ['<rootDir>/src/$1'],
   },
+  testEnvironment: 'node',
+  snapshotSerializers: ['enzyme-to-json/serializer'],
 };
