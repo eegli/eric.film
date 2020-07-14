@@ -24,8 +24,8 @@ export const theme = {
   },
 
   fontsizes: {
-    baseFontSize: '16px',
-    secondaryFontSize: '14px',
+    baseFontSize: '18px',
+    secondaryFontSize: '16px',
     baseIconFontSize: '18px',
     h1FontSize: '22px',
     h2FontSize: '20px',
@@ -34,6 +34,8 @@ export const theme = {
 
 export type DarkTheme = typeof theme;
 
+// Namespace merging: https://www.typescriptlang.org/docs/handbook/declaration-merging.html
 declare module 'styled-components' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
   interface DefaultTheme extends DarkTheme {}
 }

@@ -44,7 +44,7 @@ const CardComponent: React.FC = () => {
             <span>LEAD DEVELOPER</span>
             <p>
               eric is our self-taught javascript engineer. he mostly talks about
-              'react', but as long as our website looks good, we don't really
+              "react" but as long as our website looks good, we don't really
               care. Main responsibilities:
             </p>
             <ul>
