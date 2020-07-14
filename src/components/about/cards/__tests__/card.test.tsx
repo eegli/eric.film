@@ -1,9 +1,9 @@
-const sum = (a: number, b: number) => {
-  return a + b;
-};
+import { shallow } from 'enzyme';
+import Card from '../card.component';
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
+describe('<Card />', () => {
+  it('renders three <Foo /> components', () => {
+    const wrapper = shallow(<Card />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
-
-export default sum;
