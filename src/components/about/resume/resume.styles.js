@@ -15,7 +15,7 @@ export const Container = styled.div`
 
 export const Section = styled.div`
   flex: 1;
-  margin-right: 2rem;
+  margin-right: 1rem;
   &:nth-child(2) {
     margin-left: 1rem;
     margin-right: 0;
