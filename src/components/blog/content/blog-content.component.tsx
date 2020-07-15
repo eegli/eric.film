@@ -1,6 +1,6 @@
 import { BlogPostContent } from '@/components/types';
+import { dateFormat } from '@/src/utils/dates';
 import { MdAccessTime, MdUpdate } from 'react-icons/md';
-import { dateFormat } from 'src/utils/dates';
 import BlogMarkdown from '../markdown/blog-markdown.component';
 import MD from '../__mocks__/content.md';
 import {

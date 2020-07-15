@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About - resume renders component 1`] = `
+<ResumeComponent>
+  <resumestyles__Container>
+    <div
+      className="resumestyles__Container-hzvv7e-0 kUOufj"
+    >
+      <resumestyles__Section>
+        <div
+          className="resumestyles__Section-hzvv7e-1 gtCqqE"
+        >
+          <resumestyles__ToggleContainer
+            onClick={[Function]}
+          >
+            <div
+              className="resumestyles__ToggleContainer-hzvv7e-3 ngenB"
+              onClick={[Function]}
+            >
+              <resumestyles__ToggleTitle>
+                <p
+                  className="resumestyles__ToggleTitle-hzvv7e-4 eMCsEr"
+                >
+                  education - work
+                </p>
+              </resumestyles__ToggleTitle>
+              <FaAngleDown>
+                <IconBase
+                  attr={
+                    Object {
+                      "viewBox": "0 0 320 512",
+                    }
+                  }
+                >
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    strokeWidth="0"
+                    style={
+                      Object {
+                        "color": undefined,
+                      }
+                    }
+                    viewBox="0 0 320 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                      key="0"
+                    />
+                  </svg>
+                </IconBase>
+              </FaAngleDown>
+            </div>
+          </resumestyles__ToggleContainer>
+          <SmoothCollapse
+            allowOverflowWhenOpen={false}
+            className=""
+            collapsedHeight="0"
+            eagerRender={false}
+            expanded={false}
+            heightTransition=".25s ease"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "none",
+                  "height": "0",
+                  "overflow": "hidden",
+                  "transition": "height .25s ease",
+                }
+              }
+            />
+          </SmoothCollapse>
+        </div>
+      </resumestyles__Section>
+      <resumestyles__Section>
+        <div
+          className="resumestyles__Section-hzvv7e-1 gtCqqE"
+        >
+          <resumestyles__ToggleContainer
+            onClick={[Function]}
+          >
+            <div
+              className="resumestyles__ToggleContainer-hzvv7e-3 ngenB"
+              onClick={[Function]}
+            >
+              <resumestyles__ToggleTitle>
+                <p
+                  className="resumestyles__ToggleTitle-hzvv7e-4 eMCsEr"
+                >
+                  tools - technology
+                </p>
+              </resumestyles__ToggleTitle>
+              <FaAngleDown>
+                <IconBase
+                  attr={
+                    Object {
+                      "viewBox": "0 0 320 512",
+                    }
+                  }
+                >
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    strokeWidth="0"
+                    style={
+                      Object {
+                        "color": undefined,
+                      }
+                    }
+                    viewBox="0 0 320 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                      key="0"
+                    />
+                  </svg>
+                </IconBase>
+              </FaAngleDown>
+            </div>
+          </resumestyles__ToggleContainer>
+          <SmoothCollapse
+            allowOverflowWhenOpen={false}
+            className=""
+            collapsedHeight="0"
+            eagerRender={false}
+            expanded={false}
+            heightTransition=".25s ease"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "none",
+                  "height": "0",
+                  "overflow": "hidden",
+                  "transition": "height .25s ease",
+                }
+              }
+            />
+          </SmoothCollapse>
+        </div>
+      </resumestyles__Section>
+    </div>
+  </resumestyles__Container>
+</ResumeComponent>
+`;

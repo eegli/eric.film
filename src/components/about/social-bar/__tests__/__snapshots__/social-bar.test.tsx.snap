@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About - social bar renders component 1`] = `
+<social-barstyles__Container>
+  <social-barstyles__IconContainer
+    aria-label="Link to Github"
+    href="https://github.com/eegli"
+    rel="noopener"
+    target="_blank"
+  >
+    <FaGithub />
+  </social-barstyles__IconContainer>
+  <social-barstyles__IconContainer
+    aria-label="Link to Linkedin"
+    href="https://www.linkedin.com/in/ericegli/"
+    rel="noopener"
+    target="_blank"
+  >
+    <FaLinkedinIn />
+  </social-barstyles__IconContainer>
+  <social-barstyles__IconContainer
+    aria-label="Link to Instagram"
+    href="http://instagram.com/eric.film"
+    rel="noopener"
+    target="_blank"
+  >
+    <FaInstagram />
+  </social-barstyles__IconContainer>
+</social-barstyles__Container>
+`;

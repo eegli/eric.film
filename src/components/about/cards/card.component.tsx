@@ -11,7 +11,7 @@ import {
 const CardComponent: React.FC = () => {
   return (
     <>
-      <CardHeader>{'- meet the amazing team -'}</CardHeader>
+      <CardHeader>{' meet the amazing team '}</CardHeader>
       <CardContainer>
         <Card>
           <CardPicture>
@@ -69,7 +69,6 @@ const CardComponent: React.FC = () => {
             </p>
             <ul>
               <li>none</li>
-              <br />
             </ul>
             <SocialBar />
           </CardDescription>
