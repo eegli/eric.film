@@ -19,10 +19,11 @@ export const FetchButton = styled.button`
   align-self: center;
   border-radius: 0.5rem;
   color: ${({ theme }) => theme.colors.textPrimaryColor};
-  &:hover {
+  &:hover,
+  &:active {
     cursor: pointer;
     color: ${({ theme }) => theme.colors.baseBgraised};
-    background-color: ${({ theme }) => theme.colors.textPrimaryColor};
+    background-color: ${({ theme }) => theme.colors.textSecondaryColor};
   }
 `;
 

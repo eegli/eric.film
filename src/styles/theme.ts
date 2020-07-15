@@ -9,7 +9,7 @@ export const theme = {
       brightBlue: '#365952',
     },
 
-    baseBg: '#121212', //262626
+    baseBg: '#121212',
     baseBgraised: '#222222',
     // Unused atm
     baseBgraised_2: '#3b3b3b',
@@ -20,6 +20,12 @@ export const theme = {
 
     textPrimaryColor: '#f7f7f7',
     textSecondaryColor: '#e1e1e1',
+
+    // Old - use if new design is shit!
+    // baseBg: '#262626',
+    // baseBgraised: '#313131',
+    // textPrimaryColor: '#f7f7f7',
+    // textSecondaryColor: '#e1e1e1',
   },
 
   fontsizes: {
