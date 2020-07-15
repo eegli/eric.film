@@ -3,7 +3,7 @@
 exports[`About - card renders component 1`] = `
 <Fragment>
   <cardstyles__CardHeader>
-    - meet the amazing team -
+     meet the amazing team 
   </cardstyles__CardHeader>
   <cardstyles__CardContainer>
     <cardstyles__Card>
@@ -95,7 +95,6 @@ exports[`About - card renders component 1`] = `
           <li>
             none
           </li>
-          <br />
         </ul>
         <SocialBar />
       </cardstyles__CardDescription>

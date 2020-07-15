@@ -8,7 +8,7 @@ exports[`About - resume renders component 1`] = `
     >
       <resumestyles__Section>
         <div
-          className="resumestyles__Section-hzvv7e-1 ehuJwv"
+          className="resumestyles__Section-hzvv7e-1 gtCqqE"
         >
           <resumestyles__ToggleContainer
             onClick={[Function]}
@@ -79,7 +79,7 @@ exports[`About - resume renders component 1`] = `
       </resumestyles__Section>
       <resumestyles__Section>
         <div
-          className="resumestyles__Section-hzvv7e-1 ehuJwv"
+          className="resumestyles__Section-hzvv7e-1 gtCqqE"
         >
           <resumestyles__ToggleContainer
             onClick={[Function]}
