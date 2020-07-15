@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const mobileBp = '1000px';
 
 export const Container = styled.div`
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   width: 93%;
   color: ${({ theme }) => theme.colors.baseBg};
   padding: 1rem;

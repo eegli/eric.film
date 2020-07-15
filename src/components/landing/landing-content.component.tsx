@@ -4,7 +4,7 @@ import CustomSpinner from '@/components/custom-spinner/custom-spinner.component'
 import Gallery from '@/components/gallery/gallery.component';
 import { ImageData } from '@/components/types';
 import { DescriptionContainer, Sh1, Sh2 } from '@/shared/headings.styles';
-import { useQuery } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/client';
 import { LandingContentContainer } from './landing-content.styles';
 
 const LandingContent: React.FC = ({ children }) => {

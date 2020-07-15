@@ -1,10 +1,9 @@
 import { render } from '@/src/tests/testUtils';
-import Resume from '../resume.component';
-// import { ToggleContainer } from '../resume.styles';
+import LandingContent from '../landing-content.component';
 
 describe('About - resume', () => {
   it('renders resume component', () => {
-    const { asFragment } = render(<Resume />, {});
+    const { asFragment } = render(<LandingContent />, {});
     expect(asFragment()).toMatchSnapshot();
   });
 });

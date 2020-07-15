@@ -14,7 +14,6 @@ export const CategoryContainer = styled.div<Props>`
   position: ${({ blog }) => (blog ? 'static' : 'sticky')};
   top: 0;
 
-  background-color: ${({ theme }) => theme.colors.baseBg};
   @media screen and (max-width: 850px) {
     justify-content: center;
     padding: 0;
@@ -26,11 +25,10 @@ export const SelectionCardContainer = styled.div<Props>`
   justify-content: center;
   overflow-x: scroll;
   flex-wrap: wrap;
-  position: ${({ blog }) => (blog ? 'static' : '-webkit-sticky') /* Safari */};
   position: ${({ blog }) => (blog ? 'static' : 'sticky')};
   top: 0;
-
   background-color: ${({ theme }) => theme.colors.baseBg};
+  overflow-x: hidden;
 `;
 
 export const SortButtonContainer = styled.div`
@@ -61,16 +59,17 @@ type CardContainerProps = {
 
 export const CardContainer = styled.a<CardContainerProps>`
   background-color: ${({ theme, active }) =>
-    active ? theme.colors.textLinkColor : theme.colors.baseBgraised};
+    active ? theme.colors.baseBgraised_2 : theme.colors.baseBgraised};
   padding: 0.7rem 1rem;
   margin: 0.5rem;
-  border-radius: 0.6rem;
-  color: ${({ theme, active }) =>
-    active ? theme.colors.baseBg : theme.colors.textPrimaryColor};
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.textPrimaryColor};
-    color: ${({ theme, active }) =>
-      active ? theme.colors.baseBg : theme.colors.baseBgraised};
+  color: ${({ theme }) => theme.colors.textPrimaryColor};
+  border-radius: 0.3rem;
+  border-bottom: 0.2rem solid
+    ${({ theme, active }) => (active ? theme.colors.textShadowColor : 'none')};
+  &:hover,
+  &:active {
+    background-color: ${({ theme }) => theme.colors.textSecondaryColor};
+    color: ${({ theme }) => theme.colors.baseBgraised};
     cursor: pointer;
   }
 `;

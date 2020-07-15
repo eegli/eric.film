@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CustomLinkText = styled.a`
-  color: ${({ theme }) => theme.colors.textLinkColor};
+  color: ${({ theme }) => theme.colors.textSecondaryColor};
   background-color: ${({ theme }) => theme.colors.baseBgraised};
   font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   text-decoration: none;

@@ -1,6 +1,6 @@
 import Header from '@/components/header/header.component';
 import Fonts from '@/styles/fonts';
-import { ApolloProvider } from '@apollo/react-hooks';
+import { ApolloProvider } from '@apollo/client';
 import * as Sentry from '@sentry/node';
 import { AppProps } from 'next/app';
 import Head from 'next/head';

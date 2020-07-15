@@ -17,7 +17,7 @@ export const BlogPostContainer = styled.a`
   padding: 1rem;
   margin: 0.5rem;
   background-color: ${({ theme }) => theme.colors.baseBgraised};
-  border-radius: 0.5rem;
+  // border-radius: 0.5rem;
   ${hover}
 `;
 

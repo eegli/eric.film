@@ -7,8 +7,7 @@ import {
   Category,
   SortBy,
 } from '@/components/types';
-import { useQuery } from '@apollo/react-hooks';
-import { NetworkStatus } from 'apollo-client';
+import { NetworkStatus, useQuery } from '@apollo/client';
 import {
   BlogCategoryContainer,
   FetchButton,
