@@ -2,7 +2,7 @@ import { ALL_IMGS } from '@/api/queries';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import Gallery from '@/components/gallery/gallery.component';
 import { ImageData } from '@/components/types';
-import { useQuery } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/client';
 
 // TODO correct imgs
 

@@ -5,9 +5,14 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '@/styles/theme';
+import { MockedProvider } from '@apollo/client/testing';
 
 const AllTheProviders = ({ children }) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return (
+    <MockedProvider mocks={[]}>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </MockedProvider>
+  );
 };
 
 const customRender = (ui, options) =>
