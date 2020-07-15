@@ -1,7 +1,7 @@
 module.exports = {
   preset: 'ts-jest',
   roots: ['<rootDir>/src/'],
-  // coveragePathIgnorePatterns: ['<rootDir>/build/', '<rootDir>/node_modules/'],
+
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.js'],
   transform: {
     '^.+\\.[t|j]sx?$': 'babel-jest',
@@ -14,6 +14,4 @@ module.exports = {
     '@/api/(.*)': ['<rootDir>/src/api/$1'],
     '@/src/(.*)': ['<rootDir>/src/$1'],
   },
-  testEnvironment: 'node',
-  snapshotSerializers: ['enzyme-to-json/serializer'],
 };

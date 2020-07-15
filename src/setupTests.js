@@ -1,7 +1,1 @@
-require('jsdom-global/register'); // https://github.com/enzymejs/enzyme/issues/341
-require('jest-styled-components');
-
-const enzyme = require('enzyme');
-const Adapter = require('enzyme-adapter-react-16');
-
-enzyme.configure({ adapter: new Adapter() });
+import 'jest-styled-components';
