@@ -1,5 +1,7 @@
+// Palette: https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129
+// Accents: https://coolors.co/ffa69e-faf3dd-b8f2e6-aed9e0-5e6472
+
 export const theme = {
-  // Accents, taken from https://coolors.co/ffa69e-faf3dd-b8f2e6-aed9e0-5e6472
   colors: {
     accents: {
       melon: '#034363',
@@ -7,25 +9,22 @@ export const theme = {
       brightBlue: '#365952',
     },
 
-    // Base bg color, chrome grey
-    baseBg: '#262626',
-    baseBgraised: '#313131',
+    baseBg: '#121212', //262626
+    baseBgraised: '#222222',
+    // Unused atm
+    baseBgraised_2: '#3b3b3b',
+    baseBgraised_3: '#515151',
 
     // Text shadow color, pink
     textShadowColor: '#feb8ce',
 
-    // Light grey, unused
-    textLinkColor: '#daddd8',
-
-    textSecondaryColor: '#c2c2c2',
-
-    // Text color on base bg
-    textPrimaryColor: '#eef0f2',
+    textPrimaryColor: '#f7f7f7',
+    textSecondaryColor: '#e1e1e1',
   },
 
   fontsizes: {
-    baseFontSize: '18px',
-    secondaryFontSize: '16px',
+    baseFontSize: '16px',
+    secondaryFontSize: '14px',
     baseIconFontSize: '18px',
     h1FontSize: '22px',
     h2FontSize: '20px',
