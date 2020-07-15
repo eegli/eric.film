@@ -7,7 +7,7 @@ describe('About - resume', () => {
   const shallowWrapper = shallowWithTheme(<Resume />);
 
   it('renders component', () => {
-    expect(mountWrapper).toMatchSnapshot();
+    expect(shallowWrapper).toMatchSnapshot();
     // console.log(wrapper.debug());
   });
 
