@@ -14,13 +14,13 @@
     "lint": "eslint src --ext .js --ext .jsx --ext .ts --ext .tsx",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "test:dev": "jest --watchAll --coverage",
-    "test:fix": "jest -u",
+    "test:improve": "jest --watchAll --coverage",
     "fix:everything": "rm -rf node_modules .yarnclean && yarn"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test"
     }
   },
   "lint-staged": {
@@ -74,6 +74,8 @@
     "eslint-plugin-react": "^7.20.3",
     "husky": "^4.2.5",
     "jest": "^26.1.0",
+    "jsdom": "^16.3.0",
+    "jsdom-global": "^3.0.2",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "prettier-plugin-organize-imports": "^1.1.1",

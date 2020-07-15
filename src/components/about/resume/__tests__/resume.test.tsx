@@ -1,24 +1,21 @@
-import { shallow } from 'enzyme';
+import { mountWithTheme, shallowWithTheme } from '@/src/styledTest';
 import Resume from '../resume.component';
 import { ToggleContainer } from '../resume.styles';
 
 describe('About - resume', () => {
-  const wrapper = shallow(<Resume />);
+  const mountWrapper = mountWithTheme(<Resume />);
+  const shallowWrapper = shallowWithTheme(<Resume />);
 
   it('renders component', () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(mountWrapper).toMatchSnapshot();
     // console.log(wrapper.debug());
   });
 
   it('has 4 categories', () => {
-    expect(wrapper.find('div')).toHaveLength(4);
+    expect(shallowWrapper.find('div')).toHaveLength(4);
   });
 
   it('has 2 containers that can be toggled', () => {
-    expect(wrapper.find(ToggleContainer)).toHaveLength(2);
+    expect(shallowWrapper.find(ToggleContainer)).toHaveLength(2);
   });
-
-  // it('can toggle both containers', () => {
-  //   const test = wrapper.find(ToggleContainer).first().simulate('click');
-  // });
 });
