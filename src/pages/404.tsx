@@ -19,7 +19,7 @@ const ErrorContainer = styled.div`
     color: ${({ theme }) => theme.colors.pink};
   }
   & > a {
-    color: ${({ theme }) => theme.colors.whiteSecondary};
+    color: ${({ theme }) => theme.colors.textPrimary};
   }
 `;
 

@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const CustomLinkText = styled.a`
-  color: ${({ theme }) => theme.colors.whiteSecondary};
+  color: ${({ theme }) => theme.colors.textPrimary};
   background-color: ${({ theme }) => theme.colors.bgSecondary};
   font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   text-decoration: none;
-  border-top: 0.1rem solid white;
-  border-left: 0.1rem solid white;
+  border-top: 0.1rem solid ${({ theme }) => theme.colors.textPrimary};
+  border-left: 0.1rem solid ${({ theme }) => theme.colors.textPrimary};
   border-color: ${({ theme }) => theme.colors.pink};
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   border-radius: 0.3rem;

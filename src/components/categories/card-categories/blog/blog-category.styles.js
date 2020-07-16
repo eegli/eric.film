@@ -23,7 +23,7 @@ export const FetchButton = styled.button`
   &:active {
     cursor: pointer;
     color: ${({ theme }) => theme.colors.bgSecondary};
-    background-color: ${({ theme }) => theme.colors.whiteSecondary};
+    background-color: ${({ theme }) => theme.colors.textPrimary};
   }
 `;
 

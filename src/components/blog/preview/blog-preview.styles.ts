@@ -43,7 +43,7 @@ export const BlogPostFooter = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: ${({ theme }) => theme.colors.whiteSecondary};
+  color: ${({ theme }) => theme.colors.textPrimary};
 `;
 export const BlogCreatedContainer = styled.div`
   /* background-color: ${({ theme }) => theme.colors.bgPrimary}; */

@@ -11,7 +11,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  color: ${({ theme }) => theme.colors.whiteSecondary};
+  color: ${({ theme }) => theme.colors.textPrimary};
   font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
   margin-bottom: 1rem;
   @media screen and (min-width: 769px) {

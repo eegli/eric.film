@@ -29,7 +29,7 @@ export const StyledMD = styled(ReactMarkdown)`
     color: ${({ theme }) => theme.colors.pink};
   }
   & a {
-    color: ${({ theme }) => theme.colors.whiteSecondary};
+    color: ${({ theme }) => theme.colors.textPrimary};
     text-decoration: underline;
     cursor: pointer;
   }
@@ -42,7 +42,7 @@ export const StyledMD = styled(ReactMarkdown)`
 
   & blockquote {
     background: ${({ theme }) => theme.colors.bgSecondary};
-    border-left: 4px solid ${({ theme }) => theme.colors.whiteSecondary};
+    border-left: 4px solid ${({ theme }) => theme.colors.textPrimary};
     margin: 1.5rem 2rem;
     padding: 0.5em 10px;
     & > p {
