@@ -1,6 +1,7 @@
 // Palette: https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129
 // Accents: https://coolors.co/ffa69e-faf3dd-b8f2e6-aed9e0-5e6472
 const PALETTE = {
+  // FIX dark / white to black / white
   darkPrimary: '#121212',
   darkSecondary: '#222222',
   darkTertiary: '#3b3b3b',
@@ -10,8 +11,8 @@ const PALETTE = {
   whitePrimary: '#f7f7f7',
   whiteSecondary: '#e1e1e1',
 
-  pinkPrimary: '#feb8ce',
-  pinkSecondary: '#ff80a8',
+  pinktBright: '#feb8ce',
+  pinktDark: '#ff80a8',
 
   // Legacy
   // _darkPrimary: '#262626',
@@ -34,7 +35,7 @@ export const darkTheme = {
     whitePrimary: PALETTE.whitePrimary,
     whiteSecondary: PALETTE.whiteSecondary,
 
-    pinkPrimary: PALETTE.pinkPrimary,
+    pinkPrimary: PALETTE.pinktBright,
   },
 
   fontsizes: {
@@ -53,10 +54,10 @@ export const lightTheme = {
     ...darkTheme.colors,
     blackPrimary: PALETTE.whitePrimary,
     blackSecondary: PALETTE.whiteSecondary,
-    whitePrimary: PALETTE.blackPrimary,
-    whiteSecondary: PALETTE.blackSecondary,
+    whitePrimary: PALETTE.darkPrimary,
+    whiteSecondary: PALETTE.darkSecondary,
     // A slightly darker pink for the light theme
-    pinkPrimary: PALETTE.pinkSecondary,
+    pinkPrimary: PALETTE.pinktDark,
   },
 };
 
