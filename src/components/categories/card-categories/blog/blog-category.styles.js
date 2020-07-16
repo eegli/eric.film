@@ -13,17 +13,17 @@ export const FetchButton = styled.button`
   margin: 1rem 0;
   padding: 0.8rem;
   font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
-  background-color: ${({ theme }) => theme.colors.baseBgraised};
+  background-color: ${({ theme }) => theme.colors.darkSecondary};
   border: none;
   display: flex;
   align-self: center;
   border-radius: 0.5rem;
-  color: ${({ theme }) => theme.colors.textPrimaryColor};
+  color: ${({ theme }) => theme.colors.whitePrimary};
   &:hover,
   &:active {
     cursor: pointer;
-    color: ${({ theme }) => theme.colors.baseBgraised};
-    background-color: ${({ theme }) => theme.colors.textSecondaryColor};
+    color: ${({ theme }) => theme.colors.darkSecondary};
+    background-color: ${({ theme }) => theme.colors.whiteSecondary};
   }
 `;
 

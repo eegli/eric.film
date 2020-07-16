@@ -1,10 +1,9 @@
 // Palette: https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129
 // Accents: https://coolors.co/ffa69e-faf3dd-b8f2e6-aed9e0-5e6472
-export const palette = {
+const PALETTE = {
   darkPrimary: '#121212',
   darkSecondary: '#222222',
   darkTertiary: '#3b3b3b',
-  // Unused atm
   // darkQuaternary: '#3b3b3b',
   // darkQuinary: '#515151',
 
@@ -13,6 +12,12 @@ export const palette = {
 
   pinkPrimary: '#feb8ce',
   pinkSecondary: '#ff80a8',
+
+  // Legacy
+  // _darkPrimary: '#262626',
+  // _darkSecondary: '#313131',
+  // _whitePrimary: '#f7f7f7',
+  // _whiteSecondary: '#e1e1e1',
 };
 export const darkTheme = {
   colors: {
@@ -21,21 +26,15 @@ export const darkTheme = {
       eggshell: '#53272D',
       brightBlue: '#365952',
     },
+    // Replace these
+    darkPrimary: PALETTE.darkPrimary,
+    darkSecondary: PALETTE.darkSecondary,
+    darkTertiary: PALETTE.darkTertiary,
 
-    baseBg: '#121212',
-    baseBgraised: '#222222',
+    whitePrimary: PALETTE.whitePrimary,
+    whiteSecondary: PALETTE.whiteSecondary,
 
-    // Text shadow color, pink
-    textShadowColor: '#feb8ce',
-
-    textPrimaryColor: '#f7f7f7',
-    textSecondaryColor: '#e1e1e1',
-
-    // Old - use if new design is shit!
-    // baseBg: '#262626',
-    // baseBgraised: '#313131',
-    // textPrimaryColor: '#f7f7f7',
-    // textSecondaryColor: '#e1e1e1',
+    pinkPrimary: PALETTE.pinkPrimary,
   },
 
   fontsizes: {
@@ -47,15 +46,17 @@ export const darkTheme = {
   },
 };
 
+// Reversing the dark theme
 export const lightTheme = {
   ...darkTheme,
   colors: {
     ...darkTheme.colors,
-    baseBg: '#e1e1e1',
-    baseBgraised: '#f7f7f7',
-    textPrimaryColor: '#121212',
-    textSecondaryColor: '#222222',
-    textShadowColor: '#ff80a8',
+    blackPrimary: PALETTE.whitePrimary,
+    blackSecondary: PALETTE.whiteSecondary,
+    whitePrimary: PALETTE.blackPrimary,
+    whiteSecondary: PALETTE.blackSecondary,
+    // A slightly darker pink for the light theme
+    pinkPrimary: PALETTE.pinkSecondary,
   },
 };
 

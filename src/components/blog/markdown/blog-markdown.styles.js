@@ -5,9 +5,9 @@ const contentPadding = '1rem';
 
 export const StyledMD = styled(ReactMarkdown)`
   margin-top: 1rem;
-  background-color: ${({ theme }) => theme.colors.baseBgraised};
+  background-color: ${({ theme }) => theme.colors.darkSecondary};
   line-height: 1.8rem;
-  color: ${({ theme }) => theme.colors.textPrimaryColor};
+  color: ${({ theme }) => theme.colors.whitePrimary};
   & > * {
     padding: 0 ${contentPadding};
   }
@@ -23,13 +23,13 @@ export const StyledMD = styled(ReactMarkdown)`
     font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   }
   & h1 {
-    color: ${({ theme }) => theme.colors.textShadowColor};
+    color: ${({ theme }) => theme.colors.pinkPrimary};
   }
   & code {
-    color: ${({ theme }) => theme.colors.textShadowColor};
+    color: ${({ theme }) => theme.colors.pinkPrimary};
   }
   & a {
-    color: ${({ theme }) => theme.colors.textSecondaryColor};
+    color: ${({ theme }) => theme.colors.whiteSecondary};
     text-decoration: underline;
     cursor: pointer;
   }
@@ -41,13 +41,13 @@ export const StyledMD = styled(ReactMarkdown)`
   }
 
   & blockquote {
-    background: ${({ theme }) => theme.colors.baseBg};
-    border-left: 4px solid ${({ theme }) => theme.colors.textSecondaryColor};
+    background: ${({ theme }) => theme.colors.darkPrimary};
+    border-left: 4px solid ${({ theme }) => theme.colors.whiteSecondary};
     margin: 1.5rem 2rem;
     padding: 0.5em 10px;
     & > p {
       display: inline;
-      color: ${({ theme }) => theme.colors.textPrimaryColor};
+      color: ${({ theme }) => theme.colors.whitePrimary};
       font-style: italic;
     }
     &:before {

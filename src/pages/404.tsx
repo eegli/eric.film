@@ -16,10 +16,10 @@ const ErrorContainer = styled.div`
   align-items: center;
   flex-direction: column;
   & > h1 {
-    color: ${({ theme }) => theme.colors.textShadowColor};
+    color: ${({ theme }) => theme.colors.pinkPrimary};
   }
   & > a {
-    color: ${({ theme }) => theme.colors.textSecondaryColor};
+    color: ${({ theme }) => theme.colors.whiteSecondary};
   }
 `;
 

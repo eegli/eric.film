@@ -7,16 +7,17 @@ type Props = {
   path: string;
 };
 
-const mobileColor = ({ theme }: { theme: DarkTheme }) => theme.colors.baseBg;
+const mobileColor = ({ theme }: { theme: DarkTheme }) =>
+  theme.colors.darkPrimary;
 const desktopColor = ({ theme }: { theme: DarkTheme }) =>
-  theme.colors.textPrimaryColor;
+  theme.colors.whitePrimary;
 
 export const StyledLinkText = styled.a<Props>`
   width: 100%;
   padding: ${({ isMobile }) => (isMobile ? '1.4rem' : '0')} 1rem;
   text-align: center;
   font-size: 1.2rem;
-  text-shadow: 1px 1px 0px ${({ theme }) => theme.colors.textShadowColor};
+  text-shadow: 1px 1px 0px ${({ theme }) => theme.colors.pinkPrimary};
   letter-spacing: 0.4rem;
   &:hover {
     text-decoration: line-through;

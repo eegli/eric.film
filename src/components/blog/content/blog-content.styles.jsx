@@ -19,7 +19,7 @@ export const BlogPostExcerpt = styled.h2`
 export const BlogPostTimes = styled.div`
   padding: 0 1rem;
   display: flex;
-  color: ${({ theme }) => theme.colors.textShadowColor};
+  color: ${({ theme }) => theme.colors.pinkPrimary};
   & div {
     display: flex;
     align-items: center;
@@ -29,7 +29,7 @@ export const BlogPostTimes = styled.div`
     & p {
       font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
       margin: 0 0 0 0.3rem;
-      color: ${({ theme }) => theme.colors.textSecondaryColor};
+      color: ${({ theme }) => theme.colors.whiteSecondary};
     }
   }
 `;

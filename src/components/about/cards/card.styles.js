@@ -12,7 +12,7 @@ export const CardContainer = styled.div`
 export const CardHeader = styled.h1`
   font-style: italic;
   letter-spacing: 0.2rem;
-  color: ${({ theme }) => theme.colors.textSecondaryColor};
+  color: ${({ theme }) => theme.colors.whiteSecondary};
   font-weight: normal;
 `;
 
@@ -32,13 +32,13 @@ export const CardTitle = styled.h1`
   text-align: center;
   margin: 1rem 0 1rem 0;
   font-size: 2rem;
-  color: ${({ theme }) => theme.colors.textPrimaryColor};
+  color: ${({ theme }) => theme.colors.whitePrimary};
 `;
 export const CardDescription = styled.div`
-  background-color: ${({ theme }) => theme.colors.baseBgraised};
+  background-color: ${({ theme }) => theme.colors.darkSecondary};
   padding: 2rem;
   & > span {
-    color: ${({ theme }) => theme.colors.textSecondaryColor};
+    color: ${({ theme }) => theme.colors.whiteSecondary};
     font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
   }
   & > p {
