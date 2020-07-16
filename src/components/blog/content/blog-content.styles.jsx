@@ -4,6 +4,7 @@ export const BlogPostContainer = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: all 10s linear;
 `;
 
 export const BlogPostTitle = styled.h1`
@@ -31,6 +32,25 @@ export const BlogPostTimes = styled.div`
       margin: 0 0 0 0.3rem;
       color: ${({ theme }) => theme.colors.textSecondary};
     }
+  }
+`;
+
+export const ThemeToggleButton = styled.button`
+  display: flex;
+  background-color: ${({ theme }) => theme.colors.bgSecondary};
+  margin: 1rem auto 0.5rem auto;
+  padding: 0.5rem 0.8rem;
+  color: ${({ theme }) => theme.colors.textPrimary};
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  & > span {
+    margin-left: 0.5rem;
+  }
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.textSecondary};
+    color: ${({ theme }) => theme.colors.bgSecondary};
+    cursor: pointer;
   }
 `;
 

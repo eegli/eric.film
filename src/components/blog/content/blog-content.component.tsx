@@ -1,6 +1,8 @@
+import { useLightTheme } from '@/components/hooks/useLightTheme';
 import { BlogPostContent } from '@/components/types';
-import { lightTheme } from '@/src/styles/theme';
+import { darkTheme, lightTheme } from '@/src/styles/theme';
 import { dateFormat } from '@/src/utils/dates';
+import { FaRegLightbulb } from 'react-icons/fa';
 import { MdAccessTime, MdUpdate } from 'react-icons/md';
 import { ThemeProvider } from 'styled-components';
 import BlogMarkdown from '../markdown/blog-markdown.component';
@@ -10,6 +12,7 @@ import {
   BlogPostTitle,
   IFrameWrapper,
   StyledIframe,
+  ThemeToggleButton,
 } from './blog-content.styles';
 
 const BlogContent: React.FC<BlogPostContent> = ({
@@ -22,9 +25,13 @@ const BlogContent: React.FC<BlogPostContent> = ({
   // const source = process.env.NODE_ENV === 'production' ? content : MD;
   // const video =
   //   process.env.NODE_ENV === 'production' ? ytvideo : '/VjSE0--1KNA';
+  const [theme, themeToggler] = useLightTheme();
+  const themeMode = theme === 'lightTheme' ? lightTheme : darkTheme;
+
   return (
     <BlogPostContainer>
       <BlogPostTitle>{title}</BlogPostTitle>
+
       <BlogPostTimes>
         <div>
           <MdAccessTime />
@@ -37,7 +44,15 @@ const BlogContent: React.FC<BlogPostContent> = ({
           </div>
         ) : null}
       </BlogPostTimes>
-      <ThemeProvider theme={lightTheme}>
+      <ThemeToggleButton onClick={themeToggler}>
+        <>
+          <FaRegLightbulb />
+          <span>
+            toggle {theme === 'lightTheme' ? 'dark' : 'bright'} reading mode
+          </span>
+        </>
+      </ThemeToggleButton>
+      <ThemeProvider theme={themeMode}>
         <BlogMarkdown source={content} />
       </ThemeProvider>
 
