@@ -1,5 +1,3 @@
-// Palette: https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129
-
 // Legacy
 // _blackPrimary: '#262626',
 // _blackSecondary: '#313131',
