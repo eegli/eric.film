@@ -49,8 +49,8 @@ export const lightTheme = {
   },
 };
 
-type DarkTheme = typeof darkTheme;
-type LightTheme = typeof lightTheme;
+export type DarkTheme = typeof darkTheme;
+export type LightTheme = typeof lightTheme;
 
 // Namespace merging: https://www.typescriptlang.org/docs/handbook/declaration-merging.html
 declare module 'styled-components' {
