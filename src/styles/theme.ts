@@ -1,6 +1,19 @@
 // Palette: https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129
 // Accents: https://coolors.co/ffa69e-faf3dd-b8f2e6-aed9e0-5e6472
+export const palette = {
+  darkPrimary: '#121212',
+  darkSecondary: '#222222',
+  darkTertiary: '#3b3b3b',
+  // Unused atm
+  // darkQuaternary: '#3b3b3b',
+  // darkQuinary: '#515151',
 
+  whitePrimary: '#f7f7f7',
+  whiteSecondary: '#e1e1e1',
+
+  pinkPrimary: '#feb8ce',
+  pinkSecondary: '#ff80a8',
+};
 export const darkTheme = {
   colors: {
     accents: {
@@ -11,9 +24,6 @@ export const darkTheme = {
 
     baseBg: '#121212',
     baseBgraised: '#222222',
-    // Unused atm
-    baseBgraised_2: '#3b3b3b',
-    baseBgraised_3: '#515151',
 
     // Text shadow color, pink
     textShadowColor: '#feb8ce',
