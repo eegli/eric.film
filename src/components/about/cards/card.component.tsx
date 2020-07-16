@@ -64,11 +64,12 @@ const CardComponent: React.FC = () => {
             <span>INTERN</span>
             <p>
               eric has bachelor of arts in communication science so we let him
-              do all the client talking. other than that, we only really see him
-              at after-work drinks. Main responsibilities:
+              talk to our clients. other than that, we only really see him at
+              after-work drinks. Main responsibilities:
             </p>
             <ul>
               <li>none</li>
+              <br />
             </ul>
             <SocialBar />
           </CardDescription>

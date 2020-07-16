@@ -1,7 +1,7 @@
 // Palette: https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129
 // Accents: https://coolors.co/ffa69e-faf3dd-b8f2e6-aed9e0-5e6472
 
-export const theme = {
+export const darkTheme = {
   colors: {
     accents: {
       melon: '#034363',
@@ -37,10 +37,25 @@ export const theme = {
   },
 };
 
-export type DarkTheme = typeof theme;
+export const lightTheme = {
+  ...darkTheme,
+  colors: {
+    ...darkTheme.colors,
+    baseBg: '#e1e1e1',
+    baseBgraised: '#f7f7f7',
+    textPrimaryColor: '#121212',
+    textSecondaryColor: '#222222',
+    textShadowColor: '#ff80a8',
+  },
+};
+
+type DarkTheme = typeof darkTheme;
+type LightTheme = typeof lightTheme;
 
 // Namespace merging: https://www.typescriptlang.org/docs/handbook/declaration-merging.html
 declare module 'styled-components' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   interface DefaultTheme extends DarkTheme {}
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DefaultTheme extends LightTheme {}
 }

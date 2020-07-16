@@ -7,6 +7,7 @@ export const StyledMD = styled(ReactMarkdown)`
   margin-top: 1rem;
   background-color: ${({ theme }) => theme.colors.baseBgraised};
   line-height: 1.8rem;
+  color: ${({ theme }) => theme.colors.textPrimaryColor};
   & > * {
     padding: 0 ${contentPadding};
   }
@@ -14,6 +15,7 @@ export const StyledMD = styled(ReactMarkdown)`
   code {
     padding: 0;
   }
+
   & li {
     margin: 0 ${contentPadding};
   }
