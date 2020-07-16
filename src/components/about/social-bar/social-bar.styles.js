@@ -8,5 +8,5 @@ export const Container = styled.div`
 export const IconContainer = styled.a`
   margin: 0 0.5rem;
   font-size: ${({ theme }) => theme.fontsizes.baseIconFontSize};
-  color: ${({ theme }) => theme.colors.textSecondaryColor};
+  color: ${({ theme }) => theme.colors.textPrimary};
 `;

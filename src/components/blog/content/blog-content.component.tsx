@@ -1,6 +1,8 @@
 import { BlogPostContent } from '@/components/types';
+import { lightTheme } from '@/src/styles/theme';
 import { dateFormat } from '@/src/utils/dates';
 import { MdAccessTime, MdUpdate } from 'react-icons/md';
+import { ThemeProvider } from 'styled-components';
 import BlogMarkdown from '../markdown/blog-markdown.component';
 import {
   BlogPostContainer,
@@ -35,7 +37,9 @@ const BlogContent: React.FC<BlogPostContent> = ({
           </div>
         ) : null}
       </BlogPostTimes>
-      <BlogMarkdown source={content} />
+      <ThemeProvider theme={lightTheme}>
+        <BlogMarkdown source={content} />
+      </ThemeProvider>
 
       {ytvideo ? (
         <IFrameWrapper>

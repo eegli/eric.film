@@ -11,7 +11,7 @@ import { ThemeProvider } from 'styled-components';
 import { useApollo } from '../lib/apolloClient';
 import * as gtag from '../lib/gtag';
 import { Global } from '../styles/styles';
-import { theme } from '../styles/theme';
+import { darkTheme } from '../styles/theme';
 
 Sentry.init({
   enabled: process.env.NODE_ENV === 'production',
@@ -53,7 +53,7 @@ const App: React.FC<Props> = ({ Component, pageProps, err }) => {
       </Head>
       <div>
         <ApolloProvider client={apolloClient}>
-          <ThemeProvider theme={theme}>
+          <ThemeProvider theme={darkTheme}>
             <Global />
             <Header />
             <Component {...pageProps} err={err} />

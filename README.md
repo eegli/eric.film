@@ -35,13 +35,6 @@ Crashes on pages with `next/link` and `getStaticProps`. It's kinda hard to debug
 
 > Workaround: Pages depending on external data use `getServerSideProps` instead of `getStaticProps`.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
 ## FAQ
 
 > Your Google Analytics tracking id, Sentry DSN and GraphQL endpoint are all public. Would it make sense to put them into `env.local`?
@@ -52,6 +45,21 @@ With Sentury - or more specifically `@sentry/browser` - it is the same. It canno
 This is why it is good practice to filter requests by hostname / allowed domains - something that is possible for both Sentury and Google Analytics.
 
 My GraphQL endpoint needs to be public since the frontend has the possibility to fetch more blog posts directly from my backend. Thus, requests to GraphCMS can also be inspected in any browser's dev tools.
+
+## Links
+
+> Style guides
+
+- [Style guide Material design](https://material.io/design)
+- [Style guide dark mode UI](https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129)
+- [My base gray palette](https://coolors.co/121212-222222-3b3b3b-b1b1b1-f1f1f1-f7f7f7)
+- [My base accent palette for dark/bright mode](https://coolors.co/034363-53272d-365952)
+
+> Core templates/example repositories
+
+- [next.js/examples/with-apollo](https://github.com/vercel/next.js/tree/canary/examples/with-apollo)
+- [next.js/examples/with-sentry](https://github.com/vercel/next.js/tree/canary/examples/with-sentry)
+- [next.js/examples/with-typescript-eslint-jest](https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest)
 
 ## License
 

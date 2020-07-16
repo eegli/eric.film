@@ -7,7 +7,7 @@ type Props = {
 // Used if text appears on card. Only used for DEV and CLIENT cards
 export const BgContainer = styled.div<Props>`
   background-color: ${({ dev, theme }) =>
-    dev ? '' : theme.colors.baseBgraised};
+    dev ? '' : theme.colors.bgSecondary};
   margin: 0.5rem 0;
 `;
 
@@ -19,7 +19,7 @@ export const IntroContainer = styled.div<Props>`
       dev ? theme.fontsizes.h1FontSize : theme.fontsizes.baseFontSize};
     text-align: center;
     & > span {
-      color: ${({ theme }) => theme.colors.textShadowColor};
+      color: ${({ theme }) => theme.colors.pink};
       font-weight: bold;
     }
   }

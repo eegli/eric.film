@@ -4,16 +4,16 @@ export const Table = styled.table`
   border-collapse: collapse;
   margin: 0 auto;
   width: 100%;
-  color: ${({ theme }) => theme.colors.textPrimaryColor};
+  color: ${({ theme }) => theme.colors.textPrimary};
 
   & tr {
     height: 50px;
 
     &:nth-child(odd) {
-      background-color: ${({ theme }) => theme.colors.baseBgraised};
+      background-color: ${({ theme }) => theme.colors.bgSecondary};
     }
     &:nth-child(even) {
-      background-color: ${({ theme }) => theme.colors.baseBgraised_3};
+      background-color: ${({ theme }) => theme.colors.bgSecondary_3};
     }
   }
   & th {

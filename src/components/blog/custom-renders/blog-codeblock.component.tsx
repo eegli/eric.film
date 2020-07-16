@@ -11,8 +11,7 @@ const CodeBlock: React.FC<Props> = ({ value, language }) => {
   if (!language) language = 'jsx';
   return (
     <SyntaxHighlighter
-      customStyle={{ border: 'none' }}
-      // customStyle={{ borderRadius: '10px' }}
+      customStyle={{ border: 'none', borderRadius: 0 }}
       language={language}
       style={xonokai}>
       {value}

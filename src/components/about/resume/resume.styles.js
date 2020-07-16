@@ -5,7 +5,7 @@ const mobileBp = '1000px';
 export const Container = styled.div`
   margin-top: 0.5rem;
   width: 93%;
-  color: ${({ theme }) => theme.colors.baseBg};
+  color: ${({ theme }) => theme.colors.bgPrimary};
   padding: 1rem;
   display: flex;
   @media screen and (max-width: ${mobileBp}) {
@@ -29,19 +29,17 @@ export const Section = styled.div`
 `;
 
 export const ResumeContent = styled.div`
-  background-color: ${({ theme }) => theme.colors.baseBgraised};
-  color: ${({ theme }) => theme.colors.textPrimaryColor};
+  background-color: ${({ theme }) => theme.colors.bgSecondary};
+  color: ${({ theme }) => theme.colors.textPrimary};
   padding: 1rem 2rem 1rem 1rem;
-  & > span {
-    color: ${({ theme }) => theme.colors.textSecondaryColor};
+  & span {
+    color: ${({ theme }) => theme.colors.textSecondary};
     font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
   }
   & > div {
     margin-top: 0.5rem;
     padding: 0.6rem;
-    & > span {
-      color: ${({ theme }) => theme.colors.textSecondaryColor};
-    }
+
     & > p {
       margin: 0 0 0.8rem 0;
     }
@@ -59,7 +57,8 @@ export const ToggleContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.textSecondaryColor};
+  background-color: ${({ theme }) => theme.colors.bgSecondary};
+  color: ${({ theme }) => theme.colors.textSecondary};
   padding: 1rem;
   &:hover {
     cursor: pointer;
@@ -68,7 +67,7 @@ export const ToggleContainer = styled.div`
 
 export const ToggleTitle = styled.p`
   display: inline;
-  font-size: ${({ theme }) => theme.fontsizes.h2FontSize};
+
   margin: 0;
-  font-weight: 600;
+  font-weight: 500;
 `;
