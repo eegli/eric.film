@@ -14,8 +14,8 @@ export const Global = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: ${({ theme }) => theme.colors.darkPrimary};
-    color: ${({ theme }) => theme.colors.whitePrimary};
+    background-color: ${({ theme }) => theme.colors.bgPrimary};
+    color: ${({ theme }) => theme.colors.textPrimary};
     height: 100%;
     width: 100%;
     min-width: 320px;
@@ -94,7 +94,7 @@ export const Global = createGlobalStyle`
     background: #000000;
   }
   ::-webkit-scrollbar-track {
-    background: ${({ theme }) => theme.colors.darkPrimary};
+    background: ${({ theme }) => theme.colors.bgPrimary};
     border: 0px none #ffffff;
     border-radius: 11px;
   }

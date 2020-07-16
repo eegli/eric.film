@@ -1,41 +1,58 @@
 // Palette: https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129
-// Accents: https://coolors.co/ffa69e-faf3dd-b8f2e6-aed9e0-5e6472
+
+// Legacy
+// _blackPrimary: '#262626',
+// _blackSecondary: '#313131',
+// _whitePrimary: '#f7f7f7',
+// _whiteSecondary: '#e1e1e1',
+
 const PALETTE = {
-  // FIX dark / white to black / white
+  /*
+   * Base gray palette
+   * https://coolors.co/121212-222222-3b3b3b-b1b1b1-f1f1f1-f7f7f7
+   *
+   */
   darkPrimary: '#121212',
   darkSecondary: '#222222',
   darkTertiary: '#3b3b3b',
-  // darkQuaternary: '#3b3b3b',
-  // darkQuinary: '#515151',
 
-  whitePrimary: '#f7f7f7',
-  whiteSecondary: '#e1e1e1',
+  brightPrimary: '#f7f7f7',
+  brightSecondary: '#F1F1F1',
+  brightTertiary: '#b1b1b1',
 
+  /*
+   * Base accent palette
+   * https://coolors.co/034363-53272d-365952
+   *
+   */
+  accentBlue: '#034363',
+  accentRed: '#53272D',
+  accentGreen: '#365952',
+
+  /*
+   * Branding pink
+   *
+   */
   pinktBright: '#feb8ce',
   pinktDark: '#ff80a8',
-
-  // Legacy
-  // _darkPrimary: '#262626',
-  // _darkSecondary: '#313131',
-  // _whitePrimary: '#f7f7f7',
-  // _whiteSecondary: '#e1e1e1',
 };
+
 export const darkTheme = {
   colors: {
+    bgPrimary: PALETTE.darkPrimary,
+    bgSecondary: PALETTE.darkSecondary,
+    bgTertiary: PALETTE.darkTertiary,
+
+    textPrimary: PALETTE.brightPrimary,
+    textSecondary: PALETTE.brightSecondary,
+
+    pink: PALETTE.pinktBright,
+
     accents: {
-      melon: '#034363',
-      eggshell: '#53272D',
-      brightBlue: '#365952',
+      melon: PALETTE.accentBlue,
+      eggshell: PALETTE.accentRed,
+      brightBlue: PALETTE.accentGreen,
     },
-    // Replace these
-    darkPrimary: PALETTE.darkPrimary,
-    darkSecondary: PALETTE.darkSecondary,
-    darkTertiary: PALETTE.darkTertiary,
-
-    whitePrimary: PALETTE.whitePrimary,
-    whiteSecondary: PALETTE.whiteSecondary,
-
-    pinkPrimary: PALETTE.pinktBright,
   },
 
   fontsizes: {
@@ -47,17 +64,19 @@ export const darkTheme = {
   },
 };
 
-// Reversing the dark theme
 export const lightTheme = {
   ...darkTheme,
+
   colors: {
     ...darkTheme.colors,
-    blackPrimary: PALETTE.whitePrimary,
-    blackSecondary: PALETTE.whiteSecondary,
-    whitePrimary: PALETTE.darkPrimary,
-    whiteSecondary: PALETTE.darkSecondary,
-    // A slightly darker pink for the light theme
-    pinkPrimary: PALETTE.pinktDark,
+    bgPrimary: PALETTE.brightPrimary,
+    bgSecondary: PALETTE.brightSecondary,
+    bgTertiary: PALETTE.brightTertiary,
+
+    textPrimary: PALETTE.darkPrimary,
+    textSecondary: PALETTE.darkSecondary,
+
+    pink: PALETTE.pinktDark,
   },
 };
 
@@ -65,6 +84,7 @@ export type DarkTheme = typeof darkTheme;
 export type LightTheme = typeof lightTheme;
 
 // Namespace merging: https://www.typescriptlang.org/docs/handbook/declaration-merging.html
+
 declare module 'styled-components' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   interface DefaultTheme extends DarkTheme {}

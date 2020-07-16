@@ -27,7 +27,7 @@ export const SelectionCardContainer = styled.div<Props>`
   flex-wrap: wrap;
   position: ${({ blog }) => (blog ? 'static' : 'sticky')};
   top: 0;
-  background-color: ${({ theme }) => theme.colors.darkPrimary};
+  background-color: ${({ theme }) => theme.colors.bgPrimary};
   overflow-x: hidden;
 `;
 
@@ -48,9 +48,9 @@ export const SortButton = styled.button`
   border: none;
   letter-spacing: 1px;
   border-color: none;
-  background-color: ${({ theme }) => theme.colors.darkPrimary};
+  background-color: ${({ theme }) => theme.colors.bgPrimary};
   font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
-  color: ${({ theme }) => theme.colors.whiteSecondary};
+  color: ${({ theme }) => theme.colors.textSecondary};
 `;
 
 type CardContainerProps = {
@@ -59,17 +59,17 @@ type CardContainerProps = {
 
 export const CardContainer = styled.a<CardContainerProps>`
   background-color: ${({ theme, active }) =>
-    active ? theme.colors.darkSecondary_2 : theme.colors.darkSecondary};
+    active ? theme.colors.bgTertiary : theme.colors.bgSecondary};
   padding: 0.7rem 1rem;
   margin: 0.5rem;
-  color: ${({ theme }) => theme.colors.whitePrimary};
+  color: ${({ theme }) => theme.colors.textSecondary};
   border-radius: 0.3rem;
   border-bottom: 0.2rem solid
-    ${({ theme, active }) => (active ? theme.colors.pinkPrimary : 'none')};
+    ${({ theme, active }) => (active ? theme.colors.pink : 'none')};
   &:hover,
   &:active {
-    background-color: ${({ theme }) => theme.colors.whiteSecondary};
-    color: ${({ theme }) => theme.colors.darkSecondary};
+    background-color: ${({ theme }) => theme.colors.bgTertiary};
+    color: ${({ theme }) => theme.colors.textPrimary};
     cursor: pointer;
   }
 `;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Hr = styled.hr`
   width: 100%;
   border: none;
-  background-color: ${({ theme }) => theme.colors.darkSecondary};
+  background-color: ${({ theme }) => theme.colors.bgSecondary};
   height: 3px;
 `;
 

@@ -5,7 +5,7 @@ type H1Props = {
 };
 
 export const Sh1 = styled.h1<H1Props>`
-  text-shadow: 2px 2px 0px ${({ theme }) => theme.colors.pinkPrimary};
+  text-shadow: 2px 2px 0px ${({ theme }) => theme.colors.pink};
   letter-spacing: 0.2rem;
   text-align: center;
   display: inline;

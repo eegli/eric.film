@@ -32,10 +32,10 @@ export const CardTitle = styled.h1`
   text-align: center;
   margin: 1rem 0 1rem 0;
   font-size: 2rem;
-  color: ${({ theme }) => theme.colors.whitePrimary};
+  color: ${({ theme }) => theme.colors.textPrimary};
 `;
 export const CardDescription = styled.div`
-  background-color: ${({ theme }) => theme.colors.darkSecondary};
+  background-color: ${({ theme }) => theme.colors.bgSecondary};
   padding: 2rem;
   & > span {
     color: ${({ theme }) => theme.colors.whiteSecondary};
