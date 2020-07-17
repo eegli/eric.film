@@ -7,7 +7,9 @@ type Props = {
   path: string;
 };
 
-const mobileColor = ({ theme }: { theme: DarkTheme }) => theme.colors.bgPrimary;
+// TODO
+const mobileColor = ({ theme }: { theme: DarkTheme }) =>
+  theme.colors.textPrimary;
 const desktopColor = ({ theme }: { theme: DarkTheme }) =>
   theme.colors.textPrimary;
 

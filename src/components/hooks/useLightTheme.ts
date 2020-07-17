@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect';
 
-type Theme = 'lightTheme' | 'darkTheme';
+export type Theme = 'lightTheme' | 'darkTheme';
 
 // Set explicit return type for custom hook
 export const useLightTheme = (): [Theme, () => void] => {

@@ -1,3 +1,4 @@
+import { Theme } from '@/components/hooks/useLightTheme';
 import styled from 'styled-components';
 
 export const BlogPostContainer = styled.article`
@@ -34,13 +35,21 @@ export const BlogPostTimes = styled.div`
     }
   }
 `;
-
-export const ThemeToggleButton = styled.button`
+type ThemeToggleProps = {
+  mode: Theme;
+};
+export const ThemeToggleButton = styled.button<ThemeToggleProps>`
   display: flex;
-  background-color: ${({ theme }) => theme.colors.bgSecondary};
+  background-color: ${({ theme, mode }) =>
+    mode === 'darkTheme'
+      ? theme.colors.textSecondary
+      : theme.colors.bgSecondary};
   margin: 1rem auto 0.5rem auto;
   padding: 0.5rem 0.8rem;
-  color: ${({ theme }) => theme.colors.textPrimary};
+  color: ${({ theme, mode }) =>
+    mode === 'darkTheme'
+      ? theme.colors.bgSecondary
+      : theme.colors.textSecondary};
   border-radius: 1rem;
   border: none;
   outline: none;
@@ -48,8 +57,14 @@ export const ThemeToggleButton = styled.button`
     margin-left: 0.5rem;
   }
   &:hover {
-    background-color: ${({ theme }) => theme.colors.textSecondary};
-    color: ${({ theme }) => theme.colors.bgSecondary};
+    background-color: ${({ theme, mode }) =>
+      mode === 'darkTheme'
+        ? theme.colors.bgSecondary
+        : theme.colors.textSecondary};
+    color: ${({ theme, mode }) =>
+      mode === 'darkTheme'
+        ? theme.colors.textSecondary
+        : theme.colors.bgSecondary};
     cursor: pointer;
   }
 `;

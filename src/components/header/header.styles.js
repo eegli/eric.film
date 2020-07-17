@@ -24,8 +24,9 @@ export const HeaderMainContainer = styled.header`
 `;
 
 export const HeaderOptionsMobileContainer = styled.header`
-  background-color: ${({ theme }) => theme.colors.textPrimary};
+  background-color: ${({ theme }) => theme.colors.bgSecondary};
   display: flex;
+  color: ${({ theme }) => theme.colors.textSecondary};
   flex-direction: column;
   align-items: center;
 `;

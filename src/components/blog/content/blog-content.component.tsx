@@ -44,7 +44,7 @@ const BlogContent: React.FC<BlogPostContent> = ({
           </div>
         ) : null}
       </BlogPostTimes>
-      <ThemeToggleButton onClick={themeToggler}>
+      <ThemeToggleButton onClick={themeToggler} mode={theme}>
         <>
           <FaRegLightbulb />
           <span>
