@@ -5,8 +5,8 @@ export const Container = styled.div`
 `;
 export const StyledVideo = styled.video`
   display: relative;
-  bottom: 0;
-  left: 0;
+  width: 100%;
+  height: 100vh;
   right: 0;
   top: 0;
   object-fit: cover;
