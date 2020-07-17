@@ -4,6 +4,7 @@ export const LandingVideoContainer = styled.div`
   text-align: center;
 `;
 export const StyledVideo = styled.video`
+  display: relative;
   width: 100vw;
   height: 100vh;
   top: 0;
