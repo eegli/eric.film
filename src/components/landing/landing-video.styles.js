@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
-export const LandingVideoContainer = styled.div`
+export const Container = styled.div`
   text-align: center;
 `;
 export const StyledVideo = styled.video`
   display: relative;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
+  top: 0;
   object-fit: cover;
 `;
 
