@@ -44,6 +44,7 @@ export const SortButtonContainer = styled.div`
 export const SortButton = styled.button`
   cursor: pointer;
   margin-left: 0.5rem;
+  outline: none;
   text-decoration: underline;
   border: none;
   letter-spacing: 1px;

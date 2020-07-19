@@ -8,17 +8,11 @@ export interface Props {
 
 const HeaderOptions: React.FC<Props> = ({ position }) => {
   const router = useRouter();
-  let isMobile: boolean;
 
-  if (position === 'mobile') {
-    isMobile = true;
-  } else {
-    isMobile = false;
-  }
   return (
     <>
       <Link href='/'>
-        <StyledLinkText href='/' path={router.pathname} isMobile={isMobile}>
+        <StyledLinkText href='/' path={router.pathname} position={position}>
           home
         </StyledLinkText>
       </Link>
@@ -26,7 +20,7 @@ const HeaderOptions: React.FC<Props> = ({ position }) => {
         <StyledLinkText
           href='/about'
           path={router.pathname}
-          isMobile={isMobile}>
+          position={position}>
           about
         </StyledLinkText>
       </Link>
@@ -34,12 +28,12 @@ const HeaderOptions: React.FC<Props> = ({ position }) => {
         <StyledLinkText
           href='/portfolio'
           path={router.pathname}
-          isMobile={isMobile}>
+          position={position}>
           portfolio
         </StyledLinkText>
       </Link>
       <Link href='/blog?cat=all'>
-        <StyledLinkText href='/blog' path={router.pathname} isMobile={isMobile}>
+        <StyledLinkText href='/blog' path={router.pathname} position={position}>
           blog
         </StyledLinkText>
       </Link>

@@ -1,8 +1,8 @@
 import { PortfolioCategories as P } from '@/components/types';
 import Link from 'next/link';
 import { useActiveUrl } from '../hooks/useActiveCat';
-import CategorySwitch from './switch-categories/category-switch.component';
-import { CardContainer, SelectionCardContainer } from './_categories.styles';
+import { CardContainer, SelectionCardContainer } from './categories.styles';
+import PortfolioSwitch from './switch-categories/portfolio-switch.component';
 
 /* 
   This page handles the routing for all the blog and portfolio categories
@@ -36,7 +36,7 @@ const PortfolioCategories: React.FC = () => {
           </CardContainer>
         </Link>
       </SelectionCardContainer>
-      <CategorySwitch />
+      <PortfolioSwitch />
     </>
   );
 };

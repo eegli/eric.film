@@ -1,4 +1,5 @@
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
+import ErrorMessage from '@/components/error-message/error-message.component';
 import { BlogPostData } from '@/components/types';
 import { SEO_OG_FALLBACK } from '@/src/config';
 import { trimExcerptForMeta } from '@/src/utils/metaExcerpt';
@@ -22,20 +23,13 @@ const BlogContainer: React.FC = () => {
   });
 
   if (loading) {
-    return (
-      <Container>
-        <CustomSpinner />
-      </Container>
-    );
+    return <CustomSpinner />;
   }
   if (data && !data.blogpost) {
     return (
-      <div style={{ textAlign: 'center', marginTop: '300px' }}>
-        <p>uhh... this post does not exist :(</p>
-        <a style={{ textDecoration: 'underline' }} href='/blog?cat=all'>
-          go back to all blogs
-        </a>
-      </div>
+      <ErrorMessage>
+        uhh... this post does not exist. are you sure you pasted the right url?
+      </ErrorMessage>
     );
   }
   if (data && data.blogpost) {
@@ -82,7 +76,7 @@ const BlogContainer: React.FC = () => {
       </>
     );
   } else {
-    return <div></div>;
+    return <div />;
   }
 };
 

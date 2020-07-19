@@ -1,7 +1,7 @@
 import { FaAngleDown } from 'react-icons/fa';
 import {
   ArrowDownContainer,
-  LandingVideoContainer,
+  Container,
   StyledVideo,
 } from './landing-video.styles';
 
@@ -16,14 +16,14 @@ const LandingVideo: React.FC = () => {
   };
 
   return (
-    <LandingVideoContainer>
+    <Container>
       <StyledVideo autoPlay loop muted playsInline>
         <source src='/static/vid/home_teaser.mp4' type='video/mp4' />
       </StyledVideo>
       <ArrowDownContainer onClick={scrollToContent}>
         <FaAngleDown />
       </ArrowDownContainer>
-    </LandingVideoContainer>
+    </Container>
   );
 };
 export default LandingVideo;

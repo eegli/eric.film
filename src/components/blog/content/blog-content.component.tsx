@@ -1,15 +1,19 @@
+import { useLightTheme } from '@/components/hooks/useLightTheme';
 import { BlogPostContent } from '@/components/types';
-import { lightTheme } from '@/src/styles/theme';
+import { darkTheme, lightTheme } from '@/src/styles/theme';
 import { dateFormat } from '@/src/utils/dates';
+import { FaRegLightbulb } from 'react-icons/fa';
 import { MdAccessTime, MdUpdate } from 'react-icons/md';
 import { ThemeProvider } from 'styled-components';
 import BlogMarkdown from '../markdown/blog-markdown.component';
 import {
   BlogPostContainer,
+  BlogPostHeader,
   BlogPostTimes,
   BlogPostTitle,
   IFrameWrapper,
   StyledIframe,
+  ThemeToggleButton,
 } from './blog-content.styles';
 
 const BlogContent: React.FC<BlogPostContent> = ({
@@ -22,22 +26,37 @@ const BlogContent: React.FC<BlogPostContent> = ({
   // const source = process.env.NODE_ENV === 'production' ? content : MD;
   // const video =
   //   process.env.NODE_ENV === 'production' ? ytvideo : '/VjSE0--1KNA';
+  const [theme, themeToggler] = useLightTheme();
+  const themeMode = theme === 'lightTheme' ? lightTheme : darkTheme;
+
   return (
     <BlogPostContainer>
       <BlogPostTitle>{title}</BlogPostTitle>
-      <BlogPostTimes>
-        <div>
-          <MdAccessTime />
-          <p>Posted: {dateFormat(createdAt)}</p>
-        </div>
-        {createdAt !== updatedAt ? (
+      <BlogPostHeader>
+        <BlogPostTimes>
           <div>
-            <MdUpdate />
-            <p>Updated: {dateFormat(updatedAt)}</p>
+            <MdAccessTime />
+            <p>Posted: {dateFormat(createdAt)}</p>
           </div>
-        ) : null}
-      </BlogPostTimes>
-      <ThemeProvider theme={lightTheme}>
+          {createdAt !== updatedAt ? (
+            <div>
+              <MdUpdate />
+              <p>Updated: {dateFormat(updatedAt)}</p>
+            </div>
+          ) : null}
+        </BlogPostTimes>
+        <ThemeToggleButton onClick={themeToggler}>
+          <div>
+            <FaRegLightbulb />
+
+            <p>
+              Toggle {theme === 'lightTheme' ? 'dark' : 'bright'} reading mode
+            </p>
+          </div>
+        </ThemeToggleButton>
+      </BlogPostHeader>
+
+      <ThemeProvider theme={themeMode}>
         <BlogMarkdown source={content} />
       </ThemeProvider>
 

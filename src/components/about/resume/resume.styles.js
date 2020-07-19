@@ -57,7 +57,7 @@ export const ToggleContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.bgSecondary};
+  background-color: ${({ theme }) => theme.colors.bgTertiary};
   color: ${({ theme }) => theme.colors.textSecondary};
   padding: 1rem;
   &:hover {

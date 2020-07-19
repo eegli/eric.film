@@ -4,13 +4,13 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
-import { theme } from '@/styles/theme';
+import { darkTheme } from '@/styles/theme';
 import { MockedProvider } from '@apollo/client/testing';
 
 const AllTheProviders = ({ children }) => {
   return (
     <MockedProvider mocks={[]}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider theme={darkTheme}>{children}</ThemeProvider>
     </MockedProvider>
   );
 };
