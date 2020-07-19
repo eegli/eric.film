@@ -19,6 +19,7 @@ export const FetchButton = styled.button`
   align-self: center;
   border-radius: 0.5rem;
   color: ${({ theme }) => theme.colors.textPrimary};
+
   &:hover,
   &:active {
     cursor: pointer;

@@ -41,7 +41,7 @@ export const StyledMD = styled(ReactMarkdown)`
   }
 
   & blockquote {
-    background: ${({ theme }) => theme.colors.bgSecondary};
+    background: ${({ theme }) => theme.colors.bgTertiary};
     border-left: 4px solid ${({ theme }) => theme.colors.textPrimary};
     margin: 1.5rem 2rem;
     padding: 0.5em 10px;
