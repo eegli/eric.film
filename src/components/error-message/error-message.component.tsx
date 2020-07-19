@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
+  margin: 2rem;
   text-align: center;
 `;
 
@@ -8,10 +9,14 @@ const Message = styled.p`
   color: ${({ theme }) => theme.colors.pink};
 `;
 
+const Info = styled.p`
+  color: ${({ theme }) => theme.colors.textSecondary};
+`;
+
 const ErrorMessage: React.FC = ({ children }) => (
   <Container>
-    <Message>an unexpected error occured:</Message>
-    {children}
+    <Info>an unexpected error occured:</Info>
+    <Message>{children}</Message>
   </Container>
 );
 

@@ -1,6 +1,7 @@
 import { allBlogPostsPreviewVars, ALL_BLOGPOSTS_PREVIEW } from '@/api/queries';
 import BlogPreview from '@/components/blog/preview/blog-preview.component';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
+import ErrorMessage from '@/components/error-message/error-message.component';
 import {
   BlogPostPreview,
   BlogPostPreviewData,
@@ -32,13 +33,8 @@ const BlogCategory: React.FC<Props> = ({ filter, sortBy }) => {
 
   const loadingMorePosts = networkStatus === NetworkStatus.fetchMore;
 
-  if (error) return <div>'Error loading posts :('</div>;
-  if (loading && !loadingMorePosts)
-    return (
-      <BlogCategoryContainer>
-        <CustomSpinner />
-      </BlogCategoryContainer>
-    );
+  if (error) return <ErrorMessage>Error loading posts :(</ErrorMessage>;
+  if (loading && !loadingMorePosts) return <CustomSpinner />;
 
   if (data) {
     const loadMorePosts = () => {
@@ -88,7 +84,7 @@ const BlogCategory: React.FC<Props> = ({ filter, sortBy }) => {
       </>
     );
   } else {
-    return <div></div>;
+    return <div />;
   }
 };
 
