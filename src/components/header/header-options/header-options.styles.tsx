@@ -1,21 +1,14 @@
-import { DarkTheme } from '@/styles/theme';
 import styled from 'styled-components';
+import { Props } from './header-options.components';
 
-type Props = {
-  isMobile: boolean;
+interface StyleProps extends Props {
   href: string;
   path: string;
-};
+}
 
-// TODO
-const mobileColor = ({ theme }: { theme: DarkTheme }) =>
-  theme.colors.textPrimary;
-const desktopColor = ({ theme }: { theme: DarkTheme }) =>
-  theme.colors.textPrimary;
-
-export const StyledLinkText = styled.a<Props>`
+export const StyledLinkText = styled.a<StyleProps>`
   width: 100%;
-  padding: ${({ isMobile }) => (isMobile ? '1.4rem' : '0')} 1rem;
+  padding: ${({ position }) => (position === 'mobile' ? '1.4rem' : '0')} 1rem;
   text-align: center;
   font-size: 1.2rem;
   text-shadow: 1px 1px 0px ${({ theme }) => theme.colors.pink};
@@ -24,7 +17,7 @@ export const StyledLinkText = styled.a<Props>`
     text-decoration: line-through;
     cursor: pointer;
   }
-  color: ${({ isMobile }) => (isMobile ? mobileColor : desktopColor)};
+  color: ${({ theme }) => theme.colors.textPrimary};
   text-decoration: ${({ href, path }) =>
     href === path ? 'underline' : 'none'};
 `;

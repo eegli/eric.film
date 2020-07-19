@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
+import { concatPagination } from '@apollo/client/utilities';
 
 let apolloClient;
 
@@ -7,8 +8,8 @@ const createApolloClient = () => {
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({
-      uri: process.env.GRAPHQL_URL, // Server URL (must be absolute)
-      credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
+      uri: process.env.GRAPHQL_URL,
+      credentials: 'same-origin',
     }),
     cache: new InMemoryCache(),
   });

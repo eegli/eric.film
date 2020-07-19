@@ -9,9 +9,8 @@ type ImageProps = {
 };
 
 const Gallery: React.FC<ImageProps> = ({ images, index }) => {
-  // TODO better error handling
   if (!images) {
-    return <h1>Oh no! There was an error displaying images</h1>;
+    return <p>Oh no! There was an error displaying images</p>;
   }
 
   return (

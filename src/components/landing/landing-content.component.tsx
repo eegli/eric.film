@@ -1,4 +1,4 @@
-import { ALL_IMGS } from '@/api/queries';
+import { IMGS_HOME } from '@/api/queries';
 import CustomLink from '@/components/custom-link/custom-link.component';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import Gallery from '@/components/gallery/gallery.component';
@@ -8,7 +8,7 @@ import { useQuery } from '@apollo/client';
 import { LandingContentContainer } from './landing-content.styles';
 
 const LandingContent: React.FC = ({ children }) => {
-  const { loading, error, data } = useQuery<ImageData>(ALL_IMGS);
+  const { loading, error, data } = useQuery<ImageData>(IMGS_HOME);
 
   if (error) return <div>'Error loading images :('</div>;
   if (loading)
@@ -19,9 +19,7 @@ const LandingContent: React.FC = ({ children }) => {
     );
 
   if (data) {
-    const images = data.imgCollections.find(
-      collection => collection.imageType === 'home',
-    );
+    const images = data.imgCollections[0];
     return (
       <>
         <LandingContentContainer>

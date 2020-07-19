@@ -3,14 +3,14 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { FaSort } from 'react-icons/fa';
 import { useActiveUrl } from '../hooks/useActiveCat';
-import CategorySwitch from './switch-categories/category-switch.component';
 import {
   CardContainer,
   CategoryContainer,
   SelectionCardContainer,
   SortButton,
   SortButtonContainer,
-} from './_categories.styles';
+} from './categories.styles';
+import BlogSwitch from './switch-categories/blog-switch-component';
 
 /* 
 This page handles the routing for all the blog and portfolio categories
@@ -64,7 +64,7 @@ const BlogCategories: React.FC = () => {
           )}
         </SortButtonContainer>
       </CategoryContainer>
-      <CategorySwitch sortBy={sort} />
+      <BlogSwitch sortBy={sort} />
     </>
   );
 };

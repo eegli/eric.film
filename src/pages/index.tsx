@@ -1,4 +1,4 @@
-import { ALL_IMGS } from '@/api/queries';
+import { IMGS_HOME } from '@/api/queries';
 import { SEO_INDEX_META as meta } from '@/src/config';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
@@ -31,7 +31,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const apolloClient = initializeApollo();
 
   await apolloClient.query({
-    query: ALL_IMGS,
+    query: IMGS_HOME,
   });
 
   return {

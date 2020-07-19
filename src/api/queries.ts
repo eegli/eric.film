@@ -68,9 +68,21 @@ export const singleBlogPostVars = (slug: string | string[]): PostVars => {
   }
 };
 
-export const ALL_IMGS = gql`
-  query ALL_IMGS {
-    imgCollections {
+export const IMGS_PORTFOLIO = gql`
+  query IMGS_HOME {
+    imgCollections(where: { imageType: portfolio }) {
+      id
+      imageType
+      collection {
+        url
+      }
+    }
+  }
+`;
+
+export const IMGS_HOME = gql`
+  query IMGS_HOME {
+    imgCollections(where: { imageType: home }) {
       id
       imageType
       collection {

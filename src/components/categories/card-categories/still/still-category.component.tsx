@@ -1,32 +1,26 @@
-import { ALL_IMGS } from '@/api/queries';
+import { IMGS_PORTFOLIO } from '@/api/queries';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
+import ErrorMessage from '@/components/error-message/error-message.component';
 import Gallery from '@/components/gallery/gallery.component';
 import { ImageData } from '@/components/types';
 import { useQuery } from '@apollo/client';
 
-// TODO correct imgs
-
 const StillCategory: React.FC = () => {
-  const { loading, error, data } = useQuery<ImageData>(ALL_IMGS);
-  if (error) return <div>'Error loading images :('</div>;
+  const { loading, error, data } = useQuery<ImageData>(IMGS_PORTFOLIO);
+
+  if (error) return <ErrorMessage>Error loading images :(</ErrorMessage>;
   if (loading) {
-    return (
-      <div style={{ textAlign: 'center' }}>
-        <CustomSpinner />
-      </div>
-    );
+    return <CustomSpinner />;
   }
   if (data) {
-    const images = data.imgCollections.find(
-      collection => collection.imageType === 'portfolio',
-    );
+    const images = data.imgCollections[0];
     return (
       <>
         {images ? <Gallery index={false} images={images.collection} /> : null}
       </>
     );
   } else {
-    return <div></div>;
+    return <div />;
   }
 };
 
