@@ -8,6 +8,7 @@ import { ThemeProvider } from 'styled-components';
 import BlogMarkdown from '../markdown/blog-markdown.component';
 import {
   BlogPostContainer,
+  BlogPostHeader,
   BlogPostTimes,
   BlogPostTitle,
   IFrameWrapper,
@@ -31,27 +32,30 @@ const BlogContent: React.FC<BlogPostContent> = ({
   return (
     <BlogPostContainer>
       <BlogPostTitle>{title}</BlogPostTitle>
-
-      <BlogPostTimes>
-        <div>
-          <MdAccessTime />
-          <p>Posted: {dateFormat(createdAt)}</p>
-        </div>
-        {createdAt !== updatedAt ? (
+      <BlogPostHeader>
+        <BlogPostTimes>
           <div>
-            <MdUpdate />
-            <p>Updated: {dateFormat(updatedAt)}</p>
+            <MdAccessTime />
+            <p>Posted: {dateFormat(createdAt)}</p>
           </div>
-        ) : null}
-      </BlogPostTimes>
-      <ThemeToggleButton onClick={themeToggler} mode={theme}>
-        <>
-          <FaRegLightbulb />
-          <span>
-            toggle {theme === 'lightTheme' ? 'dark' : 'bright'} reading mode
-          </span>
-        </>
-      </ThemeToggleButton>
+          {createdAt !== updatedAt ? (
+            <div>
+              <MdUpdate />
+              <p>Updated: {dateFormat(updatedAt)}</p>
+            </div>
+          ) : null}
+        </BlogPostTimes>
+        <ThemeToggleButton onClick={themeToggler}>
+          <div>
+            <FaRegLightbulb />
+
+            <p>
+              Toggle {theme === 'lightTheme' ? 'dark' : 'bright'} reading mode
+            </p>
+          </div>
+        </ThemeToggleButton>
+      </BlogPostHeader>
+
       <ThemeProvider theme={themeMode}>
         <BlogMarkdown source={content} />
       </ThemeProvider>

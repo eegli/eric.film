@@ -1,4 +1,3 @@
-import { Theme } from '@/components/hooks/useLightTheme';
 import styled from 'styled-components';
 
 export const BlogPostContainer = styled.article`
@@ -18,53 +17,53 @@ export const BlogPostExcerpt = styled.h2`
   line-height: 1.5rem;
 `;
 
-export const BlogPostTimes = styled.div`
+export const BlogPostHeader = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 0 1rem;
+  justify-content: space-between;
+`;
+
+export const BlogPostTimes = styled.div`
+  white-space: nowrap;
   display: flex;
   color: ${({ theme }) => theme.colors.pink};
-  & div {
+  & > div {
     display: flex;
     align-items: center;
     &:first-child {
       margin-right: 1rem;
     }
-    & p {
+    & > p {
       font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
       margin: 0 0 0 0.3rem;
       color: ${({ theme }) => theme.colors.textSecondary};
     }
   }
 `;
-type ThemeToggleProps = {
-  mode: Theme;
-};
-export const ThemeToggleButton = styled.button<ThemeToggleProps>`
+
+export const ThemeToggleButton = styled.button`
+  color: ${({ theme }) => theme.colors.textSecondary};
+  background-color: ${({ theme }) => theme.colors.bgPrimary};
   display: flex;
-  background-color: ${({ theme, mode }) =>
-    mode === 'darkTheme'
-      ? theme.colors.textSecondary
-      : theme.colors.bgSecondary};
-  margin: 1rem auto 0.5rem auto;
-  padding: 0.5rem 0.8rem;
-  color: ${({ theme, mode }) =>
-    mode === 'darkTheme'
-      ? theme.colors.bgSecondary
-      : theme.colors.textSecondary};
-  border-radius: 1rem;
   border: none;
   outline: none;
-  & > span {
-    margin-left: 0.5rem;
+  padding: 0;
+  text-decoration: underline;
+  & > div {
+    display: flex;
+    align-items: center;
+
+    & > p {
+      font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
+      margin: 0 0 0 0.3rem;
+      color: ${({ theme }) => theme.colors.textSecondary};
+    }
   }
+
   &:hover {
-    background-color: ${({ theme, mode }) =>
-      mode === 'darkTheme'
-        ? theme.colors.bgSecondary
-        : theme.colors.textSecondary};
-    color: ${({ theme, mode }) =>
-      mode === 'darkTheme'
-        ? theme.colors.textSecondary
-        : theme.colors.bgSecondary};
+    color: ${({ theme }) => theme.colors.textPrimary};
     cursor: pointer;
   }
 `;
