@@ -23,11 +23,7 @@ const BlogContainer: React.FC = () => {
   });
 
   if (loading) {
-    return (
-      <Container>
-        <CustomSpinner />
-      </Container>
-    );
+    return <CustomSpinner />;
   }
   if (data && !data.blogpost) {
     return (
