@@ -7,7 +7,7 @@
    <p align="center">
     My personal website and blog, created with Next.js
     <br />
-    <a href="https://beta.eric.film"><strong>Live website »</strong></a>
+    <a href="https://eric.film"><strong>Live website »</strong></a>
     <br />
 
   </p>
@@ -29,11 +29,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Known Bugs
 
-- Safari iOS
+> Safari iOS
 
 Crashes on pages with `next/link` and `getStaticProps`. It's kinda hard to debug since it only happens when deployed to production with Vercel. Turns out this error is an open bug in `Next.js`. [Link to issue](https://github.com/vercel/next.js/issues/11608).
 
-> Workaround: Pages depending on external data use `getServerSideProps` instead of `getStaticProps`.
+- Workaround: Pages depending on external data use `getServerSideProps` instead of `getStaticProps`.
 
 ## FAQ
 
@@ -44,7 +44,7 @@ With Sentury - or more specifically `@sentry/browser` - it is the same. It canno
 
 This is why it is good practice to filter requests by hostname / allowed domains - something that is possible for both Sentury and Google Analytics.
 
-My GraphQL endpoint needs to be public since the frontend has the possibility to fetch more blog posts directly from my backend. Thus, requests to GraphCMS can also be inspected in any browser's dev tools.
+My GraphQL endpoint needs to be public since the frontend has the possibility to fetch more blog posts directly from my backend. Thus, requests to GraphCMS can also be inspected in any browser's dev tools ¯\\_(ツ)_/¯
 
 ## Links
 

@@ -49,6 +49,7 @@ export const ThemeToggleButton = styled.button`
   display: flex;
   border: none;
   outline: none;
+  letter-spacing: 1px;
   padding: 0;
   text-decoration: underline;
   & > div {
