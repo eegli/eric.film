@@ -24,8 +24,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - SEO improvements
 - Search posts
 - Browser push
-- Add browser check
+- Display warning for unsupported browsers
 - Nginx proxy to bypass adblockers for Google Analytics
+- Add more tests 👻
 
 ## Known Bugs
 
