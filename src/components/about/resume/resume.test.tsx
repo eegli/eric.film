@@ -3,7 +3,7 @@ import Resume from './resume.component';
 
 describe('About', () => {
   it('renders resume component', () => {
-    const { asFragment } = render(<Resume />, {});
+    const { asFragment } = render(<Resume />);
     expect(asFragment()).toMatchSnapshot();
   });
 

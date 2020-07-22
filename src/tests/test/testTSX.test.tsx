@@ -1,8 +1,9 @@
 import { render } from '@/src/tests/testUtils';
-import Page from './testJSX';
 
-describe('Test - JSX', () => {
-  it('renders test JSX component', () => {
+const Page: React.FC = () => <div>Test</div>;
+
+describe('Test - TSX', () => {
+  it('renders test TSX component', () => {
     const { asFragment } = render(<Page />, {});
     expect(asFragment()).toMatchSnapshot();
   });

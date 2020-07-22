@@ -1,5 +1,6 @@
 import { render } from '@/src/tests/testUtils';
-import Page from './testTSX';
+
+const Page = () => <div>Test</div>;
 
 describe('Test - JSX', () => {
   it('renders test JSX component', () => {

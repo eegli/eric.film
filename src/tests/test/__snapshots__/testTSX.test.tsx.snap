@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test - JSX renders test JSX component 1`] = `
+exports[`Test - TSX renders test TSX component 1`] = `
 <DocumentFragment>
   <div>
     Test
