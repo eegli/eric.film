@@ -21,7 +21,7 @@ export type Category = BlogCategories | PortfolioCategories;
 
 export interface BlogPostPreview {
   excerpt: string;
-  id: number;
+  id: string;
   slug: string;
   title: string;
   type: BlogCategories;

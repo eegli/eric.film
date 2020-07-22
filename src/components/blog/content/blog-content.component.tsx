@@ -5,7 +5,7 @@ import { dateFormat } from '@/src/utils/dates';
 import { FaRegLightbulb } from 'react-icons/fa';
 import { MdAccessTime, MdUpdate } from 'react-icons/md';
 import { ThemeProvider } from 'styled-components';
-import BlogMarkdown from '../markdown/blog-markdown.component';
+import BlogMarkdown from '../markdown/markdown.component';
 import {
   BlogPostContainer,
   BlogPostHeader,
@@ -57,7 +57,7 @@ const BlogContent: React.FC<BlogPostContent> = ({
       </BlogPostHeader>
 
       <ThemeProvider theme={themeMode}>
-        <BlogMarkdown source={content} />
+        <BlogMarkdown content={content} />
       </ThemeProvider>
 
       {ytvideo ? (

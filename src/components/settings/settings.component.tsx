@@ -1,4 +1,4 @@
-import Markdown from '@/components/blog/markdown/blog-markdown.component';
+import Markdown from '@/components/blog/markdown/markdown.component';
 import { InfoContainer } from './settings.styles';
 import Acknowledgements from './__content__/acknowledgements.md';
 import Imprint from './__content__/imprint.md';

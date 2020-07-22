@@ -1,9 +1,9 @@
 import CodeBlock from '../custom-renders/blog-codeblock.component';
 import Image from '../custom-renders/blog-image.component';
 import Link from '../custom-renders/blog-link.component';
-import { StyledMD } from './blog-markdown.styles';
+import { StyledMD } from './markdown.styles';
 
-const BlogMarkdown: React.FC<any> = ({ source }) => {
+const Markdown: React.FC<any> = ({ content }) => {
   return (
     <StyledMD
       renderers={{
@@ -11,9 +11,9 @@ const BlogMarkdown: React.FC<any> = ({ source }) => {
         link: Link,
         image: Image,
       }}
-      source={source}
+      source={content}
     />
   );
 };
 
-export default BlogMarkdown;
+export default Markdown;
