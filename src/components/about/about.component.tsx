@@ -6,9 +6,9 @@ const About: React.FC = () => {
   return (
     <>
       <AboutContainer>
-        <CardComponent data-testid='card-component' />
+        <CardComponent />
         <hr style={{ width: '80%' }} />
-        <ResumeComponent data-testid='resume-component' />
+        <ResumeComponent />
       </AboutContainer>
     </>
   );
