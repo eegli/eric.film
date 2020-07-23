@@ -12,10 +12,9 @@ describe('About', () => {
   });
 
   it('toggles education div', () => {
-    const toggler = shallowWrapper.find(ToggleContainer).at(0);
-    const collapse = shallowWrapper.find(SmoothCollapse).at(0);
-    // console.log(toggler.debug());
+    const toggler = mountedWrapper.find(ToggleContainer).at(0);
+    const collapse = mountedWrapper.find(SmoothCollapse).at(0);
 
-    expect(collapse.prop('expanded')).toBeFalsy;
+    expect(collapse.props().expanded).toBe(false);
   });
 });
