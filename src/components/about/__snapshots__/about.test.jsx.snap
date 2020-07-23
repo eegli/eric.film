@@ -1,35 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`About snapshots mounted wrapper 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "colors": Object {
-        "accents": Object {
-          "brightBlue": "#365952",
-          "eggshell": "#53272D",
-          "melon": "#034363",
-        },
-        "bgPrimary": "#121212",
-        "bgSecondary": "#222222",
-        "bgTertiary": "#3b3b3b",
-        "pink": "#feb8ce",
-        "textPrimary": "#f7f7f7",
-        "textSecondary": "#F1F1F1",
-      },
-      "fontsizes": Object {
-        "baseFontSize": "16px",
-        "baseIconFontSize": "18px",
-        "h1FontSize": "22px",
-        "h2FontSize": "20px",
-        "secondaryFontSize": "14px",
-      },
-    }
-  }
-/>
-`;
-
-exports[`About snapshots shallow wrapper 1`] = `
+exports[`About renders shallow wrapper 1`] = `
 <Fragment>
   <aboutstyles__AboutContainer>
     <CardComponent />
