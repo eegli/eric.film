@@ -1,5 +1,157 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`About renders about component 1`] = `
+<resumestyles__Container>
+  <resumestyles__Section>
+    <resumestyles__ToggleContainer
+      onClick={[Function]}
+    >
+      <resumestyles__ToggleTitle>
+        education - work
+      </resumestyles__ToggleTitle>
+      <FaAngleDown />
+    </resumestyles__ToggleContainer>
+    <SmoothCollapse
+      allowOverflowWhenOpen={false}
+      className=""
+      collapsedHeight="0"
+      eagerRender={false}
+      expanded={false}
+      heightTransition=".25s ease"
+    >
+      <resumestyles__ResumeContent>
+        <span>
+          EDUCATION
+        </span>
+        <div>
+          <span>
+            2020 - 2024
+          </span>
+          <p>
+            Master of Science, Data Science. University of Zurich
+          </p>
+          <span>
+            2015 - 2019
+          </span>
+          <p>
+            Bachelor of Arts, Media and Communication Science. University of Zurich
+          </p>
+          <span>
+            since 2018
+          </span>
+          <p>
+            Various courses on Udemy: Javascript, Typescript, React.js, React native, HTML, CSS
+          </p>
+        </div>
+        <span>
+          WORK
+        </span>
+        <div>
+          <span>
+            05.2018 - present
+          </span>
+          <p>
+            Digital Project Manager. Ringier AG
+          </p>
+          <span>
+            01.2013 - present
+          </span>
+          <p>
+            Freelance photographer & videographer. Self-employed
+          </p>
+          <span>
+            01.2017 - 04.2018
+          </span>
+          <p>
+            Project Management Support. Ringier AG
+          </p>
+          <span>
+            05.2016 - 04.2019
+          </span>
+          <p>
+            Video Journalist. Zürcher Oberländer Medien AG
+          </p>
+        </div>
+      </resumestyles__ResumeContent>
+    </SmoothCollapse>
+  </resumestyles__Section>
+  <resumestyles__Section>
+    <resumestyles__ToggleContainer
+      onClick={[Function]}
+    >
+      <resumestyles__ToggleTitle>
+        tools - technology
+      </resumestyles__ToggleTitle>
+      <FaAngleDown />
+    </resumestyles__ToggleContainer>
+    <SmoothCollapse
+      allowOverflowWhenOpen={false}
+      className=""
+      collapsedHeight="0"
+      eagerRender={false}
+      expanded={false}
+      heightTransition=".25s ease"
+    >
+      <resumestyles__ResumeContent>
+        <span>
+          DEVELOPMENT
+        </span>
+        <div>
+          <ul>
+            <li>
+              Javascript (ES5, ES6)
+            </li>
+            <li>
+              Typescript
+            </li>
+            <li>
+              Next.js
+            </li>
+            <li>
+              React.js, React native
+            </li>
+            <li>
+              Redux, React Redux
+            </li>
+            <li>
+              CSS in JS
+            </li>
+            <li>
+              HTML5, CSS3
+            </li>
+            <li>
+              GraphQL, REST
+            </li>
+            <li>
+              Google Firebase
+            </li>
+            <li>
+              Git
+            </li>
+            <li>
+              Node.js (currently learning)
+            </li>
+          </ul>
+        </div>
+        <span>
+          MISC
+        </span>
+        <div>
+          <ul>
+            <li>
+              Agile (Scrum & Kanban)
+            </li>
+            <li>
+              Adobe Creative Suite
+            </li>
+          </ul>
+        </div>
+      </resumestyles__ResumeContent>
+    </SmoothCollapse>
+  </resumestyles__Section>
+</resumestyles__Container>
+`;
+
 exports[`About renders resume component 1`] = `
 <resumestyles__Container>
   <resumestyles__Section>
