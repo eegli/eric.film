@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test - JSX renders test JSX component 1`] = `
-<DocumentFragment>
-  <div>
-    Test
-  </div>
-</DocumentFragment>
+<div>
+  Test
+</div>
 `;

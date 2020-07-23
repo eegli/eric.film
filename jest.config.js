@@ -16,4 +16,7 @@ module.exports = {
     '@/api/(.*)': ['<rootDir>/src/api/$1'],
     '@/src/(.*)': ['<rootDir>/src/$1'],
   },
+  // Neccesary for Jest 24+
+  //https://github.com/styled-components/jest-styled-components#enzyme
+  snapshotSerializers: ['enzyme-to-json/serializer'],
 };
