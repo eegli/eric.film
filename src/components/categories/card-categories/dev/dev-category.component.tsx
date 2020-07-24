@@ -42,7 +42,7 @@ const DevCategory: React.FC = () => {
             </tr>
             <tr>
               <th>test coverage</th>
-              <td>0% (wip)</td>
+              <td>7% (wip)</td>
             </tr>
             <tr>
               <th>hosting & cd/ci</th>
