@@ -1,11 +1,13 @@
 import { FaAngleDown } from 'react-icons/fa';
 import {
-  ArrowDownContainer,
+  ArrowDown,
+  ArrowDownWrapper,
   Container,
   StyledVideo,
 } from './landing-video.styles';
 
 const LandingVideo: React.FC = () => {
+  // TODO make this more elogant pls
   const scrollToContent = (): void => {
     window.scrollBy({
       top: window.innerHeight,
@@ -19,9 +21,11 @@ const LandingVideo: React.FC = () => {
       <StyledVideo autoPlay loop muted playsInline>
         <source src='/static/vid/home_teaser.mp4' type='video/mp4' />
       </StyledVideo>
-      <ArrowDownContainer onClick={scrollToContent}>
-        <FaAngleDown />
-      </ArrowDownContainer>
+      <ArrowDownWrapper>
+        <ArrowDown onClick={scrollToContent}>
+          <FaAngleDown />
+        </ArrowDown>
+      </ArrowDownWrapper>
     </Container>
   );
 };

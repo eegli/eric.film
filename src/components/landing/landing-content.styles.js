@@ -7,6 +7,5 @@ export const LandingContentContainer = styled.div`
   justify-content: center;
   position: absolute;
   width: 100%;
-  top: 100vh;
-  background-color: ${({ theme }) => theme.colors.bgPrimary};
+  top: 100%;
 `;
