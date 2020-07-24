@@ -10,7 +10,6 @@ export const Global = createGlobalStyle`
 
   /* GLOBALS */
   body {
-    position: relative;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;

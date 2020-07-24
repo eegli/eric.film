@@ -8,4 +8,5 @@ export const LandingContentContainer = styled.div`
   position: absolute;
   width: 100%;
   top: 100vh;
+  background-color: ${({ theme }) => theme.colors.bgPrimary};
 `;

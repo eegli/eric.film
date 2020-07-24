@@ -6,7 +6,6 @@ import {
 } from './landing-video.styles';
 
 const LandingVideo: React.FC = () => {
-  // This works because the landing video page is 100vh
   const scrollToContent = (): void => {
     window.scrollBy({
       top: window.innerHeight,
