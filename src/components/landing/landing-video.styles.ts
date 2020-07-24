@@ -6,12 +6,10 @@ export const Container = styled.div`
 `;
 
 export const StyledVideo = styled.video`
-  position: fixed;
-  min-width: 100%;
-  min-height: 100%;
-  right: 0;
-  bottom: 0%;
-  object-fit: fill;
+  position: absolute;
+  top: 0px;
+  left: 0px; /* fixed to left. Replace it by right if you want.*/
+  object-fit: cover;
 `;
 
 export const ArrowDownContainer = styled.div`
