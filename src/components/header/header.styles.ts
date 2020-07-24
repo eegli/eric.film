@@ -5,7 +5,7 @@ type Props = {
   indexPage: boolean;
 };
 export const HeaderWrapper = styled.div<Props>`
-  position: ${({ indexPage }) => (indexPage ? 'fixed' : 'absolute')};
+  position: ${({ indexPage }) => (indexPage ? 'absolute' : 'absolute')};
   top: 0;
   left: 0;
   z-index: 1;
