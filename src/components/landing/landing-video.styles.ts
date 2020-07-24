@@ -7,8 +7,10 @@ export const Container = styled.div`
 
 export const StyledVideo = styled.video`
   position: absolute;
+  min-height: 100%;
+  min-width: 100%;
   top: 0px;
-  left: 0px; /* fixed to left. Replace it by right if you want.*/
+  left: 0px;
   object-fit: cover;
 `;
 
