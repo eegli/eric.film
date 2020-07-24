@@ -1,9 +1,9 @@
-import { render } from '@/src/tests/testUtils';
+import { mountWithTheme } from '@/src/tests/testUtils';
 import SocialBar from './social-bar.component';
 
 describe('About', () => {
   it('renders social bar component', () => {
-    const { asFragment } = render(<SocialBar />, {});
-    expect(asFragment()).toMatchSnapshot();
+    const wrapper = mountWithTheme(<SocialBar />);
+    expect(wrapper).toMatchSnapshot();
   });
 });

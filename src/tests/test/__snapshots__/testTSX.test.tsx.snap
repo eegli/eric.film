@@ -1,9 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test - TSX renders test TSX component 1`] = `
-<DocumentFragment>
-  <div>
-    Test
-  </div>
-</DocumentFragment>
-`;
+exports[`Test - TSX renders test TSX component 1`] = `[Function]`;
