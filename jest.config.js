@@ -5,8 +5,8 @@ module.exports = {
   // Import 'jest-styled-components';
   setupFilesAfterEnv: ['<rootDir>/src/tests/setupTests.js'],
 
-  // Get coverage for all files in root
-  collectCoverageFrom: ['**/*.{tsx,jsx,ts,js}'],
+  // Get coverage for all files in root except for styles files
+  collectCoverageFrom: ['**/*.{tsx,jsx,ts,js}', '!**/?(*.)+(styles).[jt]s'],
 
   // Path mapping with tsconfig
   moduleNameMapper: {
