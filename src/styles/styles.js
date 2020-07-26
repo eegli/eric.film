@@ -3,8 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 export const Global = createGlobalStyle`
 
   html {
-    overflow-y: scroll;
-    overflow-x: hidden;
+
     height: 100%;
   }
 
@@ -65,7 +64,7 @@ export const Global = createGlobalStyle`
     );
 
     position: fixed;
-    z-index: 1031;
+    z-index: 99;
     top: 0;
     left: 0;
 
