@@ -1,11 +1,7 @@
-import { FaBars } from 'react-icons/fa';
 import styled from 'styled-components';
 
-type Props = {
-  indexPage: boolean;
-};
-export const HeaderWrapper = styled.div<Props>`
-  position: ${({ indexPage }) => (indexPage ? 'absolute' : 'absolute')};
+export const HeaderWrapper = styled.div`
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
@@ -46,9 +42,19 @@ export const StyledLogo = styled.img`
   height: 2rem;
 `;
 
-export const StyledHamburger = styled(FaBars)`
-  font-size: 1.8rem;
-  color: #eef0f2;
+type Props = {
+  rotated: boolean;
+};
+
+export const MenuIcon = styled.div<Props>`
+  transform: ${({ rotated }) => (rotated ? 'rotate(180deg)' : '')};
+  transition: 300ms linear all;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  & > svg {
+    color: ${({ theme }) => theme.colors.textSecondary};
+  }
   @media screen and (min-width: 700px) {
     display: none;
   }

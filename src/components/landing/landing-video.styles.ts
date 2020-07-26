@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   text-align: center;
-  z-index: -99;
 `;
 
 export const StyledVideo = styled.video`
