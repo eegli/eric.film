@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
+import { FaHamburger } from 'react-icons/fa';
 import SmoothCollapse from 'react-smooth-collapse';
 import HeaderOptions from './header-options/header-options.components';
 import {
@@ -8,7 +9,7 @@ import {
   HeaderOptionsDesktopContainer,
   HeaderOptionsMobileContainer,
   HeaderWrapper,
-  StyledHamburger,
+  MenuIcon,
   StyledLogo,
 } from './header.styles';
 
@@ -31,7 +32,9 @@ const Header: React.FC = () => {
           <HeaderOptionsDesktopContainer>
             <HeaderOptions position='desktop' />
           </HeaderOptionsDesktopContainer>
-          <StyledHamburger onClick={handleClick} />
+          <MenuIcon onClick={handleClick} rotated={showHeader}>
+            <FaHamburger />
+          </MenuIcon>
         </HeaderMainContainer>
       </HeaderMainBgContainer>
 
