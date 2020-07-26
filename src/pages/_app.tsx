@@ -51,15 +51,14 @@ const App: React.FC<Props> = ({ Component, pageProps, err }) => {
         {/* TODO Remove */}
         <meta name='robots' content='noindex, nofollow' />
       </Head>
-      <div>
-        <ApolloProvider client={apolloClient}>
-          <ThemeProvider theme={darkTheme}>
-            <Global />
-            <Header />
-            <Component {...pageProps} err={err} />
-          </ThemeProvider>
-        </ApolloProvider>
-      </div>
+
+      <ApolloProvider client={apolloClient}>
+        <ThemeProvider theme={darkTheme}>
+          <Global />
+          <Header />
+          <Component {...pageProps} err={err} />
+        </ThemeProvider>
+      </ApolloProvider>
     </>
   );
 };

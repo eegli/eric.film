@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import SmoothCollapse from 'react-smooth-collapse';
 import HeaderOptions from './header-options/header-options.components';
@@ -15,18 +16,15 @@ import {
 const Header: React.FC = () => {
   const [showHeader, setShowHeader] = useState(false);
 
+  const router = useRouter();
+  const indexPage = router.route === '/' ?? false;
+
   const handleClick = (): void => {
     setShowHeader(!showHeader);
-    // gtag.event({
-    //   action: 'toggle_header',
-    //   category: 'header',
-    //   label: 'logo',
-    //   value: 'open_logo',
-    // });
   };
 
   return (
-    <HeaderWrapper>
+    <HeaderWrapper indexPage={indexPage}>
       <HeaderMainBgContainer>
         <HeaderMainContainer>
           <Link href='/'>

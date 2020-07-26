@@ -1,8 +1,11 @@
-import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa';
+import styled from 'styled-components';
 
-export const HeaderWrapper = styled.div`
-  position: absolute;
+type Props = {
+  indexPage: boolean;
+};
+export const HeaderWrapper = styled.div<Props>`
+  position: ${({ indexPage }) => (indexPage ? 'absolute' : 'absolute')};
   top: 0;
   left: 0;
   z-index: 1;
