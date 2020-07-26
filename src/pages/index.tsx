@@ -1,10 +1,32 @@
 import { IMGS_HOME } from '@/api/queries';
+import Spinner from '@/components/custom-spinner/custom-spinner.component';
+import { SpinnerWrapper } from '@/shared/spinner-wrapper.styles';
 import { SEO_INDEX_META as meta } from '@/src/config';
 import { GetServerSideProps } from 'next';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import LandingContent from '../components/landing/landing-content.component';
-import LandingVideo from '../components/landing/landing-video.component';
 import { initializeApollo } from '../lib/apolloClient';
+
+const LandingContent = dynamic(
+  () => import('../components/landing/landing-content.component'),
+  {
+    loading: () => (
+      <SpinnerWrapper>
+        <Spinner />
+      </SpinnerWrapper>
+    ),
+  },
+);
+const LandingVideo = dynamic(
+  () => import('../components/landing/landing-video.component'),
+  {
+    loading: () => (
+      <SpinnerWrapper>
+        <Spinner />
+      </SpinnerWrapper>
+    ),
+  },
+);
 
 const IndexPage: React.FC = () => {
   return (
@@ -21,6 +43,7 @@ const IndexPage: React.FC = () => {
         <meta name='twitter:description' content={meta.twitter_description} />
         <meta name='twitter:image' content={meta.twitter_image} />
       </Head>
+
       <LandingVideo />
       <LandingContent />
     </>
