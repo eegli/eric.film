@@ -23,9 +23,6 @@ const BlogContent: React.FC<BlogPostContent> = ({
   createdAt,
   updatedAt,
 }) => {
-  // const source = process.env.NODE_ENV === 'production' ? content : MD;
-  // const video =
-  //   process.env.NODE_ENV === 'production' ? ytvideo : '/VjSE0--1KNA';
   const [theme, themeToggler] = useLightTheme();
   const themeMode = theme === 'lightTheme' ? lightTheme : darkTheme;
 
