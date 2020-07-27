@@ -5,7 +5,7 @@ export const Table = styled.table`
   margin: 0 auto;
   width: 100%;
   color: ${({ theme }) => theme.colors.textPrimary};
-
+  margin-bottom: 3rem;
   & tr {
     height: 50px;
 
@@ -24,5 +24,7 @@ export const Table = styled.table`
   & td {
     padding: 1rem;
   }
-  margin-bottom: 3rem;
+  & a {
+    text-decoration: underline;
+  }
 `;

@@ -58,7 +58,14 @@ const DevCategory: React.FC = () => {
             </tr>
             <tr>
               <th>repository</th>
-              <td>private</td>
+              <td>
+                <a
+                  href='https://github.com/eegli/eric.film'
+                  target='_blank'
+                  rel='noopener noreferrer'>
+                  View on Github
+                </a>
+              </td>
             </tr>
           </tbody>
         </Table>
