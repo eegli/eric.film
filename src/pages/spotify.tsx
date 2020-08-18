@@ -4,7 +4,7 @@ import LayoutContainer from '@/components/shared/layout/layout.container';
 import SpotifyPlaylists from '@/components/spotify/spotify-playlists.component';
 
 // TODO Credit Rufus do Sol
-const SpotifyPage = () => {
+const SpotifyPage: React.FC = () => {
   return (
     <>
       <BackgroundVideo source='/static/vid/sound_bg.mp4' />
