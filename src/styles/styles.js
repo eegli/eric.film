@@ -19,6 +19,8 @@ export const Global = createGlobalStyle`
     width: 100%;
     min-width: 320px;
     text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   a {
     color: inherit;

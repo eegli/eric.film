@@ -15,6 +15,9 @@ const Footer: React.FC = () => {
         <Link href='/settings#imprint' passHref>
           <SLink>imprint</SLink>
         </Link>
+        <Link href='/spotify' passHref>
+          <SLink>spotify</SLink>
+        </Link>
       </Container>
     </>
   );

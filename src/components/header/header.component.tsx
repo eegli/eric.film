@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import SmoothCollapse from 'react-smooth-collapse';
@@ -14,6 +15,9 @@ import {
 } from './header.styles';
 
 const Header: React.FC = () => {
+  const router = useRouter();
+  // For the spotify page, which has a bg video, we want a transparent header
+  const isSpotifyPage = router.pathname === '/spotify';
   const [showHeader, setShowHeader] = useState(false);
 
   const handleClick = (): void => {
@@ -22,7 +26,7 @@ const Header: React.FC = () => {
 
   return (
     <HeaderWrapper>
-      <HeaderMainBgContainer>
+      <HeaderMainBgContainer transparent={isSpotifyPage}>
         <HeaderMainContainer>
           <Link href='/'>
             <a>
