@@ -8,13 +8,8 @@ export const HeaderWrapper = styled.div`
   width: 100%;
 `;
 
-type HeaderMainBgContainerProps = {
-  transparent?: boolean;
-};
-
-export const HeaderMainBgContainer = styled.div<HeaderMainBgContainerProps>`
-  background-color: ${({ theme, transparent }) =>
-    transparent ? '' : theme.colors.bgPrimary};
+export const HeaderMainBgContainer = styled.div`
+  // background-color: ${({ theme }) => theme.colors.bgPrimary};
   display: flex;
   justify-content: center;
 `;

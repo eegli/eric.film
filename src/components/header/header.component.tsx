@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import SmoothCollapse from 'react-smooth-collapse';
 import HeaderOptions from './header-options/header-options.components';
@@ -15,11 +14,6 @@ import {
 } from './header.styles';
 
 const Header: React.FC = () => {
-  const router = useRouter();
-  // For the spotify page, which has a bg video, we want a transparent header. Same for home page
-  // TODO dump bg color completely
-  const isSpotifyPage =
-    router.pathname === '/spotify' || router.pathname === '/';
   const [showHeader, setShowHeader] = useState(false);
 
   const handleClick = (): void => {
@@ -28,7 +22,7 @@ const Header: React.FC = () => {
 
   return (
     <HeaderWrapper>
-      <HeaderMainBgContainer transparent={isSpotifyPage}>
+      <HeaderMainBgContainer>
         <HeaderMainContainer>
           <Link href='/'>
             <a>
