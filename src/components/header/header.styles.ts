@@ -9,7 +9,7 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const HeaderMainBgContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.bgPrimary};
+  // background-color: ${({ theme }) => theme.colors.bgPrimary};
   display: flex;
   justify-content: center;
 `;
@@ -47,8 +47,8 @@ type Props = {
 };
 
 export const MenuIcon = styled.div<Props>`
-  transform: ${({ rotated }) => (rotated ? 'rotate(180deg)' : '')};
-  transition: 300ms linear all;
+  transform: ${({ rotated }) => (rotated ? 'rotate(90deg)' : '')};
+  transition: 200ms linear all;
   font-size: 1.7rem;
   display: flex;
   align-items: center;
