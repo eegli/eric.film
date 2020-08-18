@@ -18,7 +18,8 @@ const Header: React.FC = () => {
   const router = useRouter();
   // For the spotify page, which has a bg video, we want a transparent header. Same for home page
   // TODO dump bg color completely
-  const isSpotifyPage = router.pathname === '/spotify' || '/';
+  const isSpotifyPage =
+    router.pathname === '/spotify' || router.pathname === '/';
   const [showHeader, setShowHeader] = useState(false);
 
   const handleClick = (): void => {
