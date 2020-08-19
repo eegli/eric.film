@@ -1,17 +1,16 @@
 import styled from 'styled-components';
 
-type Props = {
-  blog?: boolean;
+type ContainerProps = {
+  sticky?: boolean;
 };
 
-export const CategoryContainer = styled.div<Props>`
+export const CategoryContainer = styled.div<ContainerProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding: 0 2rem;
-  position: ${({ blog }) => (blog ? 'static' : '-webkit-sticky') /* Safari */};
-  position: ${({ blog }) => (blog ? 'static' : 'sticky')};
+  position: ${({ sticky }) => (sticky ? 'static' : 'sticky')};
   top: 0;
 
   @media screen and (max-width: 850px) {
@@ -20,12 +19,12 @@ export const CategoryContainer = styled.div<Props>`
   }
 `;
 
-export const SelectionCardContainer = styled.div<Props>`
+export const SelectionCardContainer = styled.div<ContainerProps>`
   display: flex;
   justify-content: center;
   overflow-x: scroll;
   flex-wrap: wrap;
-  position: ${({ blog }) => (blog ? 'static' : 'sticky')};
+  position: ${({ sticky }) => (sticky ? 'static' : 'sticky')};
   top: 0;
   background-color: ${({ theme }) => theme.colors.bgPrimary};
   overflow-x: hidden;

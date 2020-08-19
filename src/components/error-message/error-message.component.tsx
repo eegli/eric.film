@@ -15,7 +15,7 @@ const Info = styled.p`
 
 const ErrorMessage: React.FC = ({ children }) => (
   <Container>
-    <Info>an unexpected error occured:</Info>
+    <Info>An unexpected error occured:</Info>
     <Message>{children}</Message>
   </Container>
 );

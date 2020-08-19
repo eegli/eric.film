@@ -7,7 +7,7 @@ import {
 } from './landing-video.styles';
 
 const LandingVideo: React.FC = () => {
-  // TODO make this more elogant pls
+  // TODO make this more elegant pls
   const scrollToContent = (): void => {
     window.scrollBy({
       top: window.innerHeight,

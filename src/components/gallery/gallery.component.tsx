@@ -1,4 +1,5 @@
 // The progressive image library needs a html element
+import ErrorMessage from '@/components/error-message/error-message.component';
 import { ImageUrl } from '@/components/types';
 import ProgressiveImage from 'react-progressive-graceful-image';
 import { GalleryContainer, Image } from './gallery.styles';
@@ -10,7 +11,7 @@ type ImageProps = {
 
 const Gallery: React.FC<ImageProps> = ({ images, index }) => {
   if (!images) {
-    return <p>Oh no! There was an error displaying images</p>;
+    return <ErrorMessage>There was an error displaying images</ErrorMessage>;
   }
 
   return (

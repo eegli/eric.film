@@ -8,7 +8,8 @@ import { useQuery } from '@apollo/client';
 const StillCategory: React.FC = () => {
   const { loading, error, data } = useQuery<ImageData>(IMGS_PORTFOLIO);
 
-  if (error) return <ErrorMessage>Error loading images :(</ErrorMessage>;
+  if (error)
+    return <ErrorMessage>Failed to load images from server</ErrorMessage>;
   if (loading) {
     return <CustomSpinner />;
   }

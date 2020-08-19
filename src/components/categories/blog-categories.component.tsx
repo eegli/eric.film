@@ -23,8 +23,8 @@ const BlogCategories: React.FC = () => {
 
   return (
     <>
-      <CategoryContainer blog>
-        <SelectionCardContainer>
+      <CategoryContainer sticky>
+        <SelectionCardContainer sticky>
           <Link href={`${slug}${B.BLOG_ALL}`} shallow passHref>
             <CardContainer active={activeUrl === `${slug}${B.BLOG_ALL}`}>
               {B.BLOG_ALL}
