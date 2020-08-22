@@ -18,7 +18,6 @@
     }
   },
   "rules": {
-    // Because we're using Next.js, React is imported by Webpack
     "react/react-in-jsx-scope": 0,
     "react/display-name": 0,
     "react/prop-types": 0,

@@ -31,11 +31,6 @@ const ResumeComponent: React.FC = () => {
                 Bachelor of Arts, Media and Communication Science. University of
                 Zurich
               </p>
-              <span>since 2018</span>
-              <p>
-                Various courses on Udemy: Javascript, Typescript, React.js,
-                React native, HTML, CSS
-              </p>
             </div>
             <span>WORK</span>
             <div>
