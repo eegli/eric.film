@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/eegli/eric.film">
-    <img src="https://img-og.eric.film/public/github_logo.png" alt="Logo" height="80">
+    <img src="https://img-og.eric.film/public/github_readme_logo.png" alt="Logo" height="80">
   </a>
   <h3 align="center">portfolio | blog | @eegli</h3>
    <p align="center">
