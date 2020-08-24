@@ -28,14 +28,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Nginx proxy to bypass adblockers for Google Analytics
 - Add more tests 👻
 
-## Known Bugs
-
-> Safari iOS
-
-Crashes on pages with `next/link` and `getStaticProps`. It's kinda hard to debug since it only happens when deployed to production with Vercel. Turns out this error is an open bug in `Next.js`. [Link to issue](https://github.com/vercel/next.js/issues/11608).
-
-- Workaround: Pages depending on external data use `getServerSideProps` instead of `getStaticProps`.
-
 ## FAQ
 
 > Your Google Analytics tracking id, Sentry DSN and GraphQL endpoint are all public. Would it make sense to put them into `env.local`?
