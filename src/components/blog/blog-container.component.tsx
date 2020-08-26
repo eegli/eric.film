@@ -38,6 +38,7 @@ const BlogContainer: React.FC = () => {
     const image = post.previewImage
       ? post.previewImage.url
       : SEO_OG_FALLBACK.url;
+
     return (
       <>
         <Head>
@@ -55,7 +56,7 @@ const BlogContainer: React.FC = () => {
             key={`blogLd-JSON-${post.id}`}
             type='application/ld+json'
             dangerouslySetInnerHTML={{
-              __html: JSON.parse(makeBlogSchema(post)),
+              __html: makeBlogSchema(post),
             }}
           />
         </Head>

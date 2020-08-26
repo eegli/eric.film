@@ -7,7 +7,7 @@
 import { BlogPostContent } from '@/components/types';
 import { BLOG_PREVIEW_IMG_FALLBACK } from '@/src/config';
 
-export const makeBlogSchema = (post: BlogPostContent): string => {
+export const makeBlogSchema = (post: BlogPostContent): any => {
   const image = post.previewImage
     ? post.previewImage.url
     : BLOG_PREVIEW_IMG_FALLBACK.url;
