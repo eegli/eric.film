@@ -52,10 +52,10 @@ const BlogContainer: React.FC = () => {
           <meta name='twitter:description' content={metaExcerpt} />
           <meta name='twitter:image' content={image} />
           <script
-            key={`blogJSON-${post.id}`}
+            key={`blogLd-JSON-${post.id}`}
             type='application/ld+json'
             dangerouslySetInnerHTML={{
-              __html: makeBlogSchema(post),
+              __html: JSON.parse(makeBlogSchema(post)),
             }}
           />
         </Head>
