@@ -6,7 +6,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { useApollo } from '../lib/apolloClient';
 import * as gtag from '../lib/gtag';

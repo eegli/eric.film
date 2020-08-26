@@ -1,5 +1,5 @@
 import Spinner from '@/components/custom-spinner/custom-spinner.component';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   IframeWrapper,
   MovingCategoryContainer,
