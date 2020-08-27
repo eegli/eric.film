@@ -3,7 +3,7 @@ import ErrorMessage from '@/components/error-message/error-message.component';
 import { BlogPostData } from '@/components/types';
 import { SEO_OG_FALLBACK } from '@/src/config';
 import { trimExcerptForMeta } from '@/src/utils/metaExcerpt';
-import { makeBlogSchema } from '@/src/utils/schema';
+import { makeBlogSchemaForHead } from '@/src/utils/schema';
 import { useQuery } from '@apollo/client';
 import { DiscussionEmbed } from 'disqus-react';
 import Head from 'next/head';
@@ -57,7 +57,7 @@ const BlogContainer: React.FC = () => {
             key={`blogLd-JSON-${post.id}`}
             type='application/ld+json'
             dangerouslySetInnerHTML={{
-              __html: makeBlogSchema(post),
+              __html: makeBlogSchemaForHead(post),
             }}
           />
         </Head>

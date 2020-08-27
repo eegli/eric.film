@@ -5,15 +5,27 @@
 // but adding 1mb overhead for one file is not worth it.
 
 import { BlogPostContent } from '@/components/types';
-import { BLOG_PREVIEW_IMG_FALLBACK } from '@/src/config';
+import { BLOG_PREVIEW_IMG_FALLBACK, SCHEMA_PUBLISHER_LOGO } from '@/src/config';
 
-export const makeBlogSchema = (post: BlogPostContent): any => {
+export const makeBlogSchemaForHead = (post: BlogPostContent): string => {
   const image = post.previewImage
     ? post.previewImage.url
     : BLOG_PREVIEW_IMG_FALLBACK.url;
   return JSON.stringify({
     '@context': 'http://schema.org',
     '@type': 'BlogPosting',
+    author: {
+      '@type': 'Person',
+      name: 'Eric Egli',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'eric.film',
+      logo: {
+        '@type': 'ImageObject',
+        url: SCHEMA_PUBLISHER_LOGO.url,
+      },
+    },
     datePublished: post.createdAt,
     dateModified: post.updatedAt,
     headline: post.title,

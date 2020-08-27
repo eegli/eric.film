@@ -68,4 +68,7 @@ module.exports = {
   BLOG_PREVIEW_IMG_FALLBACK: {
     url: `${basePath}/fallback.jpg`,
   },
+  SCHEMA_PUBLISHER_LOGO: {
+    url: `${basePath}/schema_logo.png`,
+  },
 };
