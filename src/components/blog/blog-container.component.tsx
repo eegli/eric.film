@@ -52,6 +52,7 @@ const BlogContainer: React.FC = () => {
           <meta name='twitter:title' content={post.title} />
           <meta name='twitter:description' content={metaExcerpt} />
           <meta name='twitter:image' content={image} />
+          <link rel='stylesheet' href='https://use.typekit.net/mvq8gdp.css' />
           <script
             key={`blogLd-JSON-${post.id}`}
             type='application/ld+json'

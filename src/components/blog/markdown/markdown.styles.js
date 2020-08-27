@@ -4,6 +4,9 @@ import styled from 'styled-components';
 const contentPadding = '1rem';
 
 export const StyledMD = styled(ReactMarkdown)`
+  font-family: droid-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   margin-top: 1rem;
   background-color: ${({ theme }) => theme.colors.bgSecondary};
   line-height: 1.8rem;
@@ -48,7 +51,7 @@ export const StyledMD = styled(ReactMarkdown)`
     & > p {
       display: inline;
       color: ${({ theme }) => theme.colors.textSecondary};
-      font-style: italic;
+      /* font-style: italic; */
     }
     &:before {
       color: #ccc;
