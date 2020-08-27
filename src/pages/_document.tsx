@@ -38,7 +38,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang='en' prefix='og: https://ogp.me/ns#'>
         <Head>
-          <link rel='stylesheet' href='https://use.typekit.net/mvq8gdp.css' />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
