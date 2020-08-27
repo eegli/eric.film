@@ -1,9 +1,14 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const Global = createGlobalStyle`
+@font-face {
+  font-family: 'Droid Sans';
+  src: url('/static/fonts/droid-sans/DroidSans-webfont.woff') format('woff'),
+       url('/static/fonts/droid-sans/DroidSans-webfont.ttf') format('truetype');
+  }
+
 
   html {
-
     height: 100%;
   }
 

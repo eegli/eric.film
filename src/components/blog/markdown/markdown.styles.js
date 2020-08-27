@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const contentPadding = '1rem';
 
 export const StyledMD = styled(ReactMarkdown)`
-  font-family: droid-sans, sans-serif;
+  font-family: 'Droid Sans', sans-serif;
   font-weight: 400;
   font-style: normal;
   margin-top: 1rem;
