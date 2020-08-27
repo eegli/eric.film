@@ -26,11 +26,13 @@ export const BlogPostHeader = styled.div`
 `;
 
 export const BlogPostTimes = styled.div`
-  white-space: nowrap;
+  max-width: 100%;
+  flex-wrap: wrap;
   display: flex;
   color: ${({ theme }) => theme.colors.pink};
   & > div {
     display: flex;
+    flex-grow: 1;
     align-items: center;
     &:first-child {
       margin-right: 1rem;
