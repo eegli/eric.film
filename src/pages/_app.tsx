@@ -23,8 +23,14 @@ interface Props extends AppProps {
 }
 
 const App: React.FC<Props> = ({ Component, pageProps, err }) => {
+  // Effect to load font
   useEffect(() => {
     Fonts();
+  }, []);
+
+  // Handle route change and GA events, they are tied together
+  // Skip effect when Router
+  useEffect(() => {
     const handleRouteChangeStart = () => {
       NProgress.start();
     };
@@ -40,7 +46,7 @@ const App: React.FC<Props> = ({ Component, pageProps, err }) => {
       Router.events.off('routeChangeStart', handleRouteChangeStart);
       Router.events.off('routeChangeComplete', handleRouteChangeComplete);
     };
-  }, []);
+  });
 
   const apolloClient = useApollo(pageProps.initialApolloState);
 
