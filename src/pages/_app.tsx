@@ -4,7 +4,7 @@ import { ApolloProvider } from '@apollo/client';
 import * as Sentry from '@sentry/node';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import Router from 'next/router';
+import { useRouter } from 'next/router';
 import NProgress from 'nprogress';
 import { useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
@@ -23,13 +23,14 @@ interface Props extends AppProps {
 }
 
 const App: React.FC<Props> = ({ Component, pageProps, err }) => {
+  const router = useRouter();
+
   // Effect to load font
   useEffect(() => {
     Fonts();
   }, [Fonts]);
 
   // Handle route change and GA events, they are tied together
-  // TODO use {useRouter}
   useEffect(() => {
     const handleRouteChangeStart = () => {
       NProgress.start();
@@ -39,12 +40,12 @@ const App: React.FC<Props> = ({ Component, pageProps, err }) => {
       NProgress.done();
     };
 
-    Router.events.on('routeChangeStart', handleRouteChangeStart);
-    Router.events.on('routeChangeComplete', handleRouteChangeComplete);
+    router.events.on('routeChangeStart', handleRouteChangeStart);
+    router.events.on('routeChangeComplete', handleRouteChangeComplete);
 
     return () => {
-      Router.events.off('routeChangeStart', handleRouteChangeStart);
-      Router.events.off('routeChangeComplete', handleRouteChangeComplete);
+      router.events.off('routeChangeStart', handleRouteChangeStart);
+      router.events.off('routeChangeComplete', handleRouteChangeComplete);
     };
   }, []);
 

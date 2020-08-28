@@ -6,9 +6,14 @@ import Gallery from '@/components/gallery/gallery.component';
 import { ImageData } from '@/components/types';
 import { DescriptionContainer, Sh1, Sh2 } from '@/shared/headings.styles';
 import { useQuery } from '@apollo/client';
+import React from 'react';
 import { LandingContentContainer } from './landing-content.styles';
 
-const LandingContent: React.FC = ({ children }) => {
+type Props = {
+  children?: React.ReactNode;
+};
+
+const LandingContent = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
   const { loading, error, data } = useQuery<ImageData>(IMGS_HOME);
 
   if (error) return <ErrorMessage>Error loading images :(</ErrorMessage>;
@@ -23,10 +28,8 @@ const LandingContent: React.FC = ({ children }) => {
     const images = data.imgCollections[0];
     return (
       <>
-        <LandingContentContainer>
-          {children}
+        <LandingContentContainer ref={ref}>
           <Sh1 landing>eric.egli</Sh1>
-
           <DescriptionContainer>
             <Sh2>
               film & photography <br />x <br />
@@ -41,6 +44,6 @@ const LandingContent: React.FC = ({ children }) => {
   }
 
   return <div />;
-};
+});
 
 export default LandingContent;

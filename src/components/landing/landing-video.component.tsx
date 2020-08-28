@@ -1,3 +1,4 @@
+import { RefObject } from 'react';
 import { FaAngleDown } from 'react-icons/fa';
 import {
   ArrowDown,
@@ -6,14 +7,15 @@ import {
   StyledVideo,
 } from './landing-video.styles';
 
-const LandingVideo: React.FC = () => {
-  // TODO make this more elegant pls
+type LandingProps = {
+  contentRef: RefObject<HTMLDivElement>;
+};
+
+const LandingVideo: React.FC<LandingProps> = ({ contentRef }) => {
   const scrollToContent = (): void => {
-    window.scrollBy({
-      top: window.innerHeight,
-      left: 0,
-      behavior: 'smooth',
-    });
+    if (contentRef?.current) {
+      contentRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (

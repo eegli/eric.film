@@ -2,11 +2,13 @@ import { IMGS_HOME } from '@/api/queries';
 import { SEO_INDEX_META as meta } from '@/src/config';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
+import React, { useRef } from 'react';
 import LandingContent from '../components/landing/landing-content.component';
 import LandingVideo from '../components/landing/landing-video.component';
 import { initializeApollo } from '../lib/apolloClient';
 
 const IndexPage: React.FC = () => {
+  const contentRef = useRef<HTMLDivElement>(null);
   return (
     <>
       <Head>
@@ -21,8 +23,8 @@ const IndexPage: React.FC = () => {
         <meta name='twitter:description' content={meta.twitter_description} />
         <meta name='twitter:image' content={meta.twitter_image} />
       </Head>
-      <LandingVideo />
-      <LandingContent />
+      <LandingVideo contentRef={contentRef} />
+      <LandingContent ref={contentRef} />
     </>
   );
 };
