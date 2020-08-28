@@ -28,7 +28,7 @@ const App: React.FC<Props> = ({ Component, pageProps, err }) => {
   // Effect to load font
   useEffect(() => {
     Fonts();
-  }, [Fonts]);
+  }, []);
 
   // Handle route change and GA events, they are tied together
   useEffect(() => {

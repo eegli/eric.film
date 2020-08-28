@@ -1,8 +1,9 @@
-import Router from 'next/router';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect';
 
-export function useActiveUrl(defaultCat: string): string {
+export const useActiveUrl = (defaultCat: string): string => {
+  const router = useRouter();
   const [activeUrl, setActiveUrl] = useState(defaultCat);
 
   useIsomorphicLayoutEffect(() => {
@@ -10,12 +11,12 @@ export function useActiveUrl(defaultCat: string): string {
       setActiveUrl(url);
     };
 
-    Router.events.on('routeChangeComplete', handleRouteChange);
+    router.events.on('routeChangeComplete', handleRouteChange);
 
     // We need to cleanup after router events: https://nextjs.org/docs/api-reference/next/router
     return () => {
-      Router.events.off('routeChangeComplete', handleRouteChange);
+      router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, []);
   return activeUrl;
-}
+};

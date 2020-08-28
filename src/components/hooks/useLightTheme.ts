@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect';
+import { useEffect, useState } from 'react';
 
 export type Theme = 'lightTheme' | 'darkTheme';
 
@@ -16,7 +15,7 @@ export const useLightTheme = (): [Theme, () => void] => {
     theme === 'lightTheme' ? setMode('darkTheme') : setMode('lightTheme');
   };
 
-  useIsomorphicLayoutEffect(() => {
+  useEffect(() => {
     const localTheme = window.localStorage.getItem('theme');
     localTheme && setTheme(localTheme as Theme);
   }, []);
