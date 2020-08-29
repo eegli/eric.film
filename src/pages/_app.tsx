@@ -1,4 +1,5 @@
 import Header from '@/components/header/header.component';
+import { logSpotifyEaserEgg } from '@/src/utils/spotifyEasterEgg';
 import Fonts from '@/styles/fonts';
 import { ApolloProvider } from '@apollo/client';
 import * as Sentry from '@sentry/node';
@@ -27,10 +28,8 @@ const App: React.FC<Props> = ({ Component, pageProps, err }) => {
   const router = useRouter();
 
   // Easter egg spotify page in console
-
   useEffect(() => {
-    // eslint-disable-next-line no-console
-    console.log('Hi');
+    logSpotifyEaserEgg();
   }, []);
 
   // Effect to load font
