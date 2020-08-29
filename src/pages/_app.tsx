@@ -26,8 +26,11 @@ interface Props extends AppProps {
 const App: React.FC<Props> = ({ Component, pageProps, err }) => {
   const router = useRouter();
 
+  // Easter egg spotify page in console
+
   useEffect(() => {
-    console.log('Hi'); // eslint-disable-line no-console
+    // eslint-disable-next-line no-console
+    console.log('Hi');
   }, []);
 
   // Effect to load font
