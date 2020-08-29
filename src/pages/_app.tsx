@@ -25,6 +25,10 @@ interface Props extends AppProps {
 const App: React.FC<Props> = ({ Component, pageProps, err }) => {
   const router = useRouter();
 
+  // useEffect(() => {
+  //   console.log('Hi');
+  // }, []);
+
   // Effect to load font
   useEffect(() => {
     Fonts();
