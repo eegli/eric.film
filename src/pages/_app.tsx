@@ -13,6 +13,7 @@ import * as gtag from '../lib/gtag';
 import { Global } from '../styles/styles';
 import { darkTheme } from '../styles/theme';
 
+// As per the docs: "You should initialize the Sentry React SDK as soon as possible during your application load up, before initializing React"
 Sentry.init({
   enabled: process.env.NODE_ENV === 'production',
   dsn: process.env.SENTRY_DSN,
@@ -25,9 +26,9 @@ interface Props extends AppProps {
 const App: React.FC<Props> = ({ Component, pageProps, err }) => {
   const router = useRouter();
 
-  // useEffect(() => {
-  //   console.log('Hi');
-  // }, []);
+  useEffect(() => {
+    console.log('Hi'); // eslint-disable-line no-console
+  }, []);
 
   // Effect to load font
   useEffect(() => {

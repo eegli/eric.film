@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-ignore: Test files
 const sum = (a: number, b: number): number => a + b;
 
 describe('Test - TS', () => {
