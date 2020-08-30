@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { FaGithub } from 'react-icons/fa';
 import { Container, Hr, SLink } from './footer.styles';
 
 const Footer: React.FC = () => {
@@ -18,6 +19,7 @@ const Footer: React.FC = () => {
         <Link href='/spotify' passHref>
           <SLink>spotify</SLink>
         </Link>
+        <FaGithub />
       </Container>
     </>
   );

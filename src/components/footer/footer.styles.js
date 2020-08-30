@@ -9,13 +9,17 @@ export const Hr = styled.hr`
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
-  width: 100%;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   color: ${({ theme }) => theme.colors.textPrimary};
   font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
   margin-bottom: 1rem;
-  @media screen and (min-width: 769px) {
-    justify-content: flex-start;
+  & > svg {
+    margin-left: auto;
+    color: red;
+  }
+  @media screen and (max-width: 769px) {
+    padding: 0 1rem;
   }
 `;
 
