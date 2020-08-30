@@ -16,10 +16,13 @@ const Footer: React.FC = () => {
         <Link href='/settings#imprint' passHref>
           <SLink>imprint</SLink>
         </Link>
-        <Link href='/spotify' passHref>
-          <SLink>spotify</SLink>
-        </Link>
-        <FaGithub />
+        <a
+          href='https://github.com/eegli/eric.film'
+          style={{ marginLeft: 'auto', padding: '0 1rem' }}
+          rel='noopener noreferrer nofollow'
+          target='_blank'>
+          <FaGithub />
+        </a>
       </Container>
     </>
   );
