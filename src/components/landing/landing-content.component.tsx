@@ -1,6 +1,5 @@
 import { IMGS_HOME } from '@/api/queries';
 import CustomLink from '@/components/custom-link/custom-link.component';
-import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
 import Gallery from '@/components/gallery/gallery.component';
 import { ImageData } from '@/components/types';
@@ -17,12 +16,6 @@ const LandingContent = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
   const { loading, error, data } = useQuery<ImageData>(IMGS_HOME);
 
   if (error) return <ErrorMessage>Error loading images :(</ErrorMessage>;
-  if (loading)
-    return (
-      <div style={{ textAlign: 'center' }}>
-        <CustomSpinner />
-      </div>
-    );
 
   if (data) {
     const images = data.imgCollections[0];

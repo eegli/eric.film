@@ -25,7 +25,7 @@ export const event = ({
   category: string;
   label: string;
   value: number;
-}) => {
+}): void => {
   window.gtag('event', action, {
     event_category: category,
     event_label: label,
