@@ -10,8 +10,8 @@ import {
 } from './resume.styles';
 
 const ResumeComponent: React.FC = () => {
-  const [workEdOpen, setWorkEdOpen] = useState(false);
-  const [toolsTechOpen, setToolsTechOpen] = useState(false);
+  const [workEdOpen, setWorkEdOpen] = useState<boolean>(false);
+  const [toolsTechOpen, setToolsTechOpen] = useState<boolean>(false);
 
   return (
     <Container>

@@ -4,7 +4,7 @@ import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect';
 
 export const useActiveUrl = (defaultCat: string): string => {
   const router = useRouter();
-  const [activeUrl, setActiveUrl] = useState(defaultCat);
+  const [activeUrl, setActiveUrl] = useState<string>(defaultCat);
 
   useIsomorphicLayoutEffect(() => {
     const handleRouteChange = (url: string) => {

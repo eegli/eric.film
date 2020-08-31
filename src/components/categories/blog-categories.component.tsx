@@ -17,7 +17,7 @@ This page handles the routing for all the blog and portfolio categories
 */
 
 const BlogCategories: React.FC = () => {
-  const [sort, setSort] = useState(SortBy.createdAt_DESC);
+  const [sort, setSort] = useState<SortBy>(SortBy.createdAt_DESC);
   const slug = '/blog?cat=';
   const activeUrl = useActiveUrl(B.BLOG_ALL);
 

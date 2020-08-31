@@ -14,7 +14,7 @@ import {
 } from './header.styles';
 
 const Header: React.FC = () => {
-  const [showHeader, setShowHeader] = useState(false);
+  const [showHeader, setShowHeader] = useState<boolean>(false);
 
   const handleClick = (): void => {
     setShowHeader(!showHeader);
