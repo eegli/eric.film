@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
-import { Container, Hr, SLink } from './footer.styles';
+import { Container, GitHubIcon, Hr, SLink } from './footer.styles';
 
 const Footer: React.FC = () => {
   return (
@@ -8,21 +8,20 @@ const Footer: React.FC = () => {
       <Hr />
       <Container>
         <Link href='/settings#privacy' passHref>
-          <SLink>privacy</SLink>
+          <SLink first>privacy</SLink>
         </Link>
         <Link href='/settings#acknowledgements' passHref>
           <SLink>acknowledgements</SLink>
         </Link>
         <Link href='/settings#imprint' passHref>
-          <SLink>imprint</SLink>
+          <SLink last>imprint</SLink>
         </Link>
-        <a
+        <GitHubIcon
           href='https://github.com/eegli/eric.film'
-          style={{ marginLeft: 'auto', padding: '0 1rem' }}
           rel='noopener noreferrer nofollow'
           target='_blank'>
           <FaGithub />
-        </a>
+        </GitHubIcon>
       </Container>
     </>
   );
