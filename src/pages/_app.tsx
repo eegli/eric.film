@@ -54,7 +54,7 @@ const App: React.FC<Props> = ({ Component, pageProps, err }) => {
       router.events.off('routeChangeStart', handleRouteChangeStart);
       router.events.off('routeChangeComplete', handleRouteChangeComplete);
     };
-  }, []);
+  }, [router.events]);
 
   const apolloClient = useApollo(pageProps.initialApolloState);
 

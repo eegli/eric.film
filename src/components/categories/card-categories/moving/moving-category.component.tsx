@@ -7,7 +7,7 @@ import {
 } from './moving-category.styles';
 
 const MovingCategory: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const handleSpinner = (): void => {
     setIsLoading(false);
