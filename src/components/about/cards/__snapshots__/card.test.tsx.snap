@@ -136,6 +136,7 @@ exports[`About renders card component 1`] = `
     }
   }
 >
+   
   <CardComponent>
     <cardstyles__CardHeader>
       <h1
@@ -710,5 +711,6 @@ exports[`About renders card component 1`] = `
       </div>
     </cardstyles__CardContainer>
   </CardComponent>
+   
 </ThemeProvider>
 `;
