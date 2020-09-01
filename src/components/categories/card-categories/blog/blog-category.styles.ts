@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { FaPlus } from 'react-icons/fa';
+import styled from 'styled-components';
 
 export const BlogCategoryContainer = styled.div`
   width: 100%;

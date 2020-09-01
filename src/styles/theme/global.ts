@@ -1,18 +1,18 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
-export const Global = createGlobalStyle`
-@font-face {
-  font-family: 'Droid Sans';
-  src: url('/static/fonts/droid-sans/DroidSans-webfont.woff') format('woff'),
-       url('/static/fonts/droid-sans/DroidSans-webfont.ttf') format('truetype');
+// Here is the place to define global styles!
+
+export const GLOBAL = css`
+  @font-face {
+    font-family: 'Droid Sans';
+    src: url('/static/fonts/droid-sans/DroidSans-webfont.woff') format('woff'),
+      url('/static/fonts/droid-sans/DroidSans-webfont.ttf') format('truetype');
   }
-
 
   html {
     height: 100%;
   }
 
-  /* GLOBALS */
   body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -33,18 +33,19 @@ export const Global = createGlobalStyle`
   }
 
   p {
-    font-size: ${({ theme }) => theme.fontsizes.baseFontSize}
+    font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   }
 
   h1 {
-    font-size: ${({ theme }) => theme.fontsizes.h1FontSize}
+    font-size: ${({ theme }) => theme.fontsizes.h1FontSize};
   }
 
   h2 {
-    font-size: ${({ theme }) => theme.fontsizes.h2FontSize}
+    font-size: ${({ theme }) => theme.fontsizes.h2FontSize};
   }
 
-  p, h2 {
+  p,
+  h2 {
     line-height: 1.7rem;
   }
 
@@ -55,7 +56,6 @@ export const Global = createGlobalStyle`
   code {
     font-family: 'JetBrains Mono', Fallback, sans-serif !important;
   }
-
 
   /* PROGRESS BAR */
   #nprogress {
@@ -78,7 +78,7 @@ export const Global = createGlobalStyle`
     width: 100%;
     height: 2px;
   }
- /* SCROLL BAR */
+  /* SCROLL BAR */
 
   ::-webkit-scrollbar {
     width: 7px;
@@ -112,7 +112,10 @@ export const Global = createGlobalStyle`
   }
   ::-webkit-scrollbar-corner {
     background: transparent;
-}
+  }
+`;
 
-
+// Formatting is not supported for global style sheets, so I'll do it this way
+export const GlobalTheme = createGlobalStyle`
+  ${GLOBAL}
 `;

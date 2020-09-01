@@ -34,7 +34,7 @@ export const BlogPostTitle = styled.h1`
 
 export const BlogPostExcerpt = styled.h2`
   font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
-  font-weight: normal;
+  font-weight: 400;
   color: ${({ theme }) => theme.colors.textPrimary};
 `;
 

@@ -1,4 +1,4 @@
-import { darkTheme } from '@/src/styles/theme';
+import { darkTheme } from '@/styles/theme/theme';
 import { mount } from 'enzyme';
 import { ThemeProvider } from 'styled-components';
 
