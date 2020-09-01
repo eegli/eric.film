@@ -65,9 +65,8 @@ export const ToggleContainer = styled.div`
   }
 `;
 
-export const ToggleTitle = styled.p`
+export const ToggleTitle = styled.h4`
   display: inline;
-
   margin: 0;
-  font-weight: 500;
+  font-weight: 400;
 `;

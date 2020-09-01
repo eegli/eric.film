@@ -44,6 +44,7 @@ exports[`About renders social bar component 1`] = `
     }
   }
 >
+   
   <SocialBar>
     <social-barstyles__Container>
       <div
@@ -184,5 +185,6 @@ exports[`About renders social bar component 1`] = `
       </div>
     </social-barstyles__Container>
   </SocialBar>
+   
 </ThemeProvider>
 `;

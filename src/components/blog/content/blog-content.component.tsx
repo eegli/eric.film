@@ -1,7 +1,7 @@
 import { useLightTheme } from '@/components/hooks/useLightTheme';
 import { BlogPostContent } from '@/components/types';
-import { darkTheme, lightTheme } from '@/src/styles/theme';
 import { dateFormat } from '@/src/utils/dates';
+import { darkTheme, lightTheme } from '@/styles/theme/theme';
 import { FaRegLightbulb } from 'react-icons/fa';
 import { MdAccessTime, MdUpdate } from 'react-icons/md';
 import { ThemeProvider } from 'styled-components';

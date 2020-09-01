@@ -17,10 +17,9 @@ export const IntroContainer = styled.div<Props>`
     margin: 0;
     font-size: ${({ theme, dev }) =>
       dev ? theme.fontsizes.h1FontSize : theme.fontsizes.baseFontSize};
-    text-align: center;
     & > span {
       color: ${({ theme }) => theme.colors.pink};
-      font-weight: bold;
+      font-weight: 600;
     }
   }
 `;

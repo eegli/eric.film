@@ -13,7 +13,7 @@ export const Table = styled.table`
       background-color: ${({ theme }) => theme.colors.bgSecondary};
     }
     &:nth-child(even) {
-      background-color: ${({ theme }) => theme.colors.bgSecondary_3};
+      background-color: ${({ theme }) => theme.colors.bgTertiary};
     }
   }
   & th {

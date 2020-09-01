@@ -2,6 +2,9 @@
 
 exports[`Markdown renders markdown content 1`] = `
 .c0 {
+  font-family: 'Droid Sans',sans-serif;
+  font-weight: 400;
+  font-style: normal;
   margin-top: 1rem;
   background-color: #222222;
   line-height: 1.8rem;
@@ -57,7 +60,6 @@ exports[`Markdown renders markdown content 1`] = `
 .c0 blockquote > p {
   display: inline;
   color: #F1F1F1;
-  font-style: italic;
 }
 
 .c0 blockquote:before {
@@ -95,6 +97,7 @@ exports[`Markdown renders markdown content 1`] = `
     }
   }
 >
+   
   <Markdown
     content="Der Bundesrat plant eine weitere Lockerung der Corona-Massnahmen. 👀 So sollen Veranstaltungen bis 1000 Personen zugelassen werden. Auch die Polizeistunde soll fallen.
 
@@ -4417,5 +4420,6 @@ For this, I use a package called
       </ReactMarkdown>
     </markdownstyles__StyledMD>
   </Markdown>
+   
 </ThemeProvider>
 `;

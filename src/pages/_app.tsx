@@ -1,6 +1,6 @@
 import Header from '@/components/header/header.component';
 import { logSpotifyEaserEgg } from '@/src/utils/spotifyEasterEgg';
-import Fonts from '@/styles/fonts';
+import Fonts from '@/styles/theme/fonts';
 import { ApolloProvider } from '@apollo/client';
 import * as Sentry from '@sentry/node';
 import { AppProps } from 'next/app';
@@ -11,8 +11,8 @@ import { useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { useApollo } from '../lib/apolloClient';
 import * as gtag from '../lib/gtag';
-import { Global } from '../styles/styles';
-import { darkTheme } from '../styles/theme';
+import { GlobalTheme } from '../styles/index';
+import { darkTheme } from '../styles/theme/theme';
 
 // As per the docs: "You should initialize the Sentry React SDK as soon as possible during your application load up, before initializing React"
 Sentry.init({
@@ -68,7 +68,7 @@ const App: React.FC<Props> = ({ Component, pageProps, err }) => {
 
       <ApolloProvider client={apolloClient}>
         <ThemeProvider theme={darkTheme}>
-          <Global />
+          <GlobalTheme />
           <Header />
           <Component {...pageProps} err={err} />
         </ThemeProvider>

@@ -1,7 +1,7 @@
 import NextErrorComponent from 'next/error';
 import * as Sentry from '@sentry/node';
 
-const CustomError = ({ statusCode, hasGetInitialPropsRun, err }) => {
+const Error = ({ statusCode, hasGetInitialPropsRun, err }) => {
   if (!hasGetInitialPropsRun && err) {
     // getInitialProps is not called in case of
     // https://github.com/vercel/next.js/issues/8592. As a workaround, we pass
@@ -12,7 +12,7 @@ const CustomError = ({ statusCode, hasGetInitialPropsRun, err }) => {
   return <NextErrorComponent statusCode={statusCode} />;
 };
 
-CustomError.getInitialProps = async ({ res, err, asPath }) => {
+Error.getInitialProps = async ({ res, err, asPath }) => {
   const errorInitialProps = await NextErrorComponent.getInitialProps({
     res,
     err,
@@ -41,6 +41,7 @@ CustomError.getInitialProps = async ({ res, err, asPath }) => {
   }
   if (err) {
     Sentry.captureException(err);
+    await Sentry.flush(2000);
     return errorInitialProps;
   }
 
@@ -50,8 +51,9 @@ CustomError.getInitialProps = async ({ res, err, asPath }) => {
   Sentry.captureException(
     new Error(`_error.js getInitialProps missing data at path: ${asPath}`),
   );
+  await Sentry.flush(2000);
 
   return errorInitialProps;
 };
 
-export default CustomError;
+export default Error;
