@@ -3,7 +3,7 @@ module.exports = {
   roots: ['<rootDir>/src/'],
 
   // Import 'jest-styled-components';
-  setupFilesAfterEnv: ['<rootDir>/src/tests/setupTests.js'],
+  setupFilesAfterEnv: ['<rootDir>/src/tests/setupTests.ts'],
 
   // Get coverage for all files in root except for styles files
   collectCoverageFrom: ['**/*.{tsx,jsx,ts,js}', '!**/?(*.)+(styles).[jt]s'],
