@@ -22,8 +22,8 @@ export const BlogPostContainer = styled.a`
 `;
 
 export const BlogPreviewImage = styled.img`
-  max-width: 100%;
-  height: 180px;
+  width: 360px;
+  max-height: 180px;
   object-fit: cover;
 `;
 

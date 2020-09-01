@@ -13,11 +13,11 @@ const months = [
   'December',
 ];
 
-export const dateFormat = (_date: string): string => {
-  const date = new Date(_date);
-  const year = date.getFullYear();
-  const month = months[date.getMonth()];
-  const day = date.getDate();
+export const dateFormat = (date: string): string => {
+  const _date = new Date(date);
+  const year = _date.getFullYear();
+  const month = months[_date.getMonth()];
+  const day = _date.getDate();
   // const day = _day < 10 ? `0${_day}` : _day;
   return `${month} ${day}, ${year}`;
 };
