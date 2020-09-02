@@ -1,7 +1,7 @@
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
+import { Blogpost, useSingle_BlogpostQuery } from '@/components/types';
 import { SEO_OG_FALLBACK } from '@/src/config';
-import { useSingle_BlogpostQuery } from '@/src/generated/graphql';
 import { trimExcerptForMeta } from '@/src/utils/metaExcerpt';
 import { makeBlogSchemaForHead } from '@/src/utils/schema';
 import { DiscussionEmbed } from 'disqus-react';
@@ -49,12 +49,11 @@ const BlogContainer: React.FC = () => {
           <meta name='twitter:title' content={post.title} />
           <meta name='twitter:description' content={metaExcerpt} />
           <meta name='twitter:image' content={image} />
-          {/* <link rel='stylesheet' href='https://use.typekit.net/mvq8gdp.css' /> */}
           <script
             key={`blogLd-JSON-${post.id}`}
             type='application/ld+json'
             dangerouslySetInnerHTML={{
-              __html: makeBlogSchemaForHead(post),
+              __html: makeBlogSchemaForHead(post as Blogpost),
             }}
           />
         </Head>

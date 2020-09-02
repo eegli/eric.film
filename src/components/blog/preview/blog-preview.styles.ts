@@ -1,4 +1,4 @@
-import { BlogType } from '@/src/generated/graphql';
+import { BlogType } from '@/components/types';
 import { MdAccessTime, MdLabel } from 'react-icons/md';
 import styled, { css } from 'styled-components';
 
@@ -17,7 +17,7 @@ export const BlogPostContainer = styled.a`
   padding: 1rem;
   margin: 0.5rem;
   background-color: ${({ theme }) => theme.colors.bgSecondary};
-  // border-radius: 0.5rem;
+  border-radius: 0.5rem;
   ${hover}
 `;
 
@@ -46,7 +46,7 @@ export const BlogPostFooter = styled.div`
   color: ${({ theme }) => theme.colors.textPrimary};
 `;
 export const BlogCreatedContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.bgPrimary};
+  /* background-color: ${({ theme }) => theme.colors.bgPrimary}; */
   padding: 0.3rem 0.5rem;
   border-radius: 0.5rem;
   display: flex;

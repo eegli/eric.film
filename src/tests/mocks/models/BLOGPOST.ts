@@ -1,4 +1,4 @@
-import { Blogpost, BlogType } from '@/src/generated/graphql';
+import { Blogpost, BlogType } from '@/components/types';
 import Markdown from './MARKDOWN';
 
 export const BLOGPOST: Partial<Blogpost> = {

@@ -1,4 +1,8 @@
-import { PostVars, PreviewVars, SortBy } from '@/components/types';
+import {
+  All_Blogposts_PreviewQueryVariables,
+  BlogpostOrderByInput,
+  Single_BlogpostQueryVariables,
+} from '@/components/types';
 import gql from 'graphql-tag';
 
 export const ALL_BLOGPOSTS_PREVIEW = gql`
@@ -27,13 +31,13 @@ export const ALL_BLOGPOSTS_PREVIEW = gql`
   }
 `;
 
-// Setting default sort
+// We fetch the 12 latest posts first
 export const allBlogPostsPreviewVars = (
-  orderBy: SortBy = SortBy.createdAt_DESC,
-): PreviewVars => ({
+  orderBy: BlogpostOrderByInput = BlogpostOrderByInput.CreatedAtDesc,
+): All_Blogposts_PreviewQueryVariables => ({
   skip: 0,
   first: 12,
-  orderBy: orderBy,
+  orderBy,
 });
 
 export const SINGLE_BLOGPOST = gql`
@@ -54,8 +58,10 @@ export const SINGLE_BLOGPOST = gql`
     }
   }
 `;
-
-export const singleBlogPostVars = (slug: string | string[]): PostVars => {
+// TODO Document
+export const singleBlogPostVars = (
+  slug: string | string[],
+): Single_BlogpostQueryVariables => {
   if (Array.isArray(slug))
     return {
       slug: slug[0],
