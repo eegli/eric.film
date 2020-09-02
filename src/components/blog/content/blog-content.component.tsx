@@ -1,5 +1,5 @@
 import { useLightTheme } from '@/components/hooks/useLightTheme';
-import { BlogPostContent } from '@/components/types';
+import { Blogpost } from '@/src/generated/graphql';
 import { dateFormat } from '@/src/utils/dates';
 import { darkTheme, lightTheme } from '@/styles/theme/theme';
 import { FaRegLightbulb } from 'react-icons/fa';
@@ -16,7 +16,12 @@ import {
   ThemeToggleButton,
 } from './blog-content.styles';
 
-const BlogContent: React.FC<BlogPostContent> = ({
+type Props = Pick<
+  Blogpost,
+  'title' | 'content' | 'ytvideo' | 'createdAt' | 'updatedAt'
+>;
+
+const BlogContent: React.FC<Props> = ({
   title,
   content,
   ytvideo,

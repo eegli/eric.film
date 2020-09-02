@@ -1,11 +1,11 @@
 // The progressive image library needs a html element
 import ErrorMessage from '@/components/error-message/error-message.component';
-import { ImageUrl, ImageUrlArray } from '@/components/types';
+import { Asset } from '@/src/generated/graphql';
 import ProgressiveImage from 'react-progressive-graceful-image';
 import { GalleryContainer, Image } from './gallery.styles';
 
 type ImageProps = {
-  images: ImageUrlArray;
+  images: Array<Pick<Asset, 'url'>>;
   index: boolean;
 };
 
@@ -17,7 +17,7 @@ const Gallery: React.FC<ImageProps> = ({ images, index }) => {
   return (
     <>
       <GalleryContainer index={index}>
-        {images.map((img: ImageUrl) => (
+        {images.map((img: Pick<Asset, 'url'>) => (
           <div key={img.url}>
             <ProgressiveImage
               src={img.url}

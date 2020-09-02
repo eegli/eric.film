@@ -4,10 +4,10 @@
 // https://www.npmjs.com/package/schema-dts
 // but adding 1mb overhead for one file is not worth it.
 
-import { BlogPostContent } from '@/components/types';
 import { BLOG_PREVIEW_IMG_FALLBACK, SCHEMA_PUBLISHER_LOGO } from '@/src/config';
 
-export const makeBlogSchemaForHead = (post: BlogPostContent): string => {
+// TODO Fix this
+export const makeBlogSchemaForHead = (post: any): string => {
   const image = post.previewImage
     ? post.previewImage.url
     : BLOG_PREVIEW_IMG_FALLBACK.url;
