@@ -4,7 +4,9 @@ import Image from '../custom-renders/blog-image.component';
 import Link from '../custom-renders/blog-link.component';
 import { StyledMD } from './markdown.styles';
 
-const Markdown: React.FC<BlogPostContent> = ({ content }) => {
+type Props = Pick<BlogPostContent, 'content'>;
+
+const Markdown: React.FC<Props> = ({ content }) => {
   return (
     <StyledMD
       renderers={{
