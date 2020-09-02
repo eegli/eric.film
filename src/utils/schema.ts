@@ -5,9 +5,9 @@
 // but adding 1mb overhead for one file is not worth it.
 
 import { BLOG_PREVIEW_IMG_FALLBACK, SCHEMA_PUBLISHER_LOGO } from '@/src/config';
+import { Blogpost } from '@/src/generated/graphql';
 
-// TODO Fix this
-export const makeBlogSchemaForHead = (post: any): string => {
+export const makeBlogSchemaForHead = (post: Blogpost): string => {
   const image = post.previewImage
     ? post.previewImage.url
     : BLOG_PREVIEW_IMG_FALLBACK.url;

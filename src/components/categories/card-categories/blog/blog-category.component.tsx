@@ -2,6 +2,7 @@ import BlogPreview from '@/components/blog/preview/blog-preview.component';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
 import { BlogTypeAll } from '@/components/types';
+import { allBlogPostsPreviewVars } from '@/src/api/queries';
 import {
   Blogpost,
   BlogpostOrderByInput,
@@ -28,11 +29,7 @@ const BlogCategory: React.FC<Props> = ({ filter, sortBy }) => {
     fetchMore,
     networkStatus,
   } = useAll_Blogposts_PreviewQuery({
-    variables: {
-      skip: 0,
-      first: 12,
-      orderBy: sortBy,
-    },
+    variables: allBlogPostsPreviewVars(),
     // Setting this value to true will make the component rerender when
     // the "networkStatus" changes, so we are able to know if it is fetching
     // more data
