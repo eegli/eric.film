@@ -31,8 +31,7 @@ export const ALL_BLOGPOSTS_PREVIEW = gql`
   }
 `;
 
-// Setting default sort
-// We fetch 12 posts at once
+// We fetch the 12 latest posts first
 export const allBlogPostsPreviewVars = (
   orderBy: BlogpostOrderByInput = BlogpostOrderByInput.CreatedAtDesc,
 ): All_Blogposts_PreviewQueryVariables => ({
@@ -59,7 +58,7 @@ export const SINGLE_BLOGPOST = gql`
     }
   }
 `;
-
+// TODO Document
 export const singleBlogPostVars = (
   slug: string | string[],
 ): Single_BlogpostQueryVariables => {

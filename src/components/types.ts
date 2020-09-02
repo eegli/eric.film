@@ -1,34 +1,12 @@
-import { BlogpostOrderByInput } from '@/src/generated/graphql';
-// IMAGES
-export interface ImageUrl {
-  url: string;
-}
-
-export type ImageUrlArray = Array<ImageUrl>;
-
-export interface ImageCollection {
-  collection: ImageUrlArray;
-  id: string;
-  imageType: 'home' | 'portfolio';
-}
-export interface ImageData {
-  imgCollections: Array<ImageCollection>;
-}
-
-// QUERIES
-export interface PreviewVars {
-  skip: number;
-  first: number;
-  orderBy: BlogpostOrderByInput;
-}
-
-// NEW Utility
-// Constructs a type with common properties from two types
-export type Common<A, B> = {
-  [P in keyof A & keyof B]: A[P] | B[P];
-};
-
-// NEW
+// In GrapCMS, each blogpost falls into a distinct category. "all" is not one of them - "all" is the sum of all posts and part of a union type to display all blog posts regardless of their category
 export enum BlogTypeAll {
   All = 'all',
+}
+
+// The portfolio categories, unlike the blog categories, are not defined in GraphCMS as there is no content type for it. These categories don't depend on external data and their types are defined here
+export enum PortfolioCategories {
+  PORTFOLIO_STILL = 'still',
+  PORTFOLIO_MOVING = 'moving',
+  PORTFOLIO_CLIENTS = 'clients',
+  PORTFOLIO_DEV = 'dev',
 }

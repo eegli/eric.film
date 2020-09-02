@@ -4,23 +4,23 @@ import { useRouter } from 'next/router';
 import { BlogCategory } from '../card-categories/index';
 
 type Props = {
-  sortBy: BlogpostOrderByInput;
+  orderBy: BlogpostOrderByInput;
 };
 
-const BlogSwitch: React.FC<Props> = ({ sortBy }) => {
+const BlogSwitch: React.FC<Props> = ({ orderBy }) => {
   const router = useRouter();
   switch (router.query.cat) {
     case BlogTypeAll.All:
-      return <BlogCategory sortBy={sortBy} />;
+      return <BlogCategory orderBy={orderBy} />;
     case BlogType.Tech:
-      return <BlogCategory filter={BlogType.Tech} sortBy={sortBy} />;
+      return <BlogCategory filter={BlogType.Tech} orderBy={orderBy} />;
     case BlogType.Votw:
-      return <BlogCategory filter={BlogType.Votw} sortBy={sortBy} />;
+      return <BlogCategory filter={BlogType.Votw} orderBy={orderBy} />;
     case BlogType.Varia:
-      return <BlogCategory filter={BlogType.Varia} sortBy={sortBy} />;
+      return <BlogCategory filter={BlogType.Varia} orderBy={orderBy} />;
 
     default:
-      return <BlogCategory sortBy={sortBy} />;
+      return <BlogCategory orderBy={orderBy} />;
   }
 };
 

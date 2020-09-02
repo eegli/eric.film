@@ -18,8 +18,8 @@ This page handles the routing for all the blog and portfolio categories
 */
 
 const BlogCategories: React.FC = () => {
-  const [sort, setSort] = useState<BlogpostOrderByInput>(
-    BlogpostOrderByInput.ContentAsc,
+  const [orderBy, setOrderBy] = useState<BlogpostOrderByInput>(
+    BlogpostOrderByInput.CreatedAtDesc,
   );
   const slug = '/blog?cat=';
   const activeUrl = useActiveUrl(BlogTypeAll.All);
@@ -29,7 +29,7 @@ const BlogCategories: React.FC = () => {
       <CategoryContainer sticky>
         <SelectionCardContainer sticky>
           <Link href={`${slug}${BlogTypeAll.All}`} shallow passHref>
-            <CardContainer active={activeUrl === `${slug}all`}>
+            <CardContainer active={activeUrl === `${slug}${BlogTypeAll.All}`}>
               {BlogTypeAll.All}
             </CardContainer>
           </Link>
@@ -50,11 +50,11 @@ const BlogCategories: React.FC = () => {
           </Link>
         </SelectionCardContainer>
         <SortButtonContainer>
-          {sort === BlogpostOrderByInput.ContentAsc ? (
+          {orderBy === BlogpostOrderByInput.CreatedAtDesc ? (
             <>
               <FaSort />
               <SortButton
-                onClick={() => setSort(BlogpostOrderByInput.ContentDesc)}>
+                onClick={() => setOrderBy(BlogpostOrderByInput.CreatedAtAsc)}>
                 show oldest
               </SortButton>
             </>
@@ -62,14 +62,14 @@ const BlogCategories: React.FC = () => {
             <>
               <FaSort />
               <SortButton
-                onClick={() => setSort(BlogpostOrderByInput.ContentDesc)}>
+                onClick={() => setOrderBy(BlogpostOrderByInput.CreatedAtDesc)}>
                 show latest
               </SortButton>
             </>
           )}
         </SortButtonContainer>
       </CategoryContainer>
-      <BlogSwitch sortBy={sort} />
+      <BlogSwitch orderBy={orderBy} />
     </>
   );
 };
