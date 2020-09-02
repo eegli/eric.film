@@ -26,16 +26,16 @@ const BlogPreview: React.FC<BlogPostPreview> = ({
   previewImage,
   createdAt,
 }) => {
-  // let trimmedExc =
-  //   excerpt.length > 120 ? excerpt.substring(0, 120).concat('...') : excerpt;
-
-  const image = previewImage ? previewImage.url : BLOG_PREVIEW_IMG_FALLBACK.url;
+  // If, for some reason, there is no preview image, fall back to a generic image
+  const _prevImage: string = previewImage
+    ? previewImage.url
+    : BLOG_PREVIEW_IMG_FALLBACK.url;
 
   return (
     <Link href='/blog/[post_slug]' as={`/blog/${slug}`} passHref>
       <BlogPostContainer>
         <BlogPostTitle>{title}</BlogPostTitle>
-        <ProgressiveImage src={image} placeholder=''>
+        <ProgressiveImage src={_prevImage} placeholder=''>
           {(src: string, loading: boolean) => {
             return loading ? (
               <Spinner />

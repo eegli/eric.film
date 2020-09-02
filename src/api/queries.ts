@@ -13,7 +13,6 @@ export const ALL_BLOGPOSTS_PREVIEW = gql`
       slug
       title
       type
-      ytvideo
       updatedAt
       createdAt
       previewImage {

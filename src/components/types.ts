@@ -19,22 +19,22 @@ export type Category = BlogCategories | PortfolioCategories;
 // BLOGPOST SCHEMA
 export interface BlogPostPreview {
   excerpt: string;
-  id: string;
   slug: string;
   title: string;
   type: BlogCategories;
-  updatedAt: string;
   createdAt: string;
   previewImage?: { url: string };
 }
 
 export interface BlogPostContent extends BlogPostPreview {
+  id: string;
   content: string;
+  updatedAt: string;
   ytvideo?: string;
 }
 
 export interface BlogPostPreviewData {
-  blogposts: BlogPostPreview[];
+  blogposts: Array<BlogPostPreview>;
   blogpostsConnection: {
     aggregate: {
       count: number;
@@ -52,17 +52,19 @@ export enum SortBy {
 }
 
 // IMAGES
-export type ImageUrl = {
+export interface ImageUrl {
   url: string;
-};
+}
+
+export type ImageUrlArray = Array<ImageUrl>;
 
 export interface ImageCollection {
-  collection: ImageUrl[];
+  collection: ImageUrlArray;
   id: string;
   imageType: 'home' | 'portfolio';
 }
 export interface ImageData {
-  imgCollections: ImageCollection[];
+  imgCollections: Array<ImageCollection>;
 }
 
 // QUERIES
@@ -72,6 +74,4 @@ export interface PreviewVars {
   orderBy: SortBy;
 }
 
-export interface PostVars {
-  slug: string;
-}
+export type PostVars = Pick<BlogPostPreview, 'slug'>;

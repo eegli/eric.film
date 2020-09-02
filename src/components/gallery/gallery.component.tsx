@@ -1,11 +1,11 @@
 // The progressive image library needs a html element
 import ErrorMessage from '@/components/error-message/error-message.component';
-import { ImageUrl } from '@/components/types';
+import { ImageUrl, ImageUrlArray } from '@/components/types';
 import ProgressiveImage from 'react-progressive-graceful-image';
 import { GalleryContainer, Image } from './gallery.styles';
 
 type ImageProps = {
-  images: ImageUrl[];
+  images: ImageUrlArray;
   index: boolean;
 };
 
