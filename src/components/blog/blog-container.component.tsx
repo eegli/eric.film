@@ -69,7 +69,7 @@ const BlogContainer: React.FC = () => {
               shortname='eric-film'
               config={{
                 url: `https://eric.film/blog/${post.slug}`,
-                identifier: String(post.id),
+                identifier: post.id,
                 title: post.title,
               }}
             />

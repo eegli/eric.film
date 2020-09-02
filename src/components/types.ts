@@ -1,5 +1,3 @@
-import { Blogpost, BlogType } from '@/src/generated/graphql';
-
 // BLOG CATEGORIES
 // Same enums as in Graphcms
 export enum BlogCategories {
@@ -19,14 +17,14 @@ export enum PortfolioCategories {
 export type Category = BlogCategories | PortfolioCategories;
 
 // BLOGPOST SCHEMA
-// export interface BlogPostPreview {
-//   excerpt: string;
-//   slug: string;
-//   title: string;
-//   type: BlogCategories;
-//   createdAt: string;
-//   previewImage?: { url: string };
-// }
+export interface BlogPostPreview {
+  excerpt: string;
+  slug: string;
+  title: string;
+  type: BlogCategories;
+  createdAt: string;
+  previewImage?: { url: string };
+}
 
 export interface BlogPostContent extends BlogPostPreview {
   id: string;
@@ -82,10 +80,3 @@ export type PostVars = Pick<BlogPostPreview, 'slug'>;
 export enum BlogTypeAll {
   All = 'all',
 }
-
-export type AnyBlogPostType = BlogTypeAll | BlogType;
-
-export type BlogPostPreview = Pick<
-  Blogpost,
-  'title' | 'excerpt' | 'slug' | 'type' | 'previewImage' | 'createdAt'
->;
