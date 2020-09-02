@@ -71,7 +71,7 @@ const BlogCategory: React.FC<Props> = ({ filter, sortBy }) => {
       <>
         <BlogCategoryContainer>
           {posts.map((post: BlogPostPreview) => (
-            <BlogPreview key={post.id} {...post} />
+            <BlogPreview key={post.slug} {...post} />
           ))}
         </BlogCategoryContainer>
         {areMorePosts && (

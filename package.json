@@ -15,7 +15,8 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "test:improve": "jest --watchAll --coverage",
-    "fix:everything": "rm -rf node_modules .yarnclean && yarn"
+    "fix:everything": "rm -rf node_modules .yarnclean && yarn",
+    "generate": "graphql-codegen --config codegen.yml"
   },
   "husky": {
     "hooks": {
@@ -51,6 +52,8 @@
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "1.17.8",
+    "@graphql-codegen/typescript": "^1.17.9",
     "@types/enzyme": "^3.10.5",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^26.0.4",
