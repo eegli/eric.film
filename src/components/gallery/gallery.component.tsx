@@ -1,6 +1,6 @@
 // The progressive image library needs a html element
 import ErrorMessage from '@/components/error-message/error-message.component';
-import { Asset } from '@/src/generated/graphql';
+import { Asset } from '@/components/types';
 import ProgressiveImage from 'react-progressive-graceful-image';
 import { GalleryContainer, Image } from './gallery.styles';
 

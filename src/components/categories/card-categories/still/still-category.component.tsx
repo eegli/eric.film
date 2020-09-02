@@ -1,7 +1,7 @@
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
 import Gallery from '@/components/gallery/gallery.component';
-import { useImgs_PortfolioQuery } from '@/src/generated/graphql';
+import { useImgs_PortfolioQuery } from '@/components/types';
 
 const StillCategory: React.FC = () => {
   const { loading, error, data } = useImgs_PortfolioQuery();

@@ -4,8 +4,8 @@
 // https://www.npmjs.com/package/schema-dts
 // but adding 1mb overhead for one file is not worth it.
 
+import { Blogpost } from '@/components/types';
 import { BLOG_PREVIEW_IMG_FALLBACK, SCHEMA_PUBLISHER_LOGO } from '@/src/config';
-import { Blogpost } from '@/src/generated/graphql';
 
 export const makeBlogSchemaForHead = (post: Blogpost): string => {
   const image = post.previewImage

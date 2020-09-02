@@ -1,7 +1,7 @@
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
+import { Blogpost, useSingle_BlogpostQuery } from '@/components/types';
 import { SEO_OG_FALLBACK } from '@/src/config';
-import { Blogpost, useSingle_BlogpostQuery } from '@/src/generated/graphql';
 import { trimExcerptForMeta } from '@/src/utils/metaExcerpt';
 import { makeBlogSchemaForHead } from '@/src/utils/schema';
 import { DiscussionEmbed } from 'disqus-react';

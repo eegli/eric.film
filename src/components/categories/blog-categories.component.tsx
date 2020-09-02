@@ -1,5 +1,8 @@
-import { BlogTypeAll } from '@/components/types';
-import { BlogpostOrderByInput, BlogType } from '@/src/generated/graphql';
+import {
+  BlogpostOrderByInput,
+  BlogType,
+  BlogTypeAll,
+} from '@/components/types';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaSort } from 'react-icons/fa';

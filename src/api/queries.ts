@@ -2,7 +2,7 @@ import {
   All_Blogposts_PreviewQueryVariables,
   BlogpostOrderByInput,
   Single_BlogpostQueryVariables,
-} from '@/src/generated/graphql';
+} from '@/components/types';
 import gql from 'graphql-tag';
 
 export const ALL_BLOGPOSTS_PREVIEW = gql`

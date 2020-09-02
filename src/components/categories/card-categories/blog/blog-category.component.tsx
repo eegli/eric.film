@@ -1,13 +1,13 @@
 import BlogPreview from '@/components/blog/preview/blog-preview.component';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
-import { allBlogPostsPreviewVars } from '@/src/api/queries';
 import {
   Blogpost,
   BlogpostOrderByInput,
   BlogType,
   useAll_Blogposts_PreviewQuery,
-} from '@/src/generated/graphql';
+} from '@/components/types';
+import { allBlogPostsPreviewVars } from '@/src/api/queries';
 import { NetworkStatus } from '@apollo/client';
 import {
   BlogCategoryContainer,

@@ -1,8 +1,8 @@
 import CustomLink from '@/components/custom-link/custom-link.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
 import Gallery from '@/components/gallery/gallery.component';
+import { useImgs_HomeQuery } from '@/components/types';
 import { DescriptionContainer, Sh1, Sh2 } from '@/shared/headings.styles';
-import { useImgs_HomeQuery } from '@/src/generated/graphql';
 import React from 'react';
 import { LandingContentContainer } from './landing-content.styles';
 

@@ -1,5 +1,8 @@
-import { BlogTypeAll } from '@/components/types';
-import { BlogpostOrderByInput, BlogType } from '@/src/generated/graphql';
+import {
+  BlogpostOrderByInput,
+  BlogType,
+  BlogTypeAll,
+} from '@/components/types';
 import { useRouter } from 'next/router';
 import { BlogCategory } from '../card-categories/index';
 
