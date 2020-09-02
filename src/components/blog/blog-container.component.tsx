@@ -9,14 +9,12 @@ import { DiscussionEmbed } from 'disqus-react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { singleBlogPostVars, SINGLE_BLOGPOST } from '../../api/queries';
-import { Container } from './blog-container.styles';
-import CommentInfo from './comment-info/comment-info.component';
+import { CommentInfo, Container } from './blog-container.styles';
 import BlogContent from './content/blog-content.component';
 
 const BlogContainer: React.FC = () => {
   const router = useRouter();
   const slug = router.query.post_slug ? router.query.post_slug : '';
-  const url = 'https://eric.film/blog/';
 
   const { loading, data } = useQuery<BlogPostData>(SINGLE_BLOGPOST, {
     variables: singleBlogPostVars(slug),
@@ -64,11 +62,14 @@ const BlogContainer: React.FC = () => {
         <Container>
           <BlogContent {...post} />
           <div style={{ padding: '0 1rem' }}>
-            <CommentInfo />
+            <CommentInfo>
+              Note: In order to comment as a guest, click the "Name" field and
+              then select "I'd rather post as a guest" from the options.
+            </CommentInfo>
             <DiscussionEmbed
               shortname='eric-film'
               config={{
-                url: `${url}${post.slug}`,
+                url: `https://eric.film/blog/${post.slug}`,
                 identifier: String(post.id),
                 title: post.title,
               }}

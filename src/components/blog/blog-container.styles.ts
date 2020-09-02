@@ -5,3 +5,8 @@ export const Container = styled.div`
   margin: 0 auto;
   overflow: hidden;
 `;
+
+export const CommentInfo = styled.p`
+  font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
+  color: ${({ theme }) => theme.colors.textPrimary};
+`;

@@ -46,8 +46,8 @@ export const BlogPostFooter = styled.div`
   color: ${({ theme }) => theme.colors.textPrimary};
 `;
 export const BlogCreatedContainer = styled.div`
-  /* background-color: ${({ theme }) => theme.colors.bgPrimary}; */
-  /* padding: 0.3rem 0.5rem; */
+  background-color: ${({ theme }) => theme.colors.bgPrimary};
+  padding: 0.3rem 0.5rem;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
