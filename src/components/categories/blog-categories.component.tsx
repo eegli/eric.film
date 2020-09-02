@@ -1,4 +1,5 @@
-import { BlogCategories as B, SortBy } from '@/components/types';
+import { BlogTypeAll } from '@/components/types';
+import { BlogpostOrderByInput, BlogType } from '@/src/generated/graphql';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaSort } from 'react-icons/fa';
@@ -17,47 +18,51 @@ This page handles the routing for all the blog and portfolio categories
 */
 
 const BlogCategories: React.FC = () => {
-  const [sort, setSort] = useState<SortBy>(SortBy.createdAt_DESC);
+  const [sort, setSort] = useState<BlogpostOrderByInput>(
+    BlogpostOrderByInput.ContentAsc,
+  );
   const slug = '/blog?cat=';
-  const activeUrl = useActiveUrl(B.BLOG_ALL);
+  const activeUrl = useActiveUrl(BlogTypeAll.All);
 
   return (
     <>
       <CategoryContainer sticky>
         <SelectionCardContainer sticky>
-          <Link href={`${slug}${B.BLOG_ALL}`} shallow passHref>
-            <CardContainer active={activeUrl === `${slug}${B.BLOG_ALL}`}>
-              {B.BLOG_ALL}
+          <Link href={`${slug}${BlogTypeAll.All}`} shallow passHref>
+            <CardContainer active={activeUrl === `${slug}all`}>
+              {BlogTypeAll.All}
             </CardContainer>
           </Link>
-          <Link href={`${slug}${B.BLOG_TECH}`} shallow passHref>
-            <CardContainer active={activeUrl === `${slug}${B.BLOG_TECH}`}>
-              {B.BLOG_TECH}
+          <Link href={`${slug}${BlogType.Tech}`} shallow passHref>
+            <CardContainer active={activeUrl === `${slug}${BlogType.Tech}`}>
+              {BlogType.Tech}
             </CardContainer>
           </Link>
-          <Link href={`${slug}${B.BLOG_VOTW}`} shallow passHref>
-            <CardContainer active={activeUrl === `${slug}${B.BLOG_VOTW}`}>
-              {B.BLOG_VOTW}
+          <Link href={`${slug}${BlogType.Votw}`} shallow passHref>
+            <CardContainer active={activeUrl === `${slug}${BlogType.Votw}`}>
+              {BlogType.Votw}
             </CardContainer>
           </Link>
-          <Link href={`${slug}${B.BLOG_VARIA}`} shallow passHref>
-            <CardContainer active={activeUrl === `${slug}${B.BLOG_VARIA}`}>
-              {B.BLOG_VARIA}
+          <Link href={`${slug}${BlogType.Varia}`} shallow passHref>
+            <CardContainer active={activeUrl === `${slug}${BlogType.Varia}`}>
+              {BlogType.Varia}
             </CardContainer>
           </Link>
         </SelectionCardContainer>
         <SortButtonContainer>
-          {sort === SortBy.createdAt_DESC ? (
+          {sort === BlogpostOrderByInput.ContentAsc ? (
             <>
               <FaSort />
-              <SortButton onClick={() => setSort(SortBy.createdAt_ASC)}>
+              <SortButton
+                onClick={() => setSort(BlogpostOrderByInput.ContentDesc)}>
                 show oldest
               </SortButton>
             </>
           ) : (
             <>
               <FaSort />
-              <SortButton onClick={() => setSort(SortBy.createdAt_DESC)}>
+              <SortButton
+                onClick={() => setSort(BlogpostOrderByInput.ContentDesc)}>
                 show latest
               </SortButton>
             </>

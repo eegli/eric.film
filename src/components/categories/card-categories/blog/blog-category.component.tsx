@@ -1,14 +1,14 @@
-import { allBlogPostsPreviewVars, ALL_BLOGPOSTS_PREVIEW } from '@/api/queries';
 import BlogPreview from '@/components/blog/preview/blog-preview.component';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
+import { BlogTypeAll } from '@/components/types';
 import {
-  BlogPostPreview,
-  BlogPostPreviewData,
-  Category,
-  SortBy,
-} from '@/components/types';
-import { NetworkStatus, useQuery } from '@apollo/client';
+  Blogpost,
+  BlogpostOrderByInput,
+  BlogType,
+  useAll_Blogposts_PreviewQuery,
+} from '@/src/generated/graphql';
+import { NetworkStatus } from '@apollo/client';
 import {
   BlogCategoryContainer,
   FetchButton,
@@ -16,15 +16,23 @@ import {
 } from './blog-category.styles';
 
 type Props = {
-  filter?: Category;
-  sortBy?: SortBy;
+  filter?: BlogType | BlogTypeAll;
+  sortBy: BlogpostOrderByInput;
 };
 
 const BlogCategory: React.FC<Props> = ({ filter, sortBy }) => {
-  const { loading, error, data, fetchMore, networkStatus } = useQuery<
-    BlogPostPreviewData
-  >(ALL_BLOGPOSTS_PREVIEW, {
-    variables: allBlogPostsPreviewVars(sortBy),
+  const {
+    loading,
+    error,
+    data,
+    fetchMore,
+    networkStatus,
+  } = useAll_Blogposts_PreviewQuery({
+    variables: {
+      skip: 0,
+      first: 12,
+      orderBy: sortBy,
+    },
     // Setting this value to true will make the component rerender when
     // the "networkStatus" changes, so we are able to know if it is fetching
     // more data
@@ -37,7 +45,7 @@ const BlogCategory: React.FC<Props> = ({ filter, sortBy }) => {
     return <ErrorMessage>Failed to load blog posts from server</ErrorMessage>;
   if (loading && !loadingMorePosts) return <CustomSpinner />;
 
-  if (data) {
+  if (data && data.blogposts) {
     const loadMorePosts = () => {
       fetchMore({
         variables: {
@@ -60,18 +68,20 @@ const BlogCategory: React.FC<Props> = ({ filter, sortBy }) => {
     const { blogposts, blogpostsConnection } = data;
     const areMorePosts = blogposts.length < blogpostsConnection.aggregate.count;
 
-    let posts = [];
+    let posts: Array<any>;
+
+    // If there is no filter set - which is the case for the "all" category - we just display all blogposts, otherwise filter according to the types
+
+    // TODO useMemo
     !filter
       ? (posts = data.blogposts)
-      : (posts = data.blogposts.filter(
-          (post: BlogPostPreview) => post.type === filter,
-        ));
+      : (posts = data.blogposts.filter(post => post.type === filter));
 
     return (
       <>
         <BlogCategoryContainer>
-          {posts.map((post: BlogPostPreview) => (
-            <BlogPreview key={post.slug} {...post} />
+          {posts.map((post: Blogpost) => (
+            <BlogPreview key={post.id} {...post} />
           ))}
         </BlogCategoryContainer>
         {areMorePosts && (

@@ -1,14 +1,13 @@
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
-import { BlogPostData } from '@/components/types';
 import { SEO_OG_FALLBACK } from '@/src/config';
+import { useSingle_BlogpostQuery } from '@/src/generated/graphql';
 import { trimExcerptForMeta } from '@/src/utils/metaExcerpt';
 import { makeBlogSchemaForHead } from '@/src/utils/schema';
-import { useQuery } from '@apollo/client';
 import { DiscussionEmbed } from 'disqus-react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { singleBlogPostVars, SINGLE_BLOGPOST } from '../../api/queries';
+import { singleBlogPostVars } from '../../api/queries';
 import { CommentInfo, Container } from './blog-container.styles';
 import BlogContent from './content/blog-content.component';
 
@@ -16,7 +15,7 @@ const BlogContainer: React.FC = () => {
   const router = useRouter();
   const slug = router.query.post_slug ? router.query.post_slug : '';
 
-  const { loading, data } = useQuery<BlogPostData>(SINGLE_BLOGPOST, {
+  const { loading, data } = useSingle_BlogpostQuery({
     variables: singleBlogPostVars(slug),
   });
 

@@ -8,7 +8,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
     "prod": "next build && next start",
     "format": "prettier --write **/*.{js,jsx,ts,tsx}",
     "lint": "eslint src --ext .js --ext .jsx --ext .ts --ext .tsx",
@@ -54,6 +53,8 @@
   "devDependencies": {
     "@graphql-codegen/cli": "1.17.8",
     "@graphql-codegen/typescript": "^1.17.9",
+    "@graphql-codegen/typescript-operations": "^1.17.8",
+    "@graphql-codegen/typescript-react-apollo": "^2.0.6",
     "@types/enzyme": "^3.10.5",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^26.0.4",

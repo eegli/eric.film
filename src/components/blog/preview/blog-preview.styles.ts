@@ -1,4 +1,4 @@
-import { BlogCategories } from '@/components/types';
+import { BlogType } from '@/src/generated/graphql';
 import { MdAccessTime, MdLabel } from 'react-icons/md';
 import styled, { css } from 'styled-components';
 
@@ -71,7 +71,7 @@ export const BlogPostIcon = styled(MdLabel)`
 `;
 
 type LabelProps = {
-  type: BlogCategories;
+  type: BlogType;
 };
 export const BlogLabelContainer = styled.div<LabelProps>`
   padding: 0.3rem 0.5rem;
@@ -79,11 +79,11 @@ export const BlogLabelContainer = styled.div<LabelProps>`
   align-items: center;
   justify-content: center;
   background-color: ${({ theme, type }) =>
-    type === BlogCategories.BLOG_TECH
+    type === BlogType.Tech
       ? theme.colors.accents.brightBlue
-      : type === BlogCategories.BLOG_VARIA
+      : type === BlogType.Varia
       ? theme.colors.accents.eggshell
-      : type === BlogCategories.BLOG_VOTW
+      : type === BlogType.Votw
       ? theme.colors.accents.melon
       : null};
   border-radius: 0.5rem;

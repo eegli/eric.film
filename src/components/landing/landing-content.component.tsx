@@ -1,10 +1,8 @@
-import { IMGS_HOME } from '@/api/queries';
 import CustomLink from '@/components/custom-link/custom-link.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
 import Gallery from '@/components/gallery/gallery.component';
-import { ImageData } from '@/components/types';
 import { DescriptionContainer, Sh1, Sh2 } from '@/shared/headings.styles';
-import { useQuery } from '@apollo/client';
+import { useImgs_HomeQuery } from '@/src/generated/graphql';
 import React from 'react';
 import { LandingContentContainer } from './landing-content.styles';
 
@@ -13,7 +11,7 @@ type Props = {
 };
 
 const LandingContent = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
-  const { loading, error, data } = useQuery<ImageData>(IMGS_HOME);
+  const { loading, error, data } = useImgs_HomeQuery();
 
   if (error) return <ErrorMessage>Error loading images :(</ErrorMessage>;
 

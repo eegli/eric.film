@@ -68,7 +68,7 @@ export const singleBlogPostVars = (slug: string | string[]): PostVars => {
 };
 
 export const IMGS_PORTFOLIO = gql`
-  query IMGS_HOME {
+  query IMGS_PORTFOLIO {
     imgCollections(where: { imageType: portfolio }) {
       id
       imageType
