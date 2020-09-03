@@ -1,10 +1,10 @@
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
 import Gallery from '@/components/gallery/gallery.component';
-import { useImgsHomeQuery } from '@/components/types';
+import { useImgsPortfolioQuery } from '@/components/types';
 
 const StillCategory: React.FC = () => {
-  const { loading, error, data } = useImgsHomeQuery();
+  const { loading, error, data } = useImgsPortfolioQuery();
 
   if (error)
     return <ErrorMessage>Failed to load images from server</ErrorMessage>;
