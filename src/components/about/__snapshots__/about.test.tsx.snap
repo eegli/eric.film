@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About renders card component 1`] = `
+<Fragment>
+  <aboutstyles__AboutContainer>
+    <CardComponent />
+    <hr
+      style={
+        Object {
+          "width": "80%",
+        }
+      }
+    />
+    <ResumeComponent />
+  </aboutstyles__AboutContainer>
+</Fragment>
+`;

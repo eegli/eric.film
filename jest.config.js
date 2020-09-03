@@ -8,6 +8,7 @@ module.exports = {
   // Get coverage for all files in root except for styles files
   // js and jsx files can also be tested but would need to be added
   // in the regex below
+  collectCoverage: true,
   collectCoverageFrom: ['**/*.{tsx,ts}', '!**/?(*.)+(styles).[jt]s'],
 
   // Path mapping with tsconfig
@@ -21,4 +22,11 @@ module.exports = {
   // Neccesary for Jest 24+
   // https://github.com/styled-components/jest-styled-components#enzyme
   snapshotSerializers: ['enzyme-to-json/serializer'],
+
+  // Ignore generated types and type file
+  coveragePathIgnorePatterns: [
+    '/node_modules/',
+    '<rootDir>/src/generated/',
+    '<rootDir>/src/components/types',
+  ],
 };

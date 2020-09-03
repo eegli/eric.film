@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { FaSort } from 'react-icons/fa';
 import { useActiveUrl } from '../../hooks/useActiveUrl';
-import BlogSwitch from '../switch-categories/blog-switch-component';
+import BlogSwitch from '../switch-categories/blog-switch.component';
 import {
   CardContainer,
   CategoryContainer,

@@ -13,7 +13,7 @@
     "lint": "eslint src --ext .js --ext .jsx --ext .ts --ext .tsx",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "test:improve": "jest --watchAll --coverage",
+    "test:improve": "jest --watch --coverage",
     "fix:everything": "rm -rf node_modules .yarnclean && yarn",
     "generate": "graphql-codegen --config codegen.yml"
   },
