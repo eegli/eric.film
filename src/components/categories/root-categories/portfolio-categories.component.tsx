@@ -1,37 +1,35 @@
 import { PortfolioCategories as P } from '@/components/types';
 import Link from 'next/link';
-import { useActiveUrl } from '../../hooks/useActiveUrl';
+import { useActiveCat } from '../../hooks/useActiveCat';
 import PortfolioSwitch from '../switch-categories/portfolio-switch.component';
 import { CardContainer, SelectionCardContainer } from './categories.styles';
 
-/* 
-  This page handles the routing for all the blog and portfolio categories
-  */
+/* This page handles the routing for all the blog and portfolio categories */
 
 const PortfolioCategories: React.FC = () => {
   const slug = '/portfolio?cat=';
-  const activeUrl = useActiveUrl(P.PORTFOLIO_STILL);
+  const activeCat = useActiveCat(P.PORTFOLIO_STILL, slug);
 
   return (
     <>
       <SelectionCardContainer>
         <Link href={`${slug}${P.PORTFOLIO_STILL}`} shallow passHref>
-          <CardContainer active={activeUrl === `${slug}${P.PORTFOLIO_STILL}`}>
+          <CardContainer active={activeCat === P.PORTFOLIO_STILL}>
             {P.PORTFOLIO_STILL}
           </CardContainer>
         </Link>
         <Link href={`${slug}${P.PORTFOLIO_MOVING}`} shallow passHref>
-          <CardContainer active={activeUrl === `${slug}${P.PORTFOLIO_MOVING}`}>
+          <CardContainer active={activeCat === P.PORTFOLIO_MOVING}>
             {P.PORTFOLIO_MOVING}
           </CardContainer>
         </Link>
         <Link href={`${slug}${P.PORTFOLIO_CLIENTS}`} shallow passHref>
-          <CardContainer active={activeUrl === `${slug}${P.PORTFOLIO_CLIENTS}`}>
+          <CardContainer active={activeCat === P.PORTFOLIO_CLIENTS}>
             {P.PORTFOLIO_CLIENTS}
           </CardContainer>
         </Link>
         <Link href={`${slug}${P.PORTFOLIO_DEV}`} shallow passHref>
-          <CardContainer active={activeUrl === `${slug}${P.PORTFOLIO_DEV}`}>
+          <CardContainer active={activeCat === P.PORTFOLIO_DEV}>
             {P.PORTFOLIO_DEV}
           </CardContainer>
         </Link>

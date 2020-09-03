@@ -6,7 +6,7 @@ import {
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaSort } from 'react-icons/fa';
-import { useActiveUrl } from '../../hooks/useActiveUrl';
+import { useActiveCat } from '../../hooks/useActiveCat';
 import BlogSwitch from '../switch-categories/blog-switch.component';
 import {
   CardContainer,
@@ -25,29 +25,29 @@ const BlogCategories: React.FC = () => {
     BlogpostOrderByInput.CreatedAtDesc,
   );
   const slug = '/blog?cat=';
-  const activeUrl = useActiveUrl(BlogTypeAll.All);
+  const activeCat = useActiveCat(BlogTypeAll.All, slug);
 
   return (
     <>
       <CategoryContainer sticky>
         <SelectionCardContainer sticky>
           <Link href={`${slug}${BlogTypeAll.All}`} shallow passHref>
-            <CardContainer active={activeUrl === `${slug}${BlogTypeAll.All}`}>
+            <CardContainer active={activeCat === BlogTypeAll.All}>
               {BlogTypeAll.All}
             </CardContainer>
           </Link>
           <Link href={`${slug}${BlogType.Tech}`} shallow passHref>
-            <CardContainer active={activeUrl === `${slug}${BlogType.Tech}`}>
+            <CardContainer active={activeCat === BlogType.Tech}>
               {BlogType.Tech}
             </CardContainer>
           </Link>
           <Link href={`${slug}${BlogType.Votw}`} shallow passHref>
-            <CardContainer active={activeUrl === `${slug}${BlogType.Votw}`}>
+            <CardContainer active={activeCat === BlogType.Votw}>
               {BlogType.Votw}
             </CardContainer>
           </Link>
           <Link href={`${slug}${BlogType.Varia}`} shallow passHref>
-            <CardContainer active={activeUrl === `${slug}${BlogType.Varia}`}>
+            <CardContainer active={activeCat === BlogType.Varia}>
               {BlogType.Varia}
             </CardContainer>
           </Link>

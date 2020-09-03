@@ -2,13 +2,21 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect';
 
-export const useActiveUrl = (defaultCat: string): string => {
+/* Returns the query by extracting it from the url when the route changes */
+
+// Example strings:
+// query: 'clients'
+// queryPath: '/portfolio?cat='
+// url: '/portfolio?cat?clients'
+
+export const useActiveCat = (query: string, queryPath = '') => {
   const router = useRouter();
-  const [activeUrl, setActiveUrl] = useState<string>(defaultCat);
+  const [activeUrl, setActiveUrl] = useState<string>(query);
 
   useIsomorphicLayoutEffect(() => {
-    const handleRouteChange = (url: string) => {
-      setActiveUrl(url);
+    const handleRouteChange = (path: string) => {
+      const slicedUrl = path.slice(queryPath.length);
+      setActiveUrl(slicedUrl);
     };
 
     router.events.on('routeChangeComplete', handleRouteChange);

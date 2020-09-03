@@ -2,12 +2,12 @@ import CustomSpinner from '@/components/custom-spinner/custom-spinner.component'
 import ErrorMessage from '@/components/error-message/error-message.component';
 import { Blogpost, useBlogpostQuery } from '@/components/types';
 import { SEO_OG_FALLBACK } from '@/src/config';
+import { getElementFromArray } from '@/src/utils/getElementFromArray';
 import { trimExcerptForMeta } from '@/src/utils/metaExcerpt';
 import { makeBlogSchemaForHead } from '@/src/utils/schema';
 import { DiscussionEmbed } from 'disqus-react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { blogpostVars } from '../../api/queries';
 import { CommentInfo, Container } from './blog-container.styles';
 import BlogContent from './content/blog-content.component';
 
@@ -16,7 +16,7 @@ const BlogContainer: React.FC = () => {
   const slug = router.query.slug ? router.query.slug : '';
 
   const { loading, data } = useBlogpostQuery({
-    variables: blogpostVars(slug),
+    variables: { slug: getElementFromArray(slug) },
   });
 
   if (loading) {
