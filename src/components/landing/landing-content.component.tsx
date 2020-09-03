@@ -28,7 +28,7 @@ const LandingContent = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
             </Sh2>
           </DescriptionContainer>
           <CustomLink href='/about'>say hi to the team</CustomLink>
-          {images ? <Gallery index images={images.collection} /> : null}
+          {images ? <Gallery layout='grid' images={images.collection} /> : null}
         </LandingContentContainer>
       </>
     );

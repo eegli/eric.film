@@ -13,11 +13,7 @@ const StillCategory: React.FC = () => {
   }
   if (data) {
     const images = data.imgCollections[0];
-    return (
-      <>
-        {images ? <Gallery index={false} images={images.collection} /> : null}
-      </>
-    );
+    return <>{images ? <Gallery images={images.collection} /> : null}</>;
   } else {
     return <div />;
   }

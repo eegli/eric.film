@@ -1,8 +1,8 @@
 import { PortfolioCategories as P } from '@/components/types';
 import Link from 'next/link';
-import { useActiveUrl } from '../hooks/useActiveCat';
+import { useActiveUrl } from '../../hooks/useActiveUrl';
+import PortfolioSwitch from '../switch-categories/portfolio-switch.component';
 import { CardContainer, SelectionCardContainer } from './categories.styles';
-import PortfolioSwitch from './switch-categories/portfolio-switch.component';
 
 /* 
   This page handles the routing for all the blog and portfolio categories

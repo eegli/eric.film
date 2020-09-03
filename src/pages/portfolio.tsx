@@ -1,5 +1,5 @@
 import { ImgsPortfolio } from '@/api/queries';
-import PortfolioCategories from '@/components/categories/portfolio-categories.component';
+import PortfolioCategories from '@/components/categories/root-categories/portfolio-categories.component';
 import Footer from '@/components/footer/footer.component';
 import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';

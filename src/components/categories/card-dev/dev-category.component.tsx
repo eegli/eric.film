@@ -1,7 +1,7 @@
 import {
   BgContainer,
   IntroContainer,
-} from '@/components/categories/card-categories/shared.styles';
+} from '@/components/categories/card-common/shared.styles';
 import { Table } from './dev-category.styles';
 const DevCategory: React.FC = () => {
   return (

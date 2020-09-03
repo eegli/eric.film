@@ -4,7 +4,7 @@ import {
   BlogTypeAll,
 } from '@/components/types';
 import { useRouter } from 'next/router';
-import { BlogCategory } from '../card-categories/index';
+import { BlogCategory } from '../card-common/index';
 
 type Props = {
   orderBy: BlogpostOrderByInput;

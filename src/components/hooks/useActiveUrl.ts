@@ -17,6 +17,6 @@ export const useActiveUrl = (defaultCat: string): string => {
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
-  }, []);
+  }, [router.events]);
   return activeUrl;
 };

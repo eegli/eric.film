@@ -5,7 +5,7 @@ import {
   DevCategory,
   MovingCategory,
   StillCategory,
-} from '../card-categories/index';
+} from '../card-common/index';
 
 const PortfolioSwitch: React.FC = () => {
   const router = useRouter();

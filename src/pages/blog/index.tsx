@@ -1,4 +1,4 @@
-import BlogCategories from '@/components/categories/blog-categories.component';
+import BlogCategories from '@/components/categories/root-categories/blog-categories.component';
 import Footer from '@/components/footer/footer.component';
 import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';

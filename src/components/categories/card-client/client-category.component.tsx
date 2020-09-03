@@ -1,7 +1,7 @@
 import {
   BgContainer,
   IntroContainer,
-} from '@/components/categories/card-categories/shared.styles';
+} from '@/components/categories/card-common/shared.styles';
 import { Client, Container } from './client-category.styles';
 
 const ClientCategory: React.FC = () => {

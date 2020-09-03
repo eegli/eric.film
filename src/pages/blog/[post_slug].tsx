@@ -2,10 +2,12 @@ import BlogContainer from '@/components/blog/blog-container.component';
 import Footer from '@/components/footer/footer.component';
 import LayoutContainer from '@/components/shared/layout/layout.container';
 import { GetServerSideProps } from 'next';
+import { useRouter } from 'next/router';
 import { Blogpost, blogpostVars } from '../../api/queries';
 import { initializeApollo } from '../../lib/apolloClient';
 
 const IndexPage: React.FC = () => {
+  const router = useRouter();
   return (
     <>
       <LayoutContainer page='blog'>
