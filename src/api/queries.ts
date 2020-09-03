@@ -58,17 +58,20 @@ export const Blogpost = gql`
     }
   }
 `;
-// TODO Document
+
+// Catch here: Query params are of type ParsedUrlQuery, which is an interface in the form of <string> | Array<string>
+// Since we only want the first parameter, we make sure to pluck the first element of the query and return it as slug
+
 export const blogpostVars = (
-  slug: string | string[],
+  query: string | string[],
 ): BlogpostQueryVariables => {
-  if (Array.isArray(slug))
+  if (Array.isArray(query))
     return {
-      slug: slug[0],
+      slug: query[0],
     };
   else {
     return {
-      slug: slug,
+      slug: query,
     };
   }
 };

@@ -52,7 +52,6 @@ const BlogCategory: React.FC<Props> = ({ filter, orderBy }) => {
             return previousResult;
           }
           return Object.assign({}, previousResult, {
-            // Append the new posts results to the old one
             blogposts: [
               ...previousResult.blogposts,
               ...fetchMoreResult.blogposts,
@@ -67,8 +66,6 @@ const BlogCategory: React.FC<Props> = ({ filter, orderBy }) => {
     let posts: Array<any>;
 
     // If there is no filter set - which is the case for the "all" category - we just display all blogposts, otherwise filter according to the types
-
-    // TODO useMemo
     !filter
       ? (posts = data.blogposts)
       : (posts = data.blogposts.filter(post => post.type === filter));

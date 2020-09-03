@@ -3,8 +3,8 @@ import { SEO_INDEX_META as meta } from '@/src/config';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import React, { useRef } from 'react';
-import LandingContent from '../components/landing/landing-content.component';
-import LandingVideo from '../components/landing/landing-video.component';
+import LandingContent from '../components/landing-content/landing-content.component';
+import LandingVideo from '../components/landing-video/landing-video.component';
 import { initializeApollo } from '../lib/apolloClient';
 
 const IndexPage: React.FC = () => {

@@ -2,7 +2,7 @@ import Markdown from '@/components/blog/markdown/markdown.component';
 import acknowledgements from './content/acknowledgements.md';
 import imprint from './content/imprint.md';
 import privacy from './content/privacy.md';
-import { InfoContainer } from './settings.styles';
+import { InfoContainer } from './disclaimer.styles';
 
 const Settings: React.FC = () => {
   return (

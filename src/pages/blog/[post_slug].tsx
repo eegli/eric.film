@@ -17,9 +17,10 @@ const IndexPage: React.FC = () => {
     </>
   );
 };
+
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const apolloClient = initializeApollo();
-  if (params && params.post_slug) {
+  if (params?.post_slug) {
     await apolloClient.query({
       query: Blogpost,
       variables: blogpostVars(params.post_slug),
