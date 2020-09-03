@@ -6,7 +6,9 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/src/tests/setupTests.ts'],
 
   // Get coverage for all files in root except for styles files
-  collectCoverageFrom: ['**/*.{tsx,jsx,ts,js}', '!**/?(*.)+(styles).[jt]s'],
+  // js and jsx files can also be tested but would need to be added
+  // in the regex below
+  collectCoverageFrom: ['**/*.{tsx,ts}', '!**/?(*.)+(styles).[jt]s'],
 
   // Path mapping with tsconfig
   moduleNameMapper: {

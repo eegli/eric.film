@@ -11,7 +11,7 @@ type Props = {
 };
 
 const LandingContent = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
-  const { loading, error, data } = useImgsHomeQuery();
+  const { error, data } = useImgsHomeQuery();
 
   if (error) return <ErrorMessage>Error loading images :(</ErrorMessage>;
 
