@@ -4,7 +4,7 @@ import imprint from './content/imprint.md';
 import privacy from './content/privacy.md';
 import { InfoContainer } from './disclaimer.styles';
 
-const Settings: React.FC = () => {
+const Disclaimer: React.FC = () => {
   return (
     <>
       <InfoContainer>
@@ -23,4 +23,4 @@ const Settings: React.FC = () => {
   );
 };
 
-export default Settings;
+export default Disclaimer;

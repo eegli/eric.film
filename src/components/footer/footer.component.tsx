@@ -7,13 +7,13 @@ const Footer: React.FC = () => {
     <>
       <Hr />
       <Container>
-        <Link href='/settings#privacy' passHref>
+        <Link href='/disclaimer#privacy' passHref>
           <SLink first>privacy</SLink>
         </Link>
-        <Link href='/settings#acknowledgements' passHref>
+        <Link href='/disclaimer#acknowledgements' passHref>
           <SLink>acknowledgements</SLink>
         </Link>
-        <Link href='/settings#imprint' passHref>
+        <Link href='/disclaimer#imprint' passHref>
           <SLink last>imprint</SLink>
         </Link>
         <GitHubIcon
