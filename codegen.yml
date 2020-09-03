@@ -7,5 +7,7 @@ generates:
       - typescript
       - typescript-operations
       - typescript-react-apollo
-config:
-  withMutationFn: false
+    config:
+      withMutationFn: false
+      withMutationOptionsType: false
+      skipTypename: true

@@ -5,9 +5,9 @@ import {
   Blogpost,
   BlogpostOrderByInput,
   BlogType,
-  useAll_Blogposts_PreviewQuery,
+  useBlogpostsPreviewQuery,
 } from '@/components/types';
-import { allBlogPostsPreviewVars } from '@/src/api/queries';
+import { blogpostsPreviewVars } from '@/src/api/queries';
 import { NetworkStatus } from '@apollo/client';
 import {
   BlogCategoryContainer,
@@ -27,8 +27,8 @@ const BlogCategory: React.FC<Props> = ({ filter, orderBy }) => {
     data,
     fetchMore,
     networkStatus,
-  } = useAll_Blogposts_PreviewQuery({
-    variables: allBlogPostsPreviewVars(orderBy),
+  } = useBlogpostsPreviewQuery({
+    variables: blogpostsPreviewVars(orderBy),
     // Setting this value to true will make the component rerender when
     // the "networkStatus" changes, so we are able to know if it is fetching
     // more data

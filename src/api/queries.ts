@@ -1,12 +1,12 @@
 import {
-  All_Blogposts_PreviewQueryVariables,
   BlogpostOrderByInput,
-  Single_BlogpostQueryVariables,
+  BlogpostQueryVariables,
+  BlogpostsPreviewQueryVariables,
 } from '@/components/types';
 import gql from 'graphql-tag';
 
-export const ALL_BLOGPOSTS_PREVIEW = gql`
-  query ALL_BLOGPOSTS_PREVIEW(
+export const BlogpostsPreview = gql`
+  query BlogpostsPreview(
     $first: Int!
     $skip: Int!
     $orderBy: BlogpostOrderByInput!
@@ -32,16 +32,16 @@ export const ALL_BLOGPOSTS_PREVIEW = gql`
 `;
 
 // We fetch the 12 latest posts first
-export const allBlogPostsPreviewVars = (
+export const blogpostsPreviewVars = (
   orderBy: BlogpostOrderByInput = BlogpostOrderByInput.CreatedAtDesc,
-): All_Blogposts_PreviewQueryVariables => ({
+): BlogpostsPreviewQueryVariables => ({
   skip: 0,
   first: 12,
   orderBy,
 });
 
-export const SINGLE_BLOGPOST = gql`
-  query SINGLE_BLOGPOST($slug: String!) {
+export const Blogpost = gql`
+  query Blogpost($slug: String!) {
     blogpost(where: { slug: $slug }) {
       id
       excerpt
@@ -59,9 +59,9 @@ export const SINGLE_BLOGPOST = gql`
   }
 `;
 // TODO Document
-export const singleBlogPostVars = (
+export const blogpostVars = (
   slug: string | string[],
-): Single_BlogpostQueryVariables => {
+): BlogpostQueryVariables => {
   if (Array.isArray(slug))
     return {
       slug: slug[0],
@@ -73,8 +73,8 @@ export const singleBlogPostVars = (
   }
 };
 
-export const IMGS_PORTFOLIO = gql`
-  query IMGS_PORTFOLIO {
+export const ImgsPortfolio = gql`
+  query ImgsPortfolio {
     imgCollections(where: { imageType: portfolio }) {
       id
       imageType
@@ -85,8 +85,8 @@ export const IMGS_PORTFOLIO = gql`
   }
 `;
 
-export const IMGS_HOME = gql`
-  query IMGS_HOME {
+export const ImgsHome = gql`
+  query ImgsHome {
     imgCollections(where: { imageType: home }) {
       id
       imageType
