@@ -1,4 +1,4 @@
-import { IMGS_HOME } from '@/api/queries';
+import { ImgsHome } from '@/api/queries';
 import { SEO_INDEX_META as meta } from '@/src/config';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const apolloClient = initializeApollo();
 
   await apolloClient.query({
-    query: IMGS_HOME,
+    query: ImgsHome,
   });
 
   return {

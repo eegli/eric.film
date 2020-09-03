@@ -1,4 +1,4 @@
-import { IMGS_PORTFOLIO } from '@/api/queries';
+import { ImgsPortfolio } from '@/api/queries';
 import PortfolioCategories from '@/components/categories/portfolio-categories.component';
 import Footer from '@/components/footer/footer.component';
 import { Sh1 } from '@/shared/headings.styles';
@@ -36,7 +36,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const apolloClient = initializeApollo();
 
   await apolloClient.query({
-    query: IMGS_PORTFOLIO,
+    query: ImgsPortfolio,
   });
 
   return {
