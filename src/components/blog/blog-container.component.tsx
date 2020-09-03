@@ -13,7 +13,7 @@ import BlogContent from './content/blog-content.component';
 
 const BlogContainer: React.FC = () => {
   const router = useRouter();
-  const slug = router.query.post_slug ? router.query.post_slug : '';
+  const slug = router.query.slug ? router.query.slug : '';
 
   const { loading, data } = useBlogpostQuery({
     variables: blogpostVars(slug),
@@ -22,6 +22,8 @@ const BlogContainer: React.FC = () => {
   if (loading) {
     return <CustomSpinner />;
   }
+  // We have data but GraphQl returns an empty array of blogposts
+  // Happens when wrong url is entered and a post with this url doesn't exist
   if (data && !data.blogpost) {
     return (
       <ErrorMessage>
@@ -29,7 +31,7 @@ const BlogContainer: React.FC = () => {
       </ErrorMessage>
     );
   }
-  if (data && data.blogpost) {
+  if (data?.blogpost) {
     const post = data.blogpost;
     const metaExcerpt = trimExcerptForMeta(post.excerpt);
     const image = post.previewImage

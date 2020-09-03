@@ -41,7 +41,7 @@ const BlogCategory: React.FC<Props> = ({ filter, orderBy }) => {
     return <ErrorMessage>Failed to load blog posts from server</ErrorMessage>;
   if (loading && !loadingMorePosts) return <CustomSpinner />;
 
-  if (data && data.blogposts) {
+  if (data?.blogposts) {
     const loadMorePosts = () => {
       fetchMore({
         variables: {

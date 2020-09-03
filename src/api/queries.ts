@@ -59,8 +59,12 @@ export const Blogpost = gql`
   }
 `;
 
-// Catch here: Query params are of type ParsedUrlQuery, which is an interface in the form of <string> | Array<string>
-// Since we only want the first parameter, we make sure to pluck the first element of the query and return it as slug
+// Lil' catch here: Query params are of type ParsedUrlQuery, which is an interface in the form of <string> | Array<string>
+// Since we only want the first parameter, we make sure to pluck the first element of the query and return it as slug (!)
+
+// This last part is really important since the Blogpost query only accepts an argument in the form of { slug: string }
+
+// To sum up: We get a query parameter and return it as a slug!
 
 export const blogpostVars = (
   query: string | string[],

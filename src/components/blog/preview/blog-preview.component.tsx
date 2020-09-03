@@ -32,7 +32,7 @@ const BlogPreview: React.FC<Blogpost> = ({
     : BLOG_PREVIEW_IMG_FALLBACK.url;
 
   return (
-    <Link href='/blog/[post_slug]' as={`/blog/${slug}`} passHref>
+    <Link href='/blog/[slug]' as={`/blog/${slug}`} passHref>
       <BlogPostContainer>
         <BlogPostTitle>{title}</BlogPostTitle>
         <ProgressiveImage src={_prevImage} placeholder=''>
