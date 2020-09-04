@@ -3,6 +3,7 @@ import { FONTSIZES } from './fontsizes';
 
 // Themes assemble!
 
+// Dark is our default
 export const darkTheme = {
   colors: {
     bgPrimary: COLOR_PALETTE.darkPrimary,
@@ -26,6 +27,7 @@ export const darkTheme = {
   },
 };
 
+// Spread in the default dark theme and replace if necessary
 export const lightTheme = {
   ...darkTheme,
 
@@ -45,7 +47,7 @@ export const lightTheme = {
 type DarkTheme = typeof darkTheme;
 type LightTheme = typeof lightTheme;
 
-// Namespace merging: https://www.typescriptlang.org/docs/handbook/declaration-merging.html
+// We extend the default interface of styled-components so that we don't have to write everything twice (an object containing the styles and a type for it). Disabling eslint is not uncommon for this purpose, and the team behind styled-components does it too.
 
 declare module 'styled-components' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
