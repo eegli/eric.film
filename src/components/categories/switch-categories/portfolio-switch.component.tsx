@@ -18,6 +18,7 @@ const PortfolioSwitch: React.FC = () => {
       return <ClientCategory />;
     case PortfolioCategories.PORTFOLIO_DEV:
       return <DevCategory />;
+    // If you access <baseUrl>/portfolio, you get the "still category" which is the main category
     default:
       return <StillCategory />;
   }
