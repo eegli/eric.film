@@ -1,8 +1,8 @@
-import { ImgsPortfolio } from '@/api/queries';
 import PortfolioCategories from '@/components/categories/root-categories/portfolio-categories.component';
 import Footer from '@/components/footer/footer.component';
 import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';
+import { ImgsPortfolio } from '@/src/api/queries';
 import { SEO_PORTFOLIO_META as meta } from '@/src/config';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';

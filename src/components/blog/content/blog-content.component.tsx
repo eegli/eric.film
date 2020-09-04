@@ -1,11 +1,11 @@
 import { useLightTheme } from '@/components/hooks/useLightTheme';
+import BlogMarkdown from '@/components/markdown/markdown.component';
 import { Blogpost } from '@/components/types';
 import { dateFormat } from '@/src/utils/dates';
 import { darkTheme, lightTheme } from '@/styles/theme/theme';
 import { FaRegLightbulb } from 'react-icons/fa';
 import { MdAccessTime, MdUpdate } from 'react-icons/md';
 import { ThemeProvider } from 'styled-components';
-import BlogMarkdown from '../markdown/markdown.component';
 import {
   BlogPostContainer,
   BlogPostHeader,

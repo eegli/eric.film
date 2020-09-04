@@ -1,4 +1,4 @@
-import Markdown from '@/components/blog/markdown/markdown.component';
+import Markdown from '@/components/markdown/markdown.component';
 import acknowledgements from './content/acknowledgements.md';
 import imprint from './content/imprint.md';
 import privacy from './content/privacy.md';

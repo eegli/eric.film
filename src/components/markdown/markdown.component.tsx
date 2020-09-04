@@ -1,7 +1,7 @@
 import { Blogpost } from '@/components/types';
-import CodeBlock from '../custom-renders/blog-codeblock.component';
-import Image from '../custom-renders/blog-image.component';
-import Link from '../custom-renders/blog-link.component';
+import CodeBlock from './custom-renders/codeblock.component';
+import Image from './custom-renders/image.component';
+import Link from './custom-renders/link.component';
 import { StyledMD } from './markdown.styles';
 
 type Props = Pick<Blogpost, 'content'>;
