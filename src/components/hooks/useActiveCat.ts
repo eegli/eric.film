@@ -14,7 +14,9 @@ export const useActiveCat = (query: string, queryPath = '') => {
   const router = useRouter();
   const [activeUrl, setActiveUrl] = useState<string>(query);
 
-  // When the component first mounts, get the active category from the url
+  /* What does the first useEffect do? */
+
+  // When the component first mounts, it gets the active category from the url
   // This is useful when someone enters the url directly into the browser
 
   // This effect is only run once on mount
@@ -23,16 +25,17 @@ export const useActiveCat = (query: string, queryPath = '') => {
   useEffect(() => {
     const path = router.query.cat ? router.query.cat : '';
     setActiveUrl(getElementFromArray(path));
-    // console.log('useeffect has run!');
   }, []);
 
+  /* The second effect handles incoming updates */
+
   // When the user switches categories, the parent (/blog or /portfolio) will not re-render
-  // Instead, the active category is then updated via router events
+  // Instead, the active category is updated via router events as follows
+
   useIsomorphicLayoutEffect(() => {
     const handleRouteChange = (path: string) => {
       const slicedUrl = path.slice(queryPath.length);
       setActiveUrl(slicedUrl);
-      // console.log('uselayouteffect has run!');
     };
 
     router.events.on('routeChangeComplete', handleRouteChange);
