@@ -10,9 +10,7 @@ export const CategoryContainer = styled.div<ContainerProps>`
   align-items: center;
   flex-wrap: wrap;
   padding: 0 2rem;
-  position: ${({ sticky }) => (sticky ? 'static' : 'sticky')};
   top: 0;
-
   @media screen and (max-width: 850px) {
     justify-content: center;
     padding: 0;
@@ -24,8 +22,8 @@ export const SelectionCardContainer = styled.div<ContainerProps>`
   justify-content: center;
   overflow-x: scroll;
   flex-wrap: wrap;
-  position: ${({ sticky }) => (sticky ? 'static' : 'sticky')};
-  z-index: ${({ sticky }) => (sticky ? 10 : 0)};
+  position: ${({ sticky }) => (sticky ? 'sticky' : 'static')};
+  z-index: ${({ sticky }) => (sticky ? 1 : 0)};
   top: 0;
   background-color: ${({ theme }) => theme.colors.bgPrimary};
   overflow-x: hidden;

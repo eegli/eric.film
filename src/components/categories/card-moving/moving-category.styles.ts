@@ -7,7 +7,6 @@ export const MovingCategoryContainer = styled.div`
 
 export const IframeWrapper = styled.div`
   position: relative;
-  z-index: 1;
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
   margin-bottom: 1rem;

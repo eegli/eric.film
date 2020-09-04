@@ -15,10 +15,15 @@ export const useActiveCat = (query: string, queryPath = '') => {
   const [activeUrl, setActiveUrl] = useState<string>(query);
 
   // When the component first mounts, get the active category from the url
-  // This effect is only run once on mount and will persist for the full lifetime of the component
+  // This is useful when someone enters the url directly into the browser
+
+  // This effect is only run once on mount
+  // Future category updates will be handled by the second effect
+
   useEffect(() => {
     const path = router.query.cat ? router.query.cat : '';
     setActiveUrl(getElementFromArray(path));
+    // console.log('useeffect has run!');
   }, []);
 
   // When the user switches categories, the parent (/blog or /portfolio) will not re-render
@@ -27,6 +32,7 @@ export const useActiveCat = (query: string, queryPath = '') => {
     const handleRouteChange = (path: string) => {
       const slicedUrl = path.slice(queryPath.length);
       setActiveUrl(slicedUrl);
+      // console.log('uselayouteffect has run!');
     };
 
     router.events.on('routeChangeComplete', handleRouteChange);

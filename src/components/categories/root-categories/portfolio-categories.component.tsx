@@ -12,7 +12,7 @@ const PortfolioCategories: React.FC = () => {
 
   return (
     <>
-      <SelectionCardContainer>
+      <SelectionCardContainer sticky>
         <Link href={`${slug}${P.PORTFOLIO_STILL}`} shallow passHref>
           <CardContainer active={activeCat === P.PORTFOLIO_STILL}>
             {P.PORTFOLIO_STILL}
