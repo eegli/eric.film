@@ -1,4 +1,3 @@
-import { Spinner } from '@/components/custom-spinner/custom-spinner.styles';
 import { Blogpost } from '@/components/types';
 import { BLOG_PREVIEW_IMG_FALLBACK } from '@/src/config';
 import { dateFormat } from '@/src/utils/dates';
@@ -35,14 +34,10 @@ const BlogPreview: React.FC<Blogpost> = ({
     <Link href='/blog/[slug]' as={`/blog/${slug}`} passHref>
       <BlogPostContainer>
         <BlogPostTitle>{title}</BlogPostTitle>
-        <ProgressiveImage src={_prevImage} placeholder=''>
-          {(src: string, loading: boolean) => {
-            return loading ? (
-              <Spinner />
-            ) : (
-              <BlogPreviewImage src={src} alt='blog-image' />
-            );
-          }}
+        <ProgressiveImage
+          src={_prevImage}
+          placeholder='/static/img/placeholder.jpg'>
+          {(src: string) => <BlogPreviewImage src={src} alt='blog-image' />}
         </ProgressiveImage>
         <BlogPostExcerpt>{excerpt}</BlogPostExcerpt>
 
