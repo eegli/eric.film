@@ -7,6 +7,7 @@ export const GLOBAL = css`
     font-family: 'Droid Sans';
     src: url('/static/fonts/droid-sans/DroidSans-webfont.woff') format('woff'),
       url('/static/fonts/droid-sans/DroidSans-webfont.ttf') format('truetype');
+    font-display: swap;
   }
 
   html {
