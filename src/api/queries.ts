@@ -30,12 +30,12 @@ export const BlogpostsPreview = gql`
   }
 `;
 
-// We fetch the 12 latest posts first
+// We fetch the 18 latest posts first
 export const blogpostsPreviewVars = (
   orderBy: BlogpostOrderByInput = BlogpostOrderByInput.CreatedAtDesc,
 ): BlogpostsPreviewQueryVariables => ({
   skip: 0,
-  first: 12,
+  first: 18,
   orderBy,
 });
 
