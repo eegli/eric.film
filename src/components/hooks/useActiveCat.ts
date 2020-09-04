@@ -29,8 +29,9 @@ export const useActiveCat = (query: string, queryPath = '') => {
 
   /* The second effect handles incoming updates */
 
-  // When the user switches categories, the parent (/blog or /portfolio) will not re-render
-  // Instead, the active category is updated via router events as follows
+  // When the user switches categories, the parent (/blog or /portfolio) will
+  // not re-render Instead, the active category is updated via router events as
+  // follows
 
   useIsomorphicLayoutEffect(() => {
     const handleRouteChange = (path: string) => {
@@ -40,7 +41,8 @@ export const useActiveCat = (query: string, queryPath = '') => {
 
     router.events.on('routeChangeComplete', handleRouteChange);
 
-    // We need to cleanup after router events: https://nextjs.org/docs/api-reference/next/router
+    // We need to cleanup after router events:
+    // https://nextjs.org/docs/api-reference/next/router
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange);
     };

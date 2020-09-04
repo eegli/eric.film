@@ -20,9 +20,8 @@ export const Container = styled.div`
   }
 `;
 
-// Workaround for targeting the first and last footer link
-// :last-child pseudo class cannot be applied because of
-// Next.js Link component parents
+// Workaround for targeting the first and last footer link :last-child pseudo
+// class cannot be applied because of Next.js Link component parents
 
 type SLinkProps = {
   last?: boolean;

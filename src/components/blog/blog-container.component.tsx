@@ -22,8 +22,8 @@ const BlogContainer: React.FC = () => {
   if (loading) {
     return <CustomSpinner />;
   }
-  // We have data but GraphQl returns an empty array of blogposts
-  // Happens when wrong url is entered and a post with this url doesn't exist
+  // We have data but GraphQl returns an empty array of blogposts Happens when
+  // wrong url is entered and a post with this url doesn't exist
   if (data && !data.blogpost) {
     return (
       <ErrorMessage>

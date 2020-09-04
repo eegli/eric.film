@@ -16,9 +16,10 @@ const IndexPage: React.FC = () => {
   );
 };
 
-// Next defines params as ParsedUrlQuery, which is an inteface in the form of string | Array<string>
-// Since this is the "root" slug, we don't expect any other params and therefore make use of
-// the generic interface of GetServerSideProps
+// Next defines params as ParsedUrlQuery, which is an inteface in the form of
+// string | Array<string> Since this is the "root" slug, we don't expect any
+// other params and therefore make use of the generic interface of
+// GetServerSideProps
 export const getServerSideProps: GetServerSideProps<
   { [key: string]: any },
   { slug: string }
