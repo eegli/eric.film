@@ -1,21 +1,13 @@
-import styled from 'styled-components';
+import { Video } from './background-video.styles';
 
-const Video = styled.video`
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  top: 0px;
-  left: 0px;
-  object-fit: cover;
-`;
-
-type Props = {
+export type Props = {
   source: string;
+  dynamicViewport?: boolean;
 };
 
-const BackgroundVideo: React.FC<Props> = ({ source }) => {
+const BackgroundVideo: React.FC<Props> = ({ source, dynamicViewport }) => {
   return (
-    <Video autoPlay loop muted playsInline>
+    <Video autoPlay loop muted playsInline dynamicViewport={dynamicViewport}>
       <source src={source} type='video/mp4' />
     </Video>
   );

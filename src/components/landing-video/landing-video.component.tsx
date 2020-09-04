@@ -1,11 +1,7 @@
+import BackgroundVideo from '@/components/background-video/background-video.component';
 import { RefObject } from 'react';
 import { FaAngleDown } from 'react-icons/fa';
-import {
-  ArrowDown,
-  ArrowDownWrapper,
-  Container,
-  StyledVideo,
-} from './landing-video.styles';
+import { ArrowDown, ArrowDownWrapper } from './landing-video.styles';
 
 type LandingProps = {
   contentRef: RefObject<HTMLDivElement>;
@@ -19,16 +15,14 @@ const LandingVideo: React.FC<LandingProps> = ({ contentRef }) => {
   };
 
   return (
-    <Container>
-      <StyledVideo autoPlay loop muted playsInline>
-        <source src='/static/vid/home_teaser.mp4' type='video/mp4' />
-      </StyledVideo>
+    <>
+      <BackgroundVideo dynamicViewport source='/static/vid/home_teaser.mp4' />
       <ArrowDownWrapper>
         <ArrowDown onClick={scrollToContent}>
           <FaAngleDown />
         </ArrowDown>
       </ArrowDownWrapper>
-    </Container>
+    </>
   );
 };
 export default LandingVideo;
