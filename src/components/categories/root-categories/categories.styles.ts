@@ -25,6 +25,7 @@ export const SelectionCardContainer = styled.div<ContainerProps>`
   overflow-x: scroll;
   flex-wrap: wrap;
   position: ${({ sticky }) => (sticky ? 'static' : 'sticky')};
+  z-index: ${({ sticky }) => (sticky ? 10 : 0)};
   top: 0;
   background-color: ${({ theme }) => theme.colors.bgPrimary};
   overflow-x: hidden;

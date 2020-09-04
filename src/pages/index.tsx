@@ -1,4 +1,4 @@
-import { ImgsHome } from '@/api/queries';
+import { ImgsHome } from '@/src/api/queries';
 import { SEO_INDEX_META as meta } from '@/src/config';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
