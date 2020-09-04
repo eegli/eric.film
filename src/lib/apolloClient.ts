@@ -1,7 +1,12 @@
+import {
+  ApolloClient,
+  HttpLink,
+  InMemoryCache,
+  NormalizedCacheObject,
+} from '@apollo/client';
 import { useMemo } from 'react';
-import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
 
-let apolloClient;
+let apolloClient: ApolloClient<NormalizedCacheObject> | undefined;
 
 const createApolloClient = () => {
   return new ApolloClient({
@@ -14,11 +19,10 @@ const createApolloClient = () => {
   });
 };
 
-export const initializeApollo = (initialState = null) => {
+export const initializeApollo = (initialState: any = null) => {
   const _apolloClient = apolloClient ?? createApolloClient();
 
-  // If a page has Next.js data fetching methods that use Apollo Client, the initial state
-  // gets hydrated here
+  // If a page has Next.js data fetching methods that use Apollo Client, the initial state gets hydrated here
   if (initialState) {
     _apolloClient.cache.restore(initialState);
   }
@@ -30,7 +34,7 @@ export const initializeApollo = (initialState = null) => {
   return _apolloClient;
 };
 
-export const useApollo = initialState => {
+export const useApollo = (initialState: any) => {
   const store = useMemo(() => initializeApollo(initialState), [initialState]);
   return store;
 };
