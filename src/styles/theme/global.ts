@@ -11,6 +11,7 @@ export const GLOBAL = css`
 
   html {
     height: 100%;
+    overflow-y: scroll;
   }
 
   body {
