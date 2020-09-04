@@ -8,7 +8,7 @@ import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect';
 // Example strings:
 // query: 'clients'
 // queryPath: '/portfolio?cat='
-// url: '/portfolio?cat?clients'
+// url: '/portfolio?cat=clients'
 
 export const useActiveCat = (query: string, queryPath = '') => {
   const router = useRouter();
