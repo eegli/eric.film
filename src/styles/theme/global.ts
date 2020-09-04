@@ -10,12 +10,8 @@ export const GLOBAL = css`
     font-display: swap;
   }
 
-  html {
-    height: 100%;
-    overflow-y: scroll;
-  }
-
   body {
+    overflow-y: scroll;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -49,10 +45,6 @@ export const GLOBAL = css`
   p,
   h2 {
     line-height: 1.7rem;
-  }
-
-  select {
-    font-family: 'Roboto', sans-serif;
   }
 
   code {
