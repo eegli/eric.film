@@ -5,11 +5,18 @@ import { SEO_OG_FALLBACK } from '@/src/config';
 import { getElementFromArray } from '@/src/utils/getElementFromArray';
 import { trimExcerptForMeta } from '@/src/utils/metaExcerpt';
 import { makeBlogSchemaForHead } from '@/src/utils/schema';
-import { DiscussionEmbed } from 'disqus-react';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { CommentInfo, Container } from './blog-container.styles';
 import BlogContent from './content/blog-content.component';
+
+const CustomDisqus = dynamic(
+  () => import('@/components/custom-disqus/custom-disqus.component'),
+  {
+    ssr: false,
+  },
+);
 
 const BlogContainer: React.FC = () => {
   const router = useRouter();
@@ -66,14 +73,7 @@ const BlogContainer: React.FC = () => {
               Note: In order to comment as a guest, click the "Name" field and
               then select "I'd rather post as a guest" from the options.
             </CommentInfo>
-            <DiscussionEmbed
-              shortname='eric-film'
-              config={{
-                url: `https://eric.film/blog/${post.slug}`,
-                identifier: post.id,
-                title: post.title,
-              }}
-            />
+            <CustomDisqus id={post.id} title={post.title} slug={post.slug} />
           </div>
         </Container>
       </>
