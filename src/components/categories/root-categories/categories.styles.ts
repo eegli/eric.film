@@ -4,13 +4,12 @@ type ContainerProps = {
   sticky?: boolean;
 };
 
-export const CategoryContainer = styled.div<ContainerProps>`
+export const CategoryContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding: 0 2rem;
-  top: 0;
   @media screen and (max-width: 850px) {
     justify-content: center;
     padding: 0;

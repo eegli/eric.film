@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Props } from './header-options.components';
 
 interface StyleProps extends Props {
@@ -6,9 +6,22 @@ interface StyleProps extends Props {
   path: string;
 }
 
+// Theoretically not necessary anymore, but I'm leaving it here for future references
+const mobileStyles = css`
+  padding: 1.4rem 1rem;
+`;
+
+const getMobileStyles = (
+  params: StyleProps,
+): typeof mobileStyles | undefined => {
+  if (params.position === 'mobile') {
+    return mobileStyles;
+  }
+};
+
 export const StyledLinkText = styled.a<StyleProps>`
   width: 100%;
-  padding: ${({ position }) => (position === 'mobile' ? '1.4rem' : '0')} 1rem;
+  padding: 0 1rem;
   text-align: center;
   font-size: 1.2rem;
   text-shadow: 1px 1px 0px ${({ theme }) => theme.colors.pink};
@@ -20,4 +33,5 @@ export const StyledLinkText = styled.a<StyleProps>`
   color: ${({ theme }) => theme.colors.textPrimary};
   text-decoration: ${({ href, path }) =>
     href === path ? 'underline' : 'none'};
+  ${getMobileStyles}
 `;

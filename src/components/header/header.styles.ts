@@ -4,12 +4,12 @@ export const HeaderWrapper = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 10;
   width: 100%;
 `;
 
 export const HeaderMainBgContainer = styled.div`
-  // background-color: ${({ theme }) => theme.colors.bgPrimary};
+  /* background-color: ${({ theme }) => theme.colors.bgPrimary}; */
   display: flex;
   justify-content: center;
 `;
