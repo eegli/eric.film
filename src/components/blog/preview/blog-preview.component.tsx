@@ -27,12 +27,7 @@ const BlogPreview: React.FC<Blogpost> = ({
   createdAt,
   id,
 }) => {
-  const actualPreviewImage = checkPreviewImage(
-    previewImage,
-    title,
-    id,
-    FALLBACK_IMG,
-  );
+  const actualPreviewImage = checkPreviewImage(previewImage, id, FALLBACK_IMG);
 
   return (
     <Link href='/blog/[slug]' as={`/blog/${slug}`} passHref>

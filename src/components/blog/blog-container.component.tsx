@@ -44,7 +44,6 @@ const BlogContainer: React.FC = () => {
 
     const actualImage = checkPreviewImage(
       post.previewImage,
-      post.title,
       post.id,
       FALLBACK_IMG,
     );

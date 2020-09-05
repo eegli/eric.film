@@ -15,17 +15,12 @@ export const pageview = (path: string, title: string): void => {
 };
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
-export const event = ({
-  action,
+export const actionEvent = (
+  action: string,
   category = '',
   label = '',
-  value,
-}: {
-  action: string;
-  category: string;
-  label: string;
-  value: number;
-}): void => {
+  value: number,
+): void => {
   window.gtag('event', action, {
     event_category: category,
     event_label: label,
