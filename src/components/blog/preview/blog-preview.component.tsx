@@ -1,5 +1,4 @@
 import { Blogpost } from '@/components/types';
-import { BLOG_PREVIEW_IMG_FALLBACK } from '@/src/config';
 import { dateFormat } from '@/src/utils/dates';
 import Link from 'next/link';
 import ProgressiveImage from 'react-progressive-graceful-image';
@@ -25,17 +24,12 @@ const BlogPreview: React.FC<Blogpost> = ({
   previewImage,
   createdAt,
 }) => {
-  // If, for some reason, there is no preview image, fall back to a generic image
-  const _prevImage: string = previewImage
-    ? previewImage.url
-    : BLOG_PREVIEW_IMG_FALLBACK.url;
-
   return (
     <Link href='/blog/[slug]' as={`/blog/${slug}`} passHref>
       <BlogPostContainer>
         <BlogPostTitle>{title}</BlogPostTitle>
         <ProgressiveImage
-          src={_prevImage}
+          src={previewImage.url}
           placeholder='/static/img/placeholder.jpg'>
           {(src: string) => <BlogPreviewImage src={src} alt='blog-image' />}
         </ProgressiveImage>

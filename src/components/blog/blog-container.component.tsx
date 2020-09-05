@@ -1,7 +1,6 @@
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
 import { Blogpost, useBlogpostQuery } from '@/components/types';
-import { SEO_OG_FALLBACK } from '@/src/config';
 import { getElementFromArray } from '@/src/utils/getElementFromArray';
 import { trimExcerptForMeta } from '@/src/utils/metaExcerpt';
 import { makeBlogSchemaForHead } from '@/src/utils/schema';
@@ -41,9 +40,6 @@ const BlogContainer: React.FC = () => {
   if (data?.blogpost) {
     const post = data.blogpost;
     const metaExcerpt = trimExcerptForMeta(post.excerpt);
-    const image = post.previewImage
-      ? post.previewImage.url
-      : SEO_OG_FALLBACK.url;
 
     return (
       <>
@@ -51,13 +47,13 @@ const BlogContainer: React.FC = () => {
           <title>{post.title}</title>
           <meta name='description' content={metaExcerpt} />
           <meta property='og:title' content={post.title} />
-          <meta property='og:image' content={image} />
+          <meta property='og:image' content={post.previewImage.url} />
           <meta property='og:site_name' content='Eric Egli' />
           <meta property='og:description' content={metaExcerpt} />
           <meta name='twitter:card' content='summary_large_image' />
           <meta name='twitter:title' content={post.title} />
           <meta name='twitter:description' content={metaExcerpt} />
-          <meta name='twitter:image' content={image} />
+          <meta name='twitter:image' content={post.previewImage.url} />
           <script
             key={`blogLd-JSON-${post.id}`}
             type='application/ld+json'
