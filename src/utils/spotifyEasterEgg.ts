@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 export const logSpotifyEaserEgg = (): void => {
-  const style = 'color: white; font-size: 20 ';
+  const style = 'color: #fff; font-size: 20; background-color: #000 ';
 
   // prettier-ignore this is important!
   console.log(

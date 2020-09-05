@@ -15,7 +15,7 @@ type StyleProps = Pick<Props, 'dynamicViewport'>;
 // the body element is set to 100% in the global styles.
 
 /* When to use dynamicViewPort */
-// Use it when your component is a direct child of body or if there are no
+// Use it when the component is a direct child of body or if there are no
 // heights defined in any DOM node between your component and body. In order for
 // this to work, the component is, in the best case, a direct child of body.
 

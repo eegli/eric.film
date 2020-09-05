@@ -20,6 +20,9 @@ const IndexPage: React.FC = () => {
 // string | Array<string> Since this is the "root" slug, we don't expect any
 // other params and therefore make use of the generic interface of
 // GetServerSideProps
+
+// TL;DR: Make sure the key "slug" in the second type passed to
+// getServerSideProps is equal to your dynamic page name
 export const getServerSideProps: GetServerSideProps<
   { [key: string]: any },
   { slug: string }
