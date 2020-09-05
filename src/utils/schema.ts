@@ -7,7 +7,10 @@
 import { Blogpost } from '@/components/types';
 import { SCHEMA_PUBLISHER_LOGO } from '@/src/config';
 
-export const makeBlogSchemaForHead = (post: Blogpost): string => {
+export const makeBlogSchemaForHead = (
+  post: Blogpost,
+  previewImage: string,
+): string => {
   return JSON.stringify({
     '@context': 'http://schema.org',
     '@type': 'BlogPosting',
@@ -26,6 +29,6 @@ export const makeBlogSchemaForHead = (post: Blogpost): string => {
     datePublished: post.createdAt,
     dateModified: post.updatedAt,
     headline: post.title,
-    image: [post.previewImage.url],
+    image: [previewImage],
   });
 };

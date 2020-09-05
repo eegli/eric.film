@@ -1,4 +1,4 @@
-const base = 'https://beta.eric.film/static';
+const base = 'https://beta.eric.film/static/img';
 
 // Type inference is pretty strong here
 export const SEO_INDEX_META = {
@@ -65,4 +65,8 @@ export const SEO_BLOG_INDEX_META = {
 
 export const SCHEMA_PUBLISHER_LOGO = {
   url: `${base}/var/schema_logo.png`,
+};
+
+export const FALLBACK_IMG = {
+  url: `${base}/placeholder.jpg`,
 };

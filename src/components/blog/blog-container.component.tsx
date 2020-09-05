@@ -1,8 +1,9 @@
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
 import { Blogpost, useBlogpostQuery } from '@/components/types';
+import { FALLBACK_IMG } from '@/src/config';
+import { checkPreviewImage, trimExcerptForMeta } from '@/src/utils/blogUtils';
 import { getElementFromArray } from '@/src/utils/getElementFromArray';
-import { trimExcerptForMeta } from '@/src/utils/metaExcerpt';
 import { makeBlogSchemaForHead } from '@/src/utils/schema';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -41,24 +42,31 @@ const BlogContainer: React.FC = () => {
     const post = data.blogpost;
     const metaExcerpt = trimExcerptForMeta(post.excerpt);
 
+    const actualImage = checkPreviewImage(
+      post.previewImage,
+      post.title,
+      post.id,
+      FALLBACK_IMG,
+    );
+
     return (
       <>
         <Head>
           <title>{post.title}</title>
           <meta name='description' content={metaExcerpt} />
           <meta property='og:title' content={post.title} />
-          <meta property='og:image' content={post.previewImage.url} />
+          <meta property='og:image' content={actualImage.url} />
           <meta property='og:site_name' content='Eric Egli' />
           <meta property='og:description' content={metaExcerpt} />
           <meta name='twitter:card' content='summary_large_image' />
           <meta name='twitter:title' content={post.title} />
           <meta name='twitter:description' content={metaExcerpt} />
-          <meta name='twitter:image' content={post.previewImage.url} />
+          <meta name='twitter:image' content={actualImage.url} />
           <script
             key={`blogLd-JSON-${post.id}`}
             type='application/ld+json'
             dangerouslySetInnerHTML={{
-              __html: makeBlogSchemaForHead(post as Blogpost),
+              __html: makeBlogSchemaForHead(post as Blogpost, actualImage.url),
             }}
           />
         </Head>
