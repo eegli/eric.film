@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/eegli/eric.film">
-    <img src="https://img-og.eric.film/public/github_readme_logo.png" alt="Logo" height="80">
+    <img src="https://beta.eric.film/static/img/var/github_readme_logo.png" alt="Logo" height="80">
   </a>
   <h3 align="center">portfolio | blog | @eegli</h3>
    <p align="center">
@@ -37,7 +37,7 @@ With Sentury - or more specifically `@sentry/browser` - it is the same. It canno
 
 This is why it is good practice to filter requests by hostname / allowed domains - something that is possible for both Sentury and Google Analytics.
 
-My GraphQL endpoint needs to be public since the frontend has the possibility to fetch more blog posts directly from my backend. Thus, requests to GraphCMS can also be inspected in any browser's dev tools ¯\\_(ツ)_/¯
+My GraphQL endpoint needs to be public since the frontend has the possibility to fetch more blog posts directly from my backend. Thus, requests to GraphCMS can also be inspected in any browser's dev tools. Mutations, however, are disabled ¯\\_(ツ)_/¯
 
 ## Links
 
@@ -48,14 +48,12 @@ My GraphQL endpoint needs to be public since the frontend has the possibility to
 - [My base gray palette](https://coolors.co/121212-222222-3b3b3b-b1b1b1-f1f1f1-f7f7f7)
 - [My base accent palette for dark/bright mode](https://coolors.co/034363-53272d-365952)
 
-> Core templates/example repositories
+> All Next templates
 
-- [next.js/examples/with-apollo](https://github.com/vercel/next.js/tree/canary/examples/with-apollo)
-- [next.js/examples/with-sentry](https://github.com/vercel/next.js/tree/canary/examples/with-sentry)
-- [next.js/examples/with-typescript-eslint-jest](https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest)
+- [next.js/examples](https://github.com/vercel/next.js/tree/canary/examples)
 
 ## License
 
-The MIT License (MIT)
+Copyright 2020 Eric Egli
 
-Copyright (c) 2020 Eric Egli
+The MIT License (MIT)
