@@ -47,7 +47,10 @@ export const lightTheme = {
 type DarkTheme = typeof darkTheme;
 type LightTheme = typeof lightTheme;
 
-// We extend the default interface of styled-components so that we don't have to write everything twice (an object containing the styles and a type for it). Disabling eslint is not uncommon for this purpose, and the team behind styled-components does it too.
+// We extend the default interface of styled-components so that we don't have to
+// write everything twice (an object containing the styles and a type for it).
+// Disabling eslint is not uncommon for this purpose, and the team behind
+// styled-components does it too.
 
 declare module 'styled-components' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface

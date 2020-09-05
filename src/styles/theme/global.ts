@@ -7,14 +7,11 @@ export const GLOBAL = css`
     font-family: 'Droid Sans';
     src: url('/static/fonts/droid-sans/DroidSans-webfont.woff') format('woff'),
       url('/static/fonts/droid-sans/DroidSans-webfont.ttf') format('truetype');
-  }
-
-  html {
-    height: 100%;
-    overflow-y: scroll;
+    font-display: swap;
   }
 
   body {
+    overflow-y: scroll;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -48,10 +45,6 @@ export const GLOBAL = css`
   p,
   h2 {
     line-height: 1.7rem;
-  }
-
-  select {
-    font-family: 'Roboto', sans-serif;
   }
 
   code {

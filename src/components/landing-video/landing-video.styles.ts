@@ -1,18 +1,5 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  text-align: center;
-`;
-
-export const StyledVideo = styled.video`
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0px;
-  left: 0px;
-  object-fit: cover;
-`;
-
 export const ArrowDownWrapper = styled.div`
   width: 100%;
   position: absolute;

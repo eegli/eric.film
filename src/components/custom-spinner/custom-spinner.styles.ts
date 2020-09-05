@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const Container = styled.div`
+  width: 100%;
+  text-align: center;
+`;
+
 export const Spinner = styled.svg`
   animation: rotate 1s linear infinite;
   margin: 40px;

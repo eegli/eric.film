@@ -3,8 +3,9 @@ import { GalleryProps } from './gallery.component';
 
 type Props = Pick<GalleryProps, 'layout'>;
 
-// The gallery has two forms: Column (default) and grid (optional).
-// Grid is used on the index page and prefers images of the same width and height. Column displays images in a vertical column.
+// The gallery has two forms: Column (default) and grid (optional). Grid is used
+// on the index page and prefers images of the same width and height. Column
+// displays images in a vertical column.
 
 export const GalleryContainer = styled.div<Props>`
   /* Prevent vertical gaps */

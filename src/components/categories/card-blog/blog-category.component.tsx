@@ -29,9 +29,9 @@ const BlogCategory: React.FC<Props> = ({ filter, orderBy }) => {
     networkStatus,
   } = useBlogpostsPreviewQuery({
     variables: blogpostsPreviewVars(orderBy),
-    // Setting this value to true will make the component rerender when
-    // the "networkStatus" changes, so we are able to know if it is fetching
-    // more data
+    // Setting this value to true will make the component rerender when the
+    // "networkStatus" changes, so we are able to know if it is fetching more
+    // data
     notifyOnNetworkStatusChange: true,
   });
 
@@ -65,7 +65,8 @@ const BlogCategory: React.FC<Props> = ({ filter, orderBy }) => {
 
     let posts: Array<any>;
 
-    // If there is no filter set - which is the case for the "all" category - we just display all blogposts, otherwise filter according to the types
+    // If there is no filter set - which is the case for the "all" category - we
+    // just display all blogposts, otherwise filter according to the types
     !filter
       ? (posts = data.blogposts)
       : (posts = data.blogposts.filter(post => post.type === filter));
