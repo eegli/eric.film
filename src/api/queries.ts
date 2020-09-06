@@ -81,3 +81,21 @@ export const ImgsHome = gql`
     }
   }
 `;
+
+// Todo node: Pagination
+// https://github.com/GraphCMS/docs/blob/master/docs/api/API_relay.md
+
+/* To query the first two artists after the artist with id cixnen2ssewlo0143bexdd52n:
+
+{
+  viewer {
+    allArtists(first: 2, after: "cixnen2ssewlo0143bexdd52n") {
+      edges {
+        node {
+          id
+          name
+        }
+      }
+    }
+  }
+} */
