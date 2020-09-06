@@ -1,24 +1,21 @@
+import { FALLBACK_IMG } from '@/src/config';
 import * as gtag from '@/src/lib/gtag';
 
-// Utility function that creates a html meta description from the first 120 letters of the corresponding blog post excerpt
-export const trimExcerptForMeta = (excerpt: string): string => {
-  const trimmedExcerpt =
-    excerpt.length > 120 ? excerpt.substring(0, 120).concat('...') : excerpt;
-  return trimmedExcerpt;
+// In GraphCMS, the preview image is set to required. It is, however, possible
+// that an image that is being used as preview is deleted from GraphCMS. This
+// doesn't give a warning and results in some posts having no preview image (===
+// null), even though it is required according to the schema. This utility
+// checks if there REALLY is a preview image and if not returns a fallback
+type PreviewImage = {
+  image: { url: string };
+  id: string;
+  fallback?: { url: string };
 };
 
-export const checkPreviewImage = <T>(
-  preview: T | undefined,
-  id: string,
-  fallback: T,
-): T => {
-  if (!preview) {
+export const checkIfImageExists = (params: PreviewImage) => {
+  const { image, id, fallback = FALLBACK_IMG } = params;
+  if (!image) {
     gtag.actionEvent('Missing preview image', 'blog', `Id: ${id}`, 1);
   }
-  return preview || fallback;
+  return image || fallback;
 };
-
-/* `Error:
-    No preview/meta image for post: '${title}'
-    Post id: ${id}
-    Fallback to default` */

@@ -1,9 +1,9 @@
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
 import { Blogpost, useBlogpostQuery } from '@/components/types';
-import { FALLBACK_IMG } from '@/src/config';
-import { checkPreviewImage, trimExcerptForMeta } from '@/src/utils/blogUtils';
+import { checkIfImageExists } from '@/src/utils/blogUtils';
 import { getElementFromArray } from '@/src/utils/getElementFromArray';
+import { createMetaTags } from '@/src/utils/metaTags';
 import { makeBlogSchemaForHead } from '@/src/utils/schema';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -40,32 +40,28 @@ const BlogContainer: React.FC = () => {
   }
   if (data?.blogpost) {
     const post = data.blogpost;
-    const metaExcerpt = trimExcerptForMeta(post.excerpt);
 
-    const actualImage = checkPreviewImage(
-      post.previewImage,
-      post.id,
-      FALLBACK_IMG,
-    );
+    // Return fallback image if preview === null
+    const metaImage = checkIfImageExists({
+      image: post.previewImage,
+      id: post.id,
+    });
+
+    const metaTags = createMetaTags({
+      title: post.title,
+      description: post.excerpt,
+      ogImage: metaImage,
+    });
 
     return (
       <>
         <Head>
-          <title>{post.title}</title>
-          <meta name='description' content={metaExcerpt} />
-          <meta property='og:title' content={post.title} />
-          <meta property='og:image' content={actualImage.url} />
-          <meta property='og:site_name' content='Eric Egli' />
-          <meta property='og:description' content={metaExcerpt} />
-          <meta name='twitter:card' content='summary_large_image' />
-          <meta name='twitter:title' content={post.title} />
-          <meta name='twitter:description' content={metaExcerpt} />
-          <meta name='twitter:image' content={actualImage.url} />
+          {metaTags}
           <script
             key={`blogLd-JSON-${post.id}`}
             type='application/ld+json'
             dangerouslySetInnerHTML={{
-              __html: makeBlogSchemaForHead(post as Blogpost, actualImage.url),
+              __html: makeBlogSchemaForHead(post as Blogpost, metaImage.url),
             }}
           />
         </Head>
