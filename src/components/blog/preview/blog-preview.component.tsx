@@ -1,5 +1,5 @@
 import { Blogpost } from '@/components/types';
-import { checkIfImageExists } from '@/src/utils/blogUtils';
+import { checkIfImageExists } from '@/src/utils/blog';
 import { dateFormat } from '@/src/utils/dates';
 import Link from 'next/link';
 import ProgressiveImage from 'react-progressive-graceful-image';

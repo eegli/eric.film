@@ -6,15 +6,16 @@ import * as gtag from '@/src/lib/gtag';
 // doesn't give a warning and results in some posts having no preview image (===
 // null), even though it is required according to the schema. This utility
 // checks if there REALLY is a preview image and if not returns a fallback
+
 type PreviewImage = {
-  image: { url: string };
+  image: { url: string } | null;
   id: string;
   fallback?: { url: string };
 };
 
 export const checkIfImageExists = (params: PreviewImage) => {
   const { image, id, fallback = FALLBACK_IMG } = params;
-  if (!image) {
+  if (!image?.url) {
     gtag.actionEvent('Missing preview image', 'blog', `Id: ${id}`, 1);
   }
   return image || fallback;

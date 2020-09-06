@@ -1,4 +1,4 @@
-import { getElementFromArray } from '@/src/utils/getElementFromArray';
+import { getElementFromArray } from '@/src/utils/array';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect';

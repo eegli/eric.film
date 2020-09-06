@@ -1,9 +1,9 @@
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
 import { Blogpost, useBlogpostQuery } from '@/components/types';
-import { checkIfImageExists } from '@/src/utils/blogUtils';
-import { getElementFromArray } from '@/src/utils/getElementFromArray';
-import { createMetaTags } from '@/src/utils/metaTags';
+import { getElementFromArray } from '@/src/utils/array';
+import { checkIfImageExists } from '@/src/utils/blog';
+import { createMetaTags } from '@/src/utils/meta';
 import { makeBlogSchemaForHead } from '@/src/utils/schema';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';

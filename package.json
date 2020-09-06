@@ -9,6 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "prod": "next build && next start",
+    "preprod": "yarn lint && yarn test",
     "format": "prettier --write **/*.{js,jsx,ts,tsx}",
     "lint": "eslint src --ext .js --ext .jsx --ext .ts --ext .tsx",
     "test": "jest --coverage",

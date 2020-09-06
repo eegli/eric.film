@@ -1,6 +1,6 @@
 import { ImgsHome } from '@/src/api/queries';
 import { SEO_INDEX_META as meta } from '@/src/config';
-import { createMetaTags } from '@/src/utils/metaTags';
+import { createMetaTags } from '@/src/utils/meta';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import React, { useRef } from 'react';

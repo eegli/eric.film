@@ -4,7 +4,7 @@ import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';
 import { ImgsPortfolio } from '@/src/api/queries';
 import { SEO_PORTFOLIO_META as meta } from '@/src/config';
-import { createMetaTags } from '@/src/utils/metaTags';
+import { createMetaTags } from '@/src/utils/meta';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { initializeApollo } from '../lib/apolloClient';
