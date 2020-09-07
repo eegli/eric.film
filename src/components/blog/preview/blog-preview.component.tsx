@@ -9,13 +9,13 @@ import {
   CreatedTime,
   LabelContainer,
   PreviewContainer,
+  PreviewContent,
   PreviewExcerpt,
   PreviewFooter,
   PreviewIcon,
   PreviewImage,
   PreviewImageContainer,
   PreviewLabel,
-  PreviewTextContainer,
   PreviewTitle,
 } from './blog-preview.styles';
 
@@ -41,7 +41,7 @@ const BlogPreview: React.FC<Blogpost> = ({
           </ProgressiveImage>
         </PreviewImageContainer>
 
-        <PreviewTextContainer>
+        <PreviewContent>
           <PreviewTitle>{title}</PreviewTitle>
           <PreviewExcerpt>{excerpt}</PreviewExcerpt>
           <PreviewFooter>
@@ -55,7 +55,7 @@ const BlogPreview: React.FC<Blogpost> = ({
               <PreviewIcon />
             </LabelContainer>
           </PreviewFooter>
-        </PreviewTextContainer>
+        </PreviewContent>
       </PreviewContainer>
     </Link>
   );

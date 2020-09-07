@@ -12,7 +12,7 @@ const hover = css`
 
 export const PreviewContainer = styled.a`
   position: relative;
-  width: 90%;
+  max-width: 400px;
   margin: 0.5rem;
   border-radius: 0.5rem;
   @media screen and (max-width: ${breakPoint}) {
@@ -22,43 +22,46 @@ export const PreviewContainer = styled.a`
 `;
 
 export const PreviewImageContainer = styled.div`
-  height: 300px;
+  height: 400px;
 `;
 
 export const PreviewImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.2;
 `;
-
-export const PreviewTextContainer = styled.div`
+export const PreviewContent = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
+  width: 100%;
   display: flex;
-  flex-grow: 3;
   flex-direction: column;
-  padding: 1rem;
-  background-color: ${({ theme }) => theme.colors.bgSecondary};
+  justify-content: flex-start;
 `;
 
 export const PreviewTitle = styled.h1`
   font-size: ${({ theme }) => theme.fontsizes.h1FontSize};
-  margin: 0.5rem 0 1rem 0;
+  margin: 1rem 0;
+  padding: 0 1rem;
 `;
 
 export const PreviewExcerpt = styled.h2`
   font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   font-weight: 400;
   color: ${({ theme }) => theme.colors.textPrimary};
+  padding: 1rem;
   margin: 0;
+  overflow: hidden;
+  flex-grow: 1;
 `;
 
 export const PreviewFooter = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
+  padding: 1rem;
 `;
 export const CreatedContainer = styled.div`
   display: flex;
