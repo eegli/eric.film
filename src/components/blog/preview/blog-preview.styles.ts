@@ -11,6 +11,7 @@ const hover = css`
 `;
 
 export const PreviewContainer = styled.a`
+  position: relative;
   width: 90%;
   margin: 0.5rem;
   border-radius: 0.5rem;
@@ -31,6 +32,9 @@ export const PreviewImage = styled.img`
 `;
 
 export const PreviewTextContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   flex-grow: 3;
   flex-direction: column;

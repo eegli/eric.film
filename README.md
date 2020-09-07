@@ -45,7 +45,7 @@ My GraphQL endpoint needs to be public since the frontend has the possibility to
 
 - [Style guide Material design](https://material.io/design)
 - [Style guide dark mode UI](https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129)
-- [My base gray palette](https://coolors.co/121212-222222-3b3b3b-b1b1b1-f1f1f1-f7f7f7)
+- [My base gray palette](https://coolors.co/121212-222222-3b3b3b-8f8f8f-cccccc-f7f7f7)
 - [My base accent palette for dark/bright mode](https://coolors.co/034363-53272d-365952)
 
 > All Next templates
