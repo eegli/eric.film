@@ -12,6 +12,7 @@ export const darkTheme = {
 
     textPrimary: COLOR_PALETTE.brightPrimary,
     textSecondary: COLOR_PALETTE.brightSecondary,
+    textTertiary: COLOR_PALETTE.brightTertiary,
 
     pink: COLOR_PALETTE.pinktBright,
 
@@ -39,6 +40,7 @@ export const lightTheme = {
 
     textPrimary: COLOR_PALETTE.darkPrimary,
     textSecondary: COLOR_PALETTE.darkSecondary,
+    textTertiary: COLOR_PALETTE.darkTertiary,
 
     pink: COLOR_PALETTE.pinktDark,
   },

@@ -4,17 +4,19 @@ import { dateFormat } from '@/src/utils/dates';
 import Link from 'next/link';
 import ProgressiveImage from 'react-progressive-graceful-image';
 import {
-  BlogCreatedContainer,
-  BlogCreatedIcon,
-  BlogCreatedTime,
-  BlogLabelContainer,
-  BlogPostContainer,
-  BlogPostExcerpt,
-  BlogPostFooter,
-  BlogPostIcon,
-  BlogPostLabel,
-  BlogPostTitle,
-  BlogPreviewImage,
+  CreatedContainer,
+  CreatedIcon,
+  CreatedTime,
+  LabelContainer,
+  PreviewContainer,
+  PreviewExcerpt,
+  PreviewFooter,
+  PreviewIcon,
+  PreviewImage,
+  PreviewImageContainer,
+  PreviewLabel,
+  PreviewTextContainer,
+  PreviewTitle,
 } from './blog-preview.styles';
 
 const BlogPreview: React.FC<Blogpost> = ({
@@ -30,27 +32,31 @@ const BlogPreview: React.FC<Blogpost> = ({
 
   return (
     <Link href='/blog/[slug]' as={`/blog/${slug}`} passHref>
-      <BlogPostContainer>
-        <BlogPostTitle>{title}</BlogPostTitle>
-        <ProgressiveImage
-          src={_previewImage.url}
-          placeholder='/static/img/placeholder.jpg'>
-          {(src: string) => <BlogPreviewImage src={src} alt='blog-image' />}
-        </ProgressiveImage>
-        <BlogPostExcerpt>{excerpt}</BlogPostExcerpt>
+      <PreviewContainer>
+        <PreviewImageContainer>
+          <ProgressiveImage
+            src={_previewImage.url}
+            placeholder='/static/img/placeholder.jpg'>
+            {(src: string) => <PreviewImage src={src} alt='blog-image' />}
+          </ProgressiveImage>
+        </PreviewImageContainer>
 
-        <BlogPostFooter>
-          <BlogCreatedContainer>
-            <BlogCreatedIcon />
-            <BlogCreatedTime>{dateFormat(createdAt)}</BlogCreatedTime>
-          </BlogCreatedContainer>
+        <PreviewTextContainer>
+          <PreviewTitle>{title}</PreviewTitle>
+          <PreviewExcerpt>{excerpt}</PreviewExcerpt>
+          <PreviewFooter>
+            <CreatedContainer>
+              <CreatedIcon />
+              <CreatedTime>{dateFormat(createdAt)}</CreatedTime>
+            </CreatedContainer>
 
-          <BlogLabelContainer type={type}>
-            <BlogPostLabel>{type}</BlogPostLabel>
-            <BlogPostIcon />
-          </BlogLabelContainer>
-        </BlogPostFooter>
-      </BlogPostContainer>
+            <LabelContainer type={type}>
+              <PreviewLabel>{type}</PreviewLabel>
+              <PreviewIcon />
+            </LabelContainer>
+          </PreviewFooter>
+        </PreviewTextContainer>
+      </PreviewContainer>
     </Link>
   );
 };

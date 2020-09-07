@@ -15,8 +15,8 @@ export const COLOR_PALETTE: StyleObject<string> = {
   darkTertiary: '#3b3b3b',
 
   brightPrimary: '#f7f7f7',
-  brightSecondary: '#F1F1F1',
-  brightTertiary: '#b1b1b1',
+  brightSecondary: '#cccccc',
+  brightTertiary: '#8F8F8F',
 
   // Base accent palette
   accentBlue: '#034363',

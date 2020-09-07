@@ -59,7 +59,7 @@ exports[`Markdown renders markdown content 1`] = `
 
 .c0 blockquote > p {
   display: inline;
-  color: #F1F1F1;
+  color: #cccccc;
 }
 
 .c0 blockquote:before {
@@ -85,7 +85,8 @@ exports[`Markdown renders markdown content 1`] = `
         "bgTertiary": "#3b3b3b",
         "pink": "#feb8ce",
         "textPrimary": "#f7f7f7",
-        "textSecondary": "#F1F1F1",
+        "textSecondary": "#cccccc",
+        "textTertiary": "#8F8F8F",
       },
       "fontsizes": Object {
         "baseFontSize": "16px",
