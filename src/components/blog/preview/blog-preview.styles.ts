@@ -46,6 +46,11 @@ export const PreviewTitle = styled.h1`
   font-size: ${({ theme }) => theme.fontsizes.h1FontSize};
   margin: 1rem 0;
   padding: 0 1rem;
+  & span {
+    background-color: ${({ theme }) => theme.colors.bgSecondary};
+    box-shadow: 0px 0px 0 10px ${({ theme }) => theme.colors.bgSecondary};
+    line-height: 1.8;
+  }
 `;
 
 export const PreviewExcerpt = styled.h2`
