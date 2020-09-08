@@ -6,7 +6,7 @@ exports[`Markdown renders markdown content 1`] = `
   font-weight: 400;
   font-style: normal;
   margin-top: 1rem;
-  background-color: #222222;
+  background-color: #121212;
   line-height: 1.8rem;
   color: #f7f7f7;
 }

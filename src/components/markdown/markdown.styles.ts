@@ -8,7 +8,7 @@ export const StyledMD = styled(ReactMarkdown)`
   font-weight: 400;
   font-style: normal;
   margin-top: 1rem;
-  background-color: ${({ theme }) => theme.colors.bgSecondary};
+  background-color: ${({ theme }) => theme.colors.bgPrimary};
   line-height: 1.8rem;
   color: ${({ theme }) => theme.colors.textPrimary};
   & > * {
