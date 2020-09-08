@@ -9,7 +9,6 @@ type Props = Pick<GalleryProps, 'layout'>;
 
 export const GalleryContainer = styled.div<Props>`
   /* Prevent vertical gaps */
-  width: 100%;
   margin-top: ${({ layout }) => (layout === 'grid' ? '2.5rem' : '1rem')};
   line-height: 0;
   column-count: ${({ layout }) => (layout === 'grid' ? '3' : '1')};
