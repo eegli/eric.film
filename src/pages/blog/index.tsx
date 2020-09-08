@@ -18,7 +18,7 @@ const IndexPage: React.FC = () => {
   return (
     <>
       <Head>{metaTags}</Head>
-      <LayoutContainer page='blog'>
+      <LayoutContainer width='small'>
         <Sh1>blog</Sh1>
         <BlogCategories />
         <Footer />

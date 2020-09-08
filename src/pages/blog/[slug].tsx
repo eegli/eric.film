@@ -8,7 +8,7 @@ import { initializeApollo } from '../../lib/apolloClient';
 const IndexPage: React.FC = () => {
   return (
     <>
-      <LayoutContainer page='blog'>
+      <LayoutContainer width='small'>
         <BlogContainer />
         <Footer />
       </LayoutContainer>

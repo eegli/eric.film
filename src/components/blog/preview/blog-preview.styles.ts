@@ -29,7 +29,7 @@ export const PreviewImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.2;
+  opacity: 0.3;
 `;
 export const PreviewContent = styled.div`
   position: absolute;
@@ -61,6 +61,11 @@ export const PreviewExcerpt = styled.h2`
   margin: 0;
   overflow: hidden;
   flex-grow: 1;
+  /* & span {
+    background-color: ${({ theme }) => theme.colors.bgSecondary};
+    box-shadow: 0px 0px 0 5px ${({ theme }) => theme.colors.bgSecondary};
+    line-height: 1.8;
+  } */
 `;
 
 export const PreviewFooter = styled.div`

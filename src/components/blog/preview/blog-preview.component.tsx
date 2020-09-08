@@ -45,7 +45,9 @@ const BlogPreview: React.FC<Blogpost> = ({
           <PreviewTitle>
             <span>{title}</span>
           </PreviewTitle>
-          <PreviewExcerpt>{excerpt}</PreviewExcerpt>
+          <PreviewExcerpt>
+            <span>{excerpt}</span>
+          </PreviewExcerpt>
           <PreviewFooter>
             <CreatedContainer>
               <CreatedIcon />

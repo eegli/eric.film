@@ -18,7 +18,7 @@ const PortfolioPage: React.FC = () => {
   return (
     <>
       <Head>{metaTags}</Head>
-      <LayoutContainer>
+      <LayoutContainer width='small'>
         <Sh1>portfolio</Sh1>
         <PortfolioCategories />
         <Footer />
