@@ -16,7 +16,6 @@ export const LayoutContainerStyle = styled.div<Props>`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 0 1rem;
   max-width: ${({ pageBreakpoint }) => {
     switch (pageBreakpoint) {
       case 'small':

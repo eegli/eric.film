@@ -8,6 +8,8 @@ export const Hr = styled.hr`
 `;
 
 export const Container = styled.div`
+  width: 95%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -17,7 +19,8 @@ export const Container = styled.div`
 `;
 
 // Workaround for targeting the first and last footer link :last-child pseudo
-// class cannot be applied because of Next.js Link component parents
+// class cannot be applied because of Next.js Link component parents. Or I just
+// don't get it.
 
 type SLinkProps = {
   last?: boolean;
