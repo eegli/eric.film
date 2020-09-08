@@ -1,16 +1,20 @@
 import { BlogType } from '@/components/types';
 import { MdAccessTime, MdLabel } from 'react-icons/md';
-import styled, { css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const breakPoint = '700px';
 
-const hover = css`
-  &:hover {
-    cursor: pointer;
+const fadeIn = keyframes`{
+  0% {
+    opacity: 0;
   }
-`;
+  100% {
+    opacity: 1;
+  }
+}`;
 
 export const PreviewContainer = styled.a`
+  animation: ${fadeIn} 2s;
   position: relative;
   max-width: 400px;
   min-width: 250px;
@@ -20,7 +24,9 @@ export const PreviewContainer = styled.a`
   @media screen and (max-width: ${breakPoint}) {
     flex-wrap: wrap;
   }
-  ${hover}
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const PreviewImage = styled.img`

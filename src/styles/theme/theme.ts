@@ -1,3 +1,4 @@
+import { BREAKPOINTS } from './breakpoints';
 import { COLOR_PALETTE } from './colors';
 import { FONTSIZES } from './fontsizes';
 
@@ -25,6 +26,10 @@ export const darkTheme = {
 
   fontsizes: {
     ...FONTSIZES,
+  },
+
+  breakpoints: {
+    ...BREAKPOINTS,
   },
 };
 

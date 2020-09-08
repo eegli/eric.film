@@ -1,13 +1,16 @@
+import { Breakpoints } from '@/src/styles';
 import { LayoutContainerStyle } from './layout.styles';
 
-// TODO LARGE | MEDIUM | SMALL
-
 export type Props = {
-  width?: 'large' | 'medium' | 'small' | 'xsmall';
+  pageBreakpoint: keyof typeof Breakpoints;
 };
 
-const LayoutContainer: React.FC<Props> = ({ width, children }) => {
-  return <LayoutContainerStyle width={width}>{children}</LayoutContainerStyle>;
+const LayoutContainer: React.FC<Props> = ({ pageBreakpoint, children }) => {
+  return (
+    <LayoutContainerStyle pageBreakpoint={pageBreakpoint}>
+      {children}
+    </LayoutContainerStyle>
+  );
 };
 
 export default LayoutContainer;
