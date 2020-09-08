@@ -14,7 +14,6 @@ import {
   PreviewFooter,
   PreviewIcon,
   PreviewImage,
-  PreviewImageContainer,
   PreviewLabel,
   PreviewTitle,
 } from './blog-preview.styles';
@@ -33,13 +32,11 @@ const BlogPreview: React.FC<Blogpost> = ({
   return (
     <Link href='/blog/[slug]' as={`/blog/${slug}`} passHref>
       <PreviewContainer>
-        <PreviewImageContainer>
-          <ProgressiveImage
-            src={_previewImage.url}
-            placeholder='/static/img/placeholder.jpg'>
-            {(src: string) => <PreviewImage src={src} alt='blog-image' />}
-          </ProgressiveImage>
-        </PreviewImageContainer>
+        <ProgressiveImage
+          src={_previewImage.url}
+          placeholder='/static/img/placeholder.jpg'>
+          {(src: string) => <PreviewImage src={src} alt='blog-image' />}
+        </ProgressiveImage>
 
         <PreviewContent>
           <PreviewTitle>

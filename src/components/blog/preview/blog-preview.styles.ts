@@ -13,16 +13,14 @@ const hover = css`
 export const PreviewContainer = styled.a`
   position: relative;
   max-width: 400px;
+  min-width: 250px;
+  height: 400px;
   margin: 0.5rem;
   border-radius: 0.5rem;
   @media screen and (max-width: ${breakPoint}) {
     flex-wrap: wrap;
   }
   ${hover}
-`;
-
-export const PreviewImageContainer = styled.div`
-  height: 400px;
 `;
 
 export const PreviewImage = styled.img`
