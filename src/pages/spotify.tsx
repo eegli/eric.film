@@ -6,7 +6,7 @@ const SpotifyPage: React.FC = () => {
   return (
     <>
       <BackgroundVideo source='/static/vid/sound_bg.mp4' />
-      <LayoutContainer width='small'>
+      <LayoutContainer pageBreakpoint='small'>
         <SpotifyPlaylists />
       </LayoutContainer>
     </>

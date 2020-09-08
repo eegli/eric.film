@@ -3,7 +3,7 @@ import LayoutContainer from '@/shared/layout/layout.container';
 
 const DisclaimerPage: React.FC = () => {
   return (
-    <LayoutContainer width='small'>
+    <LayoutContainer pageBreakpoint='small'>
       <Disclaimer />
     </LayoutContainer>
   );

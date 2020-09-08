@@ -19,8 +19,6 @@ export const LayoutContainerStyle = styled.div<Props>`
   padding: 0 1rem;
   max-width: ${({ pageBreakpoint }) => {
     switch (pageBreakpoint) {
-      case 'tiny':
-        return Breakpoints.tiny;
       case 'small':
         return Breakpoints.small;
       case 'medium':
