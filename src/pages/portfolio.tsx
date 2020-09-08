@@ -1,24 +1,22 @@
 import PortfolioCategories from '@/components/categories/root-categories/portfolio-categories.component';
+import CustomHead from '@/components/custom-head/custom-head.component';
 import Footer from '@/components/footer/footer.component';
 import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';
 import { ImgsPortfolio } from '@/src/api/queries';
 import { SEO_PORTFOLIO_META as meta } from '@/src/config';
-import { createMetaTags } from '@/src/utils/meta';
 import { GetServerSideProps } from 'next';
-import Head from 'next/head';
 import { initializeApollo } from '../lib/apolloClient';
 
 const PortfolioPage: React.FC = () => {
-  const metaTags = createMetaTags({
-    title: meta.title,
-    description: meta.description,
-    ogImage: meta.image,
-  });
   return (
     <>
-      <Head>{metaTags}</Head>
-      <LayoutContainer>
+      <CustomHead
+        title={meta.title}
+        description={meta.description}
+        ogImage={meta.image}
+      />
+      <LayoutContainer pageBreakpoint='medium'>
         <Sh1>portfolio</Sh1>
         <PortfolioCategories />
         <Footer />

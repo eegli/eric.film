@@ -1,11 +1,16 @@
+import { Breakpoints } from '@/src/styles';
 import { LayoutContainerStyle } from './layout.styles';
 
 export type Props = {
-  page?: 'blog' | 'about';
+  pageBreakpoint: keyof typeof Breakpoints;
 };
 
-const LayoutContainer: React.FC<Props> = ({ page, children }) => {
-  return <LayoutContainerStyle page={page}>{children}</LayoutContainerStyle>;
+const LayoutContainer: React.FC<Props> = ({ pageBreakpoint, children }) => {
+  return (
+    <LayoutContainerStyle pageBreakpoint={pageBreakpoint}>
+      {children}
+    </LayoutContainerStyle>
+  );
 };
 
 export default LayoutContainer;

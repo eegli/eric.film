@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About renders card component 1`] = `
+<Fragment>
+  <footerstyles__Hr />
+  <footerstyles__Container>
+    <Link
+      href="/disclaimer#privacy"
+      passHref={true}
+    >
+      <footerstyles__SLink
+        first={true}
+      >
+        privacy
+      </footerstyles__SLink>
+    </Link>
+    <Link
+      href="/disclaimer#acknowledgements"
+      passHref={true}
+    >
+      <footerstyles__SLink>
+        acknowledgements
+      </footerstyles__SLink>
+    </Link>
+    <Link
+      href="/disclaimer#imprint"
+      passHref={true}
+    >
+      <footerstyles__SLink
+        last={true}
+      >
+        imprint
+      </footerstyles__SLink>
+    </Link>
+    <footerstyles__GitHubIcon
+      href="https://github.com/eegli/eric.film"
+      rel="noopener noreferrer nofollow"
+      target="_blank"
+    >
+      <FaGithub />
+    </footerstyles__GitHubIcon>
+  </footerstyles__Container>
+</Fragment>
+`;

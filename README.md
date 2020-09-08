@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/eegli/eric.film">
-    <img src="https://camo.githubusercontent.com/264e6781d53b931769ab3302aac488359ccef915/68747470733a2f2f626574612e657269632e66696c6d2f7374617469632f696d672f7661722f6769746875625f726561646d655f6c6f676f2e706e67" alt="Logo" height="80">
+    <img src="https://beta.eric.film/static/img/og/schema_logo.png" alt="Logo" height="80">
   </a>
   <h3 align="center">portfolio | blog | @eegli</h3>
    <p align="center">
@@ -45,7 +45,7 @@ My GraphQL endpoint needs to be public since the frontend has the possibility to
 
 - [Style guide Material design](https://material.io/design)
 - [Style guide dark mode UI](https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129)
-- [My base gray palette](https://coolors.co/121212-222222-3b3b3b-b1b1b1-f1f1f1-f7f7f7)
+- [My base gray palette](https://coolors.co/121212-222222-3b3b3b-8f8f8f-cccccc-f7f7f7)
 - [My base accent palette for dark/bright mode](https://coolors.co/034363-53272d-365952)
 
 > All Next templates

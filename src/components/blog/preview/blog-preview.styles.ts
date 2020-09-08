@@ -1,79 +1,101 @@
 import { BlogType } from '@/components/types';
 import { MdAccessTime, MdLabel } from 'react-icons/md';
-import styled, { css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-const hover = css`
+const breakPoint = '700px';
+
+const fadeIn = keyframes`{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}`;
+
+export const PreviewContainer = styled.a`
+  animation: ${fadeIn} 2s;
+  position: relative;
+  max-width: 400px;
+  min-width: 250px;
+  height: 400px;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  @media screen and (max-width: ${breakPoint}) {
+    flex-wrap: wrap;
+  }
   &:hover {
     cursor: pointer;
   }
 `;
 
-export const BlogPostContainer = styled.a`
+export const PreviewImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+`;
+export const PreviewContent = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  max-width: 360px;
-  width: 360px;
-  padding: 1rem;
-  margin: 0.5rem;
-  background-color: ${({ theme }) => theme.colors.bgSecondary};
-  border-radius: 0.5rem;
-  ${hover}
+  justify-content: flex-start;
 `;
 
-export const BlogPreviewImage = styled.img`
-  width: 360px;
-  max-height: 180px;
-  object-fit: cover;
-`;
-
-export const BlogPostTitle = styled.h1`
+export const PreviewTitle = styled.h1`
   font-size: ${({ theme }) => theme.fontsizes.h1FontSize};
-  margin: 0.5rem 0 1rem 0;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  & span {
+    background-color: ${({ theme }) => theme.colors.bgSecondary};
+    box-shadow: 0px 0px 0 10px ${({ theme }) => theme.colors.bgSecondary};
+    line-height: 1.8;
+  }
 `;
 
-export const BlogPostExcerpt = styled.h2`
+export const PreviewExcerpt = styled.h2`
   font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   font-weight: 400;
   color: ${({ theme }) => theme.colors.textPrimary};
+  padding: 1rem;
+  margin: 0;
+  overflow: hidden;
+  flex-grow: 1;
+  /* & span {
+    background-color: ${({ theme }) => theme.colors.bgSecondary};
+    box-shadow: 0px 0px 0 5px ${({ theme }) => theme.colors.bgSecondary};
+    line-height: 1.8;
+  } */
 `;
 
-export const BlogPostFooter = styled.div`
-  margin-top: 1rem;
+export const PreviewFooter = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  color: ${({ theme }) => theme.colors.textPrimary};
+  padding: 1rem;
 `;
-export const BlogCreatedContainer = styled.div`
-  /* background-color: ${({ theme }) => theme.colors.bgPrimary}; */
-  padding: 0.3rem 0.5rem;
-  border-radius: 0.5rem;
+export const CreatedContainer = styled.div`
   display: flex;
   align-items: center;
+  color: ${({ theme }) => theme.colors.textTertiary};
 `;
-export const BlogCreatedTime = styled.p`
+export const CreatedTime = styled.p`
   font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
   margin: 0 0 0 0.5rem;
+  color: ${({ theme }) => theme.colors.textTertiary};
 `;
 
-export const BlogCreatedIcon = styled(MdAccessTime)`
-  font-size: ${({ theme }) => theme.fontsizes.baseIconFontSize};
-`;
-
-export const BlogPostLabel = styled.p`
-  font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
-  margin: 0 0.5rem 0 0;
-`;
-
-export const BlogPostIcon = styled(MdLabel)`
+export const CreatedIcon = styled(MdAccessTime)`
   font-size: ${({ theme }) => theme.fontsizes.baseIconFontSize};
 `;
 
 type LabelProps = {
   type: BlogType;
 };
-export const BlogLabelContainer = styled.div<LabelProps>`
+export const LabelContainer = styled.div<LabelProps>`
   padding: 0.3rem 0.5rem;
   display: flex;
   align-items: center;
@@ -87,4 +109,13 @@ export const BlogLabelContainer = styled.div<LabelProps>`
       ? theme.colors.accents.melon
       : null};
   border-radius: 0.5rem;
+`;
+
+export const PreviewLabel = styled.p`
+  font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
+  margin: 0 0.5rem 0 0;
+`;
+
+export const PreviewIcon = styled(MdLabel)`
+  font-size: ${({ theme }) => theme.fontsizes.baseIconFontSize};
 `;

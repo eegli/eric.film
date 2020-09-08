@@ -21,6 +21,11 @@ exports[`About renders social bar component 1`] = `
 <ThemeProvider
   theme={
     Object {
+      "breakpoints": Object {
+        "large": "1200px",
+        "medium": "960px",
+        "small": "830px",
+      },
       "colors": Object {
         "accents": Object {
           "brightBlue": "#365952",
@@ -32,7 +37,8 @@ exports[`About renders social bar component 1`] = `
         "bgTertiary": "#3b3b3b",
         "pink": "#feb8ce",
         "textPrimary": "#f7f7f7",
-        "textSecondary": "#F1F1F1",
+        "textSecondary": "#cccccc",
+        "textTertiary": "#8F8F8F",
       },
       "fontsizes": Object {
         "baseFontSize": "16px",

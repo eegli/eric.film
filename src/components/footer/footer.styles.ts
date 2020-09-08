@@ -8,20 +8,19 @@ export const Hr = styled.hr`
 `;
 
 export const Container = styled.div`
+  width: 95%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
-  padding: 0 1rem;
   flex-wrap: wrap;
   color: ${({ theme }) => theme.colors.textPrimary};
   font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
   margin-bottom: 1rem;
-  @media screen and (min-width: 1200px) {
-    padding: 0;
-  }
 `;
 
 // Workaround for targeting the first and last footer link :last-child pseudo
-// class cannot be applied because of Next.js Link component parents
+// class cannot be applied because of Next.js Link component parents. Or I just
+// don't get it.
 
 type SLinkProps = {
   last?: boolean;
@@ -31,7 +30,7 @@ type SLinkProps = {
 export const SLink = styled.a<SLinkProps>`
   margin: 0 0.5rem;
   margin: ${({ last, first }) => (last || first ? '0' : '0 0.5rem')};
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 960px) {
     justify-content: flex-start;
   }
   &:hover {
@@ -42,7 +41,7 @@ export const SLink = styled.a<SLinkProps>`
 export const GitHubIcon = styled.a`
   font-size: ${({ theme }) => theme.fontsizes.baseIconFontSize};
   margin-left: auto;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 960px) {
     padding: 0;
   }
 `;
