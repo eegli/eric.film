@@ -1,23 +1,21 @@
 import BlogCategories from '@/components/categories/root-categories/blog-categories.component';
+import CustomHead from '@/components/custom-head/custom-head.component';
 import Footer from '@/components/footer/footer.component';
 import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';
 import { SEO_BLOG_INDEX_META as meta } from '@/src/config';
-import { createMetaTags } from '@/src/utils/meta';
 import { GetServerSideProps } from 'next';
-import Head from 'next/head';
 import { BlogpostsPreview, blogpostsPreviewVars } from '../../api/queries';
 import { initializeApollo } from '../../lib/apolloClient';
 
 const IndexPage: React.FC = () => {
-  const metaTags = createMetaTags({
-    title: meta.title,
-    description: meta.description,
-    ogImage: meta.image,
-  });
   return (
     <>
-      <Head>{metaTags}</Head>
+      <CustomHead
+        title={meta.title}
+        description={meta.description}
+        ogImage={meta.image}
+      />
       <LayoutContainer pageBreakpoint='medium'>
         <Sh1>blog</Sh1>
         <BlogCategories />

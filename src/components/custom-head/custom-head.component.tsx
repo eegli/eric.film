@@ -1,10 +1,12 @@
+import Head from 'next/head';
+
 type MetaProps = {
   title: string;
   description: string;
   ogImage: { url: string };
 };
 
-export const createMetaTags = ({ title, description, ogImage }: MetaProps) => {
+const CustomHead = ({ title, description, ogImage }: MetaProps) => {
   // Meta descriptions can be any length, but Google generally truncates
   // snippets to ~155–160 characters.
   const trimmedDescription =
@@ -12,7 +14,7 @@ export const createMetaTags = ({ title, description, ogImage }: MetaProps) => {
       ? description.substring(0, 150).concat('...')
       : description;
   return (
-    <>
+    <Head>
       <title>{title}</title>
       <meta name='description' content={trimmedDescription} />
       <meta property='og:title' content={title} />
@@ -22,6 +24,8 @@ export const createMetaTags = ({ title, description, ogImage }: MetaProps) => {
       <meta name='twitter:title' content={title} />
       <meta name='twitter:description' content={trimmedDescription} />
       <meta name='twitter:image' content={ogImage.url} />
-    </>
+    </Head>
   );
 };
+
+export default CustomHead;

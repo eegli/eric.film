@@ -1,9 +1,9 @@
+import CustomHead from '@/components/custom-head/custom-head.component';
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
 import { Blogpost, useBlogpostQuery } from '@/components/types';
 import { getElementFromArray } from '@/src/utils/array';
 import { checkIfImageExists } from '@/src/utils/blog';
-import { createMetaTags } from '@/src/utils/meta';
 import { makeBlogSchemaForHead } from '@/src/utils/schema';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -47,16 +47,15 @@ const BlogContainer: React.FC = () => {
       id: post.id,
     });
 
-    const metaTags = createMetaTags({
-      title: post.title,
-      description: post.excerpt,
-      ogImage: metaImage,
-    });
-
     return (
       <>
+        <CustomHead
+          title={post.title}
+          description={post.excerpt}
+          ogImage={metaImage}
+        />
+
         <Head>
-          {metaTags}
           <script
             key={`blogLd-JSON-${post.id}`}
             type='application/ld+json'
