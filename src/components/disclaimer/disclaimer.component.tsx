@@ -1,24 +1,28 @@
 import Markdown from '@/components/markdown/markdown.component';
+import styled from 'styled-components';
 import acknowledgements from './content/acknowledgements.md';
 import imprint from './content/imprint.md';
 import privacy from './content/privacy.md';
-import { InfoContainer } from './disclaimer.styles';
+
+const InfoWrapper = styled.div`
+  margin: 2rem 0;
+`;
 
 const Disclaimer: React.FC = () => {
   return (
     <>
-      <InfoContainer>
+      <InfoWrapper>
         <a id='privacy' />
         <Markdown content={privacy} />
-      </InfoContainer>
-      <InfoContainer>
+      </InfoWrapper>
+      <InfoWrapper>
         <a id='acknowledgements' />
         <Markdown content={acknowledgements} />
-      </InfoContainer>
-      <InfoContainer>
+      </InfoWrapper>
+      <InfoWrapper>
         <a id='imprint' />
         <Markdown content={imprint} />
-      </InfoContainer>
+      </InfoWrapper>
     </>
   );
 };

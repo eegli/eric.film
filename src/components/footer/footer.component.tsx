@@ -8,13 +8,13 @@ const Footer: React.FC = () => {
       <Hr />
       <Container>
         <Link href='/disclaimer#privacy' passHref>
-          <SLink first>privacy</SLink>
+          <SLink>privacy</SLink>
         </Link>
         <Link href='/disclaimer#acknowledgements' passHref>
           <SLink>acknowledgements</SLink>
         </Link>
         <Link href='/disclaimer#imprint' passHref>
-          <SLink last>imprint</SLink>
+          <SLink>imprint</SLink>
         </Link>
         <GitHubIcon
           href='https://github.com/eegli/eric.film'

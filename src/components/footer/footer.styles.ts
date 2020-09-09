@@ -7,6 +7,12 @@ export const Hr = styled.hr`
   height: 3px;
 `;
 
+// Workaround for targeting the first and last footer link :last-child pseudo
+// class cannot be applied because of Next.js Link component parents. Or I just
+// don't get it.
+
+export const SLink = styled.a``;
+
 export const Container = styled.div`
   width: 95%;
   margin: 0 auto;
@@ -16,25 +22,14 @@ export const Container = styled.div`
   color: ${({ theme }) => theme.colors.textPrimary};
   font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
   margin-bottom: 1rem;
-`;
-
-// Workaround for targeting the first and last footer link :last-child pseudo
-// class cannot be applied because of Next.js Link component parents. Or I just
-// don't get it.
-
-type SLinkProps = {
-  last?: boolean;
-  first?: boolean;
-};
-
-export const SLink = styled.a<SLinkProps>`
-  margin: 0 0.5rem;
-  margin: ${({ last, first }) => (last || first ? '0' : '0 0.5rem')};
-  @media screen and (min-width: 960px) {
-    justify-content: flex-start;
+  ${SLink} {
+    margin: 0 2rem;
+    &hover {
+      text-decoration: underline;
+    }
   }
-  &:hover {
-    text-decoration: underline;
+  ${SLink}:first-child ${SLink}:last-child {
+    margin: 0;
   }
 `;
 
