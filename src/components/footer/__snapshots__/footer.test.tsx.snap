@@ -1,37 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`About renders card component 1`] = `
-<Fragment>
+<footerstyles__FooterWrapper>
   <footerstyles__Hr />
-  <footerstyles__Container>
-    <Link
-      href="/disclaimer#privacy"
-      passHref={true}
-    >
-      <footerstyles__SLink
-        first={true}
+  <footerstyles__ContentContainer>
+    <footerstyles__LinkContainer>
+      <Link
+        href="/disclaimer#privacy"
       >
-        privacy
-      </footerstyles__SLink>
-    </Link>
-    <Link
-      href="/disclaimer#acknowledgements"
-      passHref={true}
-    >
-      <footerstyles__SLink>
-        acknowledgements
-      </footerstyles__SLink>
-    </Link>
-    <Link
-      href="/disclaimer#imprint"
-      passHref={true}
-    >
-      <footerstyles__SLink
-        last={true}
+        <a>
+          privacy
+        </a>
+      </Link>
+      <Link
+        href="/disclaimer#acknowledgements"
       >
-        imprint
-      </footerstyles__SLink>
-    </Link>
+        <a>
+          acknowledgements
+        </a>
+      </Link>
+      <Link
+        href="/disclaimer#imprint"
+      >
+        <a>
+          imprint
+        </a>
+      </Link>
+    </footerstyles__LinkContainer>
     <footerstyles__GitHubIcon
       href="https://github.com/eegli/eric.film"
       rel="noopener noreferrer nofollow"
@@ -39,6 +34,6 @@ exports[`About renders card component 1`] = `
     >
       <FaGithub />
     </footerstyles__GitHubIcon>
-  </footerstyles__Container>
-</Fragment>
+  </footerstyles__ContentContainer>
+</footerstyles__FooterWrapper>
 `;

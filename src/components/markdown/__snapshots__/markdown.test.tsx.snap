@@ -78,6 +78,7 @@ exports[`Markdown renders markdown content 1`] = `
         "large": "1200px",
         "medium": "960px",
         "small": "830px",
+        "xsmall": "700px",
       },
       "colors": Object {
         "accents": Object {
