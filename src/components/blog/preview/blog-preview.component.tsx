@@ -30,34 +30,36 @@ const BlogPreview: React.FC<Blogpost> = ({
   const _previewImage = checkIfImageExists({ image: previewImage, id });
 
   return (
-    <Link href='/blog/[slug]' as={`/blog/${slug}`} passHref>
-      <PreviewContainer>
-        <ProgressiveImage
-          src={_previewImage.url}
-          placeholder='/static/img/placeholder.jpg'>
-          {(src: string) => <PreviewImage src={src} alt='blog-image' />}
-        </ProgressiveImage>
+    <Link href='/blog/[slug]' as={`/blog/${slug}`}>
+      <a>
+        <PreviewContainer>
+          <ProgressiveImage
+            src={_previewImage.url}
+            placeholder='/static/img/placeholder.jpg'>
+            {(src: string) => <PreviewImage src={src} alt='blog-image' />}
+          </ProgressiveImage>
 
-        <PreviewContent>
-          <PreviewTitle>
-            <span>{title}</span>
-          </PreviewTitle>
-          <PreviewExcerpt>
-            <span>{excerpt}</span>
-          </PreviewExcerpt>
-          <PreviewFooter>
-            <CreatedContainer>
-              <CreatedIcon />
-              <CreatedTime>{dateFormat(createdAt)}</CreatedTime>
-            </CreatedContainer>
+          <PreviewContent>
+            <PreviewTitle>
+              <span>{title}</span>
+            </PreviewTitle>
+            <PreviewExcerpt>
+              <span>{excerpt}</span>
+            </PreviewExcerpt>
+            <PreviewFooter>
+              <CreatedContainer>
+                <CreatedIcon />
+                <CreatedTime>{dateFormat(createdAt)}</CreatedTime>
+              </CreatedContainer>
 
-            <LabelContainer type={type}>
-              <PreviewLabel>{type}</PreviewLabel>
-              <PreviewIcon />
-            </LabelContainer>
-          </PreviewFooter>
-        </PreviewContent>
-      </PreviewContainer>
+              <LabelContainer type={type}>
+                <PreviewLabel>{type}</PreviewLabel>
+                <PreviewIcon />
+              </LabelContainer>
+            </PreviewFooter>
+          </PreviewContent>
+        </PreviewContainer>
+      </a>
     </Link>
   );
 };

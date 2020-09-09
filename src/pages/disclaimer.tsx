@@ -11,7 +11,7 @@ const DisclaimerPage: React.FC = () => {
         description={meta.description}
         ogImage={meta.image}
       />
-      <LayoutContainer pageBreakpoint='small'>
+      <LayoutContainer breakpoint='small'>
         <Disclaimer />
       </LayoutContainer>
     </>

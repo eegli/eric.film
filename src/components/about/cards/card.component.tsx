@@ -1,17 +1,17 @@
 import SocialBar from '../social-bar/social-bar.component';
 import {
   Card,
-  CardContainer,
   CardDescription,
   CardHeader,
   CardPicture,
   CardTitle,
+  CardWrapper,
 } from './card.styles';
 
 const CardComponent: React.FC = () => (
   <>
     <CardHeader>{' meet the amazing team '}</CardHeader>
-    <CardContainer>
+    <CardWrapper>
       <Card>
         <CardPicture>
           <source srcSet='/static/img/about/about-2.webp' type='image/webp' />
@@ -73,7 +73,7 @@ const CardComponent: React.FC = () => (
           <SocialBar />
         </CardDescription>
       </Card>
-    </CardContainer>
+    </CardWrapper>
   </>
 );
 

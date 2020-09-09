@@ -13,7 +13,7 @@ const fadeIn = keyframes`{
   }
 }`;
 
-export const PreviewContainer = styled.a`
+export const PreviewContainer = styled.div`
   animation: ${fadeIn} 2s;
   position: relative;
   max-width: 400px;
@@ -21,12 +21,6 @@ export const PreviewContainer = styled.a`
   height: 400px;
   margin: 0.5rem;
   border-radius: 0.5rem;
-  @media screen and (max-width: ${breakPoint}) {
-    flex-wrap: wrap;
-  }
-  &:hover {
-    cursor: pointer;
-  }
 `;
 
 export const PreviewImage = styled.img`
@@ -50,7 +44,7 @@ export const PreviewTitle = styled.h1`
   font-size: ${({ theme }) => theme.fontsizes.h1FontSize};
   margin: 1rem 0;
   padding: 0 1rem;
-  & span {
+  & > span {
     background-color: ${({ theme }) => theme.colors.bgSecondary};
     box-shadow: 0px 0px 0 10px ${({ theme }) => theme.colors.bgSecondary};
     line-height: 1.8;
@@ -65,11 +59,6 @@ export const PreviewExcerpt = styled.h2`
   margin: 0;
   overflow: hidden;
   flex-grow: 1;
-  /* & span {
-    background-color: ${({ theme }) => theme.colors.bgSecondary};
-    box-shadow: 0px 0px 0 5px ${({ theme }) => theme.colors.bgSecondary};
-    line-height: 1.8;
-  } */
 `;
 
 export const PreviewFooter = styled.div`

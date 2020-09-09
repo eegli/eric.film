@@ -13,7 +13,7 @@ const AboutPage: React.FC = () => {
         description={meta.description}
         ogImage={meta.image}
       />
-      <LayoutContainer pageBreakpoint='large'>
+      <LayoutContainer breakpoint='large'>
         <Sh1>about</Sh1>
         <About />
         <Footer />

@@ -1,30 +1,25 @@
 import styled from 'styled-components';
 
-const mobileBp = '1000px';
-
-export const Container = styled.div`
-  margin-top: 0.5rem;
-  width: 93%;
+export const ResumeWrapper = styled.div`
+  width: 100%;
   color: ${({ theme }) => theme.colors.bgPrimary};
-  padding: 1rem;
   display: flex;
-  @media screen and (max-width: ${mobileBp}) {
+  justify-content: center;
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
 export const Section = styled.div`
   flex: 1;
-  margin-right: 1rem;
-  &:nth-child(2) {
-    margin-left: 1rem;
-    margin-right: 0;
-    @media screen and (max-width: ${mobileBp}) {
-      margin: 2rem 0 0 0;
+  width: 40%;
+  padding: 2rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    width: 90%;
+    &:first-child {
+      padding-bottom: 0;
     }
-  }
-  @media screen and (max-width: ${mobileBp}) {
-    margin: 0;
   }
 `;
 
@@ -66,6 +61,7 @@ export const ToggleContainer = styled.div`
 `;
 
 export const ToggleTitle = styled.h4`
+  color: ${({ theme }) => theme.colors.textPrimary};
   display: inline;
   margin: 0;
   font-weight: 400;

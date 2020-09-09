@@ -16,7 +16,7 @@ const IndexPage: React.FC = () => {
         description={meta.description}
         ogImage={meta.image}
       />
-      <LayoutContainer pageBreakpoint='medium'>
+      <LayoutContainer breakpoint='medium'>
         <Sh1>blog</Sh1>
         <BlogCategories />
         <Footer />

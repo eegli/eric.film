@@ -16,7 +16,7 @@ const PortfolioPage: React.FC = () => {
         description={meta.description}
         ogImage={meta.image}
       />
-      <LayoutContainer pageBreakpoint='medium'>
+      <LayoutContainer breakpoint='medium'>
         <Sh1>portfolio</Sh1>
         <PortfolioCategories />
         <Footer />

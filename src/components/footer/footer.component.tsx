@@ -1,29 +1,37 @@
 import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
-import { Container, GitHubIcon, Hr, SLink } from './footer.styles';
+import {
+  ContentContainer,
+  FooterWrapper,
+  GitHubIcon,
+  Hr,
+  LinkContainer,
+} from './footer.styles';
 
 const Footer: React.FC = () => {
   return (
-    <>
+    <FooterWrapper>
       <Hr />
-      <Container>
-        <Link href='/disclaimer#privacy' passHref>
-          <SLink>privacy</SLink>
-        </Link>
-        <Link href='/disclaimer#acknowledgements' passHref>
-          <SLink>acknowledgements</SLink>
-        </Link>
-        <Link href='/disclaimer#imprint' passHref>
-          <SLink>imprint</SLink>
-        </Link>
+      <ContentContainer>
+        <LinkContainer>
+          <Link href='/disclaimer#privacy'>
+            <a>privacy</a>
+          </Link>
+          <Link href='/disclaimer#acknowledgements'>
+            <a>acknowledgements</a>
+          </Link>
+          <Link href='/disclaimer#imprint'>
+            <a>imprint</a>
+          </Link>
+        </LinkContainer>
         <GitHubIcon
           href='https://github.com/eegli/eric.film'
           rel='noopener noreferrer nofollow'
           target='_blank'>
           <FaGithub />
         </GitHubIcon>
-      </Container>
-    </>
+      </ContentContainer>
+    </FooterWrapper>
   );
 };
 
