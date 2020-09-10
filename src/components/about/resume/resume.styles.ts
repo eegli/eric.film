@@ -31,18 +31,18 @@ export const ResumeContent = styled.div`
     color: ${({ theme }) => theme.colors.textSecondary};
     font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
   }
-  & > div {
+  & div {
     margin-top: 0.5rem;
     padding: 0.6rem;
 
-    & > p {
+    & p {
       margin: 0 0 0.8rem 0;
     }
-    & > ul {
+    & ul {
       margin: 0 0 0.8rem 0;
       padding-left: 1.2rem;
     }
-    & * li {
+    & li {
       margin-bottom: 0.5rem;
     }
   }
@@ -52,7 +52,7 @@ export const ToggleContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.bgTertiary};
+  background-color: ${({ theme }) => theme.colors.bgSecondary};
   color: ${({ theme }) => theme.colors.textSecondary};
   padding: 1rem;
   &:hover {

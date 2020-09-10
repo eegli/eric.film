@@ -44,17 +44,15 @@ export const StyledMD = styled(ReactMarkdown)`
   }
 
   & blockquote {
-    background: ${({ theme }) => theme.colors.bgTertiary};
+    background: ${({ theme }) => theme.colors.bgSecondary};
     border-left: 4px solid ${({ theme }) => theme.colors.textPrimary};
     margin: 1.5rem 2rem;
     padding: 0.5em 10px;
-    & > p {
+    color: ${({ theme }) => theme.colors.textPrimary};
+    & p {
       display: inline;
-      color: ${({ theme }) => theme.colors.textSecondary};
-      /* font-style: italic; */
     }
     &:before {
-      color: #ccc;
       content: open-quote;
       font-size: 2em;
       line-height: 0.1em;

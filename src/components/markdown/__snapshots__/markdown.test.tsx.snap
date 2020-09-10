@@ -51,19 +51,18 @@ exports[`Markdown renders markdown content 1`] = `
 }
 
 .c0 blockquote {
-  background: #3b3b3b;
+  background: #222222;
   border-left: 4px solid #f7f7f7;
   margin: 1.5rem 2rem;
   padding: 0.5em 10px;
+  color: #f7f7f7;
 }
 
-.c0 blockquote > p {
+.c0 blockquote p {
   display: inline;
-  color: #cccccc;
 }
 
 .c0 blockquote:before {
-  color: #ccc;
   content: open-quote;
   font-size: 2em;
   line-height: 0.1em;

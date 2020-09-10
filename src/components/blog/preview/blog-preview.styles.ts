@@ -2,8 +2,6 @@ import { BlogType } from '@/components/types';
 import { MdAccessTime, MdLabel } from 'react-icons/md';
 import styled, { keyframes } from 'styled-components';
 
-const breakPoint = '700px';
-
 const fadeIn = keyframes`{
   0% {
     opacity: 0;
@@ -44,7 +42,7 @@ export const PreviewTitle = styled.h1`
   font-size: ${({ theme }) => theme.fontsizes.h1FontSize};
   margin: 1rem 0;
   padding: 0 1rem;
-  & > span {
+  & span {
     background-color: ${({ theme }) => theme.colors.bgSecondary};
     box-shadow: 0px 0px 0 10px ${({ theme }) => theme.colors.bgSecondary};
     line-height: 1.8;

@@ -1,30 +1,22 @@
-import {
-  BgContainer,
-  IntroContainer,
-} from '@/components/categories/card-common/shared.styles';
+import { CategoryWrapper } from '@/components/categories/card-common/shared.styles';
 import { Table } from './dev-category.styles';
 const DevCategory: React.FC = () => {
   return (
     <>
-      <IntroContainer dev>
-        <p>
-          <span>eric.film</span>
-        </p>
-      </IntroContainer>
-      <BgContainer dev>
+      <CategoryWrapper dev>
         <Table>
           <tbody>
+            <tr>
+              <th>project</th>
+              <td>eric.film</td>
+            </tr>
             <tr>
               <th>description</th>
               <td>My personal website and blog</td>
             </tr>
             <tr>
-              <th>supported browsers</th>
-              <td>Chrome, Safari, Firefox</td>
-            </tr>
-            <tr>
               <th>languages</th>
-              <td>Typescript, Javascript</td>
+              <td>Typescript</td>
             </tr>
             <tr>
               <th>framework</th>
@@ -69,7 +61,7 @@ const DevCategory: React.FC = () => {
             </tr>
           </tbody>
         </Table>
-      </BgContainer>
+      </CategoryWrapper>
     </>
   );
 };

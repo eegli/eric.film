@@ -28,9 +28,7 @@ export const GLOBAL = css`
   a {
     color: inherit;
     text-decoration: inherit;
-    &hover {
-      cursor: pointer;
-    }
+    cursor: pointer;
   }
 
   p {

@@ -33,8 +33,14 @@ export const darkTheme = {
   },
 };
 
-// Spread in the default dark theme and replace if necessary
-export const lightTheme = {
+// Next, we spread in the default dark theme and override styles if necessary.
+// Also, we make sure the theme objects have the exact same shape - otherwise,
+// switching between themes can become dangerous since some properties may not
+// exist on both!
+
+// Try to add a unique property to "lightTheme". Typescript will complain
+// unless you add it to the default dark theme first.
+export const lightTheme: Theme = {
   ...darkTheme,
 
   colors: {
@@ -51,8 +57,7 @@ export const lightTheme = {
   },
 };
 
-type DarkTheme = typeof darkTheme;
-type LightTheme = typeof lightTheme;
+type Theme = typeof darkTheme;
 
 // We extend the default interface of styled-components so that we don't have to
 // write everything twice (an object containing the styles and a type for it).
@@ -64,7 +69,5 @@ type LightTheme = typeof lightTheme;
 
 declare module 'styled-components' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  interface DefaultTheme extends DarkTheme {}
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  interface DefaultTheme extends LightTheme {}
+  interface DefaultTheme extends Theme {}
 }

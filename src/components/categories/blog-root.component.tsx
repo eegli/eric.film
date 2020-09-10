@@ -6,15 +6,15 @@ import {
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaSort } from 'react-icons/fa';
-import { useActiveCat } from '../../hooks/useActiveCat';
-import BlogSwitch from '../switch-categories/blog-switch.component';
+import { useActiveCat } from '../hooks/useActiveCat';
 import {
   CardContainer,
   CategoryContainer,
   SelectionCardContainer,
   SortButton,
   SortButtonContainer,
-} from './categories.styles';
+} from './root.styles';
+import BlogSwitch from './routes/blog-routes.component';
 
 /* 
 This page handles the routing for all the blog and portfolio categories

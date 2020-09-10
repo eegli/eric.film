@@ -33,14 +33,14 @@ export const CardTitle = styled.h1`
 export const CardDescription = styled.div`
   background-color: ${({ theme }) => theme.colors.bgSecondary};
   padding: 2rem;
-  & > span {
+  & span {
     color: ${({ theme }) => theme.colors.textPrimary};
     font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
   }
-  & > p {
+  & p {
     margin: 0.5rem 0 0.5rem 0;
   }
-  & * li {
+  & li {
     margin-bottom: 0.5rem;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.xsmall}) {

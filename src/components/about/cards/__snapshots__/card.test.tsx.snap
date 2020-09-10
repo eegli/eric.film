@@ -76,16 +76,16 @@ exports[`About renders card component 1`] = `
   padding: 2rem;
 }
 
-.c5 > span {
+.c5 span {
   color: #f7f7f7;
   font-size: 14px;
 }
 
-.c5 > p {
+.c5 p {
   margin: 0.5rem 0 0.5rem 0;
 }
 
-.c5 * li {
+.c5 li {
   margin-bottom: 0.5rem;
 }
 

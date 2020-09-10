@@ -1,11 +1,26 @@
 import { PortfolioCategories } from '@/components/types';
 import { useRouter } from 'next/router';
+import styled, { keyframes } from 'styled-components';
 import {
   ClientCategory,
   DevCategory,
   MovingCategory,
   StillCategory,
 } from '../card-common/index';
+
+const fadeIn = keyframes`{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}`;
+
+// TODO
+export const Fader = styled.div`
+  animation: ${fadeIn} 5s;
+`;
 
 const PortfolioSwitch: React.FC = () => {
   const router = useRouter();

@@ -1,21 +1,21 @@
 import {
-  BgContainer,
-  IntroContainer,
+  CategoryIntro,
+  CategoryWrapper,
 } from '@/components/categories/card-common/shared.styles';
 import { Client, Container } from './client-category.styles';
 
 const ClientCategory: React.FC = () => {
   return (
     <>
-      <IntroContainer>
+      <CategoryIntro>
         <p>
           Over the past years, I've had the pleasure of working together with
           many amazing <span>artists</span>, <span>companies</span> and other{' '}
           <span>freelancers</span>.
         </p>
         <p>Thank you, guys!</p>
-      </IntroContainer>
-      <BgContainer>
+      </CategoryIntro>
+      <CategoryWrapper>
         <Container>
           <Client href='https://www.frederikmaarsen.com/' target='blank'>
             <img src='/static/img/clients/frederikmaarsen.png' />
@@ -54,7 +54,7 @@ const ClientCategory: React.FC = () => {
             <img src='/static/img/clients/zuriost.png' />
           </Client>
         </Container>
-      </BgContainer>
+      </CategoryWrapper>
     </>
   );
 };

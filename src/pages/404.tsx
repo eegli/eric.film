@@ -15,10 +15,10 @@ const ErrorContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  & > h1 {
+  & h1 {
     color: ${({ theme }) => theme.colors.pink};
   }
-  & > a {
+  & a {
     color: ${({ theme }) => theme.colors.textPrimary};
   }
 `;
