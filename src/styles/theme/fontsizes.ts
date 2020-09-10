@@ -1,6 +1,5 @@
-import { StyleObject } from '../index';
-
-export const FONTSIZES: StyleObject<string> = {
+export const FONTSIZES = {
+  blogFontSize: '18px',
   baseFontSize: '16px',
   secondaryFontSize: '14px',
   baseIconFontSize: '18px',

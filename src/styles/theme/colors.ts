@@ -4,11 +4,9 @@
 /* Base accent palette */
 // https://coolors.co/034363-53272d-3659527
 
-import { StyleObject } from '../index';
-
 // Here is the place to define hex colors!
 
-export const COLOR_PALETTE: StyleObject<string> = {
+export const COLOR_PALETTE = {
   // Base gray palette
   darkPrimary: '#121212',
   darkSecondary: '#222222',

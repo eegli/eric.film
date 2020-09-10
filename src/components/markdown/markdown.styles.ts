@@ -5,13 +5,13 @@ import { StyleProps } from './markdown.component';
 const contentPadding = '1rem';
 
 export const StyledMD = styled(ReactMarkdown)<StyleProps>`
-  ${({ theme, transparentBg }) =>
-    transparentBg ? null : `background-color: ${theme.colors.bgSecondary}`};
+  background-color: ${({ theme, transparentBg }) =>
+    transparentBg ? 'transparent' : theme.colors.bgSecondary};
   font-family: 'Droid Sans', sans-serif;
   font-weight: 400;
   font-style: normal;
   margin-top: 1rem;
-  line-height: 1.8rem;
+  line-height: 1.7rem;
   color: ${({ theme }) => theme.colors.textPrimary};
   & > * {
     padding: 0 ${contentPadding};
@@ -23,12 +23,21 @@ export const StyledMD = styled(ReactMarkdown)<StyleProps>`
 
   & li {
     margin: 0 ${contentPadding};
+    font-size: ${({ theme }) => theme.fontsizes.blogFontSize};
   }
   & p {
-    font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
+    font-size: ${({ theme }) => theme.fontsizes.blogFontSize};
   }
   & h1 {
-    color: ${({ theme }) => theme.colors.pink};
+    margin-top: 2.5rem;
+    padding: 0;
+    color: ${({ theme }) => theme.colors.bgPrimary};
+    & span {
+      padding: 0 0.4rem 0 1rem;
+      background-color: ${({ theme }) => theme.colors.pink};
+      box-shadow: 0px 0px 0 0.6rem ${({ theme }) => theme.colors.pink};
+      line-height: 1.8;
+    }
   }
   & code {
     color: ${({ theme }) => theme.colors.pink};
