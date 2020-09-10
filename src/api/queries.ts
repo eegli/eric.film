@@ -19,7 +19,7 @@ export const BlogpostsPreview = gql`
       updatedAt
       createdAt
       previewImage {
-        url
+        url(transformation: { document: { output: { format: jpg } } })
       }
     }
     blogpostsConnection {
@@ -52,7 +52,7 @@ export const Blogpost = gql`
       updatedAt
       createdAt
       previewImage {
-        url
+        url(transformation: { document: { output: { format: jpg } } })
       }
     }
   }
