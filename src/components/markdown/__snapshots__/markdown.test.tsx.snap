@@ -2,11 +2,11 @@
 
 exports[`Markdown renders markdown content 1`] = `
 .c0 {
+  background-color: #222222;
   font-family: 'Droid Sans',sans-serif;
   font-weight: 400;
   font-style: normal;
   margin-top: 1rem;
-  background-color: #121212;
   line-height: 1.8rem;
   color: #f7f7f7;
 }
@@ -90,7 +90,7 @@ exports[`Markdown renders markdown content 1`] = `
         "bgTertiary": "#3b3b3b",
         "pink": "#feb8ce",
         "textPrimary": "#f7f7f7",
-        "textSecondary": "#cccccc",
+        "textSecondary": "#E0E0E0",
         "textTertiary": "#8F8F8F",
       },
       "fontsizes": Object {

@@ -120,7 +120,7 @@ exports[`About renders card component 1`] = `
         "bgTertiary": "#3b3b3b",
         "pink": "#feb8ce",
         "textPrimary": "#f7f7f7",
-        "textSecondary": "#cccccc",
+        "textSecondary": "#E0E0E0",
         "textTertiary": "#8F8F8F",
       },
       "fontsizes": Object {
