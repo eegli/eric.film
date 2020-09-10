@@ -22,7 +22,7 @@ const Header: React.FC = () => {
 
   return (
     <HeaderWrapper>
-      <HeaderMainBgContainer>
+      <HeaderMainBgContainer expanded={showHeader}>
         <HeaderMainContainer>
           <Link href='/'>
             <a>
@@ -39,7 +39,7 @@ const Header: React.FC = () => {
       </HeaderMainBgContainer>
 
       <SmoothCollapse expanded={showHeader} onClick={handleClick}>
-        <HeaderOptionsMobileContainer>
+        <HeaderOptionsMobileContainer expanded={showHeader}>
           <HeaderOptions position='mobile' />
         </HeaderOptionsMobileContainer>
       </SmoothCollapse>
