@@ -1,6 +1,7 @@
 import { BREAKPOINTS } from './breakpoints';
 import { COLOR_PALETTE } from './colors';
 import { FONTSIZES } from './fontsizes';
+import { TRANSPARENCY } from './transparency';
 
 // Themes assemble!
 
@@ -22,6 +23,10 @@ export const darkTheme = {
       eggshell: COLOR_PALETTE.accentRed,
       brightBlue: COLOR_PALETTE.accentGreen,
     },
+  },
+
+  transpaparency: {
+    ...TRANSPARENCY,
   },
 
   fontsizes: {

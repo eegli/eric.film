@@ -10,7 +10,7 @@ export const HeaderWrapper = styled.header`
 
 // If the mobile header is expanded, add a the main background color with some
 // opacity. This is possible for hex colors!
-// https://stackoverflow.com/questions/7015302/css-hexadecimal-rgba#:~:text=The%20last%20pair%20of%20digits,represent%20a%20fully%20opaque%20color.&text=In%20other%20words%2C%20%230000ffcc%20represents,a%20slightly%2Dtransparent%20blue).
+
 type MobileHeader = {
   expanded: boolean;
 };
@@ -20,7 +20,9 @@ export const HeaderMainBgContainer = styled.div<MobileHeader>`
   justify-content: center;
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.xsmall}) {
     background-color: ${({ theme, expanded }) =>
-      expanded ? `${theme.colors.bgPrimary}dd` : 'transparent'};
+      expanded
+        ? `${theme.colors.bgPrimary}${theme.transpaparency.opa80}`
+        : 'transparent'};
   }
 `;
 
@@ -34,7 +36,9 @@ export const HeaderMainContainer = styled.div`
 
 export const HeaderOptionsMobileContainer = styled.div<MobileHeader>`
   background-color: ${({ theme, expanded }) =>
-    expanded ? `${theme.colors.bgPrimary}dd` : theme.colors.bgPrimary};
+    expanded
+      ? `${theme.colors.bgPrimary}${theme.transpaparency.opa80}`
+      : theme.colors.bgPrimary};
   display: flex;
   color: ${({ theme }) => theme.colors.textSecondary};
   flex-direction: column;
