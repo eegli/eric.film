@@ -33,6 +33,7 @@ export const StyledMD = styled(ReactMarkdown)<StyleProps>`
     padding: 0;
     color: ${({ theme }) => theme.colors.bgPrimary};
     & span {
+      display: inline-block;
       padding: 0 0.4rem 0 1rem;
       background-color: ${({ theme }) => theme.colors.pink};
       box-shadow: 0px 0px 0 0.6rem ${({ theme }) => theme.colors.pink};

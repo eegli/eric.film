@@ -44,6 +44,7 @@ exports[`About renders social bar component 1`] = `
       "fontsizes": Object {
         "baseFontSize": "16px",
         "baseIconFontSize": "18px",
+        "blogFontSize": "18px",
         "h1FontSize": "22px",
         "h2FontSize": "20px",
         "secondaryFontSize": "14px",
