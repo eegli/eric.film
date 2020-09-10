@@ -21,12 +21,17 @@ export const checkIfImageExists = (params: PreviewImage) => {
   return image || fallback;
 };
 
+// TODO clean this up
 type InputImageObj = Array<{ url: string }>;
 
 type OutputImageObj = Array<{ url: string; webp_url: string }>;
 
 export const getWebpUrl = (_images: InputImageObj) => {
   const images: OutputImageObj = [];
+
+  // TODO Make sure the image is provided by graphcms, otherwise return normal images
+  const isFromGraphCMS = _images[0].url.match(/graphcms.com\/output=/g);
+
   _images.forEach(img => {
     const webpUrl = img.url.replace(/:jpg/g, ':webp');
     const newImg = Object.assign({ webp_url: webpUrl }, img);

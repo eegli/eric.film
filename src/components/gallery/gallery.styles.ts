@@ -22,7 +22,7 @@ export const GalleryContainer = styled.div<Props>`
   }
 `;
 
-export const Image = styled.picture`
+export const Image = styled.img`
   width: 100% !important;
   max-width: 1024px;
   max-height: 100%;
