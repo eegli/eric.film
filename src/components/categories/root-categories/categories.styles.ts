@@ -67,6 +67,5 @@ export const CardContainer = styled.a<CardContainerProps>`
   &:active {
     background-color: ${({ theme }) => theme.colors.bgTertiary};
     color: ${({ theme }) => theme.colors.textPrimary};
-    cursor: pointer;
   }
 `;

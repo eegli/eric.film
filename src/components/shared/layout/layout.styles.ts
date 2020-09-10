@@ -1,4 +1,3 @@
-import { Breakpoints } from '@/src/styles';
 import styled from 'styled-components';
 import { Props } from './layout.container';
 
@@ -9,5 +8,5 @@ export const LayoutContainerStyle = styled.div<Props>`
   flex-direction: column;
   margin: 0 auto;
   overflow-x: hidden;
-  max-width: ${({ breakpoint }) => Breakpoints[breakpoint]};
+  max-width: ${({ breakpoint, theme }) => theme.breakpoints[breakpoint]};
 `;

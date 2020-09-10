@@ -32,7 +32,7 @@ export const LinkContainer = styled.div`
 
 export const GitHubIcon = styled.a`
   font-size: ${({ theme }) => theme.fontsizes.baseIconFontSize};
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.medium}) {
     padding: 0;
   }
 `;

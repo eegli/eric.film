@@ -14,10 +14,10 @@ export const GalleryContainer = styled.div<Props>`
   column-count: ${({ layout }) => (layout === 'grid' ? '3' : '1')};
   column-gap: 0px;
 
-  @media (max-width: 960px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
     column-count: ${({ layout }) => (layout === 'grid' ? '2' : '1')};
   }
-  @media (max-width: 700px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xsmall}) {
     column-count: 1;
   }
 `;
