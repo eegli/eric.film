@@ -1,14 +1,16 @@
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
+import { StyleProps } from './markdown.component';
 
 const contentPadding = '1rem';
 
-export const StyledMD = styled(ReactMarkdown)`
+export const StyledMD = styled(ReactMarkdown)<StyleProps>`
+  ${({ theme, transparentBg }) =>
+    transparentBg ? null : `background-color: ${theme.colors.bgSecondary}`};
   font-family: 'Droid Sans', sans-serif;
   font-weight: 400;
   font-style: normal;
   margin-top: 1rem;
-  background-color: ${({ theme }) => theme.colors.bgPrimary};
   line-height: 1.8rem;
   color: ${({ theme }) => theme.colors.textPrimary};
   & > * {
@@ -44,17 +46,15 @@ export const StyledMD = styled(ReactMarkdown)`
   }
 
   & blockquote {
-    background: ${({ theme }) => theme.colors.bgTertiary};
+    background: ${({ theme }) => theme.colors.bgSecondary};
     border-left: 4px solid ${({ theme }) => theme.colors.textPrimary};
     margin: 1.5rem 2rem;
     padding: 0.5em 10px;
-    & > p {
+    color: ${({ theme }) => theme.colors.textPrimary};
+    & p {
       display: inline;
-      color: ${({ theme }) => theme.colors.textSecondary};
-      /* font-style: italic; */
     }
     &:before {
-      color: #ccc;
       content: open-quote;
       font-size: 2em;
       line-height: 0.1em;

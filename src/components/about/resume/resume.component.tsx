@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import SmoothCollapse from 'react-smooth-collapse';
 import {
-  Container,
   ResumeContent,
+  ResumeWrapper,
   Section,
   ToggleContainer,
   ToggleTitle,
@@ -14,7 +14,7 @@ const ResumeComponent: React.FC = () => {
   const [toolsTechOpen, setToolsTechOpen] = useState<boolean>(false);
 
   return (
-    <Container>
+    <ResumeWrapper>
       <Section>
         <ToggleContainer onClick={() => setWorkEdOpen(!workEdOpen)}>
           <ToggleTitle>education - work</ToggleTitle>
@@ -79,7 +79,7 @@ const ResumeComponent: React.FC = () => {
           </ResumeContent>
         </SmoothCollapse>
       </Section>
-    </Container>
+    </ResumeWrapper>
   );
 };
 

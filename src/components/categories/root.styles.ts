@@ -7,16 +7,16 @@ type ContainerProps = {
 export const CategoryContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
-  padding: 0 2rem;
-  @media screen and (max-width: 850px) {
+  padding: 0 4rem;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.xsmall}) {
+    padding: 0 2rem;
     justify-content: center;
-    padding: 0;
   }
 `;
 
 export const SelectionCardContainer = styled.div<ContainerProps>`
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   overflow-x: scroll;
@@ -31,10 +31,10 @@ export const SelectionCardContainer = styled.div<ContainerProps>`
 export const SortButtonContainer = styled.div`
   display: flex;
   align-items: center;
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.xsmall}) {
     flex: 1 1 100%;
     justify-content: center;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
   }
 `;
 
@@ -60,7 +60,8 @@ export const CardContainer = styled.a<CardContainerProps>`
     active ? theme.colors.bgTertiary : theme.colors.bgSecondary};
   padding: 0.7rem 1rem;
   margin: 0.5rem;
-  color: ${({ theme }) => theme.colors.textSecondary};
+  color: ${({ theme, active }) =>
+    active ? theme.colors.textPrimary : theme.colors.textSecondary};
   border-radius: 0.3rem;
   border-bottom: 0.2rem solid
     ${({ theme, active }) => (active ? theme.colors.pink : 'none')};
@@ -68,6 +69,5 @@ export const CardContainer = styled.a<CardContainerProps>`
   &:active {
     background-color: ${({ theme }) => theme.colors.bgTertiary};
     color: ${({ theme }) => theme.colors.textPrimary};
-    cursor: pointer;
   }
 `;

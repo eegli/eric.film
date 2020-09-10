@@ -1,4 +1,4 @@
-import PortfolioCategories from '@/components/categories/root-categories/portfolio-categories.component';
+import PortfolioCategories from '@/components/categories/portfolio-root.component';
 import CustomHead from '@/components/custom-head/custom-head.component';
 import Footer from '@/components/footer/footer.component';
 import { Sh1 } from '@/shared/headings.styles';
@@ -16,7 +16,7 @@ const PortfolioPage: React.FC = () => {
         description={meta.description}
         ogImage={meta.image}
       />
-      <LayoutContainer pageBreakpoint='medium'>
+      <LayoutContainer breakpoint='medium'>
         <Sh1>portfolio</Sh1>
         <PortfolioCategories />
         <Footer />

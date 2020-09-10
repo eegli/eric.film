@@ -28,6 +28,7 @@ export const GLOBAL = css`
   a {
     color: inherit;
     text-decoration: inherit;
+    cursor: pointer;
   }
 
   p {

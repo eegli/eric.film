@@ -1,4 +1,4 @@
-import BlogCategories from '@/components/categories/root-categories/blog-categories.component';
+import BlogCategories from '@/components/categories/blog-root.component';
 import CustomHead from '@/components/custom-head/custom-head.component';
 import Footer from '@/components/footer/footer.component';
 import { Sh1 } from '@/shared/headings.styles';
@@ -16,7 +16,7 @@ const IndexPage: React.FC = () => {
         description={meta.description}
         ogImage={meta.image}
       />
-      <LayoutContainer pageBreakpoint='medium'>
+      <LayoutContainer breakpoint='medium'>
         <Sh1>blog</Sh1>
         <BlogCategories />
         <Footer />

@@ -30,14 +30,14 @@ export const BlogPostTimes = styled.div`
   flex-wrap: wrap;
   display: flex;
   color: ${({ theme }) => theme.colors.pink};
-  & > div {
+  & div {
     display: flex;
     flex-grow: 1;
     align-items: center;
     &:first-child {
       margin-right: 1rem;
     }
-    & > p {
+    & p {
       font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
       margin: 0 0 0 0.3rem;
       color: ${({ theme }) => theme.colors.textSecondary};
@@ -54,11 +54,11 @@ export const ThemeToggleButton = styled.button`
   letter-spacing: 1px;
   padding: 0;
   text-decoration: underline;
-  & > div {
+  & div {
     display: flex;
     align-items: center;
 
-    & > p {
+    & p {
       font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
       margin: 0 0 0 0.3rem;
       color: ${({ theme }) => theme.colors.textSecondary};

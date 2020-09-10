@@ -13,7 +13,7 @@ export const Client = styled.a`
   flex-direction: column;
   text-decoration: none;
   align-items: center;
-  & > img {
+  & img {
     max-width: 150px;
   }
 `;

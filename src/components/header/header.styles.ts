@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeaderWrapper = styled.div`
+export const HeaderWrapper = styled.header`
   position: absolute;
   top: 0;
   left: 0;
@@ -9,12 +9,14 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const HeaderMainBgContainer = styled.div`
-  /* background-color: ${({ theme }) => theme.colors.bgPrimary}; */
   display: flex;
   justify-content: center;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.xsmall}) {
+    background-color: ${({ theme }) => theme.colors.bgPrimary};
+  }
 `;
 
-export const HeaderMainContainer = styled.header`
+export const HeaderMainContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 1rem;
@@ -22,7 +24,7 @@ export const HeaderMainContainer = styled.header`
   width: 100%;
 `;
 
-export const HeaderOptionsMobileContainer = styled.header`
+export const HeaderOptionsMobileContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.bgSecondary};
   display: flex;
   color: ${({ theme }) => theme.colors.textSecondary};
@@ -30,10 +32,10 @@ export const HeaderOptionsMobileContainer = styled.header`
   align-items: center;
 `;
 
-export const HeaderOptionsDesktopContainer = styled.header`
+export const HeaderOptionsDesktopContainer = styled.div`
   display: flex;
   align-items: center;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.xsmall}) {
     display: none;
   }
 `;
@@ -52,10 +54,10 @@ export const MenuIcon = styled.div<Props>`
   font-size: 1.7rem;
   display: flex;
   align-items: center;
-  & > svg {
+  & svg {
     color: ${({ theme }) => theme.colors.textSecondary};
   }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.xsmall}) {
     display: none;
   }
 `;

@@ -1,10 +1,10 @@
-import CustomLink from '@/components/custom-link/custom-link.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
 import Gallery from '@/components/gallery/gallery.component';
 import { useImgsHomeQuery } from '@/components/types';
 import { DescriptionContainer, Sh1, Sh2 } from '@/shared/headings.styles';
+import Link from 'next/link';
 import React from 'react';
-import { LandingContentContainer } from './landing-content.styles';
+import { LandingContentContainer, LinkText } from './landing-content.styles';
 
 type Props = {
   children?: React.ReactNode;
@@ -27,7 +27,11 @@ const LandingContent = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
               frontend development
             </Sh2>
           </DescriptionContainer>
-          <CustomLink href='/about'>say hi to the team</CustomLink>
+          <Link href='/about'>
+            <a>
+              <LinkText>say hi to the team</LinkText>
+            </a>
+          </Link>
           {images ? <Gallery layout='grid' images={images.collection} /> : null}
         </LandingContentContainer>
       </>

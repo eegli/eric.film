@@ -55,10 +55,8 @@ exports[`About renders card component 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
   max-width: 350px;
-  padding: 0.5rem;
+  margin: 0.5rem;
 }
 
 .c4 {
@@ -78,16 +76,16 @@ exports[`About renders card component 1`] = `
   padding: 2rem;
 }
 
-.c5 > span {
+.c5 span {
   color: #f7f7f7;
   font-size: 14px;
 }
 
-.c5 > p {
+.c5 p {
   margin: 0.5rem 0 0.5rem 0;
 }
 
-.c5 * li {
+.c5 li {
   margin-bottom: 0.5rem;
 }
 
@@ -96,15 +94,7 @@ exports[`About renders card component 1`] = `
   max-height: 100%;
 }
 
-@media screen and (min-width:700px) {
-  .c1 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-}
-
-@media screen and (max-width:1000px) {
+@media (max-width:700px) {
   .c5 {
     padding: 1rem;
   }
@@ -117,6 +107,7 @@ exports[`About renders card component 1`] = `
         "large": "1200px",
         "medium": "960px",
         "small": "830px",
+        "xsmall": "700px",
       },
       "colors": Object {
         "accents": Object {
@@ -151,7 +142,7 @@ exports[`About renders card component 1`] = `
          meet the amazing team 
       </h1>
     </cardstyles__CardHeader>
-    <cardstyles__CardContainer>
+    <cardstyles__CardWrapper>
       <div
         className="c1"
       >
@@ -715,7 +706,7 @@ exports[`About renders card component 1`] = `
           </div>
         </cardstyles__Card>
       </div>
-    </cardstyles__CardContainer>
+    </cardstyles__CardWrapper>
   </CardComponent>
    
 </ThemeProvider>

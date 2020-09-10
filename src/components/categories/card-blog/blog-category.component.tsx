@@ -29,9 +29,6 @@ const BlogCategory: React.FC<Props> = ({ filter, orderBy }) => {
     networkStatus,
   } = useBlogpostsPreviewQuery({
     variables: blogpostsPreviewVars(orderBy),
-    // Setting this value to true will make the component rerender when the
-    // "networkStatus" changes, so we are able to know if it is fetching more
-    // data
     notifyOnNetworkStatusChange: true,
   });
 
@@ -39,6 +36,7 @@ const BlogCategory: React.FC<Props> = ({ filter, orderBy }) => {
 
   if (error)
     return <ErrorMessage>Failed to load blog posts from server</ErrorMessage>;
+
   if (loading && !loadingMorePosts) return <CustomSpinner />;
 
   if (data?.blogposts) {

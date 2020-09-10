@@ -28,7 +28,6 @@ export const StyledLinkText = styled.a<StyleProps>`
   letter-spacing: 0.4rem;
   &:hover {
     text-decoration: line-through;
-    cursor: pointer;
   }
   color: ${({ theme }) => theme.colors.textPrimary};
   text-decoration: ${({ href, path }) =>

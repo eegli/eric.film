@@ -1,12 +1,10 @@
 import styled from 'styled-components';
-export const CardContainer = styled.div`
+
+export const CardWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 1.2rem;
-  @media screen and (min-width: 700px) {
-    flex-direction: row;
-  }
 `;
 
 export const CardHeader = styled.h1`
@@ -20,10 +18,8 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 100%;
   max-width: 350px;
-  padding: 0.5rem;
+  margin: 0.5rem;
 `;
 
 export const CardTitle = styled.h1`
@@ -37,17 +33,17 @@ export const CardTitle = styled.h1`
 export const CardDescription = styled.div`
   background-color: ${({ theme }) => theme.colors.bgSecondary};
   padding: 2rem;
-  & > span {
+  & span {
     color: ${({ theme }) => theme.colors.textPrimary};
     font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
   }
-  & > p {
+  & p {
     margin: 0.5rem 0 0.5rem 0;
   }
-  & * li {
+  & li {
     margin-bottom: 0.5rem;
   }
-  @media screen and (max-width: 1000px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xsmall}) {
     padding: 1rem;
   }
 `;
