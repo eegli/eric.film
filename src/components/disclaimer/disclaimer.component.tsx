@@ -13,15 +13,15 @@ const Disclaimer: React.FC = () => {
     <>
       <InfoWrapper>
         <a id='privacy' />
-        <Markdown content={privacy} />
+        <Markdown transparentBg content={privacy} />
       </InfoWrapper>
       <InfoWrapper>
         <a id='acknowledgements' />
-        <Markdown content={acknowledgements} />
+        <Markdown transparentBg content={acknowledgements} />
       </InfoWrapper>
       <InfoWrapper>
         <a id='imprint' />
-        <Markdown content={imprint} />
+        <Markdown transparentBg content={imprint} />
       </InfoWrapper>
     </>
   );
