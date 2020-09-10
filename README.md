@@ -51,9 +51,3 @@ My GraphQL endpoint needs to be public since the frontend has the possibility to
 > All Next templates
 
 - [next.js/examples](https://github.com/vercel/next.js/tree/canary/examples)
-
-## License
-
-Copyright 2020 Eric Egli
-
-The MIT License (MIT)
