@@ -2431,7 +2431,7 @@ export type ImgsPortfolioQueryVariables = Exact<{ [key: string]: never }>;
 export type ImgsPortfolioQuery = {
   imgCollections: Array<
     Pick<ImgCollection, 'id' | 'imageType'> & {
-      collection: Array<Pick<Asset, 'url'>>;
+      collection: Array<Pick<Asset, 'url' | 'id'>>;
     }
   >;
 };
@@ -2441,7 +2441,7 @@ export type ImgsHomeQueryVariables = Exact<{ [key: string]: never }>;
 export type ImgsHomeQuery = {
   imgCollections: Array<
     Pick<ImgCollection, 'id' | 'imageType'> & {
-      collection: Array<Pick<Asset, 'url'>>;
+      collection: Array<Pick<Asset, 'url' | 'id'>>;
     }
   >;
 };
@@ -2590,7 +2590,8 @@ export const ImgsPortfolioDocument = gql`
       id
       imageType
       collection {
-        url
+        url(transformation: { document: { output: { format: jpg } } })
+        id
       }
     }
   }
@@ -2649,7 +2650,8 @@ export const ImgsHomeDocument = gql`
       id
       imageType
       collection {
-        url
+        url(transformation: { document: { output: { format: jpg } } })
+        id
       }
     }
   }

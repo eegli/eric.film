@@ -64,7 +64,8 @@ export const ImgsPortfolio = gql`
       id
       imageType
       collection {
-        url
+        url(transformation: { document: { output: { format: jpg } } })
+        id
       }
     }
   }
@@ -76,7 +77,8 @@ export const ImgsHome = gql`
       id
       imageType
       collection {
-        url
+        url(transformation: { document: { output: { format: jpg } } })
+        id
       }
     }
   }

@@ -20,3 +20,17 @@ export const checkIfImageExists = (params: PreviewImage) => {
   }
   return image || fallback;
 };
+
+type InputImageObj = Array<{ url: string }>;
+
+type OutputImageObj = Array<{ url: string; webp_url: string }>;
+
+export const getWebpUrl = (_images: InputImageObj) => {
+  const images: OutputImageObj = [];
+  _images.forEach(img => {
+    const webpUrl = img.url.replace(/:jpg/g, ':webp');
+    const newImg = Object.assign({ webp_url: webpUrl }, img);
+    images.push(newImg);
+  });
+  return images;
+};
