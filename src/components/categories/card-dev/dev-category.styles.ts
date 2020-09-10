@@ -5,7 +5,7 @@ export const Table = styled.table`
   margin: 0 auto;
   width: 100%;
   color: ${({ theme }) => theme.colors.textPrimary};
-  margin-bottom: 3rem;
+  margin: 1rem 0 2rem 0;
   & tr {
     height: 50px;
     &:nth-child(odd) {
@@ -13,11 +13,6 @@ export const Table = styled.table`
     }
     &:nth-child(even) {
       background-color: ${({ theme }) => theme.colors.bgTertiary};
-    }
-    &:first-child {
-      background-color: ${({ theme }) => theme.colors.pink};
-      color: ${({ theme }) => theme.colors.bgPrimary};
-      font-weight: 600;
     }
   }
   & th {
