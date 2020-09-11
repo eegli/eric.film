@@ -1,15 +1,19 @@
 // The progressive image library needs a html element
-import { getWebpUrl } from '@/src/utils/blog';
+import { JpegImageObj } from '@/components/types';
+import { makeWebpFromGraphCMSImages } from '@/src/utils/blog';
 import { useMemo } from 'react';
 import { GalleryContainer, Image } from './gallery.styles';
 
 export type GalleryProps = {
-  images: Array<{ url: string; id: string }>;
+  images: JpegImageObj[];
   layout?: 'grid';
 };
 
 const Gallery: React.FC<GalleryProps> = ({ images, layout }) => {
-  const enrichedImages = useMemo(() => getWebpUrl(images), [images]);
+  // This function returns enriched image data with a webp url
+  const enrichedImages = useMemo(() => makeWebpFromGraphCMSImages(images), [
+    images,
+  ]);
 
   return (
     <>

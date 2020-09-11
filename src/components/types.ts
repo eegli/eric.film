@@ -22,3 +22,13 @@ export type BlogPostContent = Pick<
   Blogpost,
   'title' | 'content' | 'ytvideo' | 'createdAt' | 'updatedAt'
 >;
+
+// Used for the galleries
+export interface JpegImageObj {
+  url: string;
+  id: string;
+}
+
+export interface EnrichedImageObj extends JpegImageObj {
+  webp_url: string;
+}

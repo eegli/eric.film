@@ -21,7 +21,7 @@ export const HeaderMainBgContainer = styled.div<MobileHeader>`
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.xsmall}) {
     background-color: ${({ theme, expanded }) =>
       expanded
-        ? `${theme.colors.bgPrimary}${theme.transpaparency.opa80}`
+        ? `${theme.colors.bgPrimary}${theme.transpaparency.opa90}`
         : 'transparent'};
   }
 `;
@@ -37,7 +37,7 @@ export const HeaderMainContainer = styled.div`
 export const HeaderOptionsMobileContainer = styled.div<MobileHeader>`
   background-color: ${({ theme, expanded }) =>
     expanded
-      ? `${theme.colors.bgPrimary}${theme.transpaparency.opa80}`
+      ? `${theme.colors.bgPrimary}${theme.transpaparency.opa90}`
       : theme.colors.bgPrimary};
   display: flex;
   color: ${({ theme }) => theme.colors.textSecondary};

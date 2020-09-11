@@ -1,5 +1,5 @@
 import CustomHead from '@/components/custom-head/custom-head.component';
-import { ImgsHome } from '@/src/api/queries';
+import { ImageCollections } from '@/src/api/queries';
 import { SEO_INDEX_META as meta } from '@/src/config';
 import { GetStaticProps } from 'next';
 import React, { useRef } from 'react';
@@ -27,7 +27,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const apolloClient = initializeApollo();
 
   await apolloClient.query({
-    query: ImgsHome,
+    query: ImageCollections,
   });
 
   return {

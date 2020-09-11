@@ -1,3 +1,4 @@
+import { EnrichedImageObj, JpegImageObj } from '@/components/types';
 import { FALLBACK_IMG } from '@/src/config';
 import * as gtag from '@/src/lib/gtag';
 
@@ -21,21 +22,28 @@ export const checkIfImageExists = (params: PreviewImage) => {
   return image || fallback;
 };
 
-// TODO clean this up
-type InputImageObj = Array<{ url: string }>;
+// In GraphCMS, assets can be transformed and requested in various formats and
+// sizes. This utility takes the "raw" array of jpeg images and transforms the
+// url to generate webp urls. It's important to note that it should only be used
+// for images coming from GraphCMS. In any case, the app won't break because
+// replace won't replace anything and return the input urls.
 
-type OutputImageObj = Array<{ url: string; webp_url: string }>;
+export const makeWebpFromGraphCMSImages = (_images: JpegImageObj[]) => {
+  const images: EnrichedImageObj[] = [];
 
-export const getWebpUrl = (_images: InputImageObj) => {
-  const images: OutputImageObj = [];
-
-  // TODO Make sure the image is provided by graphcms, otherwise return normal images
   const isFromGraphCMS = _images[0].url.match(/graphcms.com\/output=/g);
+  if (!isFromGraphCMS)
+    console.warn(
+      'Warning! makeWebpFromGraphCMSImages should only be used with images from GraphCMS!',
+    );
 
+  // Replace jpg with webp
   _images.forEach(img => {
     const webpUrl = img.url.replace(/:jpg/g, ':webp');
+
     const newImg = Object.assign({ webp_url: webpUrl }, img);
     images.push(newImg);
   });
+
   return images;
 };
