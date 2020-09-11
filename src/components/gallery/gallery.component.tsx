@@ -19,7 +19,7 @@ const Gallery: React.FC<GalleryProps> = ({ images, layout }) => {
     <>
       <GalleryContainer layout={layout}>
         {enrichedImages.map(img => (
-          <div key={img.url}>
+          <div key={img.id}>
             <picture>
               <source srcSet={img.webp_url} type='image/webp' />
               <source srcSet={img.url} type='image/jpg' />

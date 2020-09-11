@@ -41,6 +41,7 @@ export const makeWebpFromGraphCMSImages = (_images: JpegImageObj[]) => {
   _images.forEach(img => {
     const webpUrl = img.url.replace(/:jpg/g, ':webp');
 
+    // Create new image object
     const newImg = Object.assign({ webp_url: webpUrl }, img);
     images.push(newImg);
   });
