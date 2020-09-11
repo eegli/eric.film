@@ -2,6 +2,7 @@
 // https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4
 
 export const TRANSPARENCY = {
+  opa95: 'F2',
   opa90: 'E6',
   opa80: 'CC',
   opa70: 'BF',
