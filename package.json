@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "yarn test && next build",
     "prod": "next build && next start",
     "preprod": "yarn lint && yarn test",
     "format": "prettier --write **/*.{js,jsx,ts,tsx}",
