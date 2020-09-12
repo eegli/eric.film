@@ -19,6 +19,7 @@ const CustomHead = ({ title, description, ogImage }: MetaProps) => {
       <meta name='description' content={trimmedDescription} />
       <meta property='og:title' content={title} />
       <meta property='og:image' content={ogImage.url} />
+      <meta property='og:image:type' content='image/jpeg' />
       <meta property='og:description' content={trimmedDescription} />
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:title' content={title} />
