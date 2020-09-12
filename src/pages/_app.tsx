@@ -62,8 +62,6 @@ const App: React.FC<Props> = ({ Component, pageProps, err }) => {
     <>
       <Head>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-        {/* TODO Remove */}
-        <meta name='robots' content='noindex, nofollow' />
       </Head>
 
       <ApolloProvider client={apolloClient}>
