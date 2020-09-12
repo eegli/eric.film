@@ -19,7 +19,12 @@ export const BlogpostsPreview = gql`
       updatedAt
       createdAt
       previewImage {
-        url(transformation: { document: { output: { format: jpg } } })
+        url(
+          transformation: {
+            document: { output: { format: jpg } }
+            image: { resize: { height: 400, fit: clip } }
+          }
+        )
       }
     }
     blogpostsConnection {
