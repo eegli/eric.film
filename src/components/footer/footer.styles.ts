@@ -23,7 +23,8 @@ export const LinkContainer = styled.div`
   font-size: ${({ theme }) => theme.fontsizes.secondaryFontSize};
   margin-bottom: 1rem;
   a {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
+    text-decoration: underline;
   }
   a:first-child {
     margin-left: 0;

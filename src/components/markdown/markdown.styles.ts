@@ -23,10 +23,10 @@ export const StyledMD = styled(ReactMarkdown)<StyleProps>`
 
   & li {
     margin: 0 ${contentPadding};
-    font-size: ${({ theme }) => theme.fontsizes.blogFontSize};
+    font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   }
   & p {
-    font-size: ${({ theme }) => theme.fontsizes.blogFontSize};
+    font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
   }
   & h1 {
     margin-top: 2.5rem;
@@ -36,7 +36,7 @@ export const StyledMD = styled(ReactMarkdown)<StyleProps>`
       display: inline-block;
       padding: 0 0.4rem 0 1rem;
       background-color: ${({ theme }) => theme.colors.pink};
-      box-shadow: 0px 0px 0 0.6rem ${({ theme }) => theme.colors.pink};
+      /* box-shadow: 0px 0px 0 0.6rem ${({ theme }) => theme.colors.pink}; */
       line-height: 1.8;
     }
   }
