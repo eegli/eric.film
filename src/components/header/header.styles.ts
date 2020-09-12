@@ -9,7 +9,7 @@ export const HeaderWrapper = styled.header`
 `;
 
 // If the mobile header is expanded, add a the main background color with some
-// opacity. This is possible for hex colors!
+// opacity. This is possible for hex colors.
 
 type MobileHeader = {
   expanded: boolean;
