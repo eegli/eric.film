@@ -58,25 +58,14 @@ export const Blogpost = gql`
   }
 `;
 
-export const ImgsPortfolio = gql`
-  query ImgsPortfolio {
-    imgCollections(where: { imageType: portfolio }) {
+export const ImageCollections = gql`
+  query ImageCollections {
+    imgCollections {
       id
       imageType
       collection {
-        url
-      }
-    }
-  }
-`;
-
-export const ImgsHome = gql`
-  query ImgsHome {
-    imgCollections(where: { imageType: home }) {
-      id
-      imageType
-      collection {
-        url
+        id
+        url(transformation: { document: { output: { format: jpg } } })
       }
     }
   }

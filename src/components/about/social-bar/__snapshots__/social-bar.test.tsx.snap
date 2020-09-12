@@ -49,6 +49,18 @@ exports[`About renders social bar component 1`] = `
         "h2FontSize": "20px",
         "secondaryFontSize": "14px",
       },
+      "transpaparency": Object {
+        "opa10": "1A",
+        "opa20": "33",
+        "opa30": "4D",
+        "opa40": "66",
+        "opa50": "80",
+        "opa60": "99",
+        "opa70": "BF",
+        "opa80": "CC",
+        "opa90": "E6",
+        "opa95": "F2",
+      },
     }
   }
 >

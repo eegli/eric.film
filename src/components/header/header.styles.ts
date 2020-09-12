@@ -9,7 +9,7 @@ export const HeaderWrapper = styled.header`
 `;
 
 // If the mobile header is expanded, add a the main background color with some
-// opacity. This is possible for hex colors!
+// opacity. This is possible for hex colors.
 
 type MobileHeader = {
   expanded: boolean;
@@ -21,7 +21,7 @@ export const HeaderMainBgContainer = styled.div<MobileHeader>`
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.xsmall}) {
     background-color: ${({ theme, expanded }) =>
       expanded
-        ? `${theme.colors.bgPrimary}${theme.transpaparency.opa80}`
+        ? `${theme.colors.bgPrimary}${theme.transpaparency.opa95}`
         : 'transparent'};
   }
 `;
@@ -37,7 +37,7 @@ export const HeaderMainContainer = styled.div`
 export const HeaderOptionsMobileContainer = styled.div<MobileHeader>`
   background-color: ${({ theme, expanded }) =>
     expanded
-      ? `${theme.colors.bgPrimary}${theme.transpaparency.opa80}`
+      ? `${theme.colors.bgPrimary}${theme.transpaparency.opa95}`
       : theme.colors.bgPrimary};
   display: flex;
   color: ${({ theme }) => theme.colors.textSecondary};

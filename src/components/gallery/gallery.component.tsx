@@ -1,29 +1,30 @@
 // The progressive image library needs a html element
-import ErrorMessage from '@/components/error-message/error-message.component';
-import { Asset } from '@/components/types';
-import ProgressiveImage from 'react-progressive-graceful-image';
+import { JpegImageObj } from '@/components/types';
+import { makeWebpFromGraphCMSImages } from '@/src/utils/blog';
+import { useMemo } from 'react';
 import { GalleryContainer, Image } from './gallery.styles';
 
 export type GalleryProps = {
-  images: Array<{ url: string }>;
+  images: JpegImageObj[];
   layout?: 'grid';
 };
 
 const Gallery: React.FC<GalleryProps> = ({ images, layout }) => {
-  if (!images) {
-    return <ErrorMessage>There was an error displaying images</ErrorMessage>;
-  }
+  // This function returns enriched image data with a webp url
+  const enrichedImages = useMemo(() => makeWebpFromGraphCMSImages(images), [
+    images,
+  ]);
 
   return (
     <>
       <GalleryContainer layout={layout}>
-        {images.map((img: Pick<Asset, 'url'>) => (
-          <div key={img.url}>
-            <ProgressiveImage
-              src={img.url}
-              placeholder='/static/img/placeholder.jpg'>
-              {(src: string) => <Image src={src} alt='portfolio-image' />}
-            </ProgressiveImage>
+        {enrichedImages.map(img => (
+          <div key={img.id}>
+            <picture>
+              <source srcSet={img.webp_url} type='image/webp' />
+              <source srcSet={img.url} type='image/jpg' />
+              <Image src={img.url} alt='portfolio-image' />
+            </picture>
           </div>
         ))}
       </GalleryContainer>
