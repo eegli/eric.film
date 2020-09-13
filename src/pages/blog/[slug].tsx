@@ -33,12 +33,12 @@ export const getServerSideProps: GetServerSideProps<
 > = async ({ params }) => {
   const apolloClient = initializeApollo();
 
-  if (params?.slug) {
+  /*   if (params?.slug) {
     await apolloClient.query({
       query: Blogpost,
       variables: { slug: params.slug },
     });
-  }
+  } */
 
   const data = await apolloClient.query({
     query: Blogpost,
