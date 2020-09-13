@@ -5,7 +5,11 @@ import { GetServerSideProps } from 'next';
 import { Blogpost } from '../../api/queries';
 import { initializeApollo } from '../../lib/apolloClient';
 
-const IndexPage: React.FC = () => {
+type Props = {
+  data: any;
+};
+
+const IndexPage: React.FC<Props> = ({ data }) => {
   return (
     <>
       <LayoutContainer breakpoint='small'>
@@ -36,9 +40,15 @@ export const getServerSideProps: GetServerSideProps<
     });
   }
 
+  const data = await apolloClient.query({
+    query: Blogpost,
+    variables: { slug: params?.slug },
+  });
+
   return {
     props: {
       initialApolloState: apolloClient.cache.extract(),
+      data: data,
     },
   };
 };

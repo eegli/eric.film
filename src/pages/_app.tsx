@@ -4,6 +4,7 @@ import Fonts from '@/styles/theme/fonts';
 import { ApolloProvider } from '@apollo/client';
 import * as Sentry from '@sentry/node';
 import { AppProps } from 'next/app';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import NProgress from 'nprogress';
 import { useEffect } from 'react';
@@ -59,6 +60,10 @@ const App: React.FC<Props> = ({ Component, pageProps, err }) => {
 
   return (
     <>
+      <Head>
+        <meta charSet='utf-8' />
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      </Head>
       <ApolloProvider client={apolloClient}>
         <ThemeProvider theme={darkTheme}>
           <GlobalTheme />
