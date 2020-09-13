@@ -9,6 +9,7 @@ type MetaProps = {
 const CustomHead = ({ title, description, ogImage }: MetaProps) => {
   // Meta descriptions can be any length, but Google generally truncates
   // snippets to ~155–160 characters.
+
   const trimmedDescription =
     description.length > 150
       ? description.substring(0, 150).concat('...')
