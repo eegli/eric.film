@@ -1,13 +1,25 @@
 import BlogContainer from '@/components/blog/blog-container.component';
+import CustomHead from '@/components/custom-head/custom-head.component';
 import Footer from '@/components/footer/footer.component';
 import LayoutContainer from '@/components/shared/layout/layout.container';
+import { BlogpostQueryResult } from '@/components/types';
 import { GetServerSideProps } from 'next';
 import { Blogpost } from '../../api/queries';
 import { initializeApollo } from '../../lib/apolloClient';
 
-const IndexPage: React.FC = () => {
+type Props = {
+  blogpostQuery: BlogpostQueryResult;
+};
+
+const IndexPage: React.FC<Props> = ({ blogpostQuery }) => {
+  const post = blogpostQuery.data?.blogpost;
+
+  const title = post?.title || '';
+  const description = post?.excerpt || '';
+  const image = post?.previewImage || { url: '' };
   return (
     <>
+      <CustomHead title={title} description={description} ogImage={image} />
       <LayoutContainer breakpoint='small'>
         <BlogContainer />
         <Footer />
@@ -29,16 +41,15 @@ export const getServerSideProps: GetServerSideProps<
 > = async ({ params }) => {
   const apolloClient = initializeApollo();
 
-  if (params?.slug) {
-    await apolloClient.query({
-      query: Blogpost,
-      variables: { slug: params.slug },
-    });
-  }
+  const blogpost = await apolloClient.query({
+    query: Blogpost,
+    variables: { slug: params?.slug },
+  });
 
   return {
     props: {
       initialApolloState: apolloClient.cache.extract(),
+      blogpostQuery: blogpost,
     },
   };
 };
