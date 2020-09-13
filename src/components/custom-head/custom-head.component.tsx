@@ -6,26 +6,40 @@ type MetaProps = {
   ogImage: { url: string };
 };
 
-const CustomHead = ({ title, description, ogImage }: MetaProps) => {
+const CustomHead: React.FC<MetaProps> = ({
+  title,
+  description,
+  ogImage,
+  children,
+}) => {
   // Meta descriptions can be any length, but Google generally truncates
   // snippets to ~155–160 characters.
 
-  const trimmedDescription =
+  const desc =
     description.length > 150
       ? description.substring(0, 150).concat('...')
       : description;
   return (
     <Head>
       <title>{title}</title>
-      <meta name='description' content={trimmedDescription} />
-      <meta property='og:title' content={title} />
-      <meta property='og:image' content={ogImage.url} />
-      <meta property='og:image:type' content='image/jpeg' />
-      <meta property='og:description' content={trimmedDescription} />
-      <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:title' content={title} />
-      <meta name='twitter:description' content={trimmedDescription} />
-      <meta name='twitter:image' content={ogImage.url} />
+      <meta name='description' content={desc} key='description' />
+      <meta property='og:title' content={title} key='og-title' />
+      <meta property='og:image' content={ogImage.url} key='og-image' />
+      <meta property='og:image:type' content='image/jpeg' key='og-image-type' />
+      <meta property='og:description' content={desc} key='og-description' />
+      <meta
+        name='twitter:card'
+        content='summary_large_image'
+        key='summary-large'
+      />
+      <meta name='twitter:title' content={title} key='twitter-title' />
+      <meta
+        name='twitter:description'
+        content={desc}
+        key='twitter-description'
+      />
+      <meta name='twitter:image' content={ogImage.url} key='twitter-image' />
+      {children}
     </Head>
   );
 };

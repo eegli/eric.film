@@ -6,7 +6,6 @@ import { getElementFromArray } from '@/src/utils/array';
 import { checkIfImageExists } from '@/src/utils/blog';
 import { makeBlogSchemaForHead } from '@/src/utils/schema';
 import dynamic from 'next/dynamic';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { CommentInfo, Container } from './blog-container.styles';
 import BlogContent from './content/blog-content.component';
@@ -52,10 +51,7 @@ const BlogContainer: React.FC = () => {
         <CustomHead
           title={post.title}
           description={post.excerpt}
-          ogImage={metaImage}
-        />
-
-        <Head>
+          ogImage={metaImage}>
           <script
             key={`blogLd-JSON-${post.id}`}
             type='application/ld+json'
@@ -63,7 +59,8 @@ const BlogContainer: React.FC = () => {
               __html: makeBlogSchemaForHead(post as Blogpost, metaImage.url),
             }}
           />
-        </Head>
+        </CustomHead>
+
         <Container>
           <BlogContent {...post} />
           <div style={{ padding: '0 1rem' }}>
