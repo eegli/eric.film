@@ -6,12 +6,7 @@ type MetaProps = {
   ogImage: { url: string };
 };
 
-const CustomHead: React.FC<MetaProps> = ({
-  title,
-  description,
-  ogImage,
-  children,
-}) => {
+const CustomHead: React.FC<MetaProps> = ({ title, description, ogImage }) => {
   // Meta descriptions can be any length, but Google generally truncates
   // snippets to ~155–160 characters.
 
@@ -39,7 +34,6 @@ const CustomHead: React.FC<MetaProps> = ({
         key='twitter-description'
       />
       <meta name='twitter:image' content={ogImage.url} key='twitter-image' />
-      {children}
     </Head>
   );
 };
