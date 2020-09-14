@@ -1,4 +1,4 @@
-# Achknowledgements
+# Acknowledgements
 
 Open graph meta images:
 
