@@ -93,7 +93,7 @@ exports[`About renders about component 1`] = `
         <div>
           <ul>
             <li>
-              Javascript (ES5, ES6)
+              Javascript
             </li>
             <li>
               Typescript
