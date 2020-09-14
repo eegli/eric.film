@@ -26,7 +26,7 @@ export type BlogPostContent = Pick<
 // Used for the galleries
 export interface JpegImageObj {
   url: string;
-  id: string;
+  id?: string;
 }
 
 export interface EnrichedImageObj extends JpegImageObj {
