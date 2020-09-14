@@ -2530,7 +2530,12 @@ export const BlogpostDocument = gql`
       updatedAt
       createdAt
       previewImage {
-        url(transformation: { document: { output: { format: jpg } } })
+        url(
+          transformation: {
+            document: { output: { format: jpg } }
+            image: { resize: { height: 630, fit: crop, width: 1200 } }
+          }
+        )
       }
     }
   }
