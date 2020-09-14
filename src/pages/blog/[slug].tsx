@@ -16,10 +16,10 @@ const IndexPage: React.FC<Props> = ({ blogpostQuery }) => {
 
   const title = post?.title || '';
   const description = post?.excerpt || '';
-  const image = post?.previewImage || { url: '' };
+  const ogImage = post?.previewImage || { url: '' };
   return (
     <>
-      <CustomHead title={title} description={description} ogImage={image} />
+      <CustomHead title={title} description={description} ogImage={ogImage} />
       <LayoutContainer breakpoint='small'>
         <BlogContainer />
         <Footer />
@@ -35,6 +35,7 @@ const IndexPage: React.FC<Props> = ({ blogpostQuery }) => {
 
 // TL;DR: Make sure the key "slug" in the second type passed to
 // getServerSideProps is equal to your dynamic page name
+
 export const getServerSideProps: GetServerSideProps<
   { [key: string]: any },
   { slug: string }
@@ -45,6 +46,12 @@ export const getServerSideProps: GetServerSideProps<
     query: Blogpost,
     variables: { slug: params?.slug },
   });
+
+  // Usually, fetching from GraphCMS is done via Apollo Client hooks on
+  // component level. Here, we need the blogpost data on page level to inject
+  // data from a post into the head. We need to do this here and can't do it
+  // later via Javascript since Google and others want a pre-rendered version of
+  // the meta tags.
 
   return {
     props: {

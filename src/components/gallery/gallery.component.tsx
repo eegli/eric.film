@@ -1,4 +1,3 @@
-// The progressive image library needs a html element
 import { JpegImageObj } from '@/components/types';
 import { makeWebpFromGraphCMSImages } from '@/src/utils/blog';
 import { useMemo } from 'react';
