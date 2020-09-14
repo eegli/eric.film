@@ -17,25 +17,44 @@ const fadeIn = keyframes`{
   }
 }`;
 
-// TODO
-export const Fader = styled.div`
-  animation: ${fadeIn} 5s;
+const Fader = styled.div`
+  animation: ${fadeIn} 2s;
 `;
 
 const PortfolioSwitch: React.FC = () => {
   const router = useRouter();
   switch (router.query.cat) {
     case PortfolioCategories.PORTFOLIO_STILL:
-      return <StillCategory />;
+      return (
+        <Fader>
+          <StillCategory />
+        </Fader>
+      );
     case PortfolioCategories.PORTFOLIO_MOVING:
-      return <MovingCategory />;
+      return (
+        <Fader>
+          <MovingCategory />
+        </Fader>
+      );
     case PortfolioCategories.PORTFOLIO_CLIENTS:
-      return <ClientCategory />;
+      return (
+        <Fader>
+          <ClientCategory />
+        </Fader>
+      );
     case PortfolioCategories.PORTFOLIO_DEV:
-      return <DevCategory />;
+      return (
+        <Fader>
+          <DevCategory />
+        </Fader>
+      );
     // If you access <baseUrl>/portfolio, you get the "still category" which is the main category
     default:
-      return <StillCategory />;
+      return (
+        <Fader>
+          <StillCategory />
+        </Fader>
+      );
   }
 };
 
