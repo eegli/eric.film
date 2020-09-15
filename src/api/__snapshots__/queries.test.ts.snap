@@ -1,0 +1,890 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Query Blogpost matches snapshot 1`] = `
+Object {
+  "definitions": Array [
+    Object {
+      "directives": Array [],
+      "kind": "OperationDefinition",
+      "name": Object {
+        "kind": "Name",
+        "value": "Blogpost",
+      },
+      "operation": "query",
+      "selectionSet": Object {
+        "kind": "SelectionSet",
+        "selections": Array [
+          Object {
+            "arguments": Array [
+              Object {
+                "kind": "Argument",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "where",
+                },
+                "value": Object {
+                  "fields": Array [
+                    Object {
+                      "kind": "ObjectField",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "slug",
+                      },
+                      "value": Object {
+                        "kind": "Variable",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "slug",
+                        },
+                      },
+                    },
+                  ],
+                  "kind": "ObjectValue",
+                },
+              },
+            ],
+            "directives": Array [],
+            "kind": "Field",
+            "name": Object {
+              "kind": "Name",
+              "value": "blogpost",
+            },
+            "selectionSet": Object {
+              "kind": "SelectionSet",
+              "selections": Array [
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "id",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "excerpt",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "slug",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "title",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "type",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "content",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "ytvideo",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "updatedAt",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "createdAt",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "previewImage",
+                  },
+                  "selectionSet": Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "arguments": Array [
+                          Object {
+                            "kind": "Argument",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "transformation",
+                            },
+                            "value": Object {
+                              "fields": Array [
+                                Object {
+                                  "kind": "ObjectField",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "document",
+                                  },
+                                  "value": Object {
+                                    "fields": Array [
+                                      Object {
+                                        "kind": "ObjectField",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "output",
+                                        },
+                                        "value": Object {
+                                          "fields": Array [
+                                            Object {
+                                              "kind": "ObjectField",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "format",
+                                              },
+                                              "value": Object {
+                                                "kind": "EnumValue",
+                                                "value": "jpg",
+                                              },
+                                            },
+                                          ],
+                                          "kind": "ObjectValue",
+                                        },
+                                      },
+                                    ],
+                                    "kind": "ObjectValue",
+                                  },
+                                },
+                                Object {
+                                  "kind": "ObjectField",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "image",
+                                  },
+                                  "value": Object {
+                                    "fields": Array [
+                                      Object {
+                                        "kind": "ObjectField",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "resize",
+                                        },
+                                        "value": Object {
+                                          "fields": Array [
+                                            Object {
+                                              "kind": "ObjectField",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "height",
+                                              },
+                                              "value": Object {
+                                                "kind": "IntValue",
+                                                "value": "630",
+                                              },
+                                            },
+                                            Object {
+                                              "kind": "ObjectField",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "fit",
+                                              },
+                                              "value": Object {
+                                                "kind": "EnumValue",
+                                                "value": "crop",
+                                              },
+                                            },
+                                            Object {
+                                              "kind": "ObjectField",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "width",
+                                              },
+                                              "value": Object {
+                                                "kind": "IntValue",
+                                                "value": "1200",
+                                              },
+                                            },
+                                          ],
+                                          "kind": "ObjectValue",
+                                        },
+                                      },
+                                    ],
+                                    "kind": "ObjectValue",
+                                  },
+                                },
+                              ],
+                              "kind": "ObjectValue",
+                            },
+                          },
+                        ],
+                        "directives": Array [],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "url",
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+      "variableDefinitions": Array [
+        Object {
+          "directives": Array [],
+          "kind": "VariableDefinition",
+          "type": Object {
+            "kind": "NonNullType",
+            "type": Object {
+              "kind": "NamedType",
+              "name": Object {
+                "kind": "Name",
+                "value": "String",
+              },
+            },
+          },
+          "variable": Object {
+            "kind": "Variable",
+            "name": Object {
+              "kind": "Name",
+              "value": "slug",
+            },
+          },
+        },
+      ],
+    },
+  ],
+  "kind": "Document",
+  "loc": Object {
+    "end": 415,
+    "source": Object {
+      "body": "
+  query Blogpost($slug: String!) {
+    blogpost(where: { slug: $slug }) {
+      id
+      excerpt
+      slug
+      title
+      type
+      content
+      ytvideo
+      updatedAt
+      createdAt
+      previewImage {
+        url(
+          transformation: {
+            document: { output: { format: jpg } }
+            image: { resize: { height: 630, fit: crop, width: 1200 } }
+          }
+        )
+      }
+    }
+  }
+",
+      "locationOffset": Object {
+        "column": 1,
+        "line": 1,
+      },
+      "name": "GraphQL request",
+    },
+    "start": 0,
+  },
+}
+`;
+
+exports[`Query BlogpostsPreview matches snapshot 1`] = `
+Object {
+  "definitions": Array [
+    Object {
+      "directives": Array [],
+      "kind": "OperationDefinition",
+      "name": Object {
+        "kind": "Name",
+        "value": "BlogpostsPreview",
+      },
+      "operation": "query",
+      "selectionSet": Object {
+        "kind": "SelectionSet",
+        "selections": Array [
+          Object {
+            "arguments": Array [
+              Object {
+                "kind": "Argument",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "first",
+                },
+                "value": Object {
+                  "kind": "Variable",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "first",
+                  },
+                },
+              },
+              Object {
+                "kind": "Argument",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "skip",
+                },
+                "value": Object {
+                  "kind": "Variable",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "skip",
+                  },
+                },
+              },
+              Object {
+                "kind": "Argument",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "orderBy",
+                },
+                "value": Object {
+                  "kind": "Variable",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "orderBy",
+                  },
+                },
+              },
+            ],
+            "directives": Array [],
+            "kind": "Field",
+            "name": Object {
+              "kind": "Name",
+              "value": "blogposts",
+            },
+            "selectionSet": Object {
+              "kind": "SelectionSet",
+              "selections": Array [
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "id",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "excerpt",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "slug",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "title",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "type",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "updatedAt",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "createdAt",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "previewImage",
+                  },
+                  "selectionSet": Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "arguments": Array [
+                          Object {
+                            "kind": "Argument",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "transformation",
+                            },
+                            "value": Object {
+                              "fields": Array [
+                                Object {
+                                  "kind": "ObjectField",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "document",
+                                  },
+                                  "value": Object {
+                                    "fields": Array [
+                                      Object {
+                                        "kind": "ObjectField",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "output",
+                                        },
+                                        "value": Object {
+                                          "fields": Array [
+                                            Object {
+                                              "kind": "ObjectField",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "format",
+                                              },
+                                              "value": Object {
+                                                "kind": "EnumValue",
+                                                "value": "jpg",
+                                              },
+                                            },
+                                          ],
+                                          "kind": "ObjectValue",
+                                        },
+                                      },
+                                    ],
+                                    "kind": "ObjectValue",
+                                  },
+                                },
+                                Object {
+                                  "kind": "ObjectField",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "image",
+                                  },
+                                  "value": Object {
+                                    "fields": Array [
+                                      Object {
+                                        "kind": "ObjectField",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "resize",
+                                        },
+                                        "value": Object {
+                                          "fields": Array [
+                                            Object {
+                                              "kind": "ObjectField",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "height",
+                                              },
+                                              "value": Object {
+                                                "kind": "IntValue",
+                                                "value": "400",
+                                              },
+                                            },
+                                            Object {
+                                              "kind": "ObjectField",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "fit",
+                                              },
+                                              "value": Object {
+                                                "kind": "EnumValue",
+                                                "value": "clip",
+                                              },
+                                            },
+                                          ],
+                                          "kind": "ObjectValue",
+                                        },
+                                      },
+                                    ],
+                                    "kind": "ObjectValue",
+                                  },
+                                },
+                              ],
+                              "kind": "ObjectValue",
+                            },
+                          },
+                        ],
+                        "directives": Array [],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "url",
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+          Object {
+            "arguments": Array [],
+            "directives": Array [],
+            "kind": "Field",
+            "name": Object {
+              "kind": "Name",
+              "value": "blogpostsConnection",
+            },
+            "selectionSet": Object {
+              "kind": "SelectionSet",
+              "selections": Array [
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "aggregate",
+                  },
+                  "selectionSet": Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "arguments": Array [],
+                        "directives": Array [],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "count",
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+      "variableDefinitions": Array [
+        Object {
+          "directives": Array [],
+          "kind": "VariableDefinition",
+          "type": Object {
+            "kind": "NonNullType",
+            "type": Object {
+              "kind": "NamedType",
+              "name": Object {
+                "kind": "Name",
+                "value": "Int",
+              },
+            },
+          },
+          "variable": Object {
+            "kind": "Variable",
+            "name": Object {
+              "kind": "Name",
+              "value": "first",
+            },
+          },
+        },
+        Object {
+          "directives": Array [],
+          "kind": "VariableDefinition",
+          "type": Object {
+            "kind": "NonNullType",
+            "type": Object {
+              "kind": "NamedType",
+              "name": Object {
+                "kind": "Name",
+                "value": "Int",
+              },
+            },
+          },
+          "variable": Object {
+            "kind": "Variable",
+            "name": Object {
+              "kind": "Name",
+              "value": "skip",
+            },
+          },
+        },
+        Object {
+          "directives": Array [],
+          "kind": "VariableDefinition",
+          "type": Object {
+            "kind": "NonNullType",
+            "type": Object {
+              "kind": "NamedType",
+              "name": Object {
+                "kind": "Name",
+                "value": "BlogpostOrderByInput",
+              },
+            },
+          },
+          "variable": Object {
+            "kind": "Variable",
+            "name": Object {
+              "kind": "Name",
+              "value": "orderBy",
+            },
+          },
+        },
+      ],
+    },
+  ],
+  "kind": "Document",
+  "loc": Object {
+    "end": 536,
+    "source": Object {
+      "body": "
+  query BlogpostsPreview(
+    $first: Int!
+    $skip: Int!
+    $orderBy: BlogpostOrderByInput!
+  ) {
+    blogposts(first: $first, skip: $skip, orderBy: $orderBy) {
+      id
+      excerpt
+      slug
+      title
+      type
+      updatedAt
+      createdAt
+      previewImage {
+        url(
+          transformation: {
+            document: { output: { format: jpg } }
+            image: { resize: { height: 400, fit: clip } }
+          }
+        )
+      }
+    }
+    blogpostsConnection {
+      aggregate {
+        count
+      }
+    }
+  }
+",
+      "locationOffset": Object {
+        "column": 1,
+        "line": 1,
+      },
+      "name": "GraphQL request",
+    },
+    "start": 0,
+  },
+}
+`;
+
+exports[`Query ImageCollections matches snapshot 1`] = `
+Object {
+  "definitions": Array [
+    Object {
+      "directives": Array [],
+      "kind": "OperationDefinition",
+      "name": Object {
+        "kind": "Name",
+        "value": "ImageCollections",
+      },
+      "operation": "query",
+      "selectionSet": Object {
+        "kind": "SelectionSet",
+        "selections": Array [
+          Object {
+            "arguments": Array [],
+            "directives": Array [],
+            "kind": "Field",
+            "name": Object {
+              "kind": "Name",
+              "value": "imgCollections",
+            },
+            "selectionSet": Object {
+              "kind": "SelectionSet",
+              "selections": Array [
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "id",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "imageType",
+                  },
+                },
+                Object {
+                  "arguments": Array [],
+                  "directives": Array [],
+                  "kind": "Field",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "collection",
+                  },
+                  "selectionSet": Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "arguments": Array [],
+                        "directives": Array [],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "id",
+                        },
+                      },
+                      Object {
+                        "arguments": Array [
+                          Object {
+                            "kind": "Argument",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "transformation",
+                            },
+                            "value": Object {
+                              "fields": Array [
+                                Object {
+                                  "kind": "ObjectField",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "document",
+                                  },
+                                  "value": Object {
+                                    "fields": Array [
+                                      Object {
+                                        "kind": "ObjectField",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "output",
+                                        },
+                                        "value": Object {
+                                          "fields": Array [
+                                            Object {
+                                              "kind": "ObjectField",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "format",
+                                              },
+                                              "value": Object {
+                                                "kind": "EnumValue",
+                                                "value": "jpg",
+                                              },
+                                            },
+                                          ],
+                                          "kind": "ObjectValue",
+                                        },
+                                      },
+                                    ],
+                                    "kind": "ObjectValue",
+                                  },
+                                },
+                              ],
+                              "kind": "ObjectValue",
+                            },
+                          },
+                        ],
+                        "directives": Array [],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "url",
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+      "variableDefinitions": Array [],
+    },
+  ],
+  "kind": "Document",
+  "loc": Object {
+    "end": 193,
+    "source": Object {
+      "body": "
+  query ImageCollections {
+    imgCollections {
+      id
+      imageType
+      collection {
+        id
+        url(transformation: { document: { output: { format: jpg } } })
+      }
+    }
+  }
+",
+      "locationOffset": Object {
+        "column": 1,
+        "line": 1,
+      },
+      "name": "GraphQL request",
+    },
+    "start": 0,
+  },
+}
+`;
