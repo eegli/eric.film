@@ -1,22 +1,8 @@
-import { BlogpostOrderByInput } from '@/src/components/types';
-import {
-  Blogpost,
-  BlogpostsPreview,
-  blogpostsPreviewVars,
-  ImageCollections,
-} from './queries';
+import { Blogpost, BlogpostsPreview, ImageCollections } from './queries';
 
 describe('Query BlogpostsPreview', () => {
   it('matches snapshot', () => {
     expect(BlogpostsPreview).toMatchSnapshot();
-  });
-
-  it('returns correct preview query variables', () => {
-    expect(blogpostsPreviewVars(BlogpostOrderByInput.CreatedAtAsc)).toEqual({
-      orderBy: 'createdAt_ASC',
-      skip: 0,
-      first: 18,
-    });
   });
 });
 

@@ -5,7 +5,7 @@ import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';
 import { SEO_BLOG_INDEX_META as meta } from '@/src/config';
 import { GetServerSideProps } from 'next';
-import { BlogpostsPreview, blogpostsPreviewVars } from '../../api/queries';
+import { BlogpostsPreview } from '../../api/queries';
 import { initializeApollo } from '../../lib/apolloClient';
 
 const IndexPage: React.FC = () => {
@@ -30,7 +30,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
   await apolloClient.query({
     query: BlogpostsPreview,
-    variables: blogpostsPreviewVars(),
   });
 
   return {

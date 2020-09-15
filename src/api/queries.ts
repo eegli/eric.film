@@ -1,14 +1,12 @@
-import {
-  BlogpostOrderByInput,
-  BlogpostsPreviewQueryVariables,
-} from '@/components/types';
 import gql from 'graphql-tag';
+
+// Fetch the first 18 posts, skip 0 and sort by latest by default
 
 export const BlogpostsPreview = gql`
   query BlogpostsPreview(
-    $first: Int!
-    $skip: Int!
-    $orderBy: BlogpostOrderByInput!
+    $first: Int! = 18
+    $skip: Int! = 0
+    $orderBy: BlogpostOrderByInput! = createdAt_DESC
   ) {
     blogposts(first: $first, skip: $skip, orderBy: $orderBy) {
       id
@@ -34,15 +32,6 @@ export const BlogpostsPreview = gql`
     }
   }
 `;
-
-// We fetch the 18 latest posts first
-export const blogpostsPreviewVars = (
-  orderBy: BlogpostOrderByInput = BlogpostOrderByInput.CreatedAtDesc,
-): BlogpostsPreviewQueryVariables => ({
-  skip: 0,
-  first: 18,
-  orderBy,
-});
 
 export const Blogpost = gql`
   query Blogpost($slug: String!) {

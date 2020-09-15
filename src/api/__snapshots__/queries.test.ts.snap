@@ -621,6 +621,10 @@ Object {
       },
       "variableDefinitions": Array [
         Object {
+          "defaultValue": Object {
+            "kind": "IntValue",
+            "value": "18",
+          },
           "directives": Array [],
           "kind": "VariableDefinition",
           "type": Object {
@@ -642,6 +646,10 @@ Object {
           },
         },
         Object {
+          "defaultValue": Object {
+            "kind": "IntValue",
+            "value": "0",
+          },
           "directives": Array [],
           "kind": "VariableDefinition",
           "type": Object {
@@ -663,6 +671,10 @@ Object {
           },
         },
         Object {
+          "defaultValue": Object {
+            "kind": "EnumValue",
+            "value": "createdAt_DESC",
+          },
           "directives": Array [],
           "kind": "VariableDefinition",
           "type": Object {
@@ -688,13 +700,13 @@ Object {
   ],
   "kind": "Document",
   "loc": Object {
-    "end": 536,
+    "end": 562,
     "source": Object {
       "body": "
   query BlogpostsPreview(
-    $first: Int!
-    $skip: Int!
-    $orderBy: BlogpostOrderByInput!
+    $first: Int! = 18
+    $skip: Int! = 0
+    $orderBy: BlogpostOrderByInput! = createdAt_DESC
   ) {
     blogposts(first: $first, skip: $skip, orderBy: $orderBy) {
       id
