@@ -40,7 +40,7 @@ export const blogpostsPreviewVars = (
   orderBy: BlogpostOrderByInput = BlogpostOrderByInput.CreatedAtDesc,
 ): BlogpostsPreviewQueryVariables => ({
   skip: 0,
-  first: 1,
+  first: 18,
   orderBy,
 });
 
