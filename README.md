@@ -36,7 +36,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 GA tracking ids are public anyway since they can be found when checking out any webpage's HTML head.
 With Sentury - or more specifically `@sentry/browser` - it is the same. It cannot be hidden in the frontend.
 
-This is why it is good practice to filter requests by hostname / allowed domains - something that is possiby<sxcd vbnymc,v.basy<XDFGHJKLale for both Sentury and Google Analytics.
+This is why it is good practice to filter requests by hostname / allowed domains - something that is possiby for both Sentury and Google Analytics.
 
 My GraphQL endpoint needs to be public since the frontend has the possibility to fetch more blog posts directly from my backend. It does, however, not allow mutations ¯\\_(ツ)_/¯
 
