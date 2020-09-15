@@ -40,7 +40,7 @@ export const blogpostsPreviewVars = (
   orderBy: BlogpostOrderByInput = BlogpostOrderByInput.CreatedAtDesc,
 ): BlogpostsPreviewQueryVariables => ({
   skip: 0,
-  first: 18,
+  first: 1,
   orderBy,
 });
 
@@ -82,19 +82,16 @@ export const ImageCollections = gql`
 `;
 
 // Todo node: Pagination
-// https://github.com/GraphCMS/docs/blob/master/docs/api/API_relay.md
+// Get the post before and after a specific blogpost
 
-/* To query the first two artists after the artist with id cixnen2ssewlo0143bexdd52n:
-
-{
-  viewer {
-    allArtists(first: 2, after: "cixnen2ssewlo0143bexdd52n") {
-      edges {
-        node {
-          id
-          name
-        }
-      }
-    }
+/* query Blogpost($item: String!, $type:BlogType) {
+  nextPost: blogposts(first: 1, after: $item, where: {type: $type}) {
+    id
+    title
   }
-} */
+  lastPost: blogposts(last: 1, before: $item, where: {type: $type}) {
+    id
+    title
+  }
+}
+ */
