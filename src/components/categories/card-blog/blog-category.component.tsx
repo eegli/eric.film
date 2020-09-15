@@ -7,7 +7,6 @@ import {
   BlogType,
   useBlogpostsPreviewQuery,
 } from '@/components/types';
-import { blogpostsPreviewVars } from '@/src/api/queries';
 import { NetworkStatus } from '@apollo/client';
 import {
   BlogCategoryContainer,
@@ -28,7 +27,7 @@ const BlogCategory: React.FC<Props> = ({ filter, orderBy }) => {
     fetchMore,
     networkStatus,
   } = useBlogpostsPreviewQuery({
-    variables: blogpostsPreviewVars(orderBy),
+    variables: { orderBy },
     notifyOnNetworkStatusChange: true,
   });
 
