@@ -57,14 +57,32 @@ export const Blogpost = gql`
   }
 `;
 
-export const ImageCollections = gql`
-  query ImageCollections {
-    imgCollections {
+// TODO use fragments
+export const imageCollectionHome = gql`
+  query imageCollectionHome {
+    imgCollection(where: { imageType: home }) {
       id
-      imageType
       collection {
         id
-        url(transformation: { document: { output: { format: jpg } } })
+        jpg_url: url(transformation: { document: { output: { format: jpg } } })
+        webp_url: url(
+          transformation: { document: { output: { format: webp } } }
+        )
+      }
+    }
+  }
+`;
+
+export const ImageCollectionPortfolio = gql`
+  query ImageCollectionPortfolio {
+    imgCollection(where: { imageType: portfolio }) {
+      id
+      collection {
+        id
+        jpg_url: url(transformation: { document: { output: { format: jpg } } })
+        webp_url: url(
+          transformation: { document: { output: { format: webp } } }
+        )
       }
     }
   }
