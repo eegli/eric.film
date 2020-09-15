@@ -56,3 +56,7 @@ Good point, there are plenty of things that still need some work. This website i
 > All Next templates
 
 - [next.js/examples](https://github.com/vercel/next.js/tree/canary/examples)
+
+> Tools used for this project
+
+- [eric.film/portfolio?cat=dev](https://eric.film/portfolio?cat=dev)
