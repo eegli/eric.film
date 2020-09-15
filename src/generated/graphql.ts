@@ -2426,12 +2426,28 @@ export type BlogpostQuery = {
   >;
 };
 
-export type ImageCollectionsQueryVariables = Exact<{ [key: string]: never }>;
+export type ImageCollectionHomeQueryVariables = Exact<{ [key: string]: never }>;
 
-export type ImageCollectionsQuery = {
-  imgCollections: Array<
-    Pick<ImgCollection, 'id' | 'imageType'> & {
-      collection: Array<Pick<Asset, 'id' | 'url'>>;
+export type ImageCollectionHomeQuery = {
+  imgCollection?: Maybe<
+    Pick<ImgCollection, 'id'> & {
+      collection: Array<
+        Pick<Asset, 'id'> & { jpg_url: Asset['url']; webp_url: Asset['url'] }
+      >;
+    }
+  >;
+};
+
+export type ImageCollectionPortfolioQueryVariables = Exact<{
+  [key: string]: never;
+}>;
+
+export type ImageCollectionPortfolioQuery = {
+  imgCollection?: Maybe<
+    Pick<ImgCollection, 'id'> & {
+      collection: Array<
+        Pick<Asset, 'id'> & { jpg_url: Asset['url']; webp_url: Asset['url'] }
+      >;
     }
   >;
 };
@@ -2584,63 +2600,127 @@ export type BlogpostQueryResult = Apollo.QueryResult<
   BlogpostQuery,
   BlogpostQueryVariables
 >;
-export const ImageCollectionsDocument = gql`
-  query ImageCollections {
-    imgCollections {
+export const ImageCollectionHomeDocument = gql`
+  query imageCollectionHome {
+    imgCollection(where: { imageType: home }) {
       id
-      imageType
       collection {
         id
-        url(transformation: { document: { output: { format: jpg } } })
+        jpg_url: url(transformation: { document: { output: { format: jpg } } })
+        webp_url: url(
+          transformation: { document: { output: { format: webp } } }
+        )
       }
     }
   }
 `;
 
 /**
- * __useImageCollectionsQuery__
+ * __useImageCollectionHomeQuery__
  *
- * To run a query within a React component, call `useImageCollectionsQuery` and pass it any options that fit your needs.
- * When your component renders, `useImageCollectionsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * To run a query within a React component, call `useImageCollectionHomeQuery` and pass it any options that fit your needs.
+ * When your component renders, `useImageCollectionHomeQuery` returns an object from Apollo Client that contains loading, error, and data properties
  * you can use to render your UI.
  *
  * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
  *
  * @example
- * const { data, loading, error } = useImageCollectionsQuery({
+ * const { data, loading, error } = useImageCollectionHomeQuery({
  *   variables: {
  *   },
  * });
  */
-export function useImageCollectionsQuery(
+export function useImageCollectionHomeQuery(
   baseOptions?: Apollo.QueryHookOptions<
-    ImageCollectionsQuery,
-    ImageCollectionsQueryVariables
+    ImageCollectionHomeQuery,
+    ImageCollectionHomeQueryVariables
   >,
 ) {
-  return Apollo.useQuery<ImageCollectionsQuery, ImageCollectionsQueryVariables>(
-    ImageCollectionsDocument,
-    baseOptions,
-  );
+  return Apollo.useQuery<
+    ImageCollectionHomeQuery,
+    ImageCollectionHomeQueryVariables
+  >(ImageCollectionHomeDocument, baseOptions);
 }
-export function useImageCollectionsLazyQuery(
+export function useImageCollectionHomeLazyQuery(
   baseOptions?: Apollo.LazyQueryHookOptions<
-    ImageCollectionsQuery,
-    ImageCollectionsQueryVariables
+    ImageCollectionHomeQuery,
+    ImageCollectionHomeQueryVariables
   >,
 ) {
   return Apollo.useLazyQuery<
-    ImageCollectionsQuery,
-    ImageCollectionsQueryVariables
-  >(ImageCollectionsDocument, baseOptions);
+    ImageCollectionHomeQuery,
+    ImageCollectionHomeQueryVariables
+  >(ImageCollectionHomeDocument, baseOptions);
 }
-export type ImageCollectionsQueryHookResult = ReturnType<
-  typeof useImageCollectionsQuery
+export type ImageCollectionHomeQueryHookResult = ReturnType<
+  typeof useImageCollectionHomeQuery
 >;
-export type ImageCollectionsLazyQueryHookResult = ReturnType<
-  typeof useImageCollectionsLazyQuery
+export type ImageCollectionHomeLazyQueryHookResult = ReturnType<
+  typeof useImageCollectionHomeLazyQuery
 >;
-export type ImageCollectionsQueryResult = Apollo.QueryResult<
-  ImageCollectionsQuery,
-  ImageCollectionsQueryVariables
+export type ImageCollectionHomeQueryResult = Apollo.QueryResult<
+  ImageCollectionHomeQuery,
+  ImageCollectionHomeQueryVariables
+>;
+export const ImageCollectionPortfolioDocument = gql`
+  query ImageCollectionPortfolio {
+    imgCollection(where: { imageType: portfolio }) {
+      id
+      collection {
+        id
+        jpg_url: url(transformation: { document: { output: { format: jpg } } })
+        webp_url: url(
+          transformation: { document: { output: { format: webp } } }
+        )
+      }
+    }
+  }
+`;
+
+/**
+ * __useImageCollectionPortfolioQuery__
+ *
+ * To run a query within a React component, call `useImageCollectionPortfolioQuery` and pass it any options that fit your needs.
+ * When your component renders, `useImageCollectionPortfolioQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useImageCollectionPortfolioQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useImageCollectionPortfolioQuery(
+  baseOptions?: Apollo.QueryHookOptions<
+    ImageCollectionPortfolioQuery,
+    ImageCollectionPortfolioQueryVariables
+  >,
+) {
+  return Apollo.useQuery<
+    ImageCollectionPortfolioQuery,
+    ImageCollectionPortfolioQueryVariables
+  >(ImageCollectionPortfolioDocument, baseOptions);
+}
+export function useImageCollectionPortfolioLazyQuery(
+  baseOptions?: Apollo.LazyQueryHookOptions<
+    ImageCollectionPortfolioQuery,
+    ImageCollectionPortfolioQueryVariables
+  >,
+) {
+  return Apollo.useLazyQuery<
+    ImageCollectionPortfolioQuery,
+    ImageCollectionPortfolioQueryVariables
+  >(ImageCollectionPortfolioDocument, baseOptions);
+}
+export type ImageCollectionPortfolioQueryHookResult = ReturnType<
+  typeof useImageCollectionPortfolioQuery
+>;
+export type ImageCollectionPortfolioLazyQueryHookResult = ReturnType<
+  typeof useImageCollectionPortfolioLazyQuery
+>;
+export type ImageCollectionPortfolioQueryResult = Apollo.QueryResult<
+  ImageCollectionPortfolioQuery,
+  ImageCollectionPortfolioQueryVariables
 >;

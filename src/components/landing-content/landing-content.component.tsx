@@ -1,6 +1,6 @@
 import ErrorMessage from '@/components/error-message/error-message.component';
 import Gallery from '@/components/gallery/gallery.component';
-import { useImageCollectionsQuery } from '@/components/types';
+import { useImageCollectionHomeQuery } from '@/components/types';
 import { DescriptionContainer, Sh1, Sh2 } from '@/shared/headings.styles';
 import Link from 'next/link';
 import React from 'react';
@@ -11,12 +11,12 @@ type Props = {
 };
 
 const LandingContent = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
-  const { error, data } = useImageCollectionsQuery();
+  const { error, data } = useImageCollectionHomeQuery();
 
   if (error) return <ErrorMessage>Error loading images :(</ErrorMessage>;
 
-  if (data) {
-    const images = data.imgCollections.find(col => col.imageType === 'home');
+  if (data?.imgCollection?.collection) {
+    const images = data.imgCollection.collection;
 
     return (
       <>
@@ -31,7 +31,7 @@ const LandingContent = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
           <Link href='/about'>
             <LinkText>say hi to the team</LinkText>
           </Link>
-          {images ? <Gallery layout='grid' images={images.collection} /> : null}
+          {images ? <Gallery layout='grid' images={images} /> : null}
         </LandingContentContainer>
       </>
     );

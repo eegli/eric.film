@@ -1,28 +1,22 @@
-import { JpegImageObj } from '@/components/types';
-import { makeWebpFromGraphCMSImages } from '@/src/utils/blog';
-import { useMemo } from 'react';
 import { GalleryContainer, Image } from './gallery.styles';
 
 export type GalleryProps = {
-  images: JpegImageObj[];
+  images: Array<{ id: string; jpg_url: string; webp_url?: string }>;
   layout?: 'grid';
 };
 
+// It's possible to use the gallery without webp images, in this case, <picture>
+// will fall back to the <img> tag
 const Gallery: React.FC<GalleryProps> = ({ images, layout }) => {
-  // This function returns enriched image data with a webp url
-  const enrichedImages = useMemo(() => makeWebpFromGraphCMSImages(images), [
-    images,
-  ]);
-
   return (
     <>
       <GalleryContainer layout={layout}>
-        {enrichedImages.map(img => (
+        {images.map(img => (
           <div key={img.id}>
             <picture>
               <source srcSet={img.webp_url} type='image/webp' />
-              <source srcSet={img.url} type='image/jpg' />
-              <Image src={img.url} alt='portfolio-image' />
+              <source srcSet={img.jpg_url} type='image/jpg' />
+              <Image src={img.jpg_url} alt='portfolio-image' />
             </picture>
           </div>
         ))}

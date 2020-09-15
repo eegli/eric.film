@@ -3,7 +3,7 @@ import CustomHead from '@/components/custom-head/custom-head.component';
 import Footer from '@/components/footer/footer.component';
 import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';
-import { ImageCollections } from '@/src/api/queries';
+import { ImageCollectionPortfolio } from '@/src/api/queries';
 import { SEO_PORTFOLIO_META as meta } from '@/src/config';
 import { GetServerSideProps } from 'next';
 import { initializeApollo } from '../lib/apolloClient';
@@ -29,7 +29,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const apolloClient = initializeApollo();
 
   await apolloClient.query({
-    query: ImageCollections,
+    query: ImageCollectionPortfolio,
   });
 
   return {
