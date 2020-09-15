@@ -1,4 +1,9 @@
-import { Blogpost, BlogpostsPreview, ImageCollections } from './queries';
+import {
+  Blogpost,
+  BlogpostsPreview,
+  imageCollectionHome,
+  ImageCollectionPortfolio,
+} from './queries';
 
 describe('Query BlogpostsPreview', () => {
   it('matches snapshot', () => {
@@ -12,8 +17,14 @@ describe('Query Blogpost', () => {
   });
 });
 
-describe('Query ImageCollections', () => {
+describe('Query imageCollectionHome', () => {
   it('matches snapshot', () => {
-    expect(ImageCollections).toMatchSnapshot();
+    expect(imageCollectionHome).toMatchSnapshot();
+  });
+});
+
+describe('Query ImageCollectionPortfolio', () => {
+  it('matches snapshot', () => {
+    expect(ImageCollectionPortfolio).toMatchSnapshot();
   });
 });
