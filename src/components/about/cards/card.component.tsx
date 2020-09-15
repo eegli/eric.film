@@ -42,10 +42,11 @@ const CardComponent: React.FC = () => (
         <CardDescription>
           <span>LEAD DEVELOPER</span>
           <p>
-            eric is our self-taught javascript engineer. he mostly talks about
+            eric is our junior javascript engineer. he mostly talks about
             "react" but as long as our website looks good, we don't really care.
             Main responsibilities:
           </p>
+          <br />
           <ul>
             <li>eric.film development</li>
             <li>blogging</li>
