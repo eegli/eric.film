@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 
 // Fetch the first 18 posts, skip 0 and sort by latest by default
 
