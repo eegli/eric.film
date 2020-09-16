@@ -91,7 +91,7 @@ export const ImageCollectionPortfolio = gql`
 // Todo node: Pagination
 // Get the post before and after a specific blogpost
 
-/* query Blogpost($item: String!, $type:BlogType) {
+/* query Random($type: BlogType!, $item: String!) {
   nextPost: blogposts(first: 1, after: $item, where: {type: $type}) {
     id
     title

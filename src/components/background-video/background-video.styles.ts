@@ -33,7 +33,7 @@ html, body {
 </body>
 
 // CSS
-.app {
+.video {
     height: 100%;
 }
 */
