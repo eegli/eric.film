@@ -24,12 +24,15 @@ const IndexPage: React.FC = () => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
+  // Create a new apollo client on the server with no initial state
   const apolloClient = initializeApollo();
 
+  // Make query which will be stored in the cache
   await apolloClient.query({
     query: imageCollectionHome,
   });
 
+  // Extract data from cache and pass as props
   return {
     props: {
       initialApolloState: apolloClient.cache.extract(),
