@@ -56,6 +56,7 @@ const App: React.FC<Props> = ({ Component, pageProps, err }) => {
     };
   }, [router.events]);
 
+  // Restore data from cache
   const apolloClient = useApollo(pageProps.initialApolloState);
 
   return (

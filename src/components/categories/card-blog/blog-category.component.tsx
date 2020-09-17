@@ -39,26 +39,16 @@ const BlogCategory: React.FC<Props> = ({ filter, orderBy }) => {
   if (loading && !loadingMorePosts) return <CustomSpinner />;
 
   if (data?.blogposts) {
+    const { blogposts, blogpostsConnection } = data;
+    const areMorePosts = blogposts.length < blogpostsConnection.aggregate.count;
+
     const loadMorePosts = () => {
       fetchMore({
         variables: {
-          skip: data.blogposts.length,
-        },
-        updateQuery: (previousResult, { fetchMoreResult }) => {
-          if (!fetchMoreResult) {
-            return previousResult;
-          }
-          return Object.assign({}, previousResult, {
-            blogposts: [
-              ...previousResult.blogposts,
-              ...fetchMoreResult.blogposts,
-            ],
-          });
+          skip: blogposts.length,
         },
       });
     };
-    const { blogposts, blogpostsConnection } = data;
-    const areMorePosts = blogposts.length < blogpostsConnection.aggregate.count;
 
     let posts: Array<any>;
 
