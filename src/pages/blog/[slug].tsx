@@ -16,10 +16,14 @@ const IndexPage: React.FC<Props> = ({ blogpostQuery }) => {
 
   const title = post?.title || '';
   const description = post?.excerpt || '';
-  const ogImage = post?.previewImage || { url: '' };
+  const ogImage = post?.previewImage.sizeOG || '';
   return (
     <>
-      <CustomHead title={title} description={description} ogImage={ogImage} />
+      <CustomHead
+        title={title}
+        description={description}
+        ogImage={{ url: ogImage }}
+      />
       <LayoutContainer breakpoint='small'>
         <BlogContainer />
         <Footer />

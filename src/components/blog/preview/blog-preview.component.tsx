@@ -1,5 +1,5 @@
 import { Blogpost } from '@/components/types';
-import { checkIfImageExists } from '@/src/utils/blog';
+import { FALLBACK_IMG } from '@/src/config';
 import { dateFormat } from '@/src/utils/dates';
 import Link from 'next/link';
 import ProgressiveImage from 'react-progressive-graceful-image';
@@ -27,7 +27,7 @@ const BlogPreview: React.FC<Blogpost> = ({
   createdAt,
   id,
 }) => {
-  const _previewImage = checkIfImageExists({ image: previewImage, id });
+  const _previewImage = previewImage || FALLBACK_IMG;
 
   return (
     <Link href='/blog/[slug]' as={`/blog/${slug}`}>

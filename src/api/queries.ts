@@ -20,7 +20,7 @@ export const BlogpostsPreview = gql`
         url(
           transformation: {
             document: { output: { format: jpg } }
-            image: { resize: { height: 400, fit: clip } }
+            image: { resize: { height: 400, fit: crop } }
           }
         )
       }
@@ -32,7 +32,7 @@ export const BlogpostsPreview = gql`
     }
   }
 `;
-
+// TODO use fragments
 export const Blogpost = gql`
   query Blogpost($slug: String!) {
     blogpost(where: { slug: $slug }) {
@@ -46,10 +46,28 @@ export const Blogpost = gql`
       updatedAt
       createdAt
       previewImage {
-        url(
+        size1_1: url(
           transformation: {
             document: { output: { format: jpg } }
-            image: { resize: { height: 630, fit: crop, width: 1200 } }
+            image: { resize: { height: 1000, fit: crop, width: 1000 } }
+          }
+        )
+        size4_3: url(
+          transformation: {
+            document: { output: { format: jpg } }
+            image: { resize: { height: 750, fit: crop, width: 1000 } }
+          }
+        )
+        size16_9: url(
+          transformation: {
+            document: { output: { format: jpg } }
+            image: { resize: { height: 562, fit: crop, width: 1000 } }
+          }
+        )
+        sizeOG: url(
+          transformation: {
+            document: { output: { format: jpg } }
+            image: { resize: { height: 627, fit: crop, width: 1200 } }
           }
         )
       }

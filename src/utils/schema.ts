@@ -7,12 +7,30 @@
 import { Blogpost } from '@/components/types';
 import { SCHEMA_PUBLISHER_LOGO } from '@/src/config';
 
-export const makeBlogSchemaForHead = (
-  post: Blogpost,
+type BlogStructuredData = {
+  dateModified: Date;
+  datePublished: Date;
+  headline: string;
+  image: Array<string>;
+  '@context': 'https://schema.org';
+  '@type': 'BlogPosting';
+  author: { '@type': string; name: string };
+  publisher: {
+    '@type': 'Organization';
+    name: 'eric.film';
+    logo: { '@type': 'ImageObject'; url: string };
+  };
+};
+
+export const makeBlogpostSchema = (
+  post: Omit<
+    Blogpost,
+    'stage' | 'documentInStages' | 'history' | 'previewImage'
+  >,
   previewImage: string,
-): string => {
-  return JSON.stringify({
-    '@context': 'http://schema.org',
+): BlogStructuredData => {
+  return {
+    '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     author: {
       '@type': 'Person',
@@ -26,9 +44,9 @@ export const makeBlogSchemaForHead = (
         url: SCHEMA_PUBLISHER_LOGO.url,
       },
     },
-    datePublished: post.createdAt,
-    dateModified: post.updatedAt,
+    datePublished: new Date(post.createdAt),
+    dateModified: new Date(post.updatedAt),
     headline: post.title,
     image: [previewImage],
-  });
+  };
 };

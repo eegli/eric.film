@@ -1,9 +1,9 @@
 import CustomSpinner from '@/components/custom-spinner/custom-spinner.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
-import { Blogpost, useBlogpostQuery } from '@/components/types';
+import { useBlogpostQuery } from '@/components/types';
 import { getElementFromArray } from '@/src/utils/array';
 import { checkIfImageExists } from '@/src/utils/blog';
-import { makeBlogSchemaForHead } from '@/src/utils/schema';
+import { makeBlogpostSchema } from '@/src/utils/schema';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -42,7 +42,7 @@ const BlogContainer: React.FC = () => {
 
     // Return fallback image if preview === null
     const metaImage = checkIfImageExists({
-      image: post.previewImage,
+      image: post.previewImage.sizeOG,
       id: post.id,
     });
 
@@ -53,7 +53,7 @@ const BlogContainer: React.FC = () => {
             key={`blogLd-JSON-${post.id}`}
             type='application/ld+json'
             dangerouslySetInnerHTML={{
-              __html: makeBlogSchemaForHead(post as Blogpost, metaImage.url),
+              __html: JSON.stringify(makeBlogpostSchema(post, metaImage)),
             }}
           />
         </Head>
