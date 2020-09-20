@@ -4,7 +4,6 @@
 // https://www.npmjs.com/package/schema-dts
 // but adding 1mb overhead for one file is not worth it.
 
-import { Blogpost } from '@/components/types';
 import { SCHEMA_PUBLISHER_LOGO } from '@/src/config';
 
 type BlogStructuredData = {
@@ -22,13 +21,22 @@ type BlogStructuredData = {
   };
 };
 
+type Post = {
+  createdAt: string;
+  updatedAt: string;
+  title: string;
+
+  previewImage: {
+    size1_1: string;
+    size4_3: string;
+    size16_9: string;
+    sizeOG: string;
+  };
+};
+
 export const makeBlogpostSchema = (
-  post: Omit<
-    Blogpost,
-    'stage' | 'documentInStages' | 'history' | 'previewImage'
-  >,
-  previewImage: string,
-): BlogStructuredData => {
+  post: Post,
+): BlogStructuredData | undefined => {
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -47,6 +55,10 @@ export const makeBlogpostSchema = (
     datePublished: new Date(post.createdAt),
     dateModified: new Date(post.updatedAt),
     headline: post.title,
-    image: [previewImage],
+    image: [
+      post?.previewImage.size16_9,
+      post?.previewImage.size1_1,
+      post?.previewImage.size4_3,
+    ],
   };
 };
