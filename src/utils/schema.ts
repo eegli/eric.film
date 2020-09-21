@@ -4,6 +4,7 @@
 // https://www.npmjs.com/package/schema-dts
 // but adding 1mb overhead for one file is not worth it.
 
+import { BlogPostMeta } from '@/components/types';
 import { SCHEMA_PUBLISHER_LOGO } from '@/src/config';
 
 type BlogStructuredData = {
@@ -21,21 +22,8 @@ type BlogStructuredData = {
   };
 };
 
-type Post = {
-  createdAt: string;
-  updatedAt: string;
-  title: string;
-
-  previewImage: {
-    size1_1: string;
-    size4_3: string;
-    size16_9: string;
-    sizeOG: string;
-  };
-};
-
 export const makeBlogpostSchema = (
-  post: Post,
+  post: BlogPostMeta,
 ): BlogStructuredData | undefined => {
   return {
     '@context': 'https://schema.org',

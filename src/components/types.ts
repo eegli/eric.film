@@ -1,4 +1,4 @@
-import { Blogpost } from '@/src/generated/graphql';
+import { Asset, Blogpost } from '@/src/generated/graphql';
 export * from '@/src/generated/graphql';
 
 // In GrapCMS, each blogpost falls into a distinct category. "all" is not one of
@@ -18,17 +18,23 @@ export enum PortfolioCategories {
   PORTFOLIO_DEV = 'dev',
 }
 
+/* Custom types from schema, typed for convenience */
+
+// Actual content of a blogpost
 export type BlogPostContent = Pick<
   Blogpost,
   'title' | 'content' | 'ytvideo' | 'createdAt' | 'updatedAt'
 >;
 
-// Used for the galleries
-export interface JpegImageObj {
-  url: string;
-  id?: string;
-}
-
-export interface EnrichedImageObj extends JpegImageObj {
-  webp_url: string;
-}
+// Blogpost data that is used for structured data
+export type BlogPostMeta = Pick<
+  Blogpost,
+  'createdAt' | 'updatedAt' | 'title'
+> & {
+  previewImage: {
+    size1_1: Asset['url'];
+    size4_3: Asset['url'];
+    size16_9: Asset['url'];
+    sizeOG: Asset['url'];
+  };
+};
