@@ -1,6 +1,5 @@
 import Header from '@/components/header/header.component';
 import { logSpotifyEaserEgg } from '@/src/utils/spotifyEasterEgg';
-import Fonts from '@/styles/theme/fonts';
 import { ApolloProvider } from '@apollo/client';
 import * as Sentry from '@sentry/node';
 import { AppProps } from 'next/app';
@@ -30,11 +29,6 @@ const App: React.FC<Props> = ({ Component, pageProps, err }) => {
   // Easter egg spotify page in console
   useEffect(() => {
     logSpotifyEaserEgg();
-  }, []);
-
-  // Effect to load font
-  useEffect(() => {
-    Fonts();
   }, []);
 
   // Handle route change and GA events, they are tied together
