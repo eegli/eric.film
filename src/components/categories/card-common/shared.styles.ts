@@ -20,6 +20,5 @@ export const CategoryIntro = styled.div<Props>`
   }
   & span {
     color: ${({ theme }) => theme.colors.pink};
-    font-weight: 600;
   }
 `;
