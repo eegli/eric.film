@@ -1,7 +1,10 @@
-import { Blogpost } from '@/components/types';
 import { DiscussionEmbed } from 'disqus-react';
 
-type DisqusProps = Pick<Blogpost, 'id' | 'title' | 'slug'>;
+type DisqusProps = {
+  id: string;
+  title: string;
+  slug: string;
+};
 
 const CustomDisqus: React.FC<DisqusProps> = ({ id, title, slug }) => {
   return (
