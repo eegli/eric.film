@@ -1,8 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components';
 
 // Here is the place to define global styles!
-
-// TODO consider serving Roboto locally as well
 export const GLOBAL = css`
   @font-face {
     font-family: 'Droid Sans';
