@@ -15,7 +15,6 @@ Object {
         "kind": "SelectionSet",
         "selections": Array [
           Object {
-            "alias": undefined,
             "arguments": Array [
               Object {
                 "kind": "Argument",
@@ -54,7 +53,6 @@ Object {
               "kind": "SelectionSet",
               "selections": Array [
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -62,10 +60,8 @@ Object {
                     "kind": "Name",
                     "value": "id",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -73,10 +69,8 @@ Object {
                     "kind": "Name",
                     "value": "excerpt",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -84,10 +78,8 @@ Object {
                     "kind": "Name",
                     "value": "slug",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -95,10 +87,8 @@ Object {
                     "kind": "Name",
                     "value": "title",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -106,10 +96,8 @@ Object {
                     "kind": "Name",
                     "value": "type",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -117,10 +105,8 @@ Object {
                     "kind": "Name",
                     "value": "content",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -128,10 +114,8 @@ Object {
                     "kind": "Name",
                     "value": "ytvideo",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -139,10 +123,8 @@ Object {
                     "kind": "Name",
                     "value": "updatedAt",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -150,10 +132,8 @@ Object {
                     "kind": "Name",
                     "value": "createdAt",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -281,7 +261,6 @@ Object {
                           "kind": "Name",
                           "value": "url",
                         },
-                        "selectionSet": undefined,
                       },
                       Object {
                         "alias": Object {
@@ -400,7 +379,6 @@ Object {
                           "kind": "Name",
                           "value": "url",
                         },
-                        "selectionSet": undefined,
                       },
                       Object {
                         "alias": Object {
@@ -519,7 +497,6 @@ Object {
                           "kind": "Name",
                           "value": "url",
                         },
-                        "selectionSet": undefined,
                       },
                       Object {
                         "alias": Object {
@@ -638,7 +615,6 @@ Object {
                           "kind": "Name",
                           "value": "url",
                         },
-                        "selectionSet": undefined,
                       },
                     ],
                   },
@@ -650,7 +626,6 @@ Object {
       },
       "variableDefinitions": Array [
         Object {
-          "defaultValue": undefined,
           "directives": Array [],
           "kind": "VariableDefinition",
           "type": Object {
@@ -677,6 +652,54 @@ Object {
   "kind": "Document",
   "loc": Object {
     "end": 1004,
+    "source": Object {
+      "body": "
+  query Blogpost($slug: String!) {
+    blogpost(where: { slug: $slug }) {
+      id
+      excerpt
+      slug
+      title
+      type
+      content
+      ytvideo
+      updatedAt
+      createdAt
+      previewImage {
+        size1_1: url(
+          transformation: {
+            document: { output: { format: jpg } }
+            image: { resize: { height: 1000, fit: crop, width: 1000 } }
+          }
+        )
+        size4_3: url(
+          transformation: {
+            document: { output: { format: jpg } }
+            image: { resize: { height: 750, fit: crop, width: 1000 } }
+          }
+        )
+        size16_9: url(
+          transformation: {
+            document: { output: { format: jpg } }
+            image: { resize: { height: 562, fit: crop, width: 1000 } }
+          }
+        )
+        sizeOG: url(
+          transformation: {
+            document: { output: { format: jpg } }
+            image: { resize: { height: 627, fit: crop, width: 1200 } }
+          }
+        )
+      }
+    }
+  }
+",
+      "locationOffset": Object {
+        "column": 1,
+        "line": 1,
+      },
+      "name": "GraphQL request",
+    },
     "start": 0,
   },
 }
@@ -697,7 +720,6 @@ Object {
         "kind": "SelectionSet",
         "selections": Array [
           Object {
-            "alias": undefined,
             "arguments": Array [
               Object {
                 "kind": "Argument",
@@ -752,7 +774,6 @@ Object {
               "kind": "SelectionSet",
               "selections": Array [
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -760,10 +781,8 @@ Object {
                     "kind": "Name",
                     "value": "id",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -771,10 +790,8 @@ Object {
                     "kind": "Name",
                     "value": "excerpt",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -782,10 +799,8 @@ Object {
                     "kind": "Name",
                     "value": "slug",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -793,10 +808,8 @@ Object {
                     "kind": "Name",
                     "value": "title",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -804,10 +817,8 @@ Object {
                     "kind": "Name",
                     "value": "type",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -815,10 +826,8 @@ Object {
                     "kind": "Name",
                     "value": "updatedAt",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -826,10 +835,8 @@ Object {
                     "kind": "Name",
                     "value": "createdAt",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -841,7 +848,6 @@ Object {
                     "kind": "SelectionSet",
                     "selections": Array [
                       Object {
-                        "alias": undefined,
                         "arguments": Array [
                           Object {
                             "kind": "Argument",
@@ -943,7 +949,6 @@ Object {
                           "kind": "Name",
                           "value": "url",
                         },
-                        "selectionSet": undefined,
                       },
                     ],
                   },
@@ -952,7 +957,6 @@ Object {
             },
           },
           Object {
-            "alias": undefined,
             "arguments": Array [],
             "directives": Array [],
             "kind": "Field",
@@ -964,7 +968,6 @@ Object {
               "kind": "SelectionSet",
               "selections": Array [
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -976,7 +979,6 @@ Object {
                     "kind": "SelectionSet",
                     "selections": Array [
                       Object {
-                        "alias": undefined,
                         "arguments": Array [],
                         "directives": Array [],
                         "kind": "Field",
@@ -984,7 +986,6 @@ Object {
                           "kind": "Name",
                           "value": "count",
                         },
-                        "selectionSet": undefined,
                       },
                     ],
                   },
@@ -1076,6 +1077,43 @@ Object {
   "kind": "Document",
   "loc": Object {
     "end": 562,
+    "source": Object {
+      "body": "
+  query BlogpostsPreview(
+    $first: Int! = 18
+    $skip: Int! = 0
+    $orderBy: BlogpostOrderByInput! = createdAt_DESC
+  ) {
+    blogposts(first: $first, skip: $skip, orderBy: $orderBy) {
+      id
+      excerpt
+      slug
+      title
+      type
+      updatedAt
+      createdAt
+      previewImage {
+        url(
+          transformation: {
+            document: { output: { format: jpg } }
+            image: { resize: { height: 400, fit: crop } }
+          }
+        )
+      }
+    }
+    blogpostsConnection {
+      aggregate {
+        count
+      }
+    }
+  }
+",
+      "locationOffset": Object {
+        "column": 1,
+        "line": 1,
+      },
+      "name": "GraphQL request",
+    },
     "start": 0,
   },
 }
@@ -1096,7 +1134,6 @@ Object {
         "kind": "SelectionSet",
         "selections": Array [
           Object {
-            "alias": undefined,
             "arguments": Array [
               Object {
                 "kind": "Argument",
@@ -1132,7 +1169,6 @@ Object {
               "kind": "SelectionSet",
               "selections": Array [
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -1140,10 +1176,8 @@ Object {
                     "kind": "Name",
                     "value": "id",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -1155,7 +1189,6 @@ Object {
                     "kind": "SelectionSet",
                     "selections": Array [
                       Object {
-                        "alias": undefined,
                         "arguments": Array [],
                         "directives": Array [],
                         "kind": "Field",
@@ -1163,7 +1196,6 @@ Object {
                           "kind": "Name",
                           "value": "id",
                         },
-                        "selectionSet": undefined,
                       },
                       Object {
                         "alias": Object {
@@ -1225,7 +1257,6 @@ Object {
                           "kind": "Name",
                           "value": "url",
                         },
-                        "selectionSet": undefined,
                       },
                       Object {
                         "alias": Object {
@@ -1287,7 +1318,6 @@ Object {
                           "kind": "Name",
                           "value": "url",
                         },
-                        "selectionSet": undefined,
                       },
                     ],
                   },
@@ -1303,6 +1333,27 @@ Object {
   "kind": "Document",
   "loc": Object {
     "end": 328,
+    "source": Object {
+      "body": "
+  query ImageCollectionPortfolio {
+    imgCollection(where: { imageType: portfolio }) {
+      id
+      collection {
+        id
+        jpg_url: url(transformation: { document: { output: { format: jpg } } })
+        webp_url: url(
+          transformation: { document: { output: { format: webp } } }
+        )
+      }
+    }
+  }
+",
+      "locationOffset": Object {
+        "column": 1,
+        "line": 1,
+      },
+      "name": "GraphQL request",
+    },
     "start": 0,
   },
 }
@@ -1323,7 +1374,6 @@ Object {
         "kind": "SelectionSet",
         "selections": Array [
           Object {
-            "alias": undefined,
             "arguments": Array [
               Object {
                 "kind": "Argument",
@@ -1359,7 +1409,6 @@ Object {
               "kind": "SelectionSet",
               "selections": Array [
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -1367,10 +1416,8 @@ Object {
                     "kind": "Name",
                     "value": "id",
                   },
-                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -1382,7 +1429,6 @@ Object {
                     "kind": "SelectionSet",
                     "selections": Array [
                       Object {
-                        "alias": undefined,
                         "arguments": Array [],
                         "directives": Array [],
                         "kind": "Field",
@@ -1390,7 +1436,6 @@ Object {
                           "kind": "Name",
                           "value": "id",
                         },
-                        "selectionSet": undefined,
                       },
                       Object {
                         "alias": Object {
@@ -1452,7 +1497,6 @@ Object {
                           "kind": "Name",
                           "value": "url",
                         },
-                        "selectionSet": undefined,
                       },
                       Object {
                         "alias": Object {
@@ -1514,7 +1558,6 @@ Object {
                           "kind": "Name",
                           "value": "url",
                         },
-                        "selectionSet": undefined,
                       },
                     ],
                   },
@@ -1530,6 +1573,27 @@ Object {
   "kind": "Document",
   "loc": Object {
     "end": 318,
+    "source": Object {
+      "body": "
+  query imageCollectionHome {
+    imgCollection(where: { imageType: home }) {
+      id
+      collection {
+        id
+        jpg_url: url(transformation: { document: { output: { format: jpg } } })
+        webp_url: url(
+          transformation: { document: { output: { format: webp } } }
+        )
+      }
+    }
+  }
+",
+      "locationOffset": Object {
+        "column": 1,
+        "line": 1,
+      },
+      "name": "GraphQL request",
+    },
     "start": 0,
   },
 }

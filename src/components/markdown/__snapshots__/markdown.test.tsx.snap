@@ -15,7 +15,6 @@ exports[`Markdown renders markdown content 1`] = `
   padding: 0 1rem;
 }
 
-.c0 img,
 .c0 code {
   padding: 0;
 }
@@ -80,7 +79,7 @@ exports[`Markdown renders markdown content 1`] = `
   vertical-align: -0.4em;
 }
 
-<ThemeProvider
+<Component
   theme={
     Object {
       "breakpoints": Object {
@@ -129,16 +128,11 @@ exports[`Markdown renders markdown content 1`] = `
    
   <Markdown
     content="Der Bundesrat plant eine weitere Lockerung der Corona-Massnahmen. 👀 So sollen Veranstaltungen bis 1000 Personen zugelassen werden. Auch die Polizeistunde soll fallen.
-
-  # H1 Header
-  
-  ## H2 Header
-  
-  ### H3 Header
-  
-  #### H4 Header
-  
-  # First, let me show you how I write code
+# H1 Header
+## H2 Header
+### H3 Header
+#### H4 Header
+# First, let me show you how I write code
   
   This is the Blog Content and it's a code block
   
@@ -156,14 +150,13 @@ exports[`Markdown renders markdown content 1`] = `
         />
       </BlogPostContainer>
     );
-  };\`\`\`
+  };
+  \`\`\`
   
   For this, I use a package called \`react-markdown\`. Can you see how this was inline-code?
-  
   # What about a table?
   
   Text
-  
   # Here is a unordered list and this is a h1
   
   This list has content. Das hat der Bundesrat beschlossen:
@@ -172,24 +165,24 @@ exports[`Markdown renders markdown content 1`] = `
   - Veranstaltungen bis 1000 Personen sind ab Montag wieder erlaubt. Das Verbot für Events mit über 1000 Teilnehmern bleibt wie schon seit Längerem angekündigt noch bis Ende August bestehen.
   - Die Abstandsregel wird gelockert. Neu empfiehlt der Bundesrat nicht mehr einen Abstand von 2, sondern 1,5 Metern. Die Regierung hat ausserdem die Vorgaben für die Schutzkonzepte vereinfacht und vereinheitlicht. Es gelten jetzt für alle die gleichen Richtlinien.
   
-  # What about a checklist?
+# What about a checklist?
   
   - [x] To be done
   - [ ] To be completed
   - [x] Not done!
   
-  # Here is a numbered list and this is a h1
+# Here is a numbered list and this is a h1
   
   1. This list has content. Das hat der Bundesrat beschlossen:
   2. Ab kommenden Montag ist fast alles so wie früher. Der Bundesrat hebt angesichts der guten Entwicklung fast alle Corona-Massnahmen auf.
   3. Veranstaltungen bis 1000 Personen sind ab Montag wieder erlaubt. Das Verbot für Events mit über 1000 Teilnehmern bleibt wie schon seit Längerem angekündigt noch bis Ende August bestehen.
   4. Die Abstandsregel wird gelockert. Neu empfiehlt der Bundesrat nicht mehr einen Abstand von 2, sondern 1,5 Metern. Die Regierung hat ausserdem die Vorgaben für die Schutzkonzepte vereinfacht und vereinheitlicht. Es gelten jetzt für alle die gleichen Richtlinien.
   
-  # This section has different text styles applied to it and this is a h1
+# This section has different text styles applied to it and this is a h1
   
   Überall habe ein **Lernprozess** stattgefunden, auch bei den _Kantonen_, sagt Bundespräsidentin Sommaruga auf die Frage, ob sie keine Angst hat, dass die Kantone überfordert sein werden. «_Dieser Lernprozess hilft jetzt, Entscheidungen zu fällen.» Sie gibt sich zuversichtlich._ «Jetzt mit 10 bis 35 Ansteckungen pro Tag macht es Sinn, gezielt einzugreifen.» Der Bund ~~verschwinde aber nicht einfach~~, man habe ein Monitoring und sei in einer «viel besseren Ausgangslage».
   
-  # This section will be a citation and is a h1
+# This section will be a citation and is a h1
   
   Gleichzeitig mit den Lockerungen wird auch die Homeoffice-Empfehlung gelockert, auch für die besonders gefährdeten Gruppen. Die seien nicht weniger gut geschützt, sagt Bundespräsidentin Sommaruga. Die Arbeitgeber hätten unverändert eine Fürsorge.
   
@@ -197,12 +190,11 @@ exports[`Markdown renders markdown content 1`] = `
   
   Berset ergänzt, dass der Abstand oder die Maske für alle gelte – also auch am Arbeitsplatz.
   
-  # Abstand halten, Masken oder andere Verhaltensregeln und ein Link...
+# Abstand halten, Masken oder andere Verhaltensregeln und ein Link...
   
   ...werden erst fallen, wenn es eine Impfung oder eine gute Behandlung gibt, sagt Alain Berset. Auch die 1,5 Meter Abstandsregeln sei notwendig. 1 Meter sei schon normal und es brauche einen zusätzlichen Abstand als im Normalfall. [Ich arbeite beim Blick](https://www.blick.ch). Das ist eine Newsagentur.
   
-  # Here is an image
-  
+# Here is an image
   ![6288344351929447784604DJI_0017-1024x767.jpg](https://media.graphcms.com/xeBuhftsQPS4AxuxewLU)
   And last but not least, **phatt text!**
   "
@@ -217,16 +209,11 @@ exports[`Markdown renders markdown content 1`] = `
         }
       }
       source="Der Bundesrat plant eine weitere Lockerung der Corona-Massnahmen. 👀 So sollen Veranstaltungen bis 1000 Personen zugelassen werden. Auch die Polizeistunde soll fallen.
-
-  # H1 Header
-  
-  ## H2 Header
-  
-  ### H3 Header
-  
-  #### H4 Header
-  
-  # First, let me show you how I write code
+# H1 Header
+## H2 Header
+### H3 Header
+#### H4 Header
+# First, let me show you how I write code
   
   This is the Blog Content and it's a code block
   
@@ -244,14 +231,13 @@ exports[`Markdown renders markdown content 1`] = `
         />
       </BlogPostContainer>
     );
-  };\`\`\`
+  };
+  \`\`\`
   
   For this, I use a package called \`react-markdown\`. Can you see how this was inline-code?
-  
   # What about a table?
   
   Text
-  
   # Here is a unordered list and this is a h1
   
   This list has content. Das hat der Bundesrat beschlossen:
@@ -260,24 +246,24 @@ exports[`Markdown renders markdown content 1`] = `
   - Veranstaltungen bis 1000 Personen sind ab Montag wieder erlaubt. Das Verbot für Events mit über 1000 Teilnehmern bleibt wie schon seit Längerem angekündigt noch bis Ende August bestehen.
   - Die Abstandsregel wird gelockert. Neu empfiehlt der Bundesrat nicht mehr einen Abstand von 2, sondern 1,5 Metern. Die Regierung hat ausserdem die Vorgaben für die Schutzkonzepte vereinfacht und vereinheitlicht. Es gelten jetzt für alle die gleichen Richtlinien.
   
-  # What about a checklist?
+# What about a checklist?
   
   - [x] To be done
   - [ ] To be completed
   - [x] Not done!
   
-  # Here is a numbered list and this is a h1
+# Here is a numbered list and this is a h1
   
   1. This list has content. Das hat der Bundesrat beschlossen:
   2. Ab kommenden Montag ist fast alles so wie früher. Der Bundesrat hebt angesichts der guten Entwicklung fast alle Corona-Massnahmen auf.
   3. Veranstaltungen bis 1000 Personen sind ab Montag wieder erlaubt. Das Verbot für Events mit über 1000 Teilnehmern bleibt wie schon seit Längerem angekündigt noch bis Ende August bestehen.
   4. Die Abstandsregel wird gelockert. Neu empfiehlt der Bundesrat nicht mehr einen Abstand von 2, sondern 1,5 Metern. Die Regierung hat ausserdem die Vorgaben für die Schutzkonzepte vereinfacht und vereinheitlicht. Es gelten jetzt für alle die gleichen Richtlinien.
   
-  # This section has different text styles applied to it and this is a h1
+# This section has different text styles applied to it and this is a h1
   
   Überall habe ein **Lernprozess** stattgefunden, auch bei den _Kantonen_, sagt Bundespräsidentin Sommaruga auf die Frage, ob sie keine Angst hat, dass die Kantone überfordert sein werden. «_Dieser Lernprozess hilft jetzt, Entscheidungen zu fällen.» Sie gibt sich zuversichtlich._ «Jetzt mit 10 bis 35 Ansteckungen pro Tag macht es Sinn, gezielt einzugreifen.» Der Bund ~~verschwinde aber nicht einfach~~, man habe ein Monitoring und sei in einer «viel besseren Ausgangslage».
   
-  # This section will be a citation and is a h1
+# This section will be a citation and is a h1
   
   Gleichzeitig mit den Lockerungen wird auch die Homeoffice-Empfehlung gelockert, auch für die besonders gefährdeten Gruppen. Die seien nicht weniger gut geschützt, sagt Bundespräsidentin Sommaruga. Die Arbeitgeber hätten unverändert eine Fürsorge.
   
@@ -285,12 +271,11 @@ exports[`Markdown renders markdown content 1`] = `
   
   Berset ergänzt, dass der Abstand oder die Maske für alle gelte – also auch am Arbeitsplatz.
   
-  # Abstand halten, Masken oder andere Verhaltensregeln und ein Link...
+# Abstand halten, Masken oder andere Verhaltensregeln und ein Link...
   
   ...werden erst fallen, wenn es eine Impfung oder eine gute Behandlung gibt, sagt Alain Berset. Auch die 1,5 Meter Abstandsregeln sei notwendig. 1 Meter sei schon normal und es brauche einen zusätzlichen Abstand als im Normalfall. [Ich arbeite beim Blick](https://www.blick.ch). Das ist eine Newsagentur.
   
-  # Here is an image
-  
+# Here is an image
   ![6288344351929447784604DJI_0017-1024x767.jpg](https://media.graphcms.com/xeBuhftsQPS4AxuxewLU)
   And last but not least, **phatt text!**
   "
@@ -312,16 +297,11 @@ exports[`Markdown renders markdown content 1`] = `
         }
         skipHtml={false}
         source="Der Bundesrat plant eine weitere Lockerung der Corona-Massnahmen. 👀 So sollen Veranstaltungen bis 1000 Personen zugelassen werden. Auch die Polizeistunde soll fallen.
-
-  # H1 Header
-  
-  ## H2 Header
-  
-  ### H3 Header
-  
-  #### H4 Header
-  
-  # First, let me show you how I write code
+# H1 Header
+## H2 Header
+### H3 Header
+#### H4 Header
+# First, let me show you how I write code
   
   This is the Blog Content and it's a code block
   
@@ -339,14 +319,13 @@ exports[`Markdown renders markdown content 1`] = `
         />
       </BlogPostContainer>
     );
-  };\`\`\`
+  };
+  \`\`\`
   
   For this, I use a package called \`react-markdown\`. Can you see how this was inline-code?
-  
   # What about a table?
   
   Text
-  
   # Here is a unordered list and this is a h1
   
   This list has content. Das hat der Bundesrat beschlossen:
@@ -355,24 +334,24 @@ exports[`Markdown renders markdown content 1`] = `
   - Veranstaltungen bis 1000 Personen sind ab Montag wieder erlaubt. Das Verbot für Events mit über 1000 Teilnehmern bleibt wie schon seit Längerem angekündigt noch bis Ende August bestehen.
   - Die Abstandsregel wird gelockert. Neu empfiehlt der Bundesrat nicht mehr einen Abstand von 2, sondern 1,5 Metern. Die Regierung hat ausserdem die Vorgaben für die Schutzkonzepte vereinfacht und vereinheitlicht. Es gelten jetzt für alle die gleichen Richtlinien.
   
-  # What about a checklist?
+# What about a checklist?
   
   - [x] To be done
   - [ ] To be completed
   - [x] Not done!
   
-  # Here is a numbered list and this is a h1
+# Here is a numbered list and this is a h1
   
   1. This list has content. Das hat der Bundesrat beschlossen:
   2. Ab kommenden Montag ist fast alles so wie früher. Der Bundesrat hebt angesichts der guten Entwicklung fast alle Corona-Massnahmen auf.
   3. Veranstaltungen bis 1000 Personen sind ab Montag wieder erlaubt. Das Verbot für Events mit über 1000 Teilnehmern bleibt wie schon seit Längerem angekündigt noch bis Ende August bestehen.
   4. Die Abstandsregel wird gelockert. Neu empfiehlt der Bundesrat nicht mehr einen Abstand von 2, sondern 1,5 Metern. Die Regierung hat ausserdem die Vorgaben für die Schutzkonzepte vereinfacht und vereinheitlicht. Es gelten jetzt für alle die gleichen Richtlinien.
   
-  # This section has different text styles applied to it and this is a h1
+# This section has different text styles applied to it and this is a h1
   
   Überall habe ein **Lernprozess** stattgefunden, auch bei den _Kantonen_, sagt Bundespräsidentin Sommaruga auf die Frage, ob sie keine Angst hat, dass die Kantone überfordert sein werden. «_Dieser Lernprozess hilft jetzt, Entscheidungen zu fällen.» Sie gibt sich zuversichtlich._ «Jetzt mit 10 bis 35 Ansteckungen pro Tag macht es Sinn, gezielt einzugreifen.» Der Bund ~~verschwinde aber nicht einfach~~, man habe ein Monitoring und sei in einer «viel besseren Ausgangslage».
   
-  # This section will be a citation and is a h1
+# This section will be a citation and is a h1
   
   Gleichzeitig mit den Lockerungen wird auch die Homeoffice-Empfehlung gelockert, auch für die besonders gefährdeten Gruppen. Die seien nicht weniger gut geschützt, sagt Bundespräsidentin Sommaruga. Die Arbeitgeber hätten unverändert eine Fürsorge.
   
@@ -380,12 +359,11 @@ exports[`Markdown renders markdown content 1`] = `
   
   Berset ergänzt, dass der Abstand oder die Maske für alle gelte – also auch am Arbeitsplatz.
   
-  # Abstand halten, Masken oder andere Verhaltensregeln und ein Link...
+# Abstand halten, Masken oder andere Verhaltensregeln und ein Link...
   
   ...werden erst fallen, wenn es eine Impfung oder eine gute Behandlung gibt, sagt Alain Berset. Auch die 1,5 Meter Abstandsregeln sei notwendig. 1 Meter sei schon normal und es brauche einen zusätzlichen Abstand als im Normalfall. [Ich arbeite beim Blick](https://www.blick.ch). Das ist eine Newsagentur.
   
-  # Here is an image
-  
+# Here is an image
   ![6288344351929447784604DJI_0017-1024x767.jpg](https://media.graphcms.com/xeBuhftsQPS4AxuxewLU)
   And last but not least, **phatt text!**
   "
@@ -411,14 +389,14 @@ exports[`Markdown renders markdown content 1`] = `
               </TextRenderer>
             </p>
             <Headings
-              key="heading-3-1-1"
+              key="heading-2-1-1"
               level={1}
             >
               <h1>
                 <span>
                   <TextRenderer
-                    key="text-3-5-0"
-                    nodeKey="text-3-5-0"
+                    key="text-2-3-0"
+                    nodeKey="text-2-3-0"
                     value="H1 Header"
                   >
                     H1 Header
@@ -427,14 +405,14 @@ exports[`Markdown renders markdown content 1`] = `
               </h1>
             </Headings>
             <Headings
-              key="heading-5-1-2"
+              key="heading-3-1-2"
               level={2}
             >
               <h2>
                 <span>
                   <TextRenderer
-                    key="text-5-6-0"
-                    nodeKey="text-5-6-0"
+                    key="text-3-4-0"
+                    nodeKey="text-3-4-0"
                     value="H2 Header"
                   >
                     H2 Header
@@ -443,14 +421,14 @@ exports[`Markdown renders markdown content 1`] = `
               </h2>
             </Headings>
             <Headings
-              key="heading-7-1-3"
+              key="heading-4-1-3"
               level={3}
             >
               <h3>
                 <span>
                   <TextRenderer
-                    key="text-7-7-0"
-                    nodeKey="text-7-7-0"
+                    key="text-4-5-0"
+                    nodeKey="text-4-5-0"
                     value="H3 Header"
                   >
                     H3 Header
@@ -459,14 +437,14 @@ exports[`Markdown renders markdown content 1`] = `
               </h3>
             </Headings>
             <Headings
-              key="heading-9-1-4"
+              key="heading-5-1-4"
               level={4}
             >
               <h4>
                 <span>
                   <TextRenderer
-                    key="text-9-8-0"
-                    nodeKey="text-9-8-0"
+                    key="text-5-6-0"
+                    nodeKey="text-5-6-0"
                     value="H4 Header"
                   >
                     H4 Header
@@ -475,14 +453,14 @@ exports[`Markdown renders markdown content 1`] = `
               </h4>
             </Headings>
             <Headings
-              key="heading-11-1-5"
+              key="heading-6-1-5"
               level={1}
             >
               <h1>
                 <span>
                   <TextRenderer
-                    key="text-11-5-0"
-                    nodeKey="text-11-5-0"
+                    key="text-6-3-0"
+                    nodeKey="text-6-3-0"
                     value="First, let me show you how I write code"
                   >
                     First, let me show you how I write code
@@ -491,18 +469,18 @@ exports[`Markdown renders markdown content 1`] = `
               </h1>
             </Headings>
             <p
-              key="paragraph-13-1-6"
+              key="paragraph-8-1-6"
             >
               <TextRenderer
-                key="text-13-1-0"
-                nodeKey="text-13-1-0"
+                key="text-8-1-0"
+                nodeKey="text-8-1-0"
                 value="  This is the Blog Content and it's a code block"
               >
                   This is the Blog Content and it's a code block
               </TextRenderer>
             </p>
             <CodeBlock
-              key="code-15-1-7"
+              key="code-10-1-7"
               language="jsx"
               value="const BlogContent = ({ title, excerpt, content }) => {
   return (
@@ -517,55 +495,7 @@ exports[`Markdown renders markdown content 1`] = `
       />
     </BlogPostContainer>
   );
-};\`\`\`
-
-For this, I use a package called \`react-markdown\`. Can you see how this was inline-code?
-
-# What about a table?
-
-Text
-
-# Here is a unordered list and this is a h1
-
-This list has content. Das hat der Bundesrat beschlossen:
-
-- Ab kommenden Montag ist fast alles so wie früher. Der Bundesrat hebt angesichts der guten Entwicklung fast alle Corona-Massnahmen auf.
-- Veranstaltungen bis 1000 Personen sind ab Montag wieder erlaubt. Das Verbot für Events mit über 1000 Teilnehmern bleibt wie schon seit Längerem angekündigt noch bis Ende August bestehen.
-- Die Abstandsregel wird gelockert. Neu empfiehlt der Bundesrat nicht mehr einen Abstand von 2, sondern 1,5 Metern. Die Regierung hat ausserdem die Vorgaben für die Schutzkonzepte vereinfacht und vereinheitlicht. Es gelten jetzt für alle die gleichen Richtlinien.
-
-# What about a checklist?
-
-- [x] To be done
-- [ ] To be completed
-- [x] Not done!
-
-# Here is a numbered list and this is a h1
-
-1. This list has content. Das hat der Bundesrat beschlossen:
-2. Ab kommenden Montag ist fast alles so wie früher. Der Bundesrat hebt angesichts der guten Entwicklung fast alle Corona-Massnahmen auf.
-3. Veranstaltungen bis 1000 Personen sind ab Montag wieder erlaubt. Das Verbot für Events mit über 1000 Teilnehmern bleibt wie schon seit Längerem angekündigt noch bis Ende August bestehen.
-4. Die Abstandsregel wird gelockert. Neu empfiehlt der Bundesrat nicht mehr einen Abstand von 2, sondern 1,5 Metern. Die Regierung hat ausserdem die Vorgaben für die Schutzkonzepte vereinfacht und vereinheitlicht. Es gelten jetzt für alle die gleichen Richtlinien.
-
-# This section has different text styles applied to it and this is a h1
-
-Überall habe ein **Lernprozess** stattgefunden, auch bei den _Kantonen_, sagt Bundespräsidentin Sommaruga auf die Frage, ob sie keine Angst hat, dass die Kantone überfordert sein werden. «_Dieser Lernprozess hilft jetzt, Entscheidungen zu fällen.» Sie gibt sich zuversichtlich._ «Jetzt mit 10 bis 35 Ansteckungen pro Tag macht es Sinn, gezielt einzugreifen.» Der Bund ~~verschwinde aber nicht einfach~~, man habe ein Monitoring und sei in einer «viel besseren Ausgangslage».
-
-# This section will be a citation and is a h1
-
-Gleichzeitig mit den Lockerungen wird auch die Homeoffice-Empfehlung gelockert, auch für die besonders gefährdeten Gruppen. Die seien nicht weniger gut geschützt, sagt Bundespräsidentin Sommaruga. Die Arbeitgeber hätten unverändert eine Fürsorge.
-
-> «Da hat sich nichts geändert.»
-
-Berset ergänzt, dass der Abstand oder die Maske für alle gelte – also auch am Arbeitsplatz.
-
-# Abstand halten, Masken oder andere Verhaltensregeln und ein Link...
-
-...werden erst fallen, wenn es eine Impfung oder eine gute Behandlung gibt, sagt Alain Berset. Auch die 1,5 Meter Abstandsregeln sei notwendig. 1 Meter sei schon normal und es brauche einen zusätzlichen Abstand als im Normalfall. [Ich arbeite beim Blick](https://www.blick.ch). Das ist eine Newsagentur.
-
-# Here is an image
-
-![6288344351929447784604DJI_0017-1024x767.jpg](https://media.graphcms.com/xeBuhftsQPS4AxuxewLU)
-And last but not least, **phatt text!**"
+};"
             >
               <SyntaxHighlighter
                 customStyle={
@@ -575,6 +505,8 @@ And last but not least, **phatt text!**"
                   }
                 }
                 language="jsx"
+                showInlineLineNumbers={true}
+                showLineNumbers={true}
                 style={
                   Object {
                     ".language-css .token.string": Object {
@@ -583,7 +515,7 @@ And last but not least, **phatt text!**"
                     ".style .token.string": Object {
                       "color": "#e6d06c",
                     },
-                    ":not(pre)>code[class*=\\"language-\\"]": Object {
+                    ":not(pre) > code[class*=\\"language-\\"]": Object {
                       "background": "#2a2a2a",
                       "border": "0.13em solid #7a6652",
                       "borderRadius": ".3em",
@@ -681,6 +613,9 @@ And last but not least, **phatt text!**"
                     },
                     "placeholder": Object {
                       "color": "#fff",
+                    },
+                    "pre > code[class*=\\"language-\\"]": Object {
+                      "fontSize": "1em",
                     },
                     "pre[class*=\\"language-\\"]": Object {
                       "MozHyphens": "none",
@@ -811,6 +746,7 @@ And last but not least, **phatt text!**"
                   }
                 >
                   <code
+                    className="language-jsx"
                     style={
                       Object {
                         "MozHyphens": "none",
@@ -830,8 +766,24 @@ And last but not least, **phatt text!**"
                     }
                   >
                     <span
+                      className="linenumber react-syntax-highlighter-line-number"
+                      key="line-number--1"
+                      style={
+                        Object {
+                          "color": "#6f705e",
+                          "display": "inline-block",
+                          "minWidth": "2em",
+                          "paddingRight": "1em",
+                          "textAlign": "right",
+                          "userSelect": "none",
+                        }
+                      }
+                    >
+                      1
+                    </span>
+                    <span
                       className="token"
-                      key="code-segement0"
+                      key="code-segement1"
                       style={
                         Object {
                           "color": "#ef3b7d",
@@ -840,24 +792,28 @@ And last but not least, **phatt text!**"
                     >
                       const
                     </span>
-                     
                     <span
-                      className="token function-variable function"
                       key="code-segement2"
                       style={Object {}}
                     >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        BlogContent
-                      </span>
+                       
                     </span>
-                     
+                    <span
+                      className="token function-variable function token maybe-class-name"
+                      key="code-segement3"
+                      style={Object {}}
+                    >
+                      BlogContent
+                    </span>
+                    <span
+                      key="code-segement4"
+                      style={Object {}}
+                    >
+                       
+                    </span>
                     <span
                       className="token"
-                      key="code-segement4"
+                      key="code-segement5"
                       style={
                         Object {
                           "color": "#a77afe",
@@ -866,10 +822,15 @@ And last but not least, **phatt text!**"
                     >
                       =
                     </span>
-                     
+                    <span
+                      key="code-segement6"
+                      style={Object {}}
+                    >
+                       
+                    </span>
                     <span
                       className="token"
-                      key="code-segement6"
+                      key="code-segement7"
                       style={
                         Object {
                           "color": "#bebec5",
@@ -879,61 +840,73 @@ And last but not least, **phatt text!**"
                       (
                     </span>
                     <span
+                      className="token parameter token"
+                      key="code-segement8"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
+                    >
+                      {
+                    </span>
+                    <span
                       className="token parameter"
-                      key="code-segement7"
+                      key="code-segement9"
                       style={Object {}}
                     >
-                      <span
-                        className="token"
-                        key="code-segment-1-0"
-                        style={
-                          Object {
-                            "color": "#bebec5",
-                          }
-                        }
-                      >
-                        {
-                      </span>
                        title
-                      <span
-                        className="token"
-                        key="code-segment-1-2"
-                        style={
-                          Object {
-                            "color": "#bebec5",
-                          }
+                    </span>
+                    <span
+                      className="token parameter token"
+                      key="code-segement10"
+                      style={
+                        Object {
+                          "color": "#bebec5",
                         }
-                      >
-                        ,
-                      </span>
+                      }
+                    >
+                      ,
+                    </span>
+                    <span
+                      className="token parameter"
+                      key="code-segement11"
+                      style={Object {}}
+                    >
                        excerpt
-                      <span
-                        className="token"
-                        key="code-segment-1-4"
-                        style={
-                          Object {
-                            "color": "#bebec5",
-                          }
+                    </span>
+                    <span
+                      className="token parameter token"
+                      key="code-segement12"
+                      style={
+                        Object {
+                          "color": "#bebec5",
                         }
-                      >
-                        ,
-                      </span>
+                      }
+                    >
+                      ,
+                    </span>
+                    <span
+                      className="token parameter"
+                      key="code-segement13"
+                      style={Object {}}
+                    >
                        content 
-                      <span
-                        className="token"
-                        key="code-segment-1-6"
-                        style={
-                          Object {
-                            "color": "#bebec5",
-                          }
+                    </span>
+                    <span
+                      className="token parameter token"
+                      key="code-segement14"
+                      style={
+                        Object {
+                          "color": "#bebec5",
                         }
-                      >
-                        }
-                      </span>
+                      }
+                    >
+                      }
                     </span>
                     <span
                       className="token"
-                      key="code-segement8"
+                      key="code-segement15"
                       style={
                         Object {
                           "color": "#bebec5",
@@ -942,10 +915,15 @@ And last but not least, **phatt text!**"
                     >
                       )
                     </span>
-                     
+                    <span
+                      key="code-segement16"
+                      style={Object {}}
+                    >
+                       
+                    </span>
                     <span
                       className="token arrow"
-                      key="code-segement10"
+                      key="code-segement17"
                       style={
                         Object {
                           "color": "#a77afe",
@@ -954,10 +932,15 @@ And last but not least, **phatt text!**"
                     >
                       =&gt;
                     </span>
-                     
+                    <span
+                      key="code-segement18"
+                      style={Object {}}
+                    >
+                       
+                    </span>
                     <span
                       className="token"
-                      key="code-segement12"
+                      key="code-segement19"
                       style={
                         Object {
                           "color": "#bebec5",
@@ -966,11 +949,38 @@ And last but not least, **phatt text!**"
                     >
                       {
                     </span>
-                    
-  
+                    <span
+                      key="code-segement20"
+                      style={Object {}}
+                    >
+                      
+
+                    </span>
+                    <span
+                      className="linenumber react-syntax-highlighter-line-number"
+                      key="line-number--2"
+                      style={
+                        Object {
+                          "color": "#6f705e",
+                          "display": "inline-block",
+                          "minWidth": "2em",
+                          "paddingRight": "1em",
+                          "textAlign": "right",
+                          "userSelect": "none",
+                        }
+                      }
+                    >
+                      2
+                    </span>
+                    <span
+                      key="code-segement22"
+                      style={Object {}}
+                    >
+                        
+                    </span>
                     <span
                       className="token"
-                      key="code-segement14"
+                      key="code-segement23"
                       style={
                         Object {
                           "color": "#ef3b7d",
@@ -979,10 +989,15 @@ And last but not least, **phatt text!**"
                     >
                       return
                     </span>
-                     
+                    <span
+                      key="code-segement24"
+                      style={Object {}}
+                    >
+                       
+                    </span>
                     <span
                       className="token"
-                      key="code-segement16"
+                      key="code-segement25"
                       style={
                         Object {
                           "color": "#bebec5",
@@ -991,225 +1006,37 @@ And last but not least, **phatt text!**"
                     >
                       (
                     </span>
-                    
-    
                     <span
-                      className="token tag"
-                      key="code-segement18"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token tag"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        <span
-                          className="token"
-                          key="code-segment-1-0"
-                          style={
-                            Object {
-                              "color": "#bebec5",
-                            }
-                          }
-                        >
-                          &lt;
-                        </span>
-                        <span
-                          className="token class-name"
-                          key="code-segment-1-1"
-                          style={Object {}}
-                        >
-                          BlogPostContainer
-                        </span>
-                      </span>
-                      <span
-                        className="token"
-                        key="code-segment-1-1"
-                        style={
-                          Object {
-                            "color": "#bebec5",
-                          }
-                        }
-                      >
-                        &gt;
-                      </span>
-                    </span>
-                    <span
-                      className="token plain-text"
-                      key="code-segement19"
-                      style={Object {}}
-                    >
-                      
-      
-                    </span>
-                    <span
-                      className="token tag"
-                      key="code-segement20"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token tag"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        <span
-                          className="token"
-                          key="code-segment-1-0"
-                          style={
-                            Object {
-                              "color": "#bebec5",
-                            }
-                          }
-                        >
-                          &lt;
-                        </span>
-                        <span
-                          className="token class-name"
-                          key="code-segment-1-1"
-                          style={Object {}}
-                        >
-                          BlogPostTitle
-                        </span>
-                      </span>
-                      <span
-                        className="token"
-                        key="code-segment-1-1"
-                        style={
-                          Object {
-                            "color": "#bebec5",
-                          }
-                        }
-                      >
-                        &gt;
-                      </span>
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement21"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      {
-                    </span>
-                    title
-                    <span
-                      className="token"
-                      key="code-segement23"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      }
-                    </span>
-                    <span
-                      className="token tag"
-                      key="code-segement24"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token tag"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        <span
-                          className="token"
-                          key="code-segment-1-0"
-                          style={
-                            Object {
-                              "color": "#bebec5",
-                            }
-                          }
-                        >
-                          &lt;/
-                        </span>
-                        <span
-                          className="token class-name"
-                          key="code-segment-1-1"
-                          style={Object {}}
-                        >
-                          BlogPostTitle
-                        </span>
-                      </span>
-                      <span
-                        className="token"
-                        key="code-segment-1-1"
-                        style={
-                          Object {
-                            "color": "#bebec5",
-                          }
-                        }
-                      >
-                        &gt;
-                      </span>
-                    </span>
-                    <span
-                      className="token plain-text"
-                      key="code-segement25"
-                      style={Object {}}
-                    >
-                      
-      
-                    </span>
-                    <span
-                      className="token tag"
                       key="code-segement26"
                       style={Object {}}
                     >
-                      <span
-                        className="token tag"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        <span
-                          className="token"
-                          key="code-segment-1-0"
-                          style={
-                            Object {
-                              "color": "#bebec5",
-                            }
-                          }
-                        >
-                          &lt;
-                        </span>
-                        <span
-                          className="token class-name"
-                          key="code-segment-1-1"
-                          style={Object {}}
-                        >
-                          BlogPostExcerpt
-                        </span>
-                      </span>
-                      <span
-                        className="token"
-                        key="code-segment-1-1"
-                        style={
-                          Object {
-                            "color": "#bebec5",
-                          }
-                        }
-                      >
-                        &gt;
-                      </span>
+                      
+
                     </span>
                     <span
-                      className="token"
-                      key="code-segement27"
+                      className="linenumber react-syntax-highlighter-line-number"
+                      key="line-number--3"
                       style={
                         Object {
-                          "color": "#bebec5",
+                          "color": "#6f705e",
+                          "display": "inline-block",
+                          "minWidth": "2em",
+                          "paddingRight": "1em",
+                          "textAlign": "right",
+                          "userSelect": "none",
                         }
                       }
                     >
-                      {
+                      3
                     </span>
-                    excerpt
                     <span
-                      className="token"
+                      key="code-segement28"
+                      style={Object {}}
+                    >
+                          
+                    </span>
+                    <span
+                      className="token tag token tag token"
                       key="code-segement29"
                       style={
                         Object {
@@ -1217,325 +1044,77 @@ And last but not least, **phatt text!**"
                         }
                       }
                     >
-                      }
+                      &lt;
                     </span>
                     <span
-                      className="token tag"
+                      className="token tag token tag token class-name"
                       key="code-segement30"
                       style={Object {}}
                     >
-                      <span
-                        className="token tag"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        <span
-                          className="token"
-                          key="code-segment-1-0"
-                          style={
-                            Object {
-                              "color": "#bebec5",
-                            }
-                          }
-                        >
-                          &lt;/
-                        </span>
-                        <span
-                          className="token class-name"
-                          key="code-segment-1-1"
-                          style={Object {}}
-                        >
-                          BlogPostExcerpt
-                        </span>
-                      </span>
-                      <span
-                        className="token"
-                        key="code-segment-1-1"
-                        style={
-                          Object {
-                            "color": "#bebec5",
-                          }
-                        }
-                      >
-                        &gt;
-                      </span>
+                      BlogPostContainer
                     </span>
                     <span
-                      className="token plain-text"
+                      className="token tag token"
                       key="code-segement31"
-                      style={Object {}}
-                    >
-                      
-      
-                    </span>
-                    <span
-                      className="token tag"
-                      key="code-segement32"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token tag"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        <span
-                          className="token"
-                          key="code-segment-1-0"
-                          style={
-                            Object {
-                              "color": "#bebec5",
-                            }
-                          }
-                        >
-                          &lt;
-                        </span>
-                        <span
-                          className="token class-name"
-                          key="code-segment-1-1"
-                          style={Object {}}
-                        >
-                          StyledMD
-                        </span>
-                      </span>
-                      
-        
-                      <span
-                        className="token"
-                        key="code-segment-1-2"
-                        style={
-                          Object {
-                            "color": "#e6d06c",
-                          }
-                        }
-                      >
-                        renderers
-                      </span>
-                      <span
-                        className="token script language-javascript"
-                        key="code-segment-1-3"
-                        style={Object {}}
-                      >
-                        <span
-                          className="token script-punctuation"
-                          key="code-segment-1-0"
-                          style={
-                            Object {
-                              "color": "#bebec5",
-                            }
-                          }
-                        >
-                          =
-                        </span>
-                        <span
-                          className="token"
-                          key="code-segment-1-1"
-                          style={
-                            Object {
-                              "color": "#bebec5",
-                            }
-                          }
-                        >
-                          {
-                        </span>
-                        <span
-                          className="token"
-                          key="code-segment-1-2"
-                          style={
-                            Object {
-                              "color": "#bebec5",
-                            }
-                          }
-                        >
-                          {
-                        </span>
-                        
-          code
-                        <span
-                          className="token"
-                          key="code-segment-1-4"
-                          style={
-                            Object {
-                              "color": "#bebec5",
-                            }
-                          }
-                        >
-                          :
-                        </span>
-                         
-                        <span
-                          className="token maybe-class-name"
-                          key="code-segment-1-6"
-                          style={Object {}}
-                        >
-                          CodeBlock
-                        </span>
-                        <span
-                          className="token"
-                          key="code-segment-1-7"
-                          style={
-                            Object {
-                              "color": "#bebec5",
-                            }
-                          }
-                        >
-                          ,
-                        </span>
-                        
-        
-                        <span
-                          className="token"
-                          key="code-segment-1-9"
-                          style={
-                            Object {
-                              "color": "#bebec5",
-                            }
-                          }
-                        >
-                          }
-                        </span>
-                        <span
-                          className="token"
-                          key="code-segment-1-10"
-                          style={
-                            Object {
-                              "color": "#bebec5",
-                            }
-                          }
-                        >
-                          }
-                        </span>
-                      </span>
-                      
-        
-                      <span
-                        className="token"
-                        key="code-segment-1-5"
-                        style={
-                          Object {
-                            "color": "#e6d06c",
-                          }
-                        }
-                      >
-                        source
-                      </span>
-                      <span
-                        className="token script language-javascript"
-                        key="code-segment-1-6"
-                        style={Object {}}
-                      >
-                        <span
-                          className="token script-punctuation"
-                          key="code-segment-1-0"
-                          style={
-                            Object {
-                              "color": "#bebec5",
-                            }
-                          }
-                        >
-                          =
-                        </span>
-                        <span
-                          className="token"
-                          key="code-segment-1-1"
-                          style={
-                            Object {
-                              "color": "#bebec5",
-                            }
-                          }
-                        >
-                          {
-                        </span>
-                        content
-                        <span
-                          className="token"
-                          key="code-segment-1-3"
-                          style={
-                            Object {
-                              "color": "#bebec5",
-                            }
-                          }
-                        >
-                          }
-                        </span>
-                      </span>
-                      
-      
-                      <span
-                        className="token"
-                        key="code-segment-1-8"
-                        style={
-                          Object {
-                            "color": "#bebec5",
-                          }
-                        }
-                      >
-                        /&gt;
-                      </span>
-                    </span>
-                    <span
-                      className="token plain-text"
-                      key="code-segement33"
-                      style={Object {}}
-                    >
-                      
-    
-                    </span>
-                    <span
-                      className="token tag"
-                      key="code-segement34"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token tag"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        <span
-                          className="token"
-                          key="code-segment-1-0"
-                          style={
-                            Object {
-                              "color": "#bebec5",
-                            }
-                          }
-                        >
-                          &lt;/
-                        </span>
-                        <span
-                          className="token class-name"
-                          key="code-segment-1-1"
-                          style={Object {}}
-                        >
-                          BlogPostContainer
-                        </span>
-                      </span>
-                      <span
-                        className="token"
-                        key="code-segment-1-1"
-                        style={
-                          Object {
-                            "color": "#bebec5",
-                          }
-                        }
-                      >
-                        &gt;
-                      </span>
-                    </span>
-                    
-  
-                    <span
-                      className="token"
-                      key="code-segement36"
                       style={
                         Object {
                           "color": "#bebec5",
                         }
                       }
                     >
-                      )
+                      &gt;
                     </span>
                     <span
-                      className="token"
+                      className="token plain-text"
+                      key="code-segement32"
+                      style={Object {}}
+                    >
+                      
+
+                    </span>
+                    <span
+                      className="linenumber react-syntax-highlighter-line-number"
+                      key="line-number--4"
+                      style={
+                        Object {
+                          "color": "#6f705e",
+                          "display": "inline-block",
+                          "minWidth": "2em",
+                          "paddingRight": "1em",
+                          "textAlign": "right",
+                          "userSelect": "none",
+                        }
+                      }
+                    >
+                      4
+                    </span>
+                    <span
+                      className="token plain-text"
+                      key="code-segement34"
+                      style={Object {}}
+                    >
+                            
+                    </span>
+                    <span
+                      className="token tag token tag token"
+                      key="code-segement35"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
+                    >
+                      &lt;
+                    </span>
+                    <span
+                      className="token tag token tag token class-name"
+                      key="code-segement36"
+                      style={Object {}}
+                    >
+                      BlogPostTitle
+                    </span>
+                    <span
+                      className="token tag token"
                       key="code-segement37"
                       style={
                         Object {
@@ -1543,20 +1122,24 @@ And last but not least, **phatt text!**"
                         }
                       }
                     >
-                      ;
+                      &gt;
                     </span>
-                    
-
                     <span
                       className="token"
-                      key="code-segement39"
+                      key="code-segement38"
                       style={
                         Object {
                           "color": "#bebec5",
                         }
                       }
                     >
-                      }
+                      {
+                    </span>
+                    <span
+                      key="code-segement39"
+                      style={Object {}}
+                    >
+                      title
                     </span>
                     <span
                       className="token"
@@ -1567,252 +1150,336 @@ And last but not least, **phatt text!**"
                         }
                       }
                     >
-                      ;
-                    </span>
-                    <span
-                      className="token template-string"
-                      key="code-segement41"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token template-punctuation"
-                        key="code-segment-1-0"
-                        style={
-                          Object {
-                            "color": "#e6d06c",
-                          }
-                        }
-                      >
-                        \`
-                      </span>
-                      <span
-                        className="token template-punctuation"
-                        key="code-segment-1-1"
-                        style={
-                          Object {
-                            "color": "#e6d06c",
-                          }
-                        }
-                      >
-                        \`
-                      </span>
-                    </span>
-                    <span
-                      className="token template-string"
-                      key="code-segement42"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token template-punctuation"
-                        key="code-segment-1-0"
-                        style={
-                          Object {
-                            "color": "#e6d06c",
-                          }
-                        }
-                      >
-                        \`
-                      </span>
-                      <span
-                        className="token"
-                        key="code-segment-1-1"
-                        style={
-                          Object {
-                            "color": "#e6d06c",
-                          }
-                        }
-                      >
-                        
-
-For this, I use a package called 
-                      </span>
-                      <span
-                        className="token template-punctuation"
-                        key="code-segment-1-2"
-                        style={
-                          Object {
-                            "color": "#e6d06c",
-                          }
-                        }
-                      >
-                        \`
-                      </span>
-                    </span>
-                    react
-                    <span
-                      className="token"
-                      key="code-segement44"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
                       }
-                    >
-                      -
                     </span>
-                    markdown\`
                     <span
-                      className="token"
-                      key="code-segement46"
+                      className="token tag token tag token"
+                      key="code-segement41"
                       style={
                         Object {
                           "color": "#bebec5",
                         }
                       }
                     >
-                      .
+                      &lt;/
                     </span>
-                     
                     <span
-                      className="token property-access"
+                      className="token tag token tag token class-name"
+                      key="code-segement42"
+                      style={Object {}}
+                    >
+                      BlogPostTitle
+                    </span>
+                    <span
+                      className="token tag token"
+                      key="code-segement43"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
+                    >
+                      &gt;
+                    </span>
+                    <span
+                      className="token plain-text"
+                      key="code-segement44"
+                      style={Object {}}
+                    >
+                      
+
+                    </span>
+                    <span
+                      className="linenumber react-syntax-highlighter-line-number"
+                      key="line-number--5"
+                      style={
+                        Object {
+                          "color": "#6f705e",
+                          "display": "inline-block",
+                          "minWidth": "2em",
+                          "paddingRight": "1em",
+                          "textAlign": "right",
+                          "userSelect": "none",
+                        }
+                      }
+                    >
+                      5
+                    </span>
+                    <span
+                      className="token plain-text"
+                      key="code-segement46"
+                      style={Object {}}
+                    >
+                            
+                    </span>
+                    <span
+                      className="token tag token tag token"
+                      key="code-segement47"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
+                    >
+                      &lt;
+                    </span>
+                    <span
+                      className="token tag token tag token class-name"
                       key="code-segement48"
                       style={Object {}}
                     >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        Can
-                      </span>
+                      BlogPostExcerpt
                     </span>
-                     you see how 
+                    <span
+                      className="token tag token"
+                      key="code-segement49"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
+                    >
+                      &gt;
+                    </span>
                     <span
                       className="token"
                       key="code-segement50"
                       style={
                         Object {
-                          "color": "#ef3b7d",
+                          "color": "#bebec5",
                         }
                       }
                     >
-                      this
+                      {
                     </span>
-                     was inline
+                    <span
+                      key="code-segement51"
+                      style={Object {}}
+                    >
+                      excerpt
+                    </span>
                     <span
                       className="token"
                       key="code-segement52"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      -
-                    </span>
-                    code
-                    <span
-                      className="token"
-                      key="code-segement54"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      ?
-                    </span>
-                    
-
-# 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement56"
-                      style={Object {}}
-                    >
-                      What
-                    </span>
-                     about a table
-                    <span
-                      className="token"
-                      key="code-segement58"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      ?
-                    </span>
-                    
-
-
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement60"
-                      style={Object {}}
-                    >
-                      Text
-                    </span>
-                    
-
-# 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement62"
-                      style={Object {}}
-                    >
-                      Here
-                    </span>
-                     is a unordered list and 
-                    <span
-                      className="token"
-                      key="code-segement64"
-                      style={
-                        Object {
-                          "color": "#ef3b7d",
-                        }
-                      }
-                    >
-                      this
-                    </span>
-                     is a h1
-
-
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement66"
-                      style={Object {}}
-                    >
-                      This
-                    </span>
-                     list has content
-                    <span
-                      className="token"
-                      key="code-segement68"
                       style={
                         Object {
                           "color": "#bebec5",
                         }
                       }
                     >
-                      .
+                      }
                     </span>
-                     
                     <span
-                      className="token property-access"
+                      className="token tag token tag token"
+                      key="code-segement53"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
+                    >
+                      &lt;/
+                    </span>
+                    <span
+                      className="token tag token tag token class-name"
+                      key="code-segement54"
+                      style={Object {}}
+                    >
+                      BlogPostExcerpt
+                    </span>
+                    <span
+                      className="token tag token"
+                      key="code-segement55"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
+                    >
+                      &gt;
+                    </span>
+                    <span
+                      className="token plain-text"
+                      key="code-segement56"
+                      style={Object {}}
+                    >
+                      
+
+                    </span>
+                    <span
+                      className="linenumber react-syntax-highlighter-line-number"
+                      key="line-number--6"
+                      style={
+                        Object {
+                          "color": "#6f705e",
+                          "display": "inline-block",
+                          "minWidth": "2em",
+                          "paddingRight": "1em",
+                          "textAlign": "right",
+                          "userSelect": "none",
+                        }
+                      }
+                    >
+                      6
+                    </span>
+                    <span
+                      className="token plain-text"
+                      key="code-segement58"
+                      style={Object {}}
+                    >
+                            
+                    </span>
+                    <span
+                      className="token tag token tag token"
+                      key="code-segement59"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
+                    >
+                      &lt;
+                    </span>
+                    <span
+                      className="token tag token tag token class-name"
+                      key="code-segement60"
+                      style={Object {}}
+                    >
+                      StyledMD
+                    </span>
+                    <span
+                      className="token tag"
+                      key="code-segement61"
+                      style={Object {}}
+                    >
+                      
+
+                    </span>
+                    <span
+                      className="linenumber react-syntax-highlighter-line-number"
+                      key="line-number--7"
+                      style={
+                        Object {
+                          "color": "#6f705e",
+                          "display": "inline-block",
+                          "minWidth": "2em",
+                          "paddingRight": "1em",
+                          "textAlign": "right",
+                          "userSelect": "none",
+                        }
+                      }
+                    >
+                      7
+                    </span>
+                    <span
+                      className="token tag"
+                      key="code-segement63"
+                      style={Object {}}
+                    >
+                              
+                    </span>
+                    <span
+                      className="token tag token"
+                      key="code-segement64"
+                      style={
+                        Object {
+                          "color": "#e6d06c",
+                        }
+                      }
+                    >
+                      renderers
+                    </span>
+                    <span
+                      className="token tag token script language-javascript token script-punctuation"
+                      key="code-segement65"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
+                    >
+                      =
+                    </span>
+                    <span
+                      className="token tag token script language-javascript token"
+                      key="code-segement66"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
+                    >
+                      {
+                    </span>
+                    <span
+                      className="token tag token script language-javascript token"
+                      key="code-segement67"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
+                    >
+                      {
+                    </span>
+                    <span
+                      className="token tag token script language-javascript"
+                      key="code-segement68"
+                      style={Object {}}
+                    >
+                      
+
+                    </span>
+                    <span
+                      className="linenumber react-syntax-highlighter-line-number"
+                      key="line-number--8"
+                      style={
+                        Object {
+                          "color": "#6f705e",
+                          "display": "inline-block",
+                          "minWidth": "2em",
+                          "paddingRight": "1em",
+                          "textAlign": "right",
+                          "userSelect": "none",
+                        }
+                      }
+                    >
+                      8
+                    </span>
+                    <span
+                      className="token tag token script language-javascript"
                       key="code-segement70"
                       style={Object {}}
                     >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        Das
-                      </span>
+                                code
                     </span>
-                     hat der 
                     <span
-                      className="token maybe-class-name"
+                      className="token tag token script language-javascript token"
+                      key="code-segement71"
+                      style={
+                        Object {
+                          "color": "#a77afe",
+                        }
+                      }
+                    >
+                      :
+                    </span>
+                    <span
+                      className="token tag token script language-javascript"
                       key="code-segement72"
                       style={Object {}}
                     >
-                      Bundesrat
+                       
                     </span>
-                     beschlossen
                     <span
-                      className="token"
+                      className="token tag token script language-javascript token maybe-class-name"
+                      key="code-segement73"
+                      style={Object {}}
+                    >
+                      CodeBlock
+                    </span>
+                    <span
+                      className="token tag token script language-javascript token"
                       key="code-segement74"
                       style={
                         Object {
@@ -1820,168 +1487,323 @@ For this, I use a package called
                         }
                       }
                     >
-                      :
+                      ,
                     </span>
-                    
-
-
                     <span
-                      className="token"
-                      key="code-segement76"
+                      className="token tag token script language-javascript"
+                      key="code-segement75"
+                      style={Object {}}
+                    >
+                      
+
+                    </span>
+                    <span
+                      className="linenumber react-syntax-highlighter-line-number"
+                      key="line-number--9"
                       style={
                         Object {
-                          "color": "#a77afe",
+                          "color": "#6f705e",
+                          "display": "inline-block",
+                          "minWidth": "2em",
+                          "paddingRight": "1em",
+                          "textAlign": "right",
+                          "userSelect": "none",
                         }
                       }
                     >
-                      -
+                      9
                     </span>
-                     
                     <span
-                      className="token maybe-class-name"
-                      key="code-segement78"
+                      className="token tag token script language-javascript"
+                      key="code-segement77"
                       style={Object {}}
                     >
-                      Ab
+                              
                     </span>
-                     kommenden 
                     <span
-                      className="token maybe-class-name"
+                      className="token tag token script language-javascript token"
+                      key="code-segement78"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
+                    >
+                      }
+                    </span>
+                    <span
+                      className="token tag token script language-javascript token"
+                      key="code-segement79"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
+                    >
+                      }
+                    </span>
+                    <span
+                      className="token tag"
                       key="code-segement80"
                       style={Object {}}
                     >
-                      Montag
+                      
+
                     </span>
-                     ist fast alles so wie früher
                     <span
-                      className="token"
+                      className="linenumber react-syntax-highlighter-line-number"
+                      key="line-number--10"
+                      style={
+                        Object {
+                          "color": "#6f705e",
+                          "display": "inline-block",
+                          "minWidth": "2em",
+                          "paddingRight": "1em",
+                          "textAlign": "right",
+                          "userSelect": "none",
+                        }
+                      }
+                    >
+                      10
+                    </span>
+                    <span
+                      className="token tag"
                       key="code-segement82"
+                      style={Object {}}
+                    >
+                              
+                    </span>
+                    <span
+                      className="token tag token"
+                      key="code-segement83"
+                      style={
+                        Object {
+                          "color": "#e6d06c",
+                        }
+                      }
+                    >
+                      source
+                    </span>
+                    <span
+                      className="token tag token script language-javascript token script-punctuation"
+                      key="code-segement84"
                       style={
                         Object {
                           "color": "#bebec5",
                         }
                       }
                     >
-                      .
+                      =
                     </span>
-                     
                     <span
-                      className="token property-access"
-                      key="code-segement84"
-                      style={Object {}}
+                      className="token tag token script language-javascript token"
+                      key="code-segement85"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
                     >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        Der
-                      </span>
+                      {
                     </span>
-                     
                     <span
-                      className="token maybe-class-name"
+                      className="token tag token script language-javascript"
                       key="code-segement86"
                       style={Object {}}
                     >
-                      Bundesrat
-                    </span>
-                     hebt angesichts der guten 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement88"
-                      style={Object {}}
-                    >
-                      Entwicklung
-                    </span>
-                     fast alle 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement90"
-                      style={Object {}}
-                    >
-                      Corona
+                      content
                     </span>
                     <span
-                      className="token"
-                      key="code-segement91"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      -
-                    </span>
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement92"
-                      style={Object {}}
-                    >
-                      Massnahmen
-                    </span>
-                     auf
-                    <span
-                      className="token"
-                      key="code-segement94"
+                      className="token tag token script language-javascript token"
+                      key="code-segement87"
                       style={
                         Object {
                           "color": "#bebec5",
                         }
                       }
                     >
-                      .
+                      }
                     </span>
-                    
-
                     <span
-                      className="token"
-                      key="code-segement96"
+                      className="token tag"
+                      key="code-segement88"
+                      style={Object {}}
+                    >
+                      
+
+                    </span>
+                    <span
+                      className="linenumber react-syntax-highlighter-line-number"
+                      key="line-number--11"
                       style={
                         Object {
-                          "color": "#a77afe",
+                          "color": "#6f705e",
+                          "display": "inline-block",
+                          "minWidth": "2em",
+                          "paddingRight": "1em",
+                          "textAlign": "right",
+                          "userSelect": "none",
                         }
                       }
                     >
-                      -
+                      11
                     </span>
-                     
                     <span
-                      className="token maybe-class-name"
+                      className="token tag"
+                      key="code-segement90"
+                      style={Object {}}
+                    >
+                            
+                    </span>
+                    <span
+                      className="token tag token"
+                      key="code-segement91"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
+                    >
+                      /&gt;
+                    </span>
+                    <span
+                      className="token plain-text"
+                      key="code-segement92"
+                      style={Object {}}
+                    >
+                      
+
+                    </span>
+                    <span
+                      className="linenumber react-syntax-highlighter-line-number"
+                      key="line-number--12"
+                      style={
+                        Object {
+                          "color": "#6f705e",
+                          "display": "inline-block",
+                          "minWidth": "2em",
+                          "paddingRight": "1em",
+                          "textAlign": "right",
+                          "userSelect": "none",
+                        }
+                      }
+                    >
+                      12
+                    </span>
+                    <span
+                      className="token plain-text"
+                      key="code-segement94"
+                      style={Object {}}
+                    >
+                          
+                    </span>
+                    <span
+                      className="token tag token tag token"
+                      key="code-segement95"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
+                    >
+                      &lt;/
+                    </span>
+                    <span
+                      className="token tag token tag token class-name"
+                      key="code-segement96"
+                      style={Object {}}
+                    >
+                      BlogPostContainer
+                    </span>
+                    <span
+                      className="token tag token"
+                      key="code-segement97"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
+                    >
+                      &gt;
+                    </span>
+                    <span
                       key="code-segement98"
                       style={Object {}}
                     >
-                      Veranstaltungen
+                      
+
                     </span>
-                     bis 
                     <span
-                      className="token"
-                      key="code-segement100"
+                      className="linenumber react-syntax-highlighter-line-number"
+                      key="line-number--13"
                       style={
                         Object {
-                          "color": "#a77afe",
+                          "color": "#6f705e",
+                          "display": "inline-block",
+                          "minWidth": "2em",
+                          "paddingRight": "1em",
+                          "textAlign": "right",
+                          "userSelect": "none",
                         }
                       }
                     >
-                      1000
+                      13
                     </span>
-                     
                     <span
-                      className="token maybe-class-name"
+                      key="code-segement100"
+                      style={Object {}}
+                    >
+                        
+                    </span>
+                    <span
+                      className="token"
+                      key="code-segement101"
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
+                    >
+                      )
+                    </span>
+                    <span
+                      className="token"
                       key="code-segement102"
-                      style={Object {}}
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
                     >
-                      Personen
+                      ;
                     </span>
-                     sind ab 
                     <span
-                      className="token maybe-class-name"
-                      key="code-segement104"
+                      key="code-segement103"
                       style={Object {}}
                     >
-                      Montag
+                      
+
                     </span>
-                     wieder erlaubt
+                    <span
+                      className="linenumber react-syntax-highlighter-line-number"
+                      key="line-number--14"
+                      style={
+                        Object {
+                          "color": "#6f705e",
+                          "display": "inline-block",
+                          "minWidth": "2em",
+                          "paddingRight": "1em",
+                          "textAlign": "right",
+                          "userSelect": "none",
+                        }
+                      }
+                    >
+                      14
+                    </span>
+                    <span
+                      key="code-segement105"
+                      style={Object {}}
+                    />
                     <span
                       className="token"
                       key="code-segement106"
@@ -1991,2476 +1813,654 @@ For this, I use a package called
                         }
                       }
                     >
-                      .
-                    </span>
-                     
-                    <span
-                      className="token property-access"
-                      key="code-segement108"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        Das
-                      </span>
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement110"
-                      style={Object {}}
-                    >
-                      Verbot
-                    </span>
-                     für 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement112"
-                      style={Object {}}
-                    >
-                      Events
-                    </span>
-                     mit über 
-                    <span
-                      className="token"
-                      key="code-segement114"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      1000
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement116"
-                      style={Object {}}
-                    >
-                      Teilnehmern
-                    </span>
-                     bleibt wie schon seit 
-                    <span
-                      className="token constant"
-                      key="code-segement118"
-                      style={Object {}}
-                    >
-                      L
-                    </span>
-                    ängerem angekündigt noch bis 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement120"
-                      style={Object {}}
-                    >
-                      Ende
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement122"
-                      style={Object {}}
-                    >
-                      August
-                    </span>
-                     bestehen
-                    <span
-                      className="token"
-                      key="code-segement124"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    
-
-                    <span
-                      className="token"
-                      key="code-segement126"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      -
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement128"
-                      style={Object {}}
-                    >
-                      Die
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement130"
-                      style={Object {}}
-                    >
-                      Abstandsregel
-                    </span>
-                     wird gelockert
-                    <span
-                      className="token"
-                      key="code-segement132"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                     
-                    <span
-                      className="token property-access"
-                      key="code-segement134"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        Neu
-                      </span>
-                    </span>
-                     empfiehlt der 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement136"
-                      style={Object {}}
-                    >
-                      Bundesrat
-                    </span>
-                     nicht mehr einen 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement138"
-                      style={Object {}}
-                    >
-                      Abstand
-                    </span>
-                     von 
-                    <span
-                      className="token"
-                      key="code-segement140"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      2
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement141"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                     sondern 
-                    <span
-                      className="token"
-                      key="code-segement143"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      1
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement144"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement145"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      5
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement147"
-                      style={Object {}}
-                    >
-                      Metern
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement148"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                     
-                    <span
-                      className="token property-access"
-                      key="code-segement150"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        Die
-                      </span>
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement152"
-                      style={Object {}}
-                    >
-                      Regierung
-                    </span>
-                     hat ausserdem die 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement154"
-                      style={Object {}}
-                    >
-                      Vorgaben
-                    </span>
-                     für die 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement156"
-                      style={Object {}}
-                    >
-                      Schutzkonzepte
-                    </span>
-                     vereinfacht und vereinheitlicht
-                    <span
-                      className="token"
-                      key="code-segement158"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                     
-                    <span
-                      className="token property-access"
-                      key="code-segement160"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        Es
-                      </span>
-                    </span>
-                     gelten jetzt für alle die gleichen 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement162"
-                      style={Object {}}
-                    >
-                      Richtlinien
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement163"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    
-
-# 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement165"
-                      style={Object {}}
-                    >
-                      What
-                    </span>
-                     about a checklist
-                    <span
-                      className="token"
-                      key="code-segement167"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      ?
-                    </span>
-                    
-
-
-                    <span
-                      className="token"
-                      key="code-segement169"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      -
-                    </span>
-                     
-                    <span
-                      className="token"
-                      key="code-segement171"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      [
-                    </span>
-                    x
-                    <span
-                      className="token"
-                      key="code-segement173"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ]
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement175"
-                      style={Object {}}
-                    >
-                      To
-                    </span>
-                     be done
-
-                    <span
-                      className="token"
-                      key="code-segement177"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      -
-                    </span>
-                     
-                    <span
-                      className="token"
-                      key="code-segement179"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      [
-                    </span>
-                     
-                    <span
-                      className="token"
-                      key="code-segement181"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ]
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement183"
-                      style={Object {}}
-                    >
-                      To
-                    </span>
-                     be completed
-
-                    <span
-                      className="token"
-                      key="code-segement185"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      -
-                    </span>
-                     
-                    <span
-                      className="token"
-                      key="code-segement187"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      [
-                    </span>
-                    x
-                    <span
-                      className="token"
-                      key="code-segement189"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ]
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement191"
-                      style={Object {}}
-                    >
-                      Not
-                    </span>
-                     done
-                    <span
-                      className="token"
-                      key="code-segement193"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      !
-                    </span>
-                    
-
-# 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement195"
-                      style={Object {}}
-                    >
-                      Here
-                    </span>
-                     is a numbered list and 
-                    <span
-                      className="token"
-                      key="code-segement197"
-                      style={
-                        Object {
-                          "color": "#ef3b7d",
-                        }
-                      }
-                    >
-                      this
-                    </span>
-                     is a h1
-
-
-                    <span
-                      className="token"
-                      key="code-segement199"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      1.
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement201"
-                      style={Object {}}
-                    >
-                      This
-                    </span>
-                     list has content
-                    <span
-                      className="token"
-                      key="code-segement203"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                     
-                    <span
-                      className="token property-access"
-                      key="code-segement205"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        Das
-                      </span>
-                    </span>
-                     hat der 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement207"
-                      style={Object {}}
-                    >
-                      Bundesrat
-                    </span>
-                     beschlossen
-                    <span
-                      className="token"
-                      key="code-segement209"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      :
-                    </span>
-                    
-
-                    <span
-                      className="token"
-                      key="code-segement211"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      2.
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement213"
-                      style={Object {}}
-                    >
-                      Ab
-                    </span>
-                     kommenden 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement215"
-                      style={Object {}}
-                    >
-                      Montag
-                    </span>
-                     ist fast alles so wie früher
-                    <span
-                      className="token"
-                      key="code-segement217"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                     
-                    <span
-                      className="token property-access"
-                      key="code-segement219"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        Der
-                      </span>
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement221"
-                      style={Object {}}
-                    >
-                      Bundesrat
-                    </span>
-                     hebt angesichts der guten 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement223"
-                      style={Object {}}
-                    >
-                      Entwicklung
-                    </span>
-                     fast alle 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement225"
-                      style={Object {}}
-                    >
-                      Corona
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement226"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      -
-                    </span>
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement227"
-                      style={Object {}}
-                    >
-                      Massnahmen
-                    </span>
-                     auf
-                    <span
-                      className="token"
-                      key="code-segement229"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    
-
-                    <span
-                      className="token"
-                      key="code-segement231"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      3.
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement233"
-                      style={Object {}}
-                    >
-                      Veranstaltungen
-                    </span>
-                     bis 
-                    <span
-                      className="token"
-                      key="code-segement235"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      1000
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement237"
-                      style={Object {}}
-                    >
-                      Personen
-                    </span>
-                     sind ab 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement239"
-                      style={Object {}}
-                    >
-                      Montag
-                    </span>
-                     wieder erlaubt
-                    <span
-                      className="token"
-                      key="code-segement241"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                     
-                    <span
-                      className="token property-access"
-                      key="code-segement243"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        Das
-                      </span>
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement245"
-                      style={Object {}}
-                    >
-                      Verbot
-                    </span>
-                     für 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement247"
-                      style={Object {}}
-                    >
-                      Events
-                    </span>
-                     mit über 
-                    <span
-                      className="token"
-                      key="code-segement249"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      1000
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement251"
-                      style={Object {}}
-                    >
-                      Teilnehmern
-                    </span>
-                     bleibt wie schon seit 
-                    <span
-                      className="token constant"
-                      key="code-segement253"
-                      style={Object {}}
-                    >
-                      L
-                    </span>
-                    ängerem angekündigt noch bis 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement255"
-                      style={Object {}}
-                    >
-                      Ende
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement257"
-                      style={Object {}}
-                    >
-                      August
-                    </span>
-                     bestehen
-                    <span
-                      className="token"
-                      key="code-segement259"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    
-
-                    <span
-                      className="token"
-                      key="code-segement261"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      4.
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement263"
-                      style={Object {}}
-                    >
-                      Die
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement265"
-                      style={Object {}}
-                    >
-                      Abstandsregel
-                    </span>
-                     wird gelockert
-                    <span
-                      className="token"
-                      key="code-segement267"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                     
-                    <span
-                      className="token property-access"
-                      key="code-segement269"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        Neu
-                      </span>
-                    </span>
-                     empfiehlt der 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement271"
-                      style={Object {}}
-                    >
-                      Bundesrat
-                    </span>
-                     nicht mehr einen 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement273"
-                      style={Object {}}
-                    >
-                      Abstand
-                    </span>
-                     von 
-                    <span
-                      className="token"
-                      key="code-segement275"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      2
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement276"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                     sondern 
-                    <span
-                      className="token"
-                      key="code-segement278"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      1
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement279"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement280"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      5
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement282"
-                      style={Object {}}
-                    >
-                      Metern
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement283"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                     
-                    <span
-                      className="token property-access"
-                      key="code-segement285"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        Die
-                      </span>
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement287"
-                      style={Object {}}
-                    >
-                      Regierung
-                    </span>
-                     hat ausserdem die 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement289"
-                      style={Object {}}
-                    >
-                      Vorgaben
-                    </span>
-                     für die 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement291"
-                      style={Object {}}
-                    >
-                      Schutzkonzepte
-                    </span>
-                     vereinfacht und vereinheitlicht
-                    <span
-                      className="token"
-                      key="code-segement293"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                     
-                    <span
-                      className="token property-access"
-                      key="code-segement295"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        Es
-                      </span>
-                    </span>
-                     gelten jetzt für alle die gleichen 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement297"
-                      style={Object {}}
-                    >
-                      Richtlinien
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement298"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    
-
-# 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement300"
-                      style={Object {}}
-                    >
-                      This
-                    </span>
-                     section has different text styles applied to it and 
-                    <span
-                      className="token"
-                      key="code-segement302"
-                      style={
-                        Object {
-                          "color": "#ef3b7d",
-                        }
-                      }
-                    >
-                      this
-                    </span>
-                     is a h1
-
-Überall habe ein 
-                    <span
-                      className="token"
-                      key="code-segement304"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      **
-                    </span>
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement305"
-                      style={Object {}}
-                    >
-                      Lernprozess
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement306"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      **
-                    </span>
-                     stattgefunden
-                    <span
-                      className="token"
-                      key="code-segement308"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                     auch bei den _Kantonen_
-                    <span
-                      className="token"
-                      key="code-segement310"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                     sagt 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement312"
-                      style={Object {}}
-                    >
-                      Bundespräsidentin
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement314"
-                      style={Object {}}
-                    >
-                      Sommaruga
-                    </span>
-                     auf die 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement316"
-                      style={Object {}}
-                    >
-                      Frage
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement317"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                     ob sie keine 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement319"
-                      style={Object {}}
-                    >
-                      Angst
-                    </span>
-                     hat
-                    <span
-                      className="token"
-                      key="code-segement321"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                     dass die 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement323"
-                      style={Object {}}
-                    >
-                      Kantone
-                    </span>
-                     überfordert sein werden
-                    <span
-                      className="token"
-                      key="code-segement325"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                     
-                    <span
-                      className="token property-access"
-                      key="code-segement327"
-                      style={Object {}}
-                    >
-                      «_Dieser
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement329"
-                      style={Object {}}
-                    >
-                      Lernprozess
-                    </span>
-                     hilft jetzt
-                    <span
-                      className="token"
-                      key="code-segement331"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement333"
-                      style={Object {}}
-                    >
-                      Entscheidungen
-                    </span>
-                     zu fällen
-                    <span
-                      className="token"
-                      key="code-segement335"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    <span
-                      className="token property-access"
-                      key="code-segement336"
-                      style={Object {}}
-                    >
-                      »
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement338"
-                      style={Object {}}
-                    >
-                      Sie
-                    </span>
-                     gibt sich zuversichtlich
-                    <span
-                      className="token"
-                      key="code-segement340"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    <span
-                      className="token property-access"
-                      key="code-segement341"
-                      style={Object {}}
-                    >
-                      _
-                    </span>
-                     «Jetzt mit 
-                    <span
-                      className="token"
-                      key="code-segement343"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      10
-                    </span>
-                     bis 
-                    <span
-                      className="token"
-                      key="code-segement345"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      35
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement347"
-                      style={Object {}}
-                    >
-                      Ansteckungen
-                    </span>
-                     pro 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement349"
-                      style={Object {}}
-                    >
-                      Tag
-                    </span>
-                     macht es 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement351"
-                      style={Object {}}
-                    >
-                      Sinn
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement352"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                     gezielt einzugreifen
-                    <span
-                      className="token"
-                      key="code-segement354"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    <span
-                      className="token property-access"
-                      key="code-segement355"
-                      style={Object {}}
-                    >
-                      »
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement357"
-                      style={Object {}}
-                    >
-                      Der
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement359"
-                      style={Object {}}
-                    >
-                      Bund
-                    </span>
-                     
-                    <span
-                      className="token"
-                      key="code-segement361"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      ~
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement362"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      ~
-                    </span>
-                    verschwinde aber nicht einfach
-                    <span
-                      className="token"
-                      key="code-segement364"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      ~
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement365"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      ~
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement366"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                     man habe ein 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement368"
-                      style={Object {}}
-                    >
-                      Monitoring
-                    </span>
-                     und sei 
-                    <span
-                      className="token"
-                      key="code-segement370"
-                      style={
-                        Object {
-                          "color": "#ef3b7d",
-                        }
-                      }
-                    >
-                      in
-                    </span>
-                     einer «viel besseren 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement372"
-                      style={Object {}}
-                    >
-                      Ausgangslage»
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement373"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    
-
-# 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement375"
-                      style={Object {}}
-                    >
-                      This
-                    </span>
-                     section will be a citation and is a h1
-
-
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement377"
-                      style={Object {}}
-                    >
-                      Gleichzeitig
-                    </span>
-                     mit den 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement379"
-                      style={Object {}}
-                    >
-                      Lockerungen
-                    </span>
-                     wird auch die 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement381"
-                      style={Object {}}
-                    >
-                      Homeoffice
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement382"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      -
-                    </span>
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement383"
-                      style={Object {}}
-                    >
-                      Empfehlung
-                    </span>
-                     gelockert
-                    <span
-                      className="token"
-                      key="code-segement385"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                     auch für die besonders gefährdeten 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement387"
-                      style={Object {}}
-                    >
-                      Gruppen
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement388"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                     
-                    <span
-                      className="token property-access"
-                      key="code-segement390"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        Die
-                      </span>
-                    </span>
-                     seien nicht weniger gut geschützt
-                    <span
-                      className="token"
-                      key="code-segement392"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                     sagt 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement394"
-                      style={Object {}}
-                    >
-                      Bundespräsidentin
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement396"
-                      style={Object {}}
-                    >
-                      Sommaruga
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement397"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                     
-                    <span
-                      className="token property-access"
-                      key="code-segement399"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        Die
-                      </span>
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement401"
-                      style={Object {}}
-                    >
-                      Arbeitgeber
-                    </span>
-                     hätten unverändert eine 
-                    <span
-                      className="token constant"
-                      key="code-segement403"
-                      style={Object {}}
-                    >
-                      F
-                    </span>
-                    ürsorge
-                    <span
-                      className="token"
-                      key="code-segement405"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    
-
-
-                    <span
-                      className="token"
-                      key="code-segement407"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      &gt;
-                    </span>
-                     «Da hat sich nichts geändert
-                    <span
-                      className="token"
-                      key="code-segement409"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    <span
-                      className="token property-access"
-                      key="code-segement410"
-                      style={Object {}}
-                    >
-                      »
-                    </span>
-                    
-
-
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement412"
-                      style={Object {}}
-                    >
-                      Berset
-                    </span>
-                     ergänzt
-                    <span
-                      className="token"
-                      key="code-segement414"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                     dass der 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement416"
-                      style={Object {}}
-                    >
-                      Abstand
-                    </span>
-                     oder die 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement418"
-                      style={Object {}}
-                    >
-                      Maske
-                    </span>
-                     für alle gelte – also auch am 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement420"
-                      style={Object {}}
-                    >
-                      Arbeitsplatz
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement421"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    
-
-# 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement423"
-                      style={Object {}}
-                    >
-                      Abstand
-                    </span>
-                     halten
-                    <span
-                      className="token"
-                      key="code-segement425"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement427"
-                      style={Object {}}
-                    >
-                      Masken
-                    </span>
-                     oder andere 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement429"
-                      style={Object {}}
-                    >
-                      Verhaltensregeln
-                    </span>
-                     und ein 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement431"
-                      style={Object {}}
-                    >
-                      Link
-                    </span>
-                    <span
-                      className="token spread"
-                      key="code-segement432"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      ...
-                    </span>
-                    
-
-
-                    <span
-                      className="token spread"
-                      key="code-segement434"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      ...
-                    </span>
-                    werden erst fallen
-                    <span
-                      className="token"
-                      key="code-segement436"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                     wenn es eine 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement438"
-                      style={Object {}}
-                    >
-                      Impfung
-                    </span>
-                     oder eine gute 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement440"
-                      style={Object {}}
-                    >
-                      Behandlung
-                    </span>
-                     gibt
-                    <span
-                      className="token"
-                      key="code-segement442"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                     sagt 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement444"
-                      style={Object {}}
-                    >
-                      Alain
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement446"
-                      style={Object {}}
-                    >
-                      Berset
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement447"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                     
-                    <span
-                      className="token property-access"
-                      key="code-segement449"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        Auch
-                      </span>
-                    </span>
-                     die 
-                    <span
-                      className="token"
-                      key="code-segement451"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      1
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement452"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement453"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      5
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement455"
-                      style={Object {}}
-                    >
-                      Meter
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement457"
-                      style={Object {}}
-                    >
-                      Abstandsregeln
-                    </span>
-                     sei notwendig
-                    <span
-                      className="token"
-                      key="code-segement459"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                     
-                    <span
-                      className="token"
-                      key="code-segement461"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      1
-                    </span>
-                     
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement463"
-                      style={Object {}}
-                    >
-                      Meter
-                    </span>
-                     sei schon normal und es brauche einen zusätzlichen 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement465"
-                      style={Object {}}
-                    >
-                      Abstand
-                    </span>
-                     als im 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement467"
-                      style={Object {}}
-                    >
-                      Normalfall
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement468"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                     
-                    <span
-                      className="token"
-                      key="code-segement470"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      [
-                    </span>
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement471"
-                      style={Object {}}
-                    >
-                      Ich
-                    </span>
-                     arbeite beim 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement473"
-                      style={Object {}}
-                    >
-                      Blick
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement474"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ]
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement475"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      (
-                    </span>
-                    https
-                    <span
-                      className="token"
-                      key="code-segement477"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      :
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement478"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      /
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement479"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      /
-                    </span>
-                    www
-                    <span
-                      className="token"
-                      key="code-segement481"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    <span
-                      className="token property-access"
-                      key="code-segement482"
-                      style={Object {}}
-                    >
-                      blick
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement483"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    <span
-                      className="token property-access"
-                      key="code-segement484"
-                      style={Object {}}
-                    >
-                      ch
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement485"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      )
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement486"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                     
-                    <span
-                      className="token property-access"
-                      key="code-segement488"
-                      style={Object {}}
-                    >
-                      <span
-                        className="token maybe-class-name"
-                        key="code-segment-1-0"
-                        style={Object {}}
-                      >
-                        Das
-                      </span>
-                    </span>
-                     ist eine 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement490"
-                      style={Object {}}
-                    >
-                      Newsagentur
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement491"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    
-
-# 
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement493"
-                      style={Object {}}
-                    >
-                      Here
-                    </span>
-                     is an image
-
-
-                    <span
-                      className="token"
-                      key="code-segement495"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      !
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement496"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      [
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement497"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      6288344351929447784604
-                    </span>
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement498"
-                      style={Object {}}
-                    >
-                      DJI_0017
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement499"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      -
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement500"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      1024
-                    </span>
-                    x767
-                    <span
-                      className="token"
-                      key="code-segement502"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    <span
-                      className="token property-access"
-                      key="code-segement503"
-                      style={Object {}}
-                    >
-                      jpg
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement504"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ]
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement505"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      (
-                    </span>
-                    https
-                    <span
-                      className="token"
-                      key="code-segement507"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      :
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement508"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      /
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement509"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      /
-                    </span>
-                    media
-                    <span
-                      className="token"
-                      key="code-segement511"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    <span
-                      className="token property-access"
-                      key="code-segement512"
-                      style={Object {}}
-                    >
-                      graphcms
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement513"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
-                      }
-                    >
-                      .
-                    </span>
-                    <span
-                      className="token property-access"
-                      key="code-segement514"
-                      style={Object {}}
-                    >
-                      com
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement515"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      /
-                    </span>
-                    xeBuhftsQPS4AxuxewLU
-                    <span
-                      className="token"
-                      key="code-segement517"
-                      style={
-                        Object {
-                          "color": "#bebec5",
-                        }
                       }
-                    >
-                      )
-                    </span>
-                    
-
-                    <span
-                      className="token maybe-class-name"
-                      key="code-segement519"
-                      style={Object {}}
-                    >
-                      And
                     </span>
-                     last but not least
                     <span
                       className="token"
-                      key="code-segement521"
+                      key="code-segement107"
                       style={
                         Object {
                           "color": "#bebec5",
-                        }
-                      }
-                    >
-                      ,
-                    </span>
-                     
-                    <span
-                      className="token"
-                      key="code-segement523"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      **
-                    </span>
-                    phatt text
-                    <span
-                      className="token"
-                      key="code-segement525"
-                      style={
-                        Object {
-                          "color": "#a77afe",
-                        }
-                      }
-                    >
-                      !
-                    </span>
-                    <span
-                      className="token"
-                      key="code-segement526"
-                      style={
-                        Object {
-                          "color": "#a77afe",
                         }
                       }
                     >
-                      **
+                      ;
                     </span>
                   </code>
                 </pre>
               </SyntaxHighlighter>
             </CodeBlock>
+            <p
+              key="paragraph-27-1-8"
+            >
+              <TextRenderer
+                key="text-27-1-0"
+                nodeKey="text-27-1-0"
+                value="  For this, I use a package called "
+              >
+                  For this, I use a package called 
+              </TextRenderer>
+              <InlineCode
+                inline={true}
+                key="inlineCode-27-36-1"
+                value="react-markdown"
+              >
+                <code>
+                  react-markdown
+                </code>
+              </InlineCode>
+              <TextRenderer
+                key="text-27-52-2"
+                nodeKey="text-27-52-2"
+                value=". Can you see how this was inline-code?"
+              >
+                . Can you see how this was inline-code?
+              </TextRenderer>
+            </p>
+            <Headings
+              key="heading-28-1-9"
+              level={1}
+            >
+              <h1>
+                <span>
+                  <TextRenderer
+                    key="text-28-5-0"
+                    nodeKey="text-28-5-0"
+                    value="What about a table?"
+                  >
+                    What about a table?
+                  </TextRenderer>
+                </span>
+              </h1>
+            </Headings>
+            <p
+              key="paragraph-30-1-10"
+            >
+              <TextRenderer
+                key="text-30-1-0"
+                nodeKey="text-30-1-0"
+                value="  Text"
+              >
+                  Text
+              </TextRenderer>
+            </p>
+            <Headings
+              key="heading-31-1-11"
+              level={1}
+            >
+              <h1>
+                <span>
+                  <TextRenderer
+                    key="text-31-5-0"
+                    nodeKey="text-31-5-0"
+                    value="Here is a unordered list and this is a h1"
+                  >
+                    Here is a unordered list and this is a h1
+                  </TextRenderer>
+                </span>
+              </h1>
+            </Headings>
+            <p
+              key="paragraph-33-1-12"
+            >
+              <TextRenderer
+                key="text-33-1-0"
+                nodeKey="text-33-1-0"
+                value="  This list has content. Das hat der Bundesrat beschlossen:"
+              >
+                  This list has content. Das hat der Bundesrat beschlossen:
+              </TextRenderer>
+            </p>
+            <List
+              depth={0}
+              key="list-35-1-13"
+              ordered={false}
+              start={null}
+              tight={false}
+            >
+              <ul>
+                <ListItem
+                  checked={null}
+                  index={0}
+                  key="listItem-35-1-0"
+                  ordered={false}
+                  tight={true}
+                >
+                  <li>
+                    <TextRenderer
+                      key="text-35-5-0"
+                      nodeKey="text-35-5-0"
+                      value="Ab kommenden Montag ist fast alles so wie früher. Der Bundesrat hebt angesichts der guten Entwicklung fast alle Corona-Massnahmen auf."
+                    >
+                      Ab kommenden Montag ist fast alles so wie früher. Der Bundesrat hebt angesichts der guten Entwicklung fast alle Corona-Massnahmen auf.
+                    </TextRenderer>
+                  </li>
+                </ListItem>
+                <ListItem
+                  checked={null}
+                  index={1}
+                  key="listItem-36-1-1"
+                  ordered={false}
+                  tight={true}
+                >
+                  <li>
+                    <TextRenderer
+                      key="text-36-5-0"
+                      nodeKey="text-36-5-0"
+                      value="Veranstaltungen bis 1000 Personen sind ab Montag wieder erlaubt. Das Verbot für Events mit über 1000 Teilnehmern bleibt wie schon seit Längerem angekündigt noch bis Ende August bestehen."
+                    >
+                      Veranstaltungen bis 1000 Personen sind ab Montag wieder erlaubt. Das Verbot für Events mit über 1000 Teilnehmern bleibt wie schon seit Längerem angekündigt noch bis Ende August bestehen.
+                    </TextRenderer>
+                  </li>
+                </ListItem>
+                <ListItem
+                  checked={null}
+                  index={2}
+                  key="listItem-37-1-2"
+                  ordered={false}
+                  tight={false}
+                >
+                  <li>
+                    <p
+                      key="paragraph-37-5-0"
+                    >
+                      <TextRenderer
+                        key="text-37-5-0"
+                        nodeKey="text-37-5-0"
+                        value="Die Abstandsregel wird gelockert. Neu empfiehlt der Bundesrat nicht mehr einen Abstand von 2, sondern 1,5 Metern. Die Regierung hat ausserdem die Vorgaben für die Schutzkonzepte vereinfacht und vereinheitlicht. Es gelten jetzt für alle die gleichen Richtlinien."
+                      >
+                        Die Abstandsregel wird gelockert. Neu empfiehlt der Bundesrat nicht mehr einen Abstand von 2, sondern 1,5 Metern. Die Regierung hat ausserdem die Vorgaben für die Schutzkonzepte vereinfacht und vereinheitlicht. Es gelten jetzt für alle die gleichen Richtlinien.
+                      </TextRenderer>
+                    </p>
+                  </li>
+                </ListItem>
+              </ul>
+            </List>
+            <Headings
+              key="heading-39-1-14"
+              level={1}
+            >
+              <h1>
+                <span>
+                  <TextRenderer
+                    key="text-39-3-0"
+                    nodeKey="text-39-3-0"
+                    value="What about a checklist?"
+                  >
+                    What about a checklist?
+                  </TextRenderer>
+                </span>
+              </h1>
+            </Headings>
+            <List
+              depth={0}
+              key="list-41-1-15"
+              ordered={false}
+              start={null}
+              tight={false}
+            >
+              <ul>
+                <ListItem
+                  checked={true}
+                  index={0}
+                  key="listItem-41-1-0"
+                  ordered={false}
+                  tight={true}
+                >
+                  <li>
+                    <input
+                      checked={true}
+                      readOnly={true}
+                      type="checkbox"
+                    />
+                    <TextRenderer
+                      key="text-41-9-0"
+                      nodeKey="text-41-9-0"
+                      value="To be done"
+                    >
+                      To be done
+                    </TextRenderer>
+                  </li>
+                </ListItem>
+                <ListItem
+                  checked={false}
+                  index={1}
+                  key="listItem-42-1-1"
+                  ordered={false}
+                  tight={true}
+                >
+                  <li>
+                    <input
+                      checked={false}
+                      readOnly={true}
+                      type="checkbox"
+                    />
+                    <TextRenderer
+                      key="text-42-9-0"
+                      nodeKey="text-42-9-0"
+                      value="To be completed"
+                    >
+                      To be completed
+                    </TextRenderer>
+                  </li>
+                </ListItem>
+                <ListItem
+                  checked={true}
+                  index={2}
+                  key="listItem-43-1-2"
+                  ordered={false}
+                  tight={false}
+                >
+                  <li>
+                    <input
+                      checked={true}
+                      readOnly={true}
+                      type="checkbox"
+                    />
+                    <p
+                      key="paragraph-43-9-0"
+                    >
+                      <TextRenderer
+                        key="text-43-9-0"
+                        nodeKey="text-43-9-0"
+                        value="Not done!"
+                      >
+                        Not done!
+                      </TextRenderer>
+                    </p>
+                  </li>
+                </ListItem>
+              </ul>
+            </List>
+            <Headings
+              key="heading-45-1-16"
+              level={1}
+            >
+              <h1>
+                <span>
+                  <TextRenderer
+                    key="text-45-3-0"
+                    nodeKey="text-45-3-0"
+                    value="Here is a numbered list and this is a h1"
+                  >
+                    Here is a numbered list and this is a h1
+                  </TextRenderer>
+                </span>
+              </h1>
+            </Headings>
+            <List
+              depth={0}
+              key="list-47-1-17"
+              ordered={true}
+              start={1}
+              tight={false}
+            >
+              <ol>
+                <ListItem
+                  checked={null}
+                  index={0}
+                  key="listItem-47-1-0"
+                  ordered={true}
+                  tight={true}
+                >
+                  <li>
+                    <TextRenderer
+                      key="text-47-6-0"
+                      nodeKey="text-47-6-0"
+                      value="This list has content. Das hat der Bundesrat beschlossen:"
+                    >
+                      This list has content. Das hat der Bundesrat beschlossen:
+                    </TextRenderer>
+                  </li>
+                </ListItem>
+                <ListItem
+                  checked={null}
+                  index={1}
+                  key="listItem-48-1-1"
+                  ordered={true}
+                  tight={true}
+                >
+                  <li>
+                    <TextRenderer
+                      key="text-48-6-0"
+                      nodeKey="text-48-6-0"
+                      value="Ab kommenden Montag ist fast alles so wie früher. Der Bundesrat hebt angesichts der guten Entwicklung fast alle Corona-Massnahmen auf."
+                    >
+                      Ab kommenden Montag ist fast alles so wie früher. Der Bundesrat hebt angesichts der guten Entwicklung fast alle Corona-Massnahmen auf.
+                    </TextRenderer>
+                  </li>
+                </ListItem>
+                <ListItem
+                  checked={null}
+                  index={2}
+                  key="listItem-49-1-2"
+                  ordered={true}
+                  tight={true}
+                >
+                  <li>
+                    <TextRenderer
+                      key="text-49-6-0"
+                      nodeKey="text-49-6-0"
+                      value="Veranstaltungen bis 1000 Personen sind ab Montag wieder erlaubt. Das Verbot für Events mit über 1000 Teilnehmern bleibt wie schon seit Längerem angekündigt noch bis Ende August bestehen."
+                    >
+                      Veranstaltungen bis 1000 Personen sind ab Montag wieder erlaubt. Das Verbot für Events mit über 1000 Teilnehmern bleibt wie schon seit Längerem angekündigt noch bis Ende August bestehen.
+                    </TextRenderer>
+                  </li>
+                </ListItem>
+                <ListItem
+                  checked={null}
+                  index={3}
+                  key="listItem-50-1-3"
+                  ordered={true}
+                  tight={false}
+                >
+                  <li>
+                    <p
+                      key="paragraph-50-6-0"
+                    >
+                      <TextRenderer
+                        key="text-50-6-0"
+                        nodeKey="text-50-6-0"
+                        value="Die Abstandsregel wird gelockert. Neu empfiehlt der Bundesrat nicht mehr einen Abstand von 2, sondern 1,5 Metern. Die Regierung hat ausserdem die Vorgaben für die Schutzkonzepte vereinfacht und vereinheitlicht. Es gelten jetzt für alle die gleichen Richtlinien."
+                      >
+                        Die Abstandsregel wird gelockert. Neu empfiehlt der Bundesrat nicht mehr einen Abstand von 2, sondern 1,5 Metern. Die Regierung hat ausserdem die Vorgaben für die Schutzkonzepte vereinfacht und vereinheitlicht. Es gelten jetzt für alle die gleichen Richtlinien.
+                      </TextRenderer>
+                    </p>
+                  </li>
+                </ListItem>
+              </ol>
+            </List>
+            <Headings
+              key="heading-52-1-18"
+              level={1}
+            >
+              <h1>
+                <span>
+                  <TextRenderer
+                    key="text-52-3-0"
+                    nodeKey="text-52-3-0"
+                    value="This section has different text styles applied to it and this is a h1"
+                  >
+                    This section has different text styles applied to it and this is a h1
+                  </TextRenderer>
+                </span>
+              </h1>
+            </Headings>
+            <p
+              key="paragraph-54-1-19"
+            >
+              <TextRenderer
+                key="text-54-1-0"
+                nodeKey="text-54-1-0"
+                value="  Überall habe ein "
+              >
+                  Überall habe ein 
+              </TextRenderer>
+              <strong
+                key="strong-54-20-1"
+              >
+                <TextRenderer
+                  key="text-54-22-0"
+                  nodeKey="text-54-22-0"
+                  value="Lernprozess"
+                >
+                  Lernprozess
+                </TextRenderer>
+              </strong>
+              <TextRenderer
+                key="text-54-35-2"
+                nodeKey="text-54-35-2"
+                value=" stattgefunden, auch bei den "
+              >
+                 stattgefunden, auch bei den 
+              </TextRenderer>
+              <em
+                key="emphasis-54-64-3"
+              >
+                <TextRenderer
+                  key="text-54-65-0"
+                  nodeKey="text-54-65-0"
+                  value="Kantonen"
+                >
+                  Kantonen
+                </TextRenderer>
+              </em>
+              <TextRenderer
+                key="text-54-74-4"
+                nodeKey="text-54-74-4"
+                value=", sagt Bundespräsidentin Sommaruga auf die Frage, ob sie keine Angst hat, dass die Kantone überfordert sein werden. «"
+              >
+                , sagt Bundespräsidentin Sommaruga auf die Frage, ob sie keine Angst hat, dass die Kantone überfordert sein werden. «
+              </TextRenderer>
+              <em
+                key="emphasis-54-191-5"
+              >
+                <TextRenderer
+                  key="text-54-192-0"
+                  nodeKey="text-54-192-0"
+                  value="Dieser Lernprozess hilft jetzt, Entscheidungen zu fällen.» Sie gibt sich zuversichtlich."
+                >
+                  Dieser Lernprozess hilft jetzt, Entscheidungen zu fällen.» Sie gibt sich zuversichtlich.
+                </TextRenderer>
+              </em>
+              <TextRenderer
+                key="text-54-281-6"
+                nodeKey="text-54-281-6"
+                value=" «Jetzt mit 10 bis 35 Ansteckungen pro Tag macht es Sinn, gezielt einzugreifen.» Der Bund "
+              >
+                 «Jetzt mit 10 bis 35 Ansteckungen pro Tag macht es Sinn, gezielt einzugreifen.» Der Bund 
+              </TextRenderer>
+              <del
+                key="delete-54-371-7"
+              >
+                <TextRenderer
+                  key="text-54-373-0"
+                  nodeKey="text-54-373-0"
+                  value="verschwinde aber nicht einfach"
+                >
+                  verschwinde aber nicht einfach
+                </TextRenderer>
+              </del>
+              <TextRenderer
+                key="text-54-405-8"
+                nodeKey="text-54-405-8"
+                value=", man habe ein Monitoring und sei in einer «viel besseren Ausgangslage»."
+              >
+                , man habe ein Monitoring und sei in einer «viel besseren Ausgangslage».
+              </TextRenderer>
+            </p>
+            <Headings
+              key="heading-56-1-20"
+              level={1}
+            >
+              <h1>
+                <span>
+                  <TextRenderer
+                    key="text-56-3-0"
+                    nodeKey="text-56-3-0"
+                    value="This section will be a citation and is a h1"
+                  >
+                    This section will be a citation and is a h1
+                  </TextRenderer>
+                </span>
+              </h1>
+            </Headings>
+            <p
+              key="paragraph-58-1-21"
+            >
+              <TextRenderer
+                key="text-58-1-0"
+                nodeKey="text-58-1-0"
+                value="  Gleichzeitig mit den Lockerungen wird auch die Homeoffice-Empfehlung gelockert, auch für die besonders gefährdeten Gruppen. Die seien nicht weniger gut geschützt, sagt Bundespräsidentin Sommaruga. Die Arbeitgeber hätten unverändert eine Fürsorge."
+              >
+                  Gleichzeitig mit den Lockerungen wird auch die Homeoffice-Empfehlung gelockert, auch für die besonders gefährdeten Gruppen. Die seien nicht weniger gut geschützt, sagt Bundespräsidentin Sommaruga. Die Arbeitgeber hätten unverändert eine Fürsorge.
+              </TextRenderer>
+            </p>
+            <blockquote
+              key="blockquote-60-1-22"
+            >
+              <p
+                key="paragraph-60-5-0"
+              >
+                <TextRenderer
+                  key="text-60-5-0"
+                  nodeKey="text-60-5-0"
+                  value="«Da hat sich nichts geändert.»"
+                >
+                  «Da hat sich nichts geändert.»
+                </TextRenderer>
+              </p>
+            </blockquote>
+            <p
+              key="paragraph-62-1-23"
+            >
+              <TextRenderer
+                key="text-62-1-0"
+                nodeKey="text-62-1-0"
+                value="  Berset ergänzt, dass der Abstand oder die Maske für alle gelte – also auch am Arbeitsplatz."
+              >
+                  Berset ergänzt, dass der Abstand oder die Maske für alle gelte – also auch am Arbeitsplatz.
+              </TextRenderer>
+            </p>
+            <Headings
+              key="heading-64-1-24"
+              level={1}
+            >
+              <h1>
+                <span>
+                  <TextRenderer
+                    key="text-64-3-0"
+                    nodeKey="text-64-3-0"
+                    value="Abstand halten, Masken oder andere Verhaltensregeln und ein Link..."
+                  >
+                    Abstand halten, Masken oder andere Verhaltensregeln und ein Link...
+                  </TextRenderer>
+                </span>
+              </h1>
+            </Headings>
+            <p
+              key="paragraph-66-1-25"
+            >
+              <TextRenderer
+                key="text-66-1-0"
+                nodeKey="text-66-1-0"
+                value="  ...werden erst fallen, wenn es eine Impfung oder eine gute Behandlung gibt, sagt Alain Berset. Auch die 1,5 Meter Abstandsregeln sei notwendig. 1 Meter sei schon normal und es brauche einen zusätzlichen Abstand als im Normalfall. "
+              >
+                  ...werden erst fallen, wenn es eine Impfung oder eine gute Behandlung gibt, sagt Alain Berset. Auch die 1,5 Meter Abstandsregeln sei notwendig. 1 Meter sei schon normal und es brauche einen zusätzlichen Abstand als im Normalfall. 
+              </TextRenderer>
+              <Link
+                href="https://www.blick.ch"
+                key="link-66-233-1"
+              >
+                <a
+                  href="https://www.blick.ch"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <TextRenderer
+                    key="text-66-234-0"
+                    nodeKey="text-66-234-0"
+                    value="Ich arbeite beim Blick"
+                  >
+                    Ich arbeite beim Blick
+                  </TextRenderer>
+                </a>
+              </Link>
+              <TextRenderer
+                key="text-66-279-2"
+                nodeKey="text-66-279-2"
+                value=". Das ist eine Newsagentur."
+              >
+                . Das ist eine Newsagentur.
+              </TextRenderer>
+            </p>
+            <Headings
+              key="heading-68-1-26"
+              level={1}
+            >
+              <h1>
+                <span>
+                  <TextRenderer
+                    key="text-68-3-0"
+                    nodeKey="text-68-3-0"
+                    value="Here is an image"
+                  >
+                    Here is an image
+                  </TextRenderer>
+                </span>
+              </h1>
+            </Headings>
+            <p
+              key="paragraph-69-1-27"
+            >
+              <TextRenderer
+                key="text-69-1-0"
+                nodeKey="text-69-1-0"
+                value="  "
+              >
+                  
+              </TextRenderer>
+              <Image
+                alt="6288344351929447784604DJI_0017-1024x767.jpg"
+                key="image-69-3-1"
+                src="https://media.graphcms.com/xeBuhftsQPS4AxuxewLU"
+              >
+                <ProgressiveImage
+                  placeholder="/static/img/placeholder.jpg"
+                  src="https://media.graphcms.com/xeBuhftsQPS4AxuxewLU"
+                >
+                  <IntersectionObserver
+                    disabled={false}
+                    onChange={[Function]}
+                    rootMargin="0% 0% 25%"
+                    threshold={
+                      Array [
+                        0,
+                      ]
+                    }
+                  >
+                    <img
+                      alt="portfolio-image"
+                      src="/static/img/placeholder.jpg"
+                    />
+                  </IntersectionObserver>
+                </ProgressiveImage>
+              </Image>
+              <TextRenderer
+                key="text-69-98-2"
+                nodeKey="text-69-98-2"
+                value="
+  And last but not least, "
+              >
+                
+  And last but not least, 
+              </TextRenderer>
+              <strong
+                key="strong-70-27-3"
+              >
+                <TextRenderer
+                  key="text-70-29-0"
+                  nodeKey="text-70-29-0"
+                  value="phatt text!"
+                >
+                  phatt text!
+                </TextRenderer>
+              </strong>
+              <TextRenderer
+                key="text-70-42-4"
+                nodeKey="text-70-42-4"
+                value="
+  "
+              >
+                
+  
+              </TextRenderer>
+            </p>
           </div>
         </Root>
       </ReactMarkdown>
     </markdownstyles__StyledMD>
   </Markdown>
    
-</ThemeProvider>
+</Component>
 `;

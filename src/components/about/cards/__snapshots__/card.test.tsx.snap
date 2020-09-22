@@ -100,7 +100,7 @@ exports[`About renders card component 1`] = `
   }
 }
 
-<ThemeProvider
+<Component
   theme={
     Object {
       "breakpoints": Object {
@@ -723,5 +723,5 @@ exports[`About renders card component 1`] = `
     </cardstyles__CardWrapper>
   </CardComponent>
    
-</ThemeProvider>
+</Component>
 `;
