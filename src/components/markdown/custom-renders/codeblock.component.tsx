@@ -13,7 +13,9 @@ const CodeBlock: React.FC<Props> = ({ value, language }) => {
     <SyntaxHighlighter
       customStyle={{ border: 'none', borderRadius: 0 }}
       language={language}
-      style={xonokai}>
+      style={xonokai}
+      showInlineLineNumbers
+      showLineNumbers>
       {value}
     </SyntaxHighlighter>
   );

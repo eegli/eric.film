@@ -16,8 +16,7 @@ export const StyledMD = styled(ReactMarkdown)<StyleProps>`
   & > * {
     padding: 0 ${contentPadding};
   }
-  & img,
-  code {
+  & code {
     padding: 0;
   }
 

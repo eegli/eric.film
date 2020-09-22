@@ -18,7 +18,7 @@ exports[`About renders social bar component 1`] = `
   color: #f7f7f7;
 }
 
-<ThemeProvider
+<Component
   theme={
     Object {
       "breakpoints": Object {
@@ -206,5 +206,5 @@ exports[`About renders social bar component 1`] = `
     </social-barstyles__Container>
   </SocialBar>
    
-</ThemeProvider>
+</Component>
 `;

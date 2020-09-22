@@ -5,7 +5,7 @@ import { Sh1 } from '@/shared/headings.styles';
 import LayoutContainer from '@/shared/layout/layout.container';
 import { ImageCollectionPortfolio } from '@/src/api/queries';
 import { SEO_PORTFOLIO_META as meta } from '@/src/config';
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import { initializeApollo } from '../lib/apolloClient';
 
 const PortfolioPage: React.FC = () => {
@@ -25,7 +25,7 @@ const PortfolioPage: React.FC = () => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const apolloClient = initializeApollo();
 
   await apolloClient.query({
