@@ -1,6 +1,7 @@
 import { useLightTheme } from '@/components/hooks/useLightTheme';
 import BlogMarkdown from '@/components/markdown/markdown.component';
 import { BlogPostContent } from '@/components/types';
+import { blogpost as mockPost } from '@/src/tests/mocks/blogpost';
 import { dateFormat } from '@/src/utils/dates';
 import { darkTheme, lightTheme } from '@/styles/theme/theme';
 import { FaRegLightbulb } from 'react-icons/fa';
@@ -25,6 +26,13 @@ const BlogContent: React.FC<BlogPostContent> = ({
 }) => {
   const [theme, themeToggler] = useLightTheme();
   const themeMode = theme === 'lightTheme' ? lightTheme : darkTheme;
+
+  let markdown: string;
+  if (process.env.NODE_ENV !== 'production') {
+    markdown = mockPost.content;
+  } else {
+    markdown = content;
+  }
 
   return (
     <BlogPostContainer>
@@ -54,7 +62,7 @@ const BlogContent: React.FC<BlogPostContent> = ({
       </BlogPostHeader>
 
       <ThemeProvider theme={themeMode}>
-        <BlogMarkdown content={content} />
+        <BlogMarkdown content={markdown} />
       </ThemeProvider>
 
       {ytvideo ? (
