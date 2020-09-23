@@ -1,10 +1,18 @@
+import Spinner from '@/components/custom-spinner/custom-spinner.component';
 import ErrorMessage from '@/components/error-message/error-message.component';
-import Gallery from '@/components/gallery/gallery.component';
 import { useImageCollectionHomeQuery } from '@/components/types';
 import { DescriptionContainer, Sh1, Sh2 } from '@/shared/headings.styles';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import React from 'react';
 import { LandingContentContainer, LinkText } from './landing-content.styles';
+
+const DynamicGallery = dynamic(
+  () => import('@/components/gallery/gallery.component'),
+  {
+    loading: () => <Spinner />,
+  },
+);
 
 type Props = {
   children?: React.ReactNode;
@@ -31,7 +39,7 @@ const LandingContent = React.forwardRef<HTMLDivElement, Props>((props, ref) => {
           <Link href='/about'>
             <LinkText>say hi to the team</LinkText>
           </Link>
-          {images ? <Gallery layout='grid' images={images} /> : null}
+          {images ? <DynamicGallery layout='grid' images={images} /> : null}
         </LandingContentContainer>
       </>
     );
