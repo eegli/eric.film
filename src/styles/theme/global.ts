@@ -1,14 +1,8 @@
 import { createGlobalStyle, css } from 'styled-components';
+import { FONTS } from './fonts';
 
 // Here is the place to define global styles!
 export const GLOBAL = css`
-  @font-face {
-    font-family: 'Droid Sans';
-    src: url('/static/fonts/droid-sans/DroidSans-webfont.woff') format('woff'),
-      url('/static/fonts/droid-sans/DroidSans-webfont.ttf') format('truetype');
-    font-display: swap;
-  }
-
   body {
     overflow-y: scroll;
     font-family: 'Roboto', sans-serif;
@@ -111,5 +105,6 @@ export const GLOBAL = css`
 
 // Formatting is not supported for global style sheets, so I'll do it this way
 export const GlobalTheme = createGlobalStyle`
+  ${FONTS}
   ${GLOBAL}
 `;

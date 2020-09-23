@@ -52,6 +52,7 @@ export const StyledMD = styled(ReactMarkdown)<StyleProps>`
     max-height: 100%;
     display: block;
     margin: 0.5rem auto;
+    padding: 0;
   }
 
   & blockquote {

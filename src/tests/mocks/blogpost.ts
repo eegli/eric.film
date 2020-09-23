@@ -70,8 +70,10 @@ export const blogpost: BlogPostContent = {
   ...werden erst fallen, wenn es eine Impfung oder eine gute Behandlung gibt, sagt Alain Berset. Auch die 1,5 Meter Abstandsregeln sei notwendig. 1 Meter sei schon normal und es brauche einen zusätzlichen Abstand als im Normalfall. [Ich arbeite beim Blick](https://www.blick.ch). Das ist eine Newsagentur.
   
 # Here is an image
-  ![6288344351929447784604DJI_0017-1024x767.jpg](https://media.graphcms.com/xeBuhftsQPS4AxuxewLU)
-  And last but not least, **phatt text!**
+
+![6288344351929447784604DJI_0017-1024x767.jpg](https://media.graphcms.com/xeBuhftsQPS4AxuxewLU)
+
+And last but not least, **phatt text!**
   `,
   ytvideo: 'pasApdHn6Sw',
   createdAt: '2020-06-01T16:41:26.625709+00:00',

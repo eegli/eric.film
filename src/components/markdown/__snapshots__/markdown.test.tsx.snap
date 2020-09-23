@@ -57,6 +57,7 @@ exports[`Markdown renders markdown content 1`] = `
   max-height: 100%;
   display: block;
   margin: 0.5rem auto;
+  padding: 0;
 }
 
 .c0 blockquote {
@@ -195,8 +196,10 @@ exports[`Markdown renders markdown content 1`] = `
   ...werden erst fallen, wenn es eine Impfung oder eine gute Behandlung gibt, sagt Alain Berset. Auch die 1,5 Meter Abstandsregeln sei notwendig. 1 Meter sei schon normal und es brauche einen zusätzlichen Abstand als im Normalfall. [Ich arbeite beim Blick](https://www.blick.ch). Das ist eine Newsagentur.
   
 # Here is an image
-  ![6288344351929447784604DJI_0017-1024x767.jpg](https://media.graphcms.com/xeBuhftsQPS4AxuxewLU)
-  And last but not least, **phatt text!**
+
+![6288344351929447784604DJI_0017-1024x767.jpg](https://media.graphcms.com/xeBuhftsQPS4AxuxewLU)
+
+And last but not least, **phatt text!**
   "
   >
     <markdownstyles__StyledMD
@@ -276,8 +279,10 @@ exports[`Markdown renders markdown content 1`] = `
   ...werden erst fallen, wenn es eine Impfung oder eine gute Behandlung gibt, sagt Alain Berset. Auch die 1,5 Meter Abstandsregeln sei notwendig. 1 Meter sei schon normal und es brauche einen zusätzlichen Abstand als im Normalfall. [Ich arbeite beim Blick](https://www.blick.ch). Das ist eine Newsagentur.
   
 # Here is an image
-  ![6288344351929447784604DJI_0017-1024x767.jpg](https://media.graphcms.com/xeBuhftsQPS4AxuxewLU)
-  And last but not least, **phatt text!**
+
+![6288344351929447784604DJI_0017-1024x767.jpg](https://media.graphcms.com/xeBuhftsQPS4AxuxewLU)
+
+And last but not least, **phatt text!**
   "
     >
       <ReactMarkdown
@@ -364,8 +369,10 @@ exports[`Markdown renders markdown content 1`] = `
   ...werden erst fallen, wenn es eine Impfung oder eine gute Behandlung gibt, sagt Alain Berset. Auch die 1,5 Meter Abstandsregeln sei notwendig. 1 Meter sei schon normal und es brauche einen zusätzlichen Abstand als im Normalfall. [Ich arbeite beim Blick](https://www.blick.ch). Das ist eine Newsagentur.
   
 # Here is an image
-  ![6288344351929447784604DJI_0017-1024x767.jpg](https://media.graphcms.com/xeBuhftsQPS4AxuxewLU)
-  And last but not least, **phatt text!**
+
+![6288344351929447784604DJI_0017-1024x767.jpg](https://media.graphcms.com/xeBuhftsQPS4AxuxewLU)
+
+And last but not least, **phatt text!**
   "
         sourcePos={false}
         transformLinkUri={[Function]}
@@ -2391,18 +2398,11 @@ exports[`Markdown renders markdown content 1`] = `
               </h1>
             </Headings>
             <p
-              key="paragraph-69-1-27"
+              key="paragraph-70-1-27"
             >
-              <TextRenderer
-                key="text-69-1-0"
-                nodeKey="text-69-1-0"
-                value="  "
-              >
-                  
-              </TextRenderer>
               <Image
                 alt="6288344351929447784604DJI_0017-1024x767.jpg"
-                key="image-69-3-1"
+                key="image-70-1-0"
                 src="https://media.graphcms.com/xeBuhftsQPS4AxuxewLU"
               >
                 <ProgressiveImage
@@ -2426,29 +2426,31 @@ exports[`Markdown renders markdown content 1`] = `
                   </IntersectionObserver>
                 </ProgressiveImage>
               </Image>
+            </p>
+            <p
+              key="paragraph-72-1-28"
+            >
               <TextRenderer
-                key="text-69-98-2"
-                nodeKey="text-69-98-2"
-                value="
-  And last but not least, "
+                key="text-72-1-0"
+                nodeKey="text-72-1-0"
+                value="And last but not least, "
               >
-                
-  And last but not least, 
+                And last but not least, 
               </TextRenderer>
               <strong
-                key="strong-70-27-3"
+                key="strong-72-25-1"
               >
                 <TextRenderer
-                  key="text-70-29-0"
-                  nodeKey="text-70-29-0"
+                  key="text-72-27-0"
+                  nodeKey="text-72-27-0"
                   value="phatt text!"
                 >
                   phatt text!
                 </TextRenderer>
               </strong>
               <TextRenderer
-                key="text-70-42-4"
-                nodeKey="text-70-42-4"
+                key="text-72-40-2"
+                nodeKey="text-72-40-2"
                 value="
   "
               >

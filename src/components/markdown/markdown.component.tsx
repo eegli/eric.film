@@ -20,6 +20,7 @@ const Markdown: React.FC<Props> = ({ content, transparentBg }) => {
         link: Link,
         image: Image,
         heading: Headings,
+        /*   paragraph: Paragraph, */
       }}
       source={content}
     />
