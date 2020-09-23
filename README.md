@@ -22,7 +22,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Roadmap
 
 - Better image handling
-- Load all fonts locally
 - SEO improvements
 - Search posts
 - Browser push
