@@ -3,6 +3,7 @@ import CodeBlock from './custom-renders/codeblock.component';
 import Headings from './custom-renders/headings';
 import Image from './custom-renders/image.component';
 import Link from './custom-renders/link.component';
+import Paragraph from './custom-renders/paragraph.component';
 import { StyledMD } from './markdown.styles';
 
 export type StyleProps = {
@@ -20,6 +21,7 @@ const Markdown: React.FC<Props> = ({ content, transparentBg }) => {
         link: Link,
         image: Image,
         heading: Headings,
+        paragraph: Paragraph,
       }}
       source={content}
     />
