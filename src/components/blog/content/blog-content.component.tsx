@@ -30,6 +30,7 @@ const BlogContent: React.FC<BlogPostContent> = ({
   let markdown: string;
   if (process.env.NODE_ENV !== 'production') {
     markdown = mockPost.content;
+    ytvideo = mockPost.ytvideo;
   } else {
     markdown = content;
   }
