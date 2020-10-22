@@ -7,7 +7,9 @@ const contentPadding = '1rem';
 export const StyledMD = styled(ReactMarkdown)<StyleProps>`
   background-color: ${({ theme, transparentBg }) =>
     transparentBg ? 'transparent' : theme.colors.bgSecondary};
-  font-family: 'Droid Sans', sans-serif;
+
+  // I don't really like it atm. But maybe I'll go back
+  /*  font-family: 'Droid Sans', sans-serif; */
   font-weight: 400;
   font-style: normal;
   margin-top: 1rem;
