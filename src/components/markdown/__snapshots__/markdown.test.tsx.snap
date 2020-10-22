@@ -42,7 +42,12 @@ exports[`Markdown renders markdown content 1`] = `
 }
 
 .c0 code {
-  color: #feb8ce;
+  color: #E0E0E0;
+}
+
+.c0 p code {
+  -webkit-text-decoration: underline #feb8ce;
+  text-decoration: underline #feb8ce;
 }
 
 .c0 a {

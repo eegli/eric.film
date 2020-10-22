@@ -35,6 +35,9 @@ const BlogContent: React.FC<BlogPostContent> = ({
     markdown = content;
   }
 
+  const updatedTime = dateFormat(updatedAt);
+  const createdTime = dateFormat(createdAt);
+
   return (
     <BlogPostContainer>
       <BlogPostTitle>{title}</BlogPostTitle>
@@ -42,12 +45,12 @@ const BlogContent: React.FC<BlogPostContent> = ({
         <BlogPostTimes>
           <div>
             <MdAccessTime />
-            <p>Posted: {dateFormat(createdAt)}</p>
+            <p>Posted: {createdTime}</p>
           </div>
-          {createdAt !== updatedAt ? (
+          {updatedTime !== createdTime ? (
             <div>
               <MdUpdate />
-              <p>Updated: {dateFormat(updatedAt)}</p>
+              <p>Updated: {updatedTime}</p>
             </div>
           ) : null}
         </BlogPostTimes>
