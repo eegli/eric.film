@@ -41,7 +41,7 @@ const MovingCategory: React.FC = () => {
       </IframeWrapper>
       <IframeWrapper>
         <StyledIframe
-          src='https://www.youtube.com/embed/fMySLm71bvU'
+          src='https://www.youtube.com/watch?v=Es2B2ymCjVs'
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
           allowFullScreen
           onLoad={handleSpinner}
