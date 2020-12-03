@@ -3515,14 +3515,22 @@ And last but not least, **phatt text!**
                     <span
                       className="token language-javascript"
                       key="code-segement66"
-                      style={Object {}}
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
                     >
                       {
                     </span>
                     <span
                       className="token language-javascript"
                       key="code-segement67"
-                      style={Object {}}
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
                     >
                       {
                     </span>
@@ -3560,7 +3568,11 @@ And last but not least, **phatt text!**
                     <span
                       className="token language-javascript"
                       key="code-segement71"
-                      style={Object {}}
+                      style={
+                        Object {
+                          "color": "#a77afe",
+                        }
+                      }
                     >
                       :
                     </span>
@@ -3581,7 +3593,11 @@ And last but not least, **phatt text!**
                     <span
                       className="token language-javascript"
                       key="code-segement74"
-                      style={Object {}}
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
                     >
                       ,
                     </span>
@@ -3619,14 +3635,22 @@ And last but not least, **phatt text!**
                     <span
                       className="token language-javascript"
                       key="code-segement78"
-                      style={Object {}}
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
                     >
                       }
                     </span>
                     <span
                       className="token language-javascript"
                       key="code-segement79"
-                      style={Object {}}
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
                     >
                       }
                     </span>
@@ -3682,7 +3706,11 @@ And last but not least, **phatt text!**
                     <span
                       className="token language-javascript"
                       key="code-segement85"
-                      style={Object {}}
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
                     >
                       {
                     </span>
@@ -3696,7 +3724,11 @@ And last but not least, **phatt text!**
                     <span
                       className="token language-javascript"
                       key="code-segement87"
-                      style={Object {}}
+                      style={
+                        Object {
+                          "color": "#bebec5",
+                        }
+                      }
                     >
                       }
                     </span>

@@ -4,7 +4,6 @@ import {
   InMemoryCache,
   NormalizedCacheObject,
 } from '@apollo/client';
-import { concatPagination } from '@apollo/client/utilities';
 import { useMemo } from 'react';
 
 let apolloClient: ApolloClient<NormalizedCacheObject> | undefined;
@@ -16,15 +15,7 @@ const createApolloClient = () => {
       uri: process.env.GRAPHQL_URL,
       credentials: 'same-origin',
     }),
-    cache: new InMemoryCache({
-      typePolicies: {
-        Query: {
-          fields: {
-            blogposts: concatPagination(),
-          },
-        },
-      },
-    }),
+    cache: new InMemoryCache(),
   });
 };
 
