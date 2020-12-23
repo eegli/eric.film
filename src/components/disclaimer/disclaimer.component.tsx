@@ -1,8 +1,8 @@
 import Markdown from '@/components/markdown/markdown.component';
+import acknowledgements from 'src/content/acknowledgements.md';
+import imprint from 'src/content/imprint.md';
+import privacy from 'src/content/privacy.md';
 import styled from 'styled-components';
-import acknowledgements from './content/acknowledgements.md';
-import imprint from './content/imprint.md';
-import privacy from './content/privacy.md';
 
 const InfoWrapper = styled.div`
   margin: 2rem 0;
