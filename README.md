@@ -29,21 +29,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Nginx proxy to bypass adblockers for Google Analytics
 - Add more tests 👻
 
-## FAQ
-
-> Your Google Analytics tracking id, Sentry DSN and GraphQL endpoint are all public. Would it make sense to put them into `env.local`?
-
-GA tracking ids are public anyway since they can be found when checking out any webpage's HTML head.
-With Sentury - or more specifically `@sentry/browser` - it is the same. It cannot be hidden in the frontend.
-
-This is why it is good practice to filter requests by hostname / allowed domains - something that is possiby for both Sentury and Google Analytics.
-
-My GraphQL endpoint needs to be public since the frontend has the possibility to fetch more blog posts directly from my backend. It does, however, not allow mutations ¯\\_(ツ)_/¯
-
-> Something's wrong or could be improved
-
-Good point, there are plenty of things that still need some work. This website is a living project and will receive updates and new features depending on how much time I can invest. If you see a quick win or something that is done utterly badly, I'm more than happy to receive feedback on my social channels or via PR!
-
 ## Links
 
 > Style guides
@@ -60,3 +45,9 @@ Good point, there are plenty of things that still need some work. This website i
 > Tools used for this project
 
 - [eric.film/portfolio?cat=dev](https://eric.film/portfolio?cat=dev)
+
+## Contribute?
+
+> Something's wrong or could be improved!
+
+Good point, there are plenty of things that still need some work. This website is a living project and will receive updates and new features depending on how much time I can invest. If you see a quick win or something that is done utterly badly, I'm more than happy to receive feedback on my social channels or via PR!
