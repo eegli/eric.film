@@ -1,20 +1,29 @@
 import {
   ApolloClient,
-  HttpLink,
+  createHttpLink,
   InMemoryCache,
   NormalizedCacheObject,
 } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 import { useMemo } from 'react';
 
 let apolloClient: ApolloClient<NormalizedCacheObject> | undefined;
+const authLink = setContext((_, { headers }) => {
+  return {
+    headers: {
+      ...headers,
+      authorization: `Bearer ${process.env.GRAPHCMS_TOKEN}`,
+    },
+  };
+});
 
+const httpLink = createHttpLink({
+  uri: process.env.GRAPHQL_URL,
+});
 const createApolloClient = () => {
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
-    link: new HttpLink({
-      uri: process.env.GRAPHQL_URL,
-      credentials: 'same-origin',
-    }),
+    link: authLink.concat(httpLink),
     cache: new InMemoryCache(),
   });
 };
