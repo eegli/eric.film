@@ -56,10 +56,11 @@ const ResumeComponent: React.FC = () => {
             <span>DEVELOPMENT</span>
             <div>
               <ul>
+                <li>Python</li>
                 <li>Javascript</li>
                 <li>Typescript</li>
                 <li>Next.js</li>
-                <li>React.js, React native</li>
+                <li>React.js, some React native</li>
                 <li>Redux, React Redux</li>
                 <li>CSS in JS</li>
                 <li>HTML5, CSS3</li>

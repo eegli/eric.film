@@ -93,6 +93,9 @@ exports[`About renders about component 1`] = `
         <div>
           <ul>
             <li>
+              Python
+            </li>
+            <li>
               Javascript
             </li>
             <li>
@@ -102,7 +105,7 @@ exports[`About renders about component 1`] = `
               Next.js
             </li>
             <li>
-              React.js, React native
+              React.js, some React native
             </li>
             <li>
               Redux, React Redux
