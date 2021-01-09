@@ -24,7 +24,7 @@ const CardComponent: React.FC = () => (
           <p>
             eric has been with us from the start. he is the founding father of
             eric.film and oversees all business activities as well as HR-related
-            topics. Main responsibilities:
+            topics. main responsibilities:
           </p>
           <ul>
             <li>project management</li>
@@ -42,9 +42,9 @@ const CardComponent: React.FC = () => (
         <CardDescription>
           <span>LEAD DEVELOPER</span>
           <p>
-            eric is our junior javascript engineer. he mostly talks about
-            "react" but as long as our website looks good, we don't really care.
-            Main responsibilities:
+            eric is our junior engineer. he mostly talks about "react" and
+            "python" but as long as our website looks good, we don't really
+            care. main responsibilities:
           </p>
           <br />
           <ul>
@@ -65,7 +65,7 @@ const CardComponent: React.FC = () => (
           <p>
             eric has bachelor of arts in communication science so we let him
             talk to our clients. other than that, we only really see him at
-            after-work drinks. Main responsibilities:
+            after-work drinks. main responsibilities:
           </p>
           <ul>
             <li>none</li>
