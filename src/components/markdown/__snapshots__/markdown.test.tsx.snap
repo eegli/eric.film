@@ -32,6 +32,10 @@ exports[`Markdown renders markdown content 1`] = `
   padding: 0;
   color: #121212;
   font-weight: 600;
+  -webkit-letter-spacing: 0.7px;
+  -moz-letter-spacing: 0.7px;
+  -ms-letter-spacing: 0.7px;
+  letter-spacing: 0.7px;
 }
 
 .c0 h1 span {
