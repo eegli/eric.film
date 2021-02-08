@@ -11,7 +11,7 @@ exports[`Markdown renders markdown content 1`] = `
 }
 
 .c0 > * {
-  padding: 0 1rem;
+  padding: 0 1.2rem;
 }
 
 .c0 code {
@@ -19,7 +19,7 @@ exports[`Markdown renders markdown content 1`] = `
 }
 
 .c0 li {
-  margin: 0 1rem;
+  margin: 0 1.2rem;
   font-size: 16px;
 }
 
@@ -31,13 +31,16 @@ exports[`Markdown renders markdown content 1`] = `
   margin-top: 2.5rem;
   padding: 0;
   color: #121212;
+  font-weight: 600;
 }
 
 .c0 h1 span {
   display: inline-block;
-  padding: 0 0.4rem 0 1rem;
-  background-color: #feb8ce;
+  padding: 0 1rem;
+  background-color: #f7f7f7;
   line-height: 1.8;
+  border-right: 5px #feb8ce solid;
+  border-bottom: 5px #feb8ce solid;
 }
 
 .c0 code {
