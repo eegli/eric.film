@@ -13,3 +13,6 @@ if (process.platform === 'win32') {
   );
   fs.writeFileSync('.git/hooks/husky.sh', fixedHuskyScript);
 }
+
+// Keep --isolatedModules flag
+export {};
