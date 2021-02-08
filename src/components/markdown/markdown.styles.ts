@@ -34,6 +34,7 @@ export const StyledMD = styled(ReactMarkdown)<StyleProps>`
     padding: 0;
     color: ${({ theme }) => theme.colors.bgPrimary};
     font-weight: 600;
+    letter-spacing: 0.7px;
     & span {
       display: inline-block;
       padding: 0 1rem;
