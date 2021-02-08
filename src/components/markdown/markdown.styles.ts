@@ -2,7 +2,7 @@ import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import { StyleProps } from './markdown.component';
 
-const contentPadding = '1rem';
+const contentPadding = '1.2rem';
 
 export const StyledMD = styled(ReactMarkdown)<StyleProps>`
   background-color: ${({ theme, transparentBg }) =>
@@ -33,12 +33,15 @@ export const StyledMD = styled(ReactMarkdown)<StyleProps>`
     margin-top: 2.5rem;
     padding: 0;
     color: ${({ theme }) => theme.colors.bgPrimary};
+    font-weight: 600;
     & span {
       display: inline-block;
-      padding: 0 0.4rem 0 1rem;
-      background-color: ${({ theme }) => theme.colors.pink};
+      padding: 0 1rem;
+      background-color: ${({ theme }) => theme.colors.textPrimary};
       /* box-shadow: 0px 0px 0 0.6rem ${({ theme }) => theme.colors.pink}; */
       line-height: 1.8;
+      border-right: 5px ${({ theme }) => theme.colors.pink} solid;
+      border-bottom: 5px ${({ theme }) => theme.colors.pink} solid;
     }
   }
   & code {
