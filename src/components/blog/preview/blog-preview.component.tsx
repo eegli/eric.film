@@ -35,7 +35,7 @@ const BlogPreview: React.FC<Blogpost> = ({
         <PreviewContainer>
           <ProgressiveImage
             src={_previewImage.url}
-            placeholder='/static/img/placeholder.jpg'>
+            placeholder='/img/placeholder.jpg'>
             {(src: string) => <PreviewImage src={src} alt='blog-image' />}
           </ProgressiveImage>
 

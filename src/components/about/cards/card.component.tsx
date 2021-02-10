@@ -14,8 +14,8 @@ const CardComponent: React.FC = () => (
     <CardWrapper>
       <Card>
         <CardPicture>
-          <source srcSet='/static/img/about/about-2.webp' type='image/webp' />
-          <img src='/static/img/about/about-2.jpg' alt='logo' />
+          <source srcSet='/img/about/about-2.webp' type='image/webp' />
+          <img src='/img/about/about-2.jpg' alt='logo' />
         </CardPicture>
 
         <CardTitle>eric</CardTitle>
@@ -35,8 +35,8 @@ const CardComponent: React.FC = () => (
       </Card>
       <Card>
         <CardPicture>
-          <source srcSet='/static/img/about/about-1.webp' type='image/webp' />
-          <img src='/static/img/about/about-1.jpg' alt='logo' />
+          <source srcSet='/img/about/about-1.webp' type='image/webp' />
+          <img src='/img/about/about-1.jpg' alt='logo' />
         </CardPicture>
         <CardTitle>eric</CardTitle>
         <CardDescription>
@@ -56,8 +56,8 @@ const CardComponent: React.FC = () => (
       </Card>
       <Card>
         <CardPicture>
-          <source srcSet='/static/img/about/about-3.webp' type='image/webp' />
-          <img src='/static/img/about/about-3.jpg' alt='logo' />
+          <source srcSet='/img/about/about-3.webp' type='image/webp' />
+          <img src='/img/about/about-3.jpg' alt='logo' />
         </CardPicture>
         <CardTitle>eric</CardTitle>
         <CardDescription>

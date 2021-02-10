@@ -1,4 +1,4 @@
-const base = 'https://eric.film/static/img';
+const base = 'https://eric.film/img';
 
 type Meta = {
   title: string;
