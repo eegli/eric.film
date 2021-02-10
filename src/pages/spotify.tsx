@@ -12,7 +12,7 @@ const SpotifyPage: React.FC = () => {
         description={meta.description}
         ogImage={meta.image}
       />
-      <BackgroundVideo source='/static/vid/sound_bg.mp4' />
+      <BackgroundVideo source='/vid/sound_bg.mp4' />
       <LayoutContainer breakpoint='small'>
         <SpotifyPlaylists />
       </LayoutContainer>

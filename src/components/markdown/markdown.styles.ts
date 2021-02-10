@@ -32,16 +32,15 @@ export const StyledMD = styled(ReactMarkdown)<StyleProps>`
   & h1 {
     margin-top: 2.5rem;
     padding: 0;
-    color: ${({ theme }) => theme.colors.bgPrimary};
+    color: ${({ theme }) => theme.colors.textPrimary};
     font-weight: 600;
     letter-spacing: 0.7px;
     & span {
       display: inline-block;
       padding: 0 1rem;
-      background-color: ${({ theme }) => theme.colors.textPrimary};
+      /* background-color: ${({ theme }) => theme.colors.textPrimary}; */
       /* box-shadow: 0px 0px 0 0.6rem ${({ theme }) => theme.colors.pink}; */
       line-height: 1.8;
-      border-right: 5px ${({ theme }) => theme.colors.pink} solid;
       border-bottom: 5px ${({ theme }) => theme.colors.pink} solid;
     }
   }

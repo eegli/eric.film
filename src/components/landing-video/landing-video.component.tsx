@@ -16,7 +16,7 @@ const LandingVideo: React.FC<LandingProps> = ({ contentRef }) => {
 
   return (
     <>
-      <BackgroundVideo dynamicViewport source='/static/vid/home_teaser.mp4' />
+      <BackgroundVideo dynamicViewport source='/vid/home_teaser.mp4' />
       <ArrowDownWrapper>
         <ArrowDown onClick={scrollToContent}>
           <FaAngleDown />
