@@ -23,7 +23,8 @@ export const StyledMD = styled(ReactMarkdown)<StyleProps>`
   }
 
   // Target inline code
-  & p > code {
+  & p > code,
+  li > code {
     text-decoration: underline ${({ theme }) => theme.colors.pink};
     color: ${({ theme }) => theme.colors.textSecondary};
   }

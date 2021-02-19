@@ -29,9 +29,14 @@ export const blogpost: BlogPostContent = {
   \`\`\`
   
   For this, I use a package called \`react-markdown\`. Can you see how this was inline-code?
-  # What about a table?
   
-  Text
+  # Inline code table
+  
+  1. \`react-react-react\`
+  2. Nothing special
+  3. \`inLineCode\`
+  
+
   # Here is a unordered list and this is a h1
   
   This list has content. Das hat der Bundesrat beschlossen:
