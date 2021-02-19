@@ -13,21 +13,9 @@
   </p>
 </p>
 
-![coverage](https://img.shields.io/github/languages/top/eegli/eric.film) ![David](https://img.shields.io/david/eegli/eric.film) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/eegli/eric.film) ![GitHub last commit](https://img.shields.io/github/last-commit/eegli/eric.film) ![Website](https://img.shields.io/website?down_color=lightgrey&down_message=offline&up_color=blue&up_message=online&url=https%3A%2F%2Feric.film)
-
 # eric.film
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Feel free to copy/paste stuff from this repository and use it in your own project! Also, feedback is greatly appreciated.
-
-## Roadmap
-
-- Better image handling
-- SEO improvements
-- Search posts
-- Browser push
-- Display warning for unsupported browsers
-- Nginx proxy to bypass adblockers for Google Analytics
-- Add more tests 👻
 
 ## Links
 
