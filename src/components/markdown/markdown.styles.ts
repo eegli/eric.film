@@ -22,6 +22,12 @@ export const StyledMD = styled(ReactMarkdown)<StyleProps>`
     padding: 0;
   }
 
+  // Target inline code
+  & p > code {
+    text-decoration: underline ${({ theme }) => theme.colors.pink};
+    color: ${({ theme }) => theme.colors.textSecondary};
+  }
+
   & li {
     margin: 0 ${contentPadding};
     font-size: ${({ theme }) => theme.fontsizes.baseFontSize};
@@ -43,14 +49,6 @@ export const StyledMD = styled(ReactMarkdown)<StyleProps>`
       line-height: 1.8;
       border-bottom: 5px ${({ theme }) => theme.colors.pink} solid;
     }
-  }
-  & code {
-    color: ${({ theme }) => theme.colors.textSecondary};
-  }
-
-  // Target inline code
-  & p code {
-    text-decoration: underline ${({ theme }) => theme.colors.pink};
   }
 
   & a {

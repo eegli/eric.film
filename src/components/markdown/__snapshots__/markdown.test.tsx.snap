@@ -18,6 +18,12 @@ exports[`Markdown renders markdown content 1`] = `
   padding: 0;
 }
 
+.c0 p > code {
+  -webkit-text-decoration: underline #feb8ce;
+  text-decoration: underline #feb8ce;
+  color: #E0E0E0;
+}
+
 .c0 li {
   margin: 0 1.2rem;
   font-size: 16px;
@@ -43,15 +49,6 @@ exports[`Markdown renders markdown content 1`] = `
   padding: 0 1rem;
   line-height: 1.8;
   border-bottom: 5px #feb8ce solid;
-}
-
-.c0 code {
-  color: #E0E0E0;
-}
-
-.c0 p code {
-  -webkit-text-decoration: underline #feb8ce;
-  text-decoration: underline #feb8ce;
 }
 
 .c0 a {
