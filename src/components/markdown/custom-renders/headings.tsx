@@ -1,13 +1,24 @@
 type HeadingResolverProps = {
   level: number;
+  children: JSX.Element[];
 };
 
 const Headings: React.FC<HeadingResolverProps> = ({ level, children }) => {
+  const h1Value = children[0].props.value;
+  const pattern = /[^a-zA-Z0-9 ]/g;
+  let uri =
+    typeof h1Value === 'string'
+      ? h1Value.toLowerCase().replace(pattern, '')
+      : '';
+  uri = encodeURIComponent(uri);
+
   switch (level) {
     case 1:
       return (
         <h1>
-          <span>{children}</span>
+          <a id={uri} href={`#${uri}`}>
+            <span>{children}</span>
+          </a>
         </h1>
       );
     case 2:
