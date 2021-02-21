@@ -3,12 +3,20 @@ import { BlogPostContent } from '@/components/types';
 export const blogpost: BlogPostContent = {
   title: 'Test Blogpost',
   content: `Der Bundesrat plant eine weitere Lockerung der Corona-Massnahmen. 👀 So sollen Veranstaltungen bis 1000 Personen zugelassen werden. Auch die Polizeistunde soll fallen.
+  
   # HEADER WITH LINK!, and,,, extra stuffff!!
-# H1 Header
-## H2 Header
-### H3 Header
-#### H4 Header
-# First, let me show you how I write code
+  Text.
+  
+  # H1 Header
+  Text.
+  
+  ## H2 Header
+  
+  ### H3 Header
+  
+  #### H4 Header
+  
+  # First, let me show you how I write code
   
   This is the Blog Content and it's a code block
   
