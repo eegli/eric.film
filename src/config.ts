@@ -51,7 +51,7 @@ export const SEO_DISCLAIMER_META: Meta = {
 
 export const SEO_SPOTIFY_META: Meta = {
   title: "Finest Electronics - ecuila's selection",
-  description: 'My favorite Spotify plaslits',
+  description: 'My favorite Spotify playlists',
   image: {
     url: `${base}/og/og_spotify.jpg`,
   },
