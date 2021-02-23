@@ -9,92 +9,97 @@
 
 <url>
   <loc>https://eric.film/</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://eric.film/about</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://eric.film/portfolio</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://eric.film/blog</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://eric.film/disclaimer</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eric.film/portfolio?cat=still</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eric.film/portfolio?cat=moving</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eric.film/portfolio?cat=clients</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eric.film/portfolio?cat=dev</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eric.film/blog?cat=all</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eric.film/blog?cat=tech</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eric.film/blog?cat=votw</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eric.film/blog?cat=varia</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eric.film/blog/getting-started-with-the-spotify-api</loc>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eric.film/blog/quick-guide-to-python-formatting-in-vscode</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eric.film/blog/votw-40-ben-boehmer-turkey-for-cercle</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eric.film/blog/votw-dev-varia-eric-film-blog-explained</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eric.film/blog/votw-38-how-to-make-a-sick-mountainbike-edit</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eric.film/blog/eric-film-bts-overengineering</loc>
-  <lastmod>2020-10-22T15:14:29+00:00</lastmod>
+  <lastmod>2021-02-23T11:52:13+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
