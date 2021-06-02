@@ -5,14 +5,11 @@ import {
 } from '@/components/types';
 import Link from 'next/link';
 import { useState } from 'react';
-import { FaSort } from 'react-icons/fa';
 import { useActiveCat } from '../hooks/useActiveCat';
 import {
   CardContainer,
   CategoryContainer,
   SelectionCardContainer,
-  SortButton,
-  SortButtonContainer,
 } from './root.styles';
 import BlogSwitch from './routes/blog-routes.component';
 
@@ -52,7 +49,7 @@ const BlogCategories: React.FC = () => {
             </CardContainer>
           </Link>
         </SelectionCardContainer>
-        <SortButtonContainer>
+        {/*         <SortButtonContainer>
           {orderBy === BlogpostOrderByInput.CreatedAtDesc ? (
             <>
               <FaSort />
@@ -70,7 +67,7 @@ const BlogCategories: React.FC = () => {
               </SortButton>
             </>
           )}
-        </SortButtonContainer>
+        </SortButtonContainer> */}
       </CategoryContainer>
       <BlogSwitch orderBy={orderBy} />
     </>
