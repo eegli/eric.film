@@ -23,8 +23,11 @@ const CardComponent: React.FC = () => (
           <span>FOUNDER</span>
           <p>
             eric has been with us from the start. he is the founding father of
-            eric.film and oversees all business activities as well as HR-related
-            topics. main responsibilities:
+            eric.film and oversees all business activities as well as hr-related
+            topics. <br />
+            his main job is to tell people he is the founder without actually
+            doing some work. <br />
+            main responsibilities:
           </p>
           <ul>
             <li>project management</li>
@@ -42,11 +45,13 @@ const CardComponent: React.FC = () => (
         <CardDescription>
           <span>LEAD DEVELOPER</span>
           <p>
-            eric is our junior engineer. he mostly talks about "react" and
-            "python" but as long as our website looks good, we don't really
-            care. main responsibilities:
+            eric is our nerd and mostly talks about that "typescript" thing. he
+            works as a software engineer at ringier and tells his mom that{' '}
+            <i>it's like making servers talk to each other</i>.
+            <br /> as long as our website looks good, we do not really care.
+            <br /> main responsibilities:
           </p>
-          <br />
+
           <ul>
             <li>eric.film development</li>
             <li>blogging</li>
@@ -63,9 +68,12 @@ const CardComponent: React.FC = () => (
         <CardDescription>
           <span>INTERN</span>
           <p>
-            eric has bachelor of arts in communication science so we let him
-            talk to our clients. other than that, we only really see him at
-            after-work drinks. main responsibilities:
+            after getting his bachelor of arts in communication science in 2019,
+            eric came to realize he is more interested in making beautiful excel
+            charts rather than writing. <br />
+            he is currently pursuing a master in data science at the university
+            of zurich. <br />
+            main responsibilities:
           </p>
           <ul>
             <li>none</li>
