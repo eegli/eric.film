@@ -34,13 +34,22 @@ const ResumeComponent: React.FC = () => {
             </div>
             <span>WORK</span>
             <div>
-              <span>05.2018 - present</span>
-              <p>Digital Project Manager. Ringier AG</p>
-              <span>01.2013 - present</span>
-              <p>Freelance photographer & videographer. Self-employed</p>
-              <span>01.2017 - 04.2018</span>
+              <span>May 2021 - present</span>
+              <p>Backend Engineer. Ringier AG</p>
+
+              <span>Nov 2019 - Apr 2021</span>
+              <p>Project Manager. Ringier AG</p>
+
+              <span>Apr 2018 - Oct 2019</span>
+              <p>Product Owner. Ringier AG</p>
+
+              <span>Jan 2017 - Mar 2018</span>
               <p>Project Management Support. Ringier AG</p>
-              <span>05.2016 - 04.2019</span>
+
+              <span>2013 - present</span>
+              <p>Freelance photographer & videographer. Self-employed</p>
+
+              <span>2016 - 2019</span>
               <p>Video Journalist. Zürcher Oberländer Medien AG</p>
             </div>
           </ResumeContent>
@@ -56,18 +65,19 @@ const ResumeComponent: React.FC = () => {
             <span>DEVELOPMENT</span>
             <div>
               <ul>
-                <li>Python</li>
                 <li>Javascript</li>
                 <li>Typescript</li>
+                <li>Python</li>
+                <li>Node.js</li>
                 <li>Next.js</li>
-                <li>React.js, some React native</li>
-                <li>Redux, React Redux</li>
+                <li>React.js</li>
                 <li>CSS in JS</li>
                 <li>HTML5, CSS3</li>
                 <li>GraphQL, REST</li>
+                <li>AWS</li>
                 <li>Google Firebase</li>
                 <li>Git</li>
-                <li>Node.js (currently learning)</li>
+                <li>I know how to swap pointers in C</li>
               </ul>
             </div>
             <span>MISC</span>
